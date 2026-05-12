@@ -3,602 +3,551 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NudoIQ — Smart Load Booking for Amazon Relay</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <title>NudoIQ | The Smartest Tool for Amazon Relay</title>
   <style>
     :root {
-      --green:  #0F6E56;
-      --teal:   #147a8c;
-      --dark:   #0a0c0b;
-      --card:   #111413;
-      --border: #1e2422;
-      --text:   #e8ede9;
-      --muted:  #6b7a72;
-      --accent: #1aff8c;
+      --primary: #067D62; /* Amazon Relay Teal */
+      --primary-hover: #05634e;
+      --bg-color: #f4f7f9;
+      --text-main: #1a1f36;
+      --text-muted: #4f566b;
+      --white: #ffffff;
+      --border: #e3e8ee;
+      --accent-blue: #0066FF;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
     body {
-      font-family: 'Barlow', sans-serif;
-      background: var(--dark);
-      color: var(--text);
-      overflow-x: hidden;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* ── NOISE TEXTURE OVERLAY ── */
-    body::before {
-      content: '';
-      position: fixed; inset: 0; z-index: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-    }
-
-    /* ── NAV ── */
+    /* --- Navigation --- */
     nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 48px;
-      background: rgba(10,12,11,0.85);
-      backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      background: var(--white);
       border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    .nav-logo {
-      display: flex; align-items: center; gap: 10px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 22px; font-weight: 900; letter-spacing: 1px;
-      color: var(--text); text-decoration: none;
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text-main);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .nav-logo .dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--accent);
-      box-shadow: 0 0 8px var(--accent);
+
+    .logo-dot {
+      width: 12px;
+      height: 12px;
+      background-color: var(--primary);
+      border-radius: 50%;
     }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
     .nav-cta {
-      padding: 9px 22px;
-      background: var(--green);
-      color: white; border: none; border-radius: 6px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 15px; font-weight: 700; letter-spacing: 0.5px;
-      cursor: pointer; text-decoration: none;
+      background: var(--primary);
+      color: var(--white);
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
       transition: background 0.2s;
     }
-    .nav-cta:hover { background: #0c5a47; }
 
-    /* ── HERO ── */
+    .nav-cta:hover {
+      background: var(--primary-hover);
+    }
+
+    /* --- Hero Section --- */
     .hero {
-      position: relative; z-index: 1;
-      min-height: 100vh;
-      display: flex; align-items: center;
-      padding: 120px 48px 80px;
-      overflow: hidden;
+      text-align: center;
+      padding: 100px 5% 80px;
+      background: linear-gradient(180deg, #e0f2f1 0%, var(--bg-color) 100%);
     }
 
-    /* diagonal grid background */
-    .hero::after {
-      content: '';
-      position: absolute; inset: 0; z-index: 0;
-      background-image:
-        linear-gradient(rgba(15,110,86,0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15,110,86,0.06) 1px, transparent 1px);
-      background-size: 60px 60px;
-      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+    .social-proof-badge {
+      display: inline-block;
+      background: var(--white);
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      margin-bottom: 24px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
     }
 
-    .hero-inner {
-      position: relative; z-index: 1;
-      max-width: 1100px; margin: 0 auto; width: 100%;
-    }
-
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(15,110,86,0.15);
-      border: 1px solid rgba(15,110,86,0.35);
-      border-radius: 99px;
-      padding: 6px 16px;
-      font-size: 12px; font-weight: 600;
-      color: #5de8b0; letter-spacing: 0.8px; text-transform: uppercase;
-      margin-bottom: 28px;
-    }
-    .hero-badge .pulse {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--accent);
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(26,255,140,0.4); }
-      50% { opacity: 0.7; box-shadow: 0 0 0 6px rgba(26,255,140,0); }
-    }
-
-    h1 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(52px, 8vw, 96px);
-      font-weight: 900;
-      line-height: 0.92;
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      max-width: 900px;
+      margin: 0 auto 20px;
+      line-height: 1.1;
       letter-spacing: -1px;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-    }
-    h1 .green { color: var(--accent); }
-    h1 .outline {
-      -webkit-text-stroke: 1.5px var(--text);
-      color: transparent;
     }
 
-    .hero-sub {
-      font-size: 18px; font-weight: 400; color: #8fa899;
-      max-width: 520px; line-height: 1.7; margin-bottom: 40px;
+    .hero h1 span {
+      color: var(--primary);
     }
-    .hero-sub b { color: var(--text); font-weight: 600; }
 
-    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
 
     .btn-primary {
-      display: inline-block;
-      padding: 14px 32px;
-      background: linear-gradient(135deg, var(--green), var(--teal));
-      color: white; border: none; border-radius: 8px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 18px; font-weight: 800; letter-spacing: 0.5px;
-      cursor: pointer; text-decoration: none;
-      transition: all 0.2s;
-      box-shadow: 0 4px 24px rgba(15,110,86,0.35);
+      background: var(--primary);
+      color: var(--white);
+      padding: 16px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 14px rgba(6, 125, 98, 0.3);
     }
+
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 32px rgba(15,110,86,0.5);
+      box-shadow: 0 6px 20px rgba(6, 125, 98, 0.4);
     }
 
     .btn-secondary {
-      display: inline-block;
-      padding: 14px 28px;
-      background: transparent;
-      color: var(--muted); border: 1px solid var(--border);
+      background: var(--white);
+      color: var(--text-main);
+      padding: 16px 32px;
       border-radius: 8px;
-      font-size: 14px; font-weight: 500;
-      cursor: pointer; text-decoration: none;
-      transition: all 0.2s;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s;
     }
-    .btn-secondary:hover { color: var(--text); border-color: var(--muted); }
 
-    .hero-note {
-      font-size: 12px; color: var(--muted); margin-top: 16px;
+    .btn-secondary:hover {
+      border-color: var(--text-muted);
     }
-    .hero-note span { color: var(--accent); }
 
-    /* ── STATS STRIP ── */
-    .stats {
-      position: relative; z-index: 1;
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      background: var(--card);
+    .app-preview {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: var(--white);
+      height: 500px;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-weight: 500;
+      overflow: hidden;
+      position: relative;
     }
-    .stat {
-      padding: 32px 40px;
-      border-right: 1px solid var(--border);
+    
+    .app-preview::after {
+      content: "NudoIQ Dashboard Preview / Video Demo";
     }
-    .stat:last-child { border-right: none; }
-    .stat-num {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 42px; font-weight: 900;
-      color: var(--accent); line-height: 1;
-      margin-bottom: 6px;
-    }
-    .stat-label { font-size: 13px; color: var(--muted); font-weight: 500; }
 
-    /* ── FEATURES ── */
+    /* --- Features Section --- */
     .features {
-      position: relative; z-index: 1;
-      max-width: 1100px; margin: 0 auto;
-      padding: 100px 48px;
+      padding: 80px 5%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
-    .section-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 12px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--green);
-      margin-bottom: 16px;
-    }
+
     .section-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(32px, 5vw, 52px);
-      font-weight: 900; text-transform: uppercase;
-      line-height: 1; margin-bottom: 56px;
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 60px;
+      font-weight: 800;
     }
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .feature-card {
+      background: var(--white);
+      padding: 30px;
       border-radius: 12px;
-      overflow: hidden;
-    }
-    .feature {
-      background: var(--card);
-      padding: 36px 32px;
-      transition: background 0.2s;
-    }
-    .feature:hover { background: #161a18; }
-    .feature-icon {
-      font-size: 28px; margin-bottom: 16px; display: block;
-    }
-    .feature-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 20px; font-weight: 800; text-transform: uppercase;
-      letter-spacing: 0.3px; margin-bottom: 10px; color: var(--text);
-    }
-    .feature-desc {
-      font-size: 14px; color: var(--muted); line-height: 1.7;
-    }
-    .feature-desc b { color: #8fa899; font-weight: 600; }
-
-    /* ── PRICING ── */
-    .pricing {
-      position: relative; z-index: 1;
-      background: var(--card);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 100px 48px;
-      text-align: center;
-    }
-    .pricing-card {
-      max-width: 480px; margin: 0 auto;
-      background: var(--dark);
       border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
     }
-    .pricing-header {
-      padding: 36px 36px 28px;
+
+    .feature-icon {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* --- Story / Social Proof Section --- */
+    .story {
+      background: var(--white);
+      padding: 80px 5%;
+      border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
-    .pricing-name {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 14px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--green);
-      margin-bottom: 16px;
-    }
-    .pricing-amount {
-      display: flex; align-items: flex-start; justify-content: center;
-      gap: 4px; margin-bottom: 8px;
-    }
-    .price-dollar { font-size: 22px; font-weight: 700; color: var(--muted); padding-top: 10px; }
-    .price-num {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 72px; font-weight: 900; line-height: 1; color: var(--text);
-    }
-    .price-period { font-size: 16px; color: var(--muted); align-self: flex-end; padding-bottom: 10px; }
-    .price-trial { font-size: 14px; color: var(--accent); font-weight: 600; }
 
-    .pricing-features {
-      padding: 28px 36px;
-      border-bottom: 1px solid var(--border);
-      text-align: left;
-    }
-    .pf {
-      display: flex; align-items: center; gap: 12px;
-      padding: 8px 0; font-size: 14px; color: #8fa899;
-      border-bottom: 1px solid rgba(255,255,255,0.04);
-    }
-    .pf:last-child { border-bottom: none; }
-    .pf .check {
-      width: 20px; height: 20px; border-radius: 50%;
-      background: rgba(15,110,86,0.2); border: 1px solid var(--green);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 10px; color: var(--accent); flex-shrink: 0;
-    }
-
-    .pricing-cta { padding: 28px 36px; }
-    .pricing-btn {
-      display: block; width: 100%; padding: 16px;
-      background: linear-gradient(135deg, var(--green), var(--teal));
-      color: white; border: none; border-radius: 8px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 20px; font-weight: 800; letter-spacing: 0.5px;
-      cursor: pointer; text-decoration: none; text-align: center;
-      transition: all 0.2s;
-      box-shadow: 0 4px 24px rgba(15,110,86,0.3);
-      margin-bottom: 14px;
-    }
-    .pricing-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(15,110,86,0.5); }
-    .pricing-note { font-size: 12px; color: var(--muted); }
-    .pricing-note span { color: var(--accent); }
-
-    /* ── HOW IT WORKS ── */
-    .how {
-      position: relative; z-index: 1;
-      max-width: 1100px; margin: 0 auto;
-      padding: 100px 48px;
-    }
-    .steps {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
-      margin-top: 56px;
-    }
-    .step { position: relative; }
-    .step-num {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 64px; font-weight: 900;
-      color: rgba(15,110,86,0.15); line-height: 1;
-      margin-bottom: 16px;
-    }
-    .step-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 18px; font-weight: 800; text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .step-desc { font-size: 13px; color: var(--muted); line-height: 1.7; }
-
-    /* ── SCARCITY BANNER ── */
-    .scarcity {
-      position: relative; z-index: 1;
-      background: linear-gradient(135deg, rgba(15,110,86,0.15), rgba(20,122,140,0.15));
-      border-top: 1px solid rgba(15,110,86,0.3);
-      border-bottom: 1px solid rgba(15,110,86,0.3);
-      padding: 60px 48px;
+    .story-container {
+      max-width: 800px;
+      margin: 0 auto;
       text-align: center;
     }
-    .scarcity-title {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: clamp(28px, 4vw, 48px);
-      font-weight: 900; text-transform: uppercase;
-      margin-bottom: 12px;
-    }
-    .scarcity-title .accent { color: var(--accent); }
-    .scarcity-sub { font-size: 16px; color: var(--muted); margin-bottom: 32px; }
 
-    .slots-bar {
-      max-width: 400px; margin: 0 auto 32px;
-    }
-    .slots-label {
-      display: flex; justify-content: space-between;
-      font-size: 12px; color: var(--muted); margin-bottom: 8px;
-    }
-    .slots-track {
-      height: 8px; background: var(--border); border-radius: 99px; overflow: hidden;
-    }
-    .slots-fill {
-      height: 100%; width: 90%; border-radius: 99px;
-      background: linear-gradient(90deg, var(--green), var(--accent));
-      animation: fillpulse 3s ease-in-out infinite;
-    }
-    @keyframes fillpulse {
-      0%, 100% { opacity: 1; } 50% { opacity: 0.85; }
+    .story h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 800;
     }
 
-    /* ── FOOTER ── */
+    .story p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    /* --- Pricing Section --- */
+    .pricing {
+      padding: 100px 5%;
+      text-align: center;
+      background: var(--bg-color);
+    }
+
+    .pricing-card {
+      background: var(--white);
+      max-width: 450px;
+      margin: 40px auto 0;
+      padding: 40px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    }
+
+    .price {
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .price span {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .pricing-list {
+      list-style: none;
+      text-align: left;
+      margin: 30px 0;
+    }
+
+    .pricing-list li {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-muted);
+    }
+
+    .pricing-list li::before {
+      content: "✓";
+      color: var(--primary);
+      font-weight: bold;
+      background: #e0f2f1;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    .pricing-note {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 15px;
+    }
+
+    /* --- FAQ Section --- */
+    .faq {
+      padding: 80px 5%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    details {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    summary {
+      padding: 20px;
+      font-weight: 600;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 1.5rem;
+      color: var(--text-muted);
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-content {
+      padding: 0 20px 20px;
+      color: var(--text-muted);
+    }
+
+    /* --- Footer --- */
     footer {
-      position: relative; z-index: 1;
+      background: var(--white);
+      padding: 40px 5%;
       border-top: 1px solid var(--border);
-      padding: 32px 48px;
-      display: flex; align-items: center; justify-content: space-between;
-      font-size: 12px; color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
     }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--text); }
 
-    /* ── ANIMATIONS ── */
-    .fade-up {
-      opacity: 0; transform: translateY(24px);
-      animation: fadeUp 0.7s ease forwards;
+    .footer-links {
+      display: flex;
+      gap: 20px;
     }
-    @keyframes fadeUp {
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .delay-1 { animation-delay: 0.1s; }
-    .delay-2 { animation-delay: 0.2s; }
-    .delay-3 { animation-delay: 0.3s; }
-    .delay-4 { animation-delay: 0.4s; }
-    .delay-5 { animation-delay: 0.5s; }
 
-    /* ── MOBILE ── */
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    /* --- Mobile Responsive --- */
     @media (max-width: 768px) {
-      nav { padding: 16px 20px; }
-      .hero { padding: 100px 20px 60px; }
-      .stats { grid-template-columns: 1fr; }
-      .stat { border-right: none; border-bottom: 1px solid var(--border); }
-      .features { padding: 60px 20px; }
-      .features-grid { grid-template-columns: 1fr; }
-      .steps { grid-template-columns: 1fr 1fr; }
-      .pricing { padding: 60px 20px; }
-      .how { padding: 60px 20px; }
-      .scarcity { padding: 60px 20px; }
-      footer { flex-direction: column; gap: 12px; text-align: center; padding: 24px 20px; }
+      .hero h1 { font-size: 2.5rem; }
+      .nav-links { display: none; }
+      .hero-buttons { flex-direction: column; }
+      .app-preview { height: 300px; }
+      footer { flex-direction: column; gap: 20px; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
-    <a href="#" class="nav-logo">
-      <div class="dot"></div>
-      NUDOIQ
+    <a href="#" class="logo">
+      <div class="logo-dot"></div>
+      NudoIQ
     </a>
-    <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="nav-cta">Start Free Trial</a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#story">Our Story</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#" class="nav-cta">Add to Chrome</a>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-badge fade-up">
-        <div class="pulse"></div>
-        Built for Amazon Relay Carriers
-      </div>
-      <h1 class="fade-up delay-1">
-        The <span class="green">#1</span> Load<br>
-        Booking Tool<br>
-        <span class="outline">For Relay</span>
-      </h1>
-      <p class="hero-sub fade-up delay-2">
-        Auto-refresh the load board. Get <b>instant alerts</b> on high-paying loads.
-        <b>Auto-book while you sleep.</b> Built by a carrier, for carriers.
-      </p>
-      <div class="hero-btns fade-up delay-3">
-        <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn-primary">Start Free Trial →</a>
-        <a href="#features" class="btn-secondary">See all features</a>
-      </div>
-      <p class="hero-note fade-up delay-4">
-        <span>7 days free</span> · then $49.99/mo · cancel anytime · no questions asked
-      </p>
+    <div class="social-proof-badge">
+      Trusted by 500+ Logistics Professionals
     </div>
+    <h1>The Smartest Tool for <span>Amazon Relay Carriers</span></h1>
+    <p>Manage your entire Relay operation out of the box. Book better loads, track your drivers, and run your fleet directly from your browser.</p>
+    
+    <div class="hero-buttons">
+      <a href="#" class="btn-primary">Start Free Trial</a>
+      <a href="#" class="btn-secondary">Watch Demo</a>
+    </div>
+
+    <div class="app-preview">
+      </div>
   </section>
 
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-num">500</div>
-      <div class="stat-label">Max members · exclusive access</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">$49</div>
-      <div class="stat-label">Per month · cancel anytime</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">7</div>
-      <div class="stat-label">Day free trial · no card needed</div>
-    </div>
-  </div>
-
-  <!-- FEATURES -->
   <section class="features" id="features">
-    <div class="section-label">What it does</div>
-    <div class="section-title">Every feature<br>you need</div>
+    <h2 class="section-title">Everything you need to scale</h2>
     <div class="features-grid">
-      <div class="feature">
-        <span class="feature-icon">⚡</span>
-        <div class="feature-title">Instant Alerts</div>
-        <div class="feature-desc">Get notified the <b>second</b> a new load posts or a price increases. Never miss a high-paying load again.</div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Priority Load Alerts</h3>
+        <p>Get instant notifications with a built-in countdown timer the second a high-paying load drops.</p>
       </div>
-      <div class="feature">
-        <span class="feature-icon">🔄</span>
-        <div class="feature-title">Auto Refresh</div>
-        <div class="feature-desc">Automatically refreshes the load board every 1–5 seconds with <b>randomized timing</b> to stay undetected.</div>
+      <div class="feature-card">
+        <div class="feature-icon">📈</div>
+        <h3>Sort by Highest Payout</h3>
+        <p>Automatically filter and sort the load board to float the most profitable opportunities to the top.</p>
       </div>
-      <div class="feature">
-        <span class="feature-icon">🤖</span>
-        <div class="feature-title">Auto Book</div>
-        <div class="feature-desc">Set your minimum price and walk away. NudoIQ books the load for you the moment it hits your target.</div>
+      <div class="feature-card">
+        <div class="feature-icon">🚚</div>
+        <h3>One-Click Post a Truck</h3>
+        <p>Create "Post a Truck" entries instantly from any active load view without leaving the page.</p>
       </div>
-      <div class="feature">
-        <span class="feature-icon">📊</span>
-        <div class="feature-title">Market Intelligence</div>
-        <div class="feature-desc">See <b>real-time market rates</b> for your lane. Know if the current board is hot or slow before you decide.</div>
+      <div class="feature-card">
+        <div class="feature-icon">⏱️</div>
+        <h3>Driver Hours Tracker</h3>
+        <p>Keep your fleet compliant with a centralized HOS (Hours of Service) dashboard.</p>
       </div>
-      <div class="feature">
-        <span class="feature-icon">💰</span>
-        <div class="feature-title">Profit Calculator</div>
-        <div class="feature-desc">Every load shows <b>net profit after fuel and driver costs</b>. Stop guessing — know exactly what you're making.</div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Auto-Dispatch</h3>
+        <p>Automatically send emails or SMS notifications to drivers the moment they are assigned to a load.</p>
       </div>
-      <div class="feature">
-        <span class="feature-icon">📋</span>
-        <div class="feature-title">Dispute Engine</div>
-        <div class="feature-desc">AI-powered dispute letters for scorecard violations. <b>Built from real Amazon Relay policy language</b> to win cases.</div>
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>Profit Calculator</h3>
+        <p>Know your margins before you book. Calculate net profit per load based on live fuel and operational costs.</p>
       </div>
-      <div class="feature">
-        <span class="feature-icon">📈</span>
-        <div class="feature-title">Payments Dashboard</div>
-        <div class="feature-desc">Weekly earnings charts, best week tracker, hot streak counter, and <b>annual pace projection</b> built right in.</div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Load Price History</h3>
+        <p>Analyze historical lane data to know if you're getting a good rate or if you should wait.</p>
       </div>
-      <div class="feature">
-        <span class="feature-icon">🎯</span>
-        <div class="feature-title">PAT Bid Advisor</div>
-        <div class="feature-desc">AI recommends the <b>perfect bid</b> for Post-A-Truck orders based on live market data and your booking history.</div>
-      </div>
-      <div class="feature">
-        <span class="feature-icon">🇲🇽</span>
-        <div class="feature-title">Español / English</div>
-        <div class="feature-desc">Full bilingual support. Switch the entire interface to Spanish for your drivers with one click.</div>
+      <div class="feature-card">
+        <div class="feature-icon">🗺️</div>
+        <h3>Quick Route Map</h3>
+        <p>Visualize deadhead and full route overlays instantly without manually entering zip codes into Maps.</p>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section class="how">
-    <div class="section-label">Setup in minutes</div>
-    <div class="section-title">How it works</div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-title">Install</div>
-        <div class="step-desc">Add NudoIQ to Chrome. Takes 30 seconds. Works directly on relay.amazon.com.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-title">Set your costs</div>
-        <div class="step-desc">Enter your MPG, diesel price, and driver pay. NudoIQ calculates real net profit on every load.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">03</div>
-        <div class="step-title">Set your target</div>
-        <div class="step-desc">Tell NudoIQ your minimum gross price. It watches the board and alerts you — or books automatically.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">04</div>
-        <div class="step-title">Walk away</div>
-        <div class="step-desc">Go do something else. NudoIQ monitors the load board and books the right load when it posts.</div>
-      </div>
+  <section class="story" id="story">
+    <div class="story-container">
+      <h2>Built by a Carrier, For Carriers</h2>
+      <p>NudoIQ wasn't built in a Silicon Valley boardroom. It started as an internal tool called the "Predictive Sniper" to help my dad, Rene Cruz Moya, secure better loads while navigating the Amazon Relay ecosystem.</p>
+      <p>After seeing the massive impact it had on the day-to-day logistics and forecasting at Mr. Box LLC, we decided to refine it into a seamless Chrome extension. NudoIQ is designed specifically to automate the heavy lifting so you can focus on growing your fleet.</p>
     </div>
   </section>
 
-  <!-- PRICING -->
-  <section class="pricing">
-    <div class="section-label" style="margin-bottom:16px">Simple pricing</div>
-    <div class="section-title" style="margin-bottom:48px">One plan.<br>Everything included.</div>
+  <section class="pricing" id="pricing">
+    <h2 class="section-title">Simple pricing</h2>
+    <p style="color: var(--text-muted); font-size: 1.2rem;">One powerful plan. No hidden fees or confusing tiers.</p>
+    
     <div class="pricing-card">
-      <div class="pricing-header">
-        <div class="pricing-name">NudoIQ Pro</div>
-        <div class="pricing-amount">
-          <span class="price-dollar">$</span>
-          <span class="price-num">49</span>
-          <span class="price-period">.99/mo</span>
-        </div>
-        <div class="price-trial">7-day free trial · cancel anytime · no questions asked</div>
-      </div>
-      <div class="pricing-features">
-        <div class="pf"><div class="check">✓</div>Instant load alerts & auto-refresh</div>
-        <div class="pf"><div class="check">✓</div>Auto-book with configurable targets</div>
-        <div class="pf"><div class="check">✓</div>Market intelligence & rate history</div>
-        <div class="pf"><div class="check">✓</div>Net profit calculator on every load</div>
-        <div class="pf"><div class="check">✓</div>AI scorecard dispute engine</div>
-        <div class="pf"><div class="check">✓</div>PAT bid advisor</div>
-        <div class="pf"><div class="check">✓</div>Weekly payments dashboard</div>
-        <div class="pf"><div class="check">✓</div>English & Spanish interface</div>
-        <div class="pf"><div class="check">✓</div>Telegram support</div>
-      </div>
-      <div class="pricing-cta">
-        <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="pricing-btn">Start Free Trial →</a>
-        <div class="pricing-note"><span>7 days free</span> · then $49.99/mo · cancel anytime</div>
-      </div>
+      <div class="price">$49.99<span>/mo</span></div>
+      <p>Everything you need to optimize your fleet.</p>
+      
+      <ul class="pricing-list">
+        <li>Full access to Chrome Extension</li>
+        <li>Unlimited Load Alerts & Auto-booking</li>
+        <li>HOS Dashboard & Driver Tracking</li>
+        <li>Profit Calculator & Price History</li>
+        <li>Automated SMS/Email Dispatch</li>
+      </ul>
+
+      <a href="#" class="btn-primary" style="display: block; width: 100%;">Start 7-Day Free Trial</a>
+      <div class="pricing-note">Cancel anytime, 2 clicks, no questions asked.</div>
     </div>
   </section>
 
-  <!-- SCARCITY -->
-  <section class="scarcity">
-    <div class="scarcity-title">Only <span class="accent">47 spots</span><br>remaining</div>
-    <div class="scarcity-sub">NudoIQ is capped at 500 members to ensure quality and performance for every carrier.</div>
-    <div class="slots-bar">
-      <div class="slots-label">
-        <span>453 members active</span>
-        <span style="color:var(--accent)">47 spots left</span>
-      </div>
-      <div class="slots-track">
-        <div class="slots-fill"></div>
-      </div>
-    </div>
-    <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn-primary">Claim Your Spot — Start Free</a>
+  <section class="faq" id="faq">
+    <h2 class="section-title">Frequently asked questions</h2>
+    
+    <details>
+      <summary>Does it work with my grade?</summary>
+      <div class="faq-content">Yes, NudoIQ works alongside your current Amazon Relay performance score, helping you find and execute loads efficiently regardless of your current tier.</div>
+    </details>
+
+    <details>
+      <summary>Is it safe to use?</summary>
+      <div class="faq-content">Absolutely. NudoIQ operates as an overlay tool to help you process data faster. We prioritize data security and ensure our extension runs cleanly within your browser.</div>
+    </details>
+
+    <details>
+      <summary>Will Amazon ban me?</summary>
+      <div class="faq-content">NudoIQ is designed to be a dashboard enhancement and analytics tool. By mimicking natural browsing patterns and focusing on data visualization (like profit calculators and price history), it keeps your account safe.</div>
+    </details>
+
+    <details>
+      <summary>What happens after the trial?</summary>
+      <div class="faq-content">After your 7-day free trial, you will be automatically billed $49.99/month. You will retain full access to all features without any interruption to your workflow.</div>
+    </details>
+
+    <details>
+      <summary>How do I cancel?</summary>
+      <div class="faq-content">You can cancel your subscription at any time directly from the extension dashboard. It takes just 2 clicks, and there are no questions asked or hidden cancellation fees.</div>
+    </details>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div>© 2025 NudoIQ · Built for Amazon Relay carriers</div>
-    <div style="display:flex;gap:24px">
-      <a href="mailto:support@nudoiq.com">support@nudoiq.com</a>
-      <a href="https://t.me/nudoiqsupport">Telegram</a>
+    <div>© 2026 NudoIQ. Built for Amazon Relay.</div>
+    <div class="footer-links">
+      <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
     </div>
   </footer>
 
