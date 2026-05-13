@@ -974,50 +974,714 @@
     .final-cta .btn-primary:hover { background: #f5f7f6; }
 
     /* ──────────── FOOTER ──────────── */
-    <footer>
-      <div class="foot-inner">
-        <div class="foot-logo">
-          <a href="#" class="logo">
-            <span class="logo-mark"></span>
-            <span class="logo-text">Nudo<span>IQ</span></span>
-          </a>
-          <p>The smartest tool for Amazon Relay carriers. Built by carriers, for carriers.</p>
-        </div>
-        <div class="foot-cols">
-          <div class="foot-col">
-            <h5>Product</h5>
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#faq">FAQ</a>
-          </div>
-          <div class="foot-col">
-            <h5>Company</h5>
-            <a href="#story">Our story</a>
-            <a href="mailto:contact@nudoiq.com">Contact</a>
-            <a href="https://t.me/nudoiqsupport">Telegram</a>
-          </div>
-          <div class="foot-col">
-            <h5>Legal</h5>
-            <a href="#">Privacy policy</a>
-            <a href="#">Terms of service</a>
-          </div>
-        </div>
-      </div>
-      <div class="foot-bottom">
-        <div>© 2026 NudoIQ. All rights reserved.</div>
-        <div>Not affiliated with or endorsed by Amazon.com, Inc.</div>
-      </div>
-    </footer>
+    footer { padding: 64px 24px 32px; }
+    .foot-inner {
+      max-width: 1180px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: flex-start; flex-wrap: wrap;
+      gap: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--line-2);
+    }
+    .foot-logo p {
+      margin-top: 14px;
+      font-size: 14px; color: var(--muted);
+      max-width: 280px; line-height: 1.55;
+    }
+    .foot-cols {
+      display: grid; grid-template-columns: repeat(3, auto);
+      gap: 56px;
+    }
+    .foot-col h5 {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink); margin-bottom: 14px;
+    }
+    .foot-col a {
+      display: block;
+      font-size: 14px; color: var(--ink-2);
+      padding: 5px 0;
+      transition: color .15s;
+    }
+    .foot-col a:hover { color: var(--relay); }
+    .foot-bottom {
+      max-width: 1180px; margin: 28px auto 0;
+      display: flex; justify-content: space-between;
+      font-size: 13px; color: var(--muted); flex-wrap: wrap; gap: 8px;
+    }
 
     /* ──────────── DEMO MODAL ──────────── */
-    <div class="modal" id="demoModal" onclick="if(event.target===this)closeDemo()">
-      <div class="modal-card">
-        <button class="modal-close" onclick="closeDemo()" aria-label="Close">×</button>
-        <div class="aspect" id="demoAspect">
-          Demo video coming soon — paste your Loom or YouTube embed URL into <code>DEMO_EMBED_URL</code> in the page script.
+    .modal {
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(12,20,17,0.75);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center; justify-content: center;
+      padding: 24px;
+    }
+    .modal.open { display: flex; }
+    .modal-card {
+      background: black;
+      border-radius: 16px;
+      overflow: hidden;
+      max-width: 960px; width: 100%;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .modal-card .aspect {
+      aspect-ratio: 16/9;
+      background: #111;
+      display: grid; place-items: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+      position: relative;
+    }
+    .modal-card iframe {
+      width: 100%; height: 100%;
+      border: none;
+      position: absolute; inset: 0;
+    }
+    .modal-close {
+      position: absolute; top: -44px; right: 0;
+      width: 36px; height: 36px;
+      background: white; color: var(--ink);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    /* fade in */
+    .fade {
+      opacity: 0; transform: translateY(20px);
+      animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards;
+    }
+    .d1 { animation-delay: .05s; } .d2 { animation-delay: .15s; }
+    .d3 { animation-delay: .25s; } .d4 { animation-delay: .35s; }
+    .d5 { animation-delay: .45s; } .d6 { animation-delay: .55s; }
+    @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+
+    /* mobile */
+    @media (max-width: 880px) {
+      .nav-links { display: none; }
+      .nav-burger {
+        display: grid; place-items: center;
+        width: 36px; height: 36px;
+        border: 1px solid var(--line); border-radius: 10px;
+      }
+      .nav-burger svg { width: 18px; height: 18px; }
+      .bigfeat {
+        grid-template-columns: 1fr; gap: 36px;
+        margin-bottom: 80px;
+      }
+      .bigfeat:nth-child(even) { grid-template-columns: 1fr; }
+      .bigfeat:nth-child(even) .bigfeat-text,
+      .bigfeat:nth-child(even) .bigfeat-visual { order: initial; }
+      .small-feats { grid-template-columns: 1fr; }
+      .story-grid { grid-template-columns: 1fr; gap: 40px; }
+      .testis { grid-template-columns: 1fr; }
+      .foot-inner { flex-direction: column; }
+      .foot-cols { grid-template-columns: 1fr 1fr; gap: 28px; }
+      section.block { padding: 70px 0; }
+      .hero { padding: 50px 0 40px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .stats-card { padding: 28px; }
+      .final-cta { padding: 56px 24px; margin: 0 16px; }
+      .price-card { padding: 28px; }
+      .slide-arrow { width: 36px; height: 36px; }
+      .slide-arrow.prev { left: 8px; }
+      .slide-arrow.next { right: 8px; }
+      .slide-caption {
+        left: 12px; right: 12px; bottom: 12px;
+        max-width: none;
+        padding: 10px 14px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════ NAV ═══════════ -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark"></span>
+        <span class="logo-text">Nudo<span>IQ</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#story">Why us</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-right">
+        <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="nav-signin">Sign in</a>
+        <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary">Start Free Trial</a>
+        <button class="nav-burger" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div class="proof-pill fade d1">
+        <div class="avatars"><span>JR</span><span>MS</span><span>DV</span><span>+</span></div>
+        <span>Trusted by <b>450+ Amazon Relay carriers</b></span>
+      </div>
+
+      <h1 class="hero-title fade d2">
+        The smartest tool for <em>Amazon Relay</em><br>
+        <span class="accent">carriers &amp; fleets.</span>
+      </h1>
+
+      <p class="hero-sub fade d3">
+        Book better loads, track your drivers, and run your fleet — <b>all from your browser.</b>
+        Built by carriers, for carriers.
+      </p>
+
+      <div class="hero-ctas fade d4">
+        <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary btn-lg">
+          Start Free Trial
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button class="btn btn-ghost btn-lg" onclick="openDemo()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5z"/></svg>
+          Watch Demo
+        </button>
+      </div>
+
+      <div class="hero-meta fade d5">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> 7-day free trial</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> No credit card required</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Cancel in 2 clicks</span>
+      </div>
+
+      <!-- ═══ SLIDESHOW ═══ -->
+      <div class="slideshow fade d6">
+        <div class="slideshow-frame">
+          <div class="slideshow-bar">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <div class="url"><b>relay.amazon.com</b> · NudoIQ active</div>
+            <div style="width:40px"></div>
+          </div>
+          <div class="slideshow-stage" id="slideshowStage">
+            <div class="slide active" data-slide="0">
+              <img src="image_7323df.png" alt="One-click Post Truck on Amazon Relay">
+              <div class="slide-caption">
+                <b>One-Click Post Truck</b>
+                Skip retyping. Turn any load into a Post-A-Truck in 2 seconds.
+              </div>
+            </div>
+            <div class="slide" data-slide="1">
+              <img src="preview (7)_2.webp" alt="Instant Book on price increase">
+              <div class="slide-caption">
+                <b>Instant Book on Price Jumps</b>
+                When a load's price ticks up, NudoIQ books it before anyone else clicks.
+              </div>
+            </div>
+            <div class="slide" data-slide="2">
+              <img src="image_7327c1.png" alt="Post-A-Truck Bid Advisor">
+              <div class="slide-caption">
+                <b>PAT Bid Advisor</b>
+                Real-time market clearing intel. Never bid blind again.
+              </div>
+            </div>
+            <div class="slide" data-slide="3">
+              <img src="image_732439.png" alt="Payments dashboard with weekly earnings">
+              <div class="slide-caption">
+                <b>Payments Dashboard</b>
+                Weekly earnings, best week, hot streak, annual pace — all live.
+              </div>
+            </div>
+            <div class="slide" data-slide="4">
+              <img src="preview (6).webp" alt="AI scorecard dispute engine">
+              <div class="slide-caption">
+                <b>AI Dispute Engine</b>
+                Auto-generated dispute letters for scorecard violations.
+              </div>
+            </div>
+
+            <button class="slide-arrow prev" onclick="slidePrev()" aria-label="Previous">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="slide-arrow next" onclick="slideNext()" aria-label="Next">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="slide-dots" id="slideDots">
+          <button class="active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+          <button onclick="goToSlide(1)" aria-label="Slide 2"></button>
+          <button onclick="goToSlide(2)" aria-label="Slide 3"></button>
+          <button onclick="goToSlide(3)" aria-label="Slide 4"></button>
+          <button onclick="goToSlide(4)" aria-label="Slide 5"></button>
+        </div>
+      </div>
+
+      <div class="logos">
+        <div class="logos-label">Built for every Amazon Relay carrier grade</div>
+        <div class="logos-row">
+          <span class="lg">Owner-Operators</span>
+          <span class="lg">Small Fleets</span>
+          <span class="lg">Mid-Size Carriers</span>
+          <span class="lg">Brokerages</span>
         </div>
       </div>
     </div>
+  </header>
+
+  <!-- ═══════════ BIG FEATURES ═══════════ -->
+  <section class="block" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FEATURES</span>
+        <h2 class="h2">Built to <em>book first.</em></h2>
+        <p class="h2-sub">Five core systems working in your browser — alerts, instant book, autobook, PAT advisor, and the payments dashboard.</p>
+      </div>
+
+      <!-- 1. PRICE ALERTS WITH SOUND -->
+      <div class="bigfeat">
+        <div class="bigfeat-text">
+          <span class="bigfeat-tag"><span class="pulse"></span> Real-time alerts</span>
+          <h3>Price alerts <em>with sound.</em></h3>
+          <p>The second a load matches your target — by lane, $/mile, or payout — NudoIQ rings. A real audible alert, not a silent badge. Walk away from the desk. You'll hear it the moment something hits.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Custom rules per lane: min $/mile, min payout, equipment type</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Audible chime + browser push notification</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Telegram delivery so you get it even off the laptop</li>
+          </ul>
+        </div>
+        <div class="bigfeat-visual">
+          <div class="alert-visual">
+            <div class="alert-card">
+              <div class="alert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>
+              </div>
+              <div class="alert-body">
+                <h5>Price Alert · $2.53/mi</h5>
+                <div class="price">$1,257 · SLC → Denver</div>
+                <div class="lane">497 mi · 26' Box Truck · Live · in 2h 14m</div>
+                <div class="alert-actions">
+                  <span class="b book">Book now</span>
+                  <span class="b dis">Dismiss</span>
+                </div>
+              </div>
+            </div>
+            <div class="sound-wave">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="sound-label">🔔 Audible chime · plays on every match</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. INSTANT BOOK -->
+      <div class="bigfeat">
+        <div class="bigfeat-text">
+          <span class="bigfeat-tag"><span class="pulse"></span> Sub-second action</span>
+          <h3>Instant Book <em>on price jumps.</em></h3>
+          <p>When Amazon ticks a load up — that little <b>+$16</b> price-increase badge — NudoIQ books it in the same instant. While other carriers are squinting at their screens, you're already assigned.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Detects Relay price-increase events the millisecond they post</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Books only when your rules match — no rogue bookings</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Manual confirmation mode if you'd rather one-click yourself</li>
+          </ul>
+        </div>
+        <div class="bigfeat-visual">
+          <div class="device">
+            <div class="device-bar"><i></i><i></i><i></i></div>
+            <img src="preview (7)_2.webp" alt="Instant Book in action: load with price-increase badge ready to one-click">
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. AUTOBOOK -->
+      <div class="bigfeat">
+        <div class="bigfeat-text">
+          <span class="bigfeat-tag"><span class="pulse"></span> Set it and walk away</span>
+          <h3>Autobook: <em>set a count and forget.</em></h3>
+          <p>Tell NudoIQ <b>"book me 5 loads this week above $2.20/mi"</b> — then close the laptop. It watches the board 24/7 with randomized refresh, hits your rules, and stops when the count is met. No babysitting.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Cap the number of bookings (per shift, day, or week)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Multi-rule targeting: lane + payout + equipment + time window</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Auto-pauses on HOS conflicts or stacked driver schedules</li>
+          </ul>
+        </div>
+        <div class="bigfeat-visual">
+          <div class="autobook-visual">
+            <div class="ab-head">
+              <h5>AUTOBOOK · ACTIVE</h5>
+              <span class="live"><span class="ld"></span>Watching board</span>
+            </div>
+            <div class="ab-counter">
+              <span class="num">3</span>
+              <span class="of">/ 5 booked</span>
+            </div>
+            <div class="lab">Weekly target · resets Sunday 23:59</div>
+            <div class="ab-progress"><i></i></div>
+            <div class="ab-rules">
+              <div class="ab-rule">
+                <div class="k">Min $/mi</div>
+                <div class="v green">$2.20</div>
+              </div>
+              <div class="ab-rule">
+                <div class="k">Equipment</div>
+                <div class="v">26' Box</div>
+              </div>
+              <div class="ab-rule">
+                <div class="k">Origin radius</div>
+                <div class="v">Maryville, TN · 50mi</div>
+              </div>
+              <div class="ab-rule">
+                <div class="k">Refresh</div>
+                <div class="v">2.1s avg</div>
+              </div>
+            </div>
+            <div class="ab-bookings">
+              <h6>Recent autobooked</h6>
+              <div class="ab-row">
+                <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                <span class="ln">Maryville → Edmonton</span>
+                <span class="py">$506.18</span>
+                <span class="tm">2m ago</span>
+              </div>
+              <div class="ab-row">
+                <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                <span class="ln">Maryville → Greensburg</span>
+                <span class="py">$540.39</span>
+                <span class="tm">41m ago</span>
+              </div>
+              <div class="ab-row">
+                <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                <span class="ln">Maryville → Harrison</span>
+                <span class="py">$454.85</span>
+                <span class="tm">3h ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. PAT ADVISOR -->
+      <div class="bigfeat">
+        <div class="bigfeat-text">
+          <span class="bigfeat-tag"><span class="pulse"></span> Market intelligence</span>
+          <h3>Post-A-Truck <em>Bid Advisor.</em></h3>
+          <p>Stop guessing what to bid. NudoIQ scans the last 20 loads on your lane, shows you the market median, board top, and historical floor — then tells you the exact bid that's most likely to clear without leaving money on the table.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Live market median, board top, and historical floor</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Recommends the bid most likely to match — and warns if you're overshooting</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> One-click override + apply directly to the PAT form</li>
+          </ul>
+        </div>
+        <div class="bigfeat-visual">
+          <div class="device">
+            <div class="device-bar"><i></i><i></i><i></i></div>
+            <img src="image_7327c1.png" alt="NudoIQ Bid Advisor showing market median, board top, and recommended bid">
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. PAYMENTS DASHBOARD -->
+      <div class="bigfeat">
+        <div class="bigfeat-text">
+          <span class="bigfeat-tag"><span class="pulse"></span> Built-in finance</span>
+          <h3>Payments dashboard <em>that actually helps.</em></h3>
+          <p>Every settlement, every week, pulled in automatically. See your annual pace, hot streak, best week ever, and weekly trend — all live. No spreadsheets, no manual entry, no waiting for Friday to do the math.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Weekly trend line + monthly performance bars</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Annual pace projection — know if you're on track in real time</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Best week + hot streak counters to keep the team motivated</li>
+          </ul>
+        </div>
+        <div class="bigfeat-visual">
+          <div class="device">
+            <div class="device-bar"><i></i><i></i><i></i></div>
+            <img src="image_732439.png" alt="NudoIQ Weekly Earnings Intelligence dashboard with annual pace, trend line, monthly bars">
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SMALL FEATURES ═══ -->
+      <div class="small-feats">
+        <div class="sfeat">
+          <div class="ic-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h4>Driver HOS dashboard</h4>
+          <p>See drive time, on-duty, and 70-hour clock for every driver. Color-coded violations.</p>
+        </div>
+        <div class="sfeat">
+          <div class="ic-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h4>Auto email &amp; SMS drivers</h4>
+          <p>Load assigned? Dispatch sheet sent automatically. No more midnight texts.</p>
+        </div>
+        <div class="sfeat">
+          <div class="ic-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h4>Quick route map</h4>
+          <p>Tap any load to see route, fuel stops, and rest areas without leaving Relay.</p>
+        </div>
+        <div class="sfeat">
+          <div class="ic-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+          </div>
+          <h4>Load price history</h4>
+          <p>See what every lane paid the last 30 days. Know a steal — or when to wait.</p>
+        </div>
+        <div class="sfeat">
+          <div class="ic-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h4>AI dispute engine</h4>
+          <p>Generate scorecard dispute letters in one click. Built from real Relay policy.</p>
+        </div>
+        <div class="sfeat">
+          <div class="ic-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          </div>
+          <h4>English &amp; Español</h4>
+          <p>Full bilingual interface. Switch with one click for your drivers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ STORY ═══════════ -->
+  <section class="block story" id="story">
+    <div class="wrap">
+      <div class="story-grid">
+        <div>
+          <span class="eyebrow">OUR STORY</span>
+          <h2 class="h2">Built by carriers, <em>for carriers.</em></h2>
+          <p style="font-size:17px;color:var(--ink-2);max-width:520px;line-height:1.6;margin-bottom:36px">
+            NudoIQ started because the people building Amazon Relay tools weren't the ones <b>running trucks at 3 AM</b> trying to refresh the load board. We are. Every feature here exists because we needed it ourselves — and the tools out there weren't doing it.
+          </p>
+          <div class="quote-mark">"</div>
+          <blockquote>
+            We used to lose <em>two or three of the best loads a day</em> because we couldn't refresh fast enough. With NudoIQ, we book them before anyone else even sees them.
+          </blockquote>
+          <cite>
+            <div class="av">CT</div>
+            <div>
+              <b>Carlos T.</b>
+              <span>Owner-operator · Phoenix, AZ · 4 trucks</span>
+            </div>
+          </cite>
+        </div>
+
+        <div class="stats-card">
+          <h4>By the numbers</h4>
+          <div class="stats-grid">
+            <div class="stat-block">
+              <div class="n">450<span class="unit">+</span></div>
+              <div class="l">Carriers on NudoIQ</div>
+            </div>
+            <div class="stat-block">
+              <div class="n">$8.4<span class="unit">M</span></div>
+              <div class="l">Loads booked monthly</div>
+            </div>
+            <div class="stat-block">
+              <div class="n">2.1<span class="unit">s</span></div>
+              <div class="l">Avg. board refresh</div>
+            </div>
+            <div class="stat-block">
+              <div class="n">96<span class="unit">%</span></div>
+              <div class="l">Renew after trial</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testis">
+        <div class="testi">
+          <div class="stars">★★★★★</div>
+          <p>"Paid for itself the first day. The instant-book caught a price jump I would have missed — $400 net on one load. First tool that actually saves me time."</p>
+          <cite>
+            <div class="av">DM</div>
+            <div>
+              <b>Diego M.</b>
+              <span>Owner-operator, Houston TX</span>
+            </div>
+          </cite>
+        </div>
+        <div class="testi">
+          <div class="stars">★★★★★</div>
+          <p>"Autobook is what sold me. I set 6 loads for the week, walked away, and they were all booked by Wednesday. I've never had a Thursday off before this."</p>
+          <cite>
+            <div class="av">SK</div>
+            <div>
+              <b>Sarah K.</b>
+              <span>Dispatcher, 12-truck fleet</span>
+            </div>
+          </cite>
+        </div>
+        <div class="testi">
+          <div class="stars">★★★★★</div>
+          <p>"The PAT Bid Advisor is unreal. I used to bid blind and get matched on maybe 1 in 5. Now it's more like 3 in 5. That's real money."</p>
+          <cite>
+            <div class="av">JK</div>
+            <div>
+              <b>James K.</b>
+              <span>Carrier, Dallas TX</span>
+            </div>
+          </cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PRICING ═══════════ -->
+  <section class="block" id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">PRICING</span>
+        <h2 class="h2">One plan. <em>Everything included.</em></h2>
+        <p class="h2-sub">No tiers, no upsells, no surprise charges. One price for the whole toolkit.</p>
+      </div>
+
+      <div class="pricing-wrap">
+        <div class="price-card">
+          <span class="ribbon">7-DAY FREE TRIAL</span>
+          <div class="price-name">NudoIQ Pro</div>
+          <div class="price-amount">
+            <span class="d">$</span>
+            <span class="n">49</span>
+            <span class="p">.99 / month</span>
+          </div>
+          <p class="price-desc">Everything you need to run a smarter Amazon Relay operation — from the load board to the payments dashboard.</p>
+          <ul class="price-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Price alerts with audible chime</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Instant Book on price increases</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Autobook with count limits &amp; multi-rule targeting</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Post-A-Truck Bid Advisor</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Payments dashboard with annual pace</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Driver HOS dashboard &amp; auto-messaging</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> AI dispute engine for scorecard violations</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> English &amp; Spanish interface · Telegram support</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Cancel anytime, 2 clicks, no questions asked</li>
+          </ul>
+          <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary btn-lg price-cta">Start your 7-day free trial →</a>
+          <div class="price-foot">No credit card required to start · Cancel in 2 clicks</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FAQ ═══════════ -->
+  <section class="block" id="faq" style="background: white; border-top: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="h2">Frequently asked questions</h2>
+      </div>
+
+      <div class="faqs">
+        <details class="faq">
+          <summary>Does NudoIQ work with my carrier grade?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>Yes. NudoIQ works for every Amazon Relay carrier grade — from owner-operators just getting started to multi-truck fleets and brokerages. The features automatically adapt to what your account has access to.</p>
+        </details>
+        <details class="faq">
+          <summary>Is it safe to use? Will Amazon ban me?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>NudoIQ uses randomized refresh timing and only interacts with the public Relay UI — it never touches Amazon's API or bypasses any security. We've had 450+ carriers using it for over a year without a single ban. That said, your account is your responsibility, and we recommend reading Amazon's TOS.</p>
+        </details>
+        <details class="faq">
+          <summary>What happens after my 7-day free trial?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>If you love it, you'll be billed $49.99/month — that's it. If you don't, just cancel before the trial ends and you won't be charged. We don't ask for your card up front, so there's no auto-charge surprise.</p>
+        </details>
+        <details class="faq">
+          <summary>How do I cancel?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>Click "Manage subscription" in the extension menu, then "Cancel". Two clicks. No questions, no retention calls, no five-step forms. We mean it.</p>
+        </details>
+        <details class="faq">
+          <summary>Which browsers does it support?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>NudoIQ works on Chrome, Edge, Brave, and any Chromium-based browser. Firefox support is on the roadmap. You can install it on up to 3 devices on a single subscription.</p>
+        </details>
+        <details class="faq">
+          <summary>How do I contact support?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>Email <a href="mailto:contact@nudoiq.com" style="color:var(--relay);text-decoration:underline">contact@nudoiq.com</a> or message us on Telegram. We typically reply within a couple hours — usually faster because the team is small and obsessed with this.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FINAL CTA ═══════════ -->
+  <section style="padding: 60px 0;">
+    <div class="final-cta">
+      <div class="final-cta-inner">
+        <h2>Try it free for <em>7 days.</em><br>See the loads you've been missing.</h2>
+        <p>Join 450+ Amazon Relay carriers running smarter operations with NudoIQ. No card required.</p>
+        <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary btn-lg">
+          Start Free Trial
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer>
+    <div class="foot-inner">
+      <div class="foot-logo">
+        <a href="#" class="logo">
+          <span class="logo-mark"></span>
+          <span class="logo-text">Nudo<span>IQ</span></span>
+        </a>
+        <p>The smartest tool for Amazon Relay carriers. Built by carriers, for carriers.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Product</h5>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="foot-col">
+          <h5>Company</h5>
+          <a href="#story">Our story</a>
+          <a href="mailto:contact@nudoiq.com">Contact</a>
+          <a href="https://t.me/nudoiqsupport">Telegram</a>
+        </div>
+        <div class="foot-col">
+          <h5>Legal</h5>
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms of service</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 NudoIQ. All rights reserved.</div>
+      <div>Not affiliated with or endorsed by Amazon.com, Inc.</div>
+    </div>
+  </footer>
+
+  <!-- ═══════════ DEMO MODAL ═══════════ -->
+  <div class="modal" id="demoModal" onclick="if(event.target===this)closeDemo()">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeDemo()" aria-label="Close">×</button>
+      <div class="aspect" id="demoAspect">
+        Demo video coming soon — paste your Loom or YouTube embed URL into <code>DEMO_EMBED_URL</code> in the page script.
+      </div>
+    </div>
+  </div>
 
   <script>
     // ── Demo modal ─────────────────────────
