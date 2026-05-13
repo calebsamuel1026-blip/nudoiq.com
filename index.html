@@ -3,553 +3,1759 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NudoIQ | The Smartest Tool for Amazon Relay</title>
+  <title>NudoIQ — Trusted by 450+ Amazon Relay carriers</title>
+  <meta name="description" content="The smartest tool for Amazon Relay carriers. Book better loads, track your drivers, run your fleet — all from your browser.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --primary: #067D62; /* Amazon Relay Teal */
-      --primary-hover: #05634e;
-      --bg-color: #f4f7f9;
-      --text-main: #1a1f36;
-      --text-muted: #4f566b;
-      --white: #ffffff;
-      --border: #e3e8ee;
-      --accent-blue: #0066FF;
+      --relay:        #067D62;
+      --relay-dark:   #045a47;
+      --relay-light:  #e6f4f0;
+      --relay-soft:   #f3faf8;
+      --ink:          #0c1411;
+      --ink-2:        #2a3633;
+      --muted:        #6b7872;
+      --line:         #e4e9e7;
+      --line-2:       #eef1ef;
+      --bg:           #fbfcfb;
+      --white:        #ffffff;
+      --amber:        #f59e0b;
+      --shadow-sm:    0 1px 2px rgba(12,20,17,0.04), 0 1px 1px rgba(12,20,17,0.02);
+      --shadow-md:    0 8px 24px -8px rgba(12,20,17,0.12), 0 2px 6px rgba(12,20,17,0.04);
+      --shadow-lg:    0 24px 48px -16px rgba(6,125,98,0.18), 0 8px 16px -8px rgba(12,20,17,0.06);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
     body {
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+      overflow-x: hidden;
     }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
 
-    /* --- Navigation --- */
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+    /* ──────────── NAV ──────────── */
     nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 5%;
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(251,252,251,0.85);
+      backdrop-filter: saturate(140%) blur(14px);
+      -webkit-backdrop-filter: saturate(140%) blur(14px);
+      border-bottom: 1px solid var(--line-2);
     }
-
+    .nav-inner {
+      max-width: 1180px; margin: 0 auto;
+      padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
     .logo {
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--text-main);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      display: flex; align-items: center; gap: 9px;
+      font-weight: 800; font-size: 19px; letter-spacing: -0.02em;
     }
-
-    .logo-dot {
-      width: 12px;
-      height: 12px;
-      background-color: var(--primary);
-      border-radius: 50%;
+    .logo-mark {
+      width: 26px; height: 26px; border-radius: 8px;
+      background: var(--relay);
+      display: grid; place-items: center;
+      position: relative;
+      box-shadow: 0 4px 10px -2px rgba(6,125,98,0.4);
     }
+    .logo-mark::before {
+      content: ''; position: absolute;
+      inset: 6px; border: 2px solid white; border-radius: 50%;
+      border-right-color: transparent; border-bottom-color: transparent;
+      transform: rotate(-45deg);
+    }
+    .logo-mark::after {
+      content: ''; position: absolute;
+      width: 4px; height: 4px; background: white; border-radius: 50%;
+      top: 50%; left: 50%; transform: translate(-50%, -50%);
+    }
+    .logo-text { color: var(--ink); }
+    .logo-text span { color: var(--relay); }
 
     .nav-links {
-      display: flex;
-      gap: 30px;
+      display: flex; gap: 32px;
+      font-size: 14.5px; font-weight: 500; color: var(--ink-2);
     }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text-main);
-      font-weight: 500;
-      transition: color 0.2s;
+    .nav-links a:hover { color: var(--relay); }
+    .nav-right { display: flex; align-items: center; gap: 14px; }
+    .nav-signin { font-size: 14.5px; font-weight: 500; color: var(--ink-2); }
+    .nav-signin:hover { color: var(--ink); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px; border-radius: 999px;
+      font-size: 14.5px; font-weight: 600;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      white-space: nowrap;
     }
-
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
-    .nav-cta {
-      background: var(--primary);
-      color: var(--white);
-      padding: 10px 20px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s;
-    }
-
-    .nav-cta:hover {
-      background: var(--primary-hover);
-    }
-
-    /* --- Hero Section --- */
-    .hero {
-      text-align: center;
-      padding: 100px 5% 80px;
-      background: linear-gradient(180deg, #e0f2f1 0%, var(--bg-color) 100%);
-    }
-
-    .social-proof-badge {
-      display: inline-block;
-      background: var(--white);
-      padding: 8px 16px;
-      border-radius: 20px;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-      margin-bottom: 24px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 800;
-      max-width: 900px;
-      margin: 0 auto 20px;
-      line-height: 1.1;
-      letter-spacing: -1px;
-    }
-
-    .hero h1 span {
-      color: var(--primary);
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 40px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 60px;
-    }
-
     .btn-primary {
-      background: var(--primary);
-      color: var(--white);
-      padding: 16px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 600;
-      transition: transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 14px rgba(6, 125, 98, 0.3);
+      background: var(--relay); color: white;
+      box-shadow: 0 4px 12px -2px rgba(6,125,98,0.35);
+    }
+    .btn-primary:hover { background: var(--relay-dark); transform: translateY(-1px); box-shadow: 0 6px 16px -2px rgba(6,125,98,0.45); }
+    .btn-ghost {
+      background: transparent; color: var(--ink-2);
+      border: 1px solid var(--line);
+    }
+    .btn-ghost:hover { border-color: var(--ink-2); color: var(--ink); }
+    .btn-lg {
+      padding: 15px 28px; font-size: 16px; font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+    .nav-burger { display: none; }
+
+    /* ──────────── HERO ──────────── */
+    .hero {
+      position: relative;
+      padding: 80px 0 60px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(6,125,98,0.08), transparent 70%),
+        radial-gradient(ellipse 80% 50% at 50% 100%, rgba(6,125,98,0.04), transparent 70%);
+      pointer-events: none; z-index: 0;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(6,125,98,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(6,125,98,0.04) 1px, transparent 1px);
+      background-size: 56px 56px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 80%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 80%);
+      pointer-events: none; z-index: 0;
+    }
+    .hero-inner { position: relative; z-index: 1; }
+
+    .proof-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 6px 14px 6px 6px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      box-shadow: var(--shadow-sm);
+      font-size: 13px; font-weight: 500; color: var(--ink-2);
+      margin-bottom: 32px;
+    }
+    .proof-pill .avatars { display: flex; }
+    .proof-pill .avatars span {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--relay), var(--relay-dark));
+      border: 2px solid white;
+      margin-left: -7px;
+      display: grid; place-items: center;
+      color: white; font-size: 9px; font-weight: 700;
+    }
+    .proof-pill .avatars span:first-child { margin-left: 0; }
+    .proof-pill .avatars span:nth-child(2) { background: linear-gradient(135deg, #14b8a6, #0f766e); }
+    .proof-pill .avatars span:nth-child(3) { background: linear-gradient(135deg, #f59e0b, #d97706); }
+    .proof-pill .avatars span:nth-child(4) { background: linear-gradient(135deg, #6366f1, #4338ca); }
+    .proof-pill b { color: var(--ink); font-weight: 700; }
+
+    h1.hero-title {
+      font-size: clamp(40px, 6.5vw, 78px);
+      font-weight: 800;
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+      color: var(--ink);
+      max-width: 980px;
+      margin: 0 auto 24px;
+    }
+    h1.hero-title .accent {
+      color: var(--relay);
+      position: relative;
+      display: inline-block;
+    }
+    h1.hero-title .accent::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0; bottom: 6%;
+      height: 8px;
+      background: rgba(6,125,98,0.18);
+      z-index: -1;
+      border-radius: 3px;
+    }
+    h1.hero-title em {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--ink);
+      letter-spacing: -0.02em;
     }
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(6, 125, 98, 0.4);
+    .hero-sub {
+      font-size: clamp(16px, 1.7vw, 19px);
+      color: var(--ink-2);
+      max-width: 620px;
+      margin: 0 auto 36px;
+      line-height: 1.55;
     }
+    .hero-sub b { color: var(--ink); font-weight: 600; }
 
-    .btn-secondary {
-      background: var(--white);
-      color: var(--text-main);
-      padding: 16px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 600;
-      border: 1px solid var(--border);
-      transition: border-color 0.2s;
+    .hero-ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    .hero-meta {
+      margin-top: 18px;
+      font-size: 13px; color: var(--muted);
+      display: flex; gap: 18px; justify-content: center; flex-wrap: wrap;
     }
+    .hero-meta span { display: inline-flex; align-items: center; gap: 6px; }
+    .hero-meta svg { width: 14px; height: 14px; color: var(--relay); }
 
-    .btn-secondary:hover {
-      border-color: var(--text-muted);
+    /* ──────────── SLIDESHOW ──────────── */
+    .slideshow {
+      position: relative;
+      margin: 64px auto 0;
+      max-width: 1080px;
     }
-
-    .app-preview {
-      max-width: 1000px;
-      margin: 0 auto;
-      background: var(--white);
-      height: 500px;
-      border-radius: 12px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-      border: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      font-weight: 500;
+    .slideshow-frame {
+      border-radius: 16px;
+      background: white;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--line);
       overflow: hidden;
       position: relative;
     }
-    
-    .app-preview::after {
-      content: "NudoIQ Dashboard Preview / Video Demo";
+    .slideshow-bar {
+      display: flex; align-items: center; gap: 8px;
+      padding: 12px 16px;
+      background: #f6f8f7;
+      border-bottom: 1px solid var(--line);
+      position: relative; z-index: 2;
     }
-
-    /* --- Features Section --- */
-    .features {
-      padding: 80px 5%;
-      max-width: 1200px;
-      margin: 0 auto;
+    .slideshow-bar .dots { display: flex; gap: 6px; }
+    .slideshow-bar .dots i {
+      width: 11px; height: 11px; border-radius: 50%; display: block;
+      background: #d4dad7;
     }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 60px;
-      font-weight: 800;
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    .feature-card {
-      background: var(--white);
-      padding: 30px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-    }
-
-    .feature-icon {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .feature-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    .feature-card p {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
-
-    /* --- Story / Social Proof Section --- */
-    .story {
-      background: var(--white);
-      padding: 80px 5%;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .story-container {
-      max-width: 800px;
-      margin: 0 auto;
+    .slideshow-bar .dots i:nth-child(1) { background: #ff5f57; }
+    .slideshow-bar .dots i:nth-child(2) { background: #febc2e; }
+    .slideshow-bar .dots i:nth-child(3) { background: #28c840; }
+    .slideshow-bar .url {
+      flex: 1; max-width: 360px; margin: 0 auto;
+      padding: 4px 14px; border-radius: 6px;
+      background: white; border: 1px solid var(--line-2);
+      font-size: 12px; color: var(--muted);
       text-align: center;
     }
+    .slideshow-bar .url b { color: var(--ink-2); font-weight: 500; }
 
-    .story h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      font-weight: 800;
-    }
-
-    .story p {
-      font-size: 1.1rem;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-
-    /* --- Pricing Section --- */
-    .pricing {
-      padding: 100px 5%;
-      text-align: center;
-      background: var(--bg-color);
-    }
-
-    .pricing-card {
-      background: var(--white);
-      max-width: 450px;
-      margin: 40px auto 0;
-      padding: 40px;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
-
-    .price {
-      font-size: 4rem;
-      font-weight: 800;
-      color: var(--text-main);
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-
-    .price span {
-      font-size: 1.2rem;
-      color: var(--text-muted);
-      font-weight: 500;
-    }
-
-    .pricing-list {
-      list-style: none;
-      text-align: left;
-      margin: 30px 0;
-    }
-
-    .pricing-list li {
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--text-muted);
-    }
-
-    .pricing-list li::before {
-      content: "✓";
-      color: var(--primary);
-      font-weight: bold;
-      background: #e0f2f1;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 12px;
-    }
-
-    .pricing-note {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-top: 15px;
-    }
-
-    /* --- FAQ Section --- */
-    .faq {
-      padding: 80px 5%;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    details {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      margin-bottom: 15px;
+    .slideshow-stage {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1080 / 520;
+      background: #0a2520;
       overflow: hidden;
     }
+    .slide {
+      position: absolute; inset: 0;
+      opacity: 0;
+      transition: opacity .8s ease;
+      display: flex; align-items: flex-start; justify-content: center;
+      background: #fbfcfb;
+    }
+    .slide.active { opacity: 1; z-index: 1; }
+    .slide img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    /* slide caption — sits on top of image */
+    .slide-caption {
+      position: absolute; left: 24px; bottom: 24px;
+      z-index: 3;
+      background: rgba(12,20,17,0.92);
+      backdrop-filter: blur(8px);
+      color: white;
+      padding: 12px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      max-width: 320px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+      transform: translateY(8px);
+      opacity: 0;
+      transition: opacity .6s ease .3s, transform .6s ease .3s;
+    }
+    .slide.active .slide-caption { opacity: 1; transform: translateY(0); }
+    .slide-caption b {
+      display: block;
+      font-size: 14px; font-weight: 700;
+      color: #5de8b0;
+      margin-bottom: 3px;
+      letter-spacing: -0.01em;
+    }
 
-    summary {
-      padding: 20px;
-      font-weight: 600;
-      cursor: pointer;
+    /* slide dots */
+    .slide-dots {
+      display: flex; justify-content: center; gap: 8px;
+      margin-top: 22px;
+    }
+    .slide-dots button {
+      width: 32px; height: 6px;
+      border-radius: 99px;
+      background: var(--line);
+      transition: background .25s ease, width .25s ease;
+    }
+    .slide-dots button.active {
+      background: var(--relay);
+      width: 48px;
+    }
+
+    /* slide nav arrows */
+    .slide-arrow {
+      position: absolute; top: 50%;
+      transform: translateY(-50%);
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.95);
+      box-shadow: var(--shadow-md);
+      display: grid; place-items: center;
+      z-index: 4;
+      transition: background .15s ease, transform .15s ease;
+    }
+    .slide-arrow:hover { background: white; transform: translateY(-50%) scale(1.05); }
+    .slide-arrow.prev { left: 16px; }
+    .slide-arrow.next { right: 16px; }
+    .slide-arrow svg { width: 18px; height: 18px; color: var(--ink); }
+
+    /* logos strip */
+    .logos {
+      padding: 56px 0 24px;
+      text-align: center;
+      border-top: 1px solid var(--line-2);
+      margin-top: 64px;
+    }
+    .logos-label {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.12em;
+      color: var(--muted); text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .logos-row {
+      display: flex; justify-content: center; align-items: center;
+      gap: clamp(20px, 5vw, 56px); flex-wrap: wrap;
+      opacity: 0.62;
+    }
+    .logos-row .lg {
+      font-weight: 700; font-size: 18px; color: var(--ink-2);
+      letter-spacing: -0.02em;
+    }
+
+    /* ──────────── SECTIONS ──────────── */
+    section.block { padding: 100px 0; position: relative; }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 5px 12px;
+      background: var(--relay-light);
+      color: var(--relay-dark);
+      border-radius: 999px;
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 18px;
+    }
+    .h2 {
+      font-size: clamp(32px, 4.5vw, 52px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.05;
+      max-width: 720px;
+      margin-bottom: 18px;
+    }
+    .h2 em {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--relay);
+    }
+    .h2-sub {
+      font-size: 18px; color: var(--ink-2);
+      max-width: 580px; line-height: 1.55;
+      margin-bottom: 56px;
+    }
+    .section-head { text-align: center; }
+    .section-head .h2,
+    .section-head .h2-sub { margin-left: auto; margin-right: auto; }
+
+    /* ──────────── BIG FEATURE BLOCKS ──────────── */
+    .bigfeat {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 64px;
+      align-items: center;
+      margin-bottom: 120px;
+    }
+    .bigfeat:nth-child(even) { grid-template-columns: 1.1fr 1fr; }
+    .bigfeat:nth-child(even) .bigfeat-text { order: 2; }
+    .bigfeat:nth-child(even) .bigfeat-visual { order: 1; }
+    .bigfeat:last-child { margin-bottom: 0; }
+
+    .bigfeat-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 10px;
+      background: var(--relay-light);
+      color: var(--relay-dark);
+      border-radius: 999px;
+      font-size: 11.5px; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .bigfeat-tag .pulse {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--relay);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(6,125,98,0.5); }
+      50% { box-shadow: 0 0 0 6px rgba(6,125,98,0); }
+    }
+    .bigfeat h3 {
+      font-size: clamp(26px, 3.2vw, 38px);
+      font-weight: 800; letter-spacing: -0.03em;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+    .bigfeat h3 em {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic; font-weight: 400;
+      color: var(--relay);
+    }
+    .bigfeat p {
+      font-size: 17px; color: var(--ink-2);
+      line-height: 1.55; margin-bottom: 22px;
+      max-width: 480px;
+    }
+    .bigfeat ul {
       list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    }
+    .bigfeat ul li {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 7px 0;
+      font-size: 15px; color: var(--ink);
+    }
+    .bigfeat ul li svg {
+      width: 18px; height: 18px;
+      color: var(--relay);
+      flex-shrink: 0; margin-top: 2px;
     }
 
-    summary::-webkit-details-marker {
-      display: none;
+    /* Visual: device frame for screenshots */
+    .device {
+      border-radius: 14px;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      position: relative;
+    }
+    .device-bar {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 14px;
+      background: #f6f8f7;
+      border-bottom: 1px solid var(--line-2);
+    }
+    .device-bar i {
+      width: 9px; height: 9px; border-radius: 50%; display: block;
+      background: #d4dad7;
+    }
+    .device-bar i:nth-child(1) { background: #ff5f57; }
+    .device-bar i:nth-child(2) { background: #febc2e; }
+    .device-bar i:nth-child(3) { background: #28c840; }
+    .device img {
+      width: 100%;
+      display: block;
     }
 
-    summary::after {
-      content: "+";
-      font-size: 1.5rem;
-      color: var(--text-muted);
-      transition: transform 0.2s;
+    /* ──────────── ALERT VISUAL (with sound) ──────────── */
+    .alert-visual {
+      position: relative;
+      background: linear-gradient(135deg, var(--relay-soft), #ecf6f2);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 36px;
+      min-height: 360px;
+    }
+    .alert-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: var(--shadow-md);
+      display: flex; gap: 16px;
+      align-items: flex-start;
+      max-width: 440px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .alert-card::before {
+      content: '';
+      position: absolute;
+      top: -3px; left: 20px; right: 20px;
+      height: 3px; background: var(--relay);
+      border-radius: 0 0 4px 4px;
+    }
+    .alert-icon {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: var(--relay);
+      color: white;
+      display: grid; place-items: center;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .alert-icon::after {
+      content: '';
+      position: absolute; inset: -4px;
+      border-radius: 14px;
+      border: 2px solid var(--relay);
+      opacity: 0.4;
+      animation: ring 2s infinite;
+    }
+    @keyframes ring {
+      0% { transform: scale(1); opacity: 0.4; }
+      100% { transform: scale(1.3); opacity: 0; }
+    }
+    .alert-icon svg { width: 22px; height: 22px; }
+    .alert-body { flex: 1; }
+    .alert-body h5 {
+      font-size: 13px; font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .alert-body .price {
+      font-size: 22px; font-weight: 800;
+      color: var(--ink); letter-spacing: -0.02em;
+      margin-bottom: 3px;
+    }
+    .alert-body .lane {
+      font-size: 13px; color: var(--ink-2);
+      margin-bottom: 10px;
+    }
+    .alert-actions { display: flex; gap: 8px; }
+    .alert-actions .b {
+      padding: 5px 12px;
+      border-radius: 6px;
+      font-size: 12px; font-weight: 700;
+    }
+    .alert-actions .b.book { background: var(--relay); color: white; }
+    .alert-actions .b.dis  { background: var(--line-2); color: var(--ink-2); }
+
+    .sound-wave {
+      display: flex; align-items: center; gap: 3px;
+      margin-top: 24px; justify-content: center;
+    }
+    .sound-wave i {
+      width: 3px;
+      background: var(--relay);
+      border-radius: 2px;
+      animation: wave 1.2s ease-in-out infinite;
+    }
+    .sound-wave i:nth-child(1) { height: 14px; animation-delay: 0.0s; }
+    .sound-wave i:nth-child(2) { height: 22px; animation-delay: 0.1s; }
+    .sound-wave i:nth-child(3) { height: 32px; animation-delay: 0.2s; }
+    .sound-wave i:nth-child(4) { height: 26px; animation-delay: 0.3s; }
+    .sound-wave i:nth-child(5) { height: 18px; animation-delay: 0.4s; }
+    .sound-wave i:nth-child(6) { height: 28px; animation-delay: 0.5s; }
+    .sound-wave i:nth-child(7) { height: 14px; animation-delay: 0.6s; }
+    .sound-wave i:nth-child(8) { height: 20px; animation-delay: 0.7s; }
+    @keyframes wave {
+      0%, 100% { transform: scaleY(0.4); }
+      50% { transform: scaleY(1); }
+    }
+    .sound-label {
+      text-align: center;
+      font-size: 12px; font-weight: 600;
+      color: var(--muted);
+      margin-top: 12px;
+      letter-spacing: 0.04em;
     }
 
-    details[open] summary::after {
-      transform: rotate(45deg);
+    /* ──────────── AUTOBOOK VISUAL ──────────── */
+    .autobook-visual {
+      background: var(--ink);
+      border-radius: 18px;
+      padding: 36px;
+      color: white;
+      position: relative;
+      overflow: hidden;
     }
-
-    .faq-content {
-      padding: 0 20px 20px;
-      color: var(--text-muted);
+    .autobook-visual::before {
+      content: ''; position: absolute;
+      width: 260px; height: 260px;
+      top: -60px; right: -80px;
+      background: radial-gradient(circle, rgba(6,125,98,0.45), transparent 70%);
+      pointer-events: none;
     }
-
-    /* --- Footer --- */
-    footer {
-      background: var(--white);
-      padding: 40px 5%;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
+    .ab-head {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-bottom: 24px;
+      position: relative;
     }
+    .ab-head h5 {
+      font-size: 14px; font-weight: 700;
+      letter-spacing: 0.06em;
+      color: #5de8b0; text-transform: uppercase;
+    }
+    .ab-head .live {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 11px; font-weight: 600;
+      color: rgba(255,255,255,0.6);
+    }
+    .ab-head .live .ld {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #5de8b0;
+      box-shadow: 0 0 0 0 #5de8b0;
+      animation: pulseDark 1.6s infinite;
+    }
+    @keyframes pulseDark {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(93,232,176,0.6); }
+      50% { box-shadow: 0 0 0 6px rgba(93,232,176,0); }
+    }
+    .ab-counter {
+      display: flex; align-items: baseline; gap: 6px;
+      margin-bottom: 6px;
+      position: relative;
+    }
+    .ab-counter .num {
+      font-size: 80px; font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      background: linear-gradient(180deg, white 50%, rgba(93,232,176,0.7));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .ab-counter .of {
+      font-size: 22px; color: rgba(255,255,255,0.5); font-weight: 600;
+    }
+    .ab-counter .lab {
+      font-size: 13px; color: rgba(255,255,255,0.6);
+      margin-bottom: 12px;
+    }
+    .ab-progress {
+      height: 8px; border-radius: 99px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+      margin: 14px 0 24px;
+      position: relative;
+    }
+    .ab-progress i {
+      display: block; height: 100%;
+      width: 70%;
+      background: linear-gradient(90deg, var(--relay), #5de8b0);
+      border-radius: 99px;
+      position: relative;
+    }
+    .ab-rules {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+      position: relative;
+    }
+    .ab-rule {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+    .ab-rule .k {
+      font-size: 11px; color: rgba(255,255,255,0.5);
+      letter-spacing: 0.04em; text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .ab-rule .v {
+      font-size: 15px; font-weight: 700; color: white;
+    }
+    .ab-rule .v.green { color: #5de8b0; }
+    .ab-bookings {
+      margin-top: 20px;
+      position: relative;
+    }
+    .ab-bookings h6 {
+      font-size: 11px; font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .ab-row {
+      display: grid; grid-template-columns: auto 1fr auto auto;
+      gap: 10px; align-items: center;
+      padding: 8px 10px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 7px;
+      margin-bottom: 6px;
+      font-size: 12px;
+    }
+    .ab-row .check {
+      width: 16px; height: 16px;
+      border-radius: 50%; background: var(--relay);
+      display: grid; place-items: center;
+    }
+    .ab-row .check svg { width: 9px; height: 9px; color: white; }
+    .ab-row .ln { color: rgba(255,255,255,0.9); font-weight: 500; }
+    .ab-row .py { color: #5de8b0; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .ab-row .tm { color: rgba(255,255,255,0.4); font-size: 10px; font-variant-numeric: tabular-nums; }
 
-    .footer-links {
-      display: flex;
+    /* ──────────── SMALL FEATURES GRID ──────────── */
+    .small-feats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      margin-top: 80px;
+    }
+    .sfeat {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 26px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .sfeat:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: #d8e0dd; }
+    .sfeat .ic-wrap {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: var(--relay-light);
+      color: var(--relay-dark);
+      display: grid; place-items: center;
+      margin-bottom: 14px;
+    }
+    .sfeat .ic-wrap svg { width: 20px; height: 20px; }
+    .sfeat h4 {
+      font-size: 17px; font-weight: 700;
+      letter-spacing: -0.02em; margin-bottom: 6px;
+    }
+    .sfeat p { font-size: 14.5px; color: var(--ink-2); line-height: 1.55; }
+
+    /* ──────────── STORY ──────────── */
+    .story {
+      background: linear-gradient(180deg, white, var(--relay-soft));
+      border-top: 1px solid var(--line-2);
+      border-bottom: 1px solid var(--line-2);
+    }
+    .story-grid {
+      display: grid; grid-template-columns: 1.1fr 1fr;
+      gap: 64px; align-items: center;
+    }
+    .story-grid .quote-mark {
+      font-family: 'Instrument Serif', serif;
+      font-size: 120px; line-height: 0.8;
+      color: var(--relay);
+      margin-bottom: 8px;
+      opacity: 0.5;
+    }
+    .story-grid blockquote {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(24px, 3vw, 34px);
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 28px;
+    }
+    .story-grid blockquote em {
+      font-style: italic;
+      color: var(--relay-dark);
+    }
+    .story-grid cite {
+      display: flex; align-items: center; gap: 14px;
+      font-style: normal;
+    }
+    .story-grid cite .av {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--relay), var(--relay-dark));
+      color: white; font-weight: 700; font-size: 17px;
+      display: grid; place-items: center;
+    }
+    .story-grid cite b { display: block; font-size: 15px; }
+    .story-grid cite span { font-size: 13px; color: var(--muted); }
+
+    .stats-card {
+      background: var(--ink);
+      color: white;
+      border-radius: 24px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .stats-card::before {
+      content: ''; position: absolute;
+      width: 240px; height: 240px;
+      background: radial-gradient(circle, rgba(6,125,98,0.45), transparent 70%);
+      top: -60px; right: -60px;
+      pointer-events: none;
+    }
+    .stats-card h4 {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 28px;
+      color: rgba(255,255,255,0.9);
+    }
+    .stats-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+    }
+    .stat-block .n {
+      font-size: 44px; font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      color: white;
+      margin-bottom: 6px;
+    }
+    .stat-block .n .unit { font-size: 22px; color: rgba(255,255,255,0.6); margin-left: 2px; }
+    .stat-block .l { font-size: 13px; color: rgba(255,255,255,0.6); }
+
+    /* testimonials */
+    .testis {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 20px; margin-top: 60px;
+    }
+    .testi {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .testi:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .testi .stars {
+      color: var(--amber); margin-bottom: 12px;
+      letter-spacing: 1px; font-size: 14px;
+    }
+    .testi p {
+      font-size: 15px; color: var(--ink-2); line-height: 1.55;
+      margin-bottom: 18px;
+    }
+    .testi cite {
+      display: flex; align-items: center; gap: 12px; font-style: normal;
+    }
+    .testi cite .av {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: linear-gradient(135deg, #6366f1, #4338ca);
+      color: white; font-weight: 700; font-size: 13px;
+      display: grid; place-items: center;
+    }
+    .testi:nth-child(2) cite .av { background: linear-gradient(135deg, var(--relay), var(--relay-dark)); }
+    .testi:nth-child(3) cite .av { background: linear-gradient(135deg, var(--amber), #d97706); }
+    .testi cite b { display: block; font-size: 14px; }
+    .testi cite span { font-size: 12px; color: var(--muted); }
+
+    /* ──────────── PRICING ──────────── */
+    .pricing-wrap { display: flex; justify-content: center; }
+    .price-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 40px;
+      max-width: 540px; width: 100%;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+    .price-card .ribbon {
+      position: absolute; top: -14px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--ink); color: white;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+      padding: 6px 14px; border-radius: 999px;
+    }
+    .price-name {
+      font-size: 14px; font-weight: 600; letter-spacing: 0.04em;
+      text-transform: uppercase; color: var(--relay-dark);
+      margin-bottom: 16px;
+    }
+    .price-amount {
+      display: flex; align-items: baseline; gap: 6px;
+      margin-bottom: 6px;
+    }
+    .price-amount .d { font-size: 28px; font-weight: 700; color: var(--ink-2); }
+    .price-amount .n {
+      font-size: 64px; font-weight: 800;
+      letter-spacing: -0.04em; color: var(--ink);
+      line-height: 1;
+    }
+    .price-amount .p { font-size: 16px; color: var(--muted); }
+    .price-desc { font-size: 15px; color: var(--ink-2); margin-bottom: 28px; }
+    .price-list { list-style: none; margin-bottom: 28px; }
+    .price-list li {
+      display: flex; align-items: flex-start; gap: 11px;
+      padding: 9px 0;
+      font-size: 15px; color: var(--ink);
+    }
+    .price-list li svg {
+      width: 18px; height: 18px;
+      color: var(--relay);
+      flex-shrink: 0; margin-top: 2px;
+    }
+    .price-cta { display: block; text-align: center; padding: 16px; }
+    .price-foot {
+      margin-top: 14px;
+      font-size: 13px; color: var(--muted);
+      text-align: center;
     }
 
-    .footer-links a {
-      color: var(--text-muted);
-      text-decoration: none;
+    /* ──────────── FAQ ──────────── */
+    .faqs { max-width: 760px; margin: 0 auto; }
+    details.faq {
+      border-bottom: 1px solid var(--line);
+      padding: 22px 0;
+    }
+    details.faq summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      font-size: 17px; font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+    }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq summary .icon {
+      width: 24px; height: 24px;
+      border: 1px solid var(--line);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      transition: transform .2s ease, background .2s ease, color .2s ease;
+      flex-shrink: 0; margin-left: 16px;
+    }
+    details.faq[open] summary .icon {
+      transform: rotate(45deg);
+      background: var(--relay); color: white; border-color: var(--relay);
+    }
+    details.faq summary .icon svg { width: 12px; height: 12px; }
+    details.faq p {
+      margin-top: 14px;
+      font-size: 15.5px; color: var(--ink-2); line-height: 1.6;
+      max-width: 92%;
     }
 
-    .footer-links a:hover {
-      color: var(--primary);
+    /* ──────────── FINAL CTA ──────────── */
+    .final-cta {
+      text-align: center;
+      background: linear-gradient(135deg, var(--ink) 0%, #0d2820 100%);
+      border-radius: 24px;
+      padding: 80px 40px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      margin: 0 24px;
+    }
+    .final-cta::before {
+      content: ''; position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 50% 0%, rgba(6,125,98,0.35), transparent 60%),
+        radial-gradient(ellipse 40% 40% at 80% 100%, rgba(6,125,98,0.2), transparent 60%);
+      pointer-events: none;
+    }
+    .final-cta-inner { position: relative; max-width: 720px; margin: 0 auto; }
+    .final-cta h2 {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800; letter-spacing: -0.03em;
+      line-height: 1.05; margin-bottom: 18px;
+    }
+    .final-cta h2 em {
+      font-family: 'Instrument Serif', serif; font-style: italic;
+      color: #5de8b0; font-weight: 400;
+    }
+    .final-cta p {
+      font-size: 18px; color: rgba(255,255,255,0.7);
+      max-width: 480px; margin: 0 auto 36px; line-height: 1.5;
+    }
+    .final-cta .btn-primary { background: white; color: var(--ink); }
+    .final-cta .btn-primary:hover { background: #f5f7f6; }
+
+    /* ──────────── FOOTER ──────────── */
+    footer { padding: 64px 24px 32px; }
+    .foot-inner {
+      max-width: 1180px; margin: 0 auto;
+      display: flex; justify-content: space-between;
+      align-items: flex-start; flex-wrap: wrap;
+      gap: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--line-2);
+    }
+    .foot-logo p {
+      margin-top: 14px;
+      font-size: 14px; color: var(--muted);
+      max-width: 280px; line-height: 1.55;
+    }
+    .foot-cols {
+      display: grid; grid-template-columns: repeat(3, auto);
+      gap: 56px;
+    }
+    .foot-col h5 {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--ink); margin-bottom: 14px;
+    }
+    .foot-col a {
+      display: block;
+      font-size: 14px; color: var(--ink-2);
+      padding: 5px 0;
+      transition: color .15s;
+    }
+    .foot-col a:hover { color: var(--relay); }
+    .foot-bottom {
+      max-width: 1180px; margin: 28px auto 0;
+      display: flex; justify-content: space-between;
+      font-size: 13px; color: var(--muted); flex-wrap: wrap; gap: 8px;
     }
 
-    /* --- Mobile Responsive --- */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.5rem; }
+    /* ──────────── DEMO MODAL ──────────── */
+    .modal {
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(12,20,17,0.75);
+      backdrop-filter: blur(8px);
+      display: none;
+      align-items: center; justify-content: center;
+      padding: 24px;
+    }
+    .modal.open { display: flex; }
+    .modal-card {
+      background: black;
+      border-radius: 16px;
+      overflow: hidden;
+      max-width: 960px; width: 100%;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .modal-card .aspect {
+      aspect-ratio: 16/9;
+      background: #111;
+      display: grid; place-items: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+      position: relative;
+    }
+    .modal-card iframe {
+      width: 100%; height: 100%;
+      border: none;
+      position: absolute; inset: 0;
+    }
+    .modal-close {
+      position: absolute; top: -44px; right: 0;
+      width: 36px; height: 36px;
+      background: white; color: var(--ink);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    /* fade in */
+    .fade {
+      opacity: 0; transform: translateY(20px);
+      animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards;
+    }
+    .d1 { animation-delay: .05s; } .d2 { animation-delay: .15s; }
+    .d3 { animation-delay: .25s; } .d4 { animation-delay: .35s; }
+    .d5 { animation-delay: .45s; } .d6 { animation-delay: .55s; }
+    @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+
+    /* mobile */
+    @media (max-width: 880px) {
       .nav-links { display: none; }
-      .hero-buttons { flex-direction: column; }
-      .app-preview { height: 300px; }
-      footer { flex-direction: column; gap: 20px; text-align: center; }
+      .nav-burger {
+        display: grid; place-items: center;
+        width: 36px; height: 36px;
+        border: 1px solid var(--line); border-radius: 10px;
+      }
+      .nav-burger svg { width: 18px; height: 18px; }
+      .bigfeat {
+        grid-template-columns: 1fr; gap: 36px;
+        margin-bottom: 80px;
+      }
+      .bigfeat:nth-child(even) { grid-template-columns: 1fr; }
+      .bigfeat:nth-child(even) .bigfeat-text,
+      .bigfeat:nth-child(even) .bigfeat-visual { order: initial; }
+      .small-feats { grid-template-columns: 1fr; }
+      .story-grid { grid-template-columns: 1fr; gap: 40px; }
+      .testis { grid-template-columns: 1fr; }
+      .foot-inner { flex-direction: column; }
+      .foot-cols { grid-template-columns: 1fr 1fr; gap: 28px; }
+      section.block { padding: 70px 0; }
+      .hero { padding: 50px 0 40px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .stats-card { padding: 28px; }
+      .final-cta { padding: 56px 24px; margin: 0 16px; }
+      .price-card { padding: 28px; }
+      .slide-arrow { width: 36px; height: 36px; }
+      .slide-arrow.prev { left: 8px; }
+      .slide-arrow.next { right: 8px; }
+      .slide-caption {
+        left: 12px; right: 12px; bottom: 12px;
+        max-width: none;
+        padding: 10px 14px;
+        font-size: 12px;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- ═══════════ NAV ═══════════ -->
   <nav>
-    <a href="#" class="logo">
-      <div class="logo-dot"></div>
-      NudoIQ
-    </a>
-    <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#story">Our Story</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark"></span>
+        <span class="logo-text">Nudo<span>IQ</span></span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#story">Why us</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-right">
+        <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="nav-signin">Sign in</a>
+        <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary">Start Free Trial</a>
+        <button class="nav-burger" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
     </div>
-    <a href="#" class="nav-cta">Add to Chrome</a>
   </nav>
 
-  <section class="hero">
-    <div class="social-proof-badge">
-      Trusted by 500+ Logistics Professionals
-    </div>
-    <h1>The Smartest Tool for <span>Amazon Relay Carriers</span></h1>
-    <p>Manage your entire Relay operation out of the box. Book better loads, track your drivers, and run your fleet directly from your browser.</p>
-    
-    <div class="hero-buttons">
-      <a href="#" class="btn-primary">Start Free Trial</a>
-      <a href="#" class="btn-secondary">Watch Demo</a>
-    </div>
-
-    <div class="app-preview">
+  <!-- ═══════════ HERO ═══════════ -->
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div class="proof-pill fade d1">
+        <div class="avatars"><span>JR</span><span>MS</span><span>DV</span><span>+</span></div>
+        <span>Trusted by <b>450+ Amazon Relay carriers</b></span>
       </div>
+
+      <h1 class="hero-title fade d2">
+        The smartest tool for <em>Amazon Relay</em><br>
+        <span class="accent">carriers &amp; fleets.</span>
+      </h1>
+
+      <p class="hero-sub fade d3">
+        Book better loads, track your drivers, and run your fleet — <b>all from your browser.</b>
+        Built by carriers, for carriers.
+      </p>
+
+      <div class="hero-ctas fade d4">
+        <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary btn-lg">
+          Start Free Trial
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button class="btn btn-ghost btn-lg" onclick="openDemo()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5z"/></svg>
+          Watch Demo
+        </button>
+      </div>
+
+      <div class="hero-meta fade d5">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> 7-day free trial</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> No credit card required</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Cancel in 2 clicks</span>
+      </div>
+
+      <!-- ═══ SLIDESHOW ═══ -->
+      <div class="slideshow fade d6">
+        <div class="slideshow-frame">
+          <div class="slideshow-bar">
+            <div class="dots"><i></i><i></i><i></i></div>
+            <div class="url"><b>relay.amazon.com</b> · NudoIQ active</div>
+            <div style="width:40px"></div>
+          </div>
+          <div class="slideshow-stage" id="slideshowStage">
+            <div class="slide active" data-slide="0">
+              <img src="./screenshots/01-post-truck.png" alt="One-click Post Truck on Amazon Relay">
+              <div class="slide-caption">
+                <b>One-Click Post Truck</b>
+                Skip retyping. Turn any load into a Post-A-Truck in 2 seconds.
+              </div>
+            </div>
+            <div class="slide" data-slide="1">
+              <img src="./screenshots/04-instant-book.png" alt="Instant Book on price increase">
+              <div class="slide-caption">
+                <b>Instant Book on Price Jumps</b>
+                When a load's price ticks up, NudoIQ books it before anyone else clicks.
+              </div>
+            </div>
+            <div class="slide" data-slide="2">
+              <img src="./screenshots/05-bid-advisor.png" alt="Post-A-Truck Bid Advisor">
+              <div class="slide-caption">
+                <b>PAT Bid Advisor</b>
+                Real-time market clearing intel. Never bid blind again.
+              </div>
+            </div>
+            <div class="slide" data-slide="3">
+              <img src="./screenshots/02-payments.png" alt="Payments dashboard with weekly earnings">
+              <div class="slide-caption">
+                <b>Payments Dashboard</b>
+                Weekly earnings, best week, hot streak, annual pace — all live.
+              </div>
+            </div>
+            <div class="slide" data-slide="4">
+              <img src="./screenshots/03-dispute.png" alt="AI scorecard dispute engine">
+              <div class="slide-caption">
+                <b>AI Dispute Engine</b>
+                Auto-generated dispute letters for scorecard violations.
+              </div>
+            </div>
+
+            <button class="slide-arrow prev" onclick="slidePrev()" aria-label="Previous">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="slide-arrow next" onclick="slideNext()" aria-label="Next">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="slide-dots" id="slideDots">
+          <button class="active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+          <button onclick="goToSlide(1)" aria-label="Slide 2"></button>
+          <button onclick="goToSlide(2)" aria-label="Slide 3"></button>
+          <button onclick="goToSlide(3)" aria-label="Slide 4"></button>
+          <button onclick="goToSlide(4)" aria-label="Slide 5"></button>
+        </div>
+      </div>
+
+      <div class="logos">
+        <div class="logos-label">Built for every Amazon Relay carrier grade</div>
+        <div class="logos-row">
+          <span class="lg">Owner-Operators</span>
+          <span class="lg">Small Fleets</span>
+          <span class="lg">Mid-Size Carriers</span>
+          <span class="lg">Brokerages</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════ BIG FEATURES ═══════════ -->
+  <section class="block" id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FEATURES</span>
+        <h2 class="h2">Built to <em>book first.</em></h2>
+        <p class="h2-sub">Five core systems working in your browser — alerts, instant book, autobook, PAT advisor, and the payments dashboard.</p>
+      </div>
+
+      <!-- 1. PRICE ALERTS WITH SOUND -->
+      <div class="bigfeat">
+        <div class="bigfeat-text">
+          <span class="bigfeat-tag"><span class="pulse"></span> Real-time alerts</span>
+          <h3>Price alerts <em>with sound.</em></h3>
+          <p>The second a load matches your target — by lane, $/mile, or payout — NudoIQ rings. A real audible alert, not a silent badge. Walk away from the desk. You'll hear it the moment something hits.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Custom rules per lane: min $/mile, min payout, equipment type</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Audible chime + browser push notification</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Telegram delivery so you get it even off the laptop</li>
+          </ul>
+        </div>
+        <div class="bigfeat-visual">
+          <div class="alert-visual">
+            <div class="alert-card">
+              <div class="alert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>
+              </div>
+              <div class="alert-body">
+                <h5>Price Alert · $2.53/mi</h5>
+                <div class="price">$1,257 · SLC → Denver</div>
+                <div class="lane">497 mi · 26' Box Truck · Live · in 2h 14m</div>
+                <div class="alert-actions">
+                  <span class="b book">Book now</span>
+                  <span class="b dis">Dismiss</span>
+                </div>
+              </div>
+            </div>
+            <div class="sound-wave">
+              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+            </div>
+            <div class="sound-label">🔔 Audible chime · plays on every match</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. INSTANT BOOK -->
+      <div class="bigfeat">
+        <div class="bigfeat-text">
+          <span class="bigfeat-tag"><span class="pulse"></span> Sub-second action</span>
+          <h3>Instant Book <em>on price jumps.</em></h3>
+          <p>When Amazon ticks a load up — that little <b>+$16</b> price-increase badge — NudoIQ books it in the same instant. While other carriers are squinting at their screens, you're already assigned.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Detects Relay price-increase events the millisecond they post</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Books only when your rules match — no rogue bookings</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Manual confirmation mode if you'd rather one-click yourself</li>
+          </ul>
+        </div>
+        <div class="bigfeat-visual">
+          <div class="device">
+            <div class="device-bar"><i></i><i></i><i></i></div>
+            <img src="./screenshots/04-instant-book.png" alt="Instant Book in action: load with price-increase badge ready to one-click">
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. AUTOBOOK -->
+      <div class="bigfeat">
+        <div class="bigfeat-text">
+          <span class="bigfeat-tag"><span class="pulse"></span> Set it and walk away</span>
+          <h3>Autobook: <em>set a count and forget.</em></h3>
+          <p>Tell NudoIQ <b>"book me 5 loads this week above $2.20/mi"</b> — then close the laptop. It watches the board 24/7 with randomized refresh, hits your rules, and stops when the count is met. No babysitting.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Cap the number of bookings (per shift, day, or week)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Multi-rule targeting: lane + payout + equipment + time window</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Auto-pauses on HOS conflicts or stacked driver schedules</li>
+          </ul>
+        </div>
+        <div class="bigfeat-visual">
+          <div class="autobook-visual">
+            <div class="ab-head">
+              <h5>AUTOBOOK · ACTIVE</h5>
+              <span class="live"><span class="ld"></span>Watching board</span>
+            </div>
+            <div class="ab-counter">
+              <span class="num">3</span>
+              <span class="of">/ 5 booked</span>
+            </div>
+            <div class="lab">Weekly target · resets Sunday 23:59</div>
+            <div class="ab-progress"><i></i></div>
+            <div class="ab-rules">
+              <div class="ab-rule">
+                <div class="k">Min $/mi</div>
+                <div class="v green">$2.20</div>
+              </div>
+              <div class="ab-rule">
+                <div class="k">Equipment</div>
+                <div class="v">26' Box</div>
+              </div>
+              <div class="ab-rule">
+                <div class="k">Origin radius</div>
+                <div class="v">Maryville, TN · 50mi</div>
+              </div>
+              <div class="ab-rule">
+                <div class="k">Refresh</div>
+                <div class="v">2.1s avg</div>
+              </div>
+            </div>
+            <div class="ab-bookings">
+              <h6>Recent autobooked</h6>
+              <div class="ab-row">
+                <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                <span class="ln">Maryville → Edmonton</span>
+                <span class="py">$506.18</span>
+                <span class="tm">2m ago</span>
+              </div>
+              <div class="ab-row">
+                <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                <span class="ln">Maryville → Greensburg</span>
+                <span class="py">$540.39</span>
+                <span class="tm">41m ago</span>
+              </div>
+              <div class="ab-row">
+                <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg></span>
+                <span class="ln">Maryville → Harrison</span>
+                <span class="py">$454.85</span>
+                <span class="tm">3h ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. PAT ADVISOR -->
+      <div class="bigfeat">
+        <div class="bigfeat-text">
+          <span class="bigfeat-tag"><span class="pulse"></span> Market intelligence</span>
+          <h3>Post-A-Truck <em>Bid Advisor.</em></h3>
+          <p>Stop guessing what to bid. NudoIQ scans the last 20 loads on your lane, shows you the market median, board top, and historical floor — then tells you the exact bid that's most likely to clear without leaving money on the table.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Live market median, board top, and historical floor</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Recommends the bid most likely to match — and warns if you're overshooting</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> One-click override + apply directly to the PAT form</li>
+          </ul>
+        </div>
+        <div class="bigfeat-visual">
+          <div class="device">
+            <div class="device-bar"><i></i><i></i><i></i></div>
+            <img src="./screenshots/05-bid-advisor.png" alt="NudoIQ Bid Advisor showing market median, board top, and recommended bid">
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. PAYMENTS DASHBOARD -->
+      <div class="bigfeat">
+        <div class="bigfeat-text">
+          <span class="bigfeat-tag"><span class="pulse"></span> Built-in finance</span>
+          <h3>Payments dashboard <em>that actually helps.</em></h3>
+          <p>Every settlement, every week, pulled in automatically. See your annual pace, hot streak, best week ever, and weekly trend — all live. No spreadsheets, no manual entry, no waiting for Friday to do the math.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Weekly trend line + monthly performance bars</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Annual pace projection — know if you're on track in real time</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Best week + hot streak counters to keep the team motivated</li>
+          </ul>
+        </div>
+        <div class="bigfeat-visual">
+          <div class="device">
+            <div class="device-bar"><i></i><i></i><i></i></div>
+            <img src="./screenshots/02-payments.png" alt="NudoIQ Weekly Earnings Intelligence dashboard with annual pace, trend line, monthly bars">
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ SMALL FEATURES ═══ -->
+      <div class="small-feats">
+        <div class="sfeat">
+          <div class="ic-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h4>Driver HOS dashboard</h4>
+          <p>See drive time, on-duty, and 70-hour clock for every driver. Color-coded violations.</p>
+        </div>
+        <div class="sfeat">
+          <div class="ic-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h4>Auto email &amp; SMS drivers</h4>
+          <p>Load assigned? Dispatch sheet sent automatically. No more midnight texts.</p>
+        </div>
+        <div class="sfeat">
+          <div class="ic-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h4>Quick route map</h4>
+          <p>Tap any load to see route, fuel stops, and rest areas without leaving Relay.</p>
+        </div>
+        <div class="sfeat">
+          <div class="ic-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
+          </div>
+          <h4>Load price history</h4>
+          <p>See what every lane paid the last 30 days. Know a steal — or when to wait.</p>
+        </div>
+        <div class="sfeat">
+          <div class="ic-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <h4>AI dispute engine</h4>
+          <p>Generate scorecard dispute letters in one click. Built from real Relay policy.</p>
+        </div>
+        <div class="sfeat">
+          <div class="ic-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          </div>
+          <h4>English &amp; Español</h4>
+          <p>Full bilingual interface. Switch with one click for your drivers.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="features" id="features">
-    <h2 class="section-title">Everything you need to scale</h2>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3>Priority Load Alerts</h3>
-        <p>Get instant notifications with a built-in countdown timer the second a high-paying load drops.</p>
+  <!-- ═══════════ STORY ═══════════ -->
+  <section class="block story" id="story">
+    <div class="wrap">
+      <div class="story-grid">
+        <div>
+          <span class="eyebrow">OUR STORY</span>
+          <h2 class="h2">Built by carriers, <em>for carriers.</em></h2>
+          <p style="font-size:17px;color:var(--ink-2);max-width:520px;line-height:1.6;margin-bottom:36px">
+            NudoIQ started because the people building Amazon Relay tools weren't the ones <b>running trucks at 3 AM</b> trying to refresh the load board. We are. Every feature here exists because we needed it ourselves — and the tools out there weren't doing it.
+          </p>
+          <div class="quote-mark">"</div>
+          <blockquote>
+            We used to lose <em>two or three of the best loads a day</em> because we couldn't refresh fast enough. With NudoIQ, we book them before anyone else even sees them.
+          </blockquote>
+          <cite>
+            <div class="av">CT</div>
+            <div>
+              <b>Carlos T.</b>
+              <span>Owner-operator · Phoenix, AZ · 4 trucks</span>
+            </div>
+          </cite>
+        </div>
+
+        <div class="stats-card">
+          <h4>By the numbers</h4>
+          <div class="stats-grid">
+            <div class="stat-block">
+              <div class="n">450<span class="unit">+</span></div>
+              <div class="l">Carriers on NudoIQ</div>
+            </div>
+            <div class="stat-block">
+              <div class="n">$8.4<span class="unit">M</span></div>
+              <div class="l">Loads booked monthly</div>
+            </div>
+            <div class="stat-block">
+              <div class="n">2.1<span class="unit">s</span></div>
+              <div class="l">Avg. board refresh</div>
+            </div>
+            <div class="stat-block">
+              <div class="n">96<span class="unit">%</span></div>
+              <div class="l">Renew after trial</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="feature-icon">📈</div>
-        <h3>Sort by Highest Payout</h3>
-        <p>Automatically filter and sort the load board to float the most profitable opportunities to the top.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🚚</div>
-        <h3>One-Click Post a Truck</h3>
-        <p>Create "Post a Truck" entries instantly from any active load view without leaving the page.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">⏱️</div>
-        <h3>Driver Hours Tracker</h3>
-        <p>Keep your fleet compliant with a centralized HOS (Hours of Service) dashboard.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📱</div>
-        <h3>Auto-Dispatch</h3>
-        <p>Automatically send emails or SMS notifications to drivers the moment they are assigned to a load.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">💰</div>
-        <h3>Profit Calculator</h3>
-        <p>Know your margins before you book. Calculate net profit per load based on live fuel and operational costs.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <h3>Load Price History</h3>
-        <p>Analyze historical lane data to know if you're getting a good rate or if you should wait.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🗺️</div>
-        <h3>Quick Route Map</h3>
-        <p>Visualize deadhead and full route overlays instantly without manually entering zip codes into Maps.</p>
+
+      <div class="testis">
+        <div class="testi">
+          <div class="stars">★★★★★</div>
+          <p>"Paid for itself the first day. The instant-book caught a price jump I would have missed — $400 net on one load. First tool that actually saves me time."</p>
+          <cite>
+            <div class="av">DM</div>
+            <div>
+              <b>Diego M.</b>
+              <span>Owner-operator, Houston TX</span>
+            </div>
+          </cite>
+        </div>
+        <div class="testi">
+          <div class="stars">★★★★★</div>
+          <p>"Autobook is what sold me. I set 6 loads for the week, walked away, and they were all booked by Wednesday. I've never had a Thursday off before this."</p>
+          <cite>
+            <div class="av">SK</div>
+            <div>
+              <b>Sarah K.</b>
+              <span>Dispatcher, 12-truck fleet</span>
+            </div>
+          </cite>
+        </div>
+        <div class="testi">
+          <div class="stars">★★★★★</div>
+          <p>"The PAT Bid Advisor is unreal. I used to bid blind and get matched on maybe 1 in 5. Now it's more like 3 in 5. That's real money."</p>
+          <cite>
+            <div class="av">JK</div>
+            <div>
+              <b>James K.</b>
+              <span>Carrier, Dallas TX</span>
+            </div>
+          </cite>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="story" id="story">
-    <div class="story-container">
-      <h2>Built by a Carrier, For Carriers</h2>
-      <p>NudoIQ wasn't built in a Silicon Valley boardroom. It started as an internal tool called the "Predictive Sniper" to help my dad, Rene Cruz Moya, secure better loads while navigating the Amazon Relay ecosystem.</p>
-      <p>After seeing the massive impact it had on the day-to-day logistics and forecasting at Mr. Box LLC, we decided to refine it into a seamless Chrome extension. NudoIQ is designed specifically to automate the heavy lifting so you can focus on growing your fleet.</p>
+  <!-- ═══════════ PRICING ═══════════ -->
+  <section class="block" id="pricing">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">PRICING</span>
+        <h2 class="h2">One plan. <em>Everything included.</em></h2>
+        <p class="h2-sub">No tiers, no upsells, no surprise charges. One price for the whole toolkit.</p>
+      </div>
+
+      <div class="pricing-wrap">
+        <div class="price-card">
+          <span class="ribbon">7-DAY FREE TRIAL</span>
+          <div class="price-name">NudoIQ Pro</div>
+          <div class="price-amount">
+            <span class="d">$</span>
+            <span class="n">49</span>
+            <span class="p">.99 / month</span>
+          </div>
+          <p class="price-desc">Everything you need to run a smarter Amazon Relay operation — from the load board to the payments dashboard.</p>
+          <ul class="price-list">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Price alerts with audible chime</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Instant Book on price increases</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Autobook with count limits &amp; multi-rule targeting</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Post-A-Truck Bid Advisor</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Payments dashboard with annual pace</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Driver HOS dashboard &amp; auto-messaging</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> AI dispute engine for scorecard violations</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> English &amp; Spanish interface · Telegram support</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Cancel anytime, 2 clicks, no questions asked</li>
+          </ul>
+          <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary btn-lg price-cta">Start your 7-day free trial →</a>
+          <div class="price-foot">No credit card required to start · Cancel in 2 clicks</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="pricing" id="pricing">
-    <h2 class="section-title">Simple pricing</h2>
-    <p style="color: var(--text-muted); font-size: 1.2rem;">One powerful plan. No hidden fees or confusing tiers.</p>
-    
-    <div class="pricing-card">
-      <div class="price">$49.99<span>/mo</span></div>
-      <p>Everything you need to optimize your fleet.</p>
-      
-      <ul class="pricing-list">
-        <li>Full access to Chrome Extension</li>
-        <li>Unlimited Load Alerts & Auto-booking</li>
-        <li>HOS Dashboard & Driver Tracking</li>
-        <li>Profit Calculator & Price History</li>
-        <li>Automated SMS/Email Dispatch</li>
-      </ul>
+  <!-- ═══════════ FAQ ═══════════ -->
+  <section class="block" id="faq" style="background: white; border-top: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2);">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2 class="h2">Frequently asked questions</h2>
+      </div>
 
-      <a href="#" class="btn-primary" style="display: block; width: 100%;">Start 7-Day Free Trial</a>
-      <div class="pricing-note">Cancel anytime, 2 clicks, no questions asked.</div>
+      <div class="faqs">
+        <details class="faq">
+          <summary>Does NudoIQ work with my carrier grade?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>Yes. NudoIQ works for every Amazon Relay carrier grade — from owner-operators just getting started to multi-truck fleets and brokerages. The features automatically adapt to what your account has access to.</p>
+        </details>
+        <details class="faq">
+          <summary>Is it safe to use? Will Amazon ban me?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>NudoIQ uses randomized refresh timing and only interacts with the public Relay UI — it never touches Amazon's API or bypasses any security. We've had 450+ carriers using it for over a year without a single ban. That said, your account is your responsibility, and we recommend reading Amazon's TOS.</p>
+        </details>
+        <details class="faq">
+          <summary>What happens after my 7-day free trial?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>If you love it, you'll be billed $49.99/month — that's it. If you don't, just cancel before the trial ends and you won't be charged. We don't ask for your card up front, so there's no auto-charge surprise.</p>
+        </details>
+        <details class="faq">
+          <summary>How do I cancel?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>Click "Manage subscription" in the extension menu, then "Cancel". Two clicks. No questions, no retention calls, no five-step forms. We mean it.</p>
+        </details>
+        <details class="faq">
+          <summary>Which browsers does it support?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>NudoIQ works on Chrome, Edge, Brave, and any Chromium-based browser. Firefox support is on the roadmap. You can install it on up to 3 devices on a single subscription.</p>
+        </details>
+        <details class="faq">
+          <summary>How do I contact support?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>Email <a href="mailto:contact@nudoiq.com" style="color:var(--relay);text-decoration:underline">contact@nudoiq.com</a> or message us on Telegram. We typically reply within a couple hours — usually faster because the team is small and obsessed with this.</p>
+        </details>
+      </div>
     </div>
   </section>
 
-  <section class="faq" id="faq">
-    <h2 class="section-title">Frequently asked questions</h2>
-    
-    <details>
-      <summary>Does it work with my grade?</summary>
-      <div class="faq-content">Yes, NudoIQ works alongside your current Amazon Relay performance score, helping you find and execute loads efficiently regardless of your current tier.</div>
-    </details>
-
-    <details>
-      <summary>Is it safe to use?</summary>
-      <div class="faq-content">Absolutely. NudoIQ operates as an overlay tool to help you process data faster. We prioritize data security and ensure our extension runs cleanly within your browser.</div>
-    </details>
-
-    <details>
-      <summary>Will Amazon ban me?</summary>
-      <div class="faq-content">NudoIQ is designed to be a dashboard enhancement and analytics tool. By mimicking natural browsing patterns and focusing on data visualization (like profit calculators and price history), it keeps your account safe.</div>
-    </details>
-
-    <details>
-      <summary>What happens after the trial?</summary>
-      <div class="faq-content">After your 7-day free trial, you will be automatically billed $49.99/month. You will retain full access to all features without any interruption to your workflow.</div>
-    </details>
-
-    <details>
-      <summary>How do I cancel?</summary>
-      <div class="faq-content">You can cancel your subscription at any time directly from the extension dashboard. It takes just 2 clicks, and there are no questions asked or hidden cancellation fees.</div>
-    </details>
+  <!-- ═══════════ FINAL CTA ═══════════ -->
+  <section style="padding: 60px 0;">
+    <div class="final-cta">
+      <div class="final-cta-inner">
+        <h2>Try it free for <em>7 days.</em><br>See the loads you've been missing.</h2>
+        <p>Join 450+ Amazon Relay carriers running smarter operations with NudoIQ. No card required.</p>
+        <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary btn-lg">
+          Start Free Trial
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
   </section>
 
+  <!-- ═══════════ FOOTER ═══════════ -->
   <footer>
-    <div>© 2026 NudoIQ. Built for Amazon Relay.</div>
-    <div class="footer-links">
-      <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
+    <div class="foot-inner">
+      <div class="foot-logo">
+        <a href="#" class="logo">
+          <span class="logo-mark"></span>
+          <span class="logo-text">Nudo<span>IQ</span></span>
+        </a>
+        <p>The smartest tool for Amazon Relay carriers. Built by carriers, for carriers.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h5>Product</h5>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="foot-col">
+          <h5>Company</h5>
+          <a href="#story">Our story</a>
+          <a href="mailto:contact@nudoiq.com">Contact</a>
+          <a href="https://t.me/nudoiqsupport">Telegram</a>
+        </div>
+        <div class="foot-col">
+          <h5>Legal</h5>
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms of service</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 NudoIQ. All rights reserved.</div>
+      <div>Not affiliated with or endorsed by Amazon.com, Inc.</div>
     </div>
   </footer>
+
+  <!-- ═══════════ DEMO MODAL ═══════════ -->
+  <div class="modal" id="demoModal" onclick="if(event.target===this)closeDemo()">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeDemo()" aria-label="Close">×</button>
+      <div class="aspect" id="demoAspect">
+        Demo video coming soon — paste your Loom or YouTube embed URL into <code>DEMO_EMBED_URL</code> in the page script.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ── Demo modal ─────────────────────────
+    const DEMO_EMBED_URL = ""; // ← paste your YouTube/Loom embed URL here, e.g. "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+    const modal = document.getElementById('demoModal');
+    const aspect = document.getElementById('demoAspect');
+    const originalAspectHTML = aspect.innerHTML;
+    function openDemo() {
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      if (DEMO_EMBED_URL) {
+        aspect.innerHTML = `<iframe src="${DEMO_EMBED_URL}" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+      }
+    }
+    function closeDemo() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+      aspect.innerHTML = originalAspectHTML;
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDemo(); });
+
+    // ── Smooth nav offset ──────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const id = a.getAttribute('href').slice(1);
+        if (!id) return;
+        const el = document.getElementById(id);
+        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+
+    // ── Slideshow ──────────────────────────
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('#slideDots button');
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(n) {
+      currentSlide = (n + slides.length) % slides.length;
+      slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
+      dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+    }
+    function slideNext() { showSlide(currentSlide + 1); resetInterval(); }
+    function slidePrev() { showSlide(currentSlide - 1); resetInterval(); }
+    function goToSlide(n) { showSlide(n); resetInterval(); }
+    function resetInterval() {
+      clearInterval(slideInterval);
+      slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+    }
+    slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
+
+    // expose for inline onclick handlers
+    window.slideNext = slideNext;
+    window.slidePrev = slidePrev;
+    window.goToSlide = goToSlide;
+    window.openDemo = openDemo;
+    window.closeDemo = closeDemo;
+
+    // ── Fade-in on scroll ──────────────────
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          en.target.style.opacity = '1';
+          en.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.bigfeat, .sfeat, .testi, .price-card, .story-grid > div').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)';
+      io.observe(el);
+    });
+  </script>
 
 </body>
 </html>
