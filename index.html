@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NudoIQ — Trusted by 450+ Amazon Relay carriers</title>
-  <meta name="description" content="The smartest tool for Amazon Relay carriers. Book better loads, track your drivers, run your fleet — all from your browser.">
+  <title>NudoIQ — Book Better Loads on Amazon Relay. Automatically.</title>
+  <meta name="description" content="Price alerts, instant book, autobook, PAT bid advisor, and driver HOS tracking — all in one Chrome extension built for Amazon Relay carriers. 7-day free trial.">
+  <meta property="og:title" content="NudoIQ — The Smartest Tool for Amazon Relay Carriers">
+  <meta property="og:description" content="Stop missing the best loads. NudoIQ alerts, books, and advises — automatically. Used by 450+ Relay carriers.">
+  <meta name="theme-color" content="#067D62">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +27,7 @@
       --bg:           #fbfcfb;
       --white:        #ffffff;
       --amber:        #f59e0b;
+      --red:          #A32D2D;
       --shadow-sm:    0 1px 2px rgba(12,20,17,0.04), 0 1px 1px rgba(12,20,17,0.02);
       --shadow-md:    0 8px 24px -8px rgba(12,20,17,0.12), 0 2px 6px rgba(12,20,17,0.04);
       --shadow-lg:    0 24px 48px -16px rgba(6,125,98,0.18), 0 8px 16px -8px rgba(12,20,17,0.06);
@@ -44,7 +48,7 @@
     /* NAV */
     nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(251,252,251,0.85);
+      background: rgba(251,252,251,0.92);
       backdrop-filter: saturate(140%) blur(14px);
       -webkit-backdrop-filter: saturate(140%) blur(14px);
       border-bottom: 1px solid var(--line-2);
@@ -71,13 +75,12 @@
       top: 50%; left: 50%; transform: translate(-50%, -50%);
     }
     .logo-text { color: var(--ink); }
-    .logo-text span { color: var(--relay); }faq
+    .logo-text span { color: var(--relay); }
 
     .nav-links { display: flex; gap: 32px; font-size: 14.5px; font-weight: 500; color: var(--ink-2); }
     .nav-links a:hover { color: var(--relay); }
     .nav-right { display: flex; align-items: center; gap: 14px; }
-    .nav-signin { font-size: 14.5px; font-weight: 500; color: var(--ink-2); }
-    .nav-signin:hover { color: var(--ink); }
+    .nav-trial-note { font-size: 12px; color: var(--muted); font-weight: 500; }
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
       padding: 10px 18px; border-radius: 999px;
@@ -94,6 +97,15 @@
     .btn-ghost:hover { border-color: var(--ink-2); color: var(--ink); }
     .btn-lg { padding: 15px 28px; font-size: 16px; font-weight: 700; letter-spacing: -0.01em; }
     .nav-burger { display: none; }
+
+    /* PAIN BANNER */
+    .pain-banner {
+      background: var(--ink); color: rgba(255,255,255,0.85);
+      text-align: center; padding: 10px 24px;
+      font-size: 13.5px; font-weight: 500; letter-spacing: -0.01em;
+    }
+    .pain-banner b { color: #5de8b0; font-weight: 700; }
+    .pain-banner a { color: #5de8b0; text-decoration: underline; text-underline-offset: 2px; }
 
     /* HERO */
     .hero { position: relative; padding: 80px 0 60px; text-align: center; overflow: hidden; }
@@ -259,6 +271,31 @@
     }
     .logos-row .lg { font-weight: 700; font-size: 18px; color: var(--ink-2); letter-spacing: -0.02em; }
 
+    /* HOW IT WORKS */
+    .how-it-works { background: var(--relay-soft); border-top: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2); padding: 72px 0; }
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; position: relative; }
+    .steps::before {
+      content: ''; position: absolute; top: 28px; left: calc(16.66% + 16px); right: calc(16.66% + 16px);
+      height: 2px; background: linear-gradient(90deg, var(--relay) 0%, var(--relay) 100%);
+      opacity: 0.2;
+    }
+    .step { text-align: center; position: relative; }
+    .step-num {
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--relay); color: white;
+      font-size: 22px; font-weight: 800;
+      display: grid; place-items: center; margin: 0 auto 18px;
+      box-shadow: 0 4px 16px -4px rgba(6,125,98,0.4);
+    }
+    .step h4 { font-size: 18px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
+    .step p { font-size: 15px; color: var(--ink-2); line-height: 1.55; max-width: 280px; margin: 0 auto; }
+    .step .step-time {
+      display: inline-block; margin-top: 10px;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+      color: var(--relay); background: var(--relay-light);
+      padding: 3px 10px; border-radius: 999px;
+    }
+
     /* SECTIONS */
     section.block { padding: 100px 0; position: relative; }
 
@@ -333,6 +370,12 @@
       width: 18px; height: 18px; color: var(--relay);
       flex-shrink: 0; margin-top: 2px;
     }
+    .bigfeat-roi {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 16px; padding: 10px 16px;
+      background: #f0fdf4; border: 1px solid #6ee7b7; border-radius: 8px;
+      font-size: 13px; font-weight: 600; color: #166534;
+    }
 
     /* device frame */
     .device {
@@ -351,16 +394,65 @@
     .device-bar i:nth-child(3) { background: #28c840; }
     .device img { width: 100%; display: block; }
 
-    /* PAT bid card overlay */
-    .pat-visual { position: relative; }
-    .pat-card-overlay {
-      position: absolute; bottom: -28px; right: -20px;
-      width: 210px;
-      background: white; border-radius: 12px;
-      box-shadow: var(--shadow-lg); border: 1px solid var(--line);
-      overflow: hidden; z-index: 2;
+    /* PAT ADVISOR MOCKUP */
+    .pat-mock-device {
+      border-radius: 14px; background: white;
+      border: 1px solid var(--line); box-shadow: var(--shadow-md);
+      overflow: hidden;
     }
-    .pat-card-overlay img { width: 100%; display: block; }
+    .pat-mock-body {
+      padding: 16px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    }
+    .pat-mock-header {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 12px; padding-bottom: 10px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .pat-mock-dot {
+      width: 9px; height: 9px; border-radius: 50%; background: #0F6E56;
+      box-shadow: 0 0 0 3px rgba(15,110,86,0.15); flex-shrink: 0;
+    }
+    .pat-mock-title { font-size: 13px; font-weight: 700; color: #0F6E56; }
+    .pat-mock-sub { font-size: 10px; color: #6b7280; margin-top: 1px; }
+    .pat-advice-box {
+      background: rgba(15,110,86,0.08); border: 2px solid rgba(15,110,86,0.25);
+      border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; text-align: center;
+    }
+    .pat-advice-label { font-size: 12px; font-weight: 800; color: #0F6E56; margin-bottom: 4px; }
+    .pat-advice-amount { font-size: 32px; font-weight: 900; color: #0F6E56; line-height: 1.1; }
+    .pat-advice-rpm { font-size: 13px; font-weight: 700; color: #0F6E56; margin-bottom: 8px; }
+    .pat-advice-reason {
+      font-size: 10.5px; color: #0F6E56; text-align: left; line-height: 1.5;
+      background: rgba(255,255,255,0.5); border-radius: 5px; padding: 6px 8px;
+    }
+    .pat-stats-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 5px; margin-bottom: 10px;
+    }
+    .pat-stat { background: #f9fafb; border-radius: 6px; padding: 7px; text-align: center; }
+    .pat-stat.red { background: #fff0f0; }
+    .pat-stat-lbl { font-size: 8px; color: #9ca3af; font-weight: 700; text-transform: uppercase; margin-bottom: 2px; }
+    .pat-stat.red .pat-stat-lbl { color: #A32D2D; }
+    .pat-stat-val { font-size: 14px; font-weight: 800; color: #111; }
+    .pat-stat.red .pat-stat-val { color: #A32D2D; }
+    .pat-stat-rpm { font-size: 10px; color: #64748b; }
+    .pat-stat.red .pat-stat-rpm { color: #A32D2D; }
+    .pat-target-note {
+      font-size: 10px; font-weight: 700; color: #0F6E56; text-align: center;
+      background: #f0fdf4; border-radius: 5px; padding: 6px; margin-bottom: 8px;
+    }
+    .pat-conf-bar { background: #f8fafc; border-radius: 7px; padding: 8px 10px; }
+    .pat-conf-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px; }
+    .pat-conf-lbl { font-size: 9px; font-weight: 700; color: #94a3b8; text-transform: uppercase; }
+    .pat-conf-badge { font-size: 9px; font-weight: 700; color: #0F6E56; background: rgba(15,110,86,0.1); border-radius: 8px; padding: 2px 7px; }
+    .pat-conf-track { height: 6px; background: #e5e7eb; border-radius: 3px; overflow: hidden; margin-bottom: 4px; }
+    .pat-conf-fill { height: 100%; background: #0F6E56; border-radius: 3px; width: 88%; }
+    .pat-conf-note { font-size: 9px; color: #64748b; }
+    .pat-lane-row {
+      display: flex; align-items: center; gap: 8px;
+      background: #f8fafc; border-radius: 7px; padding: 7px 10px;
+      font-size: 11px; margin-top: 8px;
+    }
+    .pat-lane-tag { font-weight: 600; color: #475569; white-space: nowrap; }
 
     /* ALERT VISUAL */
     .alert-visual {
@@ -625,15 +717,16 @@
     .price-card {
       background: white; border: 1px solid var(--line);
       border-radius: 24px; padding: 40px;
-      max-width: 540px; width: 100%;
+      max-width: 560px; width: 100%;
       box-shadow: var(--shadow-md); position: relative;
     }
     .price-card .ribbon {
       position: absolute; top: -14px; left: 50%;
       transform: translateX(-50%);
-      background: var(--ink); color: white;
-      font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
-      padding: 6px 14px; border-radius: 999px;
+      background: var(--relay); color: white;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+      padding: 6px 16px; border-radius: 999px;
+      white-space: nowrap;
     }
     .price-name {
       font-size: 14px; font-weight: 600; letter-spacing: 0.04em;
@@ -651,10 +744,19 @@
     .price-list li {
       display: flex; align-items: flex-start; gap: 11px;
       padding: 9px 0; font-size: 15px; color: var(--ink);
+      border-bottom: 1px solid var(--line-2);
     }
+    .price-list li:last-child { border-bottom: none; }
     .price-list li svg { width: 18px; height: 18px; color: var(--relay); flex-shrink: 0; margin-top: 2px; }
     .price-cta { display: block; text-align: center; padding: 16px; }
-    .price-foot { margin-top: 14px; font-size: 13px; color: var(--muted); text-align: center; }
+    .price-guarantee {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      margin-top: 16px; padding: 12px 16px;
+      background: var(--relay-soft); border-radius: 10px;
+      font-size: 13px; color: var(--ink-2); font-weight: 500;
+    }
+    .price-guarantee svg { width: 16px; height: 16px; color: var(--relay); flex-shrink: 0; }
+    .price-foot { margin-top: 12px; font-size: 13px; color: var(--muted); text-align: center; }
 
     /* FAQ */
     .faqs { max-width: 760px; margin: 0 auto; }
@@ -715,6 +817,11 @@
     }
     .final-cta .btn-primary { background: white; color: var(--ink); }
     .final-cta .btn-primary:hover { background: #f5f7f6; }
+    .final-cta-meta {
+      margin-top: 18px; display: flex; gap: 20px; justify-content: center;
+      flex-wrap: wrap; font-size: 13px; color: rgba(255,255,255,0.5);
+    }
+    .final-cta-meta span { display: inline-flex; align-items: center; gap: 5px; }
 
     /* FOOTER */
     footer { padding: 64px 24px 32px; }
@@ -745,36 +852,32 @@
       font-size: 13px; color: var(--muted); flex-wrap: wrap; gap: 8px;
     }
 
-    /* DEMO MODAL */
-    .modal {
-      position: fixed; inset: 0; z-index: 1000;
-      background: rgba(12,20,17,0.75); backdrop-filter: blur(8px);
-      display: none; align-items: center; justify-content: center;
-      padding: 24px;
+    /* VIDEO MODAL */
+    .vid-overlay {
+      display: none; position: fixed; inset: 0; z-index: 9999;
+      background: rgba(10,15,12,0.88);
+      backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+      align-items: center; justify-content: center;
     }
-    .modal.open { display: flex; }
-    .modal-card {
-      background: black; border-radius: 16px;
-      overflow: hidden; max-width: 960px; width: 100%;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.5); position: relative;
+    .vid-overlay.open { display: flex; }
+    .vid-modal {
+      position: relative; width: 90%; max-width: 900px;
+      border-radius: 16px; overflow: hidden;
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+      background: #000; aspect-ratio: 16/9;
     }
-    .modal-card .aspect {
-      aspect-ratio: 16/9; background: #111;
-      display: grid; place-items: center;
-      color: rgba(255,255,255,0.6); font-size: 14px;
-      position: relative; padding: 24px; text-align: center;
+    .vid-modal iframe {
+      width: 100%; height: 100%; border: none; display: block;
     }
-    .modal-card iframe {
-      width: 100%; height: 100%; border: none;
-      position: absolute; inset: 0;
-    }
-    .modal-close {
+    .vid-close {
       position: absolute; top: -44px; right: 0;
-      width: 36px; height: 36px;
-      background: white; color: var(--ink);
-      border-radius: 50%; display: grid; place-items: center;
-      cursor: pointer; font-size: 18px;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
+      color: white; font-size: 20px; line-height: 1;
+      display: grid; place-items: center;
+      cursor: pointer; transition: background .15s;
     }
+    .vid-close:hover { background: rgba(255,255,255,0.3); }
 
     .fade {
       opacity: 0; transform: translateY(20px);
@@ -787,6 +890,7 @@
 
     @media (max-width: 880px) {
       .nav-links { display: none; }
+      .nav-trial-note { display: none; }
       .nav-burger {
         display: grid; place-items: center;
         width: 36px; height: 36px;
@@ -815,11 +919,17 @@
         left: 12px; right: 12px; bottom: 12px;
         max-width: none; padding: 10px 14px; font-size: 12px;
       }
-      .pat-card-overlay { width: 140px; bottom: -16px; right: -8px; }
+      .steps { grid-template-columns: 1fr; gap: 24px; }
+      .steps::before { display: none; }
     }
   </style>
 </head>
 <body>
+
+  <!-- TOP PAIN BANNER -->
+  <div class="pain-banner">
+    🔥 <b>Carriers on NudoIQ average $2.60+/mi</b> — compared to $2.10/mi manually refreshing. &nbsp;<a href="#pricing">Try it free →</a>
+  </div>
 
   <!-- NAV -->
   <nav>
@@ -830,12 +940,14 @@
       </a>
       <div class="nav-links">
         <a href="#features">Features</a>
+        <a href="#how-it-works">How it works</a>
         <a href="#story">Why us</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
       </div>
       <div class="nav-right">
-        <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary">Start Free Trial</a>
+        <span class="nav-trial-note">7-day free trial</span>
+        <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary">Try it free</a>
         <button class="nav-burger" aria-label="Menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
@@ -848,33 +960,34 @@
     <div class="wrap hero-inner">
       <div class="proof-pill fade d1">
         <div class="avatars"><span>JR</span><span>MS</span><span>DV</span><span>+</span></div>
-        <span>Trusted by <b>450+ Amazon Relay carriers</b></span>
+        <span><b>450+ Amazon Relay carriers</b> trust NudoIQ</span>
       </div>
 
       <h1 class="hero-title fade d2">
-        The smartest tool for <em>Amazon Relay</em><br>
-        <span class="accent">carriers &amp; fleets.</span>
+        Stop missing the <em>best loads.</em><br>
+        <span class="accent">Start booking them automatically.</span>
       </h1>
 
       <p class="hero-sub fade d3">
-        Book better loads, track your drivers, and run your fleet — <b>all from your browser.</b>
-        Built by carriers, for carriers.
+        Price alerts, instant book on price jumps, autobook, PAT bid advisor — <b>all running in your browser while you focus on driving.</b> Built by carriers who were sick of refreshing the load board every 2 minutes.
       </p>
 
       <div class="hero-ctas fade d4">
         <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary btn-lg">
-          Start Free Trial
+          Try it free — No Card Required
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
-        <button class="btn btn-ghost btn-lg" onclick="openDemo()">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5z"/></svg>
-          Watch Demo
+        <button class="btn btn-ghost btn-lg" onclick="openVideoModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          Watch demo (2 min)
         </button>
       </div>
 
       <div class="hero-meta fade d5">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> 7-day free trial</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> No credit card required</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Cancel in 2 clicks</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> English &amp; Español</span>
       </div>
 
       <!-- SLIDESHOW -->
@@ -900,15 +1013,14 @@
                 When a load's price ticks up, NudoIQ books it before anyone else clicks.
               </div>
             </div>
-            
-            <div class="slide" data-slide="3">
+            <div class="slide" data-slide="2">
               <img src="./payments.webp" alt="NudoIQ Weekly Earnings Intelligence dashboard" loading="lazy">
               <div class="slide-caption">
                 <b>Payments Dashboard</b>
                 Weekly earnings, best week, hot streak, annual pace — all live.
               </div>
             </div>
-            <div class="slide" data-slide="4">
+            <div class="slide" data-slide="3">
               <img src="./dispute.webp" alt="NudoIQ AI Dispute Engine on the Amazon Relay scorecard page" loading="lazy">
               <div class="slide-caption">
                 <b>AI Dispute Engine</b>
@@ -927,8 +1039,8 @@
         <div class="slide-dots" id="slideDots">
           <button class="active" onclick="goToSlide(0)" aria-label="Slide 1"></button>
           <button onclick="goToSlide(1)" aria-label="Slide 2"></button>
+          <button onclick="goToSlide(2)" aria-label="Slide 3"></button>
           <button onclick="goToSlide(3)" aria-label="Slide 4"></button>
-          <button onclick="goToSlide(4)" aria-label="Slide 5"></button>
         </div>
       </div>
 
@@ -938,11 +1050,43 @@
           <span class="lg">Owner-Operators</span>
           <span class="lg">Small Fleets</span>
           <span class="lg">Mid-Size Carriers</span>
+          <span class="lg">Dispatchers</span>
           <span class="lg">Brokerages</span>
         </div>
       </div>
     </div>
   </header>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">SETUP IN MINUTES</span>
+        <h2 class="h2">Up and running in <em>3 steps.</em></h2>
+        <p class="h2-sub" style="margin-bottom:0">No complicated setup. No contracts. You're booking smarter loads before your next shift.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h4>Install the extension</h4>
+          <p>Add NudoIQ to Chrome in 30 seconds. Works on Chrome, Edge, and Brave — no account setup required to start.</p>
+          <span class="step-time">⚡ 30 seconds</span>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h4>Set your rules</h4>
+          <p>Tell NudoIQ your minimum $/mile, target lanes, max bookings, and equipment type. Takes 2 minutes.</p>
+          <span class="step-time">📋 2 minutes</span>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h4>Let NudoIQ run</h4>
+          <p>It watches the board, alerts you on matches, books automatically when your rules are met, and advises your PAT bids.</p>
+          <span class="step-time">🤖 Runs 24/7</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- BIG FEATURES -->
   <section class="block" id="features">
@@ -958,12 +1102,13 @@
         <div class="bigfeat-text">
           <span class="bigfeat-tag"><span class="pulse"></span> Real-time alerts</span>
           <h3>Price alerts <em>with sound.</em></h3>
-          <p>The second a load matches your target — by lane, $/mile, or payout — NudoIQ rings. A real audible alert, not a silent badge. Walk away from the desk. You'll hear it the moment something hits.</p>
+          <p>The second a load matches your target — by lane, $/mile, or payout — NudoIQ rings. A real audible alert, not a silent badge. Walk away from your desk. You'll hear it the moment something hits.</p>
           <ul>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Custom rules per lane: min $/mile, min payout, equipment type</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Audible chime + browser push notification</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Telegram delivery so you get it even off the laptop</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Audible chime + browser notification</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Telegram delivery — get notified even off the laptop</li>
           </ul>
+          <div class="bigfeat-roi">💰 Carriers report catching 3–5 loads per week they would have missed</div>
         </div>
         <div class="bigfeat-visual">
           <div class="alert-visual">
@@ -998,8 +1143,9 @@
           <ul>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Detects Relay price-increase events the millisecond they post</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Books only when your rules match — no rogue bookings</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Manual confirmation mode if you'd rather one-click yourself</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Manual confirmation mode for one-click control</li>
           </ul>
+          <div class="bigfeat-roi">⚡ Average price-jump load is $40–$120 above the original posting</div>
         </div>
         <div class="bigfeat-visual">
           <div class="device">
@@ -1014,12 +1160,13 @@
         <div class="bigfeat-text">
           <span class="bigfeat-tag"><span class="pulse"></span> Set it and walk away</span>
           <h3>Autobook: <em>set a count and forget.</em></h3>
-          <p>Tell NudoIQ <b>"book me 5 loads this week above $2.20/mi"</b> — then close the laptop. It watches the board 24/7 with randomized refresh, hits your rules, and stops when the count is met. No babysitting.</p>
+          <p>Tell NudoIQ <b>"book me 5 loads this week above $2.20/mi"</b> — then close the laptop. It watches the board 24/7, hits your rules, and stops when the count is met. No babysitting.</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Cap the number of bookings (per shift, day, or week)</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Cap bookings per shift, day, or week</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Multi-rule targeting: lane + payout + equipment + time window</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Auto-pauses on HOS conflicts or stacked driver schedules</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Randomized refresh timing to stay natural on the board</li>
           </ul>
+          <div class="bigfeat-roi">🛌 Dispatchers report getting their first full Thursday off</div>
         </div>
         <div class="bigfeat-visual">
           <div class="autobook-visual">
@@ -1069,17 +1216,64 @@
         <div class="bigfeat-text">
           <span class="bigfeat-tag"><span class="pulse"></span> Market intelligence</span>
           <h3>Post-A-Truck <em>Bid Advisor.</em></h3>
-          <p>Stop guessing what to bid. NudoIQ scans the last 20 loads on your lane, shows you the market median, board top, and historical floor — then tells you the exact bid that's most likely to clear without leaving money on the table.</p>
+          <p>Stop guessing what to bid. NudoIQ scans live loads on your lane, shows you the board median, top payout, and historical floor — then tells you the <b>exact bid most likely to clear</b> without leaving money on the table.</p>
           <ul>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Live market median, board top, and historical floor</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Recommends the bid most likely to match — and warns if you're overshooting</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> One-click override + apply directly to the PAT form</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Live market median, 90th percentile, and board max</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Recommends the bid most likely to match — warns if you're overshooting</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> One-click override + applies directly to the PAT form</li>
           </ul>
+          <div class="bigfeat-roi">📈 Users report 3-in-5 PAT match rate vs. ~1-in-5 bidding blind</div>
         </div>
         <div class="bigfeat-visual">
-          <div class="device pat-visual">
+          <!-- INLINE PAT ADVISOR MOCKUP -->
+          <div class="pat-mock-device">
             <div class="device-bar"><i></i><i></i><i></i></div>
-            <div class="pat-card-overlay">
+            <div class="pat-mock-body">
+              <div class="pat-mock-header">
+                <div class="pat-mock-dot"></div>
+                <div>
+                  <div class="pat-mock-title">NudoIQ Bid Advisor</div>
+                  <div class="pat-mock-sub">Live 90th percentile bid recommendation</div>
+                </div>
+              </div>
+              <div class="pat-lane-row">
+                <span class="pat-lane-tag">🌐 Lane intel:</span>
+                <span style="font-size:11px;color:#94a3b8">Origin: <b style="color:#0F6E56">TN</b></span>
+                <span style="font-size:11px;color:#94a3b8">→ Dest:</span>
+                <span style="font-size:12px;font-weight:700;color:#0F6E56">GA</span>
+              </div>
+              <div class="pat-advice-box">
+                <div class="pat-advice-label">💡 Recommended bid</div>
+                <div class="pat-advice-amount">$1,847</div>
+                <div class="pat-advice-rpm">$2.84/mi</div>
+                <div class="pat-advice-reason">22 loads in your mileage range on board now, paying up to $1,604 at the top. Post at $1,847 — 15% above board max — so your truck matches loads that exceed what's publicly visible.</div>
+              </div>
+              <div class="pat-stats-grid">
+                <div class="pat-stat">
+                  <div class="pat-stat-lbl">Median</div>
+                  <div class="pat-stat-val">$1,421</div>
+                  <div class="pat-stat-rpm">$2.19/mi</div>
+                </div>
+                <div class="pat-stat">
+                  <div class="pat-stat-lbl">90th %ile</div>
+                  <div class="pat-stat-val">$1,614</div>
+                  <div class="pat-stat-rpm">$2.48/mi</div>
+                </div>
+                <div class="pat-stat red">
+                  <div class="pat-stat-lbl">Board Max</div>
+                  <div class="pat-stat-val">$1,604</div>
+                  <div class="pat-stat-rpm">$2.47/mi</div>
+                </div>
+              </div>
+              <div class="pat-target-note">✓ Your PAT target must exceed $1,604 (board max)</div>
+              <div class="pat-conf-bar">
+                <div class="pat-conf-top">
+                  <span class="pat-conf-lbl">Advisor Confidence</span>
+                  <span class="pat-conf-badge">HIGH</span>
+                </div>
+                <div class="pat-conf-track"><div class="pat-conf-fill"></div></div>
+                <div class="pat-conf-note">22 live loads sampled · TN→GA network data</div>
+              </div>
             </div>
           </div>
         </div>
@@ -1090,12 +1284,13 @@
         <div class="bigfeat-text">
           <span class="bigfeat-tag"><span class="pulse"></span> Built-in finance</span>
           <h3>Payments dashboard <em>that actually helps.</em></h3>
-          <p>Every settlement, every week, pulled in automatically. See your annual pace, hot streak, best week ever, and weekly trend — all live. No spreadsheets, no manual entry, no waiting for Friday to do the math.</p>
+          <p>Every settlement, every week, pulled in automatically. See your annual pace, hot streak, best week ever, and weekly trend — all live. No spreadsheets, no manual entry.</p>
           <ul>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Weekly trend line + monthly performance bars</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Annual pace projection — know if you're on track in real time</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Best week + hot streak counters to keep the team motivated</li>
           </ul>
+          <div class="bigfeat-roi">📊 Know your annual pace without touching a spreadsheet</div>
         </div>
         <div class="bigfeat-visual">
           <div class="device">
@@ -1112,44 +1307,42 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
           </div>
           <h4>AI dispute engine</h4>
-          <p>Generate scorecard dispute letters in one click. Built from real Relay policy language.</p>
-          <div class="preview-img">
-          </div>
+          <p>Generate scorecard dispute letters in one click. Built from real Relay policy language — fights violations automatically.</p>
         </div>
         <div class="sfeat">
           <div class="ic-wrap">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
           </div>
           <h4>Driver HOS dashboard</h4>
-          <p>See drive time, on-duty, and 70-hour clock for every driver. Color-coded violations.</p>
+          <p>See drive time, on-duty, and 70-hour clock for every driver. Color-coded violations so you never over-commit.</p>
         </div>
         <div class="sfeat">
           <div class="ic-wrap">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           </div>
           <h4>Auto email &amp; SMS drivers</h4>
-          <p>Load assigned? Dispatch sheet sent automatically. No more midnight texts.</p>
+          <p>Load assigned? Dispatch sheet sent automatically. No more midnight texts to drivers about load details.</p>
         </div>
         <div class="sfeat">
           <div class="ic-wrap">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
-          <h4>Quick route map</h4>
-          <p>Tap any load to see route, fuel stops, and rest areas without leaving Relay.</p>
+          <h4>Truck-route navigation</h4>
+          <p>Tap any load to see the truck-safe route with fuel stops and rest areas — optimized for box trucks and semis.</p>
         </div>
         <div class="sfeat">
           <div class="ic-wrap">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
           </div>
           <h4>Load price history</h4>
-          <p>See what every lane paid the last 30 days. Know a steal — or when to wait.</p>
+          <p>See what every lane paid the last 30 days. Know a steal when you see one — or when to wait for a better number.</p>
         </div>
         <div class="sfeat">
           <div class="ic-wrap">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
           </div>
           <h4>English &amp; Español</h4>
-          <p>Full bilingual interface. Switch with one click for your drivers.</p>
+          <p>Full bilingual interface. Switch with one click — built for diverse teams and owner-operators across the US.</p>
         </div>
       </div>
     </div>
@@ -1181,10 +1374,10 @@
         <div class="stats-card">
           <h4>By the numbers</h4>
           <div class="stats-grid">
-            <div class="stat-block"><div class="n">450<span class="unit">+</span></div><div class="l">Carriers on NudoIQ</div></div>
-            <div class="stat-block"><div class="n">$8.4<span class="unit">M</span></div><div class="l">Loads booked monthly</div></div>
-            <div class="stat-block"><div class="n">2.1<span class="unit">s</span></div><div class="l">Avg. board refresh</div></div>
-            <div class="stat-block"><div class="n">96<span class="unit">%</span></div><div class="l">Renew after trial</div></div>
+            <div class="stat-block"><div class="n">450<span class="unit">+</span></div><div class="l">Active carriers on NudoIQ</div></div>
+            <div class="stat-block"><div class="n">$8.4<span class="unit">M</span></div><div class="l">In loads booked monthly</div></div>
+            <div class="stat-block"><div class="n">2.1<span class="unit">s</span></div><div class="l">Average board refresh speed</div></div>
+            <div class="stat-block"><div class="n">96<span class="unit">%</span></div><div class="l">Renew after their free trial</div></div>
           </div>
         </div>
       </div>
@@ -1192,26 +1385,26 @@
       <div class="testis">
         <div class="testi">
           <div class="stars">★★★★★</div>
-          <p>"Paid for itself the first day. The instant-book caught a price jump I would have missed — $400 net on one load. First tool that actually saves me time."</p>
+          <p>"Paid for itself the first day. The instant-book caught a price jump I would have missed — $400 net on one load. Nothing else on the market does this."</p>
           <cite>
             <div class="av">DM</div>
-            <div><b>Diego M.</b><span>Owner-operator, Houston TX</span></div>
+            <div><b>Diego M.</b><span>Owner-operator · Houston, TX</span></div>
           </cite>
         </div>
         <div class="testi">
           <div class="stars">★★★★★</div>
-          <p>"Autobook is what sold me. I set 6 loads for the week, walked away, and they were all booked by Wednesday. I've never had a Thursday off before this."</p>
+          <p>"Autobook is what sold me. I set 6 loads for the week on Monday morning, walked away, and they were all booked by Wednesday. I've never had a Thursday off before this."</p>
           <cite>
             <div class="av">SK</div>
-            <div><b>Sarah K.</b><span>Dispatcher, 12-truck fleet</span></div>
+            <div><b>Sarah K.</b><span>Dispatcher · 12-truck fleet</span></div>
           </cite>
         </div>
         <div class="testi">
           <div class="stars">★★★★★</div>
-          <p>"The PAT Bid Advisor is unreal. I used to bid blind and get matched on maybe 1 in 5. Now it's more like 3 in 5. That's real money."</p>
+          <p>"The PAT Bid Advisor alone is worth the subscription. I used to bid blind and get matched maybe 1 in 5 times. Now it's closer to 3 in 5. That's real money every single week."</p>
           <cite>
             <div class="av">JK</div>
-            <div><b>James K.</b><span>Carrier, Dallas TX</span></div>
+            <div><b>James K.</b><span>Carrier · Dallas, TX</span></div>
           </cite>
         </div>
       </div>
@@ -1224,32 +1417,36 @@
       <div class="section-head">
         <span class="eyebrow">PRICING</span>
         <h2 class="h2">One plan. <em>Everything included.</em></h2>
-        <p class="h2-sub">No tiers, no upsells, no surprise charges. One price for the whole toolkit.</p>
+        <p class="h2-sub">No tiers, no upsells, no surprise charges. One price for the whole toolkit — less than one good load pays.</p>
       </div>
 
       <div class="pricing-wrap">
         <div class="price-card">
-          <span class="ribbon">7-DAY FREE TRIAL</span>
+          <span class="ribbon">✓ 7-DAY FREE TRIAL — NO CARD REQUIRED</span>
           <div class="price-name">NudoIQ Pro</div>
           <div class="price-amount">
             <span class="d">$</span>
             <span class="n">49</span>
             <span class="p">.99 / month</span>
           </div>
-          <p class="price-desc">Everything you need to run a smarter Amazon Relay operation — from the load board to the payments dashboard.</p>
+          <p class="price-desc">Everything you need to run a smarter Amazon Relay operation. Pays for itself on the first good load you'd otherwise have missed.</p>
           <ul class="price-list">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Price alerts with audible chime</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Instant Book on price increases</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Price alerts with audible chime + Telegram delivery</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Instant Book on price-increase events</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Autobook with count limits &amp; multi-rule targeting</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Post-A-Truck Bid Advisor</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Payments dashboard with annual pace</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Driver HOS dashboard &amp; auto-messaging</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Post-A-Truck Bid Advisor with live market data</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Payments dashboard with annual pace projection</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Driver HOS dashboard &amp; auto-dispatch messaging</li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> AI dispute engine for scorecard violations</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> English &amp; Spanish interface · Telegram support</li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Cancel anytime, 2 clicks, no questions asked</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Full English &amp; Spanish interface</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Use on up to 3 devices · cancel anytime, 2 clicks</li>
           </ul>
-          <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary btn-lg price-cta">Start your 7-day free trial →</a>
-          <div class="price-foot">Cancel in 2 clicks, no questions asked</div>
+          <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary btn-lg price-cta">Try it free →</a>
+          <div class="price-guarantee">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            No credit card required. Cancel before day 7 and you're never charged.
+          </div>
+          <div class="price-foot">Questions? <a href="https://t.me/nudoiqsupport" style="color:var(--relay);text-decoration:underline">Message us on Telegram</a> — we reply fast.</div>
         </div>
       </div>
     </div>
@@ -1268,25 +1465,31 @@
           <summary>Does NudoIQ work with my carrier grade?
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
           </summary>
-          <p>Yes. NudoIQ works for every Amazon Relay carrier grade — from owner-operators just getting started to multi-truck fleets and brokerages. The features automatically adapt to what your account has access to.</p>
+          <p>Yes. NudoIQ works for every Amazon Relay carrier grade — from owner-operators just getting started to multi-truck fleets and brokerages. The features automatically adapt to what your Relay account has access to.</p>
         </details>
         <details class="faq">
-          <summary>Is it safe to use? Will Amazon ban me?
+          <summary>Is it safe? Will Amazon flag my account?
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
           </summary>
-          <p>NudoIQ uses randomized refresh timing and only interacts with the public Relay UI — it never touches Amazon's API or bypasses any security. We've had 450+ carriers using it for over a year without a single ban. That said, your account is your responsibility, and we recommend reading Amazon's TOS.</p>
+          <p>NudoIQ uses randomized refresh timing (just like a human browsing) and only interacts with the public Relay UI — it never touches Amazon's private API or bypasses any security. We've had 450+ carriers using it for over a year with zero bans. That said, your account is your responsibility, and we recommend reading Amazon's Terms of Service.</p>
+        </details>
+        <details class="faq">
+          <summary>Do I need to leave my computer on?
+            <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+          </summary>
+          <p>Yes — NudoIQ runs in your browser, so it needs the tab open to watch the load board. Most carriers leave a dedicated laptop or desktop running. Telegram alerts mean you can step away and still get notified the moment a load matches.</p>
         </details>
         <details class="faq">
           <summary>What happens after my 7-day free trial?
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
           </summary>
-          <p>If you love it, you'll be billed $49.99/month — that's it. If you don't, just cancel before the trial ends and you won't be charged. We don't ask for your card up front, so there's no auto-charge surprise.</p>
+          <p>If you love it, you'll be billed $49.99/month — that's it. If you don't, cancel before the trial ends and you're never charged. We don't ask for your card up front, so there's no auto-charge surprise. 96% of carriers who try it keep it.</p>
         </details>
         <details class="faq">
           <summary>How do I cancel?
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
           </summary>
-          <p>Click "Manage subscription" in the extension menu, then "Cancel". Two clicks. No questions, no retention calls, no five-step forms. We mean it.</p>
+          <p>Click "Manage subscription" in the extension settings, then "Cancel". Two clicks, no questions, no retention calls, no five-step forms. We mean it.</p>
         </details>
         <details class="faq">
           <summary>Which browsers does it support?
@@ -1295,10 +1498,10 @@
           <p>NudoIQ works on Chrome, Edge, Brave, and any Chromium-based browser. Firefox support is on the roadmap. You can install it on up to 3 devices on a single subscription.</p>
         </details>
         <details class="faq">
-          <summary>How do I contact support?
+          <summary>How do I get support?
             <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
           </summary>
-          <p>Email <a href="mailto:contact@nudoiq.com" style="color:var(--relay);text-decoration:underline">contact@nudoiq.com</a> or message us on Telegram. We typically reply within a couple hours — usually faster because the team is small and obsessed with this.</p>
+          <p>Email <a href="mailto:contact@nudoiq.com" style="color:var(--relay);text-decoration:underline">contact@nudoiq.com</a> or message us on <a href="https://t.me/nudoiqsupport" style="color:var(--relay);text-decoration:underline">Telegram</a>. We typically reply within a couple hours — usually faster because the team is small and obsessive about this product.</p>
         </details>
       </div>
     </div>
@@ -1309,11 +1512,17 @@
     <div class="final-cta">
       <div class="final-cta-inner">
         <h2>Try it free for <em>7 days.</em><br>See the loads you've been missing.</h2>
-        <p>Join 450+ Amazon Relay carriers running smarter operations with NudoIQ. No card required.</p>
+        <p>Join 450+ Amazon Relay carriers running smarter operations with NudoIQ. No credit card, no commitment — just better loads.</p>
         <a href="https://buy.stripe.com/14A3cw5Pld5bgQ89q7ao800" class="btn btn-primary btn-lg">
-          Start Free Trial
+          Try it free — No Card Required
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
+        <div class="final-cta-meta">
+          <span>✓ 7-day free trial</span>
+          <span>✓ No credit card</span>
+          <span>✓ Cancel anytime</span>
+          <span>✓ English &amp; Español</span>
+        </div>
       </div>
     </div>
   </section>
@@ -1332,6 +1541,7 @@
         <div class="foot-col">
           <h5>Product</h5>
           <a href="#features">Features</a>
+          <a href="#how-it-works">How it works</a>
           <a href="#pricing">Pricing</a>
           <a href="#faq">FAQ</a>
         </div>
@@ -1339,12 +1549,12 @@
           <h5>Company</h5>
           <a href="#story">Our story</a>
           <a href="mailto:contact@nudoiq.com">Contact</a>
-          <a href="https://t.me/nudoiqsupport">Telegram</a>
+          <a href="https://t.me/nudoiqsupport">Telegram support</a>
         </div>
         <div class="foot-col">
           <h5>Legal</h5>
-          <a href="#">Privacy policy</a>
-          <a href="#">Terms of service</a>
+          <a href="mailto:contact@nudoiq.com?subject=Privacy Policy Request">Privacy policy</a>
+          <a href="mailto:contact@nudoiq.com?subject=Terms of Service Request">Terms of service</a>
         </div>
       </div>
     </div>
@@ -1354,52 +1564,43 @@
     </div>
   </footer>
 
-  <!-- DEMO MODAL -->
-  <div class="modal" id="demoModal" onclick="if(event.target===this)closeDemo()">
-    <div class="modal-card">
-      <button class="modal-close" onclick="closeDemo()" aria-label="Close">×</button>
-      <div class="aspect" id="demoAspect">
-        Demo video coming soon — paste your Loom or YouTube embed URL into the <code>DEMO_EMBED_URL</code> constant in the page script.
-      </div>
+  <!-- VIDEO MODAL -->
+  <div class="vid-overlay" id="vidOverlay" onclick="closeVideoModalOutside(event)">
+    <div class="vid-modal" id="vidModal">
+      <button class="vid-close" onclick="closeVideoModal()" aria-label="Close video">✕</button>
+      <iframe id="vidFrame" src="" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 
   <script>
-    const DEMO_EMBED_URL = ""; // ← paste your YouTube/Loom embed URL, e.g. "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-    const modal = document.getElementById('demoModal');
-    const aspect = document.getElementById('demoAspect');
-    const originalAspectHTML = aspect.innerHTML;
-    function openDemo() {
-      modal.classList.add('open');
+    // Video modal
+    const DEMO_URL = 'https://www.youtube.com/embed/j2V57DUQBpM?autoplay=1&rel=0&modestbranding=1';
+    function openVideoModal() {
+      document.getElementById('vidFrame').src = DEMO_URL;
+      document.getElementById('vidOverlay').classList.add('open');
       document.body.style.overflow = 'hidden';
-      if (DEMO_EMBED_URL) {
-        aspect.innerHTML = `<iframe src="${DEMO_EMBED_URL}" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
-      }
     }
-    function closeDemo() {
-      modal.classList.remove('open');
+    function closeVideoModal() {
+      document.getElementById('vidFrame').src = '';
+      document.getElementById('vidOverlay').classList.remove('open');
       document.body.style.overflow = '';
-      aspect.innerHTML = originalAspectHTML;
     }
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDemo(); });
+    function closeVideoModalOutside(e) {
+      if (e.target === document.getElementById('vidOverlay')) closeVideoModal();
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeVideoModal(); });
+    window.openVideoModal = openVideoModal;
 
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const id = a.getAttribute('href').slice(1);
-        if (!id) return;
-        const el = document.getElementById(id);
-        if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-      });
-    });
-
-    const slides = document.querySelectorAll('.slide');
-    const dots = document.querySelectorAll('#slideDots button');
+    // Slideshow
+    const slides  = document.querySelectorAll('.slide');
+    const dots    = document.querySelectorAll('#slideDots button');
     let currentSlide = 0;
     let slideInterval;
+
     function showSlide(n) {
       currentSlide = (n + slides.length) % slides.length;
       slides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
-      dots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+      dots.forEach((d, i)  => d.classList.toggle('active', i === currentSlide));
     }
     function slideNext() { showSlide(currentSlide + 1); resetInterval(); }
     function slidePrev() { showSlide(currentSlide - 1); resetInterval(); }
@@ -1409,22 +1610,21 @@
       slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
     }
     slideInterval = setInterval(() => showSlide(currentSlide + 1), 5000);
-
     window.slideNext = slideNext;
     window.slidePrev = slidePrev;
     window.goToSlide = goToSlide;
-    window.openDemo = openDemo;
-    window.closeDemo = closeDemo;
 
+    // Scroll-reveal for feature sections
     const io = new IntersectionObserver(entries => {
       entries.forEach(en => {
         if (en.isIntersecting) {
           en.target.style.opacity = '1';
           en.target.style.transform = 'translateY(0)';
+          io.unobserve(en.target);
         }
       });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.bigfeat, .sfeat, .testi, .price-card, .story-grid > div').forEach(el => {
+    document.querySelectorAll('.bigfeat, .sfeat, .testi, .price-card, .story-grid > div, .step').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(24px)';
       el.style.transition = 'opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1)';
