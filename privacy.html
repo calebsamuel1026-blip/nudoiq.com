@@ -2,72 +2,264 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — NudoIQ</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 720px; margin: 60px auto; padding: 0 24px 80px; color: #1e293b; line-height: 1.8; }
-    h1 { font-size: 32px; font-weight: 900; color: #0F6E56; margin-bottom: 6px; }
-    .meta { color: #94a3b8; font-size: 14px; margin-bottom: 48px; }
-    h2 { font-size: 18px; font-weight: 800; margin: 36px 0 10px; color: #0f172a; }
-    p, li { font-size: 15px; color: #475569; margin-bottom: 12px; }
-    ul { padding-left: 20px; }
-    a { color: #0F6E56; }
-    .footer { margin-top: 60px; padding-top: 24px; border-top: 1px solid #e2e8f0; font-size: 13px; color: #94a3b8; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      background: #f8fafc;
+      color: #1a1a1a;
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: linear-gradient(135deg, #0F6E56 0%, #147a8c 100%);
+      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo {
+      width: 44px; height: 44px;
+      background: rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.25);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; font-weight: 900; color: #fff;
+      letter-spacing: -1px; flex-shrink: 0;
+    }
+    .header-text h1 {
+      font-size: 20px; font-weight: 800; color: #fff;
+      letter-spacing: -0.3px; line-height: 1;
+    }
+    .header-text p {
+      font-size: 12px; color: rgba(255,255,255,0.7);
+      margin-top: 3px; font-weight: 500;
+    }
+
+    /* ── Content ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+
+    .page-title {
+      font-size: 28px; font-weight: 900; color: #0F6E56;
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+    .page-subtitle {
+      font-size: 13px; color: #94a3b8; font-weight: 600;
+      margin-bottom: 36px;
+    }
+
+    /* ── Section ── */
+    .section {
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+    .section h2 {
+      font-size: 13px; font-weight: 800;
+      color: #0F6E56; text-transform: uppercase;
+      letter-spacing: 0.7px; margin-bottom: 14px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .section h2::after {
+      content: ""; flex: 1; height: 1px; background: #f1f5f9;
+    }
+    .section p {
+      font-size: 14px; color: #374151;
+      margin-bottom: 10px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── Data list ── */
+    .data-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .data-list li {
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f8fafc;
+      font-size: 14px; color: #374151;
+    }
+    .data-list li:last-child { border-bottom: none; }
+    .data-list .item-label {
+      font-weight: 700; color: #1a1a1a;
+      min-width: 170px; flex-shrink: 0;
+    }
+    .data-list .item-desc { color: #4b5563; }
+
+    /* ── Do not list ── */
+    .donot-list {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .donot-list li {
+      padding: 6px 0;
+      font-size: 14px; color: #374151;
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    .donot-list li::before {
+      content: "✗";
+      color: #f43f5e; font-weight: 800; flex-shrink: 0; line-height: 1.5;
+    }
+
+    /* ── Third-party table ── */
+    .tp-list {
+      list-style: none; padding: 0; margin: 0;
+    }
+    .tp-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f8fafc;
+      font-size: 14px;
+    }
+    .tp-list li:last-child { border-bottom: none; }
+    .tp-list .tp-name {
+      font-weight: 700; color: #1a1a1a;
+    }
+    .tp-list .tp-desc { color: #4b5563; }
+    .tp-list a { color: #0F6E56; text-decoration: none; }
+    .tp-list a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 24px 0 0;
+      font-size: 12px; color: #94a3b8;
+      font-weight: 600; letter-spacing: 0.4px;
+      text-transform: uppercase;
+    }
+    .footer a { color: #0F6E56; text-decoration: none; }
   </style>
 </head>
 <body>
 
-<h1>Privacy Policy</h1>
-<div class="meta">NudoIQ Chrome Extension · Last updated: May 16, 2026</div>
+  <div class="header">
+    <div class="logo">N</div>
+    <div class="header-text">
+      <h1>NudoIQ</h1>
+      <p>Amazon Relay Load Intelligence</p>
+    </div>
+  </div>
 
-<p>NudoIQ ("we", "our", or "us") operates the NudoIQ Chrome extension. This policy explains what data we collect, how we use it, and your rights.</p>
+  <div class="container">
 
-<h2>What we collect</h2>
-<ul>
-  <li><strong>Email address</strong> — collected when you activate your subscription. Used solely to verify your license status against our database.</li>
-  <li><strong>Load board data</strong> — anonymized pricing observations ($/mile, distance, origin state, destination state) from Amazon Relay loads you view. No personal information, driver names, or load IDs are stored. This data is used to build shared market intelligence for all users.</li>
-  <li><strong>Settings</strong> — your extension preferences (MPG, diesel price, alert thresholds) are stored locally in Chrome sync storage and never transmitted to our servers.</li>
-  <li><strong>Telegram credentials</strong> — your bot token and chat ID are stored locally in Chrome sync storage only. We never transmit or store these on our servers.</li>
-</ul>
+    <div class="page-title">Privacy Policy</div>
+    <div class="page-subtitle">NudoIQ Chrome Extension &nbsp;·&nbsp; Last updated: May 28, 2026</div>
 
-<h2>What we do NOT collect</h2>
-<ul>
-  <li>We do not collect your Amazon credentials, passwords, or account information.</li>
-  <li>We do not collect driver names, addresses, or personally identifiable information from load cards.</li>
-  <li>We do not sell your data to any third party.</li>
-  <li>We do not use your data for advertising.</li>
-</ul>
+    <div class="section">
+      <h2>Overview</h2>
+      <p>NudoIQ ("we", "our", or "us") operates the NudoIQ Chrome extension. This policy explains what data we collect, how we use it, and your rights as a user.</p>
+    </div>
 
-<h2>How we use your data</h2>
-<ul>
-  <li><strong>License verification</strong> — your email is checked against our Supabase database to confirm an active subscription.</li>
-  <li><strong>Market intelligence</strong> — anonymized load pricing observations are pooled across users to provide historical rate data for Amazon Relay lanes. No individual user's data is ever exposed or attributed.</li>
-</ul>
+    <div class="section">
+      <h2>What We Collect</h2>
+      <ul class="data-list">
+        <li>
+          <span class="item-label">Email address</span>
+          <span class="item-desc">Collected when you activate your subscription. Used solely to verify your license status against our database.</span>
+        </li>
+        <li>
+          <span class="item-label">Load board observations</span>
+          <span class="item-desc">Anonymized pricing data (rate per mile, distance, origin state, destination state) from Amazon Relay loads you view. Load IDs are stored as anonymous identifiers to deduplicate observations — they are not linked to your account or any personally identifiable information. This data is used to build shared market intelligence for all users.</span>
+        </li>
+        <li>
+          <span class="item-label">Fleet trip data</span>
+          <span class="item-desc">If you use the Fleet Dashboard feature, completed trip records (origin, destination, miles, revenue, dates) and driver names are synced to our Supabase database to power your fleet analytics. This data is visible only to you and is never shared with other users or third parties.</span>
+        </li>
+        <li>
+          <span class="item-label">Extension settings</span>
+          <span class="item-desc">Your preferences (MPG, diesel price, alert thresholds, etc.) are stored locally in Chrome sync storage and never transmitted to our servers.</span>
+        </li>
+        <li>
+          <span class="item-label">Telegram credentials</span>
+          <span class="item-desc">Your bot token and chat ID are stored locally in Chrome sync storage only. We never transmit or store these on our servers.</span>
+        </li>
+      </ul>
+    </div>
 
-<h2>Data storage</h2>
-<p>License and subscription data is stored in Supabase (supabase.com), hosted in the United States. Subscription billing is handled by Stripe (stripe.com). We do not store payment card information.</p>
+    <div class="section">
+      <h2>What We Do NOT Collect</h2>
+      <ul class="donot-list">
+        <li>Amazon credentials, passwords, or account information</li>
+        <li>Addresses, phone numbers, or other personally identifiable information from load cards</li>
+        <li>Browsing history outside of relay.amazon.com</li>
+        <li>Payment card information (handled entirely by Stripe)</li>
+        <li>We do not sell your data to any third party</li>
+        <li>We do not use your data for advertising</li>
+      </ul>
+    </div>
 
-<h2>Data retention</h2>
-<p>License records are retained while your subscription is active and for 90 days after cancellation. Anonymized load observations are retained for 90 days on a rolling basis.</p>
+    <div class="section">
+      <h2>How We Use Your Data</h2>
+      <p><strong>License verification</strong> — your email is checked against our Supabase database to confirm an active subscription.</p>
+      <p><strong>Market intelligence</strong> — anonymized load pricing observations are pooled across users to provide historical rate data for Amazon Relay lanes. No individual user's data is ever exposed or attributed to a specific user.</p>
+      <p><strong>Fleet analytics</strong> — if you use the Fleet Dashboard, trip and driver data you enter is stored in your account and used exclusively to generate your fleet reports and driver statements.</p>
+      <p><strong>Diesel prices</strong> — your approximate region (detected via reverse geolocation) is used to fetch local diesel prices from iExitApp. Your exact location is never stored.</p>
+    </div>
 
-<h2>Your rights</h2>
-<p>You may request deletion of your account data at any time by emailing <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a>. We will delete your email and license record within 7 business days.</p>
+    <div class="section">
+      <h2>Data Storage &amp; Retention</h2>
+      <p>License and subscription data is stored in <strong>Supabase</strong> (supabase.com), hosted in the United States. Subscription billing is handled by <strong>Stripe</strong> (stripe.com). We do not store payment card information.</p>
+      <p>Fleet trip and driver data is stored in Supabase, accessible only under your account credentials.</p>
+      <p><strong>Retention periods:</strong></p>
+      <p>License records are retained while your subscription is active and for 90 days after cancellation. Anonymized load observations are retained for 90 days on a rolling basis. Fleet trip records are retained until you request deletion.</p>
+    </div>
 
-<h2>Third-party services</h2>
-<ul>
-  <li><strong>Supabase</strong> — database hosting (supabase.com/privacy)</li>
-  <li><strong>Stripe</strong> — payment processing (stripe.com/privacy)</li>
-  <li><strong>Anthropic</strong> — AI dispute letter generation; only the scorecard text you explicitly submit is sent (anthropic.com/privacy)</li>
-  <li><strong>Telegram</strong> — optional alert notifications using credentials you provide (telegram.org/privacy)</li>
-</ul>
+    <div class="section">
+      <h2>Your Rights</h2>
+      <p>You may request deletion of your account data at any time by emailing <a href="mailto:contact@nudoiq.com" style="color:#0F6E56">contact@nudoiq.com</a>. We will delete your email, license record, and any fleet data within 7 business days.</p>
+    </div>
 
-<h2>Changes to this policy</h2>
-<p>We may update this policy. The "last updated" date at the top will reflect any changes. Continued use of the extension after changes constitutes acceptance.</p>
+    <div class="section">
+      <h2>Third-Party Services</h2>
+      <ul class="tp-list">
+        <li>
+          <span class="tp-name">Supabase</span> — <span class="tp-desc">database hosting for license, load intelligence, and fleet data &nbsp;·&nbsp; <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a></span>
+        </li>
+        <li>
+          <span class="tp-name">Stripe</span> — <span class="tp-desc">subscription payment processing &nbsp;·&nbsp; <a href="https://stripe.com/privacy" target="_blank" rel="noopener">stripe.com/privacy</a></span>
+        </li>
+        <li>
+          <span class="tp-name">Anthropic</span> — <span class="tp-desc">AI dispute letter generation; only the scorecard text you explicitly submit is sent &nbsp;·&nbsp; <a href="https://anthropic.com/privacy" target="_blank" rel="noopener">anthropic.com/privacy</a></span>
+        </li>
+        <li>
+          <span class="tp-name">Telegram</span> — <span class="tp-desc">optional load alert notifications using credentials you provide &nbsp;·&nbsp; <a href="https://telegram.org/privacy" target="_blank" rel="noopener">telegram.org/privacy</a></span>
+        </li>
+        <li>
+          <span class="tp-name">iExitApp</span> — <span class="tp-desc">regional diesel price lookups &nbsp;·&nbsp; <a href="https://www.iexitapp.com" target="_blank" rel="noopener">iexitapp.com</a></span>
+        </li>
+        <li>
+          <span class="tp-name">OpenStreetMap / Nominatim</span> — <span class="tp-desc">reverse geolocation to detect your operating region for diesel price lookups &nbsp;·&nbsp; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">openstreetmap.org/copyright</a></span>
+        </li>
+      </ul>
+    </div>
 
-<h2>Contact</h2>
-<p>Questions? Email us at <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a></p>
+    <div class="section">
+      <h2>Changes to This Policy</h2>
+      <p>We may update this policy periodically. The "last updated" date at the top will reflect any changes. Continued use of the extension after changes constitutes acceptance of the updated policy.</p>
+    </div>
 
-<div class="footer">© 2026 NudoIQ · Built for Amazon Relay carriers</div>
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Questions or data deletion requests? Email us at <a href="mailto:contact@nudoiq.com" style="color:#0F6E56;font-weight:600">contact@nudoiq.com</a></p>
+    </div>
+
+    <div class="footer">
+      &copy; 2026 NudoIQ &nbsp;·&nbsp; <a href="https://nudoiq.com">nudoiq.com</a> &nbsp;·&nbsp; Built for Amazon Relay Carriers
+    </div>
+
+  </div>
 
 </body>
 </html>
