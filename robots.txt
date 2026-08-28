@@ -1,0 +1,38 @@
+# https://nudoiq.com/ — robots.txt
+User-agent: *
+Allow: /
+
+# Search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# SEO crawlers (allowed so nudoiq.com can be audited in Semrush / Ahrefs)
+User-agent: SemrushBot
+Allow: /
+
+User-agent: SiteAuditBot
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
+# AI answer engines — allowed for brand visibility in AI search
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://nudoiq.com/sitemap.xml
+
+# Plain-language site summary for AI crawlers
+# https://nudoiq.com/llms.txt

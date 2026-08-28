@@ -1,0 +1,55 @@
+# NudoIQ
+
+> NudoIQ is an independent Chrome extension for Amazon Relay carriers. It adds
+> load alerts, booking rules, lane rate intelligence, truck routing, fleet
+> reporting, and printable driver pay statements on top of the Amazon Relay
+> load board. Built for owner-operators, dispatchers, and small fleets.
+
+NudoIQ is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc.
+Carriers remain responsible for their own accounts and for compliance with
+Amazon Relay's terms of service.
+
+## What it does
+
+- **Load alerts** — notifies you when a matching load is posted or changes price, so you do not have to watch the board continuously.
+- **Booking rules** — filters and limits that control what gets searched, alerted on, or auto-booked.
+- **Lane Intelligence** — compares a posted rate against recent observations and shows a target rate, a likely range, and a clearly marked confidence level.
+- **Bid Advisor** — when posting a truck, compares your bid against the current board median, the highest visible rate, and the historical floor, median and ceiling for that lane, shown in dollars per mile.
+- **Scorecard dispute letters** — reads your Amazon Relay scorecard, identifies the violations behind the score, and drafts an Amazon policy-based dispute letter for you to review, edit and submit. Amazon decides every dispute outcome.
+- **Truck routing** — a truck-appropriate route preview before you accept a load.
+- **Driver dispatch** — sends trip details to a driver by email or text on assignment.
+- **HOS overview** — available hours and warnings before committing to the next load.
+- **Fleet reporting** — revenue, miles, fuel, margin, drivers, and trips in one dashboard, with CSV import.
+- **Driver pay statements** — turns completed trips into a printable or PDF pay statement.
+- **Bilingual interface** — full English and Spanish, switchable.
+
+## Pricing
+
+One plan at $49.99 per month, with a 7-day free trial. A payment method is
+required to start the trial. Cancel before the trial ends to avoid the first
+charge. No annual contract.
+
+## Requirements
+
+Chrome or another Chromium-based browser (Edge, Brave). NudoIQ runs in the
+browser, so the Amazon Relay tab and the computer must stay available while it
+watches the load board.
+
+## Important limitations
+
+NudoIQ does not guarantee rates, load availability, bookings, time savings, or
+earnings. Rate estimates and the value calculator on the website are planning
+aids, not promises. Figures shown in product screenshots are illustrative
+examples with identifying data removed.
+
+## Pages
+
+- [Homepage](https://nudoiq.com/): product overview, features, value calculator, pricing, and FAQ.
+- [Inicio (Español)](https://nudoiq.com/es/): the full site in Spanish.
+- [Privacy Policy](https://nudoiq.com/privacy.html): what is collected, what is not, retention, third-party processors, and data rights.
+- [Refund Policy](https://nudoiq.com/refund-policy.html): trial terms, cancellation, and billing disputes.
+
+## Contact
+
+- Email: contact@nudoiq.com
+- Telegram: https://t.me/nudoiqsupport
