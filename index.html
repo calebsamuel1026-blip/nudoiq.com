@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Amazon Relay Load Board Chrome Extension | NudoIQ</title>
-  <meta name="description" content="NudoIQ is a Chrome extension for Amazon Relay carriers. See the bid target before you bid, dispute scorecard hits, track fleet pay. 7-day free trial.">
+  <meta name="description" content="NudoIQ is a Chrome extension for the Amazon Relay load board. See the bid target before you bid, dispute scorecard hits, and track what each truck earned. 7-day free trial.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="theme-color" content="#0b2239">
   <meta name="author" content="NudoIQ">
@@ -19,18 +19,18 @@
   <meta property="og:url" content="https://nudoiq.com/">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="es_US">
-  <meta property="og:image" content="https://nudoiq.com/assets/one-click-post-truck.png">
-  <meta property="og:image:width" content="1672">
-  <meta property="og:image:height" content="941">
+  <meta property="og:image" content="https://nudoiq.com/assets/shot-post-truck.png">
+  <meta property="og:image:width" content="1500">
+  <meta property="og:image:height" content="1000">
   <meta property="og:image:alt" content="NudoIQ one-click Post Truck tool inside the Amazon Relay load board">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Amazon Relay Load Board Chrome Extension | NudoIQ">
   <meta name="twitter:description" content="See the bid target before you bid, dispute Amazon Relay scorecard hits, and track what every truck earned. Chrome extension. 7-day free trial.">
-  <meta name="twitter:image" content="https://nudoiq.com/assets/one-click-post-truck.png">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/shot-post-truck.png">
   <meta name="twitter:image:alt" content="NudoIQ one-click Post Truck tool inside the Amazon Relay load board">
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="/assets/favicon.png">
-  <link rel="preload" as="image" href="/assets/one-click-post-truck.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/shot-post-truck.webp" type="image/webp" fetchpriority="high">
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -44,7 +44,7 @@
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
     body { margin:0; font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif; color:var(--ink); background:white; font-size:18px; line-height:1.62; -webkit-font-smoothing:antialiased; }
-    img { display:block; max-width:100%; }
+    img { display:block; max-width:100%; height:auto; }
     a { color:inherit; }
     button,input { font:inherit; }
     button,a { -webkit-tap-highlight-color:transparent; }
@@ -80,6 +80,9 @@
     .hero-copy { color:var(--muted); font-size:20px; max-width:650px; margin:0 0 30px; }
     .hero-actions { display:flex; flex-wrap:wrap; gap:12px; }
     .microcopy { color:var(--muted); font-size:16px; margin:14px 0 0; }
+    .hero-rating { display:flex; align-items:center; gap:9px; margin:20px 0 0; font-size:16px; font-weight:700; color:var(--ink); }
+    .stars { color:#e8a33d; letter-spacing:2px; }
+    .rating-summary { display:flex; align-items:center; justify-content:center; gap:10px; margin:0 0 34px; font-size:17px; font-weight:700; color:var(--ink); }
     .product-frame { background:var(--navy); padding:10px; border-radius:20px; box-shadow:var(--shadow); }
     .product-frame img { border-radius:12px; width:100%; }
     .frame-label { display:flex; align-items:center; gap:9px; color:white; padding:5px 5px 12px; font-size:16px; font-weight:800; }
@@ -184,13 +187,14 @@
   </div></header>
   <main id="main">
     <section class="hero"><div class="container hero-grid">
-      <div><p class="eyebrow" data-t="heroEyebrow">For Amazon Relay owner-operators and fleets</p><h1 data-t="heroTitle">Know what an Amazon Relay load is really worth before you book it.</h1><p class="hero-copy" data-t="heroCopy">A Chrome extension that runs inside Amazon Relay and tells you what to bid, drafts your scorecard disputes, and shows what each truck earned — so you stop bidding on instinct and stop rebuilding spreadsheets.</p><div class="hero-actions"><a class="button button-primary" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="install">Add NudoIQ to Chrome</a><a class="button button-secondary" href="#features" data-t="seeProduct">See the product</a></div><p class="microcopy" data-t="heroMicro">7-day trial · $49.99/month after trial · Cancel anytime · English and Spanish</p></div>
-      <div class="product-frame"><div class="frame-label"><span></span><b data-t="realScreen">Real NudoIQ product screen</b></div><img src="assets/one-click-post-truck.webp" alt="NudoIQ one-click Post Truck with a recommended bid on the Amazon Relay load board" width="1672" height="941" decoding="async" loading="eager" fetchpriority="high"></div>
+      <div><p class="eyebrow" data-t="heroEyebrow">For Amazon Relay owner-operators and fleets</p><h1 data-t="heroTitle">Know what an Amazon Relay load is really worth before you book it.</h1><p class="hero-copy" data-t="heroCopy">A Chrome extension that runs inside Amazon Relay and tells you what to bid, drafts your scorecard disputes, and shows what each truck earned — so you stop bidding on instinct and stop rebuilding spreadsheets.</p><div class="hero-actions"><a class="button button-primary" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="install">Add NudoIQ to Chrome</a><a class="button button-secondary" href="#features" data-t="seeProduct">See the product</a></div><p class="hero-rating"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span data-t="heroRating">5.0 on the Chrome Web Store, from 3 carrier ratings</span></p><p class="microcopy" data-t="heroMicro">7-day trial · $49.99/month after trial · Cancel anytime · English and Spanish</p></div>
+      <div class="product-frame"><div class="frame-label"><span></span><b data-t="realScreen">Real NudoIQ product screen</b></div><img src="assets/shot-post-truck.webp" alt="NudoIQ one-click Post Truck panel recommending a $727 bid at $2.49 per mile on the Amazon Relay load board" width="1500" height="1000" decoding="async" loading="eager" fetchpriority="high"></div>
     </div></section>
     <section class="proofbar" aria-label="Product summary"><div class="container proofgrid">
       <div class="proofitem"><strong data-t="builtFor">1 to 20 trucks</strong><span data-t="builtForSub">Owner-operators, dispatchers and small fleets</span></div><div class="proofitem"><strong data-t="insideRelay">Runs in your Relay tab</strong><span data-t="insideRelaySub">Nothing new to log into</span></div><div class="proofitem"><strong data-t="bilingual">English + Español</strong><span data-t="bilingualSub">One-click switch</span></div><div class="proofitem"><strong data-t="clearTrial">7 days free</strong><span data-t="clearTrialSub">$49.99/month after. Cancel anytime.</span></div>
     </div></section>
     <section class="section" id="reviews"><div class="container"><div class="section-head center"><p class="eyebrow" data-t="reviewsEyebrow">From the Chrome Web Store</p><h2 data-t="reviewsTitle">What carriers say after they pay for it.</h2><p data-t="reviewsCopy">Every review below is public on the Chrome Web Store listing.</p></div>
+      <p class="rating-summary"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span data-t="ratingSummary">5.0 average &middot; 3 ratings &middot; 4 written reviews</span></p>
       <div class="reviews-grid">
         <figure class="review"><div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote data-t="review1">Their AI features to detect what prices will go to is amazing and have already made me more than $1000 I would not have made without the extension, which makes the 50 bucks feel like nothing. Life saver for relay.</blockquote><figcaption data-t="review1By">sophialaim &middot; Chrome Web Store</figcaption></figure>
         <figure class="review"><div class="review-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote data-t="review2">Their performance dispute feature is a life saver. Also their load booking features work really well, and they dont slow the load board down, other extensions seem to struggle with that.</blockquote><figcaption data-t="review2By">Futo &middot; Chrome Web Store</figcaption></figure>
@@ -206,18 +210,18 @@
     </div></div></section>
     <section class="section section-soft" id="features"><div class="container">
       <div class="section-head"><p class="eyebrow" data-t="productEyebrow">See the product</p><h2 data-t="productTitle">Every screen answers one question: what is this load worth?</h2><p data-t="productCopy">Most carriers bid on instinct and reconcile the numbers weeks later. NudoIQ puts the same four decisions in front of you while you make them: what to watch, what to bid, what to book, and what each trip earned.</p></div>
-      <div class="feature-row"><div class="feature-copy"><p class="eyebrow" data-t="laneEyebrow">Lane Intelligence</p><h2 data-t="laneTitle">Every lane shows a bid target, a ceiling, and a confidence level.</h2><p data-t="laneCopy">NudoIQ reads the posted price against recent observations on that lane and gives you a number to bid, the range it expects, and how much data sits behind the estimate.</p><ul class="checklist"><li data-t="lanePoint1">Bid a number instead of guessing</li><li data-t="lanePoint2">See how much data supports each estimate</li><li data-t="lanePoint3">Open the breakdown when the call is close</li></ul></div><figure class="feature-media"><img src="assets/lane-intelligence.webp" alt="NudoIQ Lane Intelligence showing the bid target and ceiling range for an Amazon Relay lane" width="1905" height="908" decoding="async" loading="lazy"><figcaption class="media-note" data-t="laneNote">Lane estimates are decision support, not guaranteed market outcomes.</figcaption></figure></div>
-      <div class="feature-row reverse"><div class="feature-copy"><p class="eyebrow" data-t="bidEyebrow">Bid Advisor</p><h2 data-t="bidTitle">See Amazon Relay lane rates before you post your truck.</h2><p data-t="bidCopy">Post-A-Truck shows the board median in dollars per mile, the highest rate visible right now, and the floor, median and ceiling that lane has paid historically.</p><ul class="checklist"><li data-t="bidPoint1">Stop underbidding a lane that pays more</li><li data-t="bidPoint2">Stop overbidding a lane that will not match</li><li data-t="bidPoint3">Get flagged before you post, not after</li></ul></div><figure class="feature-media"><img src="assets/bid-advisor.webp" alt="NudoIQ Bid Advisor showing Amazon Relay lane rates: board median per mile, top rate and historical range" width="1905" height="908" decoding="async" loading="lazy"><figcaption class="media-note" data-t="bidNote">Estimates support your decision. They do not guarantee a match, a rate, or a booking.</figcaption></figure></div>
-      <div class="feature-row"><div class="feature-copy"><p class="eyebrow" data-t="disputeEyebrow">Scorecard disputes</p><h2 data-t="disputeTitle">Turn an Amazon Relay scorecard hit into a filed dispute.</h2><p data-t="disputeCopy">NudoIQ reads your scorecard, pulls out the violation behind the score, and drafts a dispute letter citing Amazon policy. You review it, add context, and submit.</p><ul class="checklist"><li data-t="disputePoint1">Find the violation without hunting for it</li><li data-t="disputePoint2">File the same day instead of letting it stand</li><li data-t="disputePoint3">Add what happened in your own words</li></ul></div><figure class="feature-media"><img src="assets/dispute-engine.webp" alt="NudoIQ drafting an Amazon Relay scorecard dispute letter from a detected violation" width="1463" height="812" decoding="async" loading="lazy"><figcaption class="media-note" data-t="disputeNote">Privacy-safe product example. Driver names and load IDs are obscured. Amazon decides every dispute outcome.</figcaption></figure></div>
-      <div class="feature-row reverse"><div class="feature-copy"><p class="eyebrow" data-t="fleetEyebrow">Fleet dashboard</p><h2 data-t="fleetTitle">Know what your fleet earned this week, not next month.</h2><p data-t="fleetCopy">Revenue, miles, fuel cost, net margin, driver ranking and trip detail land in one view, updated as trips complete.</p><ul class="checklist"><li data-t="fleetPoint1">See net margin without a reconciliation</li><li data-t="fleetPoint2">Compare drivers and weeks side by side</li><li data-t="fleetPoint3">Import CSV and pull settlement reports</li></ul></div><figure class="feature-media"><img src="assets/fleet-dashboard.webp" alt="NudoIQ fleet dashboard showing Amazon Relay revenue, miles, fuel and net margin by driver" width="1672" height="941" decoding="async" loading="lazy"><figcaption class="media-note" data-t="privacyNote">Privacy-safe product example. Names, dates, routes, and identifying details are obscured.</figcaption></figure></div>
-      <div class="feature-row"><div class="feature-copy"><p class="eyebrow" data-t="payEyebrow">Driver pay statements</p><h2 data-t="payTitle">Build a driver pay statement from completed trips.</h2><p data-t="payCopy">NudoIQ totals the loads, miles and pay for the period and produces a statement you can print, save as PDF, or email to the driver.</p><ul class="checklist"><li data-t="payPoint1">Pay drivers from trip data, not a spreadsheet</li><li data-t="payPoint2">Give drivers totals they can check line by line</li><li data-t="payPoint3">Send it without retyping a single trip</li></ul></div><figure class="feature-media"><img src="assets/driver-pay-statement.webp" alt="NudoIQ driver pay statement built from completed Amazon Relay trips" width="1672" height="941" decoding="async" loading="lazy"><figcaption class="media-note" data-t="privacyNote2">Privacy-safe product example. Names, dates, load IDs, and routes are obscured.</figcaption></figure></div>
+      <div class="feature-row"><div class="feature-copy"><p class="eyebrow" data-t="laneEyebrow">Lane Intelligence</p><h2 data-t="laneTitle">Every lane shows a bid target, a ceiling, and a confidence level.</h2><p data-t="laneCopy">NudoIQ reads the posted price against recent observations on that lane and gives you a number to bid, the range it expects, and how much data sits behind the estimate.</p><ul class="checklist"><li data-t="lanePoint1">Bid a number instead of guessing</li><li data-t="lanePoint2">See how much data supports each estimate</li><li data-t="lanePoint3">Open the breakdown when the call is close</li></ul></div><figure class="feature-media"><img src="assets/shot-lane-intelligence.webp" alt="NudoIQ Lane Intelligence showing a $483 AI bid target at $2.72 per mile against a $407 board price, with a $451 to $488 likely ceiling range" width="1500" height="1000" decoding="async" loading="lazy"><figcaption class="media-note" data-t="laneNote">Lane estimates are decision support, not guaranteed market outcomes.</figcaption></figure></div>
+      <div class="feature-row reverse"><div class="feature-copy"><p class="eyebrow" data-t="bidEyebrow">Bid Advisor</p><h2 data-t="bidTitle">See Amazon Relay lane rates before you post your truck.</h2><p data-t="bidCopy">Post-A-Truck shows the board median in dollars per mile, the highest rate visible right now, and the floor, median and ceiling that lane has paid historically.</p><ul class="checklist"><li data-t="bidPoint1">Stop underbidding a lane that pays more</li><li data-t="bidPoint2">Stop overbidding a lane that will not match</li><li data-t="bidPoint3">Get flagged before you post, not after</li></ul></div><figure class="feature-media"><img src="assets/shot-bid-advisor.webp" alt="NudoIQ Bid Advisor showing a $2.24 per mile market median, a $540 board top and the historical floor, median and ceiling for the lane" width="1500" height="1000" decoding="async" loading="lazy"><figcaption class="media-note" data-t="bidNote">Estimates support your decision. They do not guarantee a match, a rate, or a booking.</figcaption></figure></div>
+      <div class="feature-row"><div class="feature-copy"><p class="eyebrow" data-t="disputeEyebrow">Scorecard disputes</p><h2 data-t="disputeTitle">Turn an Amazon Relay scorecard hit into a filed dispute.</h2><p data-t="disputeCopy">NudoIQ reads your scorecard, pulls out the violation behind the score, and drafts a dispute letter citing Amazon policy. You review it, add context, and submit.</p><ul class="checklist"><li data-t="disputePoint1">Find the violation without hunting for it</li><li data-t="disputePoint2">File the same day instead of letting it stand</li><li data-t="disputePoint3">Add what happened in your own words</li></ul></div><figure class="feature-media"><img src="assets/shot-dispute.webp" alt="NudoIQ Dispute Engine reading an Amazon Relay scorecard and offering to generate a dispute letter for the detected violation" width="1500" height="1000" decoding="async" loading="lazy"><figcaption class="media-note" data-t="disputeNote">Privacy-safe product example. Driver names and load IDs are obscured. Amazon decides every dispute outcome.</figcaption></figure></div>
+      <div class="feature-row reverse"><div class="feature-copy"><p class="eyebrow" data-t="fleetEyebrow">Fleet dashboard</p><h2 data-t="fleetTitle">Know what your fleet earned this week, not next month.</h2><p data-t="fleetCopy">Revenue, miles, fuel cost, net margin, driver ranking and trip detail land in one view, updated as trips complete.</p><ul class="checklist"><li data-t="fleetPoint1">See net margin without a reconciliation</li><li data-t="fleetPoint2">Compare drivers and weeks side by side</li><li data-t="fleetPoint3">Import CSV and pull settlement reports</li></ul></div><figure class="feature-media"><img src="assets/shot-fleet.webp" alt="NudoIQ fleet dashboard showing $90,510 revenue, 27,250 miles, 154 trips and $68,734 net margin across the fleet" width="1500" height="1000" decoding="async" loading="lazy"><figcaption class="media-note" data-t="privacyNote">Privacy-safe product example. Names, dates, routes, and identifying details are obscured.</figcaption></figure></div>
+      <div class="feature-row"><div class="feature-copy"><p class="eyebrow" data-t="payEyebrow">Driver pay statements</p><h2 data-t="payTitle">Build a driver pay statement from completed trips.</h2><p data-t="payCopy">NudoIQ totals the loads, miles and pay for the period and produces a statement you can print, save as PDF, or email to the driver.</p><ul class="checklist"><li data-t="payPoint1">Pay drivers from trip data, not a spreadsheet</li><li data-t="payPoint2">Give drivers totals they can check line by line</li><li data-t="payPoint3">Send it without retyping a single trip</li></ul></div><figure class="feature-media"><img src="assets/shot-driver-pay.webp" alt="NudoIQ driver pay statement totalling 20 completed trips, 4,221 miles and $4,221.10 of driver pay" width="1500" height="1000" decoding="async" loading="lazy"><figcaption class="media-note" data-t="privacyNote2">Privacy-safe product example. Names, dates, load IDs, and routes are obscured.</figcaption></figure></div>
       <div class="feature-cards">
         <article class="feature-card"><div class="feature-icon" aria-hidden="true">🔔</div><h3 data-t="alertsTitle">Smart alerts</h3><p data-t="alertsCopy">Catch a load you would have missed while you were away from the screen.</p></article><article class="feature-card"><div class="feature-icon" aria-hidden="true">⚙</div><h3 data-t="rulesTitle">Booking rules</h3><p data-t="rulesCopy">Decide once what you will take, and let NudoIQ watch for it.</p></article><article class="feature-card"><div class="feature-icon" aria-hidden="true">📍</div><h3 data-t="mapsTitle">Truck routing</h3><p data-t="mapsCopy">See the truck-legal route before the load is yours to run.</p></article><article class="feature-card"><div class="feature-icon" aria-hidden="true">✉</div><h3 data-t="dispatchTitle">Driver dispatch</h3><p data-t="dispatchCopy">Your driver gets the load details the moment you assign the trip.</p></article><article class="feature-card"><div class="feature-icon" aria-hidden="true">◷</div><h3 data-t="hosTitle">HOS overview</h3><p data-t="hosCopy">Know the driver has the hours before you commit to the pickup.</p></article><article class="feature-card"><div class="feature-icon" aria-hidden="true">EN</div><h3 data-t="languageTitle">Bilingual interface</h3><p data-t="languageCopy">Your Spanish-speaking drivers and dispatchers read the same screens you do.</p></article>
       </div>
     </div></section>
     <section class="section section-soft" id="setup"><div class="container"><div class="section-head center"><p class="eyebrow" data-t="setupEyebrow">Setup</p><h2 data-t="setupTitle">Three steps, about five minutes.</h2></div><div class="steps"><article class="step"><h3 data-t="step1Title">Install the extension</h3><p data-t="step1Copy">Add NudoIQ from the Chrome Web Store and open Amazon Relay.</p></article><article class="step"><h3 data-t="step2Title">Start with alerts</h3><p data-t="step2Copy">Watch the board first. Add search and booking rules once you trust what you see.</p></article><article class="step"><h3 data-t="step3Title">Check the number before you commit</h3><p data-t="step3Copy">Read the bid target, the route and the margin on the load in front of you, then decide.</p></article></div></div></section>
     <section class="section" id="pricing"><div class="container"><div class="section-head center"><p class="eyebrow" data-t="pricingEyebrow">Pricing</p><h2 data-t="pricingTitle">$49.99 a month. Every feature. No annual contract.</h2><p data-t="pricingCopy">The same price whether you run one truck or twenty.</p></div><div class="price"><div class="price-top"><div><h3>NudoIQ</h3><div data-t="completePlan">Complete carrier toolkit</div></div><div class="price-value">$49.99 <small data-t="perMonth">/ month</small></div></div><ul class="checklist"><li data-t="price1">Load alerts and price-change notifications</li><li data-t="price2">Search and booking rules</li><li data-t="price3">Lane Intelligence and bid support</li><li data-t="priceDispute">Scorecard dispute letters</li><li data-t="price4">Fleet and earnings reporting</li><li data-t="price5">Driver pay statements</li><li data-t="price6">English and Spanish interface</li></ul><a class="button button-primary" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="startTrial">Start the 7-day trial</a><p class="price-note" data-t="priceNote">Payment method required. Cancel before the trial ends to avoid the first monthly charge.</p></div></div></section>
-    <section class="section section-soft" id="faq"><div class="container"><div class="section-head center"><p class="eyebrow">FAQ</p><h2 data-t="faqTitle">Answers before you install.</h2></div><div class="faq-list"><details><summary data-t="faq1Q">Do I need to leave my computer on?</summary><p data-t="faq1A">Yes. NudoIQ runs in your browser, so the Relay tab and computer need to remain available while it watches the board. Alerts help you step away without staring at the screen.</p></details><details><summary data-t="faq2Q">Does NudoIQ guarantee a rate or booking?</summary><p data-t="faq2A">No. Rates, availability, and booking outcomes change constantly. NudoIQ provides alerts, historical context, estimates, and workflow tools to support your decision.</p></details><details><summary data-t="faq3Q">Is NudoIQ affiliated with Amazon?</summary><p data-t="faq3A">No. NudoIQ is an independent browser extension and is not affiliated with or endorsed by Amazon.com, Inc. Carriers remain responsible for their accounts and compliance with applicable terms.</p></details><details><summary data-t="faq4Q">Which browsers are supported?</summary><p data-t="faq4A">NudoIQ is built for Chrome and other Chromium-based browsers. Feature behavior can vary by browser version.</p></details><details><summary data-t="faq5Q">How do I cancel?</summary><p data-t="faq5A">Open the extension settings and choose Manage subscription. You can cancel before the trial ends or stop a future renewal.</p></details><details><summary data-t="faq6Q">How can I get help?</summary><p><span data-t="faq6A">Email us at</span> <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a> <span data-t="faq6B">or message NudoIQ support on Telegram.</span></p></details></div></div></section>
+    <section class="section section-soft" id="faq"><div class="container"><div class="section-head center"><p class="eyebrow">FAQ</p><h2 data-t="faqTitle">Answers before you install.</h2></div><div class="faq-list"><details><summary data-t="faq1Q">Do I need to leave my computer on?</summary><p data-t="faq1A">Yes. NudoIQ runs in your browser, so the Relay tab and computer need to remain available while it watches the board. Alerts help you step away without staring at the screen.</p></details><details><summary data-t="faq2Q">Does NudoIQ guarantee a rate or booking?</summary><p data-t="faq2A">No. Rates, availability, and booking outcomes change constantly. NudoIQ provides alerts, historical context, estimates, and workflow tools to support your decision.</p></details><details><summary data-t="faq3Q">Is NudoIQ affiliated with Amazon?</summary><p data-t="faq3A">No. NudoIQ is an independent browser extension and is not affiliated with or endorsed by Amazon.com, Inc. Carriers remain responsible for their accounts and compliance with applicable terms.</p></details><details><summary data-t="faq4Q">Which browsers are supported?</summary><p data-t="faq4A">NudoIQ is built for Chrome and other Chromium-based browsers. Feature behavior can vary by browser version.</p></details><details><summary data-t="faq5Q">How do I cancel?</summary><p data-t="faq5A">Open the extension settings and choose Manage subscription. You can cancel before the trial ends or stop a future renewal.</p></details><details><summary data-t="faq6Q">How can I get help?</summary><p><span data-t="faq6A">Email us at</span> <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a> <span data-t="faq6B">or message NudoIQ support on Telegram.</span></p></details><details><summary data-t="faq7Q">What is the Amazon Relay load board?</summary><p data-t="faq7A">It is the board inside Amazon Relay where Amazon posts freight to contracted carriers. Carriers search it, bid on loads, and post available trucks against it. NudoIQ does not replace that board. It runs inside it and adds rate context, alerts and reporting to the screens you already use.</p></details><details><summary data-t="faq8Q">Does NudoIQ see my Amazon Relay password?</summary><p data-t="faq8A">No. NudoIQ does not collect Amazon credentials, passwords or account information. It runs inside the Relay tab you are already signed in to, so there is nothing extra to log into. Our privacy policy lists exactly what is and is not collected.</p></details><details><summary data-t="faq9Q">Does NudoIQ work on load boards other than Amazon Relay?</summary><p data-t="faq9A">No. NudoIQ is built specifically for the Amazon Relay load board and reads only Relay screens. It does not connect to DAT, Truckstop or other load boards.</p></details></div></div></section>
     <section class="final"><div class="container final-grid"><div><h2 data-t="finalTitle">Know what the next load is worth before you take it.</h2><p data-t="finalCopy">Seven days free. $49.99 a month after that. Cancel anytime.</p></div><a class="button button-primary" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="installNow">Add NudoIQ to Chrome</a></div></section>
   </main>
   <footer><div class="container footer-grid"><div>© 2026 NudoIQ · <span data-t="independent">Independent software for carriers</span></div><div class="footer-links"><a href="/privacy.html" data-t="privacy">Privacy</a><a href="/refund-policy.html" data-t="refund">Refund policy</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contact</a></div></div></footer>
@@ -279,7 +283,7 @@
       },
       "primaryImageOfPage": {
         "@type": "ImageObject",
-        "url": "https://nudoiq.com/assets/one-click-post-truck.png"
+        "url": "https://nudoiq.com/assets/shot-post-truck.png"
       },
       "inLanguage": "en-US"
     },
@@ -291,7 +295,7 @@
       "applicationSubCategory": "Browser Extension",
       "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
       "url": "https://nudoiq.com/",
-      "image": "https://nudoiq.com/assets/one-click-post-truck.png",
+      "image": "https://nudoiq.com/assets/shot-post-truck.png",
       "description": "NudoIQ is a Chrome extension for Amazon Relay carriers. It adds market-rate bid intelligence, scorecard dispute letters, load alerts and price-change notifications, search and booking rules, lane rate intelligence, truck routing, HOS overview, fleet and earnings reporting, and printable driver pay statements.",
       "inLanguage": [
         "en-US",
@@ -333,7 +337,73 @@
             "unitCode": "MON"
           }
         }
-      }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": 3,
+        "reviewCount": 4
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "sophialaim"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "reviewBody": "Their AI features to detect what prices will go to is amazing and have already made me more than $1000 I would not have made without the extension, which makes the 50 bucks feel like nothing. Life saver for relay."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Futo"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "reviewBody": "Their performance dispute feature is a life saver. Also their load booking features work really well, and they dont slow the load board down, other extensions seem to struggle with that."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Lalo"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "reviewBody": "Works great, good features, better than the others I have tried. Definitely worth it for the 50 bucks a month."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Miguel"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "reviewBody": "Super worth the $50 per month."
+        }
+      ]
     },
     {
       "@type": "FAQPage",
@@ -388,6 +458,30 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Email contact@nudoiq.com or message NudoIQ support on Telegram."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Amazon Relay load board?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the board inside Amazon Relay where Amazon posts freight to contracted carriers. Carriers search it, bid on loads, and post available trucks against it. NudoIQ does not replace that board. It runs inside it and adds rate context, alerts and reporting to the screens you already use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does NudoIQ see my Amazon Relay password?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. NudoIQ does not collect Amazon credentials, passwords or account information. It runs inside the Relay tab you are already signed in to, so there is nothing extra to log into. Our privacy policy lists exactly what is and is not collected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does NudoIQ work on load boards other than Amazon Relay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. NudoIQ is built specifically for the Amazon Relay load board and reads only Relay screens. It does not connect to DAT, Truckstop or other load boards."
           }
         }
       ]

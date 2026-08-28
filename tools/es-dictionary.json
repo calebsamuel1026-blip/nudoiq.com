@@ -135,5 +135,13 @@
   "disputePoint2": "Presenta el mismo día en vez de dejarlo pasar",
   "disputePoint3": "Agrega lo que pasó en tus propias palabras",
   "disputeNote": "Ejemplo protegido del producto. Los nombres de conductores y los IDs de carga están ocultos. Amazon decide el resultado de cada disputa.",
-  "priceDispute": "Cartas de disputa de scorecard"
+  "priceDispute": "Cartas de disputa de scorecard",
+  "heroRating": "5.0 en Chrome Web Store, de 3 calificaciones de transportistas",
+  "ratingSummary": "5.0 promedio · 3 calificaciones · 4 reseñas escritas",
+  "faq7Q": "¿Qué es el tablero de cargas de Amazon Relay?",
+  "faq7A": "Es el tablero dentro de Amazon Relay donde Amazon publica cargas para transportistas contratados. Los transportistas lo buscan, ofertan por cargas y publican camiones disponibles. NudoIQ no reemplaza ese tablero: funciona dentro de él y agrega contexto de tarifas, alertas y reportes a las pantallas que ya usas.",
+  "faq8Q": "¿NudoIQ ve mi contraseña de Amazon Relay?",
+  "faq8A": "No. NudoIQ no recopila credenciales, contraseñas ni información de cuenta de Amazon. Funciona dentro de la pestaña de Relay en la que ya iniciaste sesión, así que no hay nada adicional que iniciar. Nuestra política de privacidad detalla exactamente qué se recopila y qué no.",
+  "faq9Q": "¿NudoIQ funciona en otros tableros de cargas además de Amazon Relay?",
+  "faq9A": "No. NudoIQ está hecho específicamente para el tablero de cargas de Amazon Relay y solo lee pantallas de Relay. No se conecta a DAT, Truckstop ni a otros tableros de cargas."
 }

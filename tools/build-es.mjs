@@ -56,18 +56,23 @@ for (const node of graph['@graph']) {
     node['@id'] = 'https://nudoiq.com/es/#faq';
     node.isPartOf = { '@id': 'https://nudoiq.com/es/#webpage' };
     node.inLanguage = 'es-US';
-    node.mainEntity = [1, 2, 3, 4, 5, 6].map((i) => ({
+    const faqIds = [];
+    for (let i = 1; es['faq' + i + 'Q']; i++) faqIds.push(i);
+    node.mainEntity = faqIds.map((i) => ({
       '@type': 'Question',
       name: es['faq' + i + 'Q'],
       acceptedAnswer: { '@type': 'Answer', text: i === 6 ? es.faq6A + ' contact@nudoiq.com ' + es.faq6B : es['faq' + i + 'A'] },
     }));
   }
   if (node['@type'] === 'SoftwareApplication') {
+    if (Array.isArray(node.review)) {
+      node.review = node.review.map((r, i) => ({ ...r, reviewBody: es['review' + (i + 1)] || r.reviewBody }));
+    }
     node.description = 'NudoIQ es una extensión de Chrome para transportistas de Amazon Relay: inteligencia de tarifas de mercado, cartas de disputa de scorecard, alertas de cargas, reglas de búsqueda y reserva, ruta para camiones, resumen HOS, reportes de flota y estados de pago para conductores.';
     node.featureList = [es.price1, es.price2, es.price3, es.priceDispute, es.price4, es.price5, es.price6];
   }
 }
-doc = doc.replace(ldRe, '<script type="application/ld+json">' + String.fromCharCode(10) + JSON.stringify(graph, null, 2) + String.fromCharCode(10) + '  </script>');
+doc = doc.replace(ldRe, () => '<script type="application/ld+json">' + String.fromCharCode(10) + JSON.stringify(graph, null, 2) + String.fromCharCode(10) + '  </script>');
 
 if (missing.length) {
   console.error('Missing Spanish for: ' + [...new Set(missing)].join(', '));
