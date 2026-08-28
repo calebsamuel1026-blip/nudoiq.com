@@ -38,13 +38,12 @@ watches the load board.
 ## Important limitations
 
 NudoIQ does not guarantee rates, load availability, bookings, time savings, or
-earnings. Rate estimates and the value calculator on the website are planning
-aids, not promises. Figures shown in product screenshots are illustrative
+earnings. Rate estimates shown in the product are planning aids, not promises. Figures shown in product screenshots are illustrative
 examples with identifying data removed.
 
 ## Pages
 
-- [Homepage](https://nudoiq.com/): product overview, features, value calculator, pricing, and FAQ.
+- [Homepage](https://nudoiq.com/): product overview, features, customer reviews, pricing, and FAQ.
 - [Inicio (Español)](https://nudoiq.com/es/): the full site in Spanish.
 - [Privacy Policy](https://nudoiq.com/privacy.html): what is collected, what is not, retention, third-party processors, and data rights.
 - [Refund Policy](https://nudoiq.com/refund-policy.html): trial terms, cancellation, and billing disputes.
