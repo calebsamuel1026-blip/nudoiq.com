@@ -30,7 +30,7 @@
   <meta name="twitter:image:alt" content="NudoIQ one-click Post Truck tool inside the Amazon Relay load board">
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="/assets/favicon.png">
-  <link rel="preload" as="image" href="/assets/hero.png" type="image/png" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/hero-relay.png" type="image/png" fetchpriority="high">
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -126,6 +126,11 @@
     .stars{color:var(--amber);letter-spacing:2px}
     .rate{display:flex;align-items:center;gap:9px;margin:22px 0 0;font-weight:600;font-size:16px}
     .fine{margin:12px 0 0;font-size:15.5px;color:var(--faint)}
+    /* Trademark notice sits with the hero rather than only in the footer: the
+       hero photo carries Amazon's mark, so the disclaimer belongs where the
+       mark is seen. Smaller and dimmer than .fine, still above the AA floor
+       against the hero's darkest overlay stop. */
+    .disclaim{font-size:13px;line-height:1.55;max-width:62ch;color:rgba(255,255,255,0.62)}
 
     /* ── ledger strip ────────────────────────────────────────── */
     .ledger{display:grid;grid-template-columns:repeat(4,1fr);
@@ -263,6 +268,8 @@
     footer{background:var(--bg-deep);color:var(--faint);padding:28px 0;
       font-size:15.5px;border-top:1px solid var(--rule)}
     footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+    .tm{flex:1 1 100%;margin:6px 0 0;font-size:13px;line-height:1.55;
+      color:rgba(255,255,255,0.42);max-width:88ch}
     .flinks{display:flex;flex-wrap:wrap;gap:22px}
     .flinks a{color:rgba(255,255,255,0.50)}
     .flinks a:hover{color:var(--ink)}
@@ -331,7 +338,7 @@
 
     <!-- ── HERO ─────────────────────────────────────────────── -->
     <section class="hero">
-      <img class="hero-bg" src="/assets/hero.png" alt="Semi-truck on an open desert highway at golden hour" width="1536" height="1024" decoding="async" loading="eager" fetchpriority="high">
+      <img class="hero-bg" src="/assets/hero-relay.png" alt="A semi-truck on an open highway at golden hour" width="1536" height="1024" decoding="async" loading="eager" fetchpriority="high">
       <div class="hero-overlay" aria-hidden="true"></div>
       <div class="wrap hero-body">
         <p class="mono" data-t="heroEyebrow">Para dueños-operadores y flotas de Amazon Relay</p>
@@ -347,6 +354,7 @@
         </div>
         <p class="rate"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span data-t="heroRating">5.0 en Chrome Web Store</span></p>
         <p class="fine" data-t="heroMicro">Prueba de 7 días · $49.99/mes después · Cancela cuando quieras · Inglés y español</p>
+        <p class="fine disclaim" data-t="heroDisclaimer">NudoIQ es un producto independiente. No está afiliado, respaldado ni patrocinado por Amazon.com, Inc. Amazon, Amazon Relay y el logotipo de Amazon son marcas registradas de Amazon.com, Inc. o sus afiliadas.</p>
       </div>
     </section>
 
@@ -588,6 +596,7 @@
   <footer><div class="wrap">
     <div>© 2026 NudoIQ · <span data-t="independent">Software independiente para transportistas</span></div>
     <div class="flinks"><a href="/privacy.html" data-t="privacy">Privacidad</a><a href="/refund-policy.html" data-t="refund">Reembolsos</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contacto</a></div>
+    <p class="tm" data-t="trademarkNote">Amazon, Amazon Relay y el logotipo de Amazon son marcas registradas de Amazon.com, Inc. o sus afiliadas. NudoIQ es un producto independiente y no está afiliado, respaldado ni patrocinado por Amazon.com, Inc. Las imágenes del producto son ilustrativas.</p>
   </div></footer>
 
   <a class="btn btn-go mcta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="mobileCta">Empieza 7 días gratis</a>
