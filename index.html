@@ -30,7 +30,7 @@
   <meta name="twitter:image:alt" content="NudoIQ one-click Post Truck tool inside the Amazon Relay load board">
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="96x96">
   <link rel="apple-touch-icon" href="/assets/favicon.png">
-  <link rel="preload" as="image" href="/assets/shot-post-truck.webp" type="image/webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/hero.png" type="image/png" fetchpriority="high">
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -43,17 +43,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
   <style>
-    :root{
-      --paper:#fff; --panel:#f2f5f3; --panel-2:#e8eeeb;
-      --ink:#0d1512; --muted:#4d5a54; --faint:#75827c;
-      --rule:#ccd5d0; --rule-soft:#e2e8e5;
-      --navy:#0b2239; --green:#0f6e56; --green-deep:#0a4f3e; --green-wash:#e6f1ed;
-      --amber:#8a5a0c; --amber-wash:#fbf2e0;
-      --gut:132px;
+    /* ── tokens ──────────────────────────────────────────────── */
+    :root {
+      --bg:     #07192b;
+      --bg-alt: #0c2038;
+      --bg-deep:#04101d;
+      --ink:    #ffffff;
+      --muted:  #94b3c9;
+      --faint:  #5a7996;
+      --rule:   rgba(255,255,255,0.09);
+      --rule-s: rgba(255,255,255,0.055);
+      --green:  #0f6e56;
+      --green-h:#0c5f49;
+      --amber:  #c8891f;
     }
-    *{box-sizing:border-box}
+    *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--paper);color:var(--ink);
+    body{margin:0;background:var(--bg);color:var(--ink);
       font-family:Barlow,ui-sans-serif,-apple-system,"Segoe UI",Arial,sans-serif;
       font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
     img{display:block;max-width:100%;height:auto}
@@ -61,213 +67,253 @@
     button,input{font:inherit}
     a,button{-webkit-tap-highlight-color:transparent}
     :focus-visible{outline:3px solid var(--green);outline-offset:3px}
-    .wrap{width:min(1220px,calc(100% - 48px));margin-inline:auto}
-    section[id]{scroll-margin-top:86px}
-    .skip{position:absolute;left:-999px;top:8px;z-index:200;background:#fff;padding:12px 18px}
+    .wrap{width:min(1280px,calc(100% - 96px));margin-inline:auto}
+    section[id]{scroll-margin-top:80px}
+    .skip{position:absolute;left:-999px;top:8px;z-index:200;background:var(--bg);padding:12px 18px}
     .skip:focus{left:12px}
 
-    /* ── type ────────────────────────────────────────────── */
+    /* ── type ────────────────────────────────────────────────── */
     h1,h2,h3{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
-      color:var(--ink);line-height:1.02;letter-spacing:.004em;margin:0;text-wrap:balance}
-    h1{font-size:clamp(46px,5vw,68px)}
-    h2{font-size:clamp(36px,4.4vw,58px)}
-    h3{font-size:25px;line-height:1.14}
-    .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12.5px;font-weight:500;
-      letter-spacing:.16em;text-transform:uppercase;color:var(--green-deep)}
+      color:var(--ink);line-height:1.02;letter-spacing:.006em;margin:0;text-wrap:balance}
+    h1{font-size:clamp(44px,6.5vw,88px)}
+    h2{font-size:clamp(36px,5vw,68px)}
+    h3{font-size:22px;line-height:1.15}
+    .split-h{font-size:clamp(30px,3.8vw,52px)}
+    .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;
+      letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0 0 14px}
     p{margin:0 0 16px}
 
-    /* ── top bar ─────────────────────────────────────────── */
-    .top{background:var(--navy);color:#e9f0f5;position:sticky;top:0;z-index:100;
-      border-bottom:1px solid rgba(255,255,255,.12)}
+    /* ── buttons ─────────────────────────────────────────────── */
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;
+      padding:13px 28px;text-decoration:none;font-weight:700;font-size:17px;
+      line-height:1.15;border:2px solid transparent;transition:.15s}
+    .btn-go{background:var(--green);color:#fff}
+    .btn-go:hover{background:var(--green-h)}
+    .btn-ghost{background:transparent;color:var(--ink);border-color:rgba(255,255,255,0.35)}
+    .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,0.06)}
+
+    /* ── nav ─────────────────────────────────────────────────── */
+    .top{background:var(--bg);position:sticky;top:0;z-index:100;
+      border-bottom:1px solid var(--rule)}
     .topin{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand img{width:158px;height:48px;object-fit:contain;object-position:left center}
     .nav{display:flex;align-items:center;gap:26px}
-    .nav>a{color:#cfdde8;text-decoration:none;font-weight:600;font-size:16px}
+    .nav>a{color:rgba(255,255,255,0.70);text-decoration:none;font-weight:600;font-size:16px}
     .nav>a:hover{color:#fff}
-    .lang{display:flex;border:1px solid rgba(255,255,255,.3)}
-    .lang a{padding:6px 11px;color:#cfdde8;text-decoration:none;font-weight:700;font-size:15px;line-height:1.2}
-    .lang a[aria-current="page"]{background:#fff;color:var(--navy)}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:13px 26px;
-      text-decoration:none;font-weight:700;font-size:17px;line-height:1.15;border:2px solid transparent;transition:.15s}
-    .btn-go{background:var(--green);color:#fff}
-    .btn-go:hover{background:var(--green-deep)}
-    .btn-alt{background:transparent;color:var(--ink);border-color:var(--ink)}
-    .btn-alt:hover{background:var(--ink);color:#fff}
+    .lang{display:flex;border:1px solid rgba(255,255,255,0.25)}
+    .lang a{padding:6px 11px;color:rgba(255,255,255,0.60);text-decoration:none;
+      font-weight:700;font-size:15px;line-height:1.2}
+    .lang a[aria-current="page"]{background:#fff;color:var(--bg)}
     .top .btn{min-height:44px;padding:9px 18px;font-size:16px}
 
-    /* ── hero ────────────────────────────────────────────── */
-    .hero{padding:44px 0 0;border-bottom:1px solid var(--rule)}
-    .herogrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-    .flag{border-left:4px solid var(--green);background:var(--green-wash);padding:11px 15px;margin:12px 0 18px}
-    .flag p{margin:0;font-weight:700;font-size:18px;color:var(--green-deep);line-height:1.35}
-    .flag small{display:block;margin-top:5px;font-size:15px;color:var(--muted);font-weight:500;line-height:1.4}
-    .lede{font-size:19px;color:var(--muted);max-width:34em;margin:16px 0 22px}
+    /* ── hero ────────────────────────────────────────────────── */
+    .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;width:100%;height:100%;
+      object-fit:cover;object-position:center 35%;z-index:0}
+    .hero-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(
+      to bottom,
+      rgba(7,25,43,0.52) 0%,
+      rgba(7,25,43,0.22) 32%,
+      rgba(7,25,43,0.78) 70%,
+      rgba(7,25,43,1.00) 100%)}
+    .hero-body{position:relative;z-index:2;padding-bottom:76px;padding-top:40px;max-width:780px}
+    .flag{background:rgba(15,110,86,0.20);border-left:3px solid var(--green);
+      padding:12px 16px;margin:16px 0 24px}
+    .flag p{margin:0;font-weight:700;font-size:18px;line-height:1.4}
+    .flag small{display:block;margin-top:5px;font-size:15px;color:var(--muted);font-weight:500}
+    .lede{font-size:20px;color:var(--muted);max-width:36em;margin:16px 0 26px}
     .acts{display:flex;flex-wrap:wrap;gap:12px}
-    .stars{color:#c8891f;letter-spacing:2px}
+    .stars{color:var(--amber);letter-spacing:2px}
     .rate{display:flex;align-items:center;gap:9px;margin:22px 0 0;font-weight:600;font-size:16px}
     .fine{margin:12px 0 0;font-size:15.5px;color:var(--faint)}
-    .plate{border:1px solid var(--rule);background:var(--panel);padding:10px}
-    .plate img{width:100%}
-    .platecap{display:flex;align-items:center;gap:8px;padding:10px 2px 2px;
-      font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.1em;
-      text-transform:uppercase;color:var(--faint)}
-    .platecap::before{content:"";width:7px;height:7px;background:var(--green);flex:0 0 auto}
 
-    /* ── ledger strip ────────────────────────────────────── */
-    .ledger{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--rule)}
-    .ledger div{padding:22px 26px;border-right:1px solid var(--rule-soft)}
-    .ledger div:first-child{padding-left:0}
+    /* ── ledger strip ────────────────────────────────────────── */
+    .ledger{display:grid;grid-template-columns:repeat(4,1fr);
+      border-bottom:1px solid var(--rule);border-top:1px solid var(--rule)}
+    .ledger div{padding:22px 28px;border-right:1px solid var(--rule)}
     .ledger div:last-child{border-right:0}
-    .ledger b{display:block;font-family:"Barlow Condensed",sans-serif;font-size:24px;font-weight:700;line-height:1.1}
+    .ledger b{display:block;font-family:"Barlow Condensed",sans-serif;
+      font-size:22px;font-weight:700;line-height:1.1}
     .ledger span{display:block;margin-top:3px;font-size:15.5px;color:var(--muted)}
 
-    /* ── section scaffold: mono index in a left gutter ───── */
-    .sec{padding:78px 0;border-bottom:1px solid var(--rule)}
-    .sec.tint{background:var(--panel)}
-    .secgrid{display:grid;grid-template-columns:var(--gut) 1fr;gap:34px;align-items:start}
-    .idx{position:sticky;top:100px;font-family:"IBM Plex Mono",monospace;font-size:12.5px;
-      font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);
-      border-top:2px solid var(--ink);padding-top:9px;line-height:1.5}
-    .idx b{display:block;color:var(--ink);font-weight:600}
-    .head2{max-width:24ch;margin-bottom:14px}
-    .intro{font-size:19px;color:var(--muted);max-width:62ch}
+    /* ── section scaffold ────────────────────────────────────── */
+    .sec{position:relative;padding:100px 0;border-bottom:1px solid var(--rule);overflow:hidden}
+    .sec.sec-alt{background:var(--bg-alt)}
+    .sec-intro{max-width:760px;margin-bottom:64px;position:relative;z-index:1}
+    .sec-intro h2{margin-bottom:16px}
+    .intro{font-size:19px;color:var(--muted);max-width:64ch}
 
-    /* ── figures (the three numbers) ─────────────────────── */
-    .figs{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:38px;border-top:1px solid var(--rule)}
-    .fig{padding:26px 28px 24px;border-right:1px solid var(--rule-soft)}
+    /* ── ghost numerals ──────────────────────────────────────── */
+    .ghost-num{position:absolute;top:-0.04em;left:-0.05em;
+      font-family:"Barlow Condensed",sans-serif;font-weight:700;
+      font-size:clamp(180px,28vw,380px);line-height:1;
+      color:rgba(255,255,255,0.028);user-select:none;pointer-events:none;
+      z-index:0;letter-spacing:-0.02em;aria-hidden:true}
+
+    /* ── split feature blocks ────────────────────────────────── */
+    .sec-content{position:relative;z-index:1}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:72px;
+      align-items:center;padding:56px 0;border-top:1px solid var(--rule)}
+    .split:first-of-type{border-top:0;padding-top:0}
+    .split.flip .scopy{order:2}
+    .split.flip .smedia{order:1}
+    .scopy p{color:var(--muted)}
+    .scopy .split-h{margin:10px 0 16px}
+    .ticks{list-style:none;margin:20px 0 0;padding:0}
+    .ticks li{position:relative;padding:9px 0 9px 32px;font-weight:600;font-size:17px;
+      border-top:1px solid var(--rule-s)}
+    .ticks li::before{content:"→";position:absolute;left:0;top:9px;
+      color:var(--green);font-weight:700}
+    .fnote{margin:10px 2px 0;font-size:14.5px;color:var(--faint)}
+
+    /* ── screenshot plates ───────────────────────────────────── */
+    .plate{border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.02);padding:8px}
+    .plate img{width:100%}
+    .platecap{display:flex;align-items:center;gap:8px;padding:10px 2px 2px;
+      font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.10em;
+      text-transform:uppercase;color:var(--faint)}
+    .platecap::before{content:"";width:6px;height:6px;background:var(--green);flex:0 0 auto}
+
+    /* ── value stats ─────────────────────────────────────────── */
+    .figs{display:grid;grid-template-columns:repeat(3,1fr);
+      border-top:1px solid var(--rule);margin-top:40px}
+    .fig{padding:28px 32px 24px;border-right:1px solid var(--rule)}
     .fig:first-child{padding-left:0}
-    .fig:last-child{border-right:0}
-    .fignum{font-family:"Barlow Condensed",sans-serif;font-size:60px;font-weight:700;
-      line-height:.95;color:var(--green-deep);letter-spacing:-.01em}
-    .fig h3{margin:8px 0 8px;font-size:22px}
+    .fig:last-child{border-right:0;padding-right:0}
+    .fignum{font-family:"Barlow Condensed",sans-serif;font-size:62px;font-weight:700;
+      line-height:.92;color:var(--ink);letter-spacing:-.01em}
+    .fig h3{margin:10px 0 8px}
     .fig p{margin:0;color:var(--muted);font-size:16.5px}
     .fig small{display:block;margin-top:14px;font-family:"IBM Plex Mono",monospace;
-      font-size:11.5px;letter-spacing:.06em;color:var(--faint);text-transform:uppercase}
-    .mech{margin:30px 0 0;padding-top:22px;border-top:1px solid var(--rule);
-      color:var(--muted);font-size:17px;max-width:78ch}
+      font-size:11px;letter-spacing:.06em;color:var(--faint);text-transform:uppercase}
+    .mech{margin:32px 0 0;color:var(--muted);font-size:17px;max-width:80ch}
 
-    /* ── reviews as a ruled list ─────────────────────────── */
+    /* ── reviews ─────────────────────────────────────────────── */
     .ratebar{display:flex;align-items:center;gap:10px;margin:26px 0 6px;font-weight:600;font-size:17px}
     .quotes{border-top:1px solid var(--rule);margin-top:14px}
-    .q{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--rule-soft)}
-    .q .mark{font-family:"Barlow Condensed",serif;font-size:56px;line-height:.8;color:var(--rule);font-weight:700}
+    .q{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:24px 0;
+      border-bottom:1px solid var(--rule)}
+    .q .mark{font-family:"Barlow Condensed",serif;font-size:56px;line-height:.8;
+      color:rgba(255,255,255,0.12);font-weight:700}
     .q blockquote{margin:0;font-size:19px;line-height:1.55}
     .q figcaption{margin-top:10px;font-family:"IBM Plex Mono",monospace;font-size:12px;
       letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
     .qnote{margin:20px 0 0;font-size:15.5px;color:var(--faint);max-width:80ch}
-    .qnote a{color:var(--green-deep)}
+    .qnote a{color:rgba(255,255,255,0.65)}
 
-    /* ── 3-up ruled blocks (trust + small features) ──────── */
-    .tri{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:34px}
-    .tri>article{padding:22px 26px 6px;border-top:2px solid var(--ink);border-right:1px solid var(--rule-soft);margin-right:-1px}
+    /* ── 3-up grid ───────────────────────────────────────────── */
+    .tri{display:grid;grid-template-columns:repeat(3,1fr);margin-top:36px}
+    .tri>article{padding:22px 28px 8px;border-top:2px solid rgba(255,255,255,0.18);
+      border-right:1px solid var(--rule);margin-right:-1px}
     .tri>article:first-child{padding-left:0}
-    .tri>article:last-child{border-right:0}
-    .tri h3{font-size:21px;margin-bottom:8px}
+    .tri>article:last-child{border-right:0;padding-right:0}
+    .tri h3{font-size:20px;margin-bottom:8px}
     .tri p{color:var(--muted);font-size:16.5px}
+    .trust-hed{margin:64px 0 0;font-size:clamp(28px,3.4vw,44px)}
 
-    /* ── feature plates ──────────────────────────────────── */
-    .feat{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;
-      padding:56px 0;border-top:1px solid var(--rule-soft)}
-    .feat:first-of-type{border-top:0;padding-top:34px}
-    .feat.flip .fcopy{order:2}
-    .feat.flip .fmedia{order:1}
-    .fcopy h2{font-size:clamp(30px,3.4vw,44px);margin:10px 0 14px}
-    .fcopy p{color:var(--muted)}
-    .ticks{list-style:none;margin:20px 0 0;padding:0}
-    .ticks li{position:relative;padding:8px 0 8px 30px;font-weight:600;border-top:1px solid var(--rule-soft)}
-    .ticks li::before{content:"→";position:absolute;left:0;top:8px;color:var(--green);font-weight:700}
-    .fnote{margin:10px 2px 0;font-size:15px;color:var(--faint)}
-
-    /* ── steps ───────────────────────────────────────────── */
-    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:34px;counter-reset:st}
-    .steps>article{counter-increment:st;padding:24px 28px 8px;border-top:2px solid var(--ink);
-      border-right:1px solid var(--rule-soft)}
+    /* ── steps ───────────────────────────────────────────────── */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);margin-top:36px;counter-reset:st}
+    .steps>article{counter-increment:st;padding:24px 28px 8px;
+      border-top:2px solid rgba(255,255,255,0.18);border-right:1px solid var(--rule)}
     .steps>article:first-child{padding-left:0}
-    .steps>article:last-child{border-right:0}
+    .steps>article:last-child{border-right:0;padding-right:0}
     .steps>article::before{content:counter(st,decimal-leading-zero);display:block;
-      font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;color:var(--green);margin-bottom:12px}
-    .steps h3{font-size:21px;margin-bottom:8px}
+      font-family:"IBM Plex Mono",monospace;font-size:13px;font-weight:600;
+      color:var(--green);margin-bottom:12px}
+    .steps h3{font-size:20px;margin-bottom:8px}
     .steps p{color:var(--muted);font-size:16.5px}
 
-    /* ── pricing ─────────────────────────────────────────── */
-    .price{border:2px solid var(--ink);max-width:760px;margin-top:34px}
+    /* ── pricing ─────────────────────────────────────────────── */
+    .price{border:2px solid rgba(255,255,255,0.18);max-width:720px;margin-top:36px}
     .pricetop{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
       padding:28px 32px;border-bottom:1px solid var(--rule)}
     .pricetop h3{font-size:30px}
     .pricetop div>div{color:var(--muted);font-size:16.5px;margin-top:2px}
-    .amount{font-family:"Barlow Condensed",sans-serif;font-size:66px;font-weight:700;line-height:.9;white-space:nowrap}
+    .amount{font-family:"Barlow Condensed",sans-serif;font-size:64px;font-weight:700;
+      line-height:.9;white-space:nowrap}
     .amount small{font-family:Barlow,sans-serif;font-size:16px;font-weight:600;color:var(--muted)}
     .plist{list-style:none;margin:0;padding:0}
-    .plist li{padding:12px 32px;border-bottom:1px solid var(--rule-soft);font-weight:600;
+    .plist li{padding:13px 32px;border-bottom:1px solid var(--rule);font-weight:600;
       display:flex;align-items:center;gap:11px}
-    .plist li::before{content:"✓";color:var(--green);font-weight:700}
+    .plist li::before{content:"✓";color:var(--green);font-weight:700;font-size:18px}
     .pfoot{padding:24px 32px 28px}
     .pfoot .btn{width:100%}
     .pnote{margin:12px 0 0;text-align:center;font-size:15.5px;color:var(--faint)}
 
-    /* ── faq ─────────────────────────────────────────────── */
+    /* ── faq ─────────────────────────────────────────────────── */
     .faq{margin-top:30px;max-width:86ch}
     details{border-top:1px solid var(--rule)}
     details:last-child{border-bottom:1px solid var(--rule)}
     summary{cursor:pointer;list-style:none;padding:20px 46px 20px 0;position:relative;
-      font-family:"Barlow Condensed",sans-serif;font-size:24px;font-weight:700;line-height:1.2}
+      font-family:"Barlow Condensed",sans-serif;font-size:24px;font-weight:700;
+      line-height:1.2;color:var(--ink)}
     summary::-webkit-details-marker{display:none}
-    summary::after{content:"+";position:absolute;right:6px;top:16px;font-size:27px;color:var(--green);
-      font-family:Barlow,sans-serif;font-weight:400}
+    summary::after{content:"+";position:absolute;right:6px;top:16px;font-size:27px;
+      color:rgba(255,255,255,0.38);font-family:Barlow,sans-serif;font-weight:400}
     details[open] summary::after{content:"–"}
     details p{color:var(--muted);padding:0 46px 22px 0;margin:0}
+    details a{color:rgba(255,255,255,0.70)}
 
-    /* ── closer + footer ─────────────────────────────────── */
-    .closer{background:var(--navy);color:#fff;padding:64px 0}
-    .closer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:34px}
-    .closer h2{color:#fff;max-width:20ch}
-    .closer p{color:#c3d5e2;margin:12px 0 0;max-width:52ch}
-    footer{background:#071827;color:#a8bfcf;padding:30px 0;font-size:15.5px}
+    /* ── closer + footer ─────────────────────────────────────── */
+    .closer{background:var(--bg-deep);padding:80px 0;border-top:1px solid var(--rule)}
+    .closer .wrap{display:flex;flex-wrap:wrap;align-items:center;
+      justify-content:space-between;gap:36px}
+    .closer h2{max-width:22ch}
+    .closer p{color:var(--muted);margin:12px 0 0;max-width:52ch}
+    footer{background:var(--bg-deep);color:var(--faint);padding:28px 0;
+      font-size:15.5px;border-top:1px solid var(--rule)}
     footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
     .flinks{display:flex;flex-wrap:wrap;gap:22px}
-    .flinks a{color:#d6e5ef}
+    .flinks a{color:rgba(255,255,255,0.50)}
+    .flinks a:hover{color:var(--ink)}
     .mcta{display:none}
 
-    /* ── responsive ──────────────────────────────────────── */
+    /* ── responsive ──────────────────────────────────────────── */
     @media (max-width:1040px){
-      :root{--gut:0px}
-      .secgrid{grid-template-columns:1fr;gap:18px}
-      .idx{position:static;display:flex;gap:10px;border-top:0;padding-top:0}
-      .idx b::after{content:" —"}
+      .wrap{width:min(100% - 64px,1280px)}
+      .ledger{grid-template-columns:repeat(2,1fr)}
+      .ledger div:nth-child(2){border-right:0}
+      .ledger div:nth-child(3){border-right:1px solid var(--rule)}
+      .ledger div:nth-child(4){border-right:0}
+      .figs{grid-template-columns:repeat(2,1fr)}
+      .fig:nth-child(2){border-right:0;padding-right:0}
+      .tri,.steps{grid-template-columns:repeat(2,1fr)}
+      .tri>article:nth-child(2),.steps>article:nth-child(2){border-right:0;padding-right:0}
+      .tri>article:nth-child(3),.steps>article:nth-child(3){border-right:0;padding-right:0}
+      .split,.split.flip{grid-template-columns:1fr;gap:36px}
+      .split.flip .scopy,.split.flip .smedia{order:initial}
       .nav>a:not(.btn){display:none}
-      .herogrid,.feat,.feat.flip{grid-template-columns:1fr;gap:34px}
-      .feat.flip .fcopy,.feat.flip .fmedia{order:initial}
-      .ledger,.figs,.tri,.steps{grid-template-columns:repeat(2,1fr)}
-      .ledger div:nth-child(2),.figs .fig:nth-child(2){border-right:0}
-      .tri>article:nth-child(3),.steps>article:nth-child(3){border-right:0}
     }
     @media (max-width:680px){
       body{font-size:17px}
-      .wrap{width:min(100% - 32px,1220px)}
+      .wrap{width:min(100% - 40px,1280px)}
       .topin{min-height:60px}
       .brand img{width:132px;height:40px}
       .top .btn{display:none}
-      .hero{padding:36px 0 0}
+      .hero{min-height:78vh}
+      .hero-body{padding-bottom:52px}
+      h1{font-size:clamp(38px,10vw,56px)}
+      .sec{padding:64px 0}
+      .sec-intro{margin-bottom:44px}
       .acts .btn{width:100%}
-      .sec{padding:52px 0}
       .ledger,.figs,.tri,.steps{grid-template-columns:1fr}
       .ledger div,.fig,.tri>article,.steps>article{padding-left:0;padding-right:0;border-right:0}
-      .ledger div{border-bottom:1px solid var(--rule-soft)}
-      .fig{border-bottom:1px solid var(--rule-soft)}
+      .ledger div{border-bottom:1px solid var(--rule)}
+      .fig{border-bottom:1px solid var(--rule);padding-bottom:24px}
       .q{grid-template-columns:1fr;gap:8px}
       .q .mark{display:none}
       .pricetop{display:block}
       .amount{margin-top:16px}
       .plist li,.pricetop,.pfoot{padding-left:20px;padding-right:20px}
       .mcta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:150;
-        box-shadow:0 8px 26px rgba(0,0,0,.3)}
+        box-shadow:0 8px 26px rgba(0,0,0,0.5)}
       footer{padding-bottom:92px}
       .closer .wrap{display:block}
       .closer .btn{width:100%;margin-top:24px}
+      .ghost-num{display:none}
     }
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
   </style>
-
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -283,33 +329,43 @@
 
   <main id="main">
 
-    <section class="hero"><div class="wrap">
-      <div class="herogrid">
-        <div>
-          <p class="mono" data-t="heroEyebrow">For Amazon Relay owner-operators and fleets</p>
-          <div class="flag"><p data-t="heroValue">Carriers reported $2,100 more a month, and about 15 hours a week back.</p><small data-t="heroValueNote">Self-reported by carriers we worked with. Not a guarantee.</small></div>
-          <h1 data-t="heroTitle">Know what an Amazon Relay load is really worth before you book it.</h1>
-          <p class="lede" data-t="heroCopy">A Chrome extension that runs inside Amazon Relay: what to bid, your scorecard disputes drafted, and what every truck actually earned.</p>
-          <div class="acts"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="install">Add NudoIQ to Chrome</a><a class="btn btn-alt" href="#features" data-t="seeProduct">See the product</a></div>
-          <p class="rate"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span data-t="heroRating">5.0 on the Chrome Web Store, from 3 carrier ratings</span></p>
-          <p class="fine" data-t="heroMicro">7-day trial · $49.99/month after trial · Cancel anytime · English and Spanish</p>
+    <!-- ── HERO ─────────────────────────────────────────────── -->
+    <section class="hero">
+      <img class="hero-bg" src="assets/hero.png" alt="Semi-truck on an open desert highway at golden hour" width="1536" height="1024" decoding="async" loading="eager" fetchpriority="high">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="wrap hero-body">
+        <p class="mono" data-t="heroEyebrow">For Amazon Relay owner-operators and fleets</p>
+        <div class="flag">
+          <p data-t="heroValue">Carriers reported $2,100 more a month, and about 15 hours a week back.</p>
+          <small data-t="heroValueNote">Self-reported by carriers we worked with. Not a guarantee.</small>
         </div>
-        <figure class="plate" style="margin:0"><img src="assets/shot-post-truck.webp" alt="NudoIQ one-click Post Truck panel recommending a $727 bid at $2.49 per mile on the Amazon Relay load board" width="1500" height="1000" decoding="async" loading="eager" fetchpriority="high"><figcaption class="platecap" data-t="realScreen">Real NudoIQ product screen</figcaption></figure>
+        <h1 data-t="heroTitle">Know what an Amazon Relay load is really worth before you book it.</h1>
+        <p class="lede" data-t="heroCopy">A Chrome extension that runs inside Amazon Relay: what to bid, your scorecard disputes drafted, and what every truck actually earned.</p>
+        <div class="acts">
+          <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="install">Add NudoIQ to Chrome</a>
+          <a class="btn btn-ghost" href="#features" data-t="seeProduct">See the product</a>
+        </div>
+        <p class="rate"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span data-t="heroRating">5.0 on the Chrome Web Store, from 3 carrier ratings</span></p>
+        <p class="fine" data-t="heroMicro">7-day trial · $49.99/month after trial · Cancel anytime · English and Spanish</p>
       </div>
-      <div class="ledger" style="margin-top:52px">
-        <div><b data-t="builtFor">5.0 on the Chrome Web Store</b><span data-t="builtForSub">From 3 carrier ratings and 4 written reviews</span></div>
-        <div><b data-t="insideRelay">Runs in your Relay tab</b><span data-t="insideRelaySub">Nothing new to log into</span></div>
-        <div><b data-t="bilingual">English + Español</b><span data-t="bilingualSub">One-click switch</span></div>
-        <div><b data-t="clearTrial">7 days free</b><span data-t="clearTrialSub">$49.99/month after. Cancel anytime.</span></div>
-      </div>
-    </div></section>
+    </section>
 
-    <section class="sec"><div class="wrap secgrid">
-      <p class="idx"><b>01</b> Value</p>
-      <div>
-        <p class="mono" data-t="valueEyebrow">What carriers reported</p>
-        <h2 class="head2" data-t="valueTitle">$2,100 more a month. About 15 hours a week back.</h2>
-        <p class="intro" data-t="valueCopy">Those are the figures carriers gave us after they moved their bidding onto NudoIQ’s numbers. Below is the mechanism behind them — and you can read it off the screens on this page.</p>
+    <!-- ── LEDGER STRIP ──────────────────────────────────────── -->
+    <div class="ledger">
+      <div><b data-t="builtFor">5.0 on the Chrome Web Store</b><span data-t="builtForSub">From 3 carrier ratings and 4 written reviews</span></div>
+      <div><b data-t="insideRelay">Runs in your Relay tab</b><span data-t="insideRelaySub">Nothing new to log into</span></div>
+      <div><b data-t="bilingual">English + Español</b><span data-t="bilingualSub">One-click switch</span></div>
+      <div><b data-t="clearTrial">7 days free</b><span data-t="clearTrialSub">$49.99/month after. Cancel anytime.</span></div>
+    </div>
+
+    <!-- ── VALUE ─────────────────────────────────────────────── -->
+    <section class="sec">
+      <div class="wrap">
+        <div class="sec-intro">
+          <p class="mono" data-t="valueEyebrow">What carriers reported</p>
+          <h2 data-t="valueTitle">$2,100 more a month. About 15 hours a week back.</h2>
+          <p class="intro" data-t="valueCopy">Those are the figures carriers gave us after they moved their bidding onto NudoIQ's numbers. Below is the mechanism behind them — and you can read it off the screens on this page.</p>
+        </div>
         <div class="figs">
           <article class="fig"><div class="fignum">$2,100</div><h3 data-t="timeCard">More per month</h3><p data-t="timeCardCopy">Reported by carriers after they started bidding the number the lane supports instead of the number they guessed at.</p><small data-t="exampleLabel">Self-reported; individual results vary</small></article>
           <article class="fig"><div class="fignum">15 hrs</div><h3 data-t="loadCard">Back every week</h3><p data-t="loadCardCopy">Time that used to go into refreshing the board, chasing rates by hand and rebuilding the same spreadsheet every Sunday.</p><small data-t="exampleLabel2">Self-reported; individual results vary</small></article>
@@ -317,13 +373,13 @@
         </div>
         <p class="mech" data-t="valueMechanism">Where it comes from: on the lane in the header, NudoIQ recommended $727 where the board posted $632. On the Lane Intelligence screen below, a $483 target against a $407 board price. A few of those a month is the difference.</p>
       </div>
-    </div></section>
+    </section>
 
-    <section class="sec tint" id="reviews"><div class="wrap secgrid">
-      <p class="idx"><b>02</b> Proof</p>
-      <div>
+    <!-- ── REVIEWS ───────────────────────────────────────────── -->
+    <section class="sec sec-alt" id="reviews">
+      <div class="wrap">
         <p class="mono" data-t="reviewsEyebrow">From the Chrome Web Store</p>
-        <h2 class="head2" data-t="reviewsTitle">What carriers say after they pay for it.</h2>
+        <h2 data-t="reviewsTitle">What carriers say after they pay for it.</h2>
         <p class="intro" data-t="reviewsCopy">Every review below is public on the Chrome Web Store listing.</p>
         <p class="ratebar"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span data-t="ratingSummary">5.0 average &middot; 3 ratings &middot; 4 written reviews</span></p>
         <div class="quotes">
@@ -334,33 +390,128 @@
           <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><div><blockquote data-t="review5">Best extension I have tried for Amazon Relay. Unique features and no problems. I will keep paying the 50 dollars every month.</blockquote><figcaption data-t="review5By">Tristan &middot; Chrome Web Store</figcaption></div></figure>
         </div>
         <p class="qnote"><span data-t="reviewsNote">Reviews are reproduced from the public Chrome Web Store listing. Individual results vary; NudoIQ does not guarantee rates, bookings or earnings.</span> <a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk/reviews" rel="noopener" target="_blank" data-t="reviewsLink">Read them on the Chrome Web Store</a></p>
-        <h2 style="margin-top:56px;font-size:clamp(28px,3vw,40px)" data-t="trustTitle">Why carriers trust it with their board.</h2>
+        <h2 class="trust-hed" data-t="trustTitle">Why carriers trust it with their board.</h2>
         <div class="tri">
           <article><h3 data-t="trust1Title">Your Amazon login stays yours</h3><p data-t="trust1Copy">NudoIQ never collects Amazon credentials, passwords or account information. It runs inside the Relay tab you are already signed in to.</p></article>
           <article><h3 data-t="trust2Title">A named company, not an anonymous script</h3><p data-t="trust2Copy">Published by Sami Enterprises LLC of Portland, Oregon — the developer named on the Chrome Web Store listing.</p></article>
           <article><h3 data-t="trust3Title">Billing you control</h3><p data-t="trust3Copy">Payments run through Stripe, so card details never touch NudoIQ. Cancel from the Stripe portal any time, or email us and we do it within one business day.</p></article>
         </div>
       </div>
-    </div></section>
+    </section>
 
-    <section class="sec" id="features"><div class="wrap secgrid">
-      <p class="idx"><b>03</b> Product</p>
-      <div>
-        <p class="mono" data-t="productEyebrow">See the product</p>
-        <h2 class="head2" data-t="productTitle">Every screen answers one question: what is this load worth?</h2>
-        <p class="intro" data-t="productCopy">Most carriers bid on instinct and reconcile the numbers weeks later. NudoIQ puts the same four decisions in front of you while you make them: what to watch, what to bid, what to book, and what each trip earned.</p>
+    <!-- ── 01 LANE INTELLIGENCE ──────────────────────────────── -->
+    <section class="sec" id="features">
+      <span class="ghost-num" aria-hidden="true">01</span>
+      <div class="wrap">
+        <div class="sec-intro sec-content">
+          <p class="mono" data-t="productEyebrow">See the product</p>
+          <h2 data-t="productTitle">Every screen answers one question: what is this load worth?</h2>
+          <p class="intro" data-t="productCopy">Most carriers bid on instinct and reconcile the numbers weeks later. NudoIQ puts the same four decisions in front of you while you make them: what to watch, what to bid, what to book, and what each trip earned.</p>
+        </div>
+        <div class="sec-content">
+          <div class="split">
+            <div class="scopy">
+              <p class="mono" data-t="laneEyebrow">Lane Intelligence</p>
+              <h2 class="split-h" data-t="laneTitle">Every lane shows a bid target, a ceiling, and a confidence level.</h2>
+              <p data-t="laneCopy">NudoIQ reads the posted price against recent observations on that lane and gives you a number to bid, the range it expects, and how much data sits behind the estimate.</p>
+              <ul class="ticks">
+                <li data-t="lanePoint1">Bid a number instead of guessing</li>
+                <li data-t="lanePoint2">See how much data supports each estimate</li>
+                <li data-t="lanePoint3">Open the breakdown when the call is close</li>
+              </ul>
+            </div>
+            <figure class="smedia plate" style="margin:0">
+              <img src="assets/shot-lane-intelligence.webp" alt="NudoIQ Lane Intelligence showing a $483 AI bid target at $2.72 per mile against a $407 board price, with a $451 to $488 likely ceiling range" width="1500" height="1000" decoding="async" loading="lazy">
+              <div class="platecap"><span data-t="realScreen">Real NudoIQ product screen</span></div>
+              <p class="fnote" data-t="laneNote">Lane estimates are decision support, not guaranteed market outcomes.</p>
+            </figure>
+          </div>
+          <div class="split flip">
+            <div class="scopy">
+              <p class="mono" data-t="bidEyebrow">Bid Advisor</p>
+              <h2 class="split-h" data-t="bidTitle">See Amazon Relay lane rates before you post your truck.</h2>
+              <p data-t="bidCopy">Post-A-Truck shows the board median in dollars per mile, the highest rate visible right now, and the floor, median and ceiling that lane has paid historically.</p>
+              <ul class="ticks">
+                <li data-t="bidPoint1">Stop underbidding a lane that pays more</li>
+                <li data-t="bidPoint2">Stop overbidding a lane that will not match</li>
+                <li data-t="bidPoint3">Get flagged before you post, not after</li>
+              </ul>
+            </div>
+            <figure class="smedia plate" style="margin:0">
+              <img src="assets/shot-bid-advisor.webp" alt="NudoIQ Bid Advisor showing a $2.24 per mile market median, a $540 board top and the historical floor, median and ceiling for the lane" width="1500" height="1000" decoding="async" loading="lazy">
+              <p class="fnote" data-t="bidNote">Estimates support your decision. They do not guarantee a match, a rate, or a booking.</p>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="feat"><div class="fcopy"><p class="mono" data-t="laneEyebrow">Lane Intelligence</p><h2 data-t="laneTitle">Every lane shows a bid target, a ceiling, and a confidence level.</h2><p data-t="laneCopy">NudoIQ reads the posted price against recent observations on that lane and gives you a number to bid, the range it expects, and how much data sits behind the estimate.</p><ul class="ticks"><li data-t="lanePoint1">Bid a number instead of guessing</li><li data-t="lanePoint2">See how much data supports each estimate</li><li data-t="lanePoint3">Open the breakdown when the call is close</li></ul></div><figure class="fmedia plate" style="margin:0"><img src="assets/shot-lane-intelligence.webp" alt="NudoIQ Lane Intelligence showing a $483 AI bid target at $2.72 per mile against a $407 board price, with a $451 to $488 likely ceiling range" width="1500" height="1000" decoding="async" loading="lazy"><figcaption class="fnote" data-t="laneNote">Lane estimates are decision support, not guaranteed market outcomes.</figcaption></figure></div>
+    <!-- ── 02 SCORECARD DISPUTES ─────────────────────────────── -->
+    <section class="sec sec-alt" id="disputes">
+      <span class="ghost-num" aria-hidden="true">02</span>
+      <div class="wrap sec-content">
+        <div class="split">
+          <div class="scopy">
+            <p class="mono" data-t="disputeEyebrow">Scorecard disputes</p>
+            <h2 class="split-h" data-t="disputeTitle">Turn an Amazon Relay scorecard hit into a filed dispute.</h2>
+            <p data-t="disputeCopy">NudoIQ reads your scorecard, pulls out the violation behind the score, and drafts a dispute letter citing Amazon policy. You review it, add context, and submit.</p>
+            <ul class="ticks">
+              <li data-t="disputePoint1">Find the violation without hunting for it</li>
+              <li data-t="disputePoint2">File the same day instead of letting it stand</li>
+              <li data-t="disputePoint3">Add what happened in your own words</li>
+            </ul>
+          </div>
+          <figure class="smedia plate" style="margin:0">
+            <img src="assets/shot-dispute.webp" alt="NudoIQ Dispute Engine reading an Amazon Relay scorecard and offering to generate a dispute letter for the detected violation" width="1500" height="1000" decoding="async" loading="lazy">
+            <p class="fnote" data-t="disputeNote">Privacy-safe product example. Driver names and load IDs are obscured. Amazon decides every dispute outcome.</p>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-        <div class="feat flip"><div class="fcopy"><p class="mono" data-t="bidEyebrow">Bid Advisor</p><h2 data-t="bidTitle">See Amazon Relay lane rates before you post your truck.</h2><p data-t="bidCopy">Post-A-Truck shows the board median in dollars per mile, the highest rate visible right now, and the floor, median and ceiling that lane has paid historically.</p><ul class="ticks"><li data-t="bidPoint1">Stop underbidding a lane that pays more</li><li data-t="bidPoint2">Stop overbidding a lane that will not match</li><li data-t="bidPoint3">Get flagged before you post, not after</li></ul></div><figure class="fmedia plate" style="margin:0"><img src="assets/shot-bid-advisor.webp" alt="NudoIQ Bid Advisor showing a $2.24 per mile market median, a $540 board top and the historical floor, median and ceiling for the lane" width="1500" height="1000" decoding="async" loading="lazy"><figcaption class="fnote" data-t="bidNote">Estimates support your decision. They do not guarantee a match, a rate, or a booking.</figcaption></figure></div>
+    <!-- ── 03 FLEET & DRIVER PAY ─────────────────────────────── -->
+    <section class="sec" id="fleet">
+      <span class="ghost-num" aria-hidden="true">03</span>
+      <div class="wrap sec-content">
+        <div class="split">
+          <div class="scopy">
+            <p class="mono" data-t="fleetEyebrow">Fleet dashboard</p>
+            <h2 class="split-h" data-t="fleetTitle">Know what your fleet earned this week, not next month.</h2>
+            <p data-t="fleetCopy">Revenue, miles, fuel cost, net margin, driver ranking and trip detail land in one view, updated as trips complete.</p>
+            <ul class="ticks">
+              <li data-t="fleetPoint1">See net margin without a reconciliation</li>
+              <li data-t="fleetPoint2">Compare drivers and weeks side by side</li>
+              <li data-t="fleetPoint3">Import CSV and pull settlement reports</li>
+            </ul>
+          </div>
+          <figure class="smedia plate" style="margin:0">
+            <img src="assets/shot-fleet.webp" alt="NudoIQ fleet dashboard showing $90,510 revenue, 27,250 miles, 154 trips and $68,734 net margin across the fleet" width="1500" height="1000" decoding="async" loading="lazy">
+            <p class="fnote" data-t="privacyNote">Privacy-safe product example. Names, dates, routes, and identifying details are obscured.</p>
+          </figure>
+        </div>
+        <div class="split flip">
+          <div class="scopy">
+            <p class="mono" data-t="payEyebrow">Driver pay statements</p>
+            <h2 class="split-h" data-t="payTitle">Build a driver pay statement from completed trips.</h2>
+            <p data-t="payCopy">NudoIQ totals the loads, miles and pay for the period and produces a statement you can print, save as PDF, or email to the driver.</p>
+            <ul class="ticks">
+              <li data-t="payPoint1">Pay drivers from trip data, not a spreadsheet</li>
+              <li data-t="payPoint2">Give drivers totals they can check line by line</li>
+              <li data-t="payPoint3">Send it without retyping a single trip</li>
+            </ul>
+          </div>
+          <figure class="smedia plate" style="margin:0">
+            <img src="assets/shot-driver-pay.webp" alt="NudoIQ driver pay statement totalling 20 completed trips, 4,221 miles and $4,221.10 of driver pay" width="1500" height="1000" decoding="async" loading="lazy">
+            <p class="fnote" data-t="privacyNote2">Privacy-safe product example. Names, dates, load IDs, and routes are obscured.</p>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-        <div class="feat"><div class="fcopy"><p class="mono" data-t="disputeEyebrow">Scorecard disputes</p><h2 data-t="disputeTitle">Turn an Amazon Relay scorecard hit into a filed dispute.</h2><p data-t="disputeCopy">NudoIQ reads your scorecard, pulls out the violation behind the score, and drafts a dispute letter citing Amazon policy. You review it, add context, and submit.</p><ul class="ticks"><li data-t="disputePoint1">Find the violation without hunting for it</li><li data-t="disputePoint2">File the same day instead of letting it stand</li><li data-t="disputePoint3">Add what happened in your own words</li></ul></div><figure class="fmedia plate" style="margin:0"><img src="assets/shot-dispute.webp" alt="NudoIQ Dispute Engine reading an Amazon Relay scorecard and offering to generate a dispute letter for the detected violation" width="1500" height="1000" decoding="async" loading="lazy"><figcaption class="fnote" data-t="disputeNote">Privacy-safe product example. Driver names and load IDs are obscured. Amazon decides every dispute outcome.</figcaption></figure></div>
-
-        <div class="feat flip"><div class="fcopy"><p class="mono" data-t="fleetEyebrow">Fleet dashboard</p><h2 data-t="fleetTitle">Know what your fleet earned this week, not next month.</h2><p data-t="fleetCopy">Revenue, miles, fuel cost, net margin, driver ranking and trip detail land in one view, updated as trips complete.</p><ul class="ticks"><li data-t="fleetPoint1">See net margin without a reconciliation</li><li data-t="fleetPoint2">Compare drivers and weeks side by side</li><li data-t="fleetPoint3">Import CSV and pull settlement reports</li></ul></div><figure class="fmedia plate" style="margin:0"><img src="assets/shot-fleet.webp" alt="NudoIQ fleet dashboard showing $90,510 revenue, 27,250 miles, 154 trips and $68,734 net margin across the fleet" width="1500" height="1000" decoding="async" loading="lazy"><figcaption class="fnote" data-t="privacyNote">Privacy-safe product example. Names, dates, routes, and identifying details are obscured.</figcaption></figure></div>
-
-        <div class="feat"><div class="fcopy"><p class="mono" data-t="payEyebrow">Driver pay statements</p><h2 data-t="payTitle">Build a driver pay statement from completed trips.</h2><p data-t="payCopy">NudoIQ totals the loads, miles and pay for the period and produces a statement you can print, save as PDF, or email to the driver.</p><ul class="ticks"><li data-t="payPoint1">Pay drivers from trip data, not a spreadsheet</li><li data-t="payPoint2">Give drivers totals they can check line by line</li><li data-t="payPoint3">Send it without retyping a single trip</li></ul></div><figure class="fmedia plate" style="margin:0"><img src="assets/shot-driver-pay.webp" alt="NudoIQ driver pay statement totalling 20 completed trips, 4,221 miles and $4,221.10 of driver pay" width="1500" height="1000" decoding="async" loading="lazy"><figcaption class="fnote" data-t="privacyNote2">Privacy-safe product example. Names, dates, load IDs, and routes are obscured.</figcaption></figure></div>
-
-        <div class="tri" style="margin-top:48px">
+    <!-- ── SECONDARY FEATURES ────────────────────────────────── -->
+    <section class="sec sec-alt">
+      <div class="wrap">
+        <div class="tri">
           <article><h3 data-t="alertsTitle">Smart alerts</h3><p data-t="alertsCopy">Catch a load you would have missed while you were away from the screen.</p></article>
           <article><h3 data-t="rulesTitle">Booking rules</h3><p data-t="rulesCopy">Decide once what you will take, and let NudoIQ watch for it.</p></article>
           <article><h3 data-t="mapsTitle">Truck routing</h3><p data-t="mapsCopy">See the truck-legal route before the load is yours to run.</p></article>
@@ -371,26 +522,26 @@
           <article><h3 data-t="languageTitle">Bilingual interface</h3><p data-t="languageCopy">Your Spanish-speaking drivers and dispatchers read the same screens you do.</p></article>
         </div>
       </div>
-    </div></section>
+    </section>
 
-    <section class="sec tint" id="setup"><div class="wrap secgrid">
-      <p class="idx"><b>04</b> Setup</p>
-      <div>
+    <!-- ── SETUP ─────────────────────────────────────────────── -->
+    <section class="sec" id="setup">
+      <div class="wrap">
         <p class="mono" data-t="setupEyebrow">Setup</p>
-        <h2 class="head2" data-t="setupTitle">Three steps, about five minutes.</h2>
+        <h2 data-t="setupTitle">Three steps, about five minutes.</h2>
         <div class="steps">
           <article><h3 data-t="step1Title">Install the extension</h3><p data-t="step1Copy">Add NudoIQ from the Chrome Web Store and open Amazon Relay.</p></article>
           <article><h3 data-t="step2Title">Start with alerts</h3><p data-t="step2Copy">Watch the board first. Add search and booking rules once you trust what you see.</p></article>
           <article><h3 data-t="step3Title">Check the number before you commit</h3><p data-t="step3Copy">Read the bid target, the route and the margin on the load in front of you, then decide.</p></article>
         </div>
       </div>
-    </div></section>
+    </section>
 
-    <section class="sec" id="pricing"><div class="wrap secgrid">
-      <p class="idx"><b>05</b> Pricing</p>
-      <div>
+    <!-- ── PRICING ───────────────────────────────────────────── -->
+    <section class="sec sec-alt" id="pricing">
+      <div class="wrap">
         <p class="mono" data-t="pricingEyebrow">Pricing</p>
-        <h2 class="head2" data-t="pricingTitle">$49.99 a month. Every feature. No annual contract.</h2>
+        <h2 data-t="pricingTitle">$49.99 a month. Every feature. No annual contract.</h2>
         <p class="intro" data-t="pricingCopy">The same price whether you run one truck or twenty.</p>
         <div class="price">
           <div class="pricetop"><div><h3>NudoIQ</h3><div data-t="completePlan">Complete carrier toolkit</div></div><div class="amount">$49.99 <small data-t="perMonth">/ month</small></div></div>
@@ -406,12 +557,12 @@
           <div class="pfoot"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="startTrial">Start the 7-day trial</a><p class="pnote" data-t="priceNote">Payment method required. Cancel before the trial ends to avoid the first monthly charge.</p></div>
         </div>
       </div>
-    </div></section>
+    </section>
 
-    <section class="sec tint" id="faq"><div class="wrap secgrid">
-      <p class="idx"><b>06</b> FAQ</p>
-      <div>
-        <h2 class="head2" data-t="faqTitle">Answers before you install.</h2>
+    <!-- ── FAQ ───────────────────────────────────────────────── -->
+    <section class="sec" id="faq">
+      <div class="wrap">
+        <h2 data-t="faqTitle">Answers before you install.</h2>
         <div class="faq">
           <details><summary data-t="faq1Q">Do I need to leave my computer on?</summary><p data-t="faq1A">Yes. NudoIQ runs in your browser, so the Relay tab and computer need to remain available while it watches the board. Alerts help you step away without staring at the screen.</p></details>
           <details><summary data-t="faq2Q">Does NudoIQ guarantee a rate or booking?</summary><p data-t="faq2A">No. Rates, availability, and booking outcomes change constantly. NudoIQ provides alerts, historical context, estimates, and workflow tools to support your decision.</p></details>
@@ -424,8 +575,9 @@
           <details><summary data-t="faq9Q">Does NudoIQ work on load boards other than Amazon Relay?</summary><p data-t="faq9A">No. NudoIQ is built specifically for the Amazon Relay load board and reads only Relay screens. It does not connect to DAT, Truckstop or other load boards.</p></details>
         </div>
       </div>
-    </div></section>
+    </section>
 
+    <!-- ── CLOSER ─────────────────────────────────────────────── -->
     <section class="closer"><div class="wrap">
       <div><h2 data-t="finalTitle">Know what the next load is worth before you take it.</h2><p data-t="finalCopy">Seven days free. $49.99 a month after that. Cancel anytime.</p></div>
       <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="installNow">Add NudoIQ to Chrome</a>
