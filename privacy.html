@@ -81,6 +81,8 @@
     .donot-list li::before { content:"¹5"; position:absolute; left:4px; color:#b4232f; font-weight:800; }
     .item-label, .tp-name { display:block; font-weight:800; color:var(--navy); }
     .item-desc, .tp-desc { display:block; color:var(--muted); font-size:17px; }
+    .section code { font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace; font-size:15px;
+                    background:rgba(15,110,86,.07); border:1px solid var(--line); border-radius:4px; padding:1px 5px; }
 
     .footer { max-width:1180px; margin:0 auto; padding:26px 24px 40px; color:var(--muted);
               font-size:16px; border-top:1px solid var(--line); }
@@ -106,11 +108,11 @@
   <div class="container">
 
     <h1 class="page-title">Privacy Policy</h1>
-    <p class="page-subtitle">NudoIQ Chrome Extension &nbsp;·&nbsp; Last updated: May 28, 2026</p>
+    <p class="page-subtitle">NudoIQ Chrome Extension &amp; Website &nbsp;·&nbsp; Last updated: August 30, 2026</p>
 
     <div class="section">
       <h2>Overview</h2>
-      <p>NudoIQ ("we", "our", or "us") operates the NudoIQ Chrome extension. This policy explains what data we collect, how we use it, and your rights as a user.</p>
+      <p>NudoIQ ("we", "our", or "us") operates the NudoIQ Chrome extension and the nudoiq.com website. This policy explains what data we collect, how we use it, and your rights as a user. Most of this policy describes the extension; the <a href="#website-tracking" style="color:#0F6E56">Website Analytics &amp; Advertising</a> section below describes the separate tracking that runs on our website pages.</p>
     </div>
 
     <div class="section">
@@ -133,8 +135,12 @@
           <span class="item-desc">Your preferences (MPG, diesel price, alert thresholds, etc.) are stored locally in Chrome sync storage and never transmitted to our servers.</span>
         </li>
         <li>
+          <span class="item-label">Subscription usage activity</span>
+          <span class="item-desc">While you hold a paid or trial subscription we record when the extension is used: your subscription email, the type of action (for example a dispute letter generated or a load auto-booked), a random per-installation identifier, the time, and the IP address the request came from. We keep this to prove a subscription was genuinely used if a payment is disputed with a bank or card network, and to detect one subscription being shared across many machines. It is never sold, never shared with other users, and is not used for advertising. Records older than 400 days are deleted.</span>
+        </li>
+        <li>
           <span class="item-label">Telegram credentials</span>
-          <span class="item-desc">Your bot token and chat ID are stored locally in Chrome sync storage only. We never transmit or store these on our servers.</span>
+          <span class="item-desc">Your bot token is stored in Chrome local storage on the machine you entered it on, so it does not replicate to your other Chrome installations. Your chat ID is stored in Chrome sync storage. We never store either on our servers; the token is sent only to Telegram, to deliver your alerts.</span>
         </li>
       </ul>
     </div>
@@ -147,8 +153,24 @@
         <li>Browsing history outside of relay.amazon.com</li>
         <li>Payment card information (handled entirely by Stripe)</li>
         <li>We do not sell your data to any third party</li>
-        <li>We do not use your data for advertising</li>
+        <li>We do not use anything the extension collects — your email, load observations, fleet data, or settings — for advertising, and we never send it to advertising networks</li>
       </ul>
+    </div>
+
+    <div class="section" id="website-tracking">
+      <h2>Website Analytics &amp; Advertising</h2>
+      <p>This section covers the <strong>nudoiq.com website only</strong>. None of the tracking below runs inside the Chrome extension, and none of it can see your Amazon Relay activity, your load data, or your fleet data.</p>
+      <ul class="data-list">
+        <li>
+          <span class="item-label">Meta Pixel (Facebook &amp; Instagram advertising)</span>
+          <span class="item-desc">Our home page at nudoiq.com and its Spanish version at nudoiq.com/es load the Meta Pixel (dataset ID 1601820741955520), a tracking script from Meta Platforms. When it loads it sends Meta a page-view event together with your IP address, your browser and device information (user agent), the page address you are on, and the page that referred you. It also sets a cookie named <code>_fbp</code> in your browser, which holds a random identifier Meta uses to recognize the same browser across visits. Separately, when you arrive from one of our ads the link carries a click identifier in the address bar (<code>fbclid</code>); our page saves that value in your browser’s local storage under the keys <code>nudoiq_fbc</code> and <code>nudoiq_fbc_ts</code> so that if you install and activate NudoIQ later, that sign-up can be attributed back to the ad you clicked. We use all of this for advertising measurement — to see which ads lead to installs and subscriptions — and for showing our ads to people on Meta’s platforms. Meta processes this data as an independent controller under its own terms. See <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener" style="color:#0F6E56">Meta’s Privacy Policy</a> and <a href="https://www.facebook.com/adpreferences/ad_settings" target="_blank" rel="noopener" style="color:#0F6E56">Meta’s ad settings</a>, where you can limit how your activity off Meta is used.</span>
+        </li>
+        <li>
+          <span class="item-label">Microsoft Clarity (website analytics)</span>
+          <span class="item-desc">All pages on nudoiq.com, including this one, load Microsoft Clarity (tag y9n5ejt2k9). Clarity records how visitors use the site — page views, clicks, scrolling and mouse movement, plus your IP address, browser, device and approximate location — and replays it to us as anonymized session recordings and heatmaps so we can improve the pages. It sets its own cookies for this. We use Clarity for site improvement, not for advertising. See <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener" style="color:#0F6E56">Microsoft’s Privacy Statement</a>.</span>
+        </li>
+      </ul>
+      <p><strong>How to opt out:</strong> browser-level tracking protection (Firefox, Brave, Safari), an ad or script blocker, or Chrome’s third-party cookie blocking will stop these scripts from loading or from setting cookies. Nothing on this site depends on them, and the extension works normally either way. You can also clear the <code>nudoiq_fbc</code> values at any time by clearing site data for nudoiq.com in your browser settings.</p>
     </div>
 
     <div class="section">
@@ -186,6 +208,12 @@
         </li>
         <li>
           <span class="tp-name">Telegram</span> — <span class="tp-desc">optional load alert notifications using credentials you provide &nbsp;·&nbsp; <a href="https://telegram.org/privacy" target="_blank" rel="noopener">telegram.org/privacy</a></span>
+        </li>
+        <li>
+          <span class="tp-name">Meta Platforms</span> — <span class="tp-desc">website advertising measurement via the Meta Pixel on nudoiq.com; not used by the extension &nbsp;·&nbsp; <a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener">facebook.com/privacy/policy</a></span>
+        </li>
+        <li>
+          <span class="tp-name">Microsoft Clarity</span> — <span class="tp-desc">website usage analytics and session replay on nudoiq.com; not used by the extension &nbsp;·&nbsp; <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">privacy.microsoft.com/privacystatement</a></span>
         </li>
         <li>
           <span class="tp-name">iExitApp</span> — <span class="tp-desc">regional diesel price lookups &nbsp;·&nbsp; <a href="https://www.iexitapp.com" target="_blank" rel="noopener">iexitapp.com</a></span>
