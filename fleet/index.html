@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NudoIQ for 5–15 Truck Amazon Relay Fleets</title>
+  <meta name="description" content="NudoIQ shows the bid target and likely ceiling before you bid, drafts scorecard disputes from your own trip data, and reports net margin after fuel and deadhead — inside the Amazon Relay load board. $49.99/mo, 7-day free trial.">
+  <!-- Paid-traffic landing page. Deliberately noindex so it does not compete with the
+       homepage in organic search. See meta-ads/PLAYBOOK.md. -->
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#07192b">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="96x96">
+  <link rel="apple-touch-icon" href="/assets/favicon.png">
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+
+  <!-- Carry fbclid through the Chrome Web Store install gap so the extension can send a CAPI
+       activation event on the first lane lookup. The Web Store cannot host a pixel. -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap">
+  <style>
+    :root{
+      --bg:#07192b; --bg-alt:#0c2038; --ink:#ffffff; --muted:#9db9cd; --faint:#5a7996;
+      --rule:rgba(255,255,255,0.10); --green:#0f6e56; --green-h:#0c5f49; --accent:#3ddc9a;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);
+      font:400 17px/1.65 Barlow,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+      -webkit-font-smoothing:antialiased}
+    .wrap{max-width:720px;margin:0 auto;padding:0 20px}
+    a{color:var(--accent)}
+    img{max-width:100%;height:auto;display:block;border-radius:8px;border:1px solid var(--rule)}
+
+    header{padding:26px 0 0}
+    .brandrow{display:flex;align-items:center;gap:10px}
+    .brandrow img{width:34px;height:34px;border:0;border-radius:6px}
+    .brandrow span{font-weight:700;letter-spacing:.2px}
+
+    h1{font-size:40px;line-height:1.14;font-weight:700;margin:26px 0 0;letter-spacing:-.4px}
+    .sub{font-size:20px;color:var(--muted);margin:16px 0 0}
+    .eyebrow{display:inline-block;margin-top:22px;padding:5px 12px;border:1px solid var(--rule);
+      border-radius:999px;font-size:13px;font-weight:600;color:var(--accent);letter-spacing:.5px;
+      text-transform:uppercase}
+
+    .btn{display:inline-block;background:var(--green);color:#fff;text-decoration:none;
+      font-weight:700;font-size:18px;padding:15px 28px;border-radius:8px;margin-top:24px}
+    .btn:hover{background:var(--green-h)}
+    .under{font-size:14px;color:var(--faint);margin:10px 0 0}
+
+    section{padding:44px 0;border-top:1px solid var(--rule);margin-top:44px}
+    h2{font-size:27px;line-height:1.24;font-weight:700;margin:0 0 14px;letter-spacing:-.2px}
+    p{margin:0 0 16px}
+    .lede{font-size:19px}
+    figure{margin:24px 0 0}
+    figcaption{font-size:14px;color:var(--faint);margin-top:9px}
+
+    .price{background:var(--bg-alt);border:1px solid var(--rule);border-radius:12px;padding:28px}
+    .price .amt{font-size:44px;font-weight:700;line-height:1}
+    .price .per{font-size:17px;color:var(--muted);font-weight:500}
+    ul{margin:0 0 16px;padding-left:22px}
+    li{margin-bottom:9px}
+
+    .qa{border-top:1px solid var(--rule);padding:22px 0}
+    .qa h3{font-size:19px;margin:0 0 8px;font-weight:600}
+    .qa p{color:var(--muted);margin:0}
+
+    footer{padding:36px 0 60px;border-top:1px solid var(--rule);margin-top:44px;
+      font-size:14px;color:var(--faint)}
+    footer a{color:var(--muted)}
+    .disc{font-size:13px;color:var(--faint);margin-top:14px}
+
+    @media (max-width:640px){
+      h1{font-size:31px}
+      h2{font-size:23px}
+      .sub{font-size:18px}
+      body{font-size:16px}
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <div class="brandrow">
+      <img src="/assets/favicon.png" alt="" width="34" height="34">
+      <span>NudoIQ</span>
+    </div>
+
+    <div class="eyebrow">For carriers running 5–15 trucks</div>
+
+    <h1>The board shows what the load pays. It never shows what the lane clears at.</h1>
+
+    <p class="sub">NudoIQ puts the bid target, the likely ceiling and the confidence level on your
+    screen before you bid — inside the Amazon Relay load board you already have open.</p>
+
+    <a class="btn" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk">Start the 7-day free trial</a>
+    <p class="under">Chrome extension · $49.99/month after the trial · cancel anytime</p>
+  </header>
+
+  <section>
+    <h2>You are bidding against a pricing model. With a number and a hunch.</h2>
+    <p class="lede">Amazon prices every lane from data you cannot see. You see one figure on the
+    board and decide in about four seconds whether it is worth a truck.</p>
+    <p>On the load below the board posted <strong>$407</strong>. The lane's actual target was
+    <strong>$483</strong>, and it had room to roughly <strong>$488</strong> before it stopped
+    clearing. Nothing on the Relay screen tells you that. NudoIQ does, in the same window, before
+    the bid goes in.</p>
+    <figure>
+      <img src="/assets/ads/ad-a1-lane-target.png" alt="NudoIQ Lane Intelligence panel inside the Amazon Relay load board showing a $483 bid target against a $407 board price and a $451–$488 ceiling range" width="1280" height="800">
+      <figcaption>Lane estimates are decision support. They do not guarantee a rate or a booking, and
+      NudoIQ shows you its confidence level so you know when the estimate is thin.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>The scorecard hit you never disputed is the one that costs you loads.</h2>
+    <p>You see the violation. You know it is wrong. Writing the dispute means pulling the trip, the
+    timestamps and the proof — and you have eight trucks to get moving this morning, so it sits
+    there and quietly costs you future volume.</p>
+    <p>NudoIQ drafts the dispute from the trip data already sitting in your Relay account. You read
+    it, you send it. Minutes, not an evening.</p>
+  </section>
+
+  <section>
+    <h2>Revenue is not margin. Most fleets your size find out weeks late.</h2>
+    <p>Fuel, driver pay, deadhead nobody counted. If you are rebuilding a spreadsheet every Monday
+    to work out what last week actually netted, you are making next week's booking decisions on
+    numbers that are seven days stale at best.</p>
+    <p>NudoIQ reads completed trips and reports revenue, loaded miles, driver cost, fuel cost, and
+    net margin by week and by driver. It also builds the driver pay statement, so the number you
+    hand a driver and the number in your margin report come from the same source.</p>
+    <figure>
+      <img src="/assets/ads/ad-a4-net-margin.png" alt="NudoIQ fleet dashboard showing total revenue, total miles, trips and net margin after driver and fuel cost" width="1280" height="800">
+      <figcaption>Sample account with identifying details obscured. Figures are an illustration of the
+      report, not a projection of your results.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Everything it does</h2>
+    <ul>
+      <li><strong>Lane Intelligence</strong> — target bid, likely ceiling range, and a confidence
+      level for the lane in front of you.</li>
+      <li><strong>Smart Alerts</strong> — tells you the moment a matching load or a price change
+      appears, so you are not refreshing the board all day.</li>
+      <li><strong>Scorecard disputes</strong> — letters drafted from your own trip records.</li>
+      <li><strong>Driver pay statements</strong> — built automatically from completed trips, printable.</li>
+      <li><strong>True net profit</strong> — revenue minus fuel, driver pay and costs, per trip and
+      per week.</li>
+      <li><strong>AutoBook</strong> — books loads that match rules you set.</li>
+      <li><strong>Truck routing</strong> — truck-safe route and Amazon's true mileage before you commit.</li>
+    </ul>
+    <figure>
+      <img src="/assets/ads/ad-a2-five-tools.png" alt="NudoIQ toolbar and feature overview inside the Amazon Relay load board" width="1280" height="800">
+    </figure>
+  </section>
+
+  <section>
+    <h2>What it costs, and what it is replacing</h2>
+    <div class="price">
+      <div class="amt">$49.99 <span class="per">/ month, whole fleet</span></div>
+      <p style="margin-top:14px">A dispatch service typically takes 5–10% of every load you run —
+      percentage-based, so the better your quarter the larger their invoice, permanently. NudoIQ is
+      a flat monthly price no matter how many trucks you add.</p>
+      <p>It does not make phone calls for you. It does the part of the job that is arithmetic, and
+      it does that part every single time without getting tired at 4pm.</p>
+      <a class="btn" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk">Start the 7-day free trial</a>
+      <p class="under">A payment method is required to start the trial. Cancel before day 7 and you
+      are not charged.</p>
+    </div>
+  </section>
+
+  <section style="padding-bottom:8px">
+    <h2>Questions carriers actually ask</h2>
+
+    <div class="qa">
+      <h3>Do I have to move off the Relay board?</h3>
+      <p>No. NudoIQ is a Chrome extension that renders inside the board you already use. There is no
+      second app, no export, no separate login.</p>
+    </div>
+
+    <div class="qa">
+      <h3>Does it work for one truck?</h3>
+      <p>Yes, but it earns its keep fastest between about five and fifteen trucks, where the margin
+      reporting and driver pay statements save real hours every week.</p>
+    </div>
+
+    <div class="qa">
+      <h3>Is the bid target a guarantee?</h3>
+      <p>No. It is an estimate with a stated confidence level, and NudoIQ tells you when the data
+      behind it is thin. It is there to replace a guess with a better-informed guess, not to promise
+      a booking.</p>
+    </div>
+
+    <div class="qa">
+      <h3>Is this affiliated with Amazon?</h3>
+      <p>No. NudoIQ is independent software built for carriers who use Amazon Relay. It is not
+      affiliated with, endorsed by, or sponsored by Amazon.</p>
+    </div>
+
+    <div class="qa">
+      <h3>How do I cancel?</h3>
+      <p>From your account, any time, including during the trial. No contract and no cancellation
+      call.</p>
+    </div>
+  </section>
+
+  <footer>
+    <a class="btn" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" style="margin-top:0">Add NudoIQ to Chrome</a>
+    <p class="disc" style="margin-top:22px">NudoIQ is independent software for Amazon Relay carriers.
+    It is not affiliated with, endorsed by, or sponsored by Amazon. Amazon and Amazon Relay are
+    trademarks of Amazon.com, Inc. or its affiliates. Lane estimates are decision support and do not
+    guarantee any rate, booking or result. Individual results vary.</p>
+    <p class="disc">
+      <a href="/">nudoiq.com</a> ·
+      <a href="/privacy.html">Privacy</a> ·
+      <a href="/refund-policy.html">Refunds</a>
+    </p>
+  </footer>
+
+</div>
+
+</body>
+</html>
