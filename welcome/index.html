@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You're in — set up NudoIQ | NudoIQ</title>
+  <meta name="description" content="NudoIQ is installed. Three steps to see bid targets on your Amazon Relay load board.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0b2239">
+  <link rel="canonical" href="https://nudoiq.com/welcome/">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="96x96">
+  <link rel="apple-touch-icon" href="/assets/favicon.png">
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+
+  <!-- THE CONVERSION EVENT.
+       The Chrome Web Store cannot host a pixel, so an install has never been observable.
+       background.js opens this page once, on chrome.runtime.onInstalled with reason
+       "install", which makes this the first and only trustworthy install signal we have.
+       The fbclid stashed by the landing page before the Web Store hop is re-attached here
+       so the event can be matched back to the click that paid for it.
+       Deduped in localStorage: a driver who reopens this URL must not double-count. -->
+  <script>
+    (function(){
+      try{
+        var q   = new URLSearchParams(location.search);
+        var src = q.get('src') || 'direct';
+        if (src !== 'install') return;                 // only the real install fires
+        if (localStorage.getItem('nudoiq_install_fired')) return;
+        localStorage.setItem('nudoiq_install_fired', String(Date.now()));
+        fbq('trackCustom', 'ExtensionInstalled', {
+          extension_version: q.get('v') || 'unknown',
+          fbc: localStorage.getItem('nudoiq_fbc') || null
+        });
+        if (window.clarity) clarity('set', 'installed', 'true');
+      }catch(e){}
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    :root{
+      --bg:#07192b; --bg-alt:#0c2038; --bg-deep:#04101d;
+      --ink:#ffffff; --muted:#94b3c9; --faint:#5a7996;
+      --rule:rgba(255,255,255,0.09); --rule-s:rgba(255,255,255,0.055);
+      --green:#0f6e56; --green-h:#0c5f49; --amber:#c8891f;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);
+      font-family:Barlow,ui-sans-serif,-apple-system,"Segoe UI",Arial,sans-serif;
+      font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%;height:auto}
+    a{color:inherit}
+    :focus-visible{outline:3px solid var(--green);outline-offset:3px}
+    .wrap{width:min(1000px,calc(100% - 48px));margin-inline:auto}
+    h1,h2,h3{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
+      line-height:1.02;letter-spacing:.006em;margin:0;text-wrap:balance}
+    h1{font-size:clamp(40px,6vw,72px)}
+    h3{font-size:24px;line-height:1.15}
+    p{margin:0 0 16px}
+    .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;
+      letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0 0 14px}
+
+    .top{background:var(--bg);border-bottom:1px solid var(--rule)}
+    .topin{min-height:70px;display:flex;align-items:center}
+    .brand img{width:158px;height:48px;object-fit:contain;object-position:left center}
+
+    .hero{padding:64px 0 40px;border-bottom:1px solid var(--rule-s)}
+    .hero p.lede{font-size:21px;color:var(--muted);max-width:62ch;margin-top:18px}
+
+    .steps{padding:8px 0 56px;counter-reset:step}
+    .step{display:grid;grid-template-columns:64px 1fr;gap:24px;padding:28px 0;
+      border-bottom:1px solid var(--rule-s)}
+    .step .n{font-family:"Barlow Condensed",Barlow,sans-serif;font-size:52px;font-weight:700;
+      line-height:1;color:var(--amber)}
+    .step p{color:var(--muted);margin-bottom:0;max-width:64ch}
+    .step .k{display:inline-block;font-family:"IBM Plex Mono",ui-monospace,monospace;
+      font-size:15px;background:var(--bg-alt);border:1px solid var(--rule);
+      padding:2px 8px;color:var(--ink)}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;
+      padding:13px 28px;text-decoration:none;font-weight:700;font-size:17px;
+      line-height:1.15;border:2px solid transparent;transition:.15s;margin-top:20px}
+    .btn-go{background:var(--green);color:#fff}
+    .btn-go:hover{background:var(--green-h)}
+
+    .help{background:var(--bg-alt);padding:36px 0;border-top:1px solid var(--rule)}
+    .help h3{margin-bottom:10px}
+    .help p{color:var(--muted);margin-bottom:0;max-width:70ch}
+    .help a{color:#fff}
+
+    footer{background:var(--bg-deep);color:var(--faint);padding:28px 0;font-size:15px}
+    footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
+    footer a{margin-right:16px}
+    .tm{flex-basis:100%;font-size:13px;line-height:1.5;margin:0;color:rgba(90,121,150,0.8)}
+
+    @media (max-width:640px){
+      .wrap{width:calc(100% - 32px)}
+      .step{grid-template-columns:44px 1fr;gap:16px}
+      .step .n{font-size:38px}
+      .brand img{width:132px;height:40px}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><img src="/assets/nudoiq-logo.webp" alt="NudoIQ — Amazon Relay load board tools" width="527" height="196" decoding="async"></a>
+  </div></header>
+
+  <main>
+    <section class="hero"><div class="wrap">
+      <p class="mono">Installed</p>
+      <h1>NudoIQ is on. Three steps and your board changes.</h1>
+      <p class="lede">Takes about a minute. Do it now, at this computer — the tools only appear once
+      you are on the Relay load board itself.</p>
+    </div></section>
+
+    <section class="steps"><div class="wrap">
+
+      <div class="step">
+        <div class="n">1</div>
+        <div>
+          <h3>Pin NudoIQ to your toolbar</h3>
+          <p>Click the puzzle-piece icon at the top right of Chrome, find NudoIQ in the list, and
+          click the pin. Skip this and you will not find it again tomorrow.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="n">2</div>
+        <div>
+          <h3>Open your Amazon Relay load board</h3>
+          <p>Sign in as you normally would. NudoIQ only runs on
+          <span class="k">relay.amazon.com</span> — it does nothing anywhere else, and it never sees
+          any other tab.</p>
+          <a class="btn btn-go" href="https://relay.amazon.com/loadboard" target="_blank" rel="noopener">Open the load board</a>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="n">3</div>
+        <div>
+          <h3>Look at the first load in the list</h3>
+          <p>The bid target sits on the card, before you bid. That number is the whole point. If you
+          do not see it, refresh the page once — the extension loads with the board.</p>
+        </div>
+      </div>
+
+    </div></section>
+
+    <section class="help"><div class="wrap">
+      <h3>Nothing showing up?</h3>
+      <p>Refresh the Relay tab first — that fixes it nearly every time. If it still looks the same,
+      email <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a> and say which page you are on.
+      A real person answers.</p>
+    </div></section>
+  </main>
+
+  <footer><div class="wrap">
+    <div>© 2026 NudoIQ · Independent software for carriers</div>
+    <div><a href="/privacy.html">Privacy</a><a href="/refund-policy.html">Refund policy</a><a href="mailto:contact@nudoiq.com">Contact</a></div>
+    <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc.</p>
+  </div></footer>
+
+</body>
+</html>
