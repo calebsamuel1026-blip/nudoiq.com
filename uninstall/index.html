@@ -183,6 +183,16 @@
       var thanks = document.getElementById('thanks');
       var chosen = null;
 
+      // ── The reinstall offer link ────────────────────────────────────────
+      // Caleb's offer: next month free, then 50% off two months ($24.99).
+      // Paste the Stripe Payment Link here once it exists. Until then the button
+      // falls back to the email claim, which is what it did before — so the
+      // button is never dead either way.
+      // Build it in Stripe as: Payment Link on the $49.99 monthly price, with a
+      // coupon applied — 100% off for 1 month, then 50% off for 2 — and tick
+      // "let customers adjust quantity" OFF.
+      var OFFER_STRIPE_URL = '';   // e.g. 'https://buy.stripe.com/xxxxxxxx'
+
       document.querySelectorAll('.reason').forEach(function(btn){
         btn.addEventListener('click', function(){
           chosen = btn.getAttribute('data-reason');
