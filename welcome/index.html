@@ -6,9 +6,13 @@
   <title>You're in — set up NudoIQ | NudoIQ</title>
   <meta name="description" content="NudoIQ is installed. Three steps to see bid targets on your Amazon Relay load board.">
   <meta name="robots" content="noindex, follow">
-  <meta name="theme-color" content="#0b2239">
+  <meta name="theme-color" content="#0B0C0E">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
   <link rel="canonical" href="https://nudoiq.com/welcome/">
-  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/favicon.png">
 
   <!-- Microsoft Clarity -->
@@ -62,75 +66,75 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <style>
     :root{
-      --bg:#07192b; --bg-alt:#0c2038; --bg-deep:#04101d;
-      --ink:#ffffff; --muted:#94b3c9; --faint:#5a7996;
-      --rule:rgba(255,255,255,0.09); --rule-s:rgba(255,255,255,0.055);
-      --green:#0f6e56; --green-h:#0c5f49; --amber:#c8891f;
+      --ink-900:#0B0C0E; --ink-800:#141619; --ink-700:#1E2126;
+      --paper:#F7F7F5; --text-hi:#FFFFFF; --text-mid:#A8ADB5; --text-low:#737A88;
+      --accent:#E0A32E; --accent-press:#C8891F;
+      --good:#3E8E6E; --bad:#C4544A; --radius:6px;
     }
     *,*::before,*::after{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);
-      font-family:Barlow,ui-sans-serif,-apple-system,"Segoe UI",Arial,sans-serif;
+    body{margin:0;background:var(--ink-900);color:var(--text-hi);
+      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
       font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit}
-    :focus-visible{outline:3px solid var(--green);outline-offset:3px}
+    :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
     .wrap{width:min(1000px,calc(100% - 48px));margin-inline:auto}
-    h1,h2,h3{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
-      line-height:1.02;letter-spacing:.006em;margin:0;text-wrap:balance}
+    h1,h2,h3{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:600;
+      line-height:1.05;letter-spacing:-.015em;margin:0;text-wrap:balance}
     h1{font-size:clamp(40px,6vw,72px)}
     h3{font-size:24px;line-height:1.15}
     p{margin:0 0 16px}
-    .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;
+    .mono{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:12px;font-weight:600;
       letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0 0 14px}
 
-    .top{background:var(--bg);border-bottom:1px solid var(--rule)}
+    .top{background:var(--ink-900);border-bottom:1px solid var(--ink-700)}
     .topin{min-height:70px;display:flex;align-items:center}
-    .brand img{width:158px;height:48px;object-fit:contain;object-position:left center}
+    .brand .wordmark{display:block;width:158px;height:auto}
 
-    .hero{padding:64px 0 40px;border-bottom:1px solid var(--rule-s)}
-    .hero p.lede{font-size:21px;color:var(--muted);max-width:62ch;margin-top:18px}
+    .hero{padding:64px 0 40px;border-bottom:1px solid var(--ink-700)}
+    .hero p.lede{font-size:21px;color:var(--text-mid);max-width:62ch;margin-top:18px}
 
     .steps{padding:8px 0 56px;counter-reset:step}
     .step{display:grid;grid-template-columns:64px 1fr;gap:24px;padding:28px 0;
-      border-bottom:1px solid var(--rule-s)}
-    .step .n{font-family:"Barlow Condensed",Barlow,sans-serif;font-size:52px;font-weight:700;
-      line-height:1;color:var(--amber)}
-    .step p{color:var(--muted);margin-bottom:0;max-width:64ch}
-    .step .k{display:inline-block;font-family:"IBM Plex Mono",ui-monospace,monospace;
-      font-size:15px;background:var(--bg-alt);border:1px solid var(--rule);
-      padding:2px 8px;color:var(--ink)}
+      border-bottom:1px solid var(--ink-700)}
+    .step .n{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:52px;font-weight:700;
+      line-height:1;color:var(--accent)}
+    .step p{color:var(--text-mid);margin-bottom:0;max-width:64ch}
+    .step .k{display:inline-block;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      font-size:15px;background:var(--ink-800);border:1px solid var(--ink-700);
+      padding:2px 8px;color:var(--text-hi)}
 
     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;
       padding:13px 28px;text-decoration:none;font-weight:700;font-size:17px;
-      line-height:1.15;border:2px solid transparent;transition:.15s;margin-top:20px}
-    .btn-go{background:var(--green);color:#fff}
-    .btn-go:hover{background:var(--green-h)}
+      line-height:1.15;border:2px solid transparent;border-radius:var(--radius);transition:.15s;margin-top:20px}
+    .btn-go{background:var(--accent);color:var(--ink-900)}
+    .btn-go:hover{background:var(--accent-press)}
 
-    .help{background:var(--bg-alt);padding:36px 0;border-top:1px solid var(--rule)}
+    .help{background:var(--ink-800);padding:36px 0;border-top:1px solid var(--ink-700)}
     .help h3{margin-bottom:10px}
-    .help p{color:var(--muted);margin-bottom:0;max-width:70ch}
-    .help a{color:#fff}
+    .help p{color:var(--text-mid);margin-bottom:0;max-width:70ch}
+    .help a{color:var(--text-hi)}
 
-    footer{background:var(--bg-deep);color:var(--faint);padding:28px 0;font-size:15px}
+    footer{background:var(--ink-900);color:var(--text-low);padding:28px 0;font-size:15px}
     footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
     footer a{margin-right:16px}
-    .tm{flex-basis:100%;font-size:13px;line-height:1.5;margin:0;color:rgba(90,121,150,0.8)}
+    .tm{flex-basis:100%;font-size:13px;line-height:1.5;margin:0;color:rgba(115,122,136,1)}
 
     @media (max-width:640px){
       .wrap{width:calc(100% - 32px)}
       .step{grid-template-columns:44px 1fr;gap:16px}
       .step .n{font-size:38px}
-      .brand img{width:132px;height:40px}
+      .brand .wordmark{width:132px}
     }
   </style>
 </head>
 <body>
 
   <header class="top"><div class="wrap topin">
-    <a class="brand" href="/" aria-label="NudoIQ home"><img src="/assets/nudoiq-logo.webp" alt="NudoIQ — Amazon Relay load board tools" width="527" height="196" decoding="async"></a>
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" letter-spacing="-0.02em"><tspan fill="#E0A32E">N</tspan><tspan fill="#FFFFFF">udoIQ</tspan></text></svg></a>
   </div></header>
 
   <main>
@@ -146,15 +150,6 @@
       <div class="step">
         <div class="n">1</div>
         <div>
-          <h3>Pin NudoIQ to your toolbar</h3>
-          <p>Click the puzzle-piece icon at the top right of Chrome, find NudoIQ in the list, and
-          click the pin. Skip this and you will not find it again tomorrow.</p>
-        </div>
-      </div>
-
-      <div class="step">
-        <div class="n">2</div>
-        <div>
           <h3>Open your Amazon Relay load board</h3>
           <p>Sign in as you normally would. NudoIQ only runs on
           <span class="k">relay.amazon.com</span> — it does nothing anywhere else, and it never sees
@@ -164,11 +159,19 @@
       </div>
 
       <div class="step">
+        <div class="n">2</div>
+        <div>
+          <h3>Start your free trial</h3>
+          <p>NudoIQ pops up on the board itself. Click the free-trial button, add a card at Stripe,
+          and you are running — 7 days free, cancel anytime.</p>
+        </div>
+      </div>
+
+      <div class="step">
         <div class="n">3</div>
         <div>
-          <h3>Look at the first load in the list</h3>
-          <p>The bid target sits on the card, before you bid. That number is the whole point. If you
-          do not see it, refresh the page once — the extension loads with the board.</p>
+          <h3>Use it</h3>
+          <p>That's it. Go work the board.</p>
         </div>
       </div>
 

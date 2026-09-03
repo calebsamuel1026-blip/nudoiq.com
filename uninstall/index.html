@@ -6,8 +6,12 @@
   <title>Before you go | NudoIQ</title>
   <meta name="description" content="Tell us why you removed NudoIQ.">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#0b2239">
-  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="96x96">
+  <meta name="theme-color" content="#0B0C0E">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="48x48">
 
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
@@ -34,68 +38,68 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <style>
     :root{
-      --bg:#07192b; --bg-alt:#0c2038; --bg-deep:#04101d;
-      --ink:#ffffff; --muted:#94b3c9; --faint:#5a7996;
-      --rule:rgba(255,255,255,0.09); --rule-s:rgba(255,255,255,0.055);
-      --green:#0f6e56; --green-h:#0c5f49; --amber:#c8891f;
+      --ink-900:#0B0C0E; --ink-800:#141619; --ink-700:#1E2126;
+      --paper:#F7F7F5; --text-hi:#FFFFFF; --text-mid:#A8ADB5; --text-low:#737A88;
+      --accent:#E0A32E; --accent-press:#C8891F;
+      --good:#3E8E6E; --bad:#C4544A; --radius:6px;
     }
     *,*::before,*::after{box-sizing:border-box}
-    body{margin:0;background:var(--bg);color:var(--ink);
-      font-family:Barlow,ui-sans-serif,-apple-system,"Segoe UI",Arial,sans-serif;
+    body{margin:0;background:var(--ink-900);color:var(--text-hi);
+      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
       font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit}
     button{font:inherit}
-    :focus-visible{outline:3px solid var(--green);outline-offset:3px}
+    :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
     .wrap{width:min(760px,calc(100% - 48px));margin-inline:auto}
-    h1,h2,h3{font-family:"Barlow Condensed",Barlow,sans-serif;font-weight:700;
-      line-height:1.05;margin:0;text-wrap:balance}
+    h1,h2,h3{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:600;
+      line-height:1.05;letter-spacing:-.015em;margin:0;text-wrap:balance}
     h1{font-size:clamp(34px,5vw,56px)}
     h2{font-size:clamp(28px,4vw,42px)}
     p{margin:0 0 16px}
-    .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;
+    .mono{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:12px;font-weight:600;
       letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0 0 14px}
 
-    .top{background:var(--bg);border-bottom:1px solid var(--rule)}
+    .top{background:var(--ink-900);border-bottom:1px solid var(--ink-700)}
     .topin{min-height:70px;display:flex;align-items:center}
-    .brand img{width:150px;height:46px;object-fit:contain;object-position:left center}
+    .brand .wordmark{display:block;width:150px;height:auto}
 
     main{padding:56px 0 72px}
-    .lede{font-size:20px;color:var(--muted);max-width:60ch}
+    .lede{font-size:20px;color:var(--text-mid);max-width:60ch}
 
     .reasons{display:grid;gap:12px;margin:32px 0 0;padding:0;list-style:none}
-    .reason{display:block;width:100%;text-align:left;background:var(--bg-alt);
-      border:1px solid var(--rule);color:var(--ink);padding:18px 20px;cursor:pointer;
-      transition:.12s;font-weight:600}
-    .reason:hover{border-color:rgba(255,255,255,0.4);background:#102845}
+    .reason{display:block;width:100%;text-align:left;background:var(--ink-800);
+      border:1px solid var(--ink-700);color:var(--text-hi);padding:18px 20px;cursor:pointer;
+      border-radius:var(--radius);transition:.12s;font-weight:600}
+    .reason:hover{border-color:rgba(255,255,255,0.4);background:var(--ink-700)}
 
-    .panel{display:none;margin-top:32px;border-top:1px solid var(--rule);padding-top:32px}
+    .panel{display:none;margin-top:32px;border-top:1px solid var(--ink-700);padding-top:32px}
     .panel.on{display:block}
 
-    .offer{background:var(--bg-alt);border:1px solid var(--rule);padding:28px}
-    .offer ul{margin:0 0 20px;padding-left:20px;color:var(--muted)}
+    .offer{background:var(--ink-800);border:1px solid var(--ink-700);border-radius:var(--radius);padding:28px}
+    .offer ul{margin:0 0 20px;padding-left:20px;color:var(--text-mid)}
     .offer li{margin-bottom:8px}
-    .offer li b{color:var(--ink)}
+    .offer li b{color:var(--text-hi)}
 
     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;
       padding:13px 28px;text-decoration:none;font-weight:700;font-size:17px;
-      border:2px solid transparent;transition:.15s;cursor:pointer}
-    .btn-go{background:var(--green);color:#fff}
-    .btn-go:hover{background:var(--green-h)}
+      border:2px solid transparent;border-radius:var(--radius);transition:.15s;cursor:pointer}
+    .btn-go{background:var(--accent);color:var(--ink-900)}
+    .btn-go:hover{background:var(--accent-press)}
 
-    textarea{width:100%;min-height:120px;background:var(--bg-alt);border:1px solid var(--rule);
-      color:var(--ink);padding:14px;margin-bottom:16px;resize:vertical}
-    textarea::placeholder{color:var(--faint)}
+    textarea{width:100%;min-height:120px;background:var(--ink-800);border:1px solid var(--ink-700);
+      color:var(--text-hi);padding:14px;border-radius:var(--radius);margin-bottom:16px;resize:vertical}
+    textarea::placeholder{color:var(--text-low)}
 
     .thanks{display:none}
     .thanks.on{display:block}
 
-    footer{background:var(--bg-deep);color:var(--faint);padding:28px 0;font-size:15px;
-      border-top:1px solid var(--rule)}
-    .tm{font-size:13px;line-height:1.5;margin:12px 0 0;color:rgba(90,121,150,0.8)}
+    footer{background:var(--ink-900);color:var(--text-low);padding:28px 0;font-size:15px;
+      border-top:1px solid var(--ink-700)}
+    .tm{font-size:13px;line-height:1.5;margin:12px 0 0;color:rgba(115,122,136,1)}
 
     @media (max-width:640px){ .wrap{width:calc(100% - 32px)} }
   </style>
@@ -103,7 +107,7 @@
 <body>
 
   <header class="top"><div class="wrap topin">
-    <a class="brand" href="/" aria-label="NudoIQ home"><img src="/assets/nudoiq-logo.webp" alt="NudoIQ" width="527" height="196" decoding="async"></a>
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" letter-spacing="-0.02em"><tspan fill="#E0A32E">N</tspan><tspan fill="#FFFFFF">udoIQ</tspan></text></svg></a>
   </div></header>
 
   <main><div class="wrap">
@@ -137,13 +141,13 @@
         </ul>
         <a class="btn btn-go" id="claim" href="#">Claim it</a>
       </div>
-      <p style="margin-top:20px;color:var(--muted)">No catch. Reinstall from the Chrome Web Store and
+      <p style="margin-top:20px;color:var(--text-mid)">No catch. Reinstall from the Chrome Web Store and
       the offer is applied to your account by hand.</p>
     </div>
 
     <div class="panel" id="panel-note">
       <h2>Tell me what happened.</h2>
-      <p style="color:var(--muted)">Optional, and it goes to a real person — not a support queue.</p>
+      <p style="color:var(--text-mid)">Optional, and it goes to a real person — not a support queue.</p>
       <textarea id="note" placeholder="What went wrong?"></textarea>
       <button class="btn btn-go" id="send">Send it</button>
     </div>
