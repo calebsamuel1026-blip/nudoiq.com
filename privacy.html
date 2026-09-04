@@ -188,10 +188,21 @@
       <p><strong>Diesel prices</strong> — your approximate region (detected via reverse geolocation) is used to fetch local diesel prices from iExitApp. Your exact location is never stored.</p>
     </div>
 
+    <div class="section" id="sms">
+      <h2>Pickup Reminders (Calls &amp; Texts)</h2>
+      <p>NudoIQ can call and text a driver shortly before a booked load&rsquo;s pickup time so nobody oversleeps a start time. This is optional and off unless you turn it on.</p>
+      <p><strong>What we collect.</strong> The mobile number you enter for yourself or for a driver, the load&rsquo;s pickup time and origin, and a record of whether each call was answered and confirmed.</p>
+      <p><strong>Consent.</strong> Nothing is sent to a number until the handset itself agrees &mdash; either by replying <strong>YES</strong> to a one-time confirmation text, or by pressing <strong>1</strong> on a confirmation call that reads out these terms. The person entering a number cannot consent on someone else&rsquo;s behalf. We record the time and method of that consent.</p>
+      <p><strong>Opting out.</strong> Reply <strong>STOP</strong> to any message, or press <strong>9</strong> on a confirmation call, to end both the texts and the calls for that number permanently and immediately. Reply <strong>HELP</strong> for help. Message and data rates may apply. Message frequency depends on how many loads you book.</p>
+      <p><strong>We do not share or sell mobile opt-in data.</strong> Phone numbers collected for pickup reminders, and consent records for those numbers, are never sold, rented, or shared with third parties or affiliates for marketing purposes. They are passed only to our telephony provider, Twilio, for the sole purpose of delivering the reminder you asked for.</p>
+      <p>Reminder phone numbers are stored write-only from the extension: the application key that ships inside NudoIQ can add a number but cannot read any number back.</p>
+    </div>
+
     <div class="section">
       <h2>Data Storage &amp; Retention</h2>
       <p>License and subscription data is stored in <strong>Supabase</strong> (supabase.com), hosted in the United States. Subscription billing is handled by <strong>Stripe</strong> (stripe.com). We do not store payment card information.</p>
       <p>Fleet trip and driver data is stored in Supabase, accessible only under your account credentials.</p>
+      <p>Reminder phone numbers and consent records are retained while reminders are enabled for that number, and for 90 days after it opts out &mdash; opt-outs are kept deliberately, so a number that has unsubscribed is never contacted again.</p>
       <p><strong>Retention periods:</strong></p>
       <p>License records are retained while your subscription is active and for 90 days after cancellation. Anonymized load observations are retained for 90 days on a rolling basis. Fleet trip records are retained until you request deletion.</p>
     </div>
@@ -242,7 +253,7 @@
     </div>
 
     <div class="footer">
-      &copy; 2026 NudoIQ &nbsp;·&nbsp; <a href="/">nudoiq.com</a> &nbsp;·&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;·&nbsp; <a href="/es/" hreflang="es">Espa&ntilde;ol</a> &nbsp;·&nbsp; Independent software for Amazon Relay carriers
+      &copy; 2026 NudoIQ &nbsp;·&nbsp; <a href="/">nudoiq.com</a> &nbsp;·&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;·&nbsp; <a href="/sms-terms.html">SMS terms</a> &nbsp;·&nbsp; <a href="/es/" hreflang="es">Espa&ntilde;ol</a> &nbsp;·&nbsp; Independent software for Amazon Relay carriers
     </div>
 
   </div>
