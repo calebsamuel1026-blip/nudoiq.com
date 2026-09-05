@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
+  <meta name="color-scheme" content="light">
   <title>Page not found | NudoIQ</title>
   <meta name="description" content="That NudoIQ page could not be found. Return to the homepage for Amazon Relay load alerts, booking rules, lane intelligence and driver pay statements.">
   <meta name="robots" content="noindex, follow">
-  <meta name="theme-color" content="#04101d">
+  <meta name="theme-color" content="#B1CBFF">
   <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -15,7 +15,7 @@
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="48x48">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -25,39 +25,34 @@
     })(window, document, "clarity", "script", "y9n5ejt2k9");
   </script>
   <style>
-    :root { --ink-900:#04101d; --ink-800:#07192b; --ink-700:#0c2038;
-            --paper:#F7F7F5; --text-hi:#FFFFFF; --text-mid:#94b3c9; --text-low:#8FAFC6;
-            --accent:#34D399; --accent-press:#2FA98B; --good:#3E8E6E; --bad:#C4544A; --radius:6px; }
-    body { margin:0; min-height:100vh; display:grid; place-items:center; text-align:center; padding:24px;
-           font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-           color:var(--text-hi); background:var(--ink-900); }
-    .wordmark { display:block; width:176px; margin:0 auto 28px; }
-    h1 { color:var(--text-hi); font-size:clamp(2rem,5vw,3rem); font-weight:600; letter-spacing:-.02em; margin:0 0 14px; }
-    p { color:var(--text-mid); font-size:1.125rem; max-width:520px; margin:0 auto 28px; line-height:1.6; }
-    .row { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
-    a.btn { display:inline-flex; align-items:center; min-height:52px; padding:12px 22px; border-radius:6px;
-            text-decoration:none; font-weight:800; background:var(--accent); color:var(--ink-900); border:2px solid transparent; }
-    a.btn:hover { background:var(--accent-press); }
-    a.alt { background:transparent; color:var(--text-hi); border-color:var(--ink-700); }
-  
-    /* ── Tap targets ────────────────────────────────────────────
-       Apple's HIG minimum is 44x44pt, and it is a finger measurement, so it
-       does not relax on desktop — the same page is the mobile page. These
-       links were 21-33px tall. Nothing here moves a glyph: the padding grows
-       the hit area around text that stays exactly where it was. The language
-       switch mattered most — two 30pt targets side by side, reached for by
-       roughly half this audience, where a missed tap sends a Spanish speaker
-       to the English page. */
-    .lang a{min-height:44px;min-width:44px;box-sizing:border-box;
-      display:inline-flex;align-items:center;justify-content:center}
-    .flinks{gap:22px 26px}
-    .flinks a{min-height:44px;display:inline-flex;align-items:center}
-    .brand{min-height:44px;display:inline-flex;align-items:center}
+    :root{--ink:#161616;--ink-4:#4D4D4D;--paper:#FFFFFF;--peri:#B1CBFF;
+      --blue:#3366FF;--blue-deep:#2551B8;--g3:#888888;--rc:24px;--rp:999px;
+      --ff:"Inter Tight","Basel Grotesk",Inter,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{min-height:100vh;display:grid;place-items:center;padding:20px;
+      font-family:var(--ff);font-weight:400;color:var(--ink-4);background:var(--paper);
+      -webkit-font-smoothing:antialiased}
+    main{background:var(--peri);border-radius:var(--rc);padding:64px 40px 60px;
+      text-align:center;max-width:720px;width:100%}
+    .wordmark{display:block;height:30px;width:auto;margin:0 auto 32px}
+    h1{color:var(--ink);font-size:clamp(34px,6vw,56px);font-weight:500;
+      letter-spacing:-.022em;line-height:1.06;margin-bottom:16px}
+    p{color:var(--blue-deep);font-size:16.5px;line-height:1.6;max-width:46ch;margin:0 auto 32px}
+    .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+    a.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;
+      padding:15px 28px;border-radius:var(--rp);text-decoration:none;font-size:15px;
+      font-weight:500;letter-spacing:-.01em;background:var(--ink);color:#fff;
+      border:1px solid transparent;transition:background .18s ease}
+    a.btn:hover{background:#000}
+    a.alt{background:transparent;color:var(--ink);border-color:rgba(22,22,22,.28)}
+    a.alt:hover{background:rgba(255,255,255,.5)}
+    :focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+    @media (max-width:560px){main{padding:44px 22px 40px;border-radius:18px}}
   </style>
 </head>
 <body>
   <main>
-    <svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" letter-spacing="-0.02em"><tspan fill="#34D399">N</tspan><tspan fill="#FFFFFF">udoIQ</tspan></text></svg>
+    <svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg>
     <h1>Page not found</h1>
     <p>The page you were looking for has moved or no longer exists.</p>
     <div class="row">

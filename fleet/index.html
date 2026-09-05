@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="dark">
+  <meta name="color-scheme" content="light">
   <title>NudoIQ for 5–15 Truck Amazon Relay Fleets</title>
   <meta name="description" content="NudoIQ shows the bid target and likely ceiling before you bid, drafts scorecard disputes from your own trip data, and reports net margin after fuel and deadhead — inside the Amazon Relay load board. $49.99/mo, 7-day free trial.">
   <!-- Paid-traffic landing page. Deliberately noindex so it does not compete with the
        homepage in organic search. See meta-ads/PLAYBOOK.md. -->
   <meta name="robots" content="noindex, follow">
-  <meta name="theme-color" content="#04101d">
+  <meta name="theme-color" content="#FFFFFF">
   <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -56,80 +56,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-  <style>
-    :root{
-      --ink-900:#04101d; --ink-800:#07192b; --ink-700:#0c2038;
-      --paper:#F7F7F5; --text-hi:#FFFFFF; --text-mid:#94b3c9; --text-low:#8FAFC6;
-      --accent:#34D399; --accent-press:#2FA98B;
-      --good:#3E8E6E; --bad:#C4544A; --radius:6px;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--ink-900);color:var(--text-hi);
-      font:400 17px/1.65 Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-      -webkit-font-smoothing:antialiased}
-    .wrap{max-width:720px;margin:0 auto;padding:0 20px}
-    a{color:var(--accent)}
-    img{max-width:100%;height:auto;display:block;border-radius:6px;border:1px solid var(--ink-700)}
-
-    header{padding:26px 0 0}
-    .brandrow{display:flex;align-items:center;gap:10px}
-    .brandrow .wordmark{display:block;width:158px;height:auto}
-
-    h1{font-size:2.5rem;line-height:1.14;font-weight:600;margin:26px 0 0;letter-spacing:-.02em}
-    .sub{font-size:1.25rem;color:var(--text-mid);margin:16px 0 0}
-    .eyebrow{display:inline-block;margin-top:22px;padding:5px 12px;border:1px solid var(--ink-700);
-      border-radius:6px;font-size:0.8125rem;font-weight:600;color:var(--accent);letter-spacing:.5px;
-      text-transform:uppercase}
-
-    .btn{display:inline-block;background:var(--accent);color:var(--ink-900);text-decoration:none;
-      font-weight:700;font-size:1.125rem;padding:15px 28px;border-radius:6px;margin-top:24px}
-    .btn:hover{background:var(--accent-press)}
-    .under{font-size:0.875rem;color:var(--text-low);margin:10px 0 0}
-
-    section{padding:44px 0;border-top:1px solid var(--ink-700);margin-top:44px}
-    h2{font-size:1.6875rem;line-height:1.24;font-weight:600;margin:0 0 14px;letter-spacing:-.015em}
-    p{margin:0 0 16px}
-    .lede{font-size:1.1875rem}
-    figure{margin:24px 0 0}
-    figcaption{font-size:0.875rem;color:var(--text-low);margin-top:9px}
-
-    .price{background:var(--ink-800);border:1px solid var(--ink-700);border-radius:6px;padding:28px}
-    .price .amt{font-size:2.75rem;font-weight:700;line-height:1}
-    .price .per{font-size:1.0625rem;color:var(--text-mid);font-weight:500}
-    ul{margin:0 0 16px;padding-left:22px}
-    li{margin-bottom:9px}
-
-    .qa{border-top:1px solid var(--ink-700);padding:22px 0}
-    .qa h3{font-size:1.1875rem;margin:0 0 8px;font-weight:600}
-    .qa p{color:var(--text-mid);margin:0}
-
-    footer{padding:36px 0 60px;border-top:1px solid var(--ink-700);margin-top:44px;
-      font-size:0.875rem;color:var(--text-low)}
-    footer a{color:var(--text-mid)}
-    .disc{font-size:0.8125rem;color:var(--text-low);margin-top:14px}
-
-    @media (max-width:640px){
-      h1{font-size:1.9375rem}
-      h2{font-size:1.4375rem}
-      .sub{font-size:1.125rem}
-      body{font-size:1rem}
-    }
-  
-    /* ── Tap targets ────────────────────────────────────────────
-       Apple's HIG minimum is 44x44pt, and it is a finger measurement, so it
-       does not relax on desktop — the same page is the mobile page. These
-       links were 21-33px tall. Nothing here moves a glyph: the padding grows
-       the hit area around text that stays exactly where it was. The language
-       switch mattered most — two 30pt targets side by side, reached for by
-       roughly half this audience, where a missed tap sends a Spanish speaker
-       to the English page. */
-    .lang a{min-height:44px;min-width:44px;box-sizing:border-box;
-      display:inline-flex;align-items:center;justify-content:center}
-    .flinks{gap:22px 26px}
-    .flinks a{min-height:44px;display:inline-flex;align-items:center}
-    .brand{min-height:44px;display:inline-flex;align-items:center}
-  </style>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/assets/page.css">
 </head>
 <body>
 
@@ -137,7 +65,7 @@
 
   <header>
     <div class="brandrow">
-      <svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" letter-spacing="-0.02em"><tspan fill="#34D399">N</tspan><tspan fill="#FFFFFF">udoIQ</tspan></text></svg>
+      <svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg>
     </div>
 
     <div class="eyebrow">For carriers running 5–15 trucks</div>
