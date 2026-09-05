@@ -32,7 +32,7 @@
   <meta name="twitter:image:alt" content="NudoIQ one-click Post Truck tool inside the Amazon Relay load board">
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="48x48">
   <link rel="apple-touch-icon" href="/assets/favicon.png">
-  <link rel="preload" as="image" href="assets/hero.png" type="image/png" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/shot-hero-loadboard.webp" type="image/webp" fetchpriority="high">
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -139,8 +139,8 @@
   /* ═══ HERO ════════════════════════════════════════════════ */
   .hero{padding:var(--gut) var(--gut) 64px}
   .hero-panel{background:var(--peri);border-radius:var(--rc);overflow:hidden;position:relative}
-  .hero-grid{max-width:var(--max);margin:0 auto;padding:72px 24px;display:grid;
-    grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+  .hero-grid{max-width:var(--max);margin:0 auto;padding:72px 24px 52px;display:grid;
+    grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:48px;align-items:end}
   .eyebrow{font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
     color:var(--blue-deep);margin-bottom:20px}
   .hero h1{color:var(--ink);margin-bottom:22px;max-width:15ch}
@@ -153,8 +153,10 @@
   .flag small{display:block;margin-top:7px;font-size:12.5px;color:var(--blue-deep);opacity:.85}
   .rate{display:flex;align-items:center;gap:9px;margin-top:22px;font-size:14px;color:var(--ink-3)}
   .stars{color:#F0A500;letter-spacing:1px;font-size:14px}
-  .hero-shot{border-radius:var(--ri);overflow:hidden;box-shadow:0 30px 70px -30px rgba(22,22,22,.4)}
-  .hero-shot img{width:100%}
+  .hero-shot{max-width:var(--max);margin:0 auto;padding:0 24px}
+  .hero-shot img{width:100%;display:block;border-radius:14px 14px 0 0;
+    border:1px solid rgba(255,255,255,.65);border-bottom:0;
+    box-shadow:0 -18px 60px -28px rgba(22,22,22,.55)}
 
   /* ═══ PROMISE ROW ═════════════════════════════════════════ */
   .promise{padding:16px var(--gut) 72px}
@@ -389,11 +391,12 @@
             <p data-t="heroValue">One real lane: the board posted $632. NudoIQ said it was worth $727 — before anyone bid.</p>
             <small data-t="heroValueNote">A real lane from inside the extension. Not a guarantee for every load.</small>
           </div>
-          <div class="hero-shot">
-            <img src="assets/hero.png" alt="Semi-truck on an open desert highway at golden hour" width="1536" height="1024" decoding="async" loading="eager" fetchpriority="high">
-          </div>
         </div>
-      </div></div>
+      </div>
+      <div class="hero-shot">
+        <img src="assets/shot-hero-loadboard.webp" alt="The NudoIQ control bar running inside the Amazon Relay load board, with alert, search and autobook modes above 358 results out of Maryville, Tennessee" width="1892" height="1021" decoding="async" loading="eager" fetchpriority="high">
+      </div>
+      </div>
     </section>
 
     <!-- ── PROMISE ROW ───────────────────────────────────────── -->
