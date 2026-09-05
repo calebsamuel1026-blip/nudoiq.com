@@ -122,13 +122,6 @@
   "review4By": "Miguel · Chrome Web Store",
   "reviewsNote": "Reseñas reproducidas y traducidas del listado público en inglés de la Chrome Web Store. Los resultados varían; NudoIQ no garantiza tarifas, reservas ni ingresos.",
   "reviewsLink": "Léelas en la Chrome Web Store",
-  "bidEyebrow": "Asesor de ofertas",
-  "bidTitle": "Mira las tarifas de la ruta antes de publicar tu camión.",
-  "bidCopy": "Post-A-Truck muestra la mediana del tablero en dólares por milla, la tarifa más alta visible en este momento, y el piso, la mediana y el techo que esa ruta ha pagado históricamente.",
-  "bidPoint1": "Deja de ofertar por debajo en rutas que pagan más",
-  "bidPoint2": "Deja de ofertar de más en rutas que no van a coincidir",
-  "bidPoint3": "Recibe el aviso antes de publicar, no después",
-  "bidNote": "Los estimados apoyan tu decisión. No garantizan una coincidencia, una tarifa ni una reserva.",
   "disputeEyebrow": "Disputas de scorecard",
   "disputeTitle": "Convierte una penalización del scorecard de Amazon Relay en una disputa presentada.",
   "disputeCopy": "NudoIQ lee tu scorecard, extrae la violación detrás del puntaje y redacta una carta de disputa citando la política de Amazon. Tú la revisas, agregas contexto y la envías.",
@@ -173,5 +166,12 @@
   "mechPoint2": "Sigue la tendencia día por día: $368 hace tres días, $365 ayer",
   "mechPoint3": "Dice exactamente qué tipo de evidencia tiene: solo precios pedidos, ninguno seguido hasta una carga completada",
   "mechPoint4": "Etiqueta su propia confianza — \"Acumulando datos\" mientras el historial de una ruta todavía es corto",
-  "mechVerdict": "De las 386 observaciones: precio típico $356, objetivo $388, techo realista de $405 a $434. Con un tablero que muestra $392, la lectura es simple — tómala, ya supera el objetivo realista de esta ruta."
+  "mechVerdict": "De las 386 observaciones: precio típico $356, objetivo $388, techo realista de $405 a $434. Con un tablero que muestra $392, la lectura es simple — tómala, ya supera el objetivo realista de esta ruta.",
+  "profitEyebrow": "Ganancia Neta",
+  "profitTitle": "Mira lo que en realidad paga una carga antes de tocar el botón de oferta.",
+  "profitCopy": "NudoIQ marca una cifra de ganancia neta en cada carga del tablero. Toma la tarifa publicada y resta el pago del conductor, el combustible, el mantenimiento y las millas vacías hasta la recolección, y muestra los dólares y el neto por milla que en realidad quedan.",
+  "profitPoint1": "Mira el número real, no la tarifa publicada",
+  "profitPoint2": "Pon un piso de ganancia y oculta lo que no lo alcance",
+  "profitPoint3": "Evita que una alerta o reserva automática caiga en una carga que pierde",
+  "profitNote": "Ingresas tus propios costos una sola vez. Los estimados apoyan tu decisión. No garantizan una tarifa, una coincidencia ni una reserva."
 }

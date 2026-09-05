@@ -139,8 +139,8 @@
   /* ═══ HERO ════════════════════════════════════════════════ */
   .hero{padding:var(--gut) var(--gut) 64px}
   .hero-panel{background:var(--peri);border-radius:var(--rc);overflow:hidden;position:relative}
-  .hero-grid{max-width:var(--max);margin:0 auto;padding:72px 24px 52px;display:grid;
-    grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:48px;align-items:end}
+  .hero-grid{max-width:var(--max);margin:0 auto;padding:72px 24px;display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
   .eyebrow{font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
     color:var(--blue-deep);margin-bottom:20px}
   .hero h1{color:var(--ink);margin-bottom:22px;max-width:15ch}
@@ -153,10 +153,9 @@
   .flag small{display:block;margin-top:7px;font-size:12.5px;color:var(--blue-deep);opacity:.85}
   .rate{display:flex;align-items:center;gap:9px;margin-top:22px;font-size:14px;color:var(--ink-3)}
   .stars{color:#F0A500;letter-spacing:1px;font-size:14px}
-  .hero-shot{max-width:var(--max);margin:0 auto;padding:0 24px}
-  .hero-shot img{width:100%;display:block;border-radius:14px 14px 0 0;
-    border:1px solid rgba(255,255,255,.65);border-bottom:0;
-    box-shadow:0 -18px 60px -28px rgba(22,22,22,.55)}
+  .hero-shot{margin-top:20px;border-radius:var(--ri);overflow:hidden;
+    box-shadow:0 30px 70px -30px rgba(22,22,22,.4)}
+  .hero-shot img{width:100%;display:block}
 
   /* ═══ PROMISE ROW ═════════════════════════════════════════ */
   .promise{padding:16px var(--gut) 72px}
@@ -391,12 +390,11 @@
             <p data-t="heroValue">One real lane: the board posted $632. NudoIQ said it was worth $727 — before anyone bid.</p>
             <small data-t="heroValueNote">A real lane from inside the extension. Not a guarantee for every load.</small>
           </div>
+          <div class="hero-shot">
+            <img src="assets/shot-hero-loadboard.webp" alt="The NudoIQ control bar running inside the Amazon Relay load board, with alert, search and autobook modes above 358 results out of Maryville, Tennessee" width="1892" height="1021" decoding="async" loading="eager" fetchpriority="high">
+          </div>
         </div>
-      </div>
-      <div class="hero-shot">
-        <img src="assets/shot-hero-loadboard.webp" alt="The NudoIQ control bar running inside the Amazon Relay load board, with alert, search and autobook modes above 358 results out of Maryville, Tennessee" width="1892" height="1021" decoding="async" loading="eager" fetchpriority="high">
-      </div>
-      </div>
+      </div></div>
     </section>
 
     <!-- ── PROMISE ROW ───────────────────────────────────────── -->
@@ -500,18 +498,18 @@
       </div>
       <div class="split flip">
         <div class="scopy">
-          <p class="eyebrow" data-t="bidEyebrow">Bid Advisor</p>
-          <h2 class="split-h" data-t="bidTitle">See Amazon Relay lane rates before you post your truck.</h2>
-          <p data-t="bidCopy">Post-A-Truck shows the board median in dollars per mile, the highest rate visible right now, and the floor, median and ceiling that lane has paid historically.</p>
+          <p class="eyebrow" data-t="profitEyebrow">Net Profit</p>
+          <h2 class="split-h" data-t="profitTitle">See what a load actually pays before you touch the offer button.</h2>
+          <p data-t="profitCopy">NudoIQ stamps a net profit figure on every card on the load board. It takes the posted rate and subtracts driver pay, fuel, maintenance, and the deadhead miles to the pickup, then shows the dollars and the net rate per mile that are actually left.</p>
           <ul class="ticks">
-            <li data-t="bidPoint1">Stop underbidding a lane that pays more</li>
-            <li data-t="bidPoint2">Stop overbidding a lane that will not match</li>
-            <li data-t="bidPoint3">Get flagged before you post, not after</li>
+            <li data-t="profitPoint1">See the real number, not the posted rate</li>
+            <li data-t="profitPoint2">Set a profit floor and hide loads under it</li>
+            <li data-t="profitPoint3">Stop an alert or autobook from firing on a loser</li>
           </ul>
         </div>
         <figure class="plate">
-          <img src="assets/shot-bid-advisor.webp" alt="NudoIQ Bid Advisor showing a $2.24 per mile market median, a $540 board top and the historical floor, median and ceiling for the lane" width="1500" height="1000" decoding="async" loading="lazy">
-          <p class="fnote" data-t="bidNote">Estimates support your decision. They do not guarantee a match, a rate, or a booking.</p>
+          <img src="assets/shot-net-profit.webp" alt="Amazon Relay load board rows with the NudoIQ net profit figure under each posted rate, showing $91.11 net at $1.13 per mile against a $212.53 posting" width="1590" height="480" decoding="async" loading="lazy">
+          <p class="fnote" data-t="profitNote">You enter your own cost numbers once. Estimates support your decision. They do not guarantee a rate, a match, or a booking.</p>
         </figure>
       </div>
     </div></section>
