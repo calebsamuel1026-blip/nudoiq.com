@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
   <title>You're in — set up NudoIQ | NudoIQ</title>
   <meta name="description" content="NudoIQ is installed. Three steps to see bid targets on your Amazon Relay load board.">
   <meta name="robots" content="noindex, follow">
@@ -70,24 +71,24 @@
   <style>
     :root{
       --ink-900:#0B0C0E; --ink-800:#141619; --ink-700:#1E2126;
-      --paper:#F7F7F5; --text-hi:#FFFFFF; --text-mid:#A8ADB5; --text-low:#737A88;
+      --paper:#F7F7F5; --text-hi:#FFFFFF; --text-mid:#A8ADB5; --text-low:#8B92A0;
       --accent:#E0A32E; --accent-press:#C8891F;
       --good:#3E8E6E; --bad:#C4544A; --radius:6px;
     }
     *,*::before,*::after{box-sizing:border-box}
     body{margin:0;background:var(--ink-900);color:var(--text-hi);
       font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-      font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+      font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit}
     :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
     .wrap{width:min(1000px,calc(100% - 48px));margin-inline:auto}
     h1,h2,h3{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:600;
       line-height:1.05;letter-spacing:-.015em;margin:0;text-wrap:balance}
-    h1{font-size:clamp(40px,6vw,72px)}
-    h3{font-size:24px;line-height:1.15}
+    h1{font-size:clamp(2.5rem,6vw,4.5rem)}
+    h3{font-size:1.5rem;line-height:1.15}
     p{margin:0 0 16px}
-    .mono{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:12px;font-weight:600;
+    .mono{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:0.75rem;font-weight:600;
       letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0 0 14px}
 
     .top{background:var(--ink-900);border-bottom:1px solid var(--ink-700)}
@@ -95,20 +96,20 @@
     .brand .wordmark{display:block;width:158px;height:auto}
 
     .hero{padding:64px 0 40px;border-bottom:1px solid var(--ink-700)}
-    .hero p.lede{font-size:21px;color:var(--text-mid);max-width:62ch;margin-top:18px}
+    .hero p.lede{font-size:1.3125rem;color:var(--text-mid);max-width:62ch;margin-top:18px}
 
     .steps{padding:8px 0 56px;counter-reset:step}
     .step{display:grid;grid-template-columns:64px 1fr;gap:24px;padding:28px 0;
       border-bottom:1px solid var(--ink-700)}
-    .step .n{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:52px;font-weight:700;
+    .step .n{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.25rem;font-weight:700;
       line-height:1;color:var(--accent)}
     .step p{color:var(--text-mid);margin-bottom:0;max-width:64ch}
     .step .k{display:inline-block;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-      font-size:15px;background:var(--ink-800);border:1px solid var(--ink-700);
+      font-size:0.9375rem;background:var(--ink-800);border:1px solid var(--ink-700);
       padding:2px 8px;color:var(--text-hi)}
 
     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;
-      padding:13px 28px;text-decoration:none;font-weight:700;font-size:17px;
+      padding:13px 28px;text-decoration:none;font-weight:700;font-size:1.0625rem;
       line-height:1.15;border:2px solid transparent;border-radius:var(--radius);transition:.15s;margin-top:20px}
     .btn-go{background:var(--accent);color:var(--ink-900)}
     .btn-go:hover{background:var(--accent-press)}
@@ -118,17 +119,31 @@
     .help p{color:var(--text-mid);margin-bottom:0;max-width:70ch}
     .help a{color:var(--text-hi)}
 
-    footer{background:var(--ink-900);color:var(--text-low);padding:28px 0;font-size:15px}
+    footer{background:var(--ink-900);color:var(--text-low);padding:28px 0;font-size:0.9375rem}
     footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
     footer a{margin-right:16px}
-    .tm{flex-basis:100%;font-size:13px;line-height:1.5;margin:0;color:rgba(115,122,136,1)}
+    .tm{flex-basis:100%;font-size:0.8125rem;line-height:1.5;margin:0;color:rgba(115,122,136,1)}
 
     @media (max-width:640px){
       .wrap{width:calc(100% - 32px)}
       .step{grid-template-columns:44px 1fr;gap:16px}
-      .step .n{font-size:38px}
+      .step .n{font-size:2.375rem}
       .brand .wordmark{width:132px}
     }
+  
+    /* ── Tap targets ────────────────────────────────────────────
+       Apple's HIG minimum is 44x44pt, and it is a finger measurement, so it
+       does not relax on desktop — the same page is the mobile page. These
+       links were 21-33px tall. Nothing here moves a glyph: the padding grows
+       the hit area around text that stays exactly where it was. The language
+       switch mattered most — two 30pt targets side by side, reached for by
+       roughly half this audience, where a missed tap sends a Spanish speaker
+       to the English page. */
+    .lang a{min-height:44px;min-width:44px;box-sizing:border-box;
+      display:inline-flex;align-items:center;justify-content:center}
+    .flinks{gap:22px 26px}
+    .flinks a{min-height:44px;display:inline-flex;align-items:center}
+    .brand{min-height:44px;display:inline-flex;align-items:center}
   </style>
 </head>
 <body>

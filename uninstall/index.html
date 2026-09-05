@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
   <title>Before you go | NudoIQ</title>
   <meta name="description" content="Tell us why you removed NudoIQ.">
   <meta name="robots" content="noindex, nofollow">
@@ -42,14 +43,14 @@
   <style>
     :root{
       --ink-900:#0B0C0E; --ink-800:#141619; --ink-700:#1E2126;
-      --paper:#F7F7F5; --text-hi:#FFFFFF; --text-mid:#A8ADB5; --text-low:#737A88;
+      --paper:#F7F7F5; --text-hi:#FFFFFF; --text-mid:#A8ADB5; --text-low:#8B92A0;
       --accent:#E0A32E; --accent-press:#C8891F;
       --good:#3E8E6E; --bad:#C4544A; --radius:6px;
     }
     *,*::before,*::after{box-sizing:border-box}
     body{margin:0;background:var(--ink-900);color:var(--text-hi);
       font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-      font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+      font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit}
     button{font:inherit}
@@ -57,10 +58,10 @@
     .wrap{width:min(760px,calc(100% - 48px));margin-inline:auto}
     h1,h2,h3{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:600;
       line-height:1.05;letter-spacing:-.015em;margin:0;text-wrap:balance}
-    h1{font-size:clamp(34px,5vw,56px)}
-    h2{font-size:clamp(28px,4vw,42px)}
+    h1{font-size:clamp(2.125rem,5vw,3.5rem)}
+    h2{font-size:clamp(1.75rem,4vw,2.625rem)}
     p{margin:0 0 16px}
-    .mono{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:12px;font-weight:600;
+    .mono{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:0.75rem;font-weight:600;
       letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0 0 14px}
 
     .top{background:var(--ink-900);border-bottom:1px solid var(--ink-700)}
@@ -68,7 +69,7 @@
     .brand .wordmark{display:block;width:150px;height:auto}
 
     main{padding:56px 0 72px}
-    .lede{font-size:20px;color:var(--text-mid);max-width:60ch}
+    .lede{font-size:1.25rem;color:var(--text-mid);max-width:60ch}
 
     .reasons{display:grid;gap:12px;margin:32px 0 0;padding:0;list-style:none}
     .reason{display:block;width:100%;text-align:left;background:var(--ink-800);
@@ -85,7 +86,7 @@
     .offer li b{color:var(--text-hi)}
 
     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;
-      padding:13px 28px;text-decoration:none;font-weight:700;font-size:17px;
+      padding:13px 28px;text-decoration:none;font-weight:700;font-size:1.0625rem;
       border:2px solid transparent;border-radius:var(--radius);transition:.15s;cursor:pointer}
     .btn-go{background:var(--accent);color:var(--ink-900)}
     .btn-go:hover{background:var(--accent-press)}
@@ -97,11 +98,25 @@
     .thanks{display:none}
     .thanks.on{display:block}
 
-    footer{background:var(--ink-900);color:var(--text-low);padding:28px 0;font-size:15px;
+    footer{background:var(--ink-900);color:var(--text-low);padding:28px 0;font-size:0.9375rem;
       border-top:1px solid var(--ink-700)}
-    .tm{font-size:13px;line-height:1.5;margin:12px 0 0;color:rgba(115,122,136,1)}
+    .tm{font-size:0.8125rem;line-height:1.5;margin:12px 0 0;color:rgba(115,122,136,1)}
 
     @media (max-width:640px){ .wrap{width:calc(100% - 32px)} }
+  
+    /* ── Tap targets ────────────────────────────────────────────
+       Apple's HIG minimum is 44x44pt, and it is a finger measurement, so it
+       does not relax on desktop — the same page is the mobile page. These
+       links were 21-33px tall. Nothing here moves a glyph: the padding grows
+       the hit area around text that stays exactly where it was. The language
+       switch mattered most — two 30pt targets side by side, reached for by
+       roughly half this audience, where a missed tap sends a Spanish speaker
+       to the English page. */
+    .lang a{min-height:44px;min-width:44px;box-sizing:border-box;
+      display:inline-flex;align-items:center;justify-content:center}
+    .flinks{gap:22px 26px}
+    .flinks a{min-height:44px;display:inline-flex;align-items:center}
+    .brand{min-height:44px;display:inline-flex;align-items:center}
   </style>
 </head>
 <body>
@@ -141,8 +156,8 @@
         </ul>
         <a class="btn btn-go" id="claim" href="#">Claim it</a>
       </div>
-      <p style="margin-top:20px;color:var(--text-mid)">No catch. Reinstall from the Chrome Web Store and
-      the offer is applied to your account by hand.</p>
+      <p style="margin-top:20px;color:var(--text-mid)">No catch. The discount is applied automatically —
+      reinstall from the Chrome Web Store and sign in with the same email.</p>
     </div>
 
     <div class="panel" id="panel-note">
@@ -185,13 +200,16 @@
 
       // ── The reinstall offer link ────────────────────────────────────────
       // Caleb's offer: next month free, then 50% off two months ($24.99).
-      // Paste the Stripe Payment Link here once it exists. Until then the button
-      // falls back to the email claim, which is what it did before — so the
-      // button is never dead either way.
-      // Build it in Stripe as: Payment Link on the $49.99 monthly price, with a
-      // coupon applied — 100% off for 1 month, then 50% off for 2 — and tick
-      // "let customers adjust quantity" OFF.
-      var OFFER_STRIPE_URL = '';   // e.g. 'https://buy.stripe.com/xxxxxxxx'
+      // Built 2026-09-03. It takes two mechanisms, not one, because Stripe
+      // cannot express the offer on a Payment Link alone:
+      //   • The free month is the link's own 30-day trial.
+      //   • The two half-price months are coupon `winback-50off-2mo`, applied
+      //     to the subscription by stripe-webhook the moment it is created
+      //     (a link carrying a trial refuses to also allow promotion codes,
+      //     and one coupon cannot be 100% off then 50% off).
+      // So the customer pays $0, $24.99, $24.99, then $49.99 — honoured
+      // automatically instead of by hand.
+      var OFFER_STRIPE_URL = 'https://buy.stripe.com/00w4gAgtZ8OV43maubao801';
 
       document.querySelectorAll('.reason').forEach(function(btn){
         btn.addEventListener('click', function(){
@@ -201,13 +219,24 @@
 
           if (chosen === 'price') {
             document.getElementById('panel-price').classList.add('on');
-            var subject = encodeURIComponent('Claiming the reinstall offer');
-            var body = encodeURIComponent(
-              'I removed NudoIQ because of the price and I want the offer: one month free, then 50% off for two months.\n\n' +
-              'My account email: \n');
-            document.getElementById('claim').setAttribute(
-              'href', 'mailto:contact@nudoiq.com?subject=' + subject + '&body=' + body);
-            document.getElementById('claim').addEventListener('click', function(){
+            var claim = document.getElementById('claim');
+
+            // The Stripe link is the real path — the customer redeems the
+            // offer themselves instead of waiting on a human to honour an
+            // email. The mailto stays as the fallback for the moment the
+            // link is ever emptied, so the button is never dead.
+            if (OFFER_STRIPE_URL) {
+              claim.setAttribute('href', OFFER_STRIPE_URL);
+              claim.setAttribute('rel', 'noopener');
+            } else {
+              var subject = encodeURIComponent('Claiming the reinstall offer');
+              var body = encodeURIComponent(
+                'I removed NudoIQ because of the price and I want the offer: one month free, then 50% off for two months.\n\n' +
+                'My account email: \n');
+              claim.setAttribute('href', 'mailto:contact@nudoiq.com?subject=' + subject + '&body=' + body);
+            }
+
+            claim.addEventListener('click', function(){
               try { fbq('trackCustom','UninstallOfferClaimed',{extension_version:version}); } catch(e){}
             });
           } else {

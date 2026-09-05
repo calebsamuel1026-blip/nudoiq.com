@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
   <title>NudoIQ | Herramientas para el tablero de cargas de Amazon Relay</title>
   <meta name="description" content="Alertas de cargas, tarifas de mercado, cartas de disputa de scorecard, reportes de flota y pagos a conductores. Extensión de Chrome para Amazon Relay.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -73,7 +74,7 @@
     /* ── tokens ──────────────────────────────────────────────── */
     :root {
       --ink-900:#0B0C0E; --ink-800:#141619; --ink-700:#1E2126;
-      --paper:#F7F7F5; --text-hi:#FFFFFF; --text-mid:#A8ADB5; --text-low:#737A88;
+      --paper:#F7F7F5; --text-hi:#FFFFFF; --text-mid:#A8ADB5; --text-low:#8B92A0;
       --accent:#E0A32E; --accent-press:#C8891F;
       --good:#3E8E6E; --bad:#C4544A; --radius:6px;
     }
@@ -81,7 +82,7 @@
     html{scroll-behavior:smooth}
     body{margin:0;background:var(--ink-900);color:var(--text-hi);
       font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-      font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased}
+      font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
     img{display:block;max-width:100%;height:auto}
     a{color:inherit}
     button,input{font:inherit}
@@ -95,17 +96,17 @@
     /* ── type ────────────────────────────────────────────────── */
     h1,h2,h3{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:600;
       color:var(--text-hi);line-height:1.05;letter-spacing:-.015em;margin:0;text-wrap:balance}
-    h1{font-size:clamp(44px,6.5vw,88px)}
-    h2{font-size:clamp(36px,5vw,68px)}
-    h3{font-size:22px;line-height:1.15}
-    .split-h{font-size:clamp(30px,3.8vw,52px)}
-    .mono{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:12px;font-weight:600;
+    h1{font-size:clamp(2.75rem,6.5vw,5.5rem)}
+    h2{font-size:clamp(2.25rem,5vw,4.25rem)}
+    h3{font-size:1.375rem;line-height:1.15}
+    .split-h{font-size:clamp(1.875rem,3.8vw,3.25rem)}
+    .mono{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:0.75rem;font-weight:600;
       letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin:0 0 14px}
     p{margin:0 0 16px}
 
     /* ── buttons ─────────────────────────────────────────────── */
     .btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;
-      padding:13px 28px;text-decoration:none;font-weight:700;font-size:17px;
+      padding:13px 28px;text-decoration:none;font-weight:700;font-size:1.0625rem;
       line-height:1.15;border:2px solid transparent;border-radius:var(--radius);transition:.15s}
     .btn-go{background:var(--accent);color:var(--ink-900)}
     .btn-go:hover{background:var(--accent-press)}
@@ -118,14 +119,14 @@
     .topin{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .brand .wordmark{display:block;width:158px;height:auto}
     .nav{display:flex;align-items:center;gap:26px}
-    .nav>a{color:rgba(255,255,255,0.70);text-decoration:none;font-weight:600;font-size:16px}
+    .nav>a{color:rgba(255,255,255,0.70);text-decoration:none;font-weight:600;font-size:1rem}
     .nav>a.btn-go{color:var(--ink-900)}
     .nav>a:hover{color:var(--text-hi)}
     .lang{display:flex;border:1px solid var(--ink-700);border-radius:var(--radius);overflow:hidden}
     .lang a{padding:6px 11px;color:rgba(255,255,255,0.60);text-decoration:none;
-      font-weight:700;font-size:15px;line-height:1.2}
+      font-weight:700;font-size:0.9375rem;line-height:1.2}
     .lang a[aria-current="page"]{background:var(--paper);color:var(--ink-900)}
-    .top .btn{min-height:44px;padding:9px 18px;font-size:16px}
+    .top .btn{min-height:44px;padding:9px 18px;font-size:1rem}
 
     /* ── hero ────────────────────────────────────────────────── */
     .hero{position:relative;min-height:92vh;display:flex;align-items:flex-end;overflow:hidden}
@@ -135,13 +136,13 @@
     .hero-body{position:relative;z-index:2;padding-bottom:76px;padding-top:40px;max-width:780px}
     .flag{background:rgba(224,163,46,0.16);border-left:3px solid var(--accent);
       padding:12px 16px;margin:16px 0 24px}
-    .flag p{margin:0;font-weight:700;font-size:18px;line-height:1.4}
-    .flag small{display:block;margin-top:5px;font-size:15px;color:var(--text-mid);font-weight:500}
-    .lede{font-size:20px;color:var(--text-mid);max-width:36em;margin:16px 0 26px}
+    .flag p{margin:0;font-weight:700;font-size:1.125rem;line-height:1.4}
+    .flag small{display:block;margin-top:5px;font-size:0.9375rem;color:var(--text-mid);font-weight:500}
+    .lede{font-size:1.25rem;color:var(--text-mid);max-width:36em;margin:16px 0 26px}
     .acts{display:flex;flex-wrap:wrap;gap:12px}
     .stars{color:var(--accent);letter-spacing:2px}
-    .rate{display:flex;align-items:center;gap:9px;margin:22px 0 0;font-weight:600;font-size:16px}
-    .fine{margin:12px 0 0;font-size:15.5px;color:var(--text-low)}
+    .rate{display:flex;align-items:center;gap:9px;margin:22px 0 0;font-weight:600;font-size:1rem}
+    .fine{margin:12px 0 0;font-size:0.96875rem;color:var(--text-low)}
 
     /* ── ledger strip ────────────────────────────────────────── */
     .ledger{display:grid;grid-template-columns:repeat(4,1fr);
@@ -149,20 +150,20 @@
     .ledger div{padding:22px 28px;border-right:1px solid var(--ink-700)}
     .ledger div:last-child{border-right:0}
     .ledger b{display:block;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-      font-size:22px;font-weight:700;line-height:1.1}
-    .ledger span{display:block;margin-top:3px;font-size:15.5px;color:var(--text-mid)}
+      font-size:1.375rem;font-weight:700;line-height:1.1}
+    .ledger span{display:block;margin-top:3px;font-size:0.96875rem;color:var(--text-mid)}
 
     /* ── section scaffold ────────────────────────────────────── */
     .sec{position:relative;padding:100px 0;border-bottom:1px solid var(--ink-700);overflow:hidden}
     .sec.sec-alt{background:var(--ink-800)}
     .sec-intro{max-width:760px;margin-bottom:64px;position:relative;z-index:1}
     .sec-intro h2{margin-bottom:16px}
-    .intro{font-size:19px;color:var(--text-mid);max-width:64ch}
+    .intro{font-size:1.1875rem;color:var(--text-mid);max-width:64ch}
 
     /* ── ghost numerals ──────────────────────────────────────── */
     .ghost-num{position:absolute;top:-0.04em;left:-0.05em;
       font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:700;
-      font-size:clamp(180px,28vw,380px);line-height:1;
+      font-size:clamp(11.25rem,28vw,23.75rem);line-height:1;
       color:rgba(255,255,255,0.028);user-select:none;pointer-events:none;
       z-index:0;letter-spacing:-0.02em;aria-hidden:true}
 
@@ -176,17 +177,17 @@
     .scopy p{color:var(--text-mid)}
     .scopy .split-h{margin:10px 0 16px}
     .ticks{list-style:none;margin:20px 0 0;padding:0}
-    .ticks li{position:relative;padding:9px 0 9px 32px;font-weight:600;font-size:17px;
+    .ticks li{position:relative;padding:9px 0 9px 32px;font-weight:600;font-size:1.0625rem;
       border-top:1px solid var(--ink-700)}
     .ticks li::before{content:"→";position:absolute;left:0;top:9px;
       color:var(--accent);font-weight:700}
-    .fnote{margin:10px 2px 0;font-size:14.5px;color:var(--text-low)}
+    .fnote{margin:10px 2px 0;font-size:0.90625rem;color:var(--text-low)}
 
     /* ── screenshot plates ───────────────────────────────────── */
     .plate{border:1px solid var(--ink-700);border-radius:var(--radius);background:var(--ink-800);padding:8px}
     .plate img{width:100%}
     .platecap{display:flex;align-items:center;gap:8px;padding:10px 2px 2px;
-      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:11.5px;letter-spacing:.10em;
+      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:0.75rem;letter-spacing:.10em;
       text-transform:uppercase;color:var(--text-low)}
     .platecap::before{content:"";width:6px;height:6px;background:var(--accent);flex:0 0 auto}
 
@@ -196,25 +197,25 @@
     .fig{padding:28px 32px 24px;border-right:1px solid var(--ink-700)}
     .fig:first-child{padding-left:0}
     .fig:last-child{border-right:0;padding-right:0}
-    .fignum{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:62px;font-weight:700;
+    .fignum{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.875rem;font-weight:700;
       line-height:.92;color:var(--text-hi);letter-spacing:-.01em}
     .fig h3{margin:10px 0 8px}
-    .fig p{margin:0;color:var(--text-mid);font-size:16.5px}
+    .fig p{margin:0;color:var(--text-mid);font-size:1.03125rem}
     .fig small{display:block;margin-top:14px;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-      font-size:11px;letter-spacing:.06em;color:var(--text-low);text-transform:uppercase}
-    .mech{margin:32px 0 0;color:var(--text-mid);font-size:17px;max-width:80ch}
+      font-size:0.75rem;letter-spacing:.06em;color:var(--text-low);text-transform:uppercase}
+    .mech{margin:32px 0 0;color:var(--text-mid);font-size:1.0625rem;max-width:80ch}
 
     /* ── reviews ─────────────────────────────────────────────── */
-    .ratebar{display:flex;align-items:center;gap:10px;margin:26px 0 6px;font-weight:600;font-size:17px}
+    .ratebar{display:flex;align-items:center;gap:10px;margin:26px 0 6px;font-weight:600;font-size:1.0625rem}
     .quotes{border-top:1px solid var(--ink-700);margin-top:14px}
     .q{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:24px 0;
       border-bottom:1px solid var(--ink-700)}
-    .q .mark{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:56px;line-height:.8;
+    .q .mark{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:3.5rem;line-height:.8;
       color:rgba(255,255,255,0.12);font-weight:700}
-    .q blockquote{margin:0;font-size:19px;line-height:1.55}
-    .q figcaption{margin-top:10px;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:12px;
+    .q blockquote{margin:0;font-size:1.1875rem;line-height:1.55}
+    .q figcaption{margin-top:10px;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:0.75rem;
       letter-spacing:.08em;text-transform:uppercase;color:var(--text-low)}
-    .qnote{margin:20px 0 0;font-size:15.5px;color:var(--text-low);max-width:80ch}
+    .qnote{margin:20px 0 0;font-size:0.96875rem;color:var(--text-low);max-width:80ch}
     .qnote a{color:rgba(255,255,255,0.65)}
 
     /* ── 3-up grid ───────────────────────────────────────────── */
@@ -223,9 +224,9 @@
       border-right:1px solid var(--ink-700);margin-right:-1px}
     .tri>article:first-child{padding-left:0}
     .tri>article:last-child{border-right:0;padding-right:0}
-    .tri h3{font-size:20px;margin-bottom:8px}
-    .tri p{color:var(--text-mid);font-size:16.5px}
-    .trust-hed{margin:64px 0 0;font-size:clamp(28px,3.4vw,44px)}
+    .tri h3{font-size:1.25rem;margin-bottom:8px}
+    .tri p{color:var(--text-mid);font-size:1.03125rem}
+    .trust-hed{margin:64px 0 0;font-size:clamp(1.75rem,3.4vw,2.75rem)}
 
     /* ── steps ───────────────────────────────────────────────── */
     .steps{display:grid;grid-template-columns:repeat(3,1fr);margin-top:36px;counter-reset:st}
@@ -234,37 +235,37 @@
     .steps>article:first-child{padding-left:0}
     .steps>article:last-child{border-right:0;padding-right:0}
     .steps>article::before{content:counter(st,decimal-leading-zero);display:block;
-      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:13px;font-weight:600;
+      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:0.8125rem;font-weight:600;
       color:var(--accent);margin-bottom:12px}
-    .steps h3{font-size:20px;margin-bottom:8px}
-    .steps p{color:var(--text-mid);font-size:16.5px}
+    .steps h3{font-size:1.25rem;margin-bottom:8px}
+    .steps p{color:var(--text-mid);font-size:1.03125rem}
 
     /* ── pricing ─────────────────────────────────────────────── */
     .price{border:1px solid var(--ink-700);border-radius:var(--radius);max-width:720px;margin-top:36px}
     .pricetop{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;
       padding:28px 32px;border-bottom:1px solid var(--ink-700)}
-    .pricetop h3{font-size:30px}
-    .pricetop div>div{color:var(--text-mid);font-size:16.5px;margin-top:2px}
-    .amount{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:64px;font-weight:700;
+    .pricetop h3{font-size:1.875rem}
+    .pricetop div>div{color:var(--text-mid);font-size:1.03125rem;margin-top:2px}
+    .amount{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:4rem;font-weight:700;
       line-height:.9;white-space:nowrap}
-    .amount small{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:16px;font-weight:600;color:var(--text-mid)}
+    .amount small{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:1rem;font-weight:600;color:var(--text-mid)}
     .plist{list-style:none;margin:0;padding:0}
     .plist li{padding:13px 32px;border-bottom:1px solid var(--ink-700);font-weight:600;
       display:flex;align-items:center;gap:11px}
-    .plist li::before{content:"✓";color:var(--accent);font-weight:700;font-size:18px}
+    .plist li::before{content:"✓";color:var(--accent);font-weight:700;font-size:1.125rem}
     .pfoot{padding:24px 32px 28px}
     .pfoot .btn{width:100%}
-    .pnote{margin:12px 0 0;text-align:center;font-size:15.5px;color:var(--text-low)}
+    .pnote{margin:12px 0 0;text-align:center;font-size:0.96875rem;color:var(--text-low)}
 
     /* ── faq ─────────────────────────────────────────────────── */
     .faq{margin-top:30px;max-width:86ch}
     details{border-top:1px solid var(--ink-700)}
     details:last-child{border-bottom:1px solid var(--ink-700)}
     summary{cursor:pointer;list-style:none;padding:20px 46px 20px 0;position:relative;
-      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:24px;font-weight:700;
+      font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:1.5rem;font-weight:700;
       line-height:1.2;color:var(--text-hi)}
     summary::-webkit-details-marker{display:none}
-    summary::after{content:"+";position:absolute;right:6px;top:16px;font-size:27px;
+    summary::after{content:"+";position:absolute;right:6px;top:16px;font-size:1.6875rem;
       color:rgba(255,255,255,0.38);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:400}
     details[open] summary::after{content:"–"}
     details p{color:var(--text-mid);padding:0 46px 22px 0;margin:0}
@@ -277,9 +278,9 @@
     .closer h2{max-width:22ch}
     .closer p{color:var(--text-mid);margin:12px 0 0;max-width:52ch}
     footer{background:var(--ink-900);color:var(--text-low);padding:28px 0;
-      font-size:15.5px;border-top:1px solid var(--ink-700)}
+      font-size:0.96875rem;border-top:1px solid var(--ink-700)}
     footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px}
-    .tm{flex:1 1 100%;margin:6px 0 0;font-size:13px;line-height:1.55;
+    .tm{flex:1 1 100%;margin:6px 0 0;font-size:0.8125rem;line-height:1.55;
       color:var(--text-low);max-width:88ch}
     .flinks{display:flex;flex-wrap:wrap;gap:22px}
     .flinks a{color:var(--text-low)}
@@ -303,14 +304,14 @@
       .nav>a:not(.btn){display:none}
     }
     @media (max-width:680px){
-      body{font-size:17px}
+      body{font-size:1.0625rem}
       .wrap{width:min(100% - 40px,1280px)}
       .topin{min-height:60px}
       .brand .wordmark{width:132px}
       .top .btn{display:none}
       .hero{min-height:78vh}
       .hero-body{padding-bottom:52px}
-      h1{font-size:clamp(38px,10vw,56px)}
+      h1{font-size:clamp(2.375rem,10vw,3.5rem)}
       .sec{padding:64px 0}
       .sec-intro{margin-bottom:44px}
       .acts .btn{width:100%}
@@ -331,6 +332,21 @@
       .ghost-num{display:none}
     }
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  
+    /* ── Tap targets ────────────────────────────────────────────
+       Apple's HIG minimum is 44x44pt, and it is a finger measurement, so it
+       does not relax on desktop — the same page is the mobile page. These
+       links were 21-33px tall. Nothing here moves a glyph: the padding grows
+       the hit area around text that stays exactly where it was. The language
+       switch mattered most — two 30pt targets side by side, reached for by
+       roughly half this audience, where a missed tap sends a Spanish speaker
+       to the English page. */
+    .nav>a{min-height:44px;display:inline-flex;align-items:center}
+    .lang a{min-height:44px;min-width:44px;box-sizing:border-box;
+      display:inline-flex;align-items:center;justify-content:center}
+    .flinks{gap:22px 26px}
+    .flinks a{min-height:44px;display:inline-flex;align-items:center}
+    .brand{min-height:44px;display:inline-flex;align-items:center}
   </style>
 </head>
 <body>
