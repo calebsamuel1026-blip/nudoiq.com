@@ -156,5 +156,22 @@
   "trust3Title": "Facturación que tú controlas",
   "trust3Copy": "Los pagos pasan por Stripe, así que los datos de tu tarjeta nunca tocan NudoIQ. Cancela desde el portal de Stripe cuando quieras, o escríbenos y lo hacemos en un día hábil.",
   "review5": "La mejor extensión que he probado para Amazon Relay. Funciones únicas y sin problemas. Voy a seguir pagando los 50 dólares cada mes.",
-  "review5By": "Tristan · Chrome Web Store"
+  "review5By": "Tristan · Chrome Web Store",
+  "mechEyebrow": "Cómo se llega al número",
+  "mechTitle": "Cada precio que esta ruta ha mostrado, ordenado en un solo número.",
+  "mechCopy": "NudoIQ no ha descifrado la fórmula de precios de Amazon, y nunca dirá que lo hizo. Vigila una ruta a la vez, registra cada precio que el tablero muestra en ella, y arma un historial con lo que realmente pasó ahí. Esta es una ruta real, vigilada durante 89 días.",
+  "mechCard1": "Cargas vigiladas, una ruta",
+  "mechCard1Copy": "Maryville, TN a Speedwell, TN, 114 millas — cada precio que el tablero ha mostrado en esta ruta exacta, registrado durante 89 días.",
+  "mechCard1Label": "Ruta real, historial real",
+  "mechCard2": "El rango real",
+  "mechCard2Copy": "De menor a mayor: $336 en el piso, $366 como mediana, $426 en el 10 por ciento más alto. No es un promedio — es la distribución completa, ordenada.",
+  "mechCard2Label": "Ordenado, no suavizado",
+  "mechCard3": "Dónde queda el precio de hoy",
+  "mechCard3Copy": "El tablero está mostrando $392 en esta ruta en este momento. Eso es más alto que cerca del 69 por ciento de los precios que esta ruta ha mostrado recientemente.",
+  "mechCard3Label": "Comparado contra su propio historial",
+  "mechPoint1": "Lee el mercado en vivo por su cuenta: últimas 4 horas, mediana de $345 en 20 observaciones — 6.6% debajo de la línea base de 90 días",
+  "mechPoint2": "Sigue la tendencia día por día: $368 hace tres días, $365 ayer",
+  "mechPoint3": "Dice exactamente qué tipo de evidencia tiene: solo precios pedidos, ninguno seguido hasta una carga completada",
+  "mechPoint4": "Etiqueta su propia confianza — \"Acumulando datos\" mientras el historial de una ruta todavía es corto",
+  "mechVerdict": "De las 386 observaciones: precio típico $356, objetivo $388, techo realista de $405 a $434. Con un tablero que muestra $392, la lectura es simple — tómala, ya supera el objetivo realista de esta ruta."
 }
