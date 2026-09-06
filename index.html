@@ -246,8 +246,9 @@
      One click-through block replaces five stacked feature sections.
      Buttons are real <button role="tab"> so keyboard and screen readers
      get the standard tablist behaviour, not a div pretending. */
-  .ftabs{display:flex;gap:3px;background:var(--paper-2);border:1px solid rgba(22,22,22,.07);
-    border-radius:var(--rp);padding:5px;margin:0 auto 32px;width:max-content;max-width:100%}
+  .ftabs{display:flex;flex-wrap:wrap;justify-content:center;gap:3px;background:var(--paper-2);
+    border:1px solid rgba(22,22,22,.07);border-radius:var(--rc);padding:5px;
+    margin:0 auto 32px;width:max-content;max-width:100%}
   .ftab{border:0;background:transparent;font-family:var(--ff);font-size:14.5px;font-weight:500;
     letter-spacing:-.008em;color:var(--ink-4);padding:11px 22px;border-radius:var(--rp);
     cursor:pointer;white-space:nowrap;transition:background .18s ease,color .18s ease;
