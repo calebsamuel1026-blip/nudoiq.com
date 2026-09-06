@@ -173,5 +173,6 @@
   "profitPoint1": "Mira el número real, no la tarifa publicada",
   "profitPoint2": "Pon un piso de ganancia y oculta lo que no lo alcance",
   "profitPoint3": "Evita que una alerta o reserva automática caiga en una carga que pierde",
-  "profitNote": "Ingresas tus propios costos una sola vez. Los estimados apoyan tu decisión. No garantizan una tarifa, una coincidencia ni una reserva."
+  "profitNote": "Ingresas tus propios costos una sola vez. Los estimados apoyan tu decisión. No garantizan una tarifa, una coincidencia ni una reserva.",
+  "terms": "Términos"
 }
