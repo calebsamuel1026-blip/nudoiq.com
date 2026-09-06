@@ -430,6 +430,12 @@
           <button class="ftab" id="ft-dispute" role="tab" aria-controls="fp-dispute" aria-selected="false" tabindex="-1" data-t="disputeEyebrow">Disputas de scorecard</button>
           <button class="ftab" id="ft-fleet" role="tab" aria-controls="fp-fleet" aria-selected="false" tabindex="-1" data-t="fleetEyebrow">Panel de flota</button>
           <button class="ftab" id="ft-pay" role="tab" aria-controls="fp-pay" aria-selected="false" tabindex="-1" data-t="payEyebrow">Pagos a conductores</button>
+          <button class="ftab" id="ft-refresher" role="tab" aria-controls="fp-refresher" aria-selected="false" tabindex="-1" data-t="refresherTab">Actualizador</button>
+          <button class="ftab" id="ft-autobook" role="tab" aria-controls="fp-autobook" aria-selected="false" tabindex="-1" data-t="autobookTab">Reserva automática</button>
+          <button class="ftab" id="ft-backhaul" role="tab" aria-controls="fp-backhaul" aria-selected="false" tabindex="-1" data-t="backhaulTab">Carga de regreso</button>
+          <button class="ftab" id="ft-posttruck" role="tab" aria-controls="fp-posttruck" aria-selected="false" tabindex="-1" data-t="posttruckTab">Publicar camión</button>
+          <button class="ftab" id="ft-instantbook" role="tab" aria-controls="fp-instantbook" aria-selected="false" tabindex="-1" data-t="instantbookTab">Reserva instantánea</button>
+          <button class="ftab" id="ft-realmiles" role="tab" aria-controls="fp-realmiles" aria-selected="false" tabindex="-1" data-t="realmilesTab">Millas reales</button>
       </div>
       <div class="fpanels">
         <div class="fpanel is-on" id="fp-lane" role="tabpanel" aria-labelledby="ft-lane">
@@ -515,6 +521,104 @@
           <figure class="plate">
             <img src="/assets/shot-driver-pay.webp" alt="NudoIQ driver pay statement totalling 20 completed trips, 4,221 miles and $4,221.10 of driver pay" width="1500" height="1000" decoding="async" loading="lazy">
             <p class="fnote" data-t="privacyNote2">Ejemplo protegido. Nombres, fechas, IDs y rutas están ocultos.</p>
+          </figure>
+        </div>
+        </div>
+        <div class="fpanel" id="fp-refresher" role="tabpanel" aria-labelledby="ft-refresher" hidden>
+        <div class="split">
+          <div class="scopy">
+            <h2 class="split-h" data-t="refresherTitle">Fija la velocidad de actualización y NudoIQ mantiene el tablero activo.</h2>
+            <p data-t="refresherCopy">Un control deslizante fija el intervalo de actualización de 1 a 5 segundos. NudoIQ agrega hasta un 20% de variación aleatoria a cada intervalo para que las solicitudes no caigan siempre en el mismo compás, y mantiene activa la pestaña del tablero de cargas.</p>
+            <ul class="ticks">
+              <li data-t="refresherPoint1">Fija tu propia velocidad, de 1 a 5 segundos</li>
+              <li data-t="refresherPoint2">Variación aleatoria de hasta 20% en cada intervalo</li>
+              <li data-t="refresherPoint3">Mantiene activa la pestaña del tablero de cargas</li>
+            </ul>
+          </div>
+          <figure class="plate">
+            <img src="/assets/shot-refresher.webp" alt="The NudoIQ speed slider set to three seconds above the Amazon Relay load board" width="1240" height="298" decoding="async" loading="lazy">
+          </figure>
+        </div>
+        </div>
+        <div class="fpanel" id="fp-autobook" role="tabpanel" aria-labelledby="ft-autobook" hidden>
+        <div class="split">
+          <div class="scopy">
+            <h2 class="split-h" data-t="autobookTitle">Define tus reglas una vez y deja que la barra de control actúe.</h2>
+            <p data-t="autobookCopy">La barra de control tiene tres modos: Alerta avisa ante una coincidencia, Búsqueda resalta coincidencias en el tablero, y Reserva automática reserva una por ti. Define reglas de precio y ruta, un piso de ganancia y un límite de reservas, y recibe una alerta de Telegram cuando se reserve una.</p>
+            <ul class="ticks">
+              <li data-t="autobookPoint1">Alerta, búsqueda o reserva automática: tú eliges el modo</li>
+              <li data-t="autobookPoint2">Fija un piso de ganancia mínima antes de reservar</li>
+              <li data-t="autobookPoint3">Recibe una alerta de Telegram en cuanto se reserve</li>
+            </ul>
+          </div>
+          <figure class="plate">
+            <img src="/assets/shot-autobook.webp" alt="The NudoIQ control bar showing the alert, search and autobook modes on the Amazon Relay load board" width="1420" height="238" decoding="async" loading="lazy">
+            <p class="fnote" data-t="autobookNote">La reserva automática se detiene en tu límite de reservas y tu piso de ganancia.</p>
+          </figure>
+        </div>
+        </div>
+        <div class="fpanel" id="fp-backhaul" role="tabpanel" aria-labelledby="ft-backhaul" hidden>
+        <div class="split">
+          <div class="scopy">
+            <h2 class="split-h" data-t="backhaulTitle">Encuentra una carga de regreso desde el destino de cualquier carga.</h2>
+            <p data-t="backhaulCopy">Un botón en cada carga busca cargas que salen del destino de esa carga. NudoIQ resalta los resultados en el tablero para que compares opciones de regreso antes de comprometerte con el primer tramo.</p>
+            <ul class="ticks">
+              <li data-t="backhaulPoint1">Busca una carga de regreso desde cualquier carga</li>
+              <li data-t="backhaulPoint2">Ve las coincidencias de regreso resaltadas en el tablero</li>
+              <li data-t="backhaulPoint3">Borra el resaltado y busca de nuevo con un clic</li>
+            </ul>
+          </div>
+          <figure class="plate">
+            <img src="/assets/shot-backhaul.webp" alt="The Amazon Relay load board with the NudoIQ backhaul icon on each load row" width="1280" height="403" decoding="async" loading="lazy">
+            <p class="fnote" data-t="backhaulNote">Los resultados de regreso reflejan el tablero en el momento de la búsqueda, no una reserva.</p>
+          </figure>
+        </div>
+        </div>
+        <div class="fpanel" id="fp-posttruck" role="tabpanel" aria-labelledby="ft-posttruck" hidden>
+        <div class="split">
+          <div class="scopy">
+            <h2 class="split-h" data-t="posttruckTitle">Ve el origen, destino y precio antes de publicar un camión.</h2>
+            <p data-t="posttruckCopy">Una ventana sobre Publicar un camión muestra origen, destino, distancia y el precio del tablero junto a tu mínimo de dólares por milla y tu pago mínimo. Un botón publica el camión, y luego muestra Publicando y Publicado.</p>
+            <ul class="ticks">
+              <li data-t="posttruckPoint1">Ve la distancia y el precio antes de comprometerte</li>
+              <li data-t="posttruckPoint2">Compara el precio del tablero con tu pago mínimo</li>
+              <li data-t="posttruckPoint3">Publica el camión con un solo botón</li>
+            </ul>
+          </div>
+          <figure class="plate">
+            <img src="/assets/shot-post-truck.webp" alt="The NudoIQ One-Click Post Truck modal showing origin, destination, distance, board price, minimum rate per mile and minimum payout" width="1500" height="1000" decoding="async" loading="lazy">
+          </figure>
+        </div>
+        </div>
+        <div class="fpanel" id="fp-instantbook" role="tabpanel" aria-labelledby="ft-instantbook" hidden>
+        <div class="split">
+          <div class="scopy">
+            <h2 class="split-h" data-t="instantbookTitle">Reserva una carga en un solo paso, no en varios.</h2>
+            <p data-t="instantbookCopy">Reserva instantánea reemplaza el proceso normal de reserva de varios pasos con una sola acción desde la barra de control. Haz clic una vez en la carga que quieres y NudoIQ completa la reserva sin las pantallas de confirmación adicionales.</p>
+            <ul class="ticks">
+              <li data-t="instantbookPoint1">Un clic en vez del proceso normal de reserva</li>
+              <li data-t="instantbookPoint2">Disponible directamente desde la barra de control</li>
+              <li data-t="instantbookPoint3">Sin las pantallas de confirmación adicionales</li>
+            </ul>
+          </div>
+          <figure class="plate">
+            <img src="/assets/shot-instantbook.webp" alt="The NudoIQ control bar above Amazon Relay load rows, with booking actions available on each row" width="1735" height="398" decoding="async" loading="lazy">
+          </figure>
+        </div>
+        </div>
+        <div class="fpanel" id="fp-realmiles" role="tabpanel" aria-labelledby="ft-realmiles" hidden>
+        <div class="split">
+          <div class="scopy">
+            <h2 class="split-h" data-t="realmilesTitle">Abre la ruta real antes de confiar en la milla publicada.</h2>
+            <p data-t="realmilesCopy">Un ícono en cada carga abre la ruta completa en Google Maps, incluida cada parada de un viaje con varias paradas. Ves las millas reales de manejo en vez de solo el número que indica el tablero.</p>
+            <ul class="ticks">
+              <li data-t="realmilesPoint1">Abre la ruta en Google Maps con un clic</li>
+              <li data-t="realmilesPoint2">Ve cada parada de un viaje con varias paradas</li>
+              <li data-t="realmilesPoint3">Compara las millas reales con el número del tablero</li>
+            </ul>
+          </div>
+          <figure class="plate">
+            <img src="/assets/shot-backhaul.webp" alt="Amazon Relay load rows with the NudoIQ Google Maps route icon that opens the real routed trip" width="1280" height="403" decoding="async" loading="lazy">
           </figure>
         </div>
         </div>

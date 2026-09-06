@@ -430,6 +430,12 @@
           <button class="ftab" id="ft-dispute" role="tab" aria-controls="fp-dispute" aria-selected="false" tabindex="-1" data-t="disputeEyebrow">Scorecard disputes</button>
           <button class="ftab" id="ft-fleet" role="tab" aria-controls="fp-fleet" aria-selected="false" tabindex="-1" data-t="fleetEyebrow">Fleet dashboard</button>
           <button class="ftab" id="ft-pay" role="tab" aria-controls="fp-pay" aria-selected="false" tabindex="-1" data-t="payEyebrow">Driver pay statements</button>
+          <button class="ftab" id="ft-refresher" role="tab" aria-controls="fp-refresher" aria-selected="false" tabindex="-1" data-t="refresherTab">Refresher</button>
+          <button class="ftab" id="ft-autobook" role="tab" aria-controls="fp-autobook" aria-selected="false" tabindex="-1" data-t="autobookTab">Autobook</button>
+          <button class="ftab" id="ft-backhaul" role="tab" aria-controls="fp-backhaul" aria-selected="false" tabindex="-1" data-t="backhaulTab">Backhaul</button>
+          <button class="ftab" id="ft-posttruck" role="tab" aria-controls="fp-posttruck" aria-selected="false" tabindex="-1" data-t="posttruckTab">Post Truck</button>
+          <button class="ftab" id="ft-instantbook" role="tab" aria-controls="fp-instantbook" aria-selected="false" tabindex="-1" data-t="instantbookTab">Instant Book</button>
+          <button class="ftab" id="ft-realmiles" role="tab" aria-controls="fp-realmiles" aria-selected="false" tabindex="-1" data-t="realmilesTab">Real Miles</button>
       </div>
       <div class="fpanels">
         <div class="fpanel is-on" id="fp-lane" role="tabpanel" aria-labelledby="ft-lane">
@@ -515,6 +521,104 @@
           <figure class="plate">
             <img src="assets/shot-driver-pay.webp" alt="NudoIQ driver pay statement totalling 20 completed trips, 4,221 miles and $4,221.10 of driver pay" width="1500" height="1000" decoding="async" loading="lazy">
             <p class="fnote" data-t="privacyNote2">Privacy-safe product example. Names, dates, load IDs, and routes are obscured.</p>
+          </figure>
+        </div>
+        </div>
+        <div class="fpanel" id="fp-refresher" role="tabpanel" aria-labelledby="ft-refresher" hidden>
+        <div class="split">
+          <div class="scopy">
+            <h2 class="split-h" data-t="refresherTitle">Set a refresh speed and let NudoIQ keep the board moving.</h2>
+            <p data-t="refresherCopy">A slider sets the refresh interval from 1 to 5 seconds. NudoIQ adds up to 20% random jitter to each interval so requests don't land on the same beat every time, and keeps the load board tab active.</p>
+            <ul class="ticks">
+              <li data-t="refresherPoint1">Set your own refresh speed, 1 to 5 seconds</li>
+              <li data-t="refresherPoint2">Random jitter up to 20% on every interval</li>
+              <li data-t="refresherPoint3">Keeps the load board tab from going idle</li>
+            </ul>
+          </div>
+          <figure class="plate">
+            <img src="assets/shot-refresher.webp" alt="The NudoIQ speed slider set to three seconds above the Amazon Relay load board" width="1240" height="298" decoding="async" loading="lazy">
+          </figure>
+        </div>
+        </div>
+        <div class="fpanel" id="fp-autobook" role="tabpanel" aria-labelledby="ft-autobook" hidden>
+        <div class="split">
+          <div class="scopy">
+            <h2 class="split-h" data-t="autobookTitle">Set your rules once, then let the control bar act.</h2>
+            <p data-t="autobookCopy">The control bar has three modes: Alert pings you on a match, Search highlights matches, and Autobook books one for you. Set price and lane rules, a profit floor, and a booking cap, then get a Telegram alert when one lands.</p>
+            <ul class="ticks">
+              <li data-t="autobookPoint1">Alert, search, or autobook — you pick the mode</li>
+              <li data-t="autobookPoint2">Set a minimum profit floor before it books</li>
+              <li data-t="autobookPoint3">Get a Telegram alert the moment one lands</li>
+            </ul>
+          </div>
+          <figure class="plate">
+            <img src="assets/shot-autobook.webp" alt="The NudoIQ control bar showing the alert, search and autobook modes on the Amazon Relay load board" width="1420" height="238" decoding="async" loading="lazy">
+            <p class="fnote" data-t="autobookNote">Autobook stops at your max-books cap and profit floor.</p>
+          </figure>
+        </div>
+        </div>
+        <div class="fpanel" id="fp-backhaul" role="tabpanel" aria-labelledby="ft-backhaul" hidden>
+        <div class="split">
+          <div class="scopy">
+            <h2 class="split-h" data-t="backhaulTitle">Find a return load from any load's destination city.</h2>
+            <p data-t="backhaulCopy">A button on each load card searches for loads originating where that load ends. NudoIQ highlights the results on the board so you can compare backhaul options before you commit to the first leg.</p>
+            <ul class="ticks">
+              <li data-t="backhaulPoint1">Search for a backhaul from any load card</li>
+              <li data-t="backhaulPoint2">See backhaul matches highlighted on the load board</li>
+              <li data-t="backhaulPoint3">Clear the highlight and search again in one click</li>
+            </ul>
+          </div>
+          <figure class="plate">
+            <img src="assets/shot-backhaul.webp" alt="The Amazon Relay load board with the NudoIQ backhaul icon on each load row" width="1280" height="403" decoding="async" loading="lazy">
+            <p class="fnote" data-t="backhaulNote">Backhaul results reflect the board at the moment you search, not a booking.</p>
+          </figure>
+        </div>
+        </div>
+        <div class="fpanel" id="fp-posttruck" role="tabpanel" aria-labelledby="ft-posttruck" hidden>
+        <div class="split">
+          <div class="scopy">
+            <h2 class="split-h" data-t="posttruckTitle">See origin, destination, and price before you post a truck.</h2>
+            <p data-t="posttruckCopy">A modal over Post A Truck shows origin, destination, distance, and the board price next to your minimum dollars per mile and minimum payout. One button posts the truck, then shows Posting and Posted.</p>
+            <ul class="ticks">
+              <li data-t="posttruckPoint1">See distance and price before you commit</li>
+              <li data-t="posttruckPoint2">Compare the board price to your minimum payout</li>
+              <li data-t="posttruckPoint3">Post the truck with a single button</li>
+            </ul>
+          </div>
+          <figure class="plate">
+            <img src="assets/shot-post-truck.webp" alt="The NudoIQ One-Click Post Truck modal showing origin, destination, distance, board price, minimum rate per mile and minimum payout" width="1500" height="1000" decoding="async" loading="lazy">
+          </figure>
+        </div>
+        </div>
+        <div class="fpanel" id="fp-instantbook" role="tabpanel" aria-labelledby="ft-instantbook" hidden>
+        <div class="split">
+          <div class="scopy">
+            <h2 class="split-h" data-t="instantbookTitle">Book a load in one action instead of several steps.</h2>
+            <p data-t="instantbookCopy">Instant Book replaces the normal multi-step booking flow with a single action from the control bar. Click it once on a load you want and NudoIQ carries the booking through without the extra confirmation screens.</p>
+            <ul class="ticks">
+              <li data-t="instantbookPoint1">One click instead of the normal booking flow</li>
+              <li data-t="instantbookPoint2">Available right from the control bar</li>
+              <li data-t="instantbookPoint3">Skip the extra confirmation screens</li>
+            </ul>
+          </div>
+          <figure class="plate">
+            <img src="assets/shot-instantbook.webp" alt="The NudoIQ control bar above Amazon Relay load rows, with booking actions available on each row" width="1735" height="398" decoding="async" loading="lazy">
+          </figure>
+        </div>
+        </div>
+        <div class="fpanel" id="fp-realmiles" role="tabpanel" aria-labelledby="ft-realmiles" hidden>
+        <div class="split">
+          <div class="scopy">
+            <h2 class="split-h" data-t="realmilesTitle">Open the actual routed trip before you trust the mileage.</h2>
+            <p data-t="realmilesCopy">An icon on each load card opens the full routed trip in Google Maps, including every stop on a multi-stop run. You see the real driving miles instead of only the number the board states.</p>
+            <ul class="ticks">
+              <li data-t="realmilesPoint1">Open the route in Google Maps, one click</li>
+              <li data-t="realmilesPoint2">See every stop on a multi-stop run</li>
+              <li data-t="realmilesPoint3">Check real miles against the board's number</li>
+            </ul>
+          </div>
+          <figure class="plate">
+            <img src="assets/shot-backhaul.webp" alt="Amazon Relay load rows with the NudoIQ Google Maps route icon that opens the real routed trip" width="1280" height="403" decoding="async" loading="lazy">
           </figure>
         </div>
         </div>
