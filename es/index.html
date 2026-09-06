@@ -158,7 +158,7 @@
   .hero-shot img{width:100%;display:block}
 
   /* ═══ PROMISE ROW ═════════════════════════════════════════ */
-  .promise{padding:16px var(--gut) 72px}
+  .promise{padding:16px var(--gut) 48px}
   .promise-in{max-width:var(--max);margin:0 auto;padding:0 24px}
   .promise h2{font-size:clamp(24px,2.6vw,34px);margin-bottom:34px}
   .promise-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
@@ -168,22 +168,22 @@
   .pcard span{font-size:14.5px;color:var(--ink-4);line-height:1.45}
 
   /* ═══ SECTIONS ════════════════════════════════════════════ */
-  .sec{padding:88px var(--gut)}
+  .sec{padding:62px var(--gut)}
   .sec-in{max-width:var(--max);margin:0 auto;padding:0 24px}
   .sec-alt{background:var(--paper-2)}
   .dark{background:var(--ink);color:#fff;border-radius:var(--rc);margin:0 var(--gut);
-    padding:88px 0}
+    padding:62px 0}
   .dark h2,.dark h3{color:#fff}
   .dark .eyebrow{color:var(--peri)}
   .dark .lede,.dark .intro{color:var(--g1)}
-  .sec-intro{max-width:62ch;margin-bottom:44px}
+  .sec-intro{max-width:62ch;margin-bottom:30px}
   .intro{font-size:clamp(16px,1.5vw,18.5px);line-height:1.55;color:var(--ink-4);
     letter-spacing:-.008em;margin-top:18px;max-width:64ch}
 
   /* ═══ BIG STAT ════════════════════════════════════════════ */
   .statline{font-size:clamp(46px,6.6vw,84px);font-weight:400;letter-spacing:-.03em;
     line-height:1;color:var(--peri);margin-bottom:18px}
-  .figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:44px}
+  .figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:30px}
   .fig{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);
     border-radius:var(--rc);padding:30px 26px 32px}
   .sec .fig{background:var(--paper-2);border-color:rgba(22,22,22,.06)}
@@ -227,7 +227,7 @@
 
   /* ═══ SPLITS ══════════════════════════════════════════════ */
   .split{display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);
-    gap:56px;align-items:center;padding:56px 0;border-top:1px solid rgba(22,22,22,.08)}
+    gap:56px;align-items:center;padding:0;border-top:0}
   .split:first-of-type{border-top:0;padding-top:0}
   .dark .split{border-top-color:rgba(255,255,255,.12)}
   .split.flip .scopy{order:2}
@@ -247,7 +247,7 @@
      Buttons are real <button role="tab"> so keyboard and screen readers
      get the standard tablist behaviour, not a div pretending. */
   .ftabs{display:flex;gap:3px;background:var(--paper-2);border:1px solid rgba(22,22,22,.07);
-    border-radius:var(--rp);padding:5px;margin:0 auto 46px;width:max-content;max-width:100%}
+    border-radius:var(--rp);padding:5px;margin:0 auto 32px;width:max-content;max-width:100%}
   .ftab{border:0;background:transparent;font-family:var(--ff);font-size:14.5px;font-weight:500;
     letter-spacing:-.008em;color:var(--ink-4);padding:11px 22px;border-radius:var(--rp);
     cursor:pointer;white-space:nowrap;transition:background .18s ease,color .18s ease;
@@ -267,7 +267,7 @@
 
   /* ═══ QUOTES ══════════════════════════════════════════════ */
   .ratebar{display:flex;align-items:center;gap:10px;margin-top:20px;font-size:15px;font-weight:500}
-  .quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:38px}
+  .quotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:26px}
   .q{margin:0;background:#fff;border:1px solid rgba(22,22,22,.07);border-radius:var(--rc);
     padding:28px 26px}
   .q:nth-child(1),.q:nth-child(4){background:var(--peri);border-color:transparent}
@@ -430,70 +430,6 @@
       </div>
     </div></section>
 
-    <!-- ── VALUE (dark) ──────────────────────────────────────── -->
-    <section class="dark"><div class="sec-in">
-      <div class="sec-intro">
-        <p class="eyebrow" data-t="valueEyebrow">Lo que reportaron los transportistas</p>
-        <h2 data-t="valueTitle">$2,100 más al mes. Unas 15 horas por semana recuperadas.</h2>
-        <p class="intro" data-t="valueCopy">Esas son las cifras que nos dieron los transportistas después de llevar sus tarifas a los números de NudoIQ. Abajo está el mecanismo detrás de ellas, y puedes leerlo en las pantallas de esta página.</p>
-      </div>
-      <div class="figs">
-        <article class="fig"><div class="fignum">$727</div><h3 data-t="timeCard">Más al mes</h3><p data-t="timeCardCopy">Reportado por transportistas después de empezar a usar el número que la ruta soporta en lugar del número que adivinaban.</p><small data-t="exampleLabel">Auto-reportado; los resultados varían</small></article>
-        <article class="fig"><div class="fignum">$632</div><h3 data-t="loadCard">Recuperadas cada semana</h3><p data-t="loadCardCopy">Tiempo que antes se iba en refrescar el tablero, perseguir tarifas a mano y rehacer la misma hoja de cálculo cada domingo.</p><small data-t="exampleLabel2">Auto-reportado; los resultados varían</small></article>
-        <article class="fig"><div class="fignum">$1.64</div><h3 data-t="fleetCard">Lo que cuesta NudoIQ al día</h3><p data-t="fleetCardCopy">$49.99 al mes, todas las funciones, sin contrato anual: alrededor del 2% de los $2,100 que reportaron los transportistas.</p><small data-t="productCapability">Aritmética que puedes verificar</small></article>
-      </div>
-      <p class="mech" data-t="valueMechanism">De dónde sale: en la ruta del encabezado, NudoIQ recomendó $727 donde el tablero publicaba $632. En la pantalla de Lane Intelligence, un objetivo de $483 frente a un precio de tablero de $407. Unas cuantas de esas al mes son la diferencia.</p>
-    </div></section>
-
-    <!-- ── MECHANISM ─────────────────────────────────────────── -->
-    <section class="sec" id="mechanism"><div class="sec-in">
-      <div class="sec-intro">
-        <p class="eyebrow" data-t="mechEyebrow">Cómo se llega al número</p>
-        <h2 data-t="mechTitle">Cada precio que esta ruta ha mostrado, ordenado en un solo número.</h2>
-        <p class="intro" data-t="mechCopy">NudoIQ no ha descifrado la fórmula de precios de Amazon, y nunca dirá que lo hizo. Vigila una ruta a la vez, registra cada precio que el tablero muestra en ella, y arma un historial con lo que realmente pasó ahí. Esta es una ruta real, vigilada durante 89 días.</p>
-      </div>
-      <div class="figs">
-        <article class="fig"><div class="fignum">386</div><h3 data-t="mechCard1">Cargas vigiladas, una ruta</h3><p data-t="mechCard1Copy">Maryville, TN a Speedwell, TN, 114 millas — cada precio que el tablero ha mostrado en esta ruta exacta, registrado durante 89 días.</p><small data-t="mechCard1Label">Ruta real, historial real</small></article>
-        <article class="fig"><div class="fignum">$336&ndash;$426</div><h3 data-t="mechCard2">El rango real</h3><p data-t="mechCard2Copy">De menor a mayor: $336 en el piso, $366 como mediana, $426 en el 10 por ciento más alto. No es un promedio — es la distribución completa, ordenada.</p><small data-t="mechCard2Label">Ordenado, no suavizado</small></article>
-        <article class="fig"><div class="fignum">69%</div><h3 data-t="mechCard3">Dónde queda el precio de hoy</h3><p data-t="mechCard3Copy">El tablero está mostrando $392 en esta ruta en este momento. Eso es más alto que cerca del 69 por ciento de los precios que esta ruta ha mostrado recientemente.</p><small data-t="mechCard3Label">Comparado contra su propio historial</small></article>
-      </div>
-      <ul class="ticks">
-        <li data-t="mechPoint1">Lee el mercado en vivo por su cuenta: últimas 4 horas, mediana de $345 en 20 observaciones — 6.6% debajo de la línea base de 90 días</li>
-        <li data-t="mechPoint2">Sigue la tendencia día por día: $368 hace tres días, $365 ayer</li>
-        <li data-t="mechPoint3">Dice exactamente qué tipo de evidencia tiene: solo precios pedidos, ninguno seguido hasta una carga completada</li>
-        <li data-t="mechPoint4">Etiqueta su propia confianza — "Acumulando datos" mientras el historial de una ruta todavía es corto</li>
-      </ul>
-      <p class="mech" data-t="mechVerdict">De las 386 observaciones: precio típico $356, objetivo $388, techo realista de $405 a $434. Con un tablero que muestra $392, la lectura es simple — tómala, ya supera el objetivo realista de esta ruta.</p>
-    </div></section>
-
-    <!-- ── MARQUEE ───────────────────────────────────────────── -->
-    <div class="marq" aria-hidden="true"><div class="marq-track" id="marqTrack">
-      <a class="marq-item" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk"><span data-t="finalTitle">Conoce cuánto vale la próxima carga antes de tomarla.</span><span class="pill" data-t="installNow">Agregar NudoIQ a Chrome</span></a>
-    </div></div>
-
-    <!-- ── REVIEWS ───────────────────────────────────────────── -->
-    <section class="sec sec-alt" id="reviews"><div class="sec-in">
-      <div class="sec-intro">
-        <p class="eyebrow" data-t="reviewsEyebrow">Desde la Chrome Web Store</p>
-        <h2 data-t="reviewsTitle">Lo que dicen los transportistas que ya pagan.</h2>
-        <p class="intro" data-t="reviewsCopy">Todas las reseñas de abajo son públicas en el listado de la Chrome Web Store.</p>
-        <p class="ratebar"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span data-t="ratingSummary">5.0 promedio · 5 calificaciones · 5 reseñas escritas</span></p>
-      </div>
-      <div class="quotes">
-        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review1">Sus funciones de IA para detectar hasta dónde van a subir los precios son increíbles y ya me han hecho ganar más de $1000 que no habría ganado sin la extensión, lo que hace que los 50 dólares se sientan como nada. Un salvavidas para Relay.</blockquote><figcaption data-t="review1By">sophialaim · Chrome Web Store</figcaption></figure>
-        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review2">Su función de disputa de desempeño es un salvavidas. Sus funciones de reserva de cargas también funcionan muy bien y no ralentizan el tablero; otras extensiones parecen tener problemas con eso.</blockquote><figcaption data-t="review2By">Futo · Chrome Web Store</figcaption></figure>
-        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review3">Funciona muy bien, buenas funciones, mejor que las otras que he probado. Definitivamente vale la pena por los 50 dólares al mes.</blockquote><figcaption data-t="review3By">Lalo · Chrome Web Store</figcaption></figure>
-        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review4">Vale totalmente los $50 al mes.</blockquote><figcaption data-t="review4By">Miguel · Chrome Web Store</figcaption></figure>
-        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review5">La mejor extensión que he probado para Amazon Relay. Funciones únicas y sin problemas. Voy a seguir pagando los 50 dólares cada mes.</blockquote><figcaption data-t="review5By">Tristan · Chrome Web Store</figcaption></figure>
-      </div>
-      <p class="qnote"><span data-t="reviewsNote">Reseñas reproducidas y traducidas del listado público en inglés de la Chrome Web Store. Los resultados varían; NudoIQ no garantiza tarifas, reservas ni ingresos.</span> <a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk/reviews" rel="noopener" target="_blank" data-t="reviewsLink">Léelas en la Chrome Web Store</a></p>
-      <h2 class="trust-hed" data-t="trustTitle">Por qué los transportistas le confían su tablero.</h2>
-      <div class="tri">
-        <article><h3 data-t="trust1Title">Tu acceso a Amazon sigue siendo tuyo</h3><p data-t="trust1Copy">NudoIQ nunca recopila credenciales, contraseñas ni información de cuenta de Amazon. Funciona dentro de la pestaña de Relay en la que ya iniciaste sesión.</p></article>
-        <article><h3 data-t="trust2Title">Una empresa con nombre, no un script anónimo</h3><p data-t="trust2Copy">Publicado por Sami Enterprises LLC de Portland, Oregón, el desarrollador que aparece en la ficha de Chrome Web Store.</p></article>
-        <article><h3 data-t="trust3Title">Facturación que tú controlas</h3><p data-t="trust3Copy">Los pagos pasan por Stripe, así que los datos de tu tarjeta nunca tocan NudoIQ. Cancela desde el portal de Stripe cuando quieras, o escríbenos y lo hacemos en un día hábil.</p></article>
-      </div>
-    </div></section>
 
     <!-- ── LANE INTELLIGENCE + RATE ADVISOR ───────────────────── -->
     <section class="sec" id="features"><div class="sec-in">
@@ -596,6 +532,71 @@
           </figure>
         </div>
         </div>
+      </div>
+    </div></section>
+
+    <!-- ── VALUE (dark) ──────────────────────────────────────── -->
+    <section class="dark"><div class="sec-in">
+      <div class="sec-intro">
+        <p class="eyebrow" data-t="valueEyebrow">Lo que reportaron los transportistas</p>
+        <h2 data-t="valueTitle">$2,100 más al mes. Unas 15 horas por semana recuperadas.</h2>
+        <p class="intro" data-t="valueCopy">Esas son las cifras que nos dieron los transportistas después de llevar sus tarifas a los números de NudoIQ. Abajo está el mecanismo detrás de ellas, y puedes leerlo en las pantallas de esta página.</p>
+      </div>
+      <div class="figs">
+        <article class="fig"><div class="fignum">$727</div><h3 data-t="timeCard">Más al mes</h3><p data-t="timeCardCopy">Reportado por transportistas después de empezar a usar el número que la ruta soporta en lugar del número que adivinaban.</p><small data-t="exampleLabel">Auto-reportado; los resultados varían</small></article>
+        <article class="fig"><div class="fignum">$632</div><h3 data-t="loadCard">Recuperadas cada semana</h3><p data-t="loadCardCopy">Tiempo que antes se iba en refrescar el tablero, perseguir tarifas a mano y rehacer la misma hoja de cálculo cada domingo.</p><small data-t="exampleLabel2">Auto-reportado; los resultados varían</small></article>
+        <article class="fig"><div class="fignum">$1.64</div><h3 data-t="fleetCard">Lo que cuesta NudoIQ al día</h3><p data-t="fleetCardCopy">$49.99 al mes, todas las funciones, sin contrato anual: alrededor del 2% de los $2,100 que reportaron los transportistas.</p><small data-t="productCapability">Aritmética que puedes verificar</small></article>
+      </div>
+      <p class="mech" data-t="valueMechanism">De dónde sale: en la ruta del encabezado, NudoIQ recomendó $727 donde el tablero publicaba $632. En la pantalla de Lane Intelligence, un objetivo de $483 frente a un precio de tablero de $407. Unas cuantas de esas al mes son la diferencia.</p>
+    </div></section>
+
+    <!-- ── MECHANISM ─────────────────────────────────────────── -->
+    <section class="sec" id="mechanism"><div class="sec-in">
+      <div class="sec-intro">
+        <p class="eyebrow" data-t="mechEyebrow">Cómo se llega al número</p>
+        <h2 data-t="mechTitle">Cada precio que esta ruta ha mostrado, ordenado en un solo número.</h2>
+        <p class="intro" data-t="mechCopy">NudoIQ no ha descifrado la fórmula de precios de Amazon, y nunca dirá que lo hizo. Vigila una ruta a la vez, registra cada precio que el tablero muestra en ella, y arma un historial con lo que realmente pasó ahí. Esta es una ruta real, vigilada durante 89 días.</p>
+      </div>
+      <div class="figs">
+        <article class="fig"><div class="fignum">386</div><h3 data-t="mechCard1">Cargas vigiladas, una ruta</h3><p data-t="mechCard1Copy">Maryville, TN a Speedwell, TN, 114 millas — cada precio que el tablero ha mostrado en esta ruta exacta, registrado durante 89 días.</p><small data-t="mechCard1Label">Ruta real, historial real</small></article>
+        <article class="fig"><div class="fignum">$336&ndash;$426</div><h3 data-t="mechCard2">El rango real</h3><p data-t="mechCard2Copy">De menor a mayor: $336 en el piso, $366 como mediana, $426 en el 10 por ciento más alto. No es un promedio — es la distribución completa, ordenada.</p><small data-t="mechCard2Label">Ordenado, no suavizado</small></article>
+        <article class="fig"><div class="fignum">69%</div><h3 data-t="mechCard3">Dónde queda el precio de hoy</h3><p data-t="mechCard3Copy">El tablero está mostrando $392 en esta ruta en este momento. Eso es más alto que cerca del 69 por ciento de los precios que esta ruta ha mostrado recientemente.</p><small data-t="mechCard3Label">Comparado contra su propio historial</small></article>
+      </div>
+      <ul class="ticks">
+        <li data-t="mechPoint1">Lee el mercado en vivo por su cuenta: últimas 4 horas, mediana de $345 en 20 observaciones — 6.6% debajo de la línea base de 90 días</li>
+        <li data-t="mechPoint2">Sigue la tendencia día por día: $368 hace tres días, $365 ayer</li>
+        <li data-t="mechPoint3">Dice exactamente qué tipo de evidencia tiene: solo precios pedidos, ninguno seguido hasta una carga completada</li>
+        <li data-t="mechPoint4">Etiqueta su propia confianza — "Acumulando datos" mientras el historial de una ruta todavía es corto</li>
+      </ul>
+      <p class="mech" data-t="mechVerdict">De las 386 observaciones: precio típico $356, objetivo $388, techo realista de $405 a $434. Con un tablero que muestra $392, la lectura es simple — tómala, ya supera el objetivo realista de esta ruta.</p>
+    </div></section>
+
+    <!-- ── MARQUEE ───────────────────────────────────────────── -->
+    <div class="marq" aria-hidden="true"><div class="marq-track" id="marqTrack">
+      <a class="marq-item" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk"><span data-t="finalTitle">Conoce cuánto vale la próxima carga antes de tomarla.</span><span class="pill" data-t="installNow">Agregar NudoIQ a Chrome</span></a>
+    </div></div>
+
+    <!-- ── REVIEWS ───────────────────────────────────────────── -->
+    <section class="sec sec-alt" id="reviews"><div class="sec-in">
+      <div class="sec-intro">
+        <p class="eyebrow" data-t="reviewsEyebrow">Desde la Chrome Web Store</p>
+        <h2 data-t="reviewsTitle">Lo que dicen los transportistas que ya pagan.</h2>
+        <p class="intro" data-t="reviewsCopy">Todas las reseñas de abajo son públicas en el listado de la Chrome Web Store.</p>
+        <p class="ratebar"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span data-t="ratingSummary">5.0 promedio · 5 calificaciones · 5 reseñas escritas</span></p>
+      </div>
+      <div class="quotes">
+        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review1">Sus funciones de IA para detectar hasta dónde van a subir los precios son increíbles y ya me han hecho ganar más de $1000 que no habría ganado sin la extensión, lo que hace que los 50 dólares se sientan como nada. Un salvavidas para Relay.</blockquote><figcaption data-t="review1By">sophialaim · Chrome Web Store</figcaption></figure>
+        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review2">Su función de disputa de desempeño es un salvavidas. Sus funciones de reserva de cargas también funcionan muy bien y no ralentizan el tablero; otras extensiones parecen tener problemas con eso.</blockquote><figcaption data-t="review2By">Futo · Chrome Web Store</figcaption></figure>
+        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review3">Funciona muy bien, buenas funciones, mejor que las otras que he probado. Definitivamente vale la pena por los 50 dólares al mes.</blockquote><figcaption data-t="review3By">Lalo · Chrome Web Store</figcaption></figure>
+        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review4">Vale totalmente los $50 al mes.</blockquote><figcaption data-t="review4By">Miguel · Chrome Web Store</figcaption></figure>
+        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review5">La mejor extensión que he probado para Amazon Relay. Funciones únicas y sin problemas. Voy a seguir pagando los 50 dólares cada mes.</blockquote><figcaption data-t="review5By">Tristan · Chrome Web Store</figcaption></figure>
+      </div>
+      <p class="qnote"><span data-t="reviewsNote">Reseñas reproducidas y traducidas del listado público en inglés de la Chrome Web Store. Los resultados varían; NudoIQ no garantiza tarifas, reservas ni ingresos.</span> <a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk/reviews" rel="noopener" target="_blank" data-t="reviewsLink">Léelas en la Chrome Web Store</a></p>
+      <h2 class="trust-hed" data-t="trustTitle">Por qué los transportistas le confían su tablero.</h2>
+      <div class="tri">
+        <article><h3 data-t="trust1Title">Tu acceso a Amazon sigue siendo tuyo</h3><p data-t="trust1Copy">NudoIQ nunca recopila credenciales, contraseñas ni información de cuenta de Amazon. Funciona dentro de la pestaña de Relay en la que ya iniciaste sesión.</p></article>
+        <article><h3 data-t="trust2Title">Una empresa con nombre, no un script anónimo</h3><p data-t="trust2Copy">Publicado por Sami Enterprises LLC de Portland, Oregón, el desarrollador que aparece en la ficha de Chrome Web Store.</p></article>
+        <article><h3 data-t="trust3Title">Facturación que tú controlas</h3><p data-t="trust3Copy">Los pagos pasan por Stripe, así que los datos de tu tarjeta nunca tocan NudoIQ. Cancela desde el portal de Stripe cuando quieras, o escríbenos y lo hacemos en un día hábil.</p></article>
       </div>
     </div></section>
 
