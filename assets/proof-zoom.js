@@ -88,6 +88,49 @@
          "right when you're not looking. NudoIQ runs its refresh loop off a Web Worker, which " +
          "Chrome doesn't throttle the same way, so it keeps firing at full speed in the background. " +
          "Each interval also carries ±20% random jitter, so it never lands on a predictable metronome."
+    },
+    'shot-net-profit': {
+      h: 'Net profit counts the empty mile back',
+      p: "A 226-mile load isn't costed at 226 miles. Turn on the empty-return setting and NudoIQ " +
+         "doubles it to 452, then adds your deadhead to pickup, before it touches fuel, driver pay, " +
+         "or maintenance. Board rate-per-mile never counts that empty leg back. Diesel price is " +
+         "pulled live for your state — and if that lookup fails, NudoIQ keeps your last real " +
+         "number instead of quietly overwriting every price on the board with a stale average."
+    },
+    'shot-backhaul': {
+      h: 'Backhaul searches from where the trip really ends',
+      p: "A tour has no single “destination” field — just a list of stops. NudoIQ reads every " +
+         "stop on the trip, keeps only the delivery-type ones, and takes the last one as your actual " +
+         "endpoint. Backhaul search then runs from that real endpoint back toward home, inside the " +
+         "mileage radius you set. It's searching from where you'll actually be, not from a guess."
+    },
+    'shot-realmiles': {
+      h: 'Real Miles maps every stop, not just two',
+      p: "Board mileage on a multi-stop load is often just origin to destination — the stops in " +
+         "between don't count. Real Miles builds the actual Google Maps route through every stop on " +
+         "the run, so you see the true routed distance before you accept, not after. On a single-stop " +
+         "load there's nothing to correct, so it doesn't try."
+    },
+    'shot-post-truck': {
+      h: "Post A Truck can't misreport your equipment",
+      p: "Load records get pruned during a long shift to keep memory in check. A pruned record used " +
+         "to fall back to a hardcoded 26' box truck — so a carrier running a 53' trailer could get " +
+         "posted as a box truck and matched against freight it can't haul. That's fixed. What Post A " +
+         "Truck posts now comes from the equipment on your actual load record, every time."
+    },
+    'shot-instantbook': {
+      h: 'Instant Book only books what you searched',
+      p: "NudoIQ runs background searches to keep the board fresh — but those searches never become " +
+         "what Instant Book submits. What gets booked is built from the search you actually ran and " +
+         "saw on screen, not one the software ran behind the scenes. Same rule protects Post A " +
+         "Truck's origin: a harvested location never stands in for where you are."
+    },
+    'shot-autobook': {
+      h: 'Autobook confirmations get through quiet hours',
+      p: "Set quiet hours and NudoIQ holds new-load and price-up alerts until they end. A booked load " +
+         "is different — it's a confirmation, not an interruption, so autobook success messages go " +
+         "out on Telegram regardless of quiet hours. You shouldn't have to wake up and wonder if a " +
+         "load booked itself while you were asleep."
     }
   };
 
