@@ -77,7 +77,10 @@
       '.nq-primary{background:#E0A32E;color:#0B0C0E}',
       '.nq-secondary{background:transparent;color:#fff;border:1px solid #1E2126 !important}',
       '.nq-tertiary{background:none;color:#6B7280;font-weight:400 !important;font-size:14px !important;padding:8px !important}',
-      '.nq-note{font-size:12px;color:#6B7280;text-align:center;margin:12px 0 0}'
+      '.nq-note{font-size:12px;color:#6B7280;text-align:center;margin:12px 0 0}',
+      // shown only when the clipboard refuses, so the link is still selectable by hand
+      '.nq-url{width:100%;margin:10px 0 0;padding:12px;border-radius:12px;border:1px solid #1E2126;' +
+        'background:#0C0E11;color:#fff;font-size:14px;font-family:inherit;-webkit-user-select:all;user-select:all}'
     ].join('');
     var s = document.createElement('style');
     s.textContent = css;
@@ -127,16 +130,33 @@
           btn.textContent = t.copied;
           track('MobileBridgeCopy', { url: storeUrl });
         };
+        // A refused clipboard must not report success: it told the reader the link
+        // was copied when it was not, and counted a MobileBridgeCopy that never
+        // happened. Fall back to showing the URL so they can select it by hand.
+        var failed = function () {
+          var out = sheet.querySelector('.nq-url');
+          if (!out) {
+            out = document.createElement('input');
+            out.className = 'nq-url';
+            out.readOnly = true;
+            out.setAttribute('aria-label', 'nudoiq.com install link');
+            btn.insertAdjacentElement('afterend', out);
+          }
+          out.value = storeUrl;
+          out.focus();
+          out.select();
+        };
         if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(storeUrl).then(done).catch(done);
+          navigator.clipboard.writeText(storeUrl).then(done).catch(failed);
         } else {
           var ta = document.createElement('textarea');
           ta.value = storeUrl;
           document.body.appendChild(ta);
           ta.select();
-          try { document.execCommand('copy'); } catch (err) {}
+          var ok = false;
+          try { ok = document.execCommand('copy'); } catch (err) { ok = false; }
           ta.remove();
-          done();
+          if (ok) { done(); } else { failed(); }
         }
       } else if (kind === 'desktop') {
         track('MobileBridgeOverride', { url: storeUrl });
@@ -154,8 +174,28 @@
     track('MobileBridgeOpened', { url: storeUrl });
   }
 
+  // StoreClick is the Meta ad-optimisation event: a visitor who CAN install
+  // actually left for the Chrome Web Store.
+  //
+  // It deliberately never fires on mobile. A mobile visitor cannot install a
+  // desktop Chrome extension, so counting their click would teach Meta to buy
+  // the one audience guaranteed not to convert — which is exactly the leak the
+  // 2026-09-07 campaign audit found in the live ad set. Reusing isMobile() here
+  // rather than repeating the test keeps the two paths from drifting apart.
+  //
+  // Website-origin, and carries nothing the extension observed, so it is clean
+  // under Chrome's Limited Use policy. Same boundary as capi.ts server-side.
+  function initDesktopStoreClick() {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      if ((a.getAttribute('href') || '').indexOf(STORE_HOST) === -1) return;
+      track('StoreClick', { lang: lang(), path: location.pathname });
+    });
+  }
+
   function init() {
-    if (!isMobile()) return;
+    if (!isMobile()) { initDesktopStoreClick(); return; }
     injectStyles();
     document.addEventListener('click', function (e) {
       var a = e.target.closest('a[href]');
