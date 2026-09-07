@@ -73,13 +73,19 @@
          "effective sample size — not a vibe."
     },
     'shot-dispute': {
-      h: 'What the dispute letter actually argues',
-      p: "The letter argues from Amazon's own policy, not fairness. Load accepted within 5 hours? " +
-         "Amazon's policy grants a 30-minute grace period to assign a driver, and a 5-minute " +
-         "reassignment window. Held at origin by Amazon staff, or stuck in a cellular dead zone — " +
-         "not carrier-controllable, per Amazon's rules. It won't fight traffic delays; Amazon calls " +
-         "those carrier-controllable, always. First review is automated: short, citing exact policy " +
-         "language and timestamps. Denied? The second draft is longer, demanding a yes-or-no answer."
+      // Caleb confirmed the eight years is HIS operating history, not a dataset,
+      // so this is written as a founder claim: "we tracked" or "our data shows"
+      // would describe a pipeline that does not exist. First person is a
+      // deliberate break from the site's third-person voice — a founder claim
+      // in the third person reads as marketing about a person rather than the
+      // person speaking. Flagged to Caleb for sign-off.
+      h: 'Eight years hauling built this dispute logic',
+      p: "I ran Amazon Relay for eight years before I wrote a word of this dispute logic — it's " +
+         "built from what I learned about which reasons Amazon actually accepts, not from a dataset. " +
+         "The letter argues from policy, not fairness. Load accepted within 5 hours? Amazon's own " +
+         "policy grants a 30-minute grace period to assign a driver, and 5 minutes to reassign. Held " +
+         "at origin by Amazon staff, or stuck in a cellular dead zone — not carrier-controllable, " +
+         "per Amazon's rules. It won't argue traffic delays; Amazon calls those carrier-controllable."
     },
     'shot-refresher': {
       h: "Why the refresh doesn't slow down in the background",
