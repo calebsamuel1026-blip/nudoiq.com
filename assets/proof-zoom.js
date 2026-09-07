@@ -48,6 +48,49 @@
     try { if (window.clarity) window.clarity('event', name); } catch (e) {}
   }
 
+
+  /* ── Depth copy: what the panel says that the page does not ──────────
+   * Caleb, on the first version: "dont js repeat the information on the main
+   * page, talk about how we calculate the lane intelligence prices, our
+   * formula". Right — a panel that mirrors the section it sits inside is a
+   * bigger picture and nothing else.
+   *
+   * These are keyed by screenshot filename and take priority over the page
+   * copy. The technical facts behind them were read out of content.js and are
+   * recorded in research/FEATURE-MECHANISMS.md; the words are the copywriter's,
+   * in research/copy/FEATURE-DEPTH-COPY.md. Three features have their
+   * mechanism extracted so far — the rest fall back to the page copy, which is
+   * weaker but honest, and the gap is written down rather than papered over.
+   */
+  var DEPTH = {
+    'shot-lane-intelligence': {
+      h: 'How the price is actually calculated',
+      p: "A lane's target price isn't one carrier's screenshot — it's built from ranked evidence: " +
+         "confirmed bookings count most, watched departures next, inferred ones least. Under 15 " +
+         "observations, the estimate blends toward the wider corridor instead of guessing on thin " +
+         "data. Every booking loses half its weight every 21 days, so a three-week-old rate pulls " +
+         "half as hard as today's. The confidence label is a real statistic — relative error and " +
+         "effective sample size — not a vibe."
+    },
+    'shot-dispute': {
+      h: 'What the dispute letter actually argues',
+      p: "The letter argues from Amazon's own policy, not fairness. Load accepted within 5 hours? " +
+         "Amazon's policy grants a 30-minute grace period to assign a driver, and a 5-minute " +
+         "reassignment window. Held at origin by Amazon staff, or stuck in a cellular dead zone — " +
+         "not carrier-controllable, per Amazon's rules. It won't fight traffic delays; Amazon calls " +
+         "those carrier-controllable, always. First review is automated: short, citing exact policy " +
+         "language and timestamps. Denied? The second draft is longer, demanding a yes-or-no answer."
+    },
+    'shot-refresher': {
+      h: "Why the refresh doesn't slow down in the background",
+      p: "Chrome throttles background tabs to about one timer tick a minute. Switch tabs while " +
+         "watching the board, and a normal 3-second refresh would quietly stretch to 60 seconds — " +
+         "right when you're not looking. NudoIQ runs its refresh loop off a Web Worker, which " +
+         "Chrome doesn't throttle the same way, so it keeps firing at full speed in the background. " +
+         "Each interval also carries ±20% random jitter, so it never lands on a predictable metronome."
+    }
+  };
+
   /* ── Find the feature block a screenshot belongs to ─────────────────── */
 
   function detailFor(img) {
@@ -110,7 +153,8 @@
   function open(img) {
     var opener = document.activeElement;
     var shot = (img.getAttribute('src').split('/').pop() || '').replace(/\.(webp|png|jpg)$/, '');
-    var detail = detailFor(img);
+    var deep = DEPTH[shot];
+    var detail = deep ? { heading: deep.h, parts: [{ tag: 'P', text: deep.p }] } : detailFor(img);
     var alt = img.getAttribute('alt') || '';
 
     var b = document.createElement('div');
@@ -207,7 +251,7 @@
     document.body.appendChild(b);
     x.focus();
 
-    track('ProofZoom', { shot: shot, hasDetail: !!detail });
+    track('ProofZoom', { shot: shot, depth: !!deep });
   }
 
   /* ── Wiring ─────────────────────────────────────────────────────────── */
