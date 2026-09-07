@@ -1,155 +1,239 @@
 /* ---------------------------------------------------------------------------
- * proof-zoom.js — make the two things visitors actually click do something.
+ * proof-zoom.js — a click on a screenshot is the highest-intent signal on the
+ * page, so it opens the feature, not just a bigger picture.
  *
  * WHY THIS EXISTS. Microsoft Clarity, 7 days: 25 homepage sessions produced 24
- * dead clicks, and the ranked targets were not the nav. They were the product
- * screenshots and the price:
+ * dead clicks, and the ranked targets were not the navigation. They were the
+ * product screenshots and the price:
  *
  *     "Privacy-safe product exam…"      64 dead clicks
  *     "$49.99 a month. Every fea…"      64
  *     "The board said $632. Nudo…"      48
  *     "NudoIQ Bid Advisor showin…"      48
  *
- * A dead click is Clarity's name for a click that changed nothing. People were
- * reaching for a closer look at the evidence and for the offer, and both were
- * inert. The nav anchors, for the record, were fine — #features, #pricing and
- * #faq all resolve; that hypothesis was checked and dropped.
+ * A dead click is Clarity's name for a click that changed nothing. The nav
+ * anchors were the obvious suspect and they are fine — #features, #pricing and
+ * #faq all resolve; that hypothesis was checked and dropped before any code.
  *
- * The sample is small and mostly not carriers (see the launch-readiness audit:
- * the traffic that week was Caleb, Claude, and the Chrome Web Store review team
- * in India). But the SHAPE of the signal is worth building for, because it is
- * behaviour rather than opinion: the two things a visitor reaches for are the
- * proof and the price.
+ * Caleb's read, which is the right one: somebody who clicks a screenshot is not
+ * asking for more pixels, they are asking about that feature. So the lightbox
+ * carries the feature's own explanation and a way to act on it.
  *
- * WHAT IT DOES
- *   1. Every product screenshot opens full-size in a lightbox, captioned with
- *      its own alt text, and fires ProofZoom with the shot name — so once there
- *      is real traffic we learn WHICH screenshot people want to inspect. That
- *      is a direct read on which feature is doing the selling.
- *   2. The pricing headline and the price card become real links to the Chrome
- *      Web Store.
+ * WHERE THE WORDS COME FROM. Nothing here is newly written. Every screenshot on
+ * this page already sits inside a `div.split` next to its own heading and four
+ * or five paragraphs of feature copy. The panel lifts that block verbatim. Two
+ * reasons: this session does not write customer-facing copy, and copy that is
+ * cloned from the page can never drift out of sync with the page.
  *
- * ON POINT 2, THE IMPORTANT DETAIL: they are real <a href> elements pointing at
- * the store, NOT click handlers. That is deliberate. mobile-bridge.js already
- * delegates on `a[href*=chromewebstore]` — it fires StoreClick on desktop and
- * intercepts with the install-needs-a-computer sheet on mobile. Using an anchor
- * means both behaviours are inherited for free and cannot drift out of sync
- * with the ones on the existing buttons. Re-implementing either here would be
- * two copies of the same rule.
+ * WHAT IT MEASURES. `ProofZoom` fires with the shot filename, and `ProofZoomCTA`
+ * fires when someone goes to the store from inside a panel. Those two together
+ * answer a question nobody has been able to answer: **which feature is doing the
+ * selling.** We have never had that, and it is the cheapest way to get it.
+ *
+ * The store link is a real <a href>, not a click handler. mobile-bridge.js
+ * already delegates on a[href*=chromewebstore] — StoreClick on desktop, the
+ * install-needs-a-computer sheet on mobile. An anchor inherits both and cannot
+ * drift out of sync with the buttons elsewhere on the page.
  * ------------------------------------------------------------------------- */
 (function () {
   'use strict';
 
   var STORE = 'https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk';
+  var ES = document.documentElement.lang === 'es' || location.pathname.indexOf('/es') === 0;
+  var CTA = ES ? 'Instalar NudoIQ — 7 días gratis' : 'Add NudoIQ to Chrome — 7 days free';
+  var CLOSE = ES ? 'Cerrar' : 'Close';
 
   function track(name, params) {
     try { if (window.fbq) window.fbq('trackCustom', name, params || {}); } catch (e) {}
     try { if (window.clarity) window.clarity('event', name); } catch (e) {}
   }
 
-  /* ── 1. Screenshot lightbox ─────────────────────────────────────────── */
+  /* ── Find the feature block a screenshot belongs to ─────────────────── */
+
+  function detailFor(img) {
+    // Climb to the nearest ancestor that is a feature block. `div.split` is the
+    // page's own two-column feature layout; stopping there rather than at "any
+    // ancestor with a heading" is what keeps the hero image from dragging in
+    // the entire page.
+    var host = img.closest('.split');
+    if (!host) return null;
+    var h = host.querySelector('h2, h3');
+    var parts = [].slice.call(host.querySelectorAll('p, li'))
+      .map(function (n) { return { tag: n.tagName, text: (n.innerText || '').trim() }; })
+      .filter(function (n) { return n.text.length > 20; });
+    if (!h && !parts.length) return null;
+    return { heading: h ? h.innerText.trim() : '', parts: parts };
+  }
+
+  /* ── Styles ─────────────────────────────────────────────────────────── */
 
   function styles() {
     var css = [
-      '.nq-zoom-b{position:fixed;inset:0;background:rgba(10,10,12,.88);z-index:9990;',
-        'opacity:0;transition:opacity .16s ease;display:flex;align-items:center;justify-content:center;padding:24px}',
-      '.nq-zoom-b.is-open{opacity:1}',
-      '.nq-zoom-f{max-width:min(1400px,96vw);max-height:92vh;display:flex;flex-direction:column;gap:10px}',
-      '.nq-zoom-f img{max-width:100%;max-height:82vh;object-fit:contain;border-radius:6px;',
-        'background:#fff;box-shadow:0 24px 70px -20px rgba(0,0,0,.7)}',
-      '.nq-zoom-cap{color:#E7E7EA;font:400 13px/1.45 "Inter Tight",Inter,system-ui,sans-serif;max-width:80ch}',
-      '.nq-zoom-x{position:absolute;top:16px;right:18px;width:44px;height:44px;border:0;border-radius:6px;',
-        'background:rgba(255,255,255,.12);color:#fff;font-size:24px;line-height:1;cursor:pointer}',
-      '.nq-zoom-x:hover{background:rgba(255,255,255,.22)}',
-      // the affordance: without it nobody knows the image is clickable
+      // Visible by default and faded in with a CSS animation rather than by
+      // toggling a class from requestAnimationFrame. The class version was
+      // observed stuck at opacity 0 on a mobile viewport — the frame callback
+      // raced the insert — which renders the whole panel translucent over the
+      // page. A keyframe runs on insertion and cannot be missed.
+      '@keyframes nq-zoom-in{from{opacity:0}to{opacity:1}}',
+      '.nq-zoom-b{position:fixed;inset:0;background:rgba(10,10,12,.88);z-index:9990;opacity:1;',
+        'animation:nq-zoom-in .16s ease;transition:opacity .16s ease;overflow:auto;padding:24px;display:flex;align-items:flex-start;justify-content:center}',
+      '.nq-zoom-f{background:#fff;border-radius:16px;overflow:hidden;width:min(1180px,96vw);',
+        'display:grid;grid-template-columns:minmax(0,1.35fr) minmax(300px,.9fr);',
+        'box-shadow:0 30px 90px -24px rgba(0,0,0,.65);margin:auto}',
+      '.nq-zoom-img{background:#F4F5F7;display:flex;align-items:center;justify-content:center;padding:18px;min-width:0}',
+      '.nq-zoom-img img{max-width:100%;max-height:76vh;object-fit:contain;border-radius:8px;display:block}',
+      '.nq-zoom-d{padding:30px 30px 26px;display:flex;flex-direction:column;gap:14px;',
+        'font-family:"Inter Tight",Inter,system-ui,-apple-system,Segoe UI,sans-serif;overflow:auto;max-height:88vh}',
+      '.nq-zoom-d h3{margin:0;font-size:22px;line-height:1.22;font-weight:600;letter-spacing:-.02em;color:#161616}',
+      '.nq-zoom-d p{margin:0;font-size:15px;line-height:1.55;color:#333232}',
+      '.nq-zoom-d ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:7px}',
+      '.nq-zoom-d li{font-size:15px;line-height:1.5;color:#333232}',
+      '.nq-zoom-cap{font-size:12.5px;line-height:1.45;color:#6B6B6B;border-top:1px solid #ECECEF;padding-top:12px;margin-top:auto}',
+      '.nq-zoom-cta{display:flex;align-items:center;justify-content:center;min-height:48px;padding:14px 18px;',
+        'border-radius:999px;background:#3366FF;color:#fff !important;text-decoration:none;font-weight:600;font-size:15.5px}',
+      '.nq-zoom-cta:hover{background:#2551B8}',
+      '.nq-zoom-x{position:fixed;top:14px;right:16px;width:44px;height:44px;border:0;border-radius:999px;',
+        'background:rgba(255,255,255,.16);color:#fff;font-size:22px;line-height:1;cursor:pointer;z-index:9992}',
+      '.nq-zoom-x:hover{background:rgba(255,255,255,.28)}',
       'img[data-nq-zoom]{cursor:zoom-in}',
-      '@media (prefers-reduced-motion:reduce){.nq-zoom-b{transition:none}}'
+      '@media (max-width:900px){.nq-zoom-f{grid-template-columns:1fr}.nq-zoom-d{max-height:none;padding:22px}',
+        '.nq-zoom-img img{max-height:44vh}.nq-zoom-b{padding:12px}}',
+      '@media (prefers-reduced-motion:reduce){.nq-zoom-b{animation:none}}'
     ].join('');
     var s = document.createElement('style');
     s.textContent = css;
     document.head.appendChild(s);
   }
 
+  /* ── The panel ──────────────────────────────────────────────────────── */
+
   function open(img) {
     var opener = document.activeElement;
+    var shot = (img.getAttribute('src').split('/').pop() || '').replace(/\.(webp|png|jpg)$/, '');
+    var detail = detailFor(img);
+    var alt = img.getAttribute('alt') || '';
 
     var b = document.createElement('div');
     b.className = 'nq-zoom-b';
     b.setAttribute('role', 'dialog');
     b.setAttribute('aria-modal', 'true');
-    b.setAttribute('aria-label', img.getAttribute('alt') || 'Product screenshot');
+    b.setAttribute('aria-label', detail && detail.heading ? detail.heading : (alt || 'Product screenshot'));
 
     var f = document.createElement('div');
     f.className = 'nq-zoom-f';
 
+    var pane = document.createElement('div');
+    pane.className = 'nq-zoom-img';
     var big = document.createElement('img');
     big.src = img.currentSrc || img.src;
-    big.alt = img.getAttribute('alt') || '';
+    big.alt = alt;
+    pane.appendChild(big);
 
-    var cap = document.createElement('p');
-    cap.className = 'nq-zoom-cap';
-    cap.textContent = img.getAttribute('alt') || '';
+    var d = document.createElement('div');
+    d.className = 'nq-zoom-d';
+
+    if (detail) {
+      if (detail.heading) {
+        var h = document.createElement('h3');
+        h.textContent = detail.heading;
+        d.appendChild(h);
+      }
+      var ul = null;
+      detail.parts.forEach(function (part) {
+        if (part.tag === 'LI') {
+          if (!ul) { ul = document.createElement('ul'); d.appendChild(ul); }
+          var li = document.createElement('li');
+          li.textContent = part.text;
+          ul.appendChild(li);
+        } else {
+          ul = null;
+          var p = document.createElement('p');
+          p.textContent = part.text;
+          d.appendChild(p);
+        }
+      });
+    }
+
+    // The alt text is the most precise description of what is in the picture —
+    // it names the actual numbers on screen — so it earns a place as the caption
+    // rather than being thrown away once the image is enlarged.
+    if (alt) {
+      var cap = document.createElement('p');
+      cap.className = 'nq-zoom-cap';
+      cap.textContent = alt;
+      d.appendChild(cap);
+    }
+
+    var a = document.createElement('a');
+    a.className = 'nq-zoom-cta';
+    a.href = STORE;                      // real href — see the header note
+    a.textContent = CTA;
+    a.addEventListener('click', function () { track('ProofZoomCTA', { shot: shot }); });
+    d.appendChild(a);
+
+    f.appendChild(pane);
+    f.appendChild(d);
 
     var x = document.createElement('button');
     x.className = 'nq-zoom-x';
     x.type = 'button';
-    x.setAttribute('aria-label', 'Close');
+    x.setAttribute('aria-label', CLOSE);
     x.innerHTML = '&times;';
 
-    f.appendChild(big);
-    if (cap.textContent) f.appendChild(cap);
     b.appendChild(f);
     b.appendChild(x);
 
     function close() {
-      b.classList.remove('is-open');
+      b.style.opacity = '0';
       document.removeEventListener('keydown', onKey, true);
+      document.documentElement.style.overflow = '';
       setTimeout(function () { b.remove(); if (opener && opener.focus) opener.focus(); }, 180);
     }
-    // Captured, because the page's own listeners stop propagation in places.
     function onKey(e) {
-      if (e.key === 'Escape') { e.stopPropagation(); close(); }
-      // Only one focusable element in here, so Tab simply stays on it.
-      if (e.key === 'Tab') { e.preventDefault(); x.focus(); }
+      if (e.key === 'Escape') { e.stopPropagation(); close(); return; }
+      if (e.key !== 'Tab') return;
+      // Keep focus inside: close button and CTA are the only two stops.
+      var stops = [x, a];
+      var i = stops.indexOf(document.activeElement);
+      e.preventDefault();
+      stops[(i + (e.shiftKey ? stops.length - 1 : 1)) % stops.length].focus();
     }
 
-    b.addEventListener('click', function (e) { if (e.target === b || e.target === f) close(); });
+    b.addEventListener('click', function (e) { if (e.target === b) close(); });
     x.addEventListener('click', close);
     document.addEventListener('keydown', onKey, true);
 
+    document.documentElement.style.overflow = 'hidden';
     document.body.appendChild(b);
-    requestAnimationFrame(function () { b.classList.add('is-open'); });
     x.focus();
 
-    // The shot filename is the useful dimension: it says which FEATURE the
-    // visitor wanted a closer look at.
-    var name = (big.src.split('/').pop() || '').replace(/\.(webp|png|jpg)$/, '');
-    track('ProofZoom', { shot: name });
+    track('ProofZoom', { shot: shot, hasDetail: !!detail });
   }
 
+  /* ── Wiring ─────────────────────────────────────────────────────────── */
+
   function wireShots() {
-    var shots = [].slice.call(document.querySelectorAll('img[src*="shot-"]'));
-    shots.forEach(function (img) {
-      if (img.closest('a')) return;           // already does something; leave it
+    var n = 0;
+    [].slice.call(document.querySelectorAll('img[src*="shot-"]')).forEach(function (img) {
+      if (img.closest('a')) return;
       img.setAttribute('data-nq-zoom', '1');
       img.setAttribute('tabindex', '0');
       img.setAttribute('role', 'button');
-      var alt = img.getAttribute('alt') || 'product screenshot';
-      img.setAttribute('aria-label', 'Enlarge: ' + alt);
+      img.setAttribute('aria-label', (ES ? 'Ver más sobre: ' : 'See more about: ') +
+        (img.getAttribute('alt') || 'this feature'));
       img.addEventListener('click', function () { open(img); });
       img.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(img); }
       });
+      n++;
     });
-    return shots.length;
+    return n;
   }
-
-  /* ── 2. The price becomes a link ────────────────────────────────────── */
 
   function linkify(el, label) {
     if (!el || el.closest('a')) return false;
     var a = document.createElement('a');
-    a.href = STORE;                            // real href: see the header note
+    a.href = STORE;
     a.setAttribute('aria-label', label);
     a.style.cssText = 'color:inherit;text-decoration:none;display:block;cursor:pointer';
     el.parentNode.insertBefore(a, el);
@@ -158,38 +242,31 @@
   }
 
   function wirePrice() {
-    var n = 0;
-    var pricing = document.querySelector('#pricing');
+    var n = 0, pricing = document.querySelector('#pricing');
+    var label = ES ? 'Obtener NudoIQ — $49.99 al mes' : 'Get NudoIQ — $49.99 a month';
     if (pricing) {
-      // The headline carrying the number — 64 dead clicks landed here.
-      if (linkify(pricing.querySelector('h2'), 'Get NudoIQ — $49.99 a month')) n++;
-      // And the price card itself.
-      if (linkify(pricing.querySelector('.price .pricetop'), 'Get NudoIQ — $49.99 a month')) n++;
+      if (linkify(pricing.querySelector('h2'), label)) n++;
+      if (linkify(pricing.querySelector('.price .pricetop'), label)) n++;
     }
-    // The "what it costs a day" stat card sits far above the pricing section and
-    // repeats the number, so it collected clicks of its own.
-    [].slice.call(document.querySelectorAll('#features .fig, .figs .fig')).forEach(function (fig) {
-      if (/\$49\.99|costs a day/i.test(fig.textContent || '')) {
-        var h = fig.querySelector('h3');
-        if (h && !h.closest('a')) {
-          var a = document.createElement('a');
-          a.href = '#pricing';
-          a.style.cssText = 'color:inherit;text-decoration:none';
-          h.parentNode.insertBefore(a, h);
-          a.appendChild(h);
-          n++;
-        }
-      }
+    [].slice.call(document.querySelectorAll('.fig')).forEach(function (fig) {
+      if (!/\$49\.99/.test(fig.textContent || '')) return;
+      var h = fig.querySelector('h3');
+      if (!h || h.closest('a')) return;
+      var a = document.createElement('a');
+      a.href = '#pricing';
+      a.style.cssText = 'color:inherit;text-decoration:none';
+      h.parentNode.insertBefore(a, h);
+      a.appendChild(h);
+      n++;
     });
     return n;
   }
 
   function init() {
     styles();
-    var shots = wireShots();
-    var priced = wirePrice();
+    var s = wireShots(), p = wirePrice();
     if (window.console && console.debug) {
-      console.debug('[NudoIQ] proof-zoom: ' + shots + ' shots, ' + priced + ' price targets');
+      console.debug('[NudoIQ] proof-zoom: ' + s + ' shots, ' + p + ' price targets');
     }
   }
 
