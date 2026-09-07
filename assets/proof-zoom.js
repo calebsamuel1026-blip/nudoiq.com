@@ -137,6 +137,22 @@
          "is different — it's a confirmation, not an interruption, so autobook success messages go " +
          "out on Telegram regardless of quiet hours. You shouldn't have to wake up and wonder if a " +
          "load booked itself while you were asleep."
+    },
+    'shot-fleet': {
+      h: "What the dashboard won't fake for you",
+      p: "Revenue and miles count only completed trips — not booked, not in transit. What's on " +
+         "screen is what actually finished. Net margin subtracts driver pay and fuel, and driver pay " +
+         "is per driver: each one's own rate against their own miles, not a fleet average. Without " +
+         "driver rates entered, “net margin” is really just revenue minus fuel — looks like " +
+         "profit, isn't. So it says which numbers are missing instead of guessing. Driver roster " +
+         "comes from Relay's own API, not scraped."
+    },
+    'shot-driver-pay': {
+      h: "How a driver's pay statement adds up",
+      p: "Each driver's statement runs their own per-mile rate against their own completed miles for " +
+         "the period, then totals it into loads, miles, and pay. Print it or save it as a PDF. It " +
+         "uses the same completed-trips-only rule as the dashboard — so a driver's statement and " +
+         "the fleet total can never quietly disagree with each other."
     }
   };
 
