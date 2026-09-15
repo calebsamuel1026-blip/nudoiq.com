@@ -12,35 +12,43 @@
  *
  * Desktop behaviour is untouched — the links work exactly as before.
  *
- * ⚠️ ALL VISIBLE STRINGS ARE PLACEHOLDERS. They live in COPY below and must be
- * replaced by the copywriter before this ships. Do not deploy with TODO- text.
+ * Copy status: REVIEWED 2026-09-15. The placeholder strings this file shipped with
+ * went live on nudoiq.com and stayed live; they are now replaced with copywriter
+ * text (research/copy/GAP-REPAIRS-2026-09-15.json). Every visible string still lives
+ * in COPY below — change it there and nowhere else, and route the new words through
+ * the copywriter, never write them here.
  * ------------------------------------------------------------------------- */
 (function () {
   'use strict';
 
-  // --- copy slots — TODO-COPY: to be written by the copywriter session -------
+  // --- copy, written by the copywriter agent (Haiku) 2026-09-15 ------------
+  // This sheet is what EVERY phone visitor from Instagram, Facebook, TikTok and YouTube
+  // Shorts sees, because the product is a desktop Chrome extension. It shipped with the
+  // placeholder strings still in it, including 'never touches your Amazon password' - the
+  // same unverifiable claim that was deleted from the rest of the site on 2026-09-14.
+  // Replaced with reviewed copy. Source: research/copy/GAP-REPAIRS-2026-09-15.json
   var COPY = {
     en: {
-      title: 'This install needs a real computer.',
-      body: 'Not an oversight — the same reason NudoIQ never touches your Amazon password. Send yourself the link and open it on a laptop or desktop.',
-      email: 'Email me the install link',
-      copy: 'Copy link instead',
-      copied: 'Link copied',
-      desktop: "I'm already on a computer",
-      close: 'Close',
-      subject: 'Your NudoIQ install link',
-      mailBody: 'Open this on a laptop or desktop to install NudoIQ:\n\n{url}\n\nIndependent software. Not affiliated with Amazon.'
+      title: "Get NudoIQ on your computer",
+      body: "NudoIQ installs on Chrome from any computer. Email the link to yourself, copy it, or come back on desktop. Start free for 7 days.",
+      email: "Email me the install link",
+      copy: "Copy the link instead",
+      copied: "Link copied",
+      desktop: "I'll open it on desktop",
+      close: "Close",
+      subject: "Your NudoIQ install link",
+      mailBody: "Install NudoIQ on your computer:\n\n{url}\n\nFree for 7 days, then $49.99/month. Cancel anytime.\nIndependent software. Not affiliated with Amazon."
     },
     es: {
-      title: 'Esto se instala solo desde una computadora.',
-      body: 'No es un descuido — es la misma razón por la que NudoIQ nunca toca tu contraseña de Amazon. Envíate el enlace y ábrelo desde una laptop o computadora.',
-      email: 'Enviarme el enlace por correo',
-      copy: 'Copiar enlace',
-      copied: 'Enlace copiado',
-      desktop: 'Ya estoy en una computadora',
-      close: 'Cerrar',
-      subject: 'Tu enlace de instalación de NudoIQ',
-      mailBody: 'Abre esto desde una laptop o computadora para instalar NudoIQ:\n\n{url}\n\nSoftware independiente. No afiliado con Amazon.'
+      title: "Instala NudoIQ en tu computadora",
+      body: "NudoIQ se instala en Chrome desde cualquier computadora. Envíate el enlace, cópialo, o vuelve en desktop. Prueba gratis 7 días.",
+      email: "Enviarme el enlace por correo",
+      copy: "Copiar enlace",
+      copied: "Enlace copiado",
+      desktop: "Lo abro en desktop",
+      close: "Cerrar",
+      subject: "Tu enlace de instalación de NudoIQ",
+      mailBody: "Instala NudoIQ en tu computadora:\n\n{url}\n\nGratis 7 días, luego $49.99/mes. Cancela en cualquier momento.\nSoftware independiente. No afiliado con Amazon."
     }
   };
 
