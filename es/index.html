@@ -407,7 +407,52 @@
         mask-image:linear-gradient(90deg,#000 88%,transparent)}
     }
     @media (prefers-reduced-motion:reduce){.ftab{transition:none}}
-  </style>
+    /* ── Background people ───────────────────────────────────────────────
+     Placement thinking, after the first attempt put them only in the outer
+     gutter where they were invisible on a normal laptop:
+
+     This page is a tight, centred 1104px column. Measured at 1009px wide the
+     content runs 40 -> 969, so there is essentially NO free space inside the
+     column and a figure there would sit under text. The places that DO have
+     room are the full-bleed coloured panels — the periwinkle hero, the ink
+     bands and the ink closer. Those run edge to edge while their content stays
+     in the 1104 column, so a figure hugging a panel's inner edge sits in the
+     panel's own margin: beside the text, never under it, and it reads as
+     designed-in rather than as a ghost floating on white paper.
+
+     Three moments down the page, not one per section: above the fold in the
+     hero, once mid-page on the dark band, once at the closing CTA.
+
+     Layout safety unchanged: absolute inside a position:relative panel, z-index
+     0 under content, pointer-events:none, aria-hidden, width capped to the
+     panel margin so it can never reach the column, and no overflow:hidden
+     anywhere (that would clip the proof-zoom lightbox). */
+  .nq-ppl-host{position:relative}
+  .nq-ppl-host>*{position:relative;z-index:1}
+  .nq-ppl{position:absolute;bottom:0;z-index:0;pointer-events:none;user-select:none;
+    background-repeat:no-repeat;background-size:auto 100%;width:0;
+    /* the coloured panels are inset by --gut each side, so take that off too */
+    max-width:calc((100vw - 1104px)/2 - 34px);
+    -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 70%,transparent 100%);
+            mask-image:linear-gradient(to bottom,transparent 0,#000 14%,#000 70%,transparent 100%)}
+  .nq-ppl--left{left:0;background-position:right bottom}
+  .nq-ppl--right{right:0;background-position:left bottom}
+  /* On the periwinkle hero he should read as a person standing there, not a silhouette:
+     multiply turned him into a blue shape, so plain alpha at .45 with only light desaturation. */
+  .nq-ppl--on-peri{opacity:.45;filter:grayscale(.25) contrast(.97)}
+  /* On ink: screen lifts the figure out of the dark instead of burying it. */
+  .nq-ppl--on-ink{mix-blend-mode:screen;opacity:.22;filter:grayscale(.45) contrast(1.05)}
+  .nq-ppl--tall{height:clamp(300px,30vw,470px)}
+  .nq-ppl--mid{height:clamp(250px,24vw,380px)}
+  /* Declared inside the media query so a phone never downloads them at all. */
+  @media (min-width:1200px){
+    .nq-ppl{width:auto}
+    .nq-ppl--driver-a{background-image:url(../assets/people/driver-a.webp);width:190px}
+    .nq-ppl--driver-b{background-image:url(../assets/people/driver-b.webp);width:172px}
+    .nq-ppl--driver-c{background-image:url(../assets/people/driver-c.webp);width:168px}
+  }
+  @media (max-width:1199px){.nq-ppl{display:none}}
+</style>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -429,7 +474,7 @@
 
     <!-- ── HERO ─────────────────────────────────────────────── -->
     <section class="hero">
-      <div class="hero-panel"><div class="hero-grid">
+      <div class="hero-panel nq-ppl-host"><div class="nq-ppl nq-ppl--left nq-ppl--tall nq-ppl--driver-a nq-ppl--on-peri" aria-hidden="true"></div><div class="hero-grid">
         <div>
           <p class="eyebrow" data-t="heroEyebrow">Para dueños-operadores y flotas de Amazon Relay</p>
           <h1 data-t="heroTitle">Descubre cuánto vale realmente una carga de Amazon Relay antes de reservarla.</h1>
@@ -673,7 +718,7 @@
 
 
     <!-- ── VALUE (dark) ──────────────────────────────────────── -->
-    <section class="dark"><div class="sec-in">
+    <section class="dark nq-ppl-host"><div class="nq-ppl nq-ppl--right nq-ppl--mid nq-ppl--driver-b nq-ppl--on-ink" aria-hidden="true"></div><div class="sec-in">
       <div class="sec-intro">
         <p class="eyebrow" data-t="valueEyebrow">Cómo Relay pone el precio</p>
         <h2 data-t="valueTitle">Descubrimos cómo Relay decide cuánto vale tu carga.</h2>
@@ -778,7 +823,7 @@
     </div></section>
 
     <!-- ── CLOSER ────────────────────────────────────────────── -->
-    <section class="closer"><div class="closer-in">
+    <section class="closer nq-ppl-host"><div class="nq-ppl nq-ppl--right nq-ppl--mid nq-ppl--driver-c nq-ppl--on-ink" aria-hidden="true"></div><div class="closer-in">
       <div><h2 data-t="finalTitle">Conoce cuánto vale la próxima carga antes de tomarla.</h2><p data-t="finalCopy">Siete días gratis. $49.99 al mes después. Cancela cuando quieras.</p></div>
       <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="installNow" target="_blank" rel="noopener">Agregar NudoIQ a Chrome</a>
     </div></section>
