@@ -248,9 +248,9 @@
      only — no name, no quote, no claim attached (see the standing rule in
      research/SITE-BACKGROUND-PEOPLE-2026-09-15.md). */
   .facepile{display:flex;align-items:center;margin-bottom:2px}
-  .facepile img{width:48px;height:48px;border-radius:50%;border:3px solid #fff;
-    background:var(--peri);object-fit:cover;box-shadow:var(--sh-1)}
-  .facepile img+img{margin-left:-16px}
+  .facepile img{width:52px;height:52px;border-radius:50%;border:3px solid #fff;
+    background:var(--peri);object-fit:cover;object-position:center 26%;box-shadow:var(--sh-1)}
+  .facepile img+img{margin-left:-17px}
   .ftabs{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;background:var(--paper-2);
     border:1px solid #ECECF1;border-radius:var(--rc);padding:8px;
     margin:0 auto 46px;width:max-content;max-width:100%}
@@ -308,17 +308,17 @@
   .mosaic{position:relative;max-width:1180px;margin:0 auto;padding:0 24px;text-align:center}
   .mosaic .pill{margin-bottom:26px}
   .mosaic h2{margin:0 auto 22px;max-width:17ch}
-  .mosaic .intro{margin:0 auto 34px;max-width:60ch;color:#E6ECFD}
+  .mosaic .intro{margin:0 auto 34px;max-width:54ch;color:#E6ECFD}
   .scatter{position:absolute;inset:0;pointer-events:none;z-index:0}
   .scatter figure{position:absolute;margin:0;border-radius:14px;overflow:hidden;
     box-shadow:0 26px 60px -26px rgba(6,12,36,.8);border:2px solid rgba(255,255,255,.28)}
   .scatter img{width:100%;height:100%;object-fit:cover;display:block}
   .sc1{width:190px;height:130px;left:-14px;top:2%}
-  .sc2{width:150px;height:186px;left:88px;bottom:6%}
+  .sc2{width:150px;height:186px;left:70px;bottom:4%}
   .sc3{width:216px;height:142px;right:-18px;top:8%}
-  .sc4{width:158px;height:198px;right:62px;bottom:2%}
+  .sc4{width:158px;height:198px;right:-12px;bottom:7%}
   .sc5{width:132px;height:132px;left:214px;top:-16px}
-  .sc6{width:138px;height:138px;right:228px;bottom:-14px}
+  .sc6{width:142px;height:142px;right:186px;bottom:-34px}
   .mosaic-in{position:relative;z-index:1}
   .figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:64px}
   .fig{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
@@ -446,7 +446,7 @@
   .closer-shot{position:absolute;right:0;top:0;bottom:0;width:40%;z-index:0}
   .closer-shot::before{content:"";position:absolute;inset:0;z-index:1;
     background:linear-gradient(90deg,var(--ink) 0%,rgba(22,22,22,.55) 26%,rgba(22,22,22,0) 62%)}
-  .closer-shot img{width:100%;height:100%;object-fit:cover;object-position:56% center}
+  .closer-shot img{width:100%;height:100%;object-fit:cover;object-position:52% 32%}
 
   /* ═══ FOOTER ══════════════════════════════════════════════ */
   footer{padding:60px var(--gut) 68px;background:var(--paper)}
@@ -577,7 +577,7 @@
         <div class="hero-top">
           <p class="eyebrow" data-t="heroEyebrow">For Amazon Relay owner-operators and fleets</p>
           <h1 class="display" data-t="heroTitle">The complete Relay automation toolkit.</h1>
-          <p class="lede" data-t="heroCopy">A Chrome extension that runs inside Amazon Relay, handling rates, disputes, autobook, backhauls, and profit math — so you don't have to.</p>
+          <p class="lede" data-t="heroCopy">A Chrome extension that runs inside Amazon Relay, handling rates, disputes, autobook, backhauls, and profit math. So you don't have to.</p>
           <div class="acts">
             <a class="btn btn-dark" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="install" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
             <a class="btn btn-ghost" href="#features" data-t="seeProduct">See the product</a>
@@ -590,7 +590,7 @@
           <img src="assets/shot-hero-loadboard.webp" alt="The NudoIQ control bar running inside the Amazon Relay load board, with alert, search and autobook modes above 358 results out of Maryville, Tennessee" width="1892" height="1021" decoding="async" loading="eager" fetchpriority="high">
         </div>
         <div class="float f-person">
-          <img src="/assets/people/portrait-owner.webp" srcset="/assets/people/portrait-owner-sm.webp 520w, /assets/people/portrait-owner.webp 880w" sizes="196px" alt="" width="880" height="1168" decoding="async" loading="eager">
+          <img src="/assets/people/portrait-door.webp" srcset="/assets/people/portrait-door-sm.webp 520w, /assets/people/portrait-door.webp 880w" sizes="156px" alt="" width="880" height="1168" decoding="async" loading="eager">
         </div>
         <div class="float f-flag">
           <p data-t="heroValue">One extension handles it all.</p>
@@ -613,12 +613,12 @@
     <section class="sec" id="features"><div class="sec-in">
       <div class="fhead">
         <div class="facepile" aria-hidden="true">
-          <img src="/assets/people/avatar-a.webp" alt="" width="440" height="440" decoding="async" loading="lazy">
-          <img src="/assets/people/avatar-b.webp" alt="" width="440" height="440" decoding="async" loading="lazy">
-          <img src="/assets/people/avatar-c.webp" alt="" width="440" height="440" decoding="async" loading="lazy">
+          <img src="/assets/people/face-a.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
+          <img src="/assets/people/face-b.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
+          <img src="/assets/people/face-c.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
         </div>
         <p class="pill" data-t="featuresEyebrow">Inside NudoIQ</p>
-        <h2 class="display" data-t="featuresTitle">Eleven tools, one extension — click through to see them</h2>
+        <h2 class="display" data-t="featuresTitle">Eleven tools, one extension. Click through to see them.</h2>
         <p class="flead" data-t="featuresLead">Each tab is a different tool built into NudoIQ. Click one to see exactly what it does.</p>
       </div>
       <div class="ftabs" role="tablist" aria-label="NudoIQ features">
@@ -639,7 +639,7 @@
         <div class="split">
           <div class="scopy">
             <h2 class="split-h" data-t="laneTitle">Every lane shows a target rate, a ceiling, and a confidence level.</h2>
-            <p data-t="laneCopy">NudoIQ reads the posted price against recent observations on that lane and gives you a number to target, the range it expects, and how much data sits behind the estimate.</p>
+            <p data-t="laneCopy">NudoIQ checks the posted price against that lane's history. It shows your target rate, the expected range, and how much data backs each estimate.</p>
             <ul class="ticks">
               <li data-t="lanePoint1">Target a number instead of guessing</li>
               <li data-t="lanePoint2">See how much data supports each estimate</li>
@@ -743,7 +743,7 @@
             <h2 class="split-h" data-t="autobookTitle">Set your rules once, then let the control bar act.</h2>
             <p data-t="autobookCopy">The control bar has three modes: Alert pings you on a match, Search highlights matches, and Autobook books one for you. Set price and lane rules, a profit floor, and a booking cap, then get a Telegram alert when one lands.</p>
             <ul class="ticks">
-              <li data-t="autobookPoint1">Alert, search, or autobook — you pick the mode</li>
+              <li data-t="autobookPoint1">Alert, search, or autobook: you pick the mode</li>
               <li data-t="autobookPoint2">Set a minimum profit floor before it books</li>
               <li data-t="autobookPoint3">Get a Telegram alert the moment one lands</li>
             </ul>
@@ -844,22 +844,22 @@
           <figure class="sc3"><img src="/assets/people/scene-dock.webp" srcset="/assets/people/scene-dock-sm.webp 720w, /assets/people/scene-dock.webp 2200w" sizes="216px" alt="" width="2200" height="1238" decoding="async" loading="lazy"></figure>
           <figure class="sc4"><img src="/assets/people/scene-cab.webp" srcset="/assets/people/scene-cab-sm.webp 720w, /assets/people/scene-cab.webp 1100w" sizes="158px" alt="" width="1100" height="829" decoding="async" loading="lazy"></figure>
           <figure class="sc5"><img src="/assets/people/scene-desk.webp" srcset="/assets/people/scene-desk-sm.webp 720w, /assets/people/scene-desk.webp 1200w" sizes="132px" alt="" width="1200" height="671" decoding="async" loading="lazy"></figure>
-          <figure class="sc6"><img src="/assets/people/portrait-owner.webp" srcset="/assets/people/portrait-owner-sm.webp 520w, /assets/people/portrait-owner.webp 880w" sizes="138px" alt="" width="880" height="1168" decoding="async" loading="lazy"></figure>
+          <figure class="sc6"><img src="/assets/people/scene-rear-doors.webp" srcset="/assets/people/scene-rear-doors-sm.webp 520w, /assets/people/scene-rear-doors.webp 900w" sizes="138px" alt="" width="900" height="900" decoding="async" loading="lazy"></figure>
         </div>
         <div class="mosaic-in">
           <p class="pill" data-t="valueEyebrow">How Relay prices loads</p>
           <h2 class="display" data-t="valueTitle">We figured out how Relay decides what your load is worth.</h2>
-          <p class="intro" data-t="valueCopy">It comes down to three things: how many loads are moving out of that warehouse today, what actually booked on that lane before, and whether volume is climbing or falling. NudoIQ tracks all three, then ranks the number on your board against that lane's own 90-day history.</p>
+          <p class="intro" data-t="valueCopy">Relay bases your rate on the same things Amazon looks at: season, time of day, origin, equipment, what booked before, and today's volume. NudoIQ tracks all six and ranks your posted rate against that lane's 90-day history.</p>
           <a class="btn btn-dark" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="installNow" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
         </div>
       </div>
       <div class="sec-in">
         <div class="figs">
-          <article class="fig"><div class="fignum">6</div><h3 data-t="timeCard">Six signals, every load</h3><p data-t="timeCardCopy">Day, hour, season, live demand, the full price spread and what actually booked — then today's median ranked against 90 days of that lane's own history.</p><small data-t="exampleLabel">Watched on every lane</small></article>
-          <article class="fig"><h3 data-t="proofCardTitle">Lane pricing history</h3><p data-t="proofCardCopy">See what lanes have paid based on prices posted to the board. Our estimates show a range and confidence level—history to inform your move, not a promise.</p></article>
-          <article class="fig"><div class="fignum">$1.64</div><h3 data-t="fleetCard">What it costs a day</h3><p data-t="fleetCardCopy">$49.99 a month, every feature, no annual contract — less than half of one 8% dispatch fee on a single load.</p><small data-t="productCapability">Arithmetic you can check</small></article>
+          <article class="fig"><div class="fignum">6</div><h3 data-t="timeCard">Six signals, every load</h3><p data-t="timeCardCopy">Season, time of day, origin, equipment, what booked before, and daily volume. Then today's median ranked against that lane's 90-day history.</p><small data-t="exampleLabel">Watched on every lane</small></article>
+          <article class="fig"><h3 data-t="proofCardTitle">Lane pricing history</h3><p data-t="proofCardCopy">See what lanes have paid based on prices posted to the board. Our estimates show a range and a confidence level. This is history to guide you, not a guarantee.</p></article>
+          <article class="fig"><div class="fignum">$1.64</div><h3 data-t="fleetCard">What it costs a day</h3><p data-t="fleetCardCopy">$49.99 a month, every feature, cancel anytime. Less than half of one 8% dispatch fee on a single load.</p><small data-t="productCapability">Arithmetic you can check</small></article>
         </div>
-        <p class="mech" data-t="valueMechanism">You can watch this same math running on the Lane Intelligence screen below, where a $483 target sits next to a $407 board price and the gap between them is the number NudoIQ is built to catch.</p>
+        <p class="mech" data-t="valueMechanism">On the Lane Intelligence screen below, you see a $483 target next to a $407 board price. That gap is what NudoIQ catches.</p>
       </div>
     </section>
 
@@ -876,8 +876,8 @@
       <div class="photo-in">
         <h2 class="display" data-t="trustTitle">Why carriers trust it with their board.</h2>
         <div class="chips chips-3">
-          <article class="chip"><h3 data-t="trust1Title">Your password stays with you</h3><p data-t="trust1Copy">NudoIQ runs inside your signed-in Relay browser tab—it never asks for your Amazon password or stores it. Your subscription email, driver information, and trip details are stored only for your account.</p></article>
-          <article class="chip"><h3 data-t="trust2Title">A named company, not an anonymous script</h3><p data-t="trust2Copy">Published by Sami Enterprises LLC of Portland, Oregon — the developer named on the Chrome Web Store listing.</p></article>
+          <article class="chip"><h3 data-t="trust1Title">Your password stays with you</h3><p data-t="trust1Copy">NudoIQ runs inside your signed-in Relay browser tab. It never asks for your Amazon password or stores it. Your subscription email, driver information, and trip details are stored only for your account.</p></article>
+          <article class="chip"><h3 data-t="trust2Title">A named company, not an anonymous script</h3><p data-t="trust2Copy">Published by Sami Enterprises LLC of Portland, Oregon. The developer named on the Chrome Web Store listing.</p></article>
           <article class="chip"><h3 data-t="trust3Title">Billing you control</h3><p data-t="trust3Copy">Payments run through Stripe, so card details never touch NudoIQ. Cancel from the Stripe portal any time, or email us and we do it within one business day.</p></article>
         </div>
       </div>
@@ -956,8 +956,8 @@
         <details><summary data-t="faq5Q">How do I cancel?</summary><p data-t="faq5A">Go to nudoiq.com/billing and open your Stripe billing portal (Stripe will send a one-time code to your subscription email). Or email contact@nudoiq.com. Cancel during the 7-day trial with no charge; cancel later and the next renewal is stopped.</p></details>
         <details><summary data-t="faq6Q">How can I get help?</summary><p><span data-t="faq6A">Email us at</span> <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a> <span data-t="faq6B">or message NudoIQ support on Telegram.</span></p></details>
         <details><summary data-t="faq7Q">What is the Amazon Relay load board?</summary><p data-t="faq7A">It is the board inside Amazon Relay where Amazon posts freight to contracted carriers. Carriers search it, book loads, and post available trucks against it. NudoIQ does not replace that board. It runs inside it and adds rate context, alerts and reporting to the screens you already use.</p></details>
-        <details><summary data-t="faq8Q">Does NudoIQ see my Amazon Relay password?</summary><p data-t="faq8A">NudoIQ runs inside your signed-in Relay browser tab—it never asks for your Amazon password or stores it. Your subscription email, driver information, and trip details are stored only for your account.</p></details>
-        <details><summary data-t="faq10Q">Will NudoIQ get my account suspended?</summary><p data-t="faq10A">NudoIQ runs only in your own browser on Relay pages you're signed in to—it doesn't log in from another location or ask for your password. You control the refresh speed. Amazon's decisions about accounts are theirs alone, but NudoIQ stays within the Relay interface you already use.</p></details>
+        <details><summary data-t="faq8Q">Does NudoIQ see my Amazon Relay password?</summary><p data-t="faq8A">NudoIQ runs inside your signed-in Relay browser tab. It never asks for your Amazon password or stores it. Your subscription email, driver information, and trip details are stored only for your account.</p></details>
+        <details><summary data-t="faq10Q">Will NudoIQ get my account suspended?</summary><p data-t="faq10A">NudoIQ runs only in your own browser on Relay pages you're signed in to. It doesn't log in from another location or ask for your password. You control the refresh speed. Amazon's decisions about accounts are theirs alone, but NudoIQ stays within the Relay interface you already use.</p></details>
         <details><summary data-t="faq9Q">Does NudoIQ work on load boards other than Amazon Relay?</summary><p data-t="faq9A">No. NudoIQ is built specifically for the Amazon Relay load board and reads only Relay screens. It does not connect to DAT, Truckstop or other load boards.</p></details>
       </div>
     </div></section>
@@ -973,7 +973,7 @@
       </div>
       </div>
       <div class="closer-shot">
-        <img src="/assets/people/scene-cab.webp" srcset="/assets/people/scene-cab-sm.webp 720w, /assets/people/scene-cab.webp 1100w" sizes="(max-width:1000px) 100vw, 560px" alt="" width="1100" height="829" decoding="async" loading="lazy">
+        <img src="/assets/people/scene-dusk.webp" srcset="/assets/people/scene-dusk-sm.webp 520w, /assets/people/scene-dusk.webp 880w" sizes="(max-width:1000px) 100vw, 560px" alt="" width="880" height="1168" decoding="async" loading="lazy">
       </div>
     </section>
 
@@ -1308,7 +1308,7 @@
           "name": "Does NudoIQ see my Amazon Relay password?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "NudoIQ runs inside your signed-in Relay browser tab—it never asks for your Amazon password or stores it. Your subscription email, driver information, and trip details are stored only for your account."
+            "text": "NudoIQ runs inside your signed-in Relay browser tab. It never asks for your Amazon password or stores it. Your subscription email, driver information, and trip details are stored only for your account."
           }
         },
         {
@@ -1324,7 +1324,7 @@
           "name": "Will NudoIQ get my account suspended?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "NudoIQ runs only in your own browser on Relay pages you're signed in to—it doesn't log in from another location or ask for your password. You control the refresh speed. Amazon's decisions about accounts are theirs alone, but NudoIQ stays within the Relay interface you already use."
+            "text": "NudoIQ runs only in your own browser on Relay pages you're signed in to. It doesn't log in from another location or ask for your password. You control the refresh speed. Amazon's decisions about accounts are theirs alone, but NudoIQ stays within the Relay interface you already use."
           }
         }
       ]

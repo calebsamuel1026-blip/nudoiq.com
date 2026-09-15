@@ -248,9 +248,9 @@
      only — no name, no quote, no claim attached (see the standing rule in
      research/SITE-BACKGROUND-PEOPLE-2026-09-15.md). */
   .facepile{display:flex;align-items:center;margin-bottom:2px}
-  .facepile img{width:48px;height:48px;border-radius:50%;border:3px solid #fff;
-    background:var(--peri);object-fit:cover;box-shadow:var(--sh-1)}
-  .facepile img+img{margin-left:-16px}
+  .facepile img{width:52px;height:52px;border-radius:50%;border:3px solid #fff;
+    background:var(--peri);object-fit:cover;object-position:center 26%;box-shadow:var(--sh-1)}
+  .facepile img+img{margin-left:-17px}
   .ftabs{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;background:var(--paper-2);
     border:1px solid #ECECF1;border-radius:var(--rc);padding:8px;
     margin:0 auto 46px;width:max-content;max-width:100%}
@@ -308,17 +308,17 @@
   .mosaic{position:relative;max-width:1180px;margin:0 auto;padding:0 24px;text-align:center}
   .mosaic .pill{margin-bottom:26px}
   .mosaic h2{margin:0 auto 22px;max-width:17ch}
-  .mosaic .intro{margin:0 auto 34px;max-width:60ch;color:#E6ECFD}
+  .mosaic .intro{margin:0 auto 34px;max-width:54ch;color:#E6ECFD}
   .scatter{position:absolute;inset:0;pointer-events:none;z-index:0}
   .scatter figure{position:absolute;margin:0;border-radius:14px;overflow:hidden;
     box-shadow:0 26px 60px -26px rgba(6,12,36,.8);border:2px solid rgba(255,255,255,.28)}
   .scatter img{width:100%;height:100%;object-fit:cover;display:block}
   .sc1{width:190px;height:130px;left:-14px;top:2%}
-  .sc2{width:150px;height:186px;left:88px;bottom:6%}
+  .sc2{width:150px;height:186px;left:70px;bottom:4%}
   .sc3{width:216px;height:142px;right:-18px;top:8%}
-  .sc4{width:158px;height:198px;right:62px;bottom:2%}
+  .sc4{width:158px;height:198px;right:-12px;bottom:7%}
   .sc5{width:132px;height:132px;left:214px;top:-16px}
-  .sc6{width:138px;height:138px;right:228px;bottom:-14px}
+  .sc6{width:142px;height:142px;right:186px;bottom:-34px}
   .mosaic-in{position:relative;z-index:1}
   .figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:64px}
   .fig{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
@@ -446,7 +446,7 @@
   .closer-shot{position:absolute;right:0;top:0;bottom:0;width:40%;z-index:0}
   .closer-shot::before{content:"";position:absolute;inset:0;z-index:1;
     background:linear-gradient(90deg,var(--ink) 0%,rgba(22,22,22,.55) 26%,rgba(22,22,22,0) 62%)}
-  .closer-shot img{width:100%;height:100%;object-fit:cover;object-position:56% center}
+  .closer-shot img{width:100%;height:100%;object-fit:cover;object-position:52% 32%}
 
   /* ═══ FOOTER ══════════════════════════════════════════════ */
   footer{padding:60px var(--gut) 68px;background:var(--paper)}
@@ -577,7 +577,7 @@
         <div class="hero-top">
           <p class="eyebrow" data-t="heroEyebrow">Para dueños-operadores y flotas de Amazon Relay</p>
           <h1 class="display" data-t="heroTitle">El kit completo de automatización para Relay.</h1>
-          <p class="lede" data-t="heroCopy">Una extensión de Chrome que funciona dentro de Amazon Relay, manejando tarifas, disputas, autobook, retrocargas y cálculo de ganancias — para que tú no tengas que hacerlo.</p>
+          <p class="lede" data-t="heroCopy">Una extensión de Chrome que se ejecuta dentro de Amazon Relay, manejando tarifas, disputas, autobook, retrocargas y cálculo de ganancias. Para que tú no tengas que hacerlo.</p>
           <div class="acts">
             <a class="btn btn-dark" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="install" target="_blank" rel="noopener">Agregar NudoIQ a Chrome</a>
             <a class="btn btn-ghost" href="#features" data-t="seeProduct">Ver el producto</a>
@@ -590,7 +590,7 @@
           <img src="/assets/shot-hero-loadboard.webp" alt="The NudoIQ control bar running inside the Amazon Relay load board, with alert, search and autobook modes above 358 results out of Maryville, Tennessee" width="1892" height="1021" decoding="async" loading="eager" fetchpriority="high">
         </div>
         <div class="float f-person">
-          <img src="/assets/people/portrait-owner.webp" srcset="/assets/people/portrait-owner-sm.webp 520w, /assets/people/portrait-owner.webp 880w" sizes="196px" alt="" width="880" height="1168" decoding="async" loading="eager">
+          <img src="/assets/people/portrait-door.webp" srcset="/assets/people/portrait-door-sm.webp 520w, /assets/people/portrait-door.webp 880w" sizes="156px" alt="" width="880" height="1168" decoding="async" loading="eager">
         </div>
         <div class="float f-flag">
           <p data-t="heroValue">Una extensión lo maneja todo.</p>
@@ -613,9 +613,9 @@
     <section class="sec" id="features"><div class="sec-in">
       <div class="fhead">
         <div class="facepile" aria-hidden="true">
-          <img src="/assets/people/avatar-a.webp" alt="" width="440" height="440" decoding="async" loading="lazy">
-          <img src="/assets/people/avatar-b.webp" alt="" width="440" height="440" decoding="async" loading="lazy">
-          <img src="/assets/people/avatar-c.webp" alt="" width="440" height="440" decoding="async" loading="lazy">
+          <img src="/assets/people/face-a.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
+          <img src="/assets/people/face-b.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
+          <img src="/assets/people/face-c.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
         </div>
         <p class="pill" data-t="featuresEyebrow">Dentro de NudoIQ</p>
         <h2 class="display" data-t="featuresTitle">Once herramientas, una extensión. Haz clic para verlas todas.</h2>
@@ -639,7 +639,7 @@
         <div class="split">
           <div class="scopy">
             <h2 class="split-h" data-t="laneTitle">Cada ruta muestra una tarifa objetivo, un techo y un nivel de confianza.</h2>
-            <p data-t="laneCopy">NudoIQ compara el precio publicado con observaciones recientes de esa ruta y te da un número que pedir, el rango que espera y cuántos datos respaldan el estimado.</p>
+            <p data-t="laneCopy">NudoIQ compara el precio publicado con el historial de esa ruta. Te muestra tu tarifa objetivo, el rango esperado, y cuántos datos respaldan el estimado.</p>
             <ul class="ticks">
               <li data-t="lanePoint1">Pide un número en vez de adivinar</li>
               <li data-t="lanePoint2">Mira cuántos datos respaldan cada estimado</li>
@@ -844,22 +844,22 @@
           <figure class="sc3"><img src="/assets/people/scene-dock.webp" srcset="/assets/people/scene-dock-sm.webp 720w, /assets/people/scene-dock.webp 2200w" sizes="216px" alt="" width="2200" height="1238" decoding="async" loading="lazy"></figure>
           <figure class="sc4"><img src="/assets/people/scene-cab.webp" srcset="/assets/people/scene-cab-sm.webp 720w, /assets/people/scene-cab.webp 1100w" sizes="158px" alt="" width="1100" height="829" decoding="async" loading="lazy"></figure>
           <figure class="sc5"><img src="/assets/people/scene-desk.webp" srcset="/assets/people/scene-desk-sm.webp 720w, /assets/people/scene-desk.webp 1200w" sizes="132px" alt="" width="1200" height="671" decoding="async" loading="lazy"></figure>
-          <figure class="sc6"><img src="/assets/people/portrait-owner.webp" srcset="/assets/people/portrait-owner-sm.webp 520w, /assets/people/portrait-owner.webp 880w" sizes="138px" alt="" width="880" height="1168" decoding="async" loading="lazy"></figure>
+          <figure class="sc6"><img src="/assets/people/scene-rear-doors.webp" srcset="/assets/people/scene-rear-doors-sm.webp 520w, /assets/people/scene-rear-doors.webp 900w" sizes="138px" alt="" width="900" height="900" decoding="async" loading="lazy"></figure>
         </div>
         <div class="mosaic-in">
           <p class="pill" data-t="valueEyebrow">Cómo Relay pone el precio</p>
           <h2 class="display" data-t="valueTitle">Descubrimos cómo Relay decide cuánto vale tu carga.</h2>
-          <p class="intro" data-t="valueCopy">Todo se reduce a tres cosas: cuántas cargas salen de ese almacén hoy, qué se reservó antes en esa ruta, y si el volumen sube o baja. NudoIQ rastrea las tres y luego califica el número de tu tablero contra los 90 días propios de esa ruta.</p>
+          <p class="intro" data-t="valueCopy">Relay establece tu tarifa considerando lo mismo que Amazon: temporada, hora, origen, equipo, lo que se reservó antes, y volumen de hoy. NudoIQ vigila estos seis factores y compara tu tarifa publicada con el historial de 90 días en esa ruta.</p>
           <a class="btn btn-dark" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="installNow" target="_blank" rel="noopener">Agregar NudoIQ a Chrome</a>
         </div>
       </div>
       <div class="sec-in">
         <div class="figs">
-          <article class="fig"><div class="fignum">6</div><h3 data-t="timeCard">Seis señales, cada carga</h3><p data-t="timeCardCopy">Día, hora, temporada, demanda en vivo, el rango completo de precios y lo que realmente se reservó — y luego la mediana de hoy comparada con 90 días de historial de esa ruta.</p><small data-t="exampleLabel">Vigilado en cada ruta</small></article>
-          <article class="fig"><h3 data-t="proofCardTitle">Historial de precios de carriles</h3><p data-t="proofCardCopy">Ve lo que los carriles han pagado según los precios publicados en el tablero. Nuestras estimaciones muestran un rango y nivel de confianza—historial para informar tu decisión, no una promesa.</p></article>
-          <article class="fig"><div class="fignum">$1.64</div><h3 data-t="fleetCard">Lo que cuesta al día</h3><p data-t="fleetCardCopy">$49.99 al mes, todas las funciones, sin contrato anual — menos de la mitad de una sola comisión de despacho del 8% en una carga.</p><small data-t="productCapability">Aritmética que puedes verificar</small></article>
+          <article class="fig"><div class="fignum">6</div><h3 data-t="timeCard">Seis señales, cada carga</h3><p data-t="timeCardCopy">Temporada, hora, origen, equipo, lo que se reservó antes, y volumen del día. Después tu tarifa comparada con 90 días de historial en esa ruta.</p><small data-t="exampleLabel">Vigilado en cada ruta</small></article>
+          <article class="fig"><h3 data-t="proofCardTitle">Historial de precios de rutas</h3><p data-t="proofCardCopy">Ve lo que han pagado en cada ruta según los precios publicados. Nuestras estimaciones muestran un rango y nivel de confianza. Este historial te guía, no es una garantía.</p></article>
+          <article class="fig"><div class="fignum">$1.64</div><h3 data-t="fleetCard">Lo que cuesta al día</h3><p data-t="fleetCardCopy">$49.99 al mes, todas las funciones, cancela cuando quieras. Menos de la mitad de una sola comisión de despacho del 8% en una carga.</p><small data-t="productCapability">Aritmética que puedes verificar</small></article>
         </div>
-        <p class="mech" data-t="valueMechanism">Puedes ver esta misma operación en la pantalla de Inteligencia de Rutas más abajo, donde una tarifa objetivo de $483 aparece junto a un precio de tablero de $407, y esa diferencia es justo lo que NudoIQ está hecho para detectar.</p>
+        <p class="mech" data-t="valueMechanism">En la pantalla de Inteligencia de Rutas más abajo, ves una tarifa objetivo de $483 junto a un precio de tablero de $407. Esa diferencia es lo que NudoIQ detecta.</p>
       </div>
     </section>
 
@@ -876,8 +876,8 @@
       <div class="photo-in">
         <h2 class="display" data-t="trustTitle">Por qué los transportistas le confían su tablero.</h2>
         <div class="chips chips-3">
-          <article class="chip"><h3 data-t="trust1Title">Tu contraseña está contigo</h3><p data-t="trust1Copy">NudoIQ funciona en tu navegador dentro de Relay donde ya iniciaste sesión—nunca pide ni guarda tu contraseña de Amazon. Tu email de suscripción, información de conductores y detalles de viajes se guardan solo en tu cuenta.</p></article>
-          <article class="chip"><h3 data-t="trust2Title">Una empresa con nombre, no un script anónimo</h3><p data-t="trust2Copy">Publicado por Sami Enterprises LLC de Portland, Oregón, el desarrollador que aparece en la ficha de Chrome Web Store.</p></article>
+          <article class="chip"><h3 data-t="trust1Title">Tu contraseña está contigo</h3><p data-t="trust1Copy">NudoIQ funciona en tu navegador dentro de Relay donde ya iniciaste sesión. Nunca pide ni guarda tu contraseña de Amazon. Tu email de suscripción, información de conductores y detalles de viajes se guardan solo en tu cuenta.</p></article>
+          <article class="chip"><h3 data-t="trust2Title">Una empresa con nombre, no un script anónimo</h3><p data-t="trust2Copy">Publicado por Sami Enterprises LLC de Portland, Oregón. El desarrollador que aparece en la ficha de Chrome Web Store.</p></article>
           <article class="chip"><h3 data-t="trust3Title">Facturación que tú controlas</h3><p data-t="trust3Copy">Los pagos pasan por Stripe, así que los datos de tu tarjeta nunca tocan NudoIQ. Cancela desde el portal de Stripe cuando quieras, o escríbenos y lo hacemos en un día hábil.</p></article>
         </div>
       </div>
@@ -956,8 +956,8 @@
         <details><summary data-t="faq5Q">¿Cómo cancelo?</summary><p data-t="faq5A">Ve a nudoiq.com/billing y abre tu portal de facturación Stripe (Stripe te enviará un código de un solo uso a tu email de suscripción). O envía un correo a contact@nudoiq.com. Cancela durante la prueba de 7 días sin cargos; cancela después y se detiene la próxima renovación.</p></details>
         <details><summary data-t="faq6Q">¿Cómo recibo ayuda?</summary><p><span data-t="faq6A">Escríbenos a</span> <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a> <span data-t="faq6B">o contacta soporte de NudoIQ por Telegram.</span></p></details>
         <details><summary data-t="faq7Q">¿Qué es el tablero de cargas de Amazon Relay?</summary><p data-t="faq7A">Es el tablero dentro de Amazon Relay donde Amazon publica cargas para transportistas contratados. Los transportistas lo buscan, reservan cargas y publican camiones disponibles. NudoIQ no reemplaza ese tablero: funciona dentro de él y agrega contexto de tarifas, alertas y reportes a las pantallas que ya usas.</p></details>
-        <details><summary data-t="faq8Q">¿NudoIQ ve mi contraseña de Amazon Relay?</summary><p data-t="faq8A">NudoIQ funciona en tu navegador dentro de Relay donde ya iniciaste sesión—nunca pide ni guarda tu contraseña de Amazon. Tu email de suscripción, información de conductores y detalles de viajes se guardan solo en tu cuenta.</p></details>
-        <details><summary data-t="faq10Q">¿NudoIQ suspenderá mi cuenta?</summary><p data-t="faq10A">NudoIQ funciona solo en tu navegador en páginas Relay donde ya estás iniciado—no inicia sesión desde otro lugar ni pide tu contraseña. Tú controlas la velocidad de actualización. Las decisiones de Amazon sobre cuentas son suyas, pero NudoIQ se mantiene dentro de la interfaz Relay que ya usas.</p></details>
+        <details><summary data-t="faq8Q">¿NudoIQ ve mi contraseña de Amazon Relay?</summary><p data-t="faq8A">NudoIQ funciona en tu navegador dentro de Relay donde ya iniciaste sesión. Nunca pide ni guarda tu contraseña de Amazon. Tu email de suscripción, información de conductores y detalles de viajes se guardan solo en tu cuenta.</p></details>
+        <details><summary data-t="faq10Q">¿NudoIQ suspenderá mi cuenta?</summary><p data-t="faq10A">NudoIQ funciona solo en tu navegador en páginas Relay donde ya estás iniciado. No inicia sesión desde otro lugar ni pide tu contraseña. Tú controlas la velocidad de actualización. Las decisiones de Amazon sobre cuentas son suyas, pero NudoIQ se mantiene dentro de la interfaz Relay que ya usas.</p></details>
         <details><summary data-t="faq9Q">¿NudoIQ funciona en otros tableros de cargas además de Amazon Relay?</summary><p data-t="faq9A">No. NudoIQ está hecho específicamente para el tablero de cargas de Amazon Relay y solo lee pantallas de Relay. No se conecta a DAT, Truckstop ni a otros tableros de cargas.</p></details>
       </div>
     </div></section>
@@ -973,7 +973,7 @@
       </div>
       </div>
       <div class="closer-shot">
-        <img src="/assets/people/scene-cab.webp" srcset="/assets/people/scene-cab-sm.webp 720w, /assets/people/scene-cab.webp 1100w" sizes="(max-width:1000px) 100vw, 560px" alt="" width="1100" height="829" decoding="async" loading="lazy">
+        <img src="/assets/people/scene-dusk.webp" srcset="/assets/people/scene-dusk-sm.webp 520w, /assets/people/scene-dusk.webp 880w" sizes="(max-width:1000px) 100vw, 560px" alt="" width="880" height="1168" decoding="async" loading="lazy">
       </div>
     </section>
 
@@ -1299,7 +1299,7 @@
           "name": "¿NudoIQ ve mi contraseña de Amazon Relay?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "NudoIQ funciona en tu navegador dentro de Relay donde ya iniciaste sesión—nunca pide ni guarda tu contraseña de Amazon. Tu email de suscripción, información de conductores y detalles de viajes se guardan solo en tu cuenta."
+            "text": "NudoIQ funciona en tu navegador dentro de Relay donde ya iniciaste sesión. Nunca pide ni guarda tu contraseña de Amazon. Tu email de suscripción, información de conductores y detalles de viajes se guardan solo en tu cuenta."
           }
         },
         {
@@ -1315,7 +1315,7 @@
           "name": "¿NudoIQ suspenderá mi cuenta?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "NudoIQ funciona solo en tu navegador en páginas Relay donde ya estás iniciado—no inicia sesión desde otro lugar ni pide tu contraseña. Tú controlas la velocidad de actualización. Las decisiones de Amazon sobre cuentas son suyas, pero NudoIQ se mantiene dentro de la interfaz Relay que ya usas."
+            "text": "NudoIQ funciona solo en tu navegador en páginas Relay donde ya estás iniciado. No inicia sesión desde otro lugar ni pide tu contraseña. Tú controlas la velocidad de actualización. Las decisiones de Amazon sobre cuentas son suyas, pero NudoIQ se mantiene dentro de la interfaz Relay que ya usas."
           }
         }
       ],
