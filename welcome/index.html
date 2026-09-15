@@ -56,8 +56,10 @@
         if (src !== 'install') return;                 // only the real install fires
         if (localStorage.getItem('nudoiq_install_fired')) return;
         localStorage.setItem('nudoiq_install_fired', String(Date.now()));
+        // 2026-09-14: extension_version removed from the Meta payload. It is read by the
+        // extension and passed in the URL, so under Chrome Limited Use it must not go to an
+        // ad platform. Keep the page view + website-origin fbc only.
         fbq('trackCustom', 'ExtensionInstalled', {
-          extension_version: q.get('v') || 'unknown',
           fbc: localStorage.getItem('nudoiq_fbc') || null
         });
         if (window.clarity) clarity('set', 'installed', 'true');

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Billing | NudoIQ</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://nudoiq.com/billing/">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/assets/doc.css">
+</head>
+<body>
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+  </div></header>
+  <main class="wrap" style="max-width:640px;padding:48px 20px">
+    <div class="section" data-lang="en">
+      <h1>Manage your subscription</h1>
+      <p>View your invoices, update your card, or cancel your subscription.</p>
+      <p><a class="nq-portal" hidden style="display:inline-block;padding:14px 22px;border-radius:8px;background:#3366FF;color:#fff;font-weight:600;text-decoration:none" rel="noopener">Open billing portal</a></p>
+      <p>Can't log in? Email <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a> and we'll help you cancel.</p>
+    </div>
+    <div class="section" data-lang="es" lang="es">
+      <h2>Administra tu suscripción</h2>
+      <p>Ve tus recibos, actualiza tu tarjeta o cancela tu suscripción.</p>
+      <p><a class="nq-portal" hidden style="display:inline-block;padding:14px 22px;border-radius:8px;background:#3366FF;color:#fff;font-weight:600;text-decoration:none" rel="noopener">Abrir portal de facturación</a></p>
+      <p>¿No puedes acceder? Envía un correo a <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a> y te ayudaremos a cancelar.</p>
+    </div>
+  </main>
+  <script>
+    // Stripe Dashboard -> Settings -> Billing -> Customer portal -> "Launch customer portal
+    // with a link" -> Activate, then paste the https://billing.stripe.com/p/login/... link here.
+    // Never guess this value: a wrong slug is a 404 on the cancellation path (audit L01).
+    var PORTAL_URL = 'https://billing.stripe.com/p/login/14A3cw5Pld5bgQ89q7ao800';
+    if (/^https:\/\/billing\.stripe\.com\/p\/login\/[A-Za-z0-9_]+$/.test(PORTAL_URL)) {
+      document.querySelectorAll('.nq-portal').forEach(function (a) { a.href = PORTAL_URL; a.hidden = false; });
+    }
+  </script>
+</body>
+</html>

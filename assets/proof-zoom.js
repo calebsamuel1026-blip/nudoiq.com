@@ -276,6 +276,11 @@
     var a = document.createElement('a');
     a.className = 'nq-zoom-cta';
     a.href = STORE;                      // real href — see the header note
+    // Script-generated store links need the same new-tab treatment the static
+    // CTAs got: a same-tab store visit unloads this page before the pixel's
+    // request leaves the browser, and the event is lost.
+    a.target = '_blank';
+    a.rel = 'noopener';
     a.textContent = CTA;
     a.addEventListener('click', function () { track('ProofZoomCTA', { shot: shot }); });
     d.appendChild(a);
@@ -343,6 +348,8 @@
     if (!el || el.closest('a')) return false;
     var a = document.createElement('a');
     a.href = STORE;
+    a.target = '_blank';                 // same reason as the lightbox CTA above
+    a.rel = 'noopener';
     a.setAttribute('aria-label', label);
     a.style.cssText = 'color:inherit;text-decoration:none;display:block;cursor:pointer';
     el.parentNode.insertBefore(a, el);

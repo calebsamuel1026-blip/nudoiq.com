@@ -97,7 +97,7 @@
     <div class="section">
       <h2>What We Do NOT Collect</h2>
       <ul class="donot-list">
-        <li>Amazon credentials, passwords, or account information</li>
+        <li>Amazon credentials or passwords</li>
         <li>Addresses, phone numbers, or other personally identifiable information from load cards</li>
         <li>Browsing history outside the Amazon Relay domains</li>
         <li>Payment card information (handled entirely by Stripe)</li>
@@ -127,7 +127,7 @@
       <p><strong>License verification</strong> — your email is checked against our Supabase database to confirm an active subscription.</p>
       <p><strong>Market intelligence</strong> — anonymized load pricing observations are pooled across users to provide historical rate data for Amazon Relay lanes. No individual user's data is ever exposed or attributed to a specific user.</p>
       <p><strong>Fleet analytics</strong> — if you use the Fleet Dashboard, trip and driver data you enter is stored in your account and used exclusively to generate your fleet reports and driver statements.</p>
-      <p><strong>Diesel prices</strong> — your approximate region (detected via reverse geolocation) is used to fetch local diesel prices from iExitApp. Your exact location is never stored.</p>
+      <p><strong>Diesel prices</strong> — NudoIQ shows local diesel prices from AAA's public state averages. It uses your approximate state location for this—your exact location is never stored.</p>
     </div>
 
     <div class="section" id="sms">
@@ -137,7 +137,7 @@
       <p><strong>Consent.</strong> Nothing is sent to a number until the handset itself agrees &mdash; either by replying <strong>YES</strong> to a one-time confirmation text, or by pressing <strong>1</strong> on a confirmation call that reads out these terms. The person entering a number cannot consent on someone else&rsquo;s behalf. We record the time and method of that consent.</p>
       <p><strong>Opting out.</strong> Reply <strong>STOP</strong> to any message, or press <strong>9</strong> on a confirmation call, to end both the texts and the calls for that number permanently and immediately. Reply <strong>HELP</strong> for help. Message and data rates may apply. Message frequency depends on how many loads you book.</p>
       <p><strong>We do not share or sell mobile opt-in data.</strong> Phone numbers collected for pickup reminders, and consent records for those numbers, are never sold, rented, or shared with third parties or affiliates for marketing purposes. They are passed only to our telephony provider, Twilio, for the sole purpose of delivering the reminder you asked for.</p>
-      <p>Reminder phone numbers are stored write-only from the extension: the application key that ships inside NudoIQ can add a number but cannot read any number back.</p>
+      <p>Phone numbers you enter for reminders are stored for your account and shown back to you in the extension. We use them only to place the reminders you set up—never for marketing or third-party use.</p>
     </div>
 
     <div class="section">
@@ -176,7 +176,7 @@
           <span class="tp-name">Microsoft Clarity</span> — <span class="tp-desc">website usage analytics and session replay on nudoiq.com; not used by the extension &nbsp;·&nbsp; <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener">privacy.microsoft.com/privacystatement</a></span>
         </li>
         <li>
-          <span class="tp-name">iExitApp</span> — <span class="tp-desc">regional diesel price lookups &nbsp;·&nbsp; <a href="https://www.iexitapp.com" target="_blank" rel="noopener">iexitapp.com</a></span>
+          <span class="tp-name">AAA</span> — <span class="tp-desc">state diesel price averages &nbsp;·&nbsp; <a href="https://gasprices.aaa.com" target="_blank" rel="noopener">gasprices.aaa.com</a></span>
         </li>
         <li>
           <span class="tp-name">OpenStreetMap / Nominatim</span> — <span class="tp-desc">reverse geolocation to detect your operating region for diesel price lookups &nbsp;·&nbsp; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">openstreetmap.org/copyright</a></span>

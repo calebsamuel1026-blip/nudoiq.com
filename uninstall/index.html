@@ -112,8 +112,9 @@
       var version = q.get('v') || 'unknown';
 
       function record(reason, note){
+        // 2026-09-14: no extension_version to Meta (Limited Use); reason is typed on this page.
         try { fbq('trackCustom', 'ExtensionUninstalled', {
-          reason: reason, extension_version: version, note: note || undefined }); } catch(e){}
+          reason: reason, note: note || undefined }); } catch(e){}
         try { if (window.clarity) { clarity('set','uninstall_reason',reason); } } catch(e){}
       }
 
@@ -160,7 +161,7 @@
             }
 
             claim.addEventListener('click', function(){
-              try { fbq('trackCustom','UninstallOfferClaimed',{extension_version:version}); } catch(e){}
+              try { fbq('trackCustom','UninstallOfferClaimed',{}); } catch(e){}
             });
           } else {
             document.getElementById('panel-note').classList.add('on');

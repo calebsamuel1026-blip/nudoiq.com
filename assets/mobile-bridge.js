@@ -46,6 +46,17 @@
 
   var STORE_HOST = 'chromewebstore.google.com';
 
+  // Substring matching on the raw href was wrong in a way that broke a live
+  // feature: the mobile sheet's "email me the link" button is a mailto: whose
+  // BODY contains the store URL, so the capture listener below matched it,
+  // cancelled the email and reopened the sheet — while still logging
+  // MobileBridgeEmail as if it had worked. Parsing the resolved anchor instead
+  // means only a real https navigation to the store host counts, and mailto:,
+  // tel: and same-page anchors can never match no matter what they quote.
+  function isStoreLink(a) {
+    return !!a && a.protocol === 'https:' && a.hostname === STORE_HOST;
+  }
+
   function isMobile() {
     // Coarse pointer + no hover is the reliable signal; UA is the fallback.
     var coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
@@ -185,12 +196,57 @@
   //
   // Website-origin, and carries nothing the extension observed, so it is clean
   // under Chrome's Limited Use policy. Same boundary as capi.ts server-side.
+  // Chrome Web Store forwards utm_source / utm_medium / utm_campaign to its GA4
+  // property (aggregate store views + installs by campaign; not per-person, not
+  // sent back to Meta). The landing URL's own UTMs win; otherwise mark site traffic.
+  function withStoreUtm(href) {
+    try {
+      var u = new URL(href), page = new URLSearchParams(location.search);
+      var d = { utm_source: 'nudoiq.com', utm_medium: 'website', utm_campaign: 'site' };
+      ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
+        if (!u.searchParams.get(k)) u.searchParams.set(k, page.get(k) || d[k]);
+      });
+      // utm_content (the ad id from {{ad.id}}) and utm_term are carried too when the
+      // landing URL has them. Google documents only source/medium/campaign for the
+      // store's GA4 reports, so per-ad store reporting is NOT claimed; forwarding
+      // keeps the id in the URL in case it is exposed. Never defaulted. (L06, 2026-09-15)
+      ['utm_content', 'utm_term'].forEach(function (k) {
+        if (!u.searchParams.get(k) && page.get(k)) u.searchParams.set(k, page.get(k));
+      });
+      return u.toString();
+    } catch (err) { return href; }
+  }
+
   function initDesktopStoreClick() {
     document.addEventListener('click', function (e) {
       var a = e.target.closest && e.target.closest('a[href]');
-      if (!a) return;
-      if ((a.getAttribute('href') || '').indexOf(STORE_HOST) === -1) return;
+      if (!isStoreLink(a)) return;
+      a.href = withStoreUtm(a.href);
+      // A click something else already cancelled is not a store visit, so it
+      // must not be counted. This check comes BEFORE track() deliberately.
+      if (e.defaultPrevented) return;
+
       track('StoreClick', { lang: lang(), path: location.pathname });
+
+      // A same-tab store link unloads the page before fbq's beacon leaves the
+      // browser, so the event is fired and then discarded — which is the
+      // leading explanation for a dataset holding 50 ProofZooms and zero
+      // StoreClicks, ProofZoom being the one event that never navigates.
+      // Every store CTA now carries target="_blank"; this holds the navigation
+      // briefly for any link that does not, so a CTA added later without one
+      // cannot silently reintroduce the bug.
+      //
+      // It must not touch a click the browser is about to handle specially:
+      // ctrl/meta open a background tab, shift a new window, alt a download,
+      // and any of those already leave this document alive. Only an unmodified
+      // primary-button click on a target-less link gets the delay.
+      var plain = !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey &&
+                  (e.button === 0 || e.button === undefined);
+      if (!a.target && plain) {
+        var href = a.href;
+        e.preventDefault();
+        setTimeout(function () { window.location.href = href; }, 150);
+      }
     });
   }
 
@@ -199,9 +255,7 @@
     injectStyles();
     document.addEventListener('click', function (e) {
       var a = e.target.closest('a[href]');
-      if (!a) return;
-      var href = a.getAttribute('href') || '';
-      if (href.indexOf(STORE_HOST) === -1) return;
+      if (!isStoreLink(a)) return;
       e.preventDefault();
       openSheet(a.href);
     }, true);
