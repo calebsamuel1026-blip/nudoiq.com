@@ -20,8 +20,10 @@ doc = doc.replace(/(data-t="([A-Za-z0-9]+)"[^>]*>)([^<]*)(<)/g, (whole, open, ke
 });
 
 doc = doc.replace('<html lang="en">', '<html lang="es">');
-doc = doc.replace('<a href="/" hreflang="en" aria-current="page">EN</a><a href="/es/" hreflang="es">ES</a>',
-                  '<a href="/" hreflang="en">EN</a><a href="/es/" hreflang="es" aria-current="page">ES</a>');
+// The labels are spelled out (Caleb, 2026-09-17), so the swap has to match the
+// new markup or the Spanish page keeps English as the current language.
+doc = doc.replace('<a href="/" hreflang="en" aria-current="page">English</a><a href="/es/" hreflang="es">Espa&ntilde;ol</a>',
+                  '<a href="/" hreflang="en">English</a><a href="/es/" hreflang="es" aria-current="page">Espa&ntilde;ol</a>');
 
 const TITLE_ES = 'NudoIQ | Herramientas para el tablero de cargas de Amazon Relay';
 const DESC_ES = 'Alertas de cargas, tarifas de mercado, cartas de disputa de scorecard, reportes de flota y pagos a conductores. Extensión de Chrome para Amazon Relay.';
