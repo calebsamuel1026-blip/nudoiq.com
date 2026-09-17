@@ -204,5 +204,11 @@
   "proofCount": "en Chrome Web Store",
   "vouchLink": "Lee todas las reseñas",
   "founderLine": "Manejo una compañía en Relay y creé NudoIQ porque yo era el que le daba refrescar todo el día.",
-  "founderBy": "Caleb, fundador"
+  "founderBy": "Caleb, fundador",
+  "gapFigure": "$40 a $100",
+  "gapLabel": "diferencia entre lo publicado y el historial de la ruta",
+  "costFigure": "$1.64",
+  "costLabel": "lo que cuesta NudoIQ al día",
+  "scaleNote": "Basado en cargas anteriores reales. Las tarifas varían según la ruta, el momento y el mercado. $49.99 al mes, cancela cuando quieras.",
+  "scaleSub": "La diferencia por carga. El costo por día."
 }

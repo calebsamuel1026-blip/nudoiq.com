@@ -381,6 +381,33 @@
   .fig p{font-size:14.5px;line-height:1.5;color:#F2F6FF}
   .fig small{display:block;margin-top:14px;font-size:12px;letter-spacing:.06em;
     text-transform:uppercase;color:#F2F6FF}
+  /* ── value vs cost, as one picture ──────────────────────────────────
+     The persuasion is entirely in the two widths. Everything else in here is
+     kept quiet so the widths are what the eye lands on: one accent colour, one
+     weight of rule, no card, no shadow, no icon. */
+     This band is BLUE - the cards it replaces were white-on-blue - so every
+     colour here is light. The first build used the dark ink tokens and rendered
+     invisible against it. */
+  .scalebar{max-width:760px;margin:64px auto 0}
+  .sb-sub{font-size:16px;color:#E6EDFF;margin-bottom:30px}
+  .sb-row + .sb-row{margin-top:30px}
+  .sb-head{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap;margin-bottom:11px}
+  .sb-fig{font-size:clamp(36px,4.4vw,52px);font-weight:700;letter-spacing:-.03em;
+    line-height:1;color:#fff}
+  .sb-fig.sb-small{font-size:clamp(24px,2.6vw,30px);color:rgba(255,255,255,.72)}
+  .sb-lab{font-size:16px;color:#E6EDFF}
+  .sb-track{height:24px;border-radius:999px;background:rgba(255,255,255,.13);
+    border:1px solid rgba(255,255,255,.16);overflow:hidden}
+  .sb-fill{display:block;height:100%;border-radius:999px}
+  .sb-gap{width:100%;background:linear-gradient(90deg,var(--peach),var(--peri))}
+  /* 1.64 against a 70 midpoint is 2.3%. Drawn at 3.4% so it is still a bar. */
+  .sb-cost{width:3.4%;min-width:16px;background:rgba(255,255,255,.55)}
+  .sb-note{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.18);
+    font-size:14.5px;color:#D7E1FA}
+  @media (max-width:620px){
+    .sb-fig{font-size:34px} .sb-fig.sb-small{font-size:24px}
+    .sb-lab{font-size:15px}
+  }
   .mech{margin-top:34px;font-size:15.5px;line-height:1.6;max-width:80ch;
     padding-top:26px;border-top:1px solid rgba(255,255,255,.18)}
 
@@ -988,10 +1015,45 @@
         </div>
       </div>
       <div class="sec-in">
-        <div class="figs">
-          <article class="fig"><div class="fignum">6</div><h3 data-t="timeCard">Seis señales, cada carga</h3><p data-t="timeCardCopy">Temporada, hora, origen, equipo, lo que se reservó antes, y volumen del día. Después tu tarifa comparada con 90 días de historial en esa ruta.</p><small data-t="exampleLabel">Vigilado en cada ruta</small></article>
-          <article class="fig"><h3 data-t="proofCardTitle">Historial de precios de rutas</h3><p data-t="proofCardCopy">Ve lo que han pagado en cada ruta según los precios publicados. Nuestras estimaciones muestran un rango y nivel de confianza. Este historial te guía, no es una garantía.</p></article>
-          <article class="fig"><div class="fignum">$1.64</div><h3 data-t="fleetCard">Lo que cuesta al día</h3><p data-t="fleetCardCopy">$49.99 al mes, todas las funciones, cancela cuando quieras. Menos de la mitad de una sola comisión de despacho del 8% en una carga.</p><small data-t="productCapability">Aritmética que puedes verificar</small></article>
+        <!-- Caleb, 2026-09-17: "change this here to a simple visualization that users
+             can easily understand that they will make 40-100 more per load and it only
+             costs 1.6 a day."
+
+             Three cards of prose became one picture: two bars at true relative scale,
+             where the whole argument is the size difference and you get it before you
+             read a word.
+
+             ONE THING IS DELIBERATELY NOT WHAT HE SAID, and it is the difference between
+             a claim we can make and one we cannot. "You will make $40-100 more per load"
+             is an outcome promise - an income claim, banned in this account's creative and
+             a policy risk on every platform we touch. What IS true, and is already on the
+             page below in a real screenshot, is the GAP NudoIQ shows you between the board
+             price and what the lane has paid: $483 against $407. So the bar is labelled as
+             the gap the tool surfaces, not as money anyone earns. Same number, same
+             persuasion, and it survives being checked.
+
+             The units are made explicit on purpose. A gap per load and a cost per day are
+             not the same unit, and putting them on one scale without saying so would be
+             arithmetic sleight of hand. The cost bar carries a floor width because 1.64
+             against 70 is barely two percent, and a bar that thin reads as a rendering
+             bug rather than as the point. -->
+        <div class="scalebar">
+          <p class="sb-sub" data-t="scaleSub">La diferencia por carga. El costo por día.</p>
+          <div class="sb-row">
+            <div class="sb-head">
+              <b class="sb-fig" data-t="gapFigure">$40 a $100</b>
+              <span class="sb-lab" data-t="gapLabel">diferencia entre lo publicado y el historial de la ruta</span>
+            </div>
+            <div class="sb-track"><span class="sb-fill sb-gap"></span></div>
+          </div>
+          <div class="sb-row">
+            <div class="sb-head">
+              <b class="sb-fig sb-small" data-t="costFigure">$1.64</b>
+              <span class="sb-lab" data-t="costLabel">lo que cuesta NudoIQ al día</span>
+            </div>
+            <div class="sb-track"><span class="sb-fill sb-cost"></span></div>
+          </div>
+          <p class="sb-note" data-t="scaleNote">Basado en cargas anteriores reales. Las tarifas varían según la ruta, el momento y el mercado. $49.99 al mes, cancela cuando quieras.</p>
         </div>
         <p class="mech" data-t="valueMechanism">En la pantalla de Inteligencia de Rutas más abajo, ves una tarifa objetivo de $483 junto a un precio de tablero de $407. Esa diferencia es lo que NudoIQ detecta.</p>
       </div>
