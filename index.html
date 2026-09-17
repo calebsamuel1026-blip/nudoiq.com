@@ -191,6 +191,46 @@
     max-width:48ch;letter-spacing:-.008em}
   .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
   .rate{display:flex;align-items:center;gap:9px;margin-top:24px;font-size:14.5px;color:var(--ink-3)}
+  /* ── the hero proof bar ─────────────────────────────────────────────
+     Caleb, 2026-09-17: "not well designed." The first version was a line of
+     small grey type with a hairline between two halves - true, but it read as a
+     caption rather than as proof, and on a field this saturated thin text just
+     dissolves.
+
+     Rebuilt as one inset capsule sitting on the blue: a translucent panel with a
+     light inner edge, so it reads as a physical object laid on the hero rather
+     than as another paragraph. Three things earn their place in it and nothing
+     else does - the real Chrome mark (recognised before any word is read), the
+     stars over the rating, and the number. The number is set large because the
+     number is the argument; "carriers already run it" is the quiet half. */
+  .proofbar{display:inline-flex;align-items:center;gap:22px;margin:26px auto 0;
+    padding:13px 24px;border-radius:16px;
+    background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 10px 26px rgba(10,20,60,.22);
+    -webkit-backdrop-filter:saturate(140%) blur(6px);backdrop-filter:saturate(140%) blur(6px)}
+  .pb-cell{display:inline-flex;align-items:center;gap:11px}
+  .pb-mark{display:block;flex:none}
+  .pb-stack{display:flex;flex-direction:column;gap:1px;text-align:left}
+  .pb-stars{color:#FFC53D;font-size:14px;letter-spacing:2.5px;line-height:1}
+  .pb-label{color:rgba(255,255,255,.90);font-size:13.5px;font-weight:500;line-height:1.3}
+  .pb-big{color:#fff;font-size:27px;font-weight:700;letter-spacing:-.02em;line-height:1}
+  .pb-rule{width:1px;height:34px;background:rgba(255,255,255,.22)}
+  @media (max-width:620px){
+    .proofbar{flex-direction:column;gap:14px;padding:16px 22px;border-radius:18px}
+    .pb-rule{width:44px;height:1px}
+    .pb-stack{text-align:center;align-items:center}
+  }
+  .hero-panel .btn-dark{background:#fff;color:var(--ink)}
+  .hero-panel .btn-dark:hover{background:#E9EEFB}
+  .hero-panel .btn-ghost{border-color:rgba(255,255,255,.6);color:#fff}
+  .hero-panel .btn-ghost:hover{background:rgba(255,255,255,.14)}
+
+  .eyebrow{display:flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;
+    letter-spacing:.09em;text-transform:uppercase;color:var(--blue-deep);margin-bottom:20px}
+  .lede{font-size:clamp(16.5px,1.6vw,20px);line-height:1.5;color:var(--ink-3);
+    max-width:48ch;letter-spacing:-.008em}
+  .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+  .rate{display:flex;align-items:center;gap:9px;margin-top:24px;font-size:14.5px;color:var(--ink-3)}
   /* The hero proof row. Two claims, one rule each: the stars belong to the
      rating and nothing else, and the two are separated by a real gap so they
      never read as one sentence. */
@@ -629,9 +669,19 @@
                used by 300+ carriers." The earlier "shared with 300 before public release"
                was mine and it was doing the opposite of selling: it volunteered that we had
                only just launched. See MISTAKES-AND-RULES.md R7. -->
-          <div class="herotrust">
-            <span class="ht"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span data-t="heroRating">5.0 on the Chrome Web Store</span></span>
-            <span class="ht" data-t="heroUsers">Used by 300+ carriers</span>
+          <div class="proofbar">
+            <span class="pb-cell">
+              <img class="pb-mark" src="/assets/chrome-mark.svg" alt="" width="26" height="26" decoding="async">
+              <span class="pb-stack">
+                <span class="pb-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="pb-label" data-t="heroRating">5.0 on the Chrome Web Store</span>
+              </span>
+            </span>
+            <span class="pb-rule" aria-hidden="true"></span>
+            <span class="pb-cell">
+              <b class="pb-big">300+</b>
+              <span class="pb-label" data-t="heroUsers">carriers already run it</span>
+            </span>
           </div>
           <div class="acts">
             <a class="btn btn-dark" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="install" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
