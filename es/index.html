@@ -398,7 +398,10 @@
   .po-ledger > div + div{border-left:1px solid rgba(255,255,255,.20)}
   .po-ledger dt{font-size:clamp(26px,3vw,34px);font-weight:700;letter-spacing:-.02em;
     line-height:1;color:#fff;margin-bottom:8px}
-  .po-ledger dd{font-size:14.5px;line-height:1.45;color:#D7E1FA}
+  /* A <dd> carries a browser default margin-inline-start of 40px, which pushed
+     every label right of the number it belongs to. The number and its label share
+     one left edge, or the pairing stops reading as a pairing. */
+  .po-ledger dd{margin:0;padding:0;font-size:14.5px;line-height:1.45;color:#D7E1FA;max-width:22ch}
   .po-note{margin:36px auto 0;max-width:600px;padding-top:20px;
     border-top:1px solid rgba(255,255,255,.18);font-size:14px;color:#C6D4F5}
   @media (max-width:620px){
