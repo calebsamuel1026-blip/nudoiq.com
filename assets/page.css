@@ -154,3 +154,32 @@ footer a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:
   .offer,.price{padding:24px 20px}
   section{padding:34px 0;margin-top:34px}
 }
+
+/* ── Welcome-page tutorial ───────────────────────────────────────────────
+   Caleb, 2026-09-16: "can we update the welcome page, make it feel like our
+   website include the tutorial video." The video is the first thing after the
+   headline because it is the thing a new carrier most needs and least expects
+   to be given. It does NOT autoplay: it is four minutes of narration, and a
+   page that starts talking at somebody who just installed software is a page
+   they close. */
+.tut{padding:4px 0 44px}
+.tut .frame{position:relative;border-radius:var(--rc);overflow:hidden;
+  border:1px solid var(--line);background:var(--ink);
+  box-shadow:0 18px 44px rgba(22,22,22,.10)}
+.tut video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--ink);
+  border:0;border-radius:0}
+.tut .cap{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 16px;margin-top:14px}
+.tut .cap .t{font-weight:500}
+.tut .cap .m{font-size:14px;color:var(--g3)}
+@media (max-width:640px){ .tut{padding-bottom:32px} }
+
+/* The moment the install worked. A carrier who just added an extension to his
+   browser has taken a small risk on a stranger's software; the first thing the
+   page owes him is confirmation that it landed. */
+.done{display:inline-flex;align-items:center;gap:10px;margin:0 0 6px;
+  padding:7px 16px 7px 12px;border-radius:var(--rp);
+  background:var(--peri);color:var(--navy);
+  font-size:13px;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+.done .tick{display:inline-flex;align-items:center;justify-content:center;
+  width:19px;height:19px;border-radius:50%;background:var(--blue);color:#fff;
+  font-size:11px;line-height:1}

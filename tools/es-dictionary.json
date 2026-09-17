@@ -11,7 +11,7 @@
   "trademarkNote": "Amazon y Amazon Relay son marcas registradas de Amazon.com, Inc. o sus afiliadas. NudoIQ es un producto independiente y no está afiliado, respaldado ni patrocinado por Amazon.com, Inc.",
   "realScreen": "Pantalla real de NudoIQ",
   "builtFor": "5.0 en Chrome Web Store",
-  "builtForSub": "De 5 calificaciones de transportistas y 5 reseñas escritas",
+  "builtForSub": "En Chrome Web Store",
   "insideRelay": "Funciona en tu pestaña de Relay",
   "insideRelaySub": "Nada nuevo que aprender",
   "bilingual": "English + Español",
@@ -199,5 +199,10 @@
   "featuresTitle": "Once herramientas, una extensión. Haz clic para verlas todas.",
   "featuresLead": "Cada pestaña es una herramienta diferente. Haz clic en una para ver exactamente qué hace.",
   "proofCardTitle": "Historial de precios de rutas",
-  "proofCardCopy": "Ve lo que han pagado en cada ruta según los precios publicados. Nuestras estimaciones muestran un rango y nivel de confianza. Este historial te guía, no es una garantía."
+  "proofCardCopy": "Ve lo que han pagado en cada ruta según los precios publicados. Nuestras estimaciones muestran un rango y nivel de confianza. Este historial te guía, no es una garantía.",
+  "heroUsers": "Usado por más de 300 transportistas",
+  "proofCount": "en Chrome Web Store",
+  "vouchLink": "Lee todas las reseñas",
+  "founderLine": "Manejo una compañía en Relay y creé NudoIQ porque yo era el que le daba refrescar todo el día.",
+  "founderBy": "Caleb, fundador"
 }

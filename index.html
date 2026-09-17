@@ -191,6 +191,18 @@
     max-width:48ch;letter-spacing:-.008em}
   .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
   .rate{display:flex;align-items:center;gap:9px;margin-top:24px;font-size:14.5px;color:var(--ink-3)}
+  /* The hero proof row. Two claims, one rule each: the stars belong to the
+     rating and nothing else, and the two are separated by a real gap so they
+     never read as one sentence. */
+  .herotrust{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;
+    gap:10px 22px;margin-top:22px}
+  .herotrust .ht{display:inline-flex;align-items:center;gap:9px;font-size:14.5px;
+    font-weight:500;color:rgba(255,255,255,.94)}
+  .herotrust .ht + .ht{padding-left:22px;border-left:1px solid rgba(255,255,255,.22)}
+  @media (max-width:620px){
+    .herotrust{gap:8px}
+    .herotrust .ht + .ht{padding-left:0;border-left:0}
+  }
   .stars{color:#F0A500;letter-spacing:1px;font-size:14px}
 
   /* ── The stage: screenshot + floats, pulled up over the panel ── */
@@ -545,6 +557,33 @@
     .mcta{display:inline-flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:80;
       justify-content:center;box-shadow:0 10px 30px -8px rgba(51,102,255,.55)}
   }
+  /* ── Proof band, directly under the hero strip ──────────────────────
+     Not another row of cards: there are four of those immediately above it,
+     and a fifth would read as one more claim rather than as people talking.
+     A rating, a count, three voices, and the person who built it — in that
+     order, because that is the order a sceptic checks them in. */
+  .proof{background:var(--paper-2);border-bottom:1px solid var(--line)}
+  .proof-in{max-width:var(--max);margin:0 auto;padding:44px 24px 46px}
+  .proof-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 18px}
+  .pstars{color:#F0A500;letter-spacing:2px;font-size:16px;margin:0}
+  .pscore{margin:0;font-size:17px;color:var(--ink-4)}
+  .pscore b{font-size:22px;font-weight:600;color:var(--ink);letter-spacing:-.02em}
+  .plink{margin-left:auto;font-size:14.5px;color:var(--blue);text-decoration:none;font-weight:500}
+  .plink:hover{text-decoration:underline}
+  .pquotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:26px}
+  .pquotes figure{margin:0;background:#fff;border:1px solid var(--line-2);
+    border-radius:var(--ri);padding:22px 22px 18px}
+  .pquotes blockquote{margin:0;font-size:15.5px;line-height:1.5;color:var(--ink);letter-spacing:-.006em}
+  .pquotes figcaption{margin-top:12px;font-size:13px;color:var(--g3)}
+  .pfound{margin:26px 0 0;font-size:16.5px;line-height:1.5;color:var(--ink);
+    border-left:3px solid var(--peri-2);padding-left:16px;max-width:64ch}
+  .pfound .pby{display:block;margin-top:6px;font-size:13.5px;color:var(--g3)}
+  @media (max-width:820px){
+    .pquotes{grid-template-columns:1fr;gap:14px}
+    .plink{margin-left:0;width:100%}
+    .proof-in{padding:34px 24px 36px}
+  }
+
   </style>
 </head>
 <body>
@@ -578,11 +617,26 @@
           <p class="eyebrow" data-t="heroEyebrow">For Amazon Relay owner-operators and fleets</p>
           <h1 class="display" data-t="heroTitle">The complete Relay automation toolkit.</h1>
           <p class="lede" data-t="heroCopy">A Chrome extension that runs inside Amazon Relay, handling rates, disputes, autobook, backhauls, and profit math. So you don't have to.</p>
+          <!-- Caleb, 2026-09-17: "i think right here in the main heading there should be
+               the 5 star review placement too, and then 300 users" / "it has to be the
+               first thing users see." So the proof moves ABOVE the buttons - it used to
+               sit under them, where his own screenshot cut it off.
+
+               TWO SEPARATE CLAIMS, DELIBERATELY NOT MERGED. The rating is the Chrome Web
+               Store's and is labelled as such. The 300 is NOT a store figure - Google does
+               not count an extension handed out privately, which is how those carriers got
+               it - so the line says USED BY, never installs. Caleb, 2026-09-17: "just say
+               used by 300+ carriers." The earlier "shared with 300 before public release"
+               was mine and it was doing the opposite of selling: it volunteered that we had
+               only just launched. See MISTAKES-AND-RULES.md R7. -->
+          <div class="herotrust">
+            <span class="ht"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span data-t="heroRating">5.0 on the Chrome Web Store</span></span>
+            <span class="ht" data-t="heroUsers">Used by 300+ carriers</span>
+          </div>
           <div class="acts">
             <a class="btn btn-dark" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="install" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
             <a class="btn btn-ghost" href="#features" data-t="seeProduct">See the product</a>
           </div>
-          <p class="rate"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span data-t="heroRating">5.0 on the Chrome Web Store</span></p>
         </div>
       </div>
       <div class="hero-stage">
@@ -602,10 +656,40 @@
 
     <!-- ── PROOF STRIP ──────────────────────────────────────── -->
     <section class="strip"><div class="strip-in">
-      <div class="pcard"><b data-t="builtFor">5.0 on the Chrome Web Store</b></div>
+      <div class="pcard"><b data-t="builtFor">Every review is five stars</b><span data-t="builtForSub">On the Chrome Web Store</span></div>
       <div class="pcard"><b data-t="insideRelay">Runs in your Relay tab</b><span data-t="insideRelaySub">Nothing new to log into</span></div>
       <div class="pcard"><b data-t="bilingual">English + Español</b><span data-t="bilingualSub">One-click switch</span></div>
       <div class="pcard"><b data-t="clearTrial">7 days free</b><span data-t="clearTrialSub">$49.99/month after. Cancel anytime.</span></div>
+    </div></section>
+
+
+    <!-- ── PROOF ─────────────────────────────────────────────
+         Caleb, 2026-09-16: "can we build trust on the first page of our
+         website... reviews users etc."
+
+         NO COUNTS ANYWHERE ON THIS PAGE. Caleb, 2026-09-17: "dont mention how
+         many reviews, thats a weak point, stop exposing our wekapoints, we are
+         trying to sell a product here."
+
+         He is right and it is now universal (research/MISTAKES-AND-RULES.md R7).
+         A small true number is still a small number: a buyer who reads "7
+         reviews" learns we are new, and nothing about the product. The rating
+         and the stars carry the proof; the tally carried only the weakness.
+         Applies to review counts, rating counts, install counts and user counts,
+         on every surface a customer sees.
+    -->
+    <section class="proof"><div class="proof-in">
+      <div class="proof-head">
+        <p class="pstars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p class="pscore"><b>5.0</b> <span data-t="proofCount">on the Chrome Web Store</span></p>
+        <a class="plink" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk/reviews" rel="noopener" target="_blank" data-t="vouchLink">Read every review</a>
+      </div>
+      <div class="pquotes">
+        <figure><blockquote data-t="review2">Their performance dispute feature is a life saver. Also their load booking features work really well, and they dont slow the load board down, other extensions seem to struggle with that.</blockquote><figcaption data-t="review2By">Futo &middot; Chrome Web Store</figcaption></figure>
+        <figure><blockquote data-t="review3">Works great, good features, better than the others I have tried. Definitely worth it for the 50 bucks a month.</blockquote><figcaption data-t="review3By">Lalo &middot; Chrome Web Store</figcaption></figure>
+        <figure><blockquote data-t="review5">Best extension I have tried for Amazon Relay. Unique features and no problems. I will keep paying the 50 dollars every month.</blockquote><figcaption data-t="review5By">Tristan &middot; Chrome Web Store</figcaption></figure>
+      </div>
+      <p class="pfound"><span data-t="founderLine">I run a carrier on Relay and built NudoIQ because I was the one hitting refresh all day.</span> <span class="pby" data-t="founderBy">Caleb, founder</span></p>
     </div></section>
 
 
