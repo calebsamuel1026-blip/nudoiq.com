@@ -389,10 +389,9 @@
 
      This band is BLUE, so every colour here is light. */
   .payoff{max-width:720px;margin:64px auto 0;text-align:center}
-  .po-lead{font-size:17px;color:#D7E1FA;letter-spacing:.01em}
-  .po-hero{margin:10px 0 6px;font-size:clamp(58px,9vw,112px);font-weight:700;
-    letter-spacing:-.045em;line-height:.92;color:#fff}
-  .po-sub{font-size:17px;color:#E6EDFF}
+  .po-hero{margin:0 auto 18px;max-width:18ch;font-size:clamp(40px,5.4vw,66px);font-weight:700;
+    letter-spacing:-.03em;line-height:1.04;color:#fff}
+  .po-sub{font-size:18px;line-height:1.55;color:#E6EDFF;max-width:56ch;margin:0 auto}
   .po-ledger{display:flex;justify-content:center;gap:0;margin:40px auto 0;
     max-width:620px;text-align:left}
   .po-ledger > div{flex:1 1 0;padding:0 26px}
@@ -1031,14 +1030,13 @@
              against $407. The arithmetic is printed so anyone can check it rather than
              take it: both inputs are on screen next to the answer. -->
         <div class="payoff">
-          <p class="po-lead" data-t="payoffLead">The gap on one load covers</p>
-          <p class="po-hero"><span data-t="payoffBig">6 weeks</span></p>
-          <p class="po-sub" data-t="payoffSub">of NudoIQ, at the middle of that range</p>
+          <h3 class="po-hero" data-t="payoffBig">Your investment back on the first load</h3>
+          <p class="po-sub" data-t="payoffSub">Lane Intelligence shows what loads have actually paid. One better-informed booking typically covers your month.</p>
           <dl class="po-ledger">
-            <div><dt data-t="gapFigure">$40 to $100</dt><dd data-t="gapLabel">gap between posted and lane history, per load</dd></div>
-            <div><dt data-t="costFigure">$1.64</dt><dd data-t="costLabel">what NudoIQ costs, per day</dd></div>
+            <div><dt data-t="gapFigure">$40 to $100</dt><dd data-t="gapLabel">per-load difference in lane history averages</dd></div>
+            <div><dt data-t="costFigure">$49.99</dt><dd data-t="costLabel">your monthly subscription to NudoIQ</dd></div>
           </dl>
-          <p class="po-note" data-t="scaleNote">Based on actual previous loads. Rates vary by lane, timing and market conditions. $49.99 a month, cancel anytime.</p>
+          <p class="po-note" data-t="scaleNote">Lane payouts vary by market, timing, and individual history. These results are not guaranteed.</p>
         </div>
         <p class="mech" data-t="valueMechanism">On the Lane Intelligence screen below, you see a $483 target next to a $407 board price. That gap is what NudoIQ catches.</p>
       </div>

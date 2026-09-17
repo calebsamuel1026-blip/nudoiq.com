@@ -389,10 +389,9 @@
 
      This band is BLUE, so every colour here is light. */
   .payoff{max-width:720px;margin:64px auto 0;text-align:center}
-  .po-lead{font-size:17px;color:#D7E1FA;letter-spacing:.01em}
-  .po-hero{margin:10px 0 6px;font-size:clamp(58px,9vw,112px);font-weight:700;
-    letter-spacing:-.045em;line-height:.92;color:#fff}
-  .po-sub{font-size:17px;color:#E6EDFF}
+  .po-hero{margin:0 auto 18px;max-width:18ch;font-size:clamp(40px,5.4vw,66px);font-weight:700;
+    letter-spacing:-.03em;line-height:1.04;color:#fff}
+  .po-sub{font-size:18px;line-height:1.55;color:#E6EDFF;max-width:56ch;margin:0 auto}
   .po-ledger{display:flex;justify-content:center;gap:0;margin:40px auto 0;
     max-width:620px;text-align:left}
   .po-ledger > div{flex:1 1 0;padding:0 26px}
@@ -1031,14 +1030,13 @@
              against $407. The arithmetic is printed so anyone can check it rather than
              take it: both inputs are on screen next to the answer. -->
         <div class="payoff">
-          <p class="po-lead" data-t="payoffLead">La diferencia en una sola carga cubre</p>
-          <p class="po-hero"><span data-t="payoffBig">6 semanas</span></p>
-          <p class="po-sub" data-t="payoffSub">de NudoIQ, a la mitad de ese rango</p>
+          <h3 class="po-hero" data-t="payoffBig">Recupera tu inversión en la primera carga</h3>
+          <p class="po-sub" data-t="payoffSub">Lane Intelligence te muestra lo que las cargas han pagado en realidad. Una reserva mejor informada suele cubrir tu mes.</p>
           <dl class="po-ledger">
-            <div><dt data-t="gapFigure">$40 a $100</dt><dd data-t="gapLabel">diferencia entre lo publicado y el historial de la ruta, por carga</dd></div>
-            <div><dt data-t="costFigure">$1.64</dt><dd data-t="costLabel">lo que cuesta NudoIQ, por día</dd></div>
+            <div><dt data-t="gapFigure">$40 a $100</dt><dd data-t="gapLabel">diferencia por carga en el promedio del historial de la ruta</dd></div>
+            <div><dt data-t="costFigure">$1.64</dt><dd data-t="costLabel">tu suscripción mensual a NudoIQ</dd></div>
           </dl>
-          <p class="po-note" data-t="scaleNote">Basado en cargas anteriores reales. Las tarifas varían según la ruta, el momento y el mercado. $49.99 al mes, cancela cuando quieras.</p>
+          <p class="po-note" data-t="scaleNote">Los pagos por ruta varían según el mercado, el momento y tu historial. Estos resultados no están garantizados.</p>
         </div>
         <p class="mech" data-t="valueMechanism">En la pantalla de Inteligencia de Rutas más abajo, ves una tarifa objetivo de $483 junto a un precio de tablero de $407. Esa diferencia es lo que NudoIQ detecta.</p>
       </div>

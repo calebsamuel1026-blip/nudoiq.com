@@ -206,11 +206,10 @@
   "founderLine": "Manejo una compañía en Relay y creé NudoIQ porque yo era el que le daba refrescar todo el día.",
   "founderBy": "Caleb, fundador",
   "gapFigure": "$40 a $100",
-  "gapLabel": "diferencia entre lo publicado y el historial de la ruta, por carga",
+  "gapLabel": "diferencia por carga en el promedio del historial de la ruta",
   "costFigure": "$1.64",
-  "costLabel": "lo que cuesta NudoIQ, por día",
-  "scaleNote": "Basado en cargas anteriores reales. Las tarifas varían según la ruta, el momento y el mercado. $49.99 al mes, cancela cuando quieras.",
-  "payoffLead": "La diferencia en una sola carga cubre",
-  "payoffBig": "6 semanas",
-  "payoffSub": "de NudoIQ, a la mitad de ese rango"
+  "costLabel": "tu suscripción mensual a NudoIQ",
+  "scaleNote": "Los pagos por ruta varían según el mercado, el momento y tu historial. Estos resultados no están garantizados.",
+  "payoffBig": "Recupera tu inversión en la primera carga",
+  "payoffSub": "Lane Intelligence te muestra lo que las cargas han pagado en realidad. Una reserva mejor informada suele cubrir tu mes."
 }
