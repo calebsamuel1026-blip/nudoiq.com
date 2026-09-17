@@ -381,32 +381,31 @@
   .fig p{font-size:14.5px;line-height:1.5;color:#F2F6FF}
   .fig small{display:block;margin-top:14px;font-size:12px;letter-spacing:.06em;
     text-transform:uppercase;color:#F2F6FF}
-  /* ── value vs cost, as one picture ──────────────────────────────────
-     The persuasion is entirely in the two widths. Everything else in here is
-     kept quiet so the widths are what the eye lands on: one accent colour, one
-     weight of rule, no card, no shadow, no icon. */
-     This band is BLUE - the cards it replaces were white-on-blue - so every
-     colour here is light. The first build used the dark ink tokens and rendered
-     invisible against it. */
-  .scalebar{max-width:760px;margin:64px auto 0}
-  .sb-sub{font-size:16px;color:#E6EDFF;margin-bottom:30px}
-  .sb-row + .sb-row{margin-top:30px}
-  .sb-head{display:flex;align-items:baseline;gap:13px;flex-wrap:wrap;margin-bottom:11px}
-  .sb-fig{font-size:clamp(36px,4.4vw,52px);font-weight:700;letter-spacing:-.03em;
-    line-height:1;color:#fff}
-  .sb-fig.sb-small{font-size:clamp(24px,2.6vw,30px);color:rgba(255,255,255,.72)}
-  .sb-lab{font-size:16px;color:#E6EDFF}
-  .sb-track{height:24px;border-radius:999px;background:rgba(255,255,255,.13);
-    border:1px solid rgba(255,255,255,.16);overflow:hidden}
-  .sb-fill{display:block;height:100%;border-radius:999px}
-  .sb-gap{width:100%;background:linear-gradient(90deg,var(--peach),var(--peri))}
-  /* 1.64 against a 70 midpoint is 2.3%. Drawn at 3.4% so it is still a bar. */
-  .sb-cost{width:3.4%;min-width:16px;background:rgba(255,255,255,.55)}
-  .sb-note{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.18);
-    font-size:14.5px;color:#D7E1FA}
+  /* ── the payoff block ───────────────────────────────────────────────
+     One number does the work. Everything else is deliberately quiet: the lead
+     line is small so the eye falls straight onto the figure, the two inputs sit
+     underneath as a ledger rather than as features, and there is no card, no
+     icon and no chart furniture anywhere in it.
+
+     This band is BLUE, so every colour here is light. */
+  .payoff{max-width:720px;margin:64px auto 0;text-align:center}
+  .po-lead{font-size:17px;color:#D7E1FA;letter-spacing:.01em}
+  .po-hero{margin:10px 0 6px;font-size:clamp(58px,9vw,112px);font-weight:700;
+    letter-spacing:-.045em;line-height:.92;color:#fff}
+  .po-sub{font-size:17px;color:#E6EDFF}
+  .po-ledger{display:flex;justify-content:center;gap:0;margin:40px auto 0;
+    max-width:620px;text-align:left}
+  .po-ledger > div{flex:1 1 0;padding:0 26px}
+  .po-ledger > div + div{border-left:1px solid rgba(255,255,255,.20)}
+  .po-ledger dt{font-size:clamp(26px,3vw,34px);font-weight:700;letter-spacing:-.02em;
+    line-height:1;color:#fff;margin-bottom:8px}
+  .po-ledger dd{font-size:14.5px;line-height:1.45;color:#D7E1FA}
+  .po-note{margin:36px auto 0;max-width:600px;padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.18);font-size:14px;color:#C6D4F5}
   @media (max-width:620px){
-    .sb-fig{font-size:34px} .sb-fig.sb-small{font-size:24px}
-    .sb-lab{font-size:15px}
+    .po-ledger{flex-direction:column;gap:22px;max-width:320px}
+    .po-ledger > div{padding:0}
+    .po-ledger > div + div{border-left:0;border-top:1px solid rgba(255,255,255,.20);padding-top:22px}
   }
   .mech{margin-top:34px;font-size:15.5px;line-height:1.6;max-width:80ch;
     padding-top:26px;border-top:1px solid rgba(255,255,255,.18)}
@@ -1017,43 +1016,29 @@
       <div class="sec-in">
         <!-- Caleb, 2026-09-17: "change this here to a simple visualization that users
              can easily understand that they will make 40-100 more per load and it only
-             costs 1.6 a day."
+             costs 1.6 a day", then on the first attempt "i dont like that design."
 
-             Three cards of prose became one picture: two bars at true relative scale,
-             where the whole argument is the size difference and you get it before you
-             read a word.
+             The first attempt was two bars at relative scale. It was a chart, and a chart
+             asks to be studied. He picked this instead: turn the ratio into one sentence
+             with one number in it. The gap on a single load, divided by what a day costs,
+             is about six weeks - and six weeks is a thing a person can feel, where a
+             ratio is a thing they have to work out.
 
-             ONE THING IS DELIBERATELY NOT WHAT HE SAID, and it is the difference between
-             a claim we can make and one we cannot. "You will make $40-100 more per load"
-             is an outcome promise - an income claim, banned in this account's creative and
-             a policy risk on every platform we touch. What IS true, and is already on the
-             page below in a real screenshot, is the GAP NudoIQ shows you between the board
-             price and what the lane has paid: $483 against $407. So the bar is labelled as
-             the gap the tool surfaces, not as money anyone earns. Same number, same
-             persuasion, and it survives being checked.
-
-             The units are made explicit on purpose. A gap per load and a cost per day are
-             not the same unit, and putting them on one scale without saying so would be
-             arithmetic sleight of hand. The cost bar carries a floor width because 1.64
-             against 70 is barely two percent, and a bar that thin reads as a rendering
-             bug rather than as the point. -->
-        <div class="scalebar">
-          <p class="sb-sub" data-t="scaleSub">The gap per load. The cost per day.</p>
-          <div class="sb-row">
-            <div class="sb-head">
-              <b class="sb-fig" data-t="gapFigure">$40 to $100</b>
-              <span class="sb-lab" data-t="gapLabel">gap between posted and lane history</span>
-            </div>
-            <div class="sb-track"><span class="sb-fill sb-gap"></span></div>
-          </div>
-          <div class="sb-row">
-            <div class="sb-head">
-              <b class="sb-fig sb-small" data-t="costFigure">$1.64</b>
-              <span class="sb-lab" data-t="costLabel">what NudoIQ costs daily</span>
-            </div>
-            <div class="sb-track"><span class="sb-fill sb-cost"></span></div>
-          </div>
-          <p class="sb-note" data-t="scaleNote">Based on actual previous loads. Rates vary by lane, timing and market conditions. $49.99 a month, cancel anytime.</p>
+             THE CLAIM IS THE GAP, NOT EARNINGS. "You will make $40-100 more per load" is
+             an outcome promise, an income claim, and banned in this account. The number
+             here is the difference NudoIQ SHOWS between the board price and what the lane
+             has paid - the same thing the real screenshot below demonstrates at $483
+             against $407. The arithmetic is printed so anyone can check it rather than
+             take it: both inputs are on screen next to the answer. -->
+        <div class="payoff">
+          <p class="po-lead" data-t="payoffLead">The gap on one load covers</p>
+          <p class="po-hero"><span data-t="payoffBig">6 weeks</span></p>
+          <p class="po-sub" data-t="payoffSub">of NudoIQ, at the middle of that range</p>
+          <dl class="po-ledger">
+            <div><dt data-t="gapFigure">$40 to $100</dt><dd data-t="gapLabel">gap between posted and lane history, per load</dd></div>
+            <div><dt data-t="costFigure">$1.64</dt><dd data-t="costLabel">what NudoIQ costs, per day</dd></div>
+          </dl>
+          <p class="po-note" data-t="scaleNote">Based on actual previous loads. Rates vary by lane, timing and market conditions. $49.99 a month, cancel anytime.</p>
         </div>
         <p class="mech" data-t="valueMechanism">On the Lane Intelligence screen below, you see a $483 target next to a $407 board price. That gap is what NudoIQ catches.</p>
       </div>
