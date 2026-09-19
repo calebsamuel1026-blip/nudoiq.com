@@ -107,7 +107,7 @@ function md(src, { h2Ids = false } = {}) {
 
 const stripMd = (s) => s.replace(/\*\*|\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\s+/g, ' ').trim();
 
-function head({ title, description, url, extraLd }) {
+function head({ title, description, url, extraLd, slug }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,6 +140,38 @@ function head({ title, description, url, extraLd }) {
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: ${JSON.stringify(slug)}});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: ${JSON.stringify(slug)}});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
   </script>
   <link rel="stylesheet" href="/assets/doc.css">
   <link rel="stylesheet" href="/assets/guide.css">
@@ -203,7 +235,7 @@ for (const p of pages) {
   const idx = ORDER.indexOf(p.slug);
   related.sort((a, b) => ((ORDER.indexOf(a.slug) - idx + 12) % 12) - ((ORDER.indexOf(b.slug) - idx + 12) % 12));
 
-  const html = head({ title: p.title, description: p.description, url, extraLd: ld }) + `
+  const html = head({ title: p.title, description: p.description, url, extraLd: ld, slug: p.slug }) + `
   <div class="doc-hero"><div class="doc-hero-in">
     <nav class="crumbs" aria-label="Breadcrumb">${crumbs(trail.map(([n, u], i) => [n, i === trail.length - 1 ? null : u]))}</nav>
     <h1 class="page-title">${inline(p.h1)}</h1>
@@ -244,7 +276,7 @@ ${FOOT}`;
   const { title, description } = hub;
   const ld = [crumbLd([['Home', '/'], ['Guides', '/guides/']]),
     { '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: pages.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}/${p.slug}/`, name: stripMd(p.h1) })) }];
-  const html = head({ title, description, url: `${SITE}/guides/`, extraLd: ld }) + `
+  const html = head({ title, description, url: `${SITE}/guides/`, extraLd: ld, slug: 'guides' }) + `
   <div class="doc-hero"><div class="doc-hero-in">
     <nav class="crumbs" aria-label="Breadcrumb">${crumbs(trail)}</nav>
     <h1 class="page-title">${inline(hub.h1)}</h1>
