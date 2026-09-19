@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Amazon Relay Auto Booker: Booking Rules Guide | NudoIQ</title>
+  <meta name="description" content="How Amazon Relay auto-booker extensions work, how to set safe booking rules, and guardrails that prevent booking loads you don't want.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/amazon-relay-auto-booker/">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="any">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:title" content="Amazon Relay Auto Booker: Booking Rules Guide | NudoIQ">
+  <meta property="og:description" content="How Amazon Relay auto-booker extensions work, how to set safe booking rules, and guardrails that prevent booking loads you don't want.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/amazon-relay-auto-booker/">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Amazon Relay Auto Booker: How Automatic Booking Works",
+  "description": "How Amazon Relay auto-booker extensions work, how to set safe booking rules, and guardrails that prevent booking loads you don't want.",
+  "mainEntityOfPage": "https://nudoiq.com/amazon-relay-auto-booker/",
+  "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+  "datePublished": "2026-09-19",
+  "dateModified": "2026-09-19",
+  "author": {
+    "@type": "Organization",
+    "name": "NudoIQ",
+    "url": "https://nudoiq.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "NudoIQ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nudoiq.com/brand/mark/icon128.png"
+    }
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nudoiq.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://nudoiq.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Amazon Relay Auto Booker: How Automatic Booking Works",
+      "item": "https://nudoiq.com/amazon-relay-auto-booker/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I set different booking rules for different times of day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most auto-bookers don't have built-in scheduling. You'd have to change your rules manually if you want to book different loads at different times. Some carriers adjust their profit floor during slow hours (willing to take lower margin loads when work is scarce) but keep it higher during busy hours. You can do this, but it's manual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I set my max-books cap too low?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You'll stop getting bookings after you hit the cap, even if perfect loads post. If you cap at 2 loads a day and the board is flooded with great work, you'll miss it after your 2 are booked. Set a cap based on your actual capacity, and review it regularly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I adjust my profit floor if my costs change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most auto-bookers let you change your profit floor anytime. If your fuel costs drop or your driver pay changes, update the floor and the extension respects the new number immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the extension books a load and I want to cancel it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can cancel a booked load, but it counts against your tender-acceptance score on your Relay scorecard. Cancel if you absolutely have to, but do it sparingly. This is why testing your rules in Alert mode first matters—fewer bad bookings means fewer cancellations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Autobook book loads when I'm offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The extension runs inside your browser. If your device is off or your internet is down, the extension can't refresh the board or book loads. It only works when your browser is open and online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is booking via extension as reliable as booking manually?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The extension clicks Book just like you would. From Amazon's perspective, a booking is a booking. The reliability is the same."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use Autobook on multiple trucks at the same time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can have NudoIQ running on multiple devices and multiple load board tabs. Just remember: if two devices/tabs are both running Autobook with the same rules, they might both try to book the same load, which could cause issues. Consider running Autobook on one device and Alert/Search mode on others."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <div class="promo">7-day trial &middot; $49.99/month after trial &middot; Cancel anytime &middot; English and Spanish</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Main navigation">
+      <a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a><a href="/#faq">FAQ</a>
+    </nav>
+    <div class="navright">
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+    </div>
+  </div></header>
+
+  <div class="doc-hero"><div class="doc-hero-in">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay Auto Booker: How Automatic Booking Works</span></nav>
+    <h1 class="page-title">Amazon Relay Auto Booker: How Automatic Booking Works</h1>
+    <p class="page-subtitle">An auto-booker extension can book loads for you automatically when they match your rules. But automatic booking only works when you set it up carefully. Here's how to do it safely.</p>
+  </div></div>
+
+  <div class="container">
+    <article class="prose">
+<h2 id="what-an-auto-booker-does">What an Auto-Booker Does</h2>
+<p>An auto-booker extension (also called an autobooker or auto-book tool) refreshes the Relay load board constantly and books loads that match the rules you set. You don't have to click Book. The extension does it automatically.</p>
+<p>Example: You set rules that say &quot;book any load from Portland to Eugene for $400 or more, if the profit is at least $150 after costs.&quot; When a load matching those criteria posts, the extension sees it and books it for you. You get a notification that it booked something, and you review what you got.</p>
+<p>The advantage is obvious: you catch loads before other carriers do, and you're not glued to the screen. The risk is equally obvious: without good guardrails, you can book loads that don't work for your operation.</p>
+<h2 id="the-risk-of-unintended-bookings">The Risk of Unintended Bookings</h2>
+<p>The biggest mistake carriers make with auto-bookers is setting rules that are too loose. Set a rule that says &quot;book any load over $200&quot; and you might book a 200-mile haul at $2 per mile (which nets you nothing after costs). Set a rule that says &quot;book anything from Oregon&quot; and you might book a load that goes to California, adding six hours you didn't plan.</p>
+<p>Auto-bookers book fast and without mercy. If your rules match, they book. No &quot;wait, let me think about this.&quot; No second-guessing. If you set the rules wrong, you'll book loads you didn't want.</p>
+<p>This is why guardrails matter. The best auto-bookers make it hard to book the wrong load.</p>
+<h2 id="essential-guardrails-rules-profit-floor-and-max-books-cap">Essential Guardrails: Rules, Profit Floor, and Max-Books Cap</h2>
+<p>A good auto-booker includes three kinds of rules:</p>
+<p><strong>Booking Rules</strong>: Filter the loads the extension will consider. You can specify:</p>
+<ul><li><strong>Lane</strong>: Only book loads from Portland to Eugene. Don't book Portland to Los Angeles.</li><li><strong>Price Range</strong>: Only book loads between $300 and $600. Don't book anything cheaper or more expensive.</li><li><strong>Distance</strong>: Only book loads up to 500 miles. Skip loads that are too long.</li><li><strong>Load Type</strong>: Book only dry van. Skip refrigerated or container loads if you don't have that equipment.</li><li><strong>Pickup Time</strong>: Only book loads that pick up between 6 a.m. and 4 p.m. Avoid overnight pickups you're not prepared for.</li></ul>
+<p>Booking rules narrow the field. They say &quot;of all the loads on the board, only consider these ones.&quot;</p>
+<p><strong>Profit Floor</strong>: Set a minimum profit the extension must see before it books. Example: &quot;Don't book anything that nets less than $150 after subtracting driver pay, fuel, maintenance, and deadhead.&quot;</p>
+<p>A profit floor is your second line of defense. Even if a load matches your lane, price, and distance rules, the extension checks the net profit. If it doesn't clear the floor, no book.</p>
+<p><strong>Max-Books Cap</strong>: Set a maximum number of loads the extension will book per day or per week. Example: &quot;Stop booking after you've booked 5 loads today.&quot;</p>
+<p>The max-books cap is your third line of defense. It prevents you from overbooking and running out of drivers. Once you hit the cap, the extension stops booking for that period, even if perfect loads post.</p>
+<p>Together, these three guardrails protect you from booking loads you didn't intend.</p>
+<h2 id="the-three-modes-alert-search-autobook">The Three Modes: Alert, Search, Autobook</h2>
+<p>Different auto-booker extensions offer different modes:</p>
+<p><strong>Alert Mode</strong>: The extension refreshes the board and notifies you when a load matches your rules. You get a Telegram, email, or SMS alert with details about the load. You decide whether to book. You stay in control but have to respond quickly, because other carriers might book the same load while you're thinking.</p>
+<p>Alert mode is good when you want to be involved in the decision but don't want to stare at the board. It's also good for testing your rules before you turn on Autobook—use Alert mode first, see what loads it suggests, and verify they're the right ones.</p>
+<p><strong>Search Mode</strong>: The extension refreshes the board and highlights loads that match your rules. You scan the board, see the highlighted loads, and click Book if you want. You stay in control and can visually inspect a load before booking. But you have to be looking at the board, and other carriers might book the load while you're reading it.</p>
+<p>Search mode is good when you want to make the final decision but want the extension to do the scanning for you. It's also good for less time-sensitive work—if you're not in a race to be first, you can look and decide.</p>
+<p><strong>Autobook Mode</strong>: The extension refreshes the board, finds loads matching your rules, and books them automatically. The extension handles the booking; you don't have to be there. You get a notification that it booked something.</p>
+<p>Autobook mode is the most hands-off but requires the most confidence in your rules. You need to trust that your lane, price, distance, profit floor, and max-books rules will produce bookings you want.</p>
+<h2 id="setting-your-booking-rules-safely">Setting Your Booking Rules Safely</h2>
+<p>To use Autobook safely, follow this process:</p>
+<p><strong>Step 1: Define Your Operation</strong></p>
+<ul><li>What lanes do I actually run? (e.g., Portland to Eugene, Portland to Seattle, Portland to Los Angeles)</li><li>What's my minimum profit per load? (e.g., $150 net)</li><li>What's my maximum distance? (e.g., 400 miles)</li><li>What's my maximum number of drivers available? (e.g., 5, so I'll book 5 loads max per day)</li></ul>
+<p>Write these down. They're the foundation of your rules.</p>
+<p><strong>Step 2: Start with Alert Mode</strong></p>
+<ul><li>Set your lane, price, and distance rules in Alert mode.</li><li>Let it run for a day or two.</li><li>When it alerts you, read the load and ask: &quot;Would I have booked this?&quot;</li><li>If yes, great. If no, adjust your rule.</li></ul>
+<p>Alert mode is a testing ground. Use it to verify your rules produce the loads you want.</p>
+<p><strong>Step 3: Add a Profit Floor</strong></p>
+<ul><li>Once your lane/price/distance rules look good, set a profit floor.</li><li>Example: don't book anything under $150 net.</li><li>Let it run another day.</li><li>Again, ask: &quot;Is it suggesting loads I'd actually take?&quot;</li></ul>
+<p><strong>Step 4: Set a Max-Books Cap</strong></p>
+<ul><li>Decide how many loads you can handle per day. (Don't overbuild.)</li><li>Set the cap to that number.</li><li>Example: cap at 5 loads per day.</li></ul>
+<p><strong>Step 5: Try Autobook</strong></p>
+<ul><li>Once you're confident in your rules, switch to Autobook.</li><li>Let it run and watch what it books.</li><li>In the first day or two, check that it's making the right decisions.</li><li>If it books something you don't want, adjust the rule that allowed it.</li></ul>
+<p>This progression—Alert → Search → Autobook—lets you test your rules before automation takes over. Most carriers make mistakes when they jump straight to Autobook. Taking time to verify the rules in Alert mode costs no money and saves headaches later.</p>
+<h2 id="what-autobook-actually-books">What Autobook Actually Books</h2>
+<p>When you're running Autobook and a load matches your rules, the extension clicks Book for you. It fills in the information (your equipment, your contact details) from your account and submits the booking.</p>
+<p>From Amazon's perspective, you booked the load. It's your obligation. You accepted it. If you can't take it later, you'll take a tender-acceptance hit on your scorecard.</p>
+<p>This is why profit floor and max-books cap are non-negotiable. If you set a bad rule and the extension books 10 loads you can't handle, you cancel most of them and your scorecard suffers.</p>
+<h2 id="instant-book-one-click-booking">Instant Book: One-Click Booking</h2>
+<p>Some extensions (including NudoIQ) offer an Instant Book feature—a button on the load card that books the load in one click, instead of the multi-step flow (find load, read details, click Book, fill shipping info, confirm).</p>
+<p>Instant Book isn't automatic—you still click the button manually—but it's faster than the standard booking flow. You see a load, check it's good, and hit Instant Book instead of navigating menus.</p>
+<h2 id="common-autobook-mistakes">Common Autobook Mistakes</h2>
+<p><strong>Mistake 1: Too-Loose Rules</strong> Setting rules that are too broad (&quot;book any load over $100&quot; or &quot;book anything from California&quot;) leads to unwanted bookings. Start narrow and widen only after testing.</p>
+<p><strong>Mistake 2: No Profit Floor</strong> A $500 rate sounds good until you realize it nets $50 after paying your driver and fuel. Always set a profit floor.</p>
+<p><strong>Mistake 3: No Max-Books Cap</strong> Without a cap, the extension books loads all day, and you run out of drivers or time. Set a cap to match your actual capacity.</p>
+<p><strong>Mistake 4: Not Testing in Alert Mode First</strong> Jumping straight to Autobook without testing your rules is asking for trouble. Use Alert mode first. See what it suggests. Verify it's the right stuff. Then automate.</p>
+<p><strong>Mistake 5: Setting a Cap Too High</strong> &quot;I'll book 20 loads a day&quot; sounds ambitious until you realize you only have 5 drivers. Be realistic about your capacity and set your cap accordingly.</p>
+<h2 id="how-nudoiq-s-autobook-works">How NudoIQ's Autobook Works</h2>
+<p>NudoIQ's control bar includes three modes: Alert (pings you), Search (highlights matches), and Autobook (books automatically). You set price and lane rules, a profit floor, and a max-books cap.</p>
+<p>The extension uses <a href="/amazon-relay-auto-booker/">Net Profit calculation</a> to check whether a load clears your profit floor. So you're not just setting a dollar target—you're setting a profit target after costs.</p>
+<p><a href="/amazon-relay-auto-booker/">Instant Book</a> is one click on the load card. Telegram alerts notify you when the extension books something, so you know immediately what was booked.</p>
+<p>If you're unsure about your rules, start in Alert mode and let NudoIQ suggest loads for a day. See if the suggestions are good. Then switch to Autobook.</p>
+<h2 id="setting-a-profit-floor-in-nudoiq">Setting a Profit Floor in NudoIQ</h2>
+<p>When you set a profit floor in NudoIQ, you're saying &quot;don't book anything that nets less than $X per load after subtracting driver pay, fuel, maintenance, and deadhead to pickup.&quot;</p>
+<p>Example:</p>
+<ul><li>Posted rate: $600</li><li>Driver pay: $150</li><li>Fuel: $100</li><li>Maintenance: $50</li><li>Deadhead to pickup: $50</li><li>Net profit: $600 - $150 - $100 - $50 - $50 = $250</li></ul>
+<p>If your profit floor is $150, this load clears it. If your floor is $300, it doesn't. NudoIQ calculates this for every load, so your Autobook rule respects the floor automatically.</p>
+<h2 id="when-not-to-use-autobook">When NOT to Use Autobook</h2>
+<p>Don't use Autobook if:</p>
+<ul><li>You're not sure about your rules yet. Test in Alert mode first.</li><li>Your operation changes frequently (different lanes, different equipment). Manual booking gives you more control.</li><li>You're in a learning phase and don't yet know what works for you. Autobook is powerful once you know your business.</li><li>You have unreliable internet. If your connection drops while a load is booking, it might book but you might not know.</li></ul>
+<p>Use Alert mode or Search mode as long as you need to. There's no shame in manual booking while you're learning.</p>
+    </article>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <details><summary>Can I set different booking rules for different times of day?</summary><div class="a"><p>Most auto-bookers don't have built-in scheduling. You'd have to change your rules manually if you want to book different loads at different times. Some carriers adjust their profit floor during slow hours (willing to take lower margin loads when work is scarce) but keep it higher during busy hours. You can do this, but it's manual.</p></div></details>
+      <details><summary>What happens if I set my max-books cap too low?</summary><div class="a"><p>You'll stop getting bookings after you hit the cap, even if perfect loads post. If you cap at 2 loads a day and the board is flooded with great work, you'll miss it after your 2 are booked. Set a cap based on your actual capacity, and review it regularly.</p></div></details>
+      <details><summary>How do I adjust my profit floor if my costs change?</summary><div class="a"><p>Most auto-bookers let you change your profit floor anytime. If your fuel costs drop or your driver pay changes, update the floor and the extension respects the new number immediately.</p></div></details>
+      <details><summary>What if the extension books a load and I want to cancel it?</summary><div class="a"><p>You can cancel a booked load, but it counts against your tender-acceptance score on your Relay scorecard. Cancel if you absolutely have to, but do it sparingly. This is why testing your rules in Alert mode first matters—fewer bad bookings means fewer cancellations.</p></div></details>
+      <details><summary>Can Autobook book loads when I'm offline?</summary><div class="a"><p>No. The extension runs inside your browser. If your device is off or your internet is down, the extension can't refresh the board or book loads. It only works when your browser is open and online.</p></div></details>
+      <details><summary>Is booking via extension as reliable as booking manually?</summary><div class="a"><p>Yes. The extension clicks Book just like you would. From Amazon's perspective, a booking is a booking. The reliability is the same.</p></div></details>
+      <details><summary>Can I use Autobook on multiple trucks at the same time?</summary><div class="a"><p>Yes. You can have NudoIQ running on multiple devices and multiple load board tabs. Just remember: if two devices/tabs are both running Autobook with the same rules, they might both try to book the same load, which could cause issues. Consider running Autobook on one device and Alert/Search mode on others.</p></div></details>
+    </section>
+
+    <aside class="cta">
+      <div><h2>Know what the next load is worth before you take it.</h2><p>7-day free trial &middot; Cancel anytime &middot; 5.0 on the Chrome Web Store</p></div>
+      <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Start the 7-day trial</a>
+    </aside>
+
+    <nav class="related" aria-label="More Amazon Relay guides">
+      <h2>More Amazon Relay guides</h2>
+      <div class="cards">
+        <a href="/best-amazon-relay-extensions/">Best Amazon Relay Extensions: Refresher and Auto-Booker Tools</a>
+        <a href="/loadfetcher-alternative/">LoadFetcher vs NudoIQ: What's the Difference</a>
+        <a href="/amazon-relay-load-board/">How the Amazon Relay Load Board Works</a>
+        <a href="/what-is-amazon-relay/">What Is Amazon Relay?</a>
+        <a href="/amazon-relay-requirements/">Amazon Relay Requirements</a>
+        <a href="/amazon-relay-insurance-requirements/">Amazon Relay Insurance Requirements</a>
+      </div>
+    </nav>
+
+    <div class="footer">
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/">Amazon Relay guides</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contact</a>
+    </div>
+    <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. Amazon Relay requirements change; confirm current rules at relay.amazon.com.</p>
+
+  </div>
+</body>
+</html>

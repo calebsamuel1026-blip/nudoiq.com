@@ -52,3 +52,19 @@ examples with identifying data removed.
 
 - Email: contact@nudoiq.com
 - Telegram: https://t.me/nudoiqsupport
+
+## Amazon Relay guides
+
+- [All guides](https://nudoiq.com/guides/)
+- [How the Amazon Relay Load Board Works](https://nudoiq.com/amazon-relay-load-board/)
+- [What Is Amazon Relay?](https://nudoiq.com/what-is-amazon-relay/)
+- [Amazon Relay Requirements](https://nudoiq.com/amazon-relay-requirements/)
+- [Amazon Relay Insurance Requirements](https://nudoiq.com/amazon-relay-insurance-requirements/)
+- [Amazon Relay for Box Trucks](https://nudoiq.com/amazon-relay-box-truck/)
+- [How Much Does Amazon Relay Pay?](https://nudoiq.com/how-much-does-amazon-relay-pay/)
+- [Is Amazon Relay Worth It?](https://nudoiq.com/is-amazon-relay-worth-it/)
+- [Amazon Relay Scorecard: What It Measures and How to Dispute Violations](https://nudoiq.com/amazon-relay-scorecard/)
+- [Amazon Relay Auto Refresh: Why It Matters and How It Works](https://nudoiq.com/amazon-relay-auto-refresh/)
+- [Amazon Relay Auto Booker: How Automatic Booking Works](https://nudoiq.com/amazon-relay-auto-booker/)
+- [Best Amazon Relay Extensions: Refresher and Auto-Booker Tools](https://nudoiq.com/best-amazon-relay-extensions/)
+- [LoadFetcher vs NudoIQ: What's the Difference](https://nudoiq.com/loadfetcher-alternative/)
