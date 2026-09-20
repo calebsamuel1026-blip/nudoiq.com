@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>NudoIQ</title>
+<script>
+(function () {
+  // Email links land here: record the opaque recipient id (no personal data), then continue to the site.
+  var q = new URLSearchParams(location.search), rid = (q.get("rid") || "").slice(0, 32), v = (q.get("v") || "").slice(0, 8);
+  var dest = "/?utm_source=outreach&utm_medium=email&utm_campaign=" + encodeURIComponent(q.get("c") || "census") + "&utm_content=variant-" + encodeURIComponent(v);
+  var done = false, go = function () { if (!done) { done = true; location.replace(dest); } };
+  setTimeout(go, 1200);
+  if (rid.length < 6) { go(); return; }
+  var KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM";
+  fetch("https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/outreach_clicks", { method: "POST", keepalive: true,
+    headers: { "Content-Type": "application/json", "apikey": KEY, "Authorization": "Bearer " + KEY, "Prefer": "return=minimal" },
+    body: JSON.stringify({ rid: rid, variant: v }) }).then(go, go);
+})();
+</script><noscript><meta http-equiv="refresh" content="0;url=/"></noscript></head><body></body></html>
