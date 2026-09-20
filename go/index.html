@@ -3,9 +3,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>NudoIQ</title>
 <script>
 (function () {
-  // Email links land here: record the opaque recipient id (no personal data), then continue to the site.
+  // Email links land here: record the opaque recipient id (no personal data), then continue to /get/ -
+  // most email is opened on a phone, where the extension cannot install; /get/ bridges phone to computer.
   var q = new URLSearchParams(location.search), rid = (q.get("rid") || "").slice(0, 32), v = (q.get("v") || "").slice(0, 8);
-  var dest = "/?utm_source=outreach&utm_medium=email&utm_campaign=" + encodeURIComponent(q.get("c") || "census") + "&utm_content=variant-" + encodeURIComponent(v);
+  var dest = "/get/?utm_source=outreach&utm_medium=email&utm_campaign=" + encodeURIComponent(q.get("c") || "census") + "&utm_content=variant-" + encodeURIComponent(v);
   var done = false, go = function () { if (!done) { done = true; location.replace(dest); } };
   setTimeout(go, 1200);
   if (rid.length < 6) { go(); return; }
