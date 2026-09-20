@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Unsubscribe from NudoIQ | NudoIQ</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/unsubscribe/">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="any">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="/assets/doc.css">
+</head>
+<body>
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+  </div></header>
+
+  <div class="doc-hero"><div class="doc-hero-in">
+    <h1 class="page-title">Stop NudoIQ emails</h1>
+    <p class="page-subtitle" id="who"></p>
+  </div></div>
+
+  <div class="container">
+    <div class="section" id="before">
+      <p>We&#x27;ll remove your email from our list. You won&#x27;t get any more NudoIQ emails.</p>
+      <p><button class="btn btn-go" id="go" type="button">Confirm</button></p>
+    </div>
+    <div class="section" id="after" hidden><p>You&#x27;ve been unsubscribed from NudoIQ emails.</p></div>
+    <div class="section" id="error" hidden><p>If this doesn&#x27;t work, send contact@nudoiq.com the word unsubscribe and we&#x27;ll handle it right away.</p></div>
+  </div>
+
+  <script>
+  (function () {
+    // Copy on this page: research/copy/OUTREACH-UNSUB-AND-FOOTER-2026-09-20.json (copywriter). Do not edit words here.
+    var SB = "https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/outreach_unsubscribes";
+    var KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM";   // public anon key: INSERT-only on this table (migration 20260920120000)
+    var q = new URLSearchParams(location.search);
+    var email = "", token = q.get("t") || "";
+    try { email = atob((q.get("e") || "").replace(/-/g, "+").replace(/_/g, "/")); } catch (err) { email = ""; }
+    var who = document.getElementById("who"), go = document.getElementById("go");
+    if (!email || email.indexOf("@") < 1) { show("error"); return; }
+    who.textContent = email;
+    go.addEventListener("click", function () {
+      go.disabled = true;
+      fetch(SB, { method: "POST",
+        headers: { "Content-Type": "application/json", "apikey": KEY, "Authorization": "Bearer " + KEY, "Prefer": "return=minimal" },
+        body: JSON.stringify({ email: email, token: token.slice(0, 128), source: "web" }) })
+      .then(function (r) { show(r.ok ? "after" : "error"); })
+      .catch(function () { show("error"); });
+    });
+    function show(id) {
+      ["before", "after", "error"].forEach(function (s) { document.getElementById(s).hidden = (s !== id); });
+    }
+  })();
+  </script>
+</body>
+</html>
