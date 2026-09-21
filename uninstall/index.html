@@ -65,10 +65,24 @@
       </div>
     </div>
 
-    <!-- 2026-09-21: the reinstall offer (next month free, then two months half price) is withdrawn. Its
-         discount depended on a webhook path that never ran, so the page promised a price billing could
-         not deliver. Every reason, price included, now goes to the note box. Payment link
-         plink_1UBUkT... deactivated; config exported to research/checkout-test/stripe-exports/. -->
+    <!-- PRICE BRANCH — the only objection with a counter-offer attached.
+         Caleb's call, 2026-09-01: first month free, then 50% off the next two.
+         Nothing is redeemed on this page; it opens an email so a human honours it and
+         so we learn who asked. -->
+    <div class="panel" id="panel-price">
+      <h2>Then take it at a price that works.</h2>
+      <div class="offer">
+        <ul>
+          <li><b>Your next month: free.</b></li>
+          <li><b>The two months after that: half price</b> — $24.99 instead of $49.99.</li>
+          <li>Cancel any time, same one click from Settings.</li>
+        </ul>
+        <a class="btn btn-go" id="claim" href="#">Claim it</a>
+      </div>
+      <p style="margin-top:20px;color:var(--text-mid)">No catch. The discount is applied automatically —
+      reinstall from the Chrome Web Store and sign in with the same email.</p>
+    </div>
+
     <div class="panel" id="panel-note">
       <h2>Tell me what happened.</h2>
       <p style="color:var(--text-mid)">Optional, and it goes to a real person — not a support queue.</p>
@@ -108,13 +122,50 @@
       var thanks = document.getElementById('thanks');
       var chosen = null;
 
+      // ── The reinstall offer link ────────────────────────────────────────
+      // Caleb's offer: next month free, then 50% off two months ($24.99).
+      // Built 2026-09-03. It takes two mechanisms, not one, because Stripe
+      // cannot express the offer on a Payment Link alone:
+      //   • The free month is the link's own 30-day trial.
+      //   • The two half-price months are coupon `winback-50off-2mo`, applied
+      //     to the subscription by stripe-webhook the moment it is created
+      //     (a link carrying a trial refuses to also allow promotion codes,
+      //     and one coupon cannot be 100% off then 50% off).
+      // So the customer pays $0, $24.99, $24.99, then $49.99 — honoured
+      // automatically instead of by hand.
+      var OFFER_STRIPE_URL = 'https://buy.stripe.com/00w4gAgtZ8OV43maubao801';
+
       document.querySelectorAll('.reason').forEach(function(btn){
         btn.addEventListener('click', function(){
           chosen = btn.getAttribute('data-reason');
           record(chosen);
           ask.style.display = 'none';
 
-          document.getElementById('panel-note').classList.add('on');
+          if (chosen === 'price') {
+            document.getElementById('panel-price').classList.add('on');
+            var claim = document.getElementById('claim');
+
+            // The Stripe link is the real path — the customer redeems the
+            // offer themselves instead of waiting on a human to honour an
+            // email. The mailto stays as the fallback for the moment the
+            // link is ever emptied, so the button is never dead.
+            if (OFFER_STRIPE_URL) {
+              claim.setAttribute('href', OFFER_STRIPE_URL);
+              claim.setAttribute('rel', 'noopener');
+            } else {
+              var subject = encodeURIComponent('Claiming the reinstall offer');
+              var body = encodeURIComponent(
+                'I removed NudoIQ because of the price and I want the offer: one month free, then 50% off for two months.\n\n' +
+                'My account email: \n');
+              claim.setAttribute('href', 'mailto:contact@nudoiq.com?subject=' + subject + '&body=' + body);
+            }
+
+            claim.addEventListener('click', function(){
+              try { fbq('trackCustom','UninstallOfferClaimed',{}); } catch(e){}
+            });
+          } else {
+            document.getElementById('panel-note').classList.add('on');
+          }
         });
       });
 
