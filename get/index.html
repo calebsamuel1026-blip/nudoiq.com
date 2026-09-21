@@ -17,6 +17,9 @@
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "y9n5ejt2k9");
   </script>
+  <!-- Google tag (Google Ads AW-18464861190). Measures the Add to Chrome click from Google ads; no customer data sent. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');</script>
   <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
@@ -104,7 +107,7 @@
       var shot = document.querySelector("section.shot"), main = document.querySelector("main");
       if (shot && main) main.insertBefore(shot, main.firstElementChild);
     }
-    document.getElementById("cws").addEventListener("click", function () { try { fbq("trackCustom", "StoreClick", { source: "get" }); } catch (e) {} });
+    document.getElementById("cws").addEventListener("click", function () { try { fbq("trackCustom", "StoreClick", { source: "get" }); } catch (e) {} try { gtag("event", "conversion", { send_to: "AW-18464861190/qNEZCOvXy_8cEIbY3eRE" }); } catch (e) {} });
     var SB = "https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/install_link_requests";
     var KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM";   // public anon key: INSERT-only on this table (migration 20260920120000)
     var f = document.getElementById("f"), b = document.getElementById("b"), e = document.getElementById("e");
