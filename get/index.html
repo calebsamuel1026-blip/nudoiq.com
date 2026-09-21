@@ -76,7 +76,16 @@
       <ul><li><span class="n">1</span><div><b>Auto Refresh Loads</b><br>Stop hitting refresh. New loads appear on your screen automatically.</div></li><li><span class="n">2</span><div><b>Book Before They Go</b><br>Find and book the best loads in seconds instead of minutes.</div></li><li><span class="n">3</span><div><b>Spot Problems Fast</b><br>Draft dispute letters to Amazon from your trip data.</div></li></ul>
     </section>
     <section class="shot">
-      <img src="/assets/email/shot-hero-loadboard.jpg" alt="NudoIQ" width="1180" height="640">
+      <!-- 2026-09-21: the cold email now says "The link below shows a video of everything it is capable of"
+           (Caleb's own line), and every email click lands here via /go/. The walkthrough already on /welcome/
+           is that video, so it plays here too; the screenshot stays as its poster so nothing looks empty
+           before it loads. -->
+      <video controls preload="metadata" playsinline poster="/assets/nudoiq-tutorial-poster.jpg"
+             aria-label="NudoIQ walkthrough: every feature, one at a time" width="1180" height="640"
+             style="width:100%;height:auto;display:block;border-radius:inherit;background:#0B0B12">
+        <source src="/assets/nudoiq-tutorial.mp4" type="video/mp4">
+        <img src="/assets/email/shot-hero-loadboard.jpg" alt="NudoIQ" width="1180" height="640">
+      </video>
       <div class="proof"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span>Rated 5.0 on the Chrome Web Store. Used by 300+ carriers.</div>
     </section>
   </main>
@@ -89,6 +98,12 @@
     var q = new URLSearchParams(location.search), force = q.get("view");
     var mobile = force ? force === "mobile" : (/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && innerWidth < 900));
     document.getElementById("m").hidden = !mobile; document.getElementById("d").hidden = mobile;
+    // A click on the cold email's "Watch it work" was promised a video. On a phone the video sits below the form
+    // and the three steps, so an email visitor gets it first; everyone else keeps the page as it was.
+    if (q.get("utm_medium") === "email") {
+      var shot = document.querySelector("section.shot"), main = document.querySelector("main");
+      if (shot && main) main.insertBefore(shot, main.firstElementChild);
+    }
     document.getElementById("cws").addEventListener("click", function () { try { fbq("trackCustom", "StoreClick", { source: "get" }); } catch (e) {} });
     var SB = "https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/install_link_requests";
     var KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM";   // public anon key: INSERT-only on this table (migration 20260920120000)
