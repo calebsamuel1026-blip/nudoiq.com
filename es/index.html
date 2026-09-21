@@ -653,6 +653,12 @@
   }
 
   </style>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -704,12 +710,7 @@
                 <span class="pb-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                 <span class="pb-label" data-t="heroRating">5.0 en Chrome Web Store</span>
               </span>
-            </span>
-            <span class="pb-rule" aria-hidden="true"></span>
-            <span class="pb-cell">
-              <b class="pb-big">300+</b>
-              <span class="pb-label" data-t="heroUsers">transportistas usuarios</span>
-            </span>
+            </span>
           </div>
           <div class="acts">
             <a class="btn btn-dark" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="install" target="_blank" rel="noopener">Agregar NudoIQ a Chrome</a>
@@ -1163,7 +1164,7 @@
   <footer><div class="foot-in">
     <div class="foot-row">
       <div>© 2026 NudoIQ · <span data-t="independent">Software independiente para transportistas</span></div>
-      <div class="flinks"><a href="/privacy.html" data-t="privacy">Privacidad</a><a href="/refund-policy.html" data-t="refund">Reembolsos</a><a href="/terms.html" data-t="terms">Términos</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contacto</a></div>
+      <div class="flinks"><a href="/guides/">Guides</a><a href="/privacy.html" data-t="privacy">Privacidad</a><a href="/refund-policy.html" data-t="refund">Reembolsos</a><a href="/terms.html" data-t="terms">Términos</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contacto</a></div>
     </div>
     <label class="motion"><input class="sw" type="checkbox" id="motionSw"><span>Turn on Reduced Motion</span></label>
     <p class="tm" data-t="trademarkNote">Amazon y Amazon Relay son marcas registradas de Amazon.com, Inc. o sus afiliadas. NudoIQ es un producto independiente y no está afiliado, respaldado ni patrocinado por Amazon.com, Inc.</p>

@@ -25,9 +25,9 @@
     })(window, document, "clarity", "script", "y9n5ejt2k9");
   </script>
 
-  <!-- Google tag (Google Ads AW-18464861190). This page opens only after an install, so a load = one install conversion. No customer data sent. -->
+  <!-- Google tag (Google Ads AW-18464861190). Secondary conversion "Welcome page visit": fires only when the extension opens this page with ?src=install (background.js). A PROXY for an install, not proof (the parameter can be typed). No customer data sent. -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
-  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190'); gtag('event', 'conversion', {'send_to': 'AW-18464861190/BQYaCPHB0v8cEIbY3eRE'});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190'); if (/[?&]src=install(&|$)/.test(location.search)) gtag('event', 'conversion', {'send_to': 'AW-18464861190/BQYaCPHB0v8cEIbY3eRE'});</script>
   <!-- Meta Pixel -->
   <script>
     !function(f,b,e,v,n,t,s)
