@@ -493,6 +493,12 @@
   .amount{font-size:clamp(32px,4vw,46px);font-weight:500;letter-spacing:-.03em;
     line-height:1;white-space:nowrap}
   .amount small{font-size:15px;letter-spacing:-.01em;color:var(--navy)}
+  .soon{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;font-size:11.5px;font-weight:600;
+    background:#EEF1FF;color:#3346B8;vertical-align:1px;white-space:nowrap}
+  .plist li.na{color:var(--ink-4,#8A8A96)}
+  .plist li.na::before{display:none}
+  .plist li.na::after{content:"–";position:absolute;left:3px;top:0;color:#B4B4BE}
+  .soon-note{margin:0;padding:0 34px 22px;font-size:13.5px;color:var(--ink-3)}
   .plist{list-style:none;margin:0;padding:32px 34px;display:grid;gap:13px}
   .plist li{position:relative;padding-left:28px;font-size:15.5px;color:var(--ink-3)}
   .plist li::before{content:"";position:absolute;left:0;top:7px;width:15px;height:9px;
@@ -689,7 +695,7 @@
         </svg>
         <div class="hero-top">
           <p class="eyebrow" data-t="heroEyebrow">For Amazon Relay owner-operators and fleets</p>
-          <h1 class="display" data-t="heroTitle">The complete Relay automation toolkit.</h1>
+          <h1 class="display" data-t="heroTitle">The Relay automation toolkit.</h1>
           <p class="lede" data-t="heroCopy">A Chrome extension that runs inside Amazon Relay, handling rates, disputes, autobook, backhauls, and profit math. So you don't have to.</p>
           <!-- Caleb, 2026-09-17: "i think right here in the main heading there should be
                the 5 star review placement too, and then 300 users" / "it has to be the
@@ -793,8 +799,8 @@
           <button class="ftab" id="ft-lane" role="tab" aria-controls="fp-lane" aria-selected="true" tabindex="0" data-t="laneEyebrow">Lane Intelligence</button>
           <button class="ftab" id="ft-profit" role="tab" aria-controls="fp-profit" aria-selected="false" tabindex="-1" data-t="profitEyebrow">Net Profit</button>
           <button class="ftab" id="ft-dispute" role="tab" aria-controls="fp-dispute" aria-selected="false" tabindex="-1" data-t="disputeEyebrow">Scorecard disputes</button>
-          <button class="ftab" id="ft-fleet" role="tab" aria-controls="fp-fleet" aria-selected="false" tabindex="-1" data-t="fleetEyebrow">Fleet dashboard</button>
-          <button class="ftab" id="ft-pay" role="tab" aria-controls="fp-pay" aria-selected="false" tabindex="-1" data-t="payEyebrow">Driver pay statements</button>
+          <button class="ftab" id="ft-fleet" role="tab" aria-controls="fp-fleet" aria-selected="false" tabindex="-1" ><span data-t="fleetEyebrow">Fleet dashboard</span> <span class="soon" data-t="soonBadge">Not available to new accounts</span></button>
+          <button class="ftab" id="ft-pay" role="tab" aria-controls="fp-pay" aria-selected="false" tabindex="-1" ><span data-t="payEyebrow">Driver pay statements</span> <span class="soon" data-t="soonBadge2">Not available to new accounts</span></button>
           <button class="ftab" id="ft-refresher" role="tab" aria-controls="fp-refresher" aria-selected="false" tabindex="-1" data-t="refresherTab">Refresher</button>
           <button class="ftab" id="ft-autobook" role="tab" aria-controls="fp-autobook" aria-selected="false" tabindex="-1" data-t="autobookTab">Autobook</button>
           <button class="ftab" id="ft-backhaul" role="tab" aria-controls="fp-backhaul" aria-selected="false" tabindex="-1" data-t="backhaulTab">Backhaul</button>
@@ -1114,19 +1120,20 @@
     <!-- ── PRICING ───────────────────────────────────────────── -->
     <section class="sec sec-alt" id="pricing"><div class="sec-in">
       <p class="eyebrow" data-t="pricingEyebrow">Pricing</p>
-      <h2 class="display" data-t="pricingTitle">$49.99 a month. Every feature. Cancel anytime.</h2>
+      <h2 class="display" data-t="pricingTitle">$49.99 a month. Real automation. Cancel anytime.</h2>
       <p class="intro" data-t="pricingCopy">The same price whether you run one truck or twenty.</p>
       <div class="price">
-        <div class="pricetop"><div><h3>NudoIQ</h3><div data-t="completePlan">Complete carrier toolkit</div></div><div class="amount">$49.99 <small data-t="perMonth">/ month</small></div></div>
+        <div class="pricetop"><div><h3>NudoIQ</h3><div data-t="completePlan">Relay automation for carriers</div></div><div class="amount">$49.99 <small data-t="perMonth">/ month</small></div></div>
         <ul class="plist">
           <li data-t="price1">Load alerts and price-change notifications</li>
           <li data-t="price2">Search and booking rules</li>
           <li data-t="price3">Lane Intelligence and rate support</li>
           <li data-t="priceDispute">Scorecard dispute letters</li>
-          <li data-t="price4">Fleet and earnings reporting</li>
-          <li data-t="price5">Driver pay statements</li>
+          <li class="na"><span data-t="price4">Fleet and earnings reporting</span> <span class="soon" data-t="soonBadge3">Not available to new accounts</span></li>
+          <li class="na"><span data-t="price5">Driver pay statements</span> <span class="soon" data-t="soonBadge4">Not available to new accounts</span></li>
           <li data-t="price6">English and Spanish interface</li>
         </ul>
+        <p class="soon-note" data-t="fleetSoonNote">Fleet features are not currently available to new accounts.</p>
         <div class="pfoot"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="startTrial" target="_blank" rel="noopener">Start the 7-day trial</a><p class="pnote" data-t="priceNote">Payment method required. Cancel before the trial ends to avoid the first monthly charge.</p></div>
       </div>
     </div></section>
@@ -1169,7 +1176,7 @@
   <footer><div class="foot-in">
     <div class="foot-row">
       <div>© 2026 NudoIQ · <span data-t="independent">Independent software for carriers</span></div>
-      <div class="flinks"><a href="/guides/">Guides</a><a href="/privacy.html" data-t="privacy">Privacy</a><a href="/refund-policy.html" data-t="refund">Refund policy</a><a href="/terms.html" data-t="terms">Terms</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contact</a></div>
+      <div class="flinks"><a href="/guides/">Guides</a><a href="/privacy.html" data-t="privacy">Privacy</a><a href="/refund-policy.html" data-t="refund">Refund policy</a><a href="/terms.html" data-t="terms">Terms</a><a href="/support/" data-t="support">Support</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contact</a></div>
     </div>
     <label class="motion"><input class="sw" type="checkbox" id="motionSw"><span>Turn on Reduced Motion</span></label>
     <p class="tm" data-t="trademarkNote">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc.</p>
@@ -1287,7 +1294,7 @@
       "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
       "url": "https://nudoiq.com/",
       "image": "https://nudoiq.com/assets/og-image-1200x630.png",
-      "description": "NudoIQ is a Chrome extension for Amazon Relay carriers. It adds market-rate intelligence, scorecard dispute letters, load alerts and price-change notifications, search and booking rules, lane rate intelligence, truck routing, HOS overview, fleet and earnings reporting, and printable driver pay statements.",
+      "description": "NudoIQ is a Chrome extension for Amazon Relay carriers. It adds market-rate intelligence, scorecard dispute letters, load alerts and price-change notifications, search and booking rules, lane rate intelligence, truck routing, and HOS overview.",
       "inLanguage": [
         "en-US",
         "es-US"
@@ -1309,8 +1316,6 @@
         "Truck routing",
         "Driver dispatch",
         "HOS overview",
-        "Fleet and earnings reporting",
-        "Driver pay statements",
         "English and Spanish interface"
       ],
       "offers": {

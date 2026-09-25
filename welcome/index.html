@@ -86,6 +86,24 @@
       <p class="done"><span class="tick" aria-hidden="true">&#10003;</span> NudoIQ is installed</p>
       <h1>Watch your feature-by-feature walkthrough just below.</h1>
       <p class="lede">About four minutes. Once you're on Relay, the tools appear on your board.</p>
+      <!-- Partner code carried across the Web Store hop. A /with/<slug>/ page stored it before the
+           install (tools/partners/partners.py); it is shown for 30 days, then ignored. The sentence is
+           research/copy/PARTNER-AND-CASESTUDY-COPY-2026-09-20.json -> welcome_code_line_tpl. -->
+      <p class="lede" id="nq-partner" hidden></p>
+      <script>
+        (function(){
+          try{
+            var code  = localStorage.getItem('nudoiq_partner'),
+                offer = localStorage.getItem('nudoiq_partner_offer') || '',
+                ts    = +localStorage.getItem('nudoiq_partner_ts') || 0;
+            if (!code || !offer || Date.now() - ts > 30*864e5) return;
+            var el = document.getElementById('nq-partner');
+            el.textContent = 'Paste {code} at checkout to get {offer}.'.replace('{code}', code).replace('{offer}', offer);
+            el.hidden = false;
+            if (window.clarity) clarity('set', 'partner', code);
+          }catch(e){}
+        })();
+      </script>
     </div></section>
 
     <section class="tut"><div class="wrap">
@@ -101,6 +119,7 @@
       <div class="cap">
         <span class="t">Watch this first — every feature, one at a time.</span>
         <span class="m">4 minutes · sound on · you can come back to it any time</span>
+        <span class="m" style="display:block;margin-top:6px">Fleet features are not currently available to new accounts.</span>
       </div>
     </div></section>
 

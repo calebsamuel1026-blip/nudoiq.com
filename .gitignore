@@ -2,3 +2,4 @@
 # strip_metadata.py backups must never reach the public site: they are the
 # pre-strip copies, so publishing them publishes the metadata we just removed.
 *.bak-meta
+with/demo-partner/

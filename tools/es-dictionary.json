@@ -3,7 +3,7 @@
   "navPricing": "Precio",
   "tryFree": "Prueba gratis por 7 días",
   "heroEyebrow": "Para dueños-operadores y flotas de Amazon Relay",
-  "heroTitle": "El kit completo de automatización para Relay.",
+  "heroTitle": "El kit de automatización de Relay.",
   "heroCopy": "Una extensión de Chrome que se ejecuta dentro de Amazon Relay, manejando tarifas, disputas, autobook, retrocargas y cálculo de ganancias. Para que tú no tengas que hacerlo.",
   "install": "Agregar NudoIQ a Chrome",
   "seeProduct": "Ver el producto",
@@ -72,9 +72,9 @@
   "step3Title": "Disfruta NudoIQ",
   "step3Copy": "Revisa la tarifa objetivo, la ruta y el margen, y reserva con confianza.",
   "pricingEyebrow": "Precio",
-  "pricingTitle": "$49.99 al mes. Todas las funciones. Cancela cuando quieras.",
+  "pricingTitle": "$49.99 al mes. Automatización real. Cancela cuando quieras.",
   "pricingCopy": "El mismo precio con un camión o con veinte.",
-  "completePlan": "Herramientas completas para transportistas",
+  "completePlan": "Automatización para transportistas",
   "perMonth": "/ mes",
   "price1": "Alertas y cambios de precio",
   "price2": "Reglas de búsqueda y reserva",
@@ -210,5 +210,11 @@
   "costFigure": "$1.64",
   "costLabel": "tu suscripción mensual a NudoIQ",
   "scaleNote": "Los pagos por ruta varían según el mercado, el momento y tu historial. Estos resultados no están garantizados.",
-  "payoffBig": "Recupera tu inversión en la primera carga"
+  "payoffBig": "Recupera tu inversión en la primera carga",
+  "soonBadge": "No para cuentas nuevas",
+  "soonBadge2": "No para cuentas nuevas",
+  "soonBadge3": "No para cuentas nuevas",
+  "soonBadge4": "No para cuentas nuevas",
+  "fleetSoonNote": "Las características de flota no están disponibles actualmente para cuentas nuevas.",
+  "support": "Soporte"
 }

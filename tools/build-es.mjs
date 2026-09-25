@@ -71,7 +71,7 @@ for (const node of graph['@graph']) {
       node.review = node.review.map((r, i) => ({ ...r, reviewBody: es['review' + (i + 1)] || r.reviewBody }));
     }
     node.description = 'NudoIQ es una extensión de Chrome para transportistas de Amazon Relay: inteligencia de tarifas de mercado, cartas de disputa de scorecard, alertas de cargas, reglas de búsqueda y reserva, ruta para camiones, resumen HOS, reportes de flota y estados de pago para conductores.';
-    node.featureList = [es.price1, es.price2, es.price3, es.priceDispute, es.price4, es.price5, es.price6];
+    node.featureList = [es.price1, es.price2, es.price3, es.priceDispute, es.price6];
   }
 }
 doc = doc.replace(ldRe, () => '<script type="application/ld+json">' + String.fromCharCode(10) + JSON.stringify(graph, null, 2) + String.fromCharCode(10) + '  </script>');

@@ -493,6 +493,12 @@
   .amount{font-size:clamp(32px,4vw,46px);font-weight:500;letter-spacing:-.03em;
     line-height:1;white-space:nowrap}
   .amount small{font-size:15px;letter-spacing:-.01em;color:var(--navy)}
+  .soon{display:inline-block;margin-left:6px;padding:1px 8px;border-radius:999px;font-size:11.5px;font-weight:600;
+    background:#EEF1FF;color:#3346B8;vertical-align:1px;white-space:nowrap}
+  .plist li.na{color:var(--ink-4,#8A8A96)}
+  .plist li.na::before{display:none}
+  .plist li.na::after{content:"–";position:absolute;left:3px;top:0;color:#B4B4BE}
+  .soon-note{margin:0;padding:0 34px 22px;font-size:13.5px;color:var(--ink-3)}
   .plist{list-style:none;margin:0;padding:32px 34px;display:grid;gap:13px}
   .plist li{position:relative;padding-left:28px;font-size:15.5px;color:var(--ink-3)}
   .plist li::before{content:"";position:absolute;left:0;top:7px;width:15px;height:9px;
@@ -689,7 +695,7 @@
         </svg>
         <div class="hero-top">
           <p class="eyebrow" data-t="heroEyebrow">Para dueños-operadores y flotas de Amazon Relay</p>
-          <h1 class="display" data-t="heroTitle">El kit completo de automatización para Relay.</h1>
+          <h1 class="display" data-t="heroTitle">El kit de automatización de Relay.</h1>
           <p class="lede" data-t="heroCopy">Una extensión de Chrome que se ejecuta dentro de Amazon Relay, manejando tarifas, disputas, autobook, retrocargas y cálculo de ganancias. Para que tú no tengas que hacerlo.</p>
           <!-- Caleb, 2026-09-17: "i think right here in the main heading there should be
                the 5 star review placement too, and then 300 users" / "it has to be the
@@ -793,8 +799,8 @@
           <button class="ftab" id="ft-lane" role="tab" aria-controls="fp-lane" aria-selected="true" tabindex="0" data-t="laneEyebrow">Inteligencia de rutas</button>
           <button class="ftab" id="ft-profit" role="tab" aria-controls="fp-profit" aria-selected="false" tabindex="-1" data-t="profitEyebrow">Ganancia Neta</button>
           <button class="ftab" id="ft-dispute" role="tab" aria-controls="fp-dispute" aria-selected="false" tabindex="-1" data-t="disputeEyebrow">Disputas de scorecard</button>
-          <button class="ftab" id="ft-fleet" role="tab" aria-controls="fp-fleet" aria-selected="false" tabindex="-1" data-t="fleetEyebrow">Panel de flota</button>
-          <button class="ftab" id="ft-pay" role="tab" aria-controls="fp-pay" aria-selected="false" tabindex="-1" data-t="payEyebrow">Pagos a conductores</button>
+          <button class="ftab" id="ft-fleet" role="tab" aria-controls="fp-fleet" aria-selected="false" tabindex="-1" ><span data-t="fleetEyebrow">Panel de flota</span> <span class="soon" data-t="soonBadge">No para cuentas nuevas</span></button>
+          <button class="ftab" id="ft-pay" role="tab" aria-controls="fp-pay" aria-selected="false" tabindex="-1" ><span data-t="payEyebrow">Pagos a conductores</span> <span class="soon" data-t="soonBadge2">No para cuentas nuevas</span></button>
           <button class="ftab" id="ft-refresher" role="tab" aria-controls="fp-refresher" aria-selected="false" tabindex="-1" data-t="refresherTab">Actualizador</button>
           <button class="ftab" id="ft-autobook" role="tab" aria-controls="fp-autobook" aria-selected="false" tabindex="-1" data-t="autobookTab">Reserva automática</button>
           <button class="ftab" id="ft-backhaul" role="tab" aria-controls="fp-backhaul" aria-selected="false" tabindex="-1" data-t="backhaulTab">Carga de regreso</button>
@@ -1114,19 +1120,20 @@
     <!-- ── PRICING ───────────────────────────────────────────── -->
     <section class="sec sec-alt" id="pricing"><div class="sec-in">
       <p class="eyebrow" data-t="pricingEyebrow">Precio</p>
-      <h2 class="display" data-t="pricingTitle">$49.99 al mes. Todas las funciones. Cancela cuando quieras.</h2>
+      <h2 class="display" data-t="pricingTitle">$49.99 al mes. Automatización real. Cancela cuando quieras.</h2>
       <p class="intro" data-t="pricingCopy">El mismo precio con un camión o con veinte.</p>
       <div class="price">
-        <div class="pricetop"><div><h3>NudoIQ</h3><div data-t="completePlan">Herramientas completas para transportistas</div></div><div class="amount">$49.99 <small data-t="perMonth">/ mes</small></div></div>
+        <div class="pricetop"><div><h3>NudoIQ</h3><div data-t="completePlan">Automatización para transportistas</div></div><div class="amount">$49.99 <small data-t="perMonth">/ mes</small></div></div>
         <ul class="plist">
           <li data-t="price1">Alertas y cambios de precio</li>
           <li data-t="price2">Reglas de búsqueda y reserva</li>
           <li data-t="price3">Inteligencia de rutas y apoyo de tarifas</li>
           <li data-t="priceDispute">Cartas de disputa de scorecard</li>
-          <li data-t="price4">Reportes de flota e ingresos</li>
-          <li data-t="price5">Estados de pago de conductores</li>
+          <li class="na"><span data-t="price4">Reportes de flota e ingresos</span> <span class="soon" data-t="soonBadge3">No para cuentas nuevas</span></li>
+          <li class="na"><span data-t="price5">Estados de pago de conductores</span> <span class="soon" data-t="soonBadge4">No para cuentas nuevas</span></li>
           <li data-t="price6">Interfaz en inglés y español</li>
         </ul>
+        <p class="soon-note" data-t="fleetSoonNote">Las características de flota no están disponibles actualmente para cuentas nuevas.</p>
         <div class="pfoot"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="startTrial" target="_blank" rel="noopener">Comenzar prueba de 7 días</a><p class="pnote" data-t="priceNote">Método de pago requerido. Cancela antes de terminar la prueba para evitar el primer cobro.</p></div>
       </div>
     </div></section>
@@ -1169,7 +1176,7 @@
   <footer><div class="foot-in">
     <div class="foot-row">
       <div>© 2026 NudoIQ · <span data-t="independent">Software independiente para transportistas</span></div>
-      <div class="flinks"><a href="/guides/">Guides</a><a href="/privacy.html" data-t="privacy">Privacidad</a><a href="/refund-policy.html" data-t="refund">Reembolsos</a><a href="/terms.html" data-t="terms">Términos</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contacto</a></div>
+      <div class="flinks"><a href="/guides/">Guides</a><a href="/privacy.html" data-t="privacy">Privacidad</a><a href="/refund-policy.html" data-t="refund">Reembolsos</a><a href="/terms.html" data-t="terms">Términos</a><a href="/support/" data-t="support">Soporte</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contacto</a></div>
     </div>
     <label class="motion"><input class="sw" type="checkbox" id="motionSw"><span>Turn on Reduced Motion</span></label>
     <p class="tm" data-t="trademarkNote">Amazon y Amazon Relay son marcas registradas de Amazon.com, Inc. o sus afiliadas. NudoIQ es un producto independiente y no está afiliado, respaldado ni patrocinado por Amazon.com, Inc.</p>
@@ -1300,8 +1307,6 @@
         "Reglas de búsqueda y reserva",
         "Inteligencia de rutas y apoyo de tarifas",
         "Cartas de disputa de scorecard",
-        "Reportes de flota e ingresos",
-        "Estados de pago de conductores",
         "Interfaz en inglés y español"
       ],
       "offers": {
