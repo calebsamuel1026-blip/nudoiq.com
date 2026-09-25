@@ -222,19 +222,19 @@
                Stripe list price tomorrow — see research/GET-PAGE-V2-2026-09-24.md. ── -->
           <section class="price">
             <div class="price-card" id="priceBlock">
-              <p class="price-eyebrow" id="priceEyebrow">Last day at $49.99</p>
+              <p class="price-eyebrow" id="priceEyebrow">50% off until Sunday</p>
               <div class="price-row" id="priceRow">
-                <span class="price-old" id="priceOld">$99<span>/mo</span></span>
+                <span class="price-old" id="priceOld">$99.98<span>/mo</span></span>
                 <span class="price-new" id="priceNew">$49.99<span>/mo</span></span>
               </div>
-              <p class="price-line" id="priceLine1">New customers start at $99/month tomorrow; lock $49.99 in today, <b>September 25, 2026</b>.</p>
-              <p class="price-line" id="priceLine2">Lock in $49.99/month today; your rate won't change as long as you stay subscribed.</p>
+              <p class="price-line" id="priceLine1">50% off until <b>Sunday, September 27</b>. You pay $49.99 a month.</p>
+              <p class="price-line" id="priceLine2">Keep that discount for as long as you stay subscribed.</p>
               <div class="countdown" id="countdown">
-                <span class="cd-label">Offer expires in</span>
+                <span class="cd-label">Offer ends in</span>
                 <span class="cd-num" id="cdHours">--</span><span class="cd-label">h</span>
                 <span class="cd-num" id="cdMins">--</span><span class="cd-label">m</span>
               </div>
-              <p class="price-expired" id="priceExpired" hidden>Today's price has ended. Current price is $99/month.</p>
+              <p class="price-expired" id="priceExpired" hidden>This week's discount has ended. NudoIQ is $49.99 a month.</p>
             </div>
           </section>
 
@@ -340,7 +340,7 @@
     // PREREQUISITE (not done by this page): $99/mo must be the real Stripe list
     // price starting tomorrow, or this page states a price change that isn't
     // true. See research/GET-PAGE-V2-2026-09-24.md.
-    var LAUNCH_END = "2026-09-25T23:59:59-04:00";
+    var LAUNCH_END = "2026-09-27T23:59:59-04:00";   // Sunday
     function updateCountdown() {
       var diff = new Date(LAUNCH_END).getTime() - Date.now();
       if (diff <= 0) {
