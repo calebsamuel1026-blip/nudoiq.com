@@ -211,30 +211,19 @@
             </span>
           </div>
 
-<!-- ── PRICE BLOCK — today-only pricing. $99/mo is the real list price that
-               takes effect for NEW customers starting tomorrow (2026-09-25); customers
-               who sign up TODAY keep $49.99/mo for as long as they're subscribed.
-               Countdown reads the fixed LAUNCH_END constant in the script below — a hard
-               -coded datetime, not "today" recomputed on load — so it does not reset on
-               refresh and does not restart once it passes. Copy from the copywriter
-               agent (haiku), fact-checked: no income claim, no scorecard claim, no "no
-               card" claim. PREREQUISITE: this is only true if $99/mo becomes the real
-               Stripe list price tomorrow — see research/GET-PAGE-V2-2026-09-24.md. ── -->
+<!-- The $99 -> $49.99 "last day" block was removed 2026-09-25. Its countdown was hard-coded to
+               2026-09-24T23:59:59, that deadline passed, and its expired state told every visitor
+               "Current price is $99/month" while Stripe, the homepage and the extension gate all still
+               charge $49.99. The prerequisite - actually making $99 the list price - was never done, so
+               the page was quoting a price that does not exist to the traffic a $20/day campaign is
+               buying. What replaces it is the true price, stated plainly.
+               research/FUNNEL-AUDIT-2026-09-25.md, research/GET-PAGE-V2-2026-09-24.md -->
           <section class="price">
             <div class="price-card" id="priceBlock">
-              <p class="price-eyebrow" id="priceEyebrow">Last day at $49.99</p>
               <div class="price-row" id="priceRow">
-                <span class="price-old" id="priceOld">$99<span>/mo</span></span>
                 <span class="price-new" id="priceNew">$49.99<span>/mo</span></span>
               </div>
-              <p class="price-line" id="priceLine1">New customers start at $99/month tomorrow; lock $49.99 in today, <b>September 24, 2026</b>.</p>
-              <p class="price-line" id="priceLine2">Lock in $49.99/month today; your rate won't change as long as you stay subscribed.</p>
-              <div class="countdown" id="countdown">
-                <span class="cd-label">Offer expires in</span>
-                <span class="cd-num" id="cdHours">--</span><span class="cd-label">h</span>
-                <span class="cd-num" id="cdMins">--</span><span class="cd-label">m</span>
-              </div>
-              <p class="price-expired" id="priceExpired" hidden>Today's price has ended. Current price is $99/month.</p>
+              <p class="price-line" id="priceLine2">7-day free trial. Cancel anytime.</p>
             </div>
           </section>
 
@@ -327,41 +316,9 @@
     document.getElementById("cws").addEventListener("click", trackStoreClick);
     document.getElementById("cws2").addEventListener("click", trackStoreClick);
 
-    // ── TODAY-ONLY PRICING COUNTDOWN ──────────────────────────────────────────
-    // Hard-coded datetime constant — 23:59:59 America/New_York on 2026-09-24 — NOT
-    // "today" recomputed from the visitor's clock, so this never drifts to a new
-    // day and never resets on refresh. Once LAUNCH_END passes it stays passed:
-    // the block hides the old/new price and countdown and shows a flat $99
-    // message, permanently, until someone edits this file.
-    // Caleb: this expiry is TODAY. If you don't want the offer to end today,
-    // change LAUNCH_END (ISO 8601, keep the -04:00 EDT / -05:00 EST offset for
-    // America/New_York correct for the date you pick) and update the
-    // "September 24, 2026" mentions in the HTML above to match.
-    // PREREQUISITE (not done by this page): $99/mo must be the real Stripe list
-    // price starting tomorrow, or this page states a price change that isn't
-    // true. See research/GET-PAGE-V2-2026-09-24.md.
-    var LAUNCH_END = "2026-09-24T23:59:59-04:00";
-    function updateCountdown() {
-      var diff = new Date(LAUNCH_END).getTime() - Date.now();
-      if (diff <= 0) {
-        document.getElementById("priceEyebrow").hidden = true;
-        document.getElementById("priceOld").hidden = true;
-        document.getElementById("priceNew").hidden = true;
-        document.getElementById("countdown").hidden = true;
-        document.getElementById("priceLine1").hidden = true;
-        document.getElementById("priceLine2").hidden = true;
-        document.getElementById("priceExpired").hidden = false;
-        clearInterval(cdTimer);
-        return;
-      }
-      var h = Math.floor(diff / 3600000);
-      var m = Math.floor((diff % 3600000) / 60000);
-      document.getElementById("cdHours").textContent = h;
-      document.getElementById("cdMins").textContent = m;
-    }
-    updateCountdown();
-    var cdTimer = setInterval(updateCountdown, 60000);
-    var SB = "https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/install_link_requests";
+    // The today-only pricing countdown was removed 2026-09-25: it expired on 2026-09-24
+    // and its expired state advertised a $99 price that Stripe never charged.
+
     var KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM";   // public anon key: INSERT-only on this table (migration 20260920120000)
     var f = document.getElementById("f"), b = document.getElementById("b"), e = document.getElementById("e");
     f.addEventListener("submit", function (ev) {
