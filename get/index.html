@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
   <title>Get NudoIQ | NudoIQ</title>
-  <meta name="description" content="NudoIQ only installs in Chrome on a computer, so type your email and we will send you the install link.">
+  <meta name="description" content="NudoIQ auto-refreshes the Amazon Relay load board, auto-books to your rules, drafts scorecard disputes and shows real profit per load. 7-day free trial.">
   <meta name="robots" content="noindex, follow">
-  <meta name="theme-color" content="#EAF1FF">
+  <meta name="theme-color" content="#16255A">
   <link rel="canonical" href="https://nudoiq.com/get/">
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap">
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "y9n5ejt2k9");
@@ -26,90 +26,341 @@
     fbq('init', '1601820741955520'); fbq('track', 'PageView');
   </script>
   <style>
-    :root { --ink:#161616; --blue:#3366FF; --deep:#2551B8; --peri:#B1CBFF; --peach:#FFBB8C; --off:#F9F9FA; --mute:#5B6472; --line:#E6E9F0; }
-    * { box-sizing:border-box; } section { min-width:0; } h1, .sub { overflow-wrap:anywhere; }
-    body { margin:0; font-family:'Inter Tight',Inter,Arial,sans-serif; color:var(--ink); background:#EAF1FF; letter-spacing:-0.01em; }
-    .top { max-width:1080px; margin:0 auto; padding:22px 20px; display:flex; justify-content:space-between; align-items:center; }
-    .wm { font-size:26px; font-weight:600; letter-spacing:-0.03em; color:var(--ink); text-decoration:none; } .wm span { color:var(--blue); }
-    .top a.site { color:var(--mute); font-size:14px; text-decoration:none; }
-    .wrap { max-width:1080px; margin:0 auto; padding:8px 20px 56px; display:grid; grid-template-columns:1fr; gap:28px; }
-    @media (min-width:900px) { .wrap { grid-template-columns:1.05fr 1fr; align-items:center; gap:56px; padding-top:32px; } }
-    .pill { display:inline-block; background:var(--peach); border-radius:999px; padding:6px 14px; font-size:12px; font-weight:600; letter-spacing:.04em; text-transform:uppercase; }
-    h1 { font-size:clamp(34px,6vw,54px); line-height:1.05; letter-spacing:-0.03em; font-weight:600; margin:16px 0 12px; }
-    .sub { font-size:18px; line-height:1.5; color:#3A4250; margin:0 0 22px; }
-    .card { background:#fff; border-radius:24px; padding:22px; box-shadow:0 18px 50px rgba(37,81,184,.16); }
-    label { display:block; font-size:13px; font-weight:600; margin-bottom:8px; }
-    input[type=email] { width:100%; font:inherit; font-size:18px; padding:16px 18px; border:1.5px solid var(--line); border-radius:14px; outline:none; }
-    input[type=email]:focus { border-color:var(--blue); box-shadow:0 0 0 4px rgba(51,102,255,.15); }
-    .btn { display:block; width:100%; margin-top:12px; font:inherit; font-size:18px; font-weight:600; color:#fff; background:var(--blue); border:0; border-radius:999px; padding:17px 24px; cursor:pointer; text-align:center; text-decoration:none; }
-    .btn:hover { background:var(--deep); } .btn[disabled] { opacity:.6; }
-    .under { font-size:13px; color:var(--mute); margin:12px 2px 0; line-height:1.5; }
-    ul { list-style:none; margin:26px 0 0; padding:0; display:grid; gap:16px; }
-    li { display:flex; gap:14px; font-size:15px; line-height:1.5; color:var(--mute); } li b { color:var(--ink); font-size:17px; font-weight:600; }
-    .n { flex:0 0 32px; height:32px; border-radius:16px; background:var(--peri); color:var(--deep); font-weight:600; font-size:14px; display:grid; place-items:center; }
-    .shot img { display:block; width:100%; height:auto; border-radius:18px; border:1px solid #D5DEF0; box-shadow:0 24px 60px rgba(22,22,22,.18); }
-    .proof { margin-top:18px; background:var(--ink); color:#fff; border-radius:18px; padding:18px 20px; font-size:16px; font-weight:500; }
-    .proof .s { color:var(--peach); letter-spacing:3px; font-size:18px; display:block; margin-bottom:4px; }
-    [hidden] { display:none !important; }
-    footer { max-width:1080px; margin:0 auto; padding:0 20px 40px; font-size:12px; color:#7A8290; } footer a { color:#7A8290; }
+    /* ═══ AURA-SYSTEM TOKENS — copied verbatim from nudoiq-website/index.html so this
+       page renders as the same site, not a second design. research/BRAND-SYSTEM.md is
+       stale; these are the live tokens. See research/GET-PAGE-REBUILD-2026-09-24.md. */
+    :root{
+      --ink:#161616; --ink-2:#2A2A2A; --ink-3:#333232; --ink-4:#4D4D4D;
+      --paper:#FFFFFF; --paper-2:#F9F9FA;
+      --peri:#B1CBFF; --peri-2:#7CA8FF; --blue:#3366FF;
+      --blue-deep:#2551B8; --navy:#1E306E; --peach:#FFBB8C;
+      --rc:24px; --ri:16px; --rp:999px;
+      --gut:16px; --max:1104px;
+      --ff:"Inter Tight","Basel Grotesk",Inter,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+      --sh-2:0 14px 34px -14px rgba(22,22,22,.28);
+      --sh-3:0 40px 90px -40px rgba(12,20,52,.62);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ff);
+      font-size:16px;line-height:1.55;font-weight:400;-webkit-font-smoothing:antialiased;
+      letter-spacing:-0.01em; overflow-x:hidden}
+    img{max-width:100%;height:auto;display:block}
+    a{color:inherit}
+    h1,h2{margin:0;font-weight:500;letter-spacing:-.02em;line-height:1.06}
+    p{margin:0}
+    [hidden]{display:none!important}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;width:100%}
+
+    /* ═══ NAV (same shape as homepage .top, trimmed to logo + site link) ═══ */
+    .top{background:#fff;border-bottom:1px solid rgba(22,22,22,.08)}
+    .topin{max-width:var(--max);margin:0 auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+    .wm{font-size:24px;font-weight:600;letter-spacing:-0.03em;color:var(--ink);text-decoration:none}
+    .wm span{color:var(--blue)}
+    .top a.site{color:var(--ink-4);font-size:14px;text-decoration:none}
+
+    /* ═══ BUTTONS — identical to homepage .btn/.btn-dark/.btn-go ═══ */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      border-radius:var(--rp);font-family:var(--ff);font-size:16px;font-weight:600;
+      letter-spacing:-.01em;text-decoration:none;padding:17px 30px;border:1px solid transparent;
+      cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease;
+      white-space:nowrap;min-height:48px;width:100%}
+    .btn-dark{background:#fff;color:var(--ink)}
+    .btn-dark:hover{background:#E9EEFB}
+    .btn-go{background:var(--blue);color:#fff}
+    .btn-go:hover{background:var(--blue-deep)}
+
+    /* ═══ HERO — same panel/eyebrow/lede/proofbar pattern as the homepage hero ═══ */
+    .hero{padding:20px var(--gut) 0}
+    .hero-panel{position:relative;border-radius:var(--rc);overflow:hidden;
+      padding:clamp(40px,6vw,64px) 24px;
+      background:linear-gradient(158deg,#16255A 0%,#22459E 44%,#2C57CC 76%,#3563E8 100%)}
+    .curves{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
+    .hero-top{position:relative;z-index:2;max-width:680px;margin:0 auto;text-align:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;
+      letter-spacing:.09em;text-transform:uppercase;color:#C9D9FF;margin-bottom:16px}
+    h1.display{color:#fff;font-weight:600;letter-spacing:-.035em;line-height:1.04;
+      font-size:clamp(30px,5vw,44px);margin:0 auto 16px;text-wrap:balance}
+    .lede{color:rgba(255,255,255,.96);font-size:clamp(15.5px,1.7vw,18px);line-height:1.5;
+      max-width:52ch;margin:0 auto}
+    .proofbar{display:inline-flex;align-items:center;gap:20px;margin:22px auto 0;
+      padding:12px 22px;border-radius:16px;
+      background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 10px 26px rgba(10,20,60,.22);
+      -webkit-backdrop-filter:saturate(140%) blur(6px);backdrop-filter:saturate(140%) blur(6px)}
+    .pb-cell{display:inline-flex;align-items:center;gap:10px}
+    .pb-stack{display:flex;flex-direction:column;gap:1px;text-align:left}
+    .pb-stars{color:#FFC53D;font-size:13px;letter-spacing:2.5px;line-height:1}
+    .pb-label{color:rgba(255,255,255,.90);font-size:13px;font-weight:500;line-height:1.3}
+    .pb-big{color:#fff;font-size:24px;font-weight:700;letter-spacing:-.02em;line-height:1}
+    .pb-rule{width:1px;height:30px;background:rgba(255,255,255,.22)}
+    @media (max-width:560px){
+      .proofbar{flex-direction:column;gap:12px;padding:14px 20px}
+      .pb-rule{width:40px;height:1px}
+      .pb-stack{text-align:center;align-items:center}
+    }
+    .cta{max-width:400px;margin:26px auto 0}
+    .cta .under{font-size:13px;color:rgba(255,255,255,.78);margin:12px 2px 0;line-height:1.5}
+    .cta .under b{color:#fff;font-weight:600}
+
+    /* ═══ MOBILE EMAIL-CAPTURE CARD (email-only install path) ═══ */
+    .card{background:#fff;border-radius:20px;padding:22px;box-shadow:var(--sh-2);text-align:left}
+    .card label{display:block;font-size:13px;font-weight:600;margin-bottom:8px;color:var(--ink)}
+    .card input[type=email]{width:100%;font:inherit;font-size:17px;padding:15px 16px;
+      border:1.5px solid #E6E9F0;border-radius:14px;outline:none;color:var(--ink)}
+    .card input[type=email]:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(51,102,255,.15)}
+    .card .btn{background:var(--blue);color:#fff;margin-top:12px}
+    .card .btn:hover{background:var(--blue-deep)}
+    .card .under{color:var(--ink-4)}
+    .card .under b{color:var(--ink)}
+    .cta .card h2{font-size:22px;letter-spacing:-0.02em;margin:0 0 8px;color:var(--ink)}
+    .cta .card p{color:var(--ink-4);font-size:15px;line-height:1.5}
+
+    /* ═══ THREE-POINT LIST (unchanged content, restyled to match tokens) ═══ */
+    ul.steps{list-style:none;margin:0;padding:0;display:grid;gap:16px;max-width:var(--max);
+      margin:0 auto;padding:40px 24px 0}
+    ul.steps li{display:flex;gap:14px;font-size:15px;line-height:1.5;color:var(--ink-4)}
+    ul.steps li b{color:var(--ink);font-size:17px;font-weight:600;display:block;margin-bottom:2px}
+    ul.steps .n{flex:0 0 32px;height:32px;border-radius:16px;background:var(--peri);
+      color:var(--blue-deep);font-weight:600;font-size:14px;display:grid;place-items:center}
+
+    /* ═══ VIDEO / PROOF SECTION ═══ */
+    section.shot{max-width:var(--max);margin:0 auto;padding:40px 24px 0}
+    .shot video{width:100%;height:auto;display:block;border-radius:18px;border:1px solid #D5DEF0;
+      box-shadow:var(--sh-2);background:#0B0B12}
+    .proof{margin-top:16px;background:var(--ink);color:#fff;border-radius:18px;padding:18px 20px;
+      font-size:16px;font-weight:500}
+    .proof .s{color:var(--peach);letter-spacing:3px;font-size:18px;display:block;margin-bottom:4px}
+
+    footer{max-width:var(--max);margin:0 auto;padding:48px 24px 40px;font-size:12px;color:var(--ink-4)}
+    footer a{color:var(--ink-4)}
+
+    /* ═══ PRICE BLOCK — static launch-pricing card. Countdown reads a fixed ISO
+       date from JS below; it is never reset by a page refresh and never restarts
+       once it expires. See research/GET-PAGE-V2-2026-09-24.md for why no live
+       counter/backend was built — Caleb's explicit call, static markup only. ═══ */
+    section.price{max-width:640px;margin:28px auto 0;padding:0 24px}
+    .price-card{background:var(--paper-2);border:1px solid #E1E7F5;border-radius:var(--rc);
+      padding:24px 26px;text-align:center}
+    .price-eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+      color:var(--blue-deep);margin:0 0 10px}
+    .price-row{display:flex;align-items:baseline;justify-content:center;gap:14px;margin-bottom:14px;flex-wrap:wrap}
+    .price-old{font-size:20px;font-weight:600;color:var(--ink-4);text-decoration:line-through;
+      text-decoration-color:#B3392E;text-decoration-thickness:2px}
+    .price-old span{font-size:13px;font-weight:500}
+    .price-new{font-size:34px;font-weight:700;color:var(--ink);letter-spacing:-.02em}
+    .price-new span{font-size:15px;font-weight:500;color:var(--ink-4)}
+    .price-line{font-size:14px;line-height:1.5;color:var(--ink-4);margin:6px 0}
+    .price-line b{color:var(--ink);font-weight:600}
+    .countdown{margin-top:14px;display:inline-flex;align-items:baseline;gap:8px;
+      background:#fff;border:1px solid #E1E7F5;border-radius:var(--rp);padding:8px 18px}
+    .cd-label{font-size:12.5px;color:var(--ink-4);font-weight:500}
+    .cd-num{font-size:15px;font-weight:700;color:var(--blue-deep)}
+    .price-expired{font-size:14px;color:var(--ink-4);margin-top:10px}
+
+    /* ═══ OBJECTION BLOCK — the account-safety question, answered honestly and
+       narrowly (no password, independent software, runs locally). Text reused
+       verbatim from the live, already-approved homepage FAQ (index.html trust1/
+       faq3/faq10) — not new copy, no new safety claim invented. ═══ */
+    section.objections{max-width:var(--max);margin:44px auto 0;padding:0 24px}
+    section.objections h2{font-size:clamp(20px,2.6vw,26px);text-align:center;margin:0 0 22px;color:var(--ink)}
+    .obj-grid{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
+    @media (max-width:800px){.obj-grid{grid-template-columns:1fr}}
+    .obj-card{background:var(--paper-2);border:1px solid #E6E9F0;border-radius:var(--ri);padding:18px 20px}
+    .obj-card b{display:block;font-size:15px;color:var(--ink);margin-bottom:6px}
+    .obj-card p{font-size:13.5px;line-height:1.5;color:var(--ink-4)}
+
+    /* ═══ SECOND CTA — same button/href/handler as the hero, repeated further
+       down the page per brief item 3. Desktop only, matching the hero CTA. ═══ */
+    section.cta2{max-width:400px;margin:40px auto 0;padding:0 24px}
   </style>
 </head>
 <body>
-  <div class="top"><a class="wm" href="/"><span>N</span>udoIQ</a><a class="site" href="/">nudoiq.com</a></div>
-  <main class="wrap">
-    <section>
-      <span class="pill">Works on Computer</span>
-      <div id="m">
-        <h1>Get the install link sent to your computer</h1>
-        <p class="sub">NudoIQ only installs in Chrome on a computer, so type your email and we will send you the install link.</p>
-        <form class="card" id="f" novalidate>
-          <label for="e">Email Address</label>
-          <input id="e" type="email" inputmode="email" autocomplete="email" placeholder="name@example.com" required>
-          <button class="btn" id="b" type="submit">Send the Link</button>
-          <p class="under">One email with the install link. Two friendly reminders. Unsubscribe anytime.</p>
-        </form>
-        <div class="card" id="ok" hidden><h2 style="margin:0 0 8px;font-size:26px;letter-spacing:-0.02em">Check Your Email</h2><p class="sub" style="margin:0">We sent you the install link. Open it on your computer and click Add to Chrome.</p></div>
-        <div class="card" id="bad" hidden><p class="sub" style="margin:0">Email contact@nudoiq.com if the install link did not arrive and we will send it right away.</p></div>
+  <header class="top"><div class="topin"><a class="wm" href="/"><span>N</span>udoIQ</a><a class="site" href="/">nudoiq.com</a></div></header>
+
+  <main id="main">
+    <!-- ── HERO — what it is and what it does, FIRST. Same shape as the homepage
+         hero: dark panel, eyebrow, oversized centered h1, one-sentence lede naming
+         the four things the product does, then the proof bar (5.0 CWS + 300+
+         carriers — both claims Caleb has explicitly kept), then the CTA. ── -->
+    <section class="hero">
+      <div class="hero-panel">
+        <svg class="curves" viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M0,60 C330,20 700,110 1440,44 L1440,0 L0,0 Z" fill="rgba(177,203,255,.09)"/>
+          <path d="M0,260 C430,190 910,260 1440,170 L1440,300 L0,300 Z" fill="rgba(21,34,82,.30)"/>
+        </svg>
+        <div class="hero-top">
+          <p class="eyebrow">For Amazon Relay owner-operators and fleets</p>
+          <!-- Hero H1/lede reused verbatim from nudoiq-website/index.html lines 698-699 (the live,
+               copywriter-approved homepage hero) — not new copy. See research/GET-PAGE-V2-2026-09-24.md
+               Part 0/Part 3: a prior pass here cited a copywriter JSON that was never created. -->
+          <h1 class="display" id="heroH1">The Relay automation toolkit.</h1>
+          <p class="lede" id="heroLede">A Chrome extension that autobooks loads, handles scorecard disputes and much more inside Amazon Relay.</p>
+
+          <div class="proofbar">
+            <span class="pb-cell">
+              <img src="/assets/chrome-mark.svg" alt="" width="24" height="24" decoding="async">
+              <span class="pb-stack">
+                <span class="pb-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span class="pb-label">5.0 on the Chrome Web Store</span>
+              </span>
+            </span>
+            <span class="pb-rule" aria-hidden="true"></span>
+            <span class="pb-cell">
+              <b class="pb-big">300+</b>
+              <span class="pb-label">carrier users</span>
+            </span>
+          </div>
+
+<!-- ── PRICE BLOCK — today-only pricing. $99/mo is the real list price that
+               takes effect for NEW customers starting tomorrow (2026-09-25); customers
+               who sign up TODAY keep $49.99/mo for as long as they're subscribed.
+               Countdown reads the fixed LAUNCH_END constant in the script below — a hard
+               -coded datetime, not "today" recomputed on load — so it does not reset on
+               refresh and does not restart once it passes. Copy from the copywriter
+               agent (haiku), fact-checked: no income claim, no scorecard claim, no "no
+               card" claim. PREREQUISITE: this is only true if $99/mo becomes the real
+               Stripe list price tomorrow — see research/GET-PAGE-V2-2026-09-24.md. ── -->
+          <section class="price">
+            <div class="price-card" id="priceBlock">
+              <p class="price-eyebrow" id="priceEyebrow">Last day at $49.99</p>
+              <div class="price-row" id="priceRow">
+                <span class="price-old" id="priceOld">$99<span>/mo</span></span>
+                <span class="price-new" id="priceNew">$49.99<span>/mo</span></span>
+              </div>
+              <p class="price-line" id="priceLine1">New customers start at $99/month tomorrow; lock $49.99 in today, <b>September 24, 2026</b>.</p>
+              <p class="price-line" id="priceLine2">Lock in $49.99/month today; your rate won't change as long as you stay subscribed.</p>
+              <div class="countdown" id="countdown">
+                <span class="cd-label">Offer expires in</span>
+                <span class="cd-num" id="cdHours">--</span><span class="cd-label">h</span>
+                <span class="cd-num" id="cdMins">--</span><span class="cd-label">m</span>
+              </div>
+              <p class="price-expired" id="priceExpired" hidden>Today's price has ended. Current price is $99/month.</p>
+            </div>
+          </section>
+
+          <!-- desktop path: Add to Chrome directly (this is what the Google ads traffic hits) -->
+          <div class="cta" id="d" hidden>
+            <a class="btn btn-dark" id="cws" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+            <!-- research/copy/google-sitelinks-and-get-lines-2026-09-21.json get_page_lines (copywriter). Do not edit words here. -->
+            <p class="under">Safe to use on Amazon Relay.<br>Free trial at checkout with card. Then $49.99/mo, cancel anytime.</p>
+            <!-- URGENCY: decision-pending, see research/GET-PAGE-V2-2026-09-24.md Part 2 -->
+          </div>
+
+          <!-- mobile path: NudoIQ only installs in Chrome on a computer, so a phone visitor
+               gets the link emailed instead. Organic traffic is mostly phones, so this branch
+               matters even though the paid ads are desktop-only. -->
+          <div class="cta" id="m" hidden>
+            <div class="card" id="f-wrap">
+              <!-- research/copy/GET-PAGE-HERO-2026-09-24.json mobile_sub (copywriter, haiku). Do not edit words here. -->
+              <p style="margin:0 0 14px;color:var(--ink-4);font-size:14px;line-height:1.5" id="mobileSub">NudoIQ runs on a computer. We'll email you the install link and your 7-day free trial.</p>
+              <form id="f" novalidate>
+                <label for="e">Email Address</label>
+                <input id="e" type="email" inputmode="email" autocomplete="email" placeholder="name@example.com" required>
+                <button class="btn" id="b" type="submit">Send the Link</button>
+                <p class="under">One email with the install link. Two friendly reminders. Unsubscribe anytime.</p>
+              </form>
+            </div>
+            <div class="card" id="ok" hidden><h2>Check Your Email</h2><p>We sent you the install link. Open it on your computer and click Add to Chrome.</p></div>
+            <div class="card" id="bad" hidden><p>Email contact@nudoiq.com if the install link did not arrive and we will send it right away.</p></div>
+          </div>
+        </div>
       </div>
-      <div id="d" hidden>
-        <h1>Add NudoIQ to Chrome Now</h1>
-        <p class="sub">It works on the Relay load board with a seven-day free trial you can cancel anytime.</p>
-        <a class="btn" id="cws" style="max-width:340px" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add to Chrome</a>
-        <!-- research/copy/google-sitelinks-and-get-lines-2026-09-21.json get_page_lines (copywriter). Do not edit words here. -->
-        <p class="under" style="max-width:340px">Safe to use on Amazon Relay.<br>Free trial at checkout with card. Then $49.99/mo, cancel anytime.</p>
-      </div>
-      <ul><li><span class="n">1</span><div><b>Auto Refresh Loads</b><br>Stop hitting refresh. New loads appear on your screen automatically.</div></li><li><span class="n">2</span><div><b>Book Before They Go</b><br>Find and book the best loads in seconds instead of minutes.</div></li><li><span class="n">3</span><div><b>Spot Problems Fast</b><br>Draft dispute letters to Amazon from your trip data.</div></li></ul>
     </section>
+
+    
+
+    <!-- ── THREE NUMBERED POINTS — unchanged copy, moved above the video: what it does, in three steps. ── -->
+    <ul class="steps">
+      <li><span class="n">1</span><div><b>Auto Refresh Loads</b>Stop hitting refresh. New loads appear on your screen automatically.</div></li>
+      <li><span class="n">2</span><div><b>Book Before They Go</b>Find and book the best loads in seconds instead of minutes.</div></li>
+      <li><span class="n">3</span><div><b>Spot Problems Fast</b>Draft dispute letters to Amazon from your trip data.</div></li>
+    </ul>
+
+    <!-- ── DEMO VIDEO — same block, same events, unchanged. ── -->
     <section class="shot">
       <!-- 2026-09-21: the cold email now says "The link below shows a video of everything it is capable of"
            (Caleb's own line), and every email click lands here via /go/. The walkthrough already on /welcome/
            is that video, so it plays here too; the screenshot stays as its poster so nothing looks empty
            before it loads. -->
       <video controls preload="metadata" playsinline poster="/assets/nudoiq-tutorial-poster.jpg"
-             aria-label="NudoIQ walkthrough: every feature, one at a time" width="1180" height="640"
-             style="width:100%;height:auto;display:block;border-radius:inherit;background:#0B0B12">
+             aria-label="NudoIQ walkthrough: every feature, one at a time" width="1180" height="640">
         <source src="/assets/nudoiq-tutorial.mp4" type="video/mp4">
         <img src="/assets/email/shot-hero-loadboard.jpg" alt="NudoIQ" width="1180" height="640">
       </video>
       <div class="proof"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span>Rated 5.0 on the Chrome Web Store. Used by 300+ carriers.</div>
     </section>
+
+    <!-- ── OBJECTION BLOCK — the most common worry in the Relay FB groups: does this
+         risk my account. Answered honestly and narrowly. Text reused verbatim from
+         the live, already-approved homepage FAQ/trust copy (index.html trust1Title/
+         Copy, faq3, faq10) — not new copy, no safety claim invented beyond what's
+         already live. Heading from the copywriter agent (haiku). ── -->
+    <section class="objections">
+      <h2>Does it ask for my password?</h2>
+      <div class="obj-grid">
+        <div class="obj-card"><b>Your password stays with you</b><p>NudoIQ runs inside your signed-in Relay browser tab. It never asks for your Amazon password or stores it.</p></div>
+        <div class="obj-card"><b>Is NudoIQ affiliated with Amazon?</b><p>No. NudoIQ is an independent browser extension and is not affiliated with or endorsed by Amazon.com, Inc.</p></div>
+        <div class="obj-card"><b>Will it get my account suspended?</b><p>NudoIQ runs only in your own browser on Relay pages you're signed in to. It doesn't log in from another location or ask for your password. You control the refresh speed.</p></div>
+      </div>
+    </section>
+
+    <!-- ── SECOND CTA — same button, same href, same click handler as the hero,
+         repeated further down the page per brief item 3. Desktop only (mobile
+         never had a store button — it has the email-capture card above). ── -->
+    <section class="cta2" id="d2" hidden>
+      <a class="btn btn-dark" id="cws2" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+      <p class="under" style="color:var(--ink-4);text-align:center">Safe to use on Amazon Relay.<br>Free trial at checkout with card. Then $49.99/mo, cancel anytime.</p>
+    </section>
   </main>
+
   <footer>NudoIQ, 2709 N Hayden Island Dr STE 436020, Portland, OR 97217-8254, US &middot; <a href="/privacy.html">Privacy</a><br>Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc.</footer>
+
   <script>
   (function () {
-    // Words on this page: research/copy/GET-PAGE-AND-INSTALL-EMAILS-2026-09-20.json (copywriter). Do not edit words here.
     // A phone cannot install a Chrome extension, so a phone gets the "email me the link" form and a computer gets the
-    // store button. ?view=desktop / ?view=mobile overrides for testing.
+    // store button. ?view=desktop / ?view=mobile overrides for testing. Same detection logic as the previous page.
     var q = new URLSearchParams(location.search), force = q.get("view");
     var mobile = force ? force === "mobile" : (/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && innerWidth < 900));
     document.getElementById("m").hidden = !mobile; document.getElementById("d").hidden = mobile;
-    // A click on the cold email's "Watch it work" was promised a video. On a phone the video sits below the form
-    // and the three steps, so an email visitor gets it first; everyone else keeps the page as it was.
-    if (q.get("utm_medium") === "email") {
-      var shot = document.querySelector("section.shot"), main = document.querySelector("main");
-      if (shot && main) main.insertBefore(shot, main.firstElementChild);
+    document.getElementById("d2").hidden = mobile;
+    function trackStoreClick() { try { fbq("trackCustom", "StoreClick", { source: "get" }); } catch (e) {} try { gtag("event", "conversion", { send_to: "AW-18464861190/qNEZCOvXy_8cEIbY3eRE" }); } catch (e) {} }
+    document.getElementById("cws").addEventListener("click", trackStoreClick);
+    document.getElementById("cws2").addEventListener("click", trackStoreClick);
+
+    // ── TODAY-ONLY PRICING COUNTDOWN ──────────────────────────────────────────
+    // Hard-coded datetime constant — 23:59:59 America/New_York on 2026-09-24 — NOT
+    // "today" recomputed from the visitor's clock, so this never drifts to a new
+    // day and never resets on refresh. Once LAUNCH_END passes it stays passed:
+    // the block hides the old/new price and countdown and shows a flat $99
+    // message, permanently, until someone edits this file.
+    // Caleb: this expiry is TODAY. If you don't want the offer to end today,
+    // change LAUNCH_END (ISO 8601, keep the -04:00 EDT / -05:00 EST offset for
+    // America/New_York correct for the date you pick) and update the
+    // "September 24, 2026" mentions in the HTML above to match.
+    // PREREQUISITE (not done by this page): $99/mo must be the real Stripe list
+    // price starting tomorrow, or this page states a price change that isn't
+    // true. See research/GET-PAGE-V2-2026-09-24.md.
+    var LAUNCH_END = "2026-09-24T23:59:59-04:00";
+    function updateCountdown() {
+      var diff = new Date(LAUNCH_END).getTime() - Date.now();
+      if (diff <= 0) {
+        document.getElementById("priceEyebrow").hidden = true;
+        document.getElementById("priceOld").hidden = true;
+        document.getElementById("priceNew").hidden = true;
+        document.getElementById("countdown").hidden = true;
+        document.getElementById("priceLine1").hidden = true;
+        document.getElementById("priceLine2").hidden = true;
+        document.getElementById("priceExpired").hidden = false;
+        clearInterval(cdTimer);
+        return;
+      }
+      var h = Math.floor(diff / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      document.getElementById("cdHours").textContent = h;
+      document.getElementById("cdMins").textContent = m;
     }
-    document.getElementById("cws").addEventListener("click", function () { try { fbq("trackCustom", "StoreClick", { source: "get" }); } catch (e) {} try { gtag("event", "conversion", { send_to: "AW-18464861190/qNEZCOvXy_8cEIbY3eRE" }); } catch (e) {} });
+    updateCountdown();
+    var cdTimer = setInterval(updateCountdown, 60000);
     var SB = "https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/install_link_requests";
     var KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM";   // public anon key: INSERT-only on this table (migration 20260920120000)
     var f = document.getElementById("f"), b = document.getElementById("b"), e = document.getElementById("e");
@@ -124,7 +375,7 @@
       .then(function (r) { show(r.ok ? "ok" : "bad"); if (r.ok) { try { fbq("track", "Lead", { content_name: "install-link" }); } catch (x) {} } })
       .catch(function () { show("bad"); });
     });
-    function show(id) { f.hidden = true; document.getElementById(id).hidden = false; }
+    function show(id) { document.getElementById("f-wrap").hidden = true; document.getElementById(id).hidden = false; }
   })();
   </script>
 </body>
