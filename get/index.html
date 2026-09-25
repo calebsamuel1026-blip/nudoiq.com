@@ -227,7 +227,7 @@
                 <span class="price-old" id="priceOld">$99<span>/mo</span></span>
                 <span class="price-new" id="priceNew">$49.99<span>/mo</span></span>
               </div>
-              <p class="price-line" id="priceLine1">New customers start at $99/month tomorrow; lock $49.99 in today, <b>September 24, 2026</b>.</p>
+              <p class="price-line" id="priceLine1">New customers start at $99/month tomorrow; lock $49.99 in today, <b>September 25, 2026</b>.</p>
               <p class="price-line" id="priceLine2">Lock in $49.99/month today; your rate won't change as long as you stay subscribed.</p>
               <div class="countdown" id="countdown">
                 <span class="cd-label">Offer expires in</span>
@@ -340,7 +340,7 @@
     // PREREQUISITE (not done by this page): $99/mo must be the real Stripe list
     // price starting tomorrow, or this page states a price change that isn't
     // true. See research/GET-PAGE-V2-2026-09-24.md.
-    var LAUNCH_END = "2026-09-24T23:59:59-04:00";
+    var LAUNCH_END = "2026-09-25T23:59:59-04:00";
     function updateCountdown() {
       var diff = new Date(LAUNCH_END).getTime() - Date.now();
       if (diff <= 0) {
