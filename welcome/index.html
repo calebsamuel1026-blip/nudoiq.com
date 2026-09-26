@@ -67,6 +67,30 @@
         });
         if (window.clarity) clarity('set', 'installed', 'true');
       }catch(e){}
+
+      // FUNNEL: welcome_opened. This is the one step the extension cannot record itself -
+      // it has no way to know the page actually loaded. The install id arrives in ?i=
+      // because the funnel is keyed on a UUID kept in chrome.storage.local, which a web
+      // page cannot read. Added 2026-09-26; before this the step was permanently zero and
+      // the install -> first-value funnel had a hole in its second row.
+      try{
+        var iid = new URLSearchParams(location.search).get('i');
+        if (iid && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(iid)) {
+          var K = 'nudoiq_funnel_welcome_opened';
+          if (!localStorage.getItem(K)) {
+            fetch('https://rxyuzshudfqgtmqenipi.supabase.co/functions/v1/record-funnel', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM',
+                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM'
+              },
+              body: JSON.stringify({ installId: iid, step: 'welcome_opened' })
+            }).then(function(r){ if (r.ok) localStorage.setItem(K, String(Date.now())); })
+              .catch(function(){});
+          }
+        }
+      }catch(e){}
     })();
   </script>
 
