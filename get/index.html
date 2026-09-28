@@ -227,7 +227,7 @@
                 <span class="price-old" id="priceOld">$99.98<span>/mo</span></span>
                 <span class="price-new" id="priceNew">$49.99<span>/mo</span></span>
               </div>
-              <p class="price-line" id="priceLine1">50% off until <b>Sunday, September 27</b>. You pay $49.99 a month.</p>
+              <p class="price-line" id="priceLine1">50% off until <b>Sunday, October 4</b>. You pay $49.99 a month.</p>
               <p class="price-line" id="priceLine2">Keep that discount for as long as you stay subscribed.</p>
               <div class="countdown" id="countdown">
                 <span class="cd-label">Offer ends in</span>
@@ -340,7 +340,7 @@
     // PREREQUISITE (not done by this page): $99/mo must be the real Stripe list
     // price starting tomorrow, or this page states a price change that isn't
     // true. See research/GET-PAGE-V2-2026-09-24.md.
-    var LAUNCH_END = "2026-09-27T23:59:59-04:00";   // Sunday
+    var LAUNCH_END = "2026-10-04T23:59:59-04:00";   // Sunday — rolled 2026-09-28 (see note)
     function updateCountdown() {
       var diff = new Date(LAUNCH_END).getTime() - Date.now();
       if (diff <= 0) {
