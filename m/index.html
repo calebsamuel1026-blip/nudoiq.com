@@ -5,21 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
   <title>Get NudoIQ | NudoIQ</title>
+  <!-- /m/ = the EMAIL landing page (cold-email clicks via /go/). Works on both devices: phone -> email-me-the-install-link
+       form is the primary CTA; computer -> Chrome Web Store CTAs. /get/ is the ads page, /dispatch/ the dispatcher page. -->
   <meta name="description" content="NudoIQ auto-refreshes the Amazon Relay load board, auto-books to your rules, drafts scorecard disputes and shows real profit per load. 7-day free trial.">
   <meta name="robots" content="noindex, follow">
   <meta name="theme-color" content="#16255A">
-  <link rel="canonical" href="https://nudoiq.com/get/">
-  <!-- /get/ = the ADS page (Google Ads are desktop-only). A phone cannot install a Chrome extension, so a phone that
-       lands here goes to /m/ (the email-me-the-install-link page), query string kept. ?view=desktop / ?view=mobile
-       override for testing; same detection as before. Runs before the analytics tags so a forwarded visit is not
-       counted twice. -->
-  <script>
-    (function () {
-      var force = new URLSearchParams(location.search).get("view");
-      var mobile = force ? force === "mobile" : (/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && innerWidth < 900));
-      if (mobile) location.replace("/m/" + location.search + location.hash);
-    })();
-  </script>
+  <link rel="canonical" href="https://nudoiq.com/m/">
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,6 +84,7 @@
       font-size:clamp(30px,5vw,44px);margin:0 auto 16px;text-wrap:balance}
     .lede{color:rgba(255,255,255,.96);font-size:clamp(15.5px,1.7vw,18px);line-height:1.5;
       max-width:52ch;margin:0 auto}
+    .sig{color:#C9D9FF;font-size:15px;font-weight:600;margin:10px auto 0}
     .proofbar{display:inline-flex;align-items:center;gap:20px;margin:22px auto 0;
       padding:12px 22px;border-radius:16px;
       background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);
@@ -112,6 +104,19 @@
     .cta{max-width:400px;margin:26px auto 0}
     .cta .under{font-size:13px;color:rgba(255,255,255,.78);margin:12px 2px 0;line-height:1.5}
     .cta .under b{color:#fff;font-weight:600}
+
+    /* ═══ MOBILE EMAIL-CAPTURE CARD (email-only install path) ═══ */
+    .card{background:#fff;border-radius:20px;padding:22px;box-shadow:var(--sh-2);text-align:left}
+    .card label{display:block;font-size:13px;font-weight:600;margin-bottom:8px;color:var(--ink)}
+    .card input[type=email]{width:100%;font:inherit;font-size:17px;padding:15px 16px;
+      border:1.5px solid #E6E9F0;border-radius:14px;outline:none;color:var(--ink)}
+    .card input[type=email]:focus{border-color:var(--blue);box-shadow:0 0 0 4px rgba(51,102,255,.15)}
+    .card .btn{background:var(--blue);color:#fff;margin-top:12px}
+    .card .btn:hover{background:var(--blue-deep)}
+    .card .under{color:var(--ink-4)}
+    .card .under b{color:var(--ink)}
+    .cta .card h2{font-size:22px;letter-spacing:-0.02em;margin:0 0 8px;color:var(--ink)}
+    .cta .card p{color:var(--ink-4);font-size:15px;line-height:1.5}
 
     /* ═══ THREE-POINT LIST (unchanged content, restyled to match tokens) ═══ */
     ul.steps{list-style:none;margin:0;padding:0;display:grid;gap:16px;max-width:var(--max);
@@ -133,7 +138,8 @@
     footer a{color:var(--ink-4)}
 
     /* ═══ MORE CTAs (Caleb 2026-10-02: "we need more ctas around the page, try it now, try it free,
-       different types of cta around the page"). Every .js-cta opens the store; same click tracking as the hero button. ═══ */
+       different types of cta around the page"). Every .js-cta opens the store on a computer and
+       scrolls to the email-me-the-link form on a phone; same click tracking as the hero button. ═══ */
     .top-cta{display:inline-flex;align-items:center;padding:10px 18px;border-radius:var(--rp);background:var(--blue);
       color:#fff;font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap}
     .top-cta:hover{background:var(--blue-deep)}
@@ -212,7 +218,10 @@
                copywriter-approved homepage hero) — not new copy. See research/GET-PAGE-V2-2026-09-24.md
                Part 0/Part 3: a prior pass here cited a copywriter JSON that was never created. -->
           <h1 class="display" id="heroH1">The Relay automation toolkit.</h1>
-          <p class="lede" id="heroLede">A Chrome extension that autobooks loads, handles scorecard disputes and much more inside Amazon Relay.</p>
+          <!-- Lede = C4 body[0] verbatim (research/copy/EMAIL-FLOW-COPY-2026-09-21.json), the line the cold letters
+               open with, so the page matches what the email promised. Signoff "Caleb" is the letters' own signoff. -->
+          <p class="lede" id="heroLede">I ran Amazon Relay loads and spent countless hours a day refreshing the board just to get decent loads. That's why I wrote NudoIQ, to do that for you automatically and book loads that meet your own minimums.</p>
+          <p class="sig">Caleb</p>
 
           <div class="proofbar">
             <span class="pb-cell">
@@ -257,13 +266,30 @@
           </section>
 
           <!-- desktop path: Add to Chrome directly (this is what the Google ads traffic hits) -->
-          <div class="cta" id="d">
+          <div class="cta" id="d" hidden>
             <a class="btn btn-dark" id="cws" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
             <!-- research/copy/google-sitelinks-and-get-lines-2026-09-21.json get_page_lines (copywriter). Do not edit words here. -->
             <p class="under">Safe to use on Amazon Relay. No card needed to start.</p>
             <!-- URGENCY: decision-pending, see research/GET-PAGE-V2-2026-09-24.md Part 2 -->
           </div>
 
+          <!-- mobile path: NudoIQ only installs in Chrome on a computer, so a phone visitor
+               gets the link emailed instead. Organic traffic is mostly phones, so this branch
+               matters even though the paid ads are desktop-only. -->
+          <div class="cta" id="m" hidden>
+            <div class="card" id="f-wrap">
+              <!-- research/copy/GET-PAGE-HERO-2026-09-24.json mobile_sub (copywriter, haiku). Do not edit words here. -->
+              <p style="margin:0 0 14px;color:var(--ink-4);font-size:14px;line-height:1.5" id="mobileSub">NudoIQ runs on a computer. We'll email you the install link and your 7-day free trial.</p>
+              <form id="f" novalidate>
+                <label for="e">Email Address</label>
+                <input id="e" type="email" inputmode="email" autocomplete="email" placeholder="name@example.com" required>
+                <button class="btn" id="b" type="submit">Send the Link</button>
+                <p class="under">One email with the install link. Two friendly reminders. Unsubscribe anytime.</p>
+              </form>
+            </div>
+            <div class="card" id="ok" hidden><h2>Check Your Email</h2><p>We sent you the install link. Open it on your computer and click Add to Chrome.</p></div>
+            <div class="card" id="bad" hidden><p>Email contact@nudoiq.com if the install link did not arrive and we will send it right away.</p></div>
+          </div>
         </div>
       </div>
     </section>
@@ -316,8 +342,9 @@
     </section>
 
     <!-- ── SECOND CTA — same button, same href, same click handler as the hero,
-         repeated further down the page per brief item 3. ── -->
-    <section class="cta2" id="d2">
+         repeated further down the page per brief item 3. Desktop only (mobile
+         never had a store button — it has the email-capture card above). ── -->
+    <section class="cta2" id="d2" hidden>
       <a class="btn btn-go" id="cws2" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
       <p class="under" style="color:var(--ink-4);text-align:center">7 days free. No card needed to start.</p>
     </section>
@@ -325,8 +352,8 @@
 
   <div class="stickybar" id="stickybar" aria-hidden="true">
     <div class="stickyin">
-      <span class="txt"><b>Try NudoIQ free for 7 days.</b> <span>No card needed.</span></span>
-      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" data-cta="sticky" tabindex="-1">Try it free</a>
+      <span class="txt"><b>Get one week free to test it against the board.</b> <span>No card needed.</span></span>
+      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" data-cta="sticky" data-mlabel="Email me the link" tabindex="-1">Try it free</a>
     </div>
   </div>
 
@@ -334,18 +361,35 @@
 
   <script>
   (function () {
-    // Desktop-only page: phones were forwarded to /m/ by the script in <head>.
-    function trackStoreClick() { try { fbq("trackCustom", "StoreClick", { source: "get" }); } catch (e) {} try { gtag("event", "conversion", { send_to: "AW-18464861190/qNEZCOvXy_8cEIbY3eRE" }); } catch (e) {} }
+    // A phone cannot install a Chrome extension, so a phone gets the "email me the link" form and a computer gets the
+    // store button. ?view=desktop / ?view=mobile overrides for testing. Same detection logic as the previous page.
+    var q = new URLSearchParams(location.search), force = q.get("view");
+    var mobile = force ? force === "mobile" : (/Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 1 && innerWidth < 900));
+    document.getElementById("m").hidden = !mobile; document.getElementById("d").hidden = mobile;
+    document.getElementById("d2").hidden = mobile;
+    function trackStoreClick() { try { fbq("trackCustom", "StoreClick", { source: "m" }); } catch (e) {} try { gtag("event", "conversion", { send_to: "AW-18464861190/qNEZCOvXy_8cEIbY3eRE" }); } catch (e) {} }
     function cl(name) { try { if (window.clarity) clarity("event", "cta_" + name); } catch (e) {} }
     document.getElementById("cws").addEventListener("click", function () { cl("hero"); trackStoreClick(); });
     document.getElementById("cws2").addEventListener("click", function () { cl("bottom"); trackStoreClick(); });
+    // Phone-only button labels (data-mlabel): the button scrolls to the email form instead of opening the store.
+    if (mobile) Array.prototype.forEach.call(document.querySelectorAll("[data-mlabel]"), function (a) { a.textContent = a.getAttribute("data-mlabel"); });
 
-    // Extra CTAs: open the store, tracked like the hero button.
+    // Extra CTAs: computer -> store (tracked like the hero button); phone -> the email-me-the-link form.
+    var form = document.getElementById("m"), email = document.getElementById("e");
     Array.prototype.forEach.call(document.querySelectorAll(".js-cta"), function (a) {
-      a.addEventListener("click", function () { cl(a.getAttribute("data-cta") || "x"); trackStoreClick(); });
+      a.addEventListener("click", function (ev) {
+        try { if (window.clarity) clarity("event", "cta_" + (a.getAttribute("data-cta") || "x")); } catch (e) {}
+        if (mobile) {
+          ev.preventDefault();
+          form.scrollIntoView({ behavior: "smooth", block: "center" });
+          setTimeout(function () { try { email.focus(); } catch (e) {} }, 450);
+          return;
+        }
+        trackStoreClick();
+      });
     });
     // Sticky bar appears once the hero's own button has scrolled out of view.
-    var bar = document.getElementById("stickybar"), heroCta = document.getElementById("d");
+    var bar = document.getElementById("stickybar"), heroCta = document.getElementById(mobile ? "m" : "d");
     if (bar && heroCta && "IntersectionObserver" in window) {
       document.body.classList.add("has-sticky");
       new IntersectionObserver(function (es) {
@@ -390,6 +434,22 @@
     }
     updateCountdown();
     var cdTimer = setInterval(updateCountdown, 60000);
+    var SB = "https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/install_link_requests";
+    var KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM";   // public anon key: INSERT-only on this table (migration 20260920120000)
+    var f = document.getElementById("f"), b = document.getElementById("b"), e = document.getElementById("e");
+    f.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      cl("form_submit");
+      var v = (e.value || "").trim().toLowerCase();
+      if (!/^[^@\s]+@[^@\s.]+\.[a-z]{2,}$/.test(v)) { e.focus(); return; }
+      b.disabled = true;
+      var src = ["utm_source", "utm_medium", "utm_campaign", "utm_content"].map(function (k) { return q.get(k) || ""; }).join("|").slice(0, 200);
+      fetch(SB, { method: "POST", headers: { "Content-Type": "application/json", "apikey": KEY, "Authorization": "Bearer " + KEY, "Prefer": "return=minimal" },
+        body: JSON.stringify({ email: v, source: src, fbc: (document.cookie.match(/_fbc=([^;]+)/) || [])[1] || null, fbp: (document.cookie.match(/_fbp=([^;]+)/) || [])[1] || null }) })
+      .then(function (r) { show(r.ok ? "ok" : "bad"); if (r.ok) { try { fbq("track", "Lead", { content_name: "install-link" }); } catch (x) {} } })
+      .catch(function () { show("bad"); });
+    });
+    function show(id) { document.getElementById("f-wrap").hidden = true; document.getElementById(id).hidden = false; }
   })();
   </script>
 </body>
