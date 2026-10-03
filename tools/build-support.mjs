@@ -81,7 +81,7 @@ const html = `<!DOCTYPE html>
 </head>
 <body>
 
-  <div class="promo">7-day trial &middot; $49.99/month after trial &middot; Cancel anytime &middot; English and Spanish</div>
+  <div class="promo">7 days free, no card needed &middot; Runs in your own Chrome &middot; English and Spanish</div>
 
   <header class="top"><div class="wrap topin">
     <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
