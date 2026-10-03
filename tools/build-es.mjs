@@ -26,8 +26,8 @@ doc = doc.replace('<a href="/" hreflang="en" aria-current="page">English</a><a h
                   '<a href="/" hreflang="en">English</a><a href="/es/" hreflang="es" aria-current="page">Espa&ntilde;ol</a>');
 
 const TITLE_ES = 'NudoIQ | Herramientas para el tablero de cargas de Amazon Relay';
-const DESC_ES = 'Alertas de cargas, tarifas de mercado, cartas de disputa de scorecard, reportes de flota y pagos a conductores. Extensión de Chrome para Amazon Relay.';
-const SOCIAL_ES = 'Inteligencia de tarifas de mercado, cartas de disputa de scorecard, alertas de cargas, reportes de flota y estados de pago para transportistas de Amazon Relay.';
+const DESC_ES = 'Refresca el load board de Amazon Relay, reserva cargas con tus reglas y compara cada precio con una predicción de IA. 7 días gratis, sin tarjeta.';
+const SOCIAL_ES = 'NudoIQ refresca tu load board de Relay, reserva cargas con tus reglas, predice el precio con IA y prepara disputas del scorecard. 7 días gratis, sin tarjeta.';
 
 doc = doc.replace(/<title>[^<]*<\/title>/, '<title>' + TITLE_ES + '</title>');
 doc = doc.replace(/<meta name="description" content="[^"]*">/, '<meta name="description" content="' + DESC_ES + '">');
@@ -70,7 +70,7 @@ for (const node of graph['@graph']) {
     if (Array.isArray(node.review)) {
       node.review = node.review.map((r, i) => ({ ...r, reviewBody: es['review' + (i + 1)] || r.reviewBody }));
     }
-    node.description = 'NudoIQ es una extensión de Chrome para transportistas de Amazon Relay: inteligencia de tarifas de mercado, cartas de disputa de scorecard, alertas de cargas, reglas de búsqueda y reserva, ruta para camiones, resumen HOS, reportes de flota y estados de pago para conductores.';
+    node.description = 'Extensión de Chrome para Amazon Relay: refresca el load board automáticamente, reserva cargas con tus reglas (AutoBook), predice con IA el precio según el historial de la ruta y prepara cartas de disputa del scorecard que tú revisas y envías. 7 días gratis sin tarjeta, luego $49.99 al mes.';
     node.featureList = [es.price1, es.price2, es.price3, es.priceDispute, es.price6];
   }
 }

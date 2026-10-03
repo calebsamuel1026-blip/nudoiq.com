@@ -1550,7 +1550,7 @@ The extension is rated 5.0 on the Chrome Web Store and used by 300+ carriers. It
 Technically you can, but it's not recommended. Two extensions both trying to refresh the board and book loads can cause conflicts, duplicate bookings, or unexpected behavior. Pick one extension and stick with it.
 
 ### Do I need a separate account to use a Relay extension?
-No. Most Relay extensions, including NudoIQ, run inside your existing Relay load board tab. You log in to Relay as usual, and the extension adds its features to that tab. No separate account is required.
+It depends on the extension, so check each one before you install. NudoIQ asks for your email address when you start the free trial, and you activate the extension with a code sent to that email. After that, it runs in your own Chrome browser, inside your signed-in Relay tab, and never asks for your Amazon password.
 
 ### How fast do these extensions book loads?
 An extension in Autobook mode books as soon as it sees a matching load on a refresh, without you reading and clicking. How soon it sees the load depends on your refresh interval. No tool can promise you'll get a load first.
@@ -2400,241 +2400,366 @@ The carrier. Amazon says carriers stay responsible for Hours of Service, drug an
 
 ---
 
-# Cannot Book Loads on Amazon Relay
+# Amazon Relay account suspended or can't book loads? What to check
 
 URL: https://nudoiq.com/amazon-relay-account-suspended/
 Published: 2026-09-20. Last updated: 2026-10-02.
 
-Short answer: If an Amazon Relay account can't book loads, check insurance first: a lapse blocks booking and hauling until coverage is reinstated. Amazon also monitors compliance through internal teams and a third-party service. Contact the Support Center in the Relay portal. Amazon does not publish suspension categories, appeal steps or reinstatement timelines.
+Short answer: Amazon doesn't publish suspension rules, appeal steps or reinstatement timelines. What it does publish: an insurance lapse blocks booking and hauling until coverage is reinstated, and Amazon monitors carrier compliance through internal teams and a third-party service. Check your Insurance tab and authority first, then contact the Support Center from your Relay account.
 
-## Insurance and Load Access
+## Why can't I book loads on Amazon Relay?
 
-[If your insurance coverage lapses, you cannot book or haul Relay loads until it is reinstated](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements).
+The most common reason Amazon itself names is insurance. [Amazon says](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements) that if your coverage lapses, your company can't book or haul Relay loads until it's reinstated.
 
-[You should renew your policy two to three weeks before expiry so your new certificate can reach RMIS and update Amazon's records](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements). Also [update your account in the Insurance tab at least 5 days before your policy expires](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements).
+Beyond that, [Amazon's FAQ](https://relay.amazon.com/faq) says it uses internal compliance teams and a third-party compliance monitoring service to validate and continually monitor carriers. It doesn't list which problems lead to which action. So start with the things you can check yourself:
 
-Check the Relay portal:
+- **Insurance:** every policy current in the Insurance tab of your Relay account.
+- **Authority:** your DOT and MC numbers active on FMCSA's SAFER site.
+- **Messages:** any notice or email from Amazon, and the exact wording you see when you try to book.
 
-- Go to the Insurance tab in your account.
-- Verify all your policies show current coverage dates.
-- If any policy is expired or expired recently, that is likely why you cannot book.
+If the board just looks empty and you can still book, that's a different problem. See [Relay load board not showing loads](https://nudoiq.com/amazon-relay-load-board-not-showing-loads/).
 
-If your policy expired, renew it immediately. Once your new certificate is issued, upload it to the Insurance tab and contact the Support Center.
+## Is my Relay account suspended, or is it something else?
 
-## Compliance Monitoring
+Not every lockout is a suspension. Several published Relay rules limit what you can book without shutting the account:
 
-[Amazon uses internal teams and a third-party compliance monitoring service to continually validate and monitor carrier compliance](https://relay.amazon.com/faq). If your account has a compliance issue, you may not be able to book or haul.
+| What you see | Possible cause Amazon publishes | Where to check |
+|---|---|---|
+| Can't book or haul any loads | Insurance lapse | Insurance tab in your Relay account |
+| Can't book new contracts | Grade below B | Scorecard in the Relay portal |
+| Lost contracts you already booked | Grade dropped below C+ | Scorecard |
+| Can't join freight auctions | Grade below C+ (reefer auctions need B) | Scorecard |
+| New spot loads show up later for you | Early access goes to A+, A and B+ | Scorecard |
+| Driver can't use the Relay app | Driver profile not invited or not verified yet | Your driver list and the driver's app |
+| Application turned down | Fixable issue or a serious compliance issue | Your application status |
 
-Common compliance requirements:
+The grade rules come from [Amazon's performance grades guide](https://relay.amazon.com/blog/intro-to-amazon-relay/relay-performance-grades-how-to-unlock-hauling-opportunities). Every grade keeps load board access, so a low grade alone doesn't take the board away. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains the four metrics.
 
-- A valid USDOT number and MC authority number.
-- Active insurance meeting minimum coverage amounts.
+For drivers, [Amazon says](https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads) profiles are created only by invitation from an approved carrier, and it reviews the CDL and a selfie, typically within 48 hours.
 
-## Gather Your Documents
+## What does Amazon check to keep a carrier active?
 
-Before you contact support, gather the documents you may need:
+Amazon publishes its carrier requirements and keeps monitoring compliance after approval. It doesn't say which slip triggers what, so check each requirement.
 
-- A current certificate of insurance (original or copy).
-- Your authority status from the USDOT number (verify it at safer.fmcsa.dot.gov if you have the authority).
-- Any correspondence from Amazon about the issue.
-- A screenshot of the Relay portal showing the message that blocks your access.
+From the [Relay FAQ](https://relay.amazon.com/faq):
 
-If Amazon sent you a notice or email, keep that document too.
+- A DOT number with interstate authority, active at least 180 days, and a valid MC number.
+- Entity type Carrier, authorized for Property and For-Hire.
+- FMCSA safety rating of Satisfactory, None or Not Rated.
+- BASIC scores under Amazon's limits: Unsafe Driving and HOS Compliance below 60%; Vehicle Maintenance, Controlled Substances/Alcohol and Driver Fitness below 75%.
+- Driver out-of-service rate at or below 35% and vehicle violation rate at or below 50%.
+- Verification of the business and every owner with more than 25%.
+- Insurance at or above the minimums.
 
-## Contact Support
+The full list is on our [Amazon Relay requirements checklist](https://nudoiq.com/amazon-relay-requirements/).
 
-[Use the Support Center in your Relay portal when you are logged in](https://relay.amazon.com/faq). Explain what message you see when you try to book loads and provide the documents you gathered.
+## How do I fix an insurance lapse on Relay?
 
-[For operational issues with loads or the board, contact the Relay Operations Center (ROC) through the Relay portal](https://relay.amazon.com/faq).
+Renew the policy, then get the new details into your Relay account. Amazon tells carriers to renew two to three weeks before expiry so RMIS can update records, and to add updated details in the Insurance tab at least 5 days before the policy expires.
 
-## What Amazon Does Not Publish
+If it already lapsed:
 
-Amazon does not publish timelines for resolving access blocks, appeal processes, or next steps if your account remains blocked. [Rejected applications may become eligible to reapply once a fixable issue (like expired insurance, missing authority, or missing documentation) is resolved, but Amazon does not publish how long this takes](https://relay.amazon.com/faq).
+1. Renew or replace the policy with your agent.
+2. Make sure your new certificate reaches RMIS.
+3. Update the Insurance tab with the new dates.
+4. Contact the Support Center and say what you updated.
 
-If your account is blocked, the Support Center is your source of truth for what comes next.
+Amazon's coverage minimums, policy by policy, are on our [insurance requirements page](https://nudoiq.com/amazon-relay-insurance-requirements/).
 
-## Different From Scorecard Performance
+## Who do I contact when my Relay account is suspended?
 
-If your account is blocked from booking, that is different from a low performance scorecard. Your scorecard is in the Relay portal and shows your record on individual loads.
+Use the Support Center in your Relay account. Amazon's FAQ sends account-access problems there when you're logged in. For problems with a load in progress, the Relay Operations Center (ROC) offers 24/7 support through the Relay portal or Relay mobile.
 
-An account block is a stop on accessing Relay at all. A scorecard is your track record on loads you have already booked.
+Amazon doesn't publish a support phone number, or a separate route if you can't log in at all. Be careful with any number or "reinstatement service" you find elsewhere that isn't on relay.amazon.com.
+
+## Can I appeal an Amazon Relay suspension?
+
+Amazon doesn't publish an appeal process. There are no published steps, deadlines, limits on how many times you can ask, or success rates. The Support Center is the only channel Amazon names for account problems.
+
+Before you write in, have these ready so you can explain it once:
+
+- The exact message or email from Amazon, with the date.
+- A screenshot of what you see when you try to book.
+- Your current certificate of insurance.
+- Your DOT and MC numbers and their status on SAFER.
+
+## How long does an Amazon Relay suspension last?
+
+Amazon doesn't say. It publishes no reinstatement timeline. For insurance, booking stays blocked until coverage is reinstated, so update the Insurance tab fast.
+
+## Can I reapply to Amazon Relay after being rejected or deactivated?
+
+For rejected applications, yes in some cases. The FAQ says you may be eligible to reapply once a fixable issue like insurance coverage, authority status or missing documentation is resolved, and that serious compliance issues may disqualify you.
+
+Amazon doesn't publish a waiting period, and it says nothing about reapplying after an active account is deactivated. Ask the Support Center for your case.
+
+## Can a low scorecard get my Relay account suspended?
+
+Amazon doesn't list the scorecard as a suspension reason. It does tie your grade to what you can book. Your overall score equals your lowest of four metrics (on-time, acceptance, app usage and disruption-free) over the last six weeks. A drop can cost you contracts, auctions and early access to spot loads. You can dispute score impacts from your Relay account, and Amazon decides each one.
+
+## Can a load board extension or dispatcher get my account suspended?
+
+Nobody outside Amazon can honestly answer that. Amazon doesn't publish what triggers a suspension, so no one can promise any tool, dispatcher or setting will or won't affect your account. Your account is your responsibility: read the Relay terms you agreed to, and never hand your Amazon password to anyone.
+
+NudoIQ runs inside your own signed-in Relay tab and never asks for your Amazon password. It makes no promise about account status. New to Relay? Start with [what Amazon Relay is](https://nudoiq.com/what-is-amazon-relay/) and how the [load board](https://nudoiq.com/amazon-relay-load-board/) works.
 
 ## Frequently asked questions
 
-### How long does it take to fix an insurance issue?
-Amazon does not publish a timeline. Once you upload a new certificate to the Insurance tab, contact the Support Center. [Update at least 5 days before expiry if possible](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements).
+### Is there a phone number for Amazon Relay support?
+Amazon doesn't publish one. Account problems go to the Support Center in your Relay account, and load problems go to the Relay Operations Center through the portal or Relay mobile.
 
-### What insurance amounts does Relay require?
-[Required coverage is $1,000,000 auto liability per occurrence; $100,000 cargo; general liability $1,000,000 per occurrence / $2,000,000 aggregate; $50,000 trailer interchange (semi operators); and workers compensation per state plus $100,000 employers liability (if you have W-2 employees)](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements).
+### How long does it take to get reinstated on Amazon Relay?
+Amazon doesn't publish a reinstatement timeline. For an insurance lapse, booking stays blocked until coverage is reinstated, so update the Insurance tab as soon as you renew.
 
-### Can I reapply if my account is deactivated?
-[If your application was rejected, you may reapply once a fixable issue (insurance coverage, authority status, missing documentation, or similar) is resolved](https://relay.amazon.com/faq). Serious compliance issues may disqualify you. Amazon does not publish reapplication timelines.
+### Why does Relay say I can't book loads?
+Amazon's published reason is an insurance lapse. It also monitors compliance through internal teams and a third-party service. Check your insurance and authority, then contact the Support Center.
 
-### Is there a phone number to call Relay support?
-[Support is available through the Support Center in your Relay portal](https://relay.amazon.com/faq). [The Relay Operations Center (ROC) is also reachable through the Relay portal or Relay mobile](https://relay.amazon.com/faq).
+### Can I appeal a Relay deactivation?
+Amazon doesn't publish appeal steps, deadlines or success rates. Contact the Support Center with your documents and the exact message you received.
 
-### What if I do not see a message explaining why I cannot book?
-Contact the Support Center in your Relay portal and describe what happens when you try to book a load. Provide a screenshot if possible.
+### Can I reapply after my Relay application was rejected?
+Possibly. Amazon says you may reapply once a fixable issue like insurance, authority or missing documents is resolved. Serious compliance issues may disqualify you. No waiting period is published.
 
-### Does an account block affect my safety or performance rating?
-Amazon does not publish how this works. Your scorecard remains in the Relay portal. The support agent who helps you will have the most current information about your account status.
+### Does a low grade block me from the Relay load board?
+No. Amazon says every grade keeps load board access. Lower grades lose new contracts (below B), auctions (below C+) and early access to spot loads.
 
 ---
 
-# When the Amazon Relay Load Board Shows No Loads
+# Amazon Relay load board not showing loads: what to check
 
 URL: https://nudoiq.com/amazon-relay-load-board-not-showing-loads/
 Published: 2026-09-20. Last updated: 2026-10-02.
 
-Short answer: When the Amazon Relay load board shows no loads, check filters first: equipment type, radius, load type, trip length, rate range, time windows and any saved search. Then check the account, since an insurance lapse or compliance issue can block booking. If it's still empty, contact the Relay Operations Center through the portal.
+Short answer: Usually a filter or saved search is set too narrow: equipment type, trailer status, radius, trip length, rate range or time windows. Next, check your account, since lapsed insurance stops booking. Lower grades see new spot loads later. Then test your browser and extensions, and contact the Relay Operations Center if it's still empty.
 
-## Check Filters First
+## Why is my Amazon Relay load board empty?
 
-[The load board uses filters to show work that matches your truck and needs](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board). If you see nothing, a filter is likely set too narrow.
+Most of the time a filter is hiding the loads. The board only shows work that matches your search, so one setting that's too tight can make it look empty even when freight is posted.
 
-Open your filters and verify:
+[Amazon says](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) the board is open 24/7, is free to search and book, and carries thousands of loads at any time. It also says the board can "auto-refresh thousands of new spot freight matches every 30 seconds." So a truly blank board, with every filter cleared, is unusual.
 
-- **Equipment type**: Matches what you run. A reefer filter shows only refrigerated loads. A dry van filter shows only dry work.
-- **Load type**: You have not excluded the work you want.
-- **Location radius**: You set it wide enough to see loads near you.
-- **Trip length**: Set to the distance you want to haul.
-- **Pickup and delivery windows**: Include times you can work.
-- **Rate range**: Not filtering out available loads.
-- **Trailer status, driver type, layout, maximum stops**: All set for your operation.
+Check filters first, then account status, your grade, your browser, and finally support. New to the board? Our [Amazon Relay load board guide](https://nudoiq.com/amazon-relay-load-board/) covers the basics.
 
-[The board allows you to save searches](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search) so you do not enter filters every time. Check if an old saved search is active and showing fewer results.
+## Which filters hide loads on the Relay load board?
 
-Reset filters to see the full board. Then add them back to narrow the view.
+Any of them can, if it's set narrower than you meant. Amazon lists the filters across [its load board guide](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) and [its freight search guide](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search).
 
-## Check Your Account Status
+| Filter | What to check |
+|---|---|
+| Origin and destination | A specific city on either end cuts out everything else. Try origin only. |
+| Location radius (distance willing to travel) | A small radius around a quiet area can return nothing. Widen it. |
+| Equipment type | It must match what you actually run. |
+| Trailer status | Set it to match the loads your truck can take. |
+| Load type | Make sure you haven't excluded the work you want. |
+| Driver type | Match how you staff the truck. |
+| Layout | Check it isn't set tighter than you intend. |
+| Maximum number of stops | A low limit drops multi-stop loads. |
+| Trip length | A short range hides longer runs, and the other way around. |
+| Rate range | A high minimum hides loads priced below it. |
+| Pickup and delivery windows | Narrow windows drop loads outside those hours. |
 
-[If your insurance coverage lapses, you cannot book or haul loads until it is reinstated](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements). This blocks the board.
+**Saved searches deserve their own check.** Amazon lets you save your most-used searches, and it uses search history and saved searches for personalized load recommendations. An old saved search with tight settings can quietly load every time you open the board.
 
-[Amazon continually monitors carrier compliance using internal teams and a third-party service](https://relay.amazon.com/faq). If your account has a compliance flag, the board may be restricted.
+The quick test: clear every filter, look at the full board, then add filters back one at a time. When the loads disappear, you've found the setting. Our guide to [Amazon Relay loads](https://nudoiq.com/amazon-relay-loads/) explains the load types, and the [power only](https://nudoiq.com/amazon-relay-power-only/) and [box truck](https://nudoiq.com/amazon-relay-box-truck-loads/) guides cover equipment settings.
 
-Check the Relay portal:
+## Can my account status block the Relay load board?
 
-- Log out and log back in to refresh your session.
-- Look for any warnings or notices about insurance, authority status, or compliance.
-- Go to the Insurance tab. [If your policy is expiring soon, renew it two to three weeks before expiry and update your account at least 5 days before the policy ends](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements).
+It can stop you from booking. [Amazon says](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements) that if your insurance coverage lapses, your company can't book or haul Relay loads until it's reinstated. Amazon doesn't say whether loads still display during a lapse.
 
-If you see a notice about compliance or insurance, follow the instructions in that notice. Contact support via the Support Center (in your Relay portal when logged in).
+Amazon also says it uses internal compliance teams and a third-party monitoring service to [continually monitor carrier compliance](https://relay.amazon.com/faq). It doesn't publish what a compliance issue does to board access, so don't assume either way.
 
-## Browser Troubleshooting
+Check your account:
 
-Try the usual steps:
+- Look for any notice in the Relay portal about insurance, authority or compliance, and follow its instructions.
+- Open the Insurance tab and confirm your policy dates.
+- Amazon says to renew two to three weeks before expiry and add the updated details at least 5 days before the policy expires.
 
-- Close the browser completely.
-- Open a new browser window and log in to Relay again.
-- Disable all Chrome extensions one at a time to see if one is interfering with the board display.
-- Try a different browser (Firefox, Safari, Edge) to rule out a Chrome-specific issue.
+More on coverage in our [insurance requirements guide](https://nudoiq.com/amazon-relay-insurance-requirements/). If your account was suspended or deactivated, see [Amazon Relay account suspended](https://nudoiq.com/amazon-relay-account-suspended/). Amazon doesn't publish suspension categories or reinstatement timelines.
 
-## When to Contact Support
+## Does my performance grade change which loads I see?
 
-Contact [the Relay Operations Center (ROC) through your Relay portal](https://relay.amazon.com/faq) if the board is still empty after you have checked filters and account status. Provide your Relay ID and a screenshot of what you see.
+It changes when you see new spot loads, not whether you can use the board. [Amazon says](https://relay.amazon.com/blog/intro-to-amazon-relay/relay-performance-grades-how-to-unlock-hauling-opportunities) every grade gets load board access. Carriers graded A+, A and B+ get early access to new spot loads, which appear on the board at staggered times by grade.
 
-## The Refresh Rate
+So with a lower grade, some new loads may already be booked by the time they reach you. Amazon doesn't publish how long the delay is for each grade.
 
-[The Relay load board auto-refreshes and shows thousands of new spot freight matches every 30 seconds](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board). If you are watching the board in real time, new loads appear every half minute.
+Post A Truck matches also come first: Amazon says matched carriers get first access to freight in their window [before it reaches the load board](https://relay.amazon.com/blog/how-to-load-match-with-post-a-truck). And you only get a grade after ten or more Relay loads in the last six active weeks.
 
-NudoIQ Auto-Refresh reloads the board every few seconds and the speed is adjustable, so you do not have to watch manually or refresh constantly.
+Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains the four metrics behind your grade.
+
+## Could a browser extension be the problem?
+
+It could. Any extension that changes web pages can interfere with how the board loads, and your browser session can also get stuck. Amazon doesn't publish a list of supported browsers or extensions, so test it yourself:
+
+- Reload the page.
+- Sign out of Relay, then sign back in.
+- Close the browser fully and reopen it.
+- Turn off your extensions one at a time, reloading the board after each, to see if one is the cause.
+- Try another Chromium browser, such as Microsoft Edge, or a fresh Chrome profile with no extensions.
+
+If you use NudoIQ, include it in that test. NudoIQ is a Chrome extension that runs in your own Chrome, inside your signed-in Relay tab, and never asks for your Amazon password. Its refresher reloads the board on an interval you set from 1 to 5 seconds, with up to 20% random jitter, and keeps the tab from going idle. Alert, Search and Autobook modes ping you on a match, highlight it, or book it by your rules. It's $49.99 a month after a 7-day free trial, no card needed to start. Compare options in our [best Amazon Relay extensions guide](https://nudoiq.com/best-amazon-relay-extensions/) and our [auto-refresh guide](https://nudoiq.com/amazon-relay-auto-refresh/).
+
+## When should I contact Relay support?
+
+Contact support once you've cleared your filters, checked your account and tested your browser, and the board is still empty. [Amazon says](https://relay.amazon.com/faq) it offers 24/7 operational support through the Relay Operations Center (ROC), reached through the Relay portal or Relay mobile. For account access problems, use the Support Center while logged in.
+
+Before you reach out, have ready:
+
+- A screenshot of the empty board with your filters showing.
+- What you already tried.
+- Any notice your account shows about insurance or compliance.
+
+Amazon doesn't publish a support phone number, so use the portal or the app.
 
 ## Frequently asked questions
 
-### Does my performance scorecard affect what loads I see?
-Yes. [High-performing carriers get first access to loads](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board). Your scorecard is in the Relay portal.
+### Why does my Amazon Relay load board show no loads?
+Usually a filter or saved search is set too narrow. Clear every filter, then add them back one at a time. If it's still empty, check your insurance status, test your browser with extensions off, and contact the Relay Operations Center.
 
-### Can a saved search cause the board to look empty?
-Yes. If an old saved search is active with narrow filters, it may not match current loads. Reset your saved search or create a new one with wider criteria.
+### Can a saved search make the board look empty?
+Yes. Amazon lets you save your most-used searches. If an old one has tight settings, it can hide loads every time you open the board. Clear it or save a new, wider search.
 
-### What if my board shows a few loads but not many?
-Your area may have fewer loads at that time. Try widening your radius or adjusting your pickup and delivery windows.
+### Does a lapsed insurance policy stop me from booking Relay loads?
+Yes. Amazon says that if your coverage lapses, your company can't book or haul Relay loads until it's reinstated. Renew two to three weeks early and update the Insurance tab at least 5 days before expiry.
 
-### Who do I contact for questions about board access?
-Contact [the Relay Operations Center (ROC) through the Relay portal](https://relay.amazon.com/faq). For login or account-access issues, use the Support Center in the Relay portal.
+### Do higher grades see loads first on Amazon Relay?
+Yes for new spot loads. Amazon says A+, A and B+ carriers get early access, and loads appear at staggered times by grade. Every grade still has load board access.
 
-### Where do I see my performance rating?
-Your scorecard is in the Relay portal.
+### How often does the Relay load board refresh?
+Amazon says the board can auto-refresh thousands of new spot freight matches every 30 seconds.
+
+### Are there more loads at certain times of year?
+Yes. Amazon says load volume nearly doubles during peak periods such as Prime Day and the holidays.
+
+### How do I contact Amazon Relay support about the load board?
+Use the Relay Operations Center through the Relay portal or Relay mobile. It's available 24/7. For account access problems, use the Support Center while logged in. Amazon doesn't publish a phone number.
 
 ---
 
-# Booking Multiple Loads on Amazon Relay
+# How to book multiple loads on Amazon Relay
 
 URL: https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/
 Published: 2026-09-20. Last updated: 2026-10-02.
 
-Short answer: To book multiple loads on Amazon Relay, use the board's reload and return-trip suggestions after the first booking, or post your truck with Post A Truck. Before booking a second load, check the pickup window, the deadhead and your Hours of Service: 11 hours of driving within a 14-hour window after 10 hours off.
+Short answer: To book multiple loads on Amazon Relay, book the first load, then use the load board's reload and return-trip suggestions, or post your truck with Post A Truck up to two weeks ahead. Blocks and contracts reserve more work at once. Before each extra load, check the pickup window, deadhead and your remaining Hours of Service.
 
-## How the Board Suggests Additional Work
+## How do you book back-to-back loads on Amazon Relay?
 
-After you book a load, [the Relay board can suggest return trips and reload recommendations to help you continue your journey](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board). These are loads Amazon suggests to keep your driver moving. They are suggestions only. You still choose whether to book them.
+One at a time: book the first load, then find a second that picks up near the first delivery, inside the hours your driver has left. Amazon's [load board guide](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) doesn't describe a way to book several spot loads in one action.
 
-[Reload and return-trip suggestions come from the board's matching engine and from your saved searches and search history](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search).
+What helps you chain them on the board:
 
-## Pickup Time Options
+- **Filters.** Origin and destination (or a radius), equipment type, trailer status, load type, driver type, maximum stops, trip length, rate range, and pickup and delivery windows.
+- **Saved searches and alerts.** Save the search you run from your usual delivery points. Relay also has email alerts and push notifications.
+- **All-in prices.** The spot price includes the base rate, fuel surcharge and tolls, and you book at the listed price.
 
-[On some loads you can choose your own pickup time at booking to allow for traffic, deadhead, or HOS planning](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board). If a load offers time options, you see them when you open the load details. This helps you fit a second load into your schedule without missing the pickup window.
+More on filters and timing in our [Amazon Relay load board guide](https://nudoiq.com/amazon-relay-load-board/).
 
-Not all loads offer time options. If the load has a fixed pickup window only, you must pick up during that window or you cannot take the load.
+## How do reload and return-trip suggestions work?
 
-## Plan Against Your HOS Window
+After you book, the board can suggest more loads for the same truck. Amazon says it suggests replacements for cancelled loads, return trips, and additional loads to continue a driver's journey.
 
-[Under federal Hours of Service rules, you can drive 11 hours within a 14-hour window after 10 consecutive hours off duty](https://relay.amazon.com/blog/trucking-safety/hours-of-service-how-to-comply-with-the-fmcsa). [Full details are in the FMCSA regulations](https://www.fmcsa.dot.gov/regulations/hours-service/summary-hours-service-regulations).
+They're suggestions, not bookings. Before you take one, check:
 
-Before you book a second load, count your hours:
+- **Pickup window.** Can your driver get there after the first delivery?
+- **Deadhead.** How far is the empty run from the first drop to the next pickup?
+- **Hours.** Does the driver have the drive time left (next section)?
 
-- How long does the first load take (pickup + drive time + delivery)?
-- How long is the deadhead to the second pickup?
-- Does the second load fit in your remaining HOS time?
+Amazon also says [personalized load recommendations](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search) come from your search history and saved searches.
 
-If you add them up and you do not have time, do not book the second load. Running out of HOS leaves you stranded on the side of the road.
+## How do you fit a second load inside Hours of Service?
 
-## Post A Truck
+Add up the first load, the deadhead and the second load, then compare the total to the hours your driver has left. Under [FMCSA Hours of Service rules](https://www.fmcsa.dot.gov/regulations/hours-service/summary-hours-service-regulations), a property-carrying driver can drive 11 hours within a 14-hour window after 10 consecutive hours off duty.
 
-Instead of hunting the board for a second load, you can post your truck. [You list your truck's availability and minimum payout](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search), and [Relay will instantly book loads that match your criteria](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search).
+A checklist before you book load two:
 
-Post A Truck is useful if you know where you want to go and want to control your minimum rate. However, a post is not guaranteed. You might not get a match.
+1. Driving time for load one, start to final stop.
+2. Deadhead driving from the last drop to the next pickup.
+3. Driving time for load two.
+4. Total driving under 11 hours? If not, it doesn't fit today.
+5. Does everything, including waits at the docks, finish inside the 14-hour window?
+6. Can the driver make the pickup window, not just the last minute of it?
 
-## Performance and Load Access
+Example with made-up numbers: 4 hours of driving, a 1 hour deadhead and 5 more hours is 10 hours, under 11. If dock time pushes the day past 14 hours, it still doesn't fit.
 
-[High-performing carriers get first access to loads posted on the load board](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board). Your performance scorecard tracks your record on loads you book. The scorecard is in the Relay portal.
+[Some spot loads offer pickup time options](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) at booking to allow for traffic, stem miles and Hours of Service. Not all do. Amazon also describes [three driver setups](https://relay.amazon.com/blog/trucking-work-amazon-relay):
 
-Higher scores open more load choices. Lower scores limit which loads you see first.
+| Setup | What Amazon says |
+|---|---|
+| 13-hour solo | One day of loads, including 11 hours of drive time |
+| 37-hour solo | Two days of loads, with the 10-hour break taken outside base cities |
+| Team | Two drivers trade off |
 
-## Cancellations and Scorecard
+## Can Post A Truck line up your next load?
 
-If you book a load and then cancel it, that shows on your scorecard. Your scorecard is visible in the Relay portal and affects which loads you see and when.
+Yes. Post A Truck lets you post when and where your truck is free, and Amazon books loads that match. [Amazon's Post A Truck guide](https://relay.amazon.com/blog/how-to-load-match-with-post-a-truck) says you can post up to two weeks ahead, include or exclude cities, pick one-way or round trip, and set distance or duration limits. You set a minimum rate per mile.
 
-Do not book a load unless you are certain you can pick it up and complete it.
+Why it helps with a second load:
 
-## Booking is Committing
+- **Match outlook** shows High, Medium or Low odds, based on the previous six weeks of loads.
+- **First access.** Matched carriers see freight in their window before it reaches the load board.
+- **Block orders** with the same start and end pay in full even if Amazon doesn't use the whole block.
 
-Once you book a load, you are committed to the pickup time and delivery deadline. [The spot price is all-in: base rate, fuel surcharge and tolls, and you book at the listed price](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board). [On select spot loads you can name your own price; Relay Assistant evaluates the request and may approve or counter](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board).
+Amazon says it will [instantly book loads that match your criteria](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search), so only post hours your driver can actually run. A post isn't a guaranteed match. Amazon doesn't publish how many posts you can have open at once.
 
-You cannot hold a load while you decide. Book only when you are ready to go.
+## Do blocks or contracts beat chaining spot loads?
 
-## Large Peak Volume
+They reserve more work up front, so you're not hunting for each next load. Whether they beat spot depends on your lanes, your grade and what the rates are that week.
 
-[Volume of loads on the board is thousands at any time, and nearly doubles during peak seasons like Prime Day and holidays](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board). During peak, more loads mean more opportunity to find a second load, but also more competition for the best work.
+| Option | How it works | Who can book |
+|---|---|---|
+| Spot loads | Last-minute loads booked one at a time | All grades |
+| Block | A chunk of time you reserve trucks and drivers for, paid even if Amazon doesn't use the full block | Not listed on Amazon's grades page |
+| Contract | Full or partial weeks of loads, booked in advance | B grade or better for new contracts |
+| Auction | Contracts up to 6 months, bid in bulk, winning rate locked | C+ or better for most bids |
 
-NudoIQ AutoBook books automatically when a load matches rules you set, so you do not have to watch the board manually during busy times.
+Amazon's [grades page](https://relay.amazon.com/blog/intro-to-amazon-relay/relay-performance-grades-how-to-unlock-hauling-opportunities) says carriers can lose booked contracts if they drop below C+. You get a grade after ten or more Relay loads in the last six active weeks, so new carriers start on spot. See Amazon's [rate options](https://relay.amazon.com/blog/booking-options/3-ways-to-set-your-own-freight-rates-on-amazon-relay) for auctions, and our guide to [what Relay pays](https://nudoiq.com/how-much-does-amazon-relay-pay/).
+
+## What happens if you book too many and cancel?
+
+It hurts your score. [Amazon's performance score](https://relay.amazon.com/blog/amazon-relay-performance-score) includes an acceptance metric that tracks how often you reject (cancel) loads you booked, including expired loads. The closer the cancellation is to pickup, the bigger the penalty.
+
+Why it matters:
+
+- **Your overall score is your lowest metric.** One weak metric sets your grade.
+- **Grades unlock work.** B for new contracts, C+ for most auctions, and A+, A and B+ for early access to new spot loads.
+- **Amazon doesn't publish** the penalty size for a cancellation, the score cutoff for each grade, or how long a single cancellation stays on your score.
+
+The simple habit: don't book load two until you've done the hours math. More in our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/).
+
+## Can a tool book multiple loads for you?
+
+Yes. Amazon's Post A Truck books matching loads for you, and third-party browser extensions exist. Whatever you use, you're responsible for your Relay account, so check Relay's terms.
+
+Ask any auto-booker:
+
+- **Does it stop at a cap** on how many loads it books?
+- **Does it respect a profit floor** you set?
+- **Do you set the lanes and prices?**
+
+Our [Amazon Relay auto-booker guide](https://nudoiq.com/amazon-relay-auto-booker/) goes deeper.
+
+## Where does NudoIQ fit?
+
+NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It's an independent tool, not made by or affiliated with Amazon. Autobook books loads that match the price and lane rules you set, and stops at your max-books cap and your profit floor. A backhaul finder searches from where your load ends back toward home, and every load card shows net profit after driver pay, fuel, maintenance and deadhead.
+
+It's $49.99 a month after a 7-day free trial, no card needed to start. Cancel anytime.
 
 ## Frequently asked questions
 
-### Can the board suggest a load that does not work for me?
-Yes. Suggestions are based on the board's matching engine and your search history. Read the pickup window and delivery time and decide if it works for your HOS and schedule before you book.
+### Can I book two Amazon Relay loads at the same time?
+You book each spot load on its own. Amazon's load board guide doesn't describe booking several in one action. Post A Truck, blocks and contracts reserve more work at once.
 
-### What if a reload suggestion has a pickup time I cannot make?
-Do not book it. You need time between the end of your first delivery and the second pickup. If you cannot make the window, the load is not right for you.
+### How many hours can my driver drive in a day for back-to-back loads?
+Under FMCSA rules, 11 hours of driving within a 14-hour window after 10 consecutive hours off duty. All loads in the day count toward it.
 
-### How do I know my scorecard is good?
-Your scorecard is in the Relay portal. It tracks your record on loads you have completed.
+### How far ahead can I post my truck on Amazon Relay?
+Up to two weeks ahead with Post A Truck. Amazon doesn't publish a limit on how many posts you can have open.
 
-### Can I have multiple Post A Truck offers at the same time?
-Amazon does not publish this information. [Post A Truck works by listing your criteria so Amazon can instantly book matching loads](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search). Contact support via the Relay portal if you have questions about posting limits.
+### How much does cancelling a load hurt my Relay score?
+Amazon doesn't publish the amount. It says cancellations count against your acceptance metric, and the closer to pickup, the bigger the penalty.
 
-### What if I run out of HOS before finishing the second load?
-You cannot continue driving. Plan your loads so you finish both within your HOS window. [Under FMCSA rules you have 11 hours driving within a 14-hour window](https://www.fmcsa.dot.gov/regulations/hours-service/summary-hours-service-regulations). Count the hours before you book.
+### Do I need a certain grade to book contracts?
+Yes. Amazon says new contracts need a B grade or better, and you can lose booked contracts if you drop below C+.
 
-### Do all loads offer pickup time options?
-No. [Some loads offer time options to allow for traffic and HOS planning, but not all loads have this](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board).
+### Does Amazon post Relay loads on other load boards?
+No. Amazon tenders its loads only through Relay. See our [Amazon Relay loads guide](https://nudoiq.com/amazon-relay-loads/) for what's on the board.

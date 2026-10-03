@@ -67,9 +67,9 @@ NudoIQ analyzed public FMCSA roadside inspection records that list Amazon as the
 - [Amazon Relay box truck loads: how to find and book them](https://nudoiq.com/amazon-relay-box-truck-loads/): How to find Amazon Relay box truck loads: filter the board for 16 or 26 ft trucks, set up Post A Truck, pick contracts or spot, and judge a rate.
 - [Amazon Relay power only: how it works and how to book it](https://nudoiq.com/amazon-relay-power-only/): Amazon Relay power only means you bring the tractor and Amazon provides the trailer. Which loads work that way, day cab vs sleeper, and judging a rate.
 - [Amazon Relay dispatcher: what the job is and how to do it well](https://nudoiq.com/amazon-relay-dispatcher/): What an Amazon Relay dispatcher does: booking loads, setting up drivers, tracking trips and protecting the score. Plus dispatch service vs DIY.
-- [Cannot Book Loads on Amazon Relay](https://nudoiq.com/amazon-relay-account-suspended/): If you cannot book or haul Relay loads, check your insurance status and compliance. What Amazon publishes and what it does not.
-- [When the Amazon Relay Load Board Shows No Loads](https://nudoiq.com/amazon-relay-load-board-not-showing-loads/): When the Relay load board is empty or sparse, check filters and account status in this order.
-- [Booking Multiple Loads on Amazon Relay](https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/): Use Relay's reload and return-trip suggestions, and plan against your HOS window when booking a second load.
+- [Amazon Relay account suspended or can't book loads? What to check](https://nudoiq.com/amazon-relay-account-suspended/): Can't book loads on Amazon Relay? Check insurance, compliance and your grade, then contact Relay support. What Amazon publishes and what it doesn't.
+- [Amazon Relay load board not showing loads: what to check](https://nudoiq.com/amazon-relay-load-board-not-showing-loads/): Amazon Relay load board empty? Check filters and saved searches, insurance status, your grade and browser extensions, then contact Relay support.
+- [How to book multiple loads on Amazon Relay](https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/): Chain Amazon Relay loads with reload suggestions, Post A Truck, blocks and contracts, and check your Hours of Service before you book the next one.
 
 ## Data
 
