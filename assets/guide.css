@@ -57,6 +57,23 @@
 .hub .cards{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
 .tm{max-width:var(--col);margin:14px auto 0;color:var(--g3);font-size:12.5px;line-height:1.6}
 
+.byline{color:var(--blue-deep);font-size:13.5px;font-weight:500;margin-top:16px;opacity:.85}
+.answer{background:var(--paper-2);border:1px solid rgba(22,22,22,.08);border-left:4px solid var(--blue);
+  border-radius:var(--ri);padding:18px 22px;margin:0 0 30px}
+.answer .lbl{font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--blue-deep);margin:0 0 6px}
+.answer p:last-child{color:var(--ink);font-size:17px;line-height:1.6;margin:0}
+.chart{margin:8px 0 28px}
+.chart figcaption{font-weight:600;color:var(--ink);font-size:15.5px;margin:0 0 10px}
+.chart th[scope=row]{background:transparent;font-weight:500;color:var(--ink)}
+.chart td.num{text-align:right;white-space:nowrap}
+.chart td.bar{position:relative;min-width:150px;white-space:nowrap}
+.chart td.bar .b{display:inline-block;height:12px;border-radius:6px;background:var(--blue);vertical-align:middle;max-width:calc(100% - 64px)}
+.chart td.bar .v{display:inline-block;margin-left:8px;vertical-align:middle;color:var(--ink);font-variant-numeric:tabular-nums}
+.chart .src{font-size:13px;color:var(--g3);line-height:1.5;margin:-14px 0 0}
+.prose .dl{margin:0 0 22px}
+.prose .dl a{font-weight:600}
+.prose .dl span{color:var(--g3);font-size:14px}
+
 @media (max-width:660px){
   .prose > p,.prose li{font-size:16px}
   .cta{padding:28px 22px}

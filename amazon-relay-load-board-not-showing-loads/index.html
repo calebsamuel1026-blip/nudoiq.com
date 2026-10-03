@@ -63,6 +63,13 @@
       }catch(e){}
     })();
   </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
   <link rel="stylesheet" href="/assets/doc.css">
   <link rel="stylesheet" href="/assets/guide.css">
   <script type="application/ld+json">
@@ -72,9 +79,11 @@
   "headline": "When the Amazon Relay Load Board Shows No Loads",
   "description": "When the Relay load board is empty or sparse, check filters and account status in this order.",
   "mainEntityOfPage": "https://nudoiq.com/amazon-relay-load-board-not-showing-loads/",
+  "url": "https://nudoiq.com/amazon-relay-load-board-not-showing-loads/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
   "datePublished": "2026-09-20",
-  "dateModified": "2026-09-20",
+  "dateModified": "2026-10-02",
+  "inLanguage": "en-US",
   "author": {
     "@type": "Organization",
     "name": "NudoIQ",
@@ -82,12 +91,14 @@
   },
   "publisher": {
     "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
     "name": "NudoIQ",
     "logo": {
       "@type": "ImageObject",
       "url": "https://nudoiq.com/brand/mark/icon128.png"
     }
-  }
+  },
+  "abstract": "When the Amazon Relay load board shows no loads, check filters first: equipment type, radius, load type, trip length, rate range, time windows and any saved search. Then check the account, since an insurance lapse or compliance issue can block booking. If it's still empty, contact the Relay Operations Center through the portal."
 }
   </script>
   <script type="application/ld+json">
@@ -126,7 +137,7 @@
       "name": "Does my performance scorecard affect what loads I see?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. High-performing carriers get first access to loads. Your scorecard is in the Relay portal under Performance."
+        "text": "Yes. High-performing carriers get first access to loads. Your scorecard is in the Relay portal."
       }
     },
     {
@@ -158,18 +169,59 @@
       "name": "Where do I see my performance rating?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your scorecard is in the Relay portal under Performance."
+        "text": "Your scorecard is in the Relay portal."
       }
     }
   ]
 }
   </script>
-  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
-       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
-  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
-    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
-      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/brand/mark/icon128.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://nudoiq.com/#software",
+      "name": "NudoIQ",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Browser Extension",
+      "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
+      "url": "https://nudoiq.com/",
+      "downloadUrl": "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+      "offers": {
+        "@type": "Offer",
+        "price": "49.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nudoiq.com/#pricing",
+        "description": "7-day free trial, no card needed to start. $49.99 per month after the trial. Cancel anytime.",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "49.99",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "billingDuration": "P1M"
+        }
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -189,10 +241,12 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">When the Amazon Relay Load Board Shows No Loads</span></nav>
     <h1 class="page-title">When the Amazon Relay Load Board Shows No Loads</h1>
     <p class="page-subtitle">An empty board means no work available right now. Check your filters and account status in order before contacting support.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-02">October 2, 2026</time></p>
   </div></div>
 
   <div class="container">
     <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>When the Amazon Relay load board shows no loads, check filters first: equipment type, radius, load type, trip length, rate range, time windows and any saved search. Then check the account, since an insurance lapse or compliance issue can block booking. If it's still empty, contact the Relay Operations Center through the portal.</p></section>
 <h2 id="check-filters-first">Check Filters First</h2>
 <p><a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">The load board uses filters to show work that matches your truck and needs</a>. If you see nothing, a filter is likely set too narrow.</p>
 <p>Open your filters and verify:</p>
@@ -217,11 +271,11 @@
 
     <section class="faq" aria-labelledby="faq-h">
       <h2 id="faq-h">Frequently asked questions</h2>
-      <details><summary>Does my performance scorecard affect what loads I see?</summary><div class="a"><p>Yes. <a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">High-performing carriers get first access to loads</a>. Your scorecard is in the Relay portal under Performance.</p></div></details>
+      <details><summary>Does my performance scorecard affect what loads I see?</summary><div class="a"><p>Yes. <a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">High-performing carriers get first access to loads</a>. Your scorecard is in the Relay portal.</p></div></details>
       <details><summary>Can a saved search cause the board to look empty?</summary><div class="a"><p>Yes. If an old saved search is active with narrow filters, it may not match current loads. Reset your saved search or create a new one with wider criteria.</p></div></details>
       <details><summary>What if my board shows a few loads but not many?</summary><div class="a"><p>Your area may have fewer loads at that time. Try widening your radius or adjusting your pickup and delivery windows.</p></div></details>
       <details><summary>Who do I contact for questions about board access?</summary><div class="a"><p>Contact <a href="https://relay.amazon.com/faq" target="_blank" rel="noopener">the Relay Operations Center (ROC) through the Relay portal</a>. For login or account-access issues, use the Support Center in the Relay portal.</p></div></details>
-      <details><summary>Where do I see my performance rating?</summary><div class="a"><p>Your scorecard is in the Relay portal under Performance.</p></div></details>
+      <details><summary>Where do I see my performance rating?</summary><div class="a"><p>Your scorecard is in the Relay portal.</p></div></details>
     </section>
 
     <aside class="cta">
@@ -232,12 +286,12 @@
     <nav class="related" aria-label="More Amazon Relay guides">
       <h2>More Amazon Relay guides</h2>
       <div class="cards">
-        <a href="/loadfetcher-alternative/">LoadFetcher vs NudoIQ: What's the Difference</a>
-        <a href="/amazon-relay-account-suspended/">Cannot Book Loads on Amazon Relay</a>
         <a href="/how-to-book-multiple-loads-on-amazon-relay/">Booking Multiple Loads on Amazon Relay</a>
         <a href="/amazon-relay-load-board/">How the Amazon Relay Load Board Works</a>
         <a href="/what-is-amazon-relay/">What Is Amazon Relay?</a>
         <a href="/amazon-relay-requirements/">Amazon Relay Requirements</a>
+        <a href="/amazon-relay-insurance-requirements/">Amazon Relay Insurance Requirements</a>
+        <a href="/amazon-relay-box-truck/">Amazon Relay for Box Trucks</a>
       </div>
     </nav>
 

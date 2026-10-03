@@ -63,6 +63,13 @@
       }catch(e){}
     })();
   </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
   <link rel="stylesheet" href="/assets/doc.css">
   <link rel="stylesheet" href="/assets/guide.css">
   <script type="application/ld+json">
@@ -72,9 +79,11 @@
   "headline": "How the Amazon Relay Load Board Works",
   "description": "Complete guide to the Amazon Relay load board: filters, load types, rates, and why good loads book in seconds. Login at relay.amazon.com.",
   "mainEntityOfPage": "https://nudoiq.com/amazon-relay-load-board/",
+  "url": "https://nudoiq.com/amazon-relay-load-board/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
   "datePublished": "2026-09-20",
-  "dateModified": "2026-09-20",
+  "dateModified": "2026-10-02",
+  "inLanguage": "en-US",
   "author": {
     "@type": "Organization",
     "name": "NudoIQ",
@@ -82,12 +91,14 @@
   },
   "publisher": {
     "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
     "name": "NudoIQ",
     "logo": {
       "@type": "ImageObject",
       "url": "https://nudoiq.com/brand/mark/icon128.png"
     }
-  }
+  },
+  "abstract": "The Amazon Relay load board is where approved carriers find and book Amazon freight, at relay.amazon.com. It's open 24/7 and free to search and book, with filters for equipment, load type, radius, trip length and time windows. Amazon tenders its loads only through Relay, and good loads often book within seconds."
 }
   </script>
   <script type="application/ld+json">
@@ -126,7 +137,7 @@
       "name": "What time do Amazon Relay loads post on the load board?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Loads post throughout the day as Amazon needs freight moved. There's no set time. The busiest periods tend to be early morning and around midday, but loads post anytime. This is why refreshing constantly helps you catch them."
+        "text": "Loads post throughout the day as Amazon needs freight moved. There's no set time, and Amazon says volume nearly doubles during peak seasons like Prime Day and the holidays. This is why refreshing helps you catch them."
       }
     },
     {
@@ -142,7 +153,7 @@
       "name": "Why do good Amazon Relay loads get booked so fast?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Thousands of Relay carriers watch the same load board. When a profitable load posts, multiple carriers see it in the same second. The fastest person to click gets it. This is why carriers use refresher extensions—to reload the board every few seconds instead of manually, so they catch good loads before other carriers do."
+        "text": "Many Relay carriers watch the same load board. When a profitable load posts, multiple carriers see it in the same second. The fastest person to click gets it. This is why carriers use refresher extensions: to reload the board every few seconds instead of manually, so they catch good loads before other carriers do."
       }
     },
     {
@@ -150,7 +161,7 @@
       "name": "How do I know if an Amazon Relay rate is good?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Rates vary by lane, time of day, season, and volume. The same route can pay very differently hour to hour. The best way to judge a rate is to track what that lane has paid over the past 90 days, calculate your net profit after all costs (driver pay, fuel, maintenance, deadhead), and set a profit floor—don't book loads that don't clear it. Lane Intelligence tools show you the history; a profit calculator shows you the net dollars."
+        "text": "Rates vary by lane, time of day, season, and volume. The same route can pay very differently hour to hour. The best way to judge a rate is to track what that lane has paid over the past 90 days, calculate your net profit after all costs (driver pay, fuel, maintenance, deadhead), and set a profit floor: don't book loads that don't clear it. Lane Intelligence tools show you the history; a profit calculator shows you the net dollars."
       }
     },
     {
@@ -166,18 +177,59 @@
       "name": "How often should I refresh the load board?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Manual refreshing every 30 seconds isn't practical. Most carriers use a refresh extension set to 1–5 second intervals with jitter. This keeps you in the hunt for loads without you staring at the screen. Set the refresh interval based on your tolerance for notification noise and your internet connection."
+        "text": "Amazon says the board auto-refreshes new spot freight matches every 30 seconds. A refresh extension reloads faster, for example on a 1 to 5 second interval with jitter. This keeps you in the hunt for loads without you staring at the screen. Set the refresh interval based on your tolerance for notification noise and your internet connection."
       }
     }
   ]
 }
   </script>
-  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
-       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
-  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
-    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
-      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/brand/mark/icon128.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://nudoiq.com/#software",
+      "name": "NudoIQ",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Browser Extension",
+      "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
+      "url": "https://nudoiq.com/",
+      "downloadUrl": "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+      "offers": {
+        "@type": "Offer",
+        "price": "49.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nudoiq.com/#pricing",
+        "description": "7-day free trial, no card needed to start. $49.99 per month after the trial. Cancel anytime.",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "49.99",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "billingDuration": "P1M"
+        }
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -197,62 +249,64 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">How the Amazon Relay Load Board Works</span></nav>
     <h1 class="page-title">How the Amazon Relay Load Board Works</h1>
     <p class="page-subtitle">The Amazon Relay load board is where carriers find and book loads. Good loads get taken in seconds, which is why understanding how the board works and what you're looking at matters.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-02">October 2, 2026</time></p>
   </div></div>
 
   <div class="container">
     <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>The Amazon Relay load board is where approved carriers find and book Amazon freight, at relay.amazon.com. It's open 24/7 and free to search and book, with filters for equipment, load type, radius, trip length and time windows. Amazon tenders its loads only through Relay, and good loads often book within seconds.</p></section>
 <h2 id="what-the-load-board-is">What the Load Board Is</h2>
 <p>The Amazon Relay load board is your direct connection to loads that Amazon Logistics needs moved. You log in at relay.amazon.com with your carrier credentials, see available loads, and book them. It's the only place Amazon posts loads for Relay carriers. Third-party load boards and brokers don't carry Amazon's freight.</p>
 <p>When you sign in, you see a list of loads posted that day. Each load card shows the pickup location, delivery location, the load type, the posted rate, and other details you need to decide whether to book it.</p>
 <h2 id="why-loads-vanish-so-quickly">Why Loads Vanish So Quickly</h2>
-<p>Good loads disappear within seconds of posting because the board attracts thousands of active carriers watching for work. The moment a profitable load lands, multiple carriers see it at once and one of them books it first. This is why many carriers refresh the load board constantly—they're trying to catch good loads before anyone else does.</p>
+<p>Good loads disappear within seconds of posting because the board attracts many active carriers watching for work. The moment a profitable load lands, multiple carriers see it at once and one of them books it first. This is why many carriers refresh the load board constantly: they're trying to catch good loads before anyone else does.</p>
 <p>A manual refresh means you walk away, come back, hit reload, and check what's new. But if you step away for five minutes, you miss dozens of refreshes and all the loads that posted in that window. That's why carriers use <a href="/amazon-relay-auto-refresh/">refreshers</a> and <a href="/amazon-relay-auto-booker/">auto-booker extensions</a> to stay in the competition.</p>
 <h2 id="reading-a-load-card">Reading a Load Card</h2>
 <p>Every load card on the board shows the same core information, though the layout varies depending on your device and which extension you're using.</p>
 <p><strong>Origin and Destination</strong>: The pickup location and drop-off location. These are what drive the rate and determine whether the load fits your dispatch plan.</p>
 <p><strong>Equipment Type</strong>: What the load is (box truck, dry van, reefer, container). Amazon accepts day cab and sleeper tractors, 26 ft and 16 ft <a href="/amazon-relay-box-truck/">box trucks with tuck-under liftgates</a>, 48 ft and 53 ft dry van and reefer trailers, and 20/40/45 ft high-cube containers. Cargo vans are not supported.</p>
 <p><strong>Posted Rate</strong>: The dollar amount Amazon is paying for that load. This is the gross rate, before driver pay, fuel, maintenance, and deadhead. Many carriers now use <a href="/amazon-relay-auto-booker/">Net Profit tools</a> to see what you actually keep after costs.</p>
-<p><strong>Load Type</strong>: One-way or round-trip. One-way loads move freight in one direction. Round-trip loads are part of blocks—multi-load runs booked as a unit—or may include a return route. You can also see loads through Post A Truck, where you post your availability and get matched.</p>
+<p><strong>Load Type</strong>: One-way or round-trip. One-way loads move freight in one direction. Round-trip loads start and end at the same domicile. You can also get loads through Post A Truck, where you post your availability and get matched.</p>
 <h2 id="filters-and-search">Filters and Search</h2>
-<p>Most carriers use the built-in filters to narrow down what they see. You can filter by load type (one-way vs. round-trip, blocks), equipment category, destination, and sometimes by origin. Filters save time because you don't have to look at every load posted.</p>
+<p>The built-in filters narrow down what you see. You can filter by origin and destination (or radius), equipment type, trailer status, load type, driver type, max stops, trip length, rate range, and pickup and delivery windows, and save the searches you use most. Filters save time because you don't have to look at every load posted.</p>
 <p>If you're only moving dry vans, filtering out box truck loads means less scrolling. If you have a home hub and want work headed toward it, filtering by destination narrows the list. The more specific your filter, the faster you can scan for loads that match your operation.</p>
 <h2 id="how-rates-are-set">How Rates Are Set</h2>
 <p>Amazon sets the rate for each load based on several factors: the season, the time of day, the origin, the equipment type, your booking history, and the day's load volume. The same lane posted at 6 a.m. might pay differently at noon because the volume and demand shifted.</p>
-<p>This means two identical lanes can pay completely different amounts depending on when they post. Understanding that rates move with demand—and not taking it personally when a rate looks low—is part of the business.</p>
+<p>This means two identical lanes can pay completely different amounts depending on when they post. Understanding that rates move with demand, and not taking it personally when a rate looks low, is part of the business.</p>
 <h2 id="refreshing-and-staying-competitive">Refreshing and Staying Competitive</h2>
 <p>Manual refreshing works if you're sitting at your computer all day, but most owner-operators can't camp on the load board. Refreshing every 30 seconds by hand isn't practical. A <a href="/amazon-relay-auto-refresh/">refresh extension</a> solves this by automating the reload, typically at intervals of 1 to 5 seconds, with built-in jitter to avoid overwhelming the server.</p>
-<p>The jitter—random variation added to the interval—keeps the server stable by preventing thousands of carriers from refreshing at exactly the same second. Without jitter, everyone hits at once; with it, requests spread out.</p>
+<p>The jitter, random variation added to the interval, keeps the server stable by keeping many carriers from refreshing at exactly the same second. Without jitter, everyone hits at once; with it, requests spread out.</p>
 <p>Once you have a refresher running, you can set an alert to ping you when a load matching your rules posts, or use a search highlight to spot matching loads visually, or set up an auto-booker to book them for you automatically if you've set a profit floor and max-books cap.</p>
 <h2 id="load-types-and-booking-methods">Load Types and Booking Methods</h2>
 <p><strong>Spot Loads</strong>: One-way and round-trip loads you find and book yourself. Book, complete before 11:59 pm Saturday, and get paid Friday.</p>
-<p><strong>Blocks</strong>: Multi-load runs posted as a unit. You book the whole block and complete all the loads in it.</p>
-<p><strong>Short-Term Contracts</strong>: Standing work for a set term.</p>
-<p><strong>Post A Truck</strong>: You post your truck's availability, location, and willingness to move freight, and Amazon matches you with loads headed your way.</p>
-<p>Each method works differently. Spot loads are quickest and give you the most control. Blocks commit you to multiple stops but often offer better rates. Contracts provide stability. Post A Truck is passive—you post and wait for Amazon to offer matches.</p>
+<p><strong>Blocks</strong>: A chunk of time you reserve trucks and drivers for Relay. Amazon pays for the block even if it doesn't use all of it.</p>
+<p><strong>Short-Term Contracts</strong>: Full or partial weeks of loads booked in advance. New contracts need a B grade or better.</p>
+<p><strong>Post A Truck</strong>: You post your truck's availability and a minimum rate per mile, and Amazon matches you with loads. Matched carriers see that freight before it reaches the board.</p>
+<p>Each method works differently. Spot loads are quickest and give you the most control. Blocks commit your truck and driver for a set time. Contracts provide stability. Post A Truck lets you set your own minimum rate and wait for matches.</p>
 <h2 id="the-scorecard-and-load-access">The Scorecard and Load Access</h2>
-<p>Your performance on the Relay load board is tracked in a scorecard that covers safety compliance, on-time performance, tender acceptance, and technology/app usage. Low scores can limit your access to loads.</p>
-<p>If you accept a load and then cancel it, that counts against you. If you miss a pickup window, that counts. If your safety rating sags, Amazon can tighten your access to premium loads. If you believe a scorecard violation is wrong, dispute it as soon as you see it—Amazon decides the outcome—or work on the metrics to rebuild your score.</p>
+<p>Amazon grades your performance on four metrics: on-time, acceptance, app usage and disruption-free (stationary trailers and loads with no assigned driver). Your overall score is the lowest of the four, and low grades can limit your access to loads. Our <a href="/amazon-relay-scorecard/">scorecard guide</a> explains each metric.</p>
+<p>If you accept a load and then cancel it, that counts against you, and the closer to pickup, the bigger the penalty. If you miss a pickup window, that counts. If you believe a score impact is wrong, you can dispute it in your Relay account (Amazon decides the outcome), or work on the metrics to rebuild your score.</p>
 <h2 id="where-nudoiq-fits">Where NudoIQ Fits</h2>
-<p>NudoIQ runs inside the Relay load board in your browser. It adds a control bar with three modes—Alert (pings you on a match), Search (highlights matches), and Autobook (books automatically)—so you can set up rules once and stop watching manually.</p>
+<p>NudoIQ runs inside the Relay load board in your browser. It adds a control bar with three modes: Alert (pings you on a match), Search (highlights matches) and Autobook (books automatically). You set up rules once and stop watching manually.</p>
 <p>It also shows <a href="/amazon-relay-auto-refresh/">Lane Intelligence</a> next to each rate, so you can see what that lane normally pays and whether today's rate is high or low. A <a href="/amazon-relay-auto-booker/">Net Profit calculator</a> shows you the dollars left after driver pay, fuel, maintenance, and deadhead to pickup, so you can set a profit floor and only book loads that clear it.</p>
 <p>You can also use it to find backhaul loads from where your current load ends, headed back toward home, and to draft dispute letters when your scorecard gets dinged. It's a refresher, booker, rate calculator, and dispute tool all in one extension.</p>
 <h2 id="getting-started">Getting Started</h2>
-<p>To use the load board, you need a carrier account with Amazon Relay. That requires a DOT number with interstate authority, active for at least 180 days; a valid MC number; a Satisfactory BASIC safety rating; insurance minimums (GL $1M per occurrence, auto liability $1M, cargo at least $100K); and the right equipment.</p>
+<p>To use the load board, you need a carrier account with Amazon Relay. That requires a DOT number with interstate authority, active for at least 180 days; a valid MC number; an FMCSA safety rating of Satisfactory, None or Not Rated; BASIC scores under Amazon's limits; insurance minimums (GL $1M per occurrence, auto liability $1M, cargo at least $100K); and the right equipment.</p>
 <p>Once you're approved, log in at relay.amazon.com, sign in with your carrier credentials, and you'll see the load board. From there, the board is yours to use as-is, or you can add a <a href="/amazon-relay-auto-refresh/">refresher extension</a> or <a href="/amazon-relay-auto-booker/">booking tool</a> to work smarter.</p>
 <h2 id="better-load-board-decisions-with-nudoiq">Better Load Board Decisions with NudoIQ</h2>
-<p>Managing the Relay load board by hand—refreshing, reading rates, judging whether a load is worth it, and handling disputes—takes time and focus. NudoIQ automates the refresh, surfaces rate history, calculates profit, and drafts dispute letters for you.</p>
-<p>The extension runs inside the board tab in your signed-in browser and works on desktop Chrome with an English or Spanish interface. It costs $49.99 a month for every feature, with a 7-day free trial. Cancel anytime from your Stripe portal.</p>
+<p>Managing the Relay load board by hand (refreshing, reading rates, judging whether a load is worth it, and handling disputes) takes time and focus. NudoIQ automates the refresh, surfaces rate history, calculates profit, and drafts dispute letters for you.</p>
+<p>The extension runs inside the board tab in your signed-in browser and works on desktop Chrome with an English or Spanish interface. It costs $49.99 a month for every feature, with a 7-day free trial and no card needed to start. Cancel anytime from your Stripe portal.</p>
 <p>Used by 300+ carriers and rated 5.0 on the Chrome Web Store, NudoIQ is built to work the way you work. Start free for seven days, see what it does, and cancel if it's not for you.</p>
     </article>
 
     <section class="faq" aria-labelledby="faq-h">
       <h2 id="faq-h">Frequently asked questions</h2>
-      <details><summary>What time do Amazon Relay loads post on the load board?</summary><div class="a"><p>Loads post throughout the day as Amazon needs freight moved. There's no set time. The busiest periods tend to be early morning and around midday, but loads post anytime. This is why refreshing constantly helps you catch them.</p></div></details>
+      <details><summary>What time do Amazon Relay loads post on the load board?</summary><div class="a"><p>Loads post throughout the day as Amazon needs freight moved. There's no set time, and Amazon says volume nearly doubles during peak seasons like Prime Day and the holidays. This is why refreshing helps you catch them.</p></div></details>
       <details><summary>Can I book Amazon loads from a third-party load board?</summary><div class="a"><p>No. Amazon only posts loads on the Relay load board. Brokers and third-party platforms don't carry Amazon freight. You must use relay.amazon.com to find and book Amazon work.</p></div></details>
-      <details><summary>Why do good Amazon Relay loads get booked so fast?</summary><div class="a"><p>Thousands of Relay carriers watch the same load board. When a profitable load posts, multiple carriers see it in the same second. The fastest person to click gets it. This is why carriers use refresher extensions—to reload the board every few seconds instead of manually, so they catch good loads before other carriers do.</p></div></details>
-      <details><summary>How do I know if an Amazon Relay rate is good?</summary><div class="a"><p>Rates vary by lane, time of day, season, and volume. The same route can pay very differently hour to hour. The best way to judge a rate is to track what that lane has paid over the past 90 days, calculate your net profit after all costs (driver pay, fuel, maintenance, deadhead), and set a profit floor—don't book loads that don't clear it. <a href="/amazon-relay-auto-refresh/">Lane Intelligence tools</a> show you the history; a <a href="/amazon-relay-auto-booker/">profit calculator</a> shows you the net dollars.</p></div></details>
+      <details><summary>Why do good Amazon Relay loads get booked so fast?</summary><div class="a"><p>Many Relay carriers watch the same load board. When a profitable load posts, multiple carriers see it in the same second. The fastest person to click gets it. This is why carriers use refresher extensions: to reload the board every few seconds instead of manually, so they catch good loads before other carriers do.</p></div></details>
+      <details><summary>How do I know if an Amazon Relay rate is good?</summary><div class="a"><p>Rates vary by lane, time of day, season, and volume. The same route can pay very differently hour to hour. The best way to judge a rate is to track what that lane has paid over the past 90 days, calculate your net profit after all costs (driver pay, fuel, maintenance, deadhead), and set a profit floor: don't book loads that don't clear it. <a href="/amazon-relay-auto-refresh/">Lane Intelligence tools</a> show you the history; a <a href="/amazon-relay-auto-booker/">profit calculator</a> shows you the net dollars.</p></div></details>
       <details><summary>What loads can I book with different equipment?</summary><div class="a"><p>Box truck loads are for 26 ft and 16 ft trucks with tuck-under liftgates. Tractor loads are for day cab and sleeper units moving 48/53 ft trailers or containers. The board filters by equipment type. Check which equipment you're registered with Relay and filter to loads that match it.</p></div></details>
-      <details><summary>How often should I refresh the load board?</summary><div class="a"><p>Manual refreshing every 30 seconds isn't practical. Most carriers use a <a href="/amazon-relay-auto-refresh/">refresh extension</a> set to 1–5 second intervals with jitter. This keeps you in the hunt for loads without you staring at the screen. Set the refresh interval based on your tolerance for notification noise and your internet connection.</p></div></details>
+      <details><summary>How often should I refresh the load board?</summary><div class="a"><p><a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">Amazon says</a> the board auto-refreshes new spot freight matches every 30 seconds. A <a href="/amazon-relay-auto-refresh/">refresh extension</a> reloads faster, for example on a 1 to 5 second interval with jitter. This keeps you in the hunt for loads without you staring at the screen. Set the refresh interval based on your tolerance for notification noise and your internet connection.</p></div></details>
     </section>
 
     <aside class="cta">

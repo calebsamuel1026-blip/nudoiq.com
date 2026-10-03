@@ -1,0 +1,79 @@
+{
+  "_note": "Aggregate numbers only, copied from research/AMAZON-CARRIER-DATA-DEEP-2026-09-25.md and research/RELAY-CARRIER-DISCRIMINATOR-2026-09-25.md (MEASURED against data.transportation.gov on 2026-09-24/25). No carrier names or DOT numbers. Rendered by tools/build-guides.mjs into /amazon-relay-carrier-data/ charts and CSV.",
+  "window": "2023-09-24 to 2026-09-22",
+  "charts": {
+    "by-year": {
+      "caption": "Roadside inspections listing Amazon as shipper, by year",
+      "cols": ["Year", "Inspections", "Distinct carriers"],
+      "bar": 1,
+      "rows": [
+        ["2023 (Sep 24 to Dec 31)", 7320, 3681],
+        ["2024", 29036, 9652],
+        ["2025", 35753, 11322],
+        ["2026 (Jan 1 to Sep 22)", 29335, 10117]
+      ],
+      "source": "FMCSA Vehicle Inspection File (fx4q-ay7w), inspections where the shipper name contains AMAZON."
+    },
+    "new-carriers": {
+      "caption": "Carriers seen with Amazon freight for the first time",
+      "cols": ["Window (ending 2026-09-22)", "First-time carriers"],
+      "bar": 1,
+      "rows": [
+        ["Last ~30 days (from 2026-08-25)", 558],
+        ["Last ~90 days (from 2026-07-01)", 1584],
+        ["Last ~180 days (from 2026-04-01)", 3167]
+      ],
+      "source": "FMCSA Vehicle Inspection File (fx4q-ay7w): carriers whose first Amazon-shipper inspection falls in the window."
+    },
+    "states": {
+      "caption": "Carriers with an Amazon-shipper inspection since 2025-01-01, top 12 home states",
+      "cols": ["State", "Carriers"],
+      "bar": 1,
+      "rows": [["California", 3011], ["Ohio", 1689], ["Illinois", 1589], ["Pennsylvania", 1155], ["Texas", 972], ["Florida", 903], ["Minnesota", 709], ["Washington", 653], ["New Jersey", 568], ["North Carolina", 449], ["Georgia", 404], ["Michigan", 358]],
+      "source": "Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+    },
+    "fleet": {
+      "caption": "Fleet size (power units) of carriers with an Amazon-shipper inspection since 2025-01-01",
+      "cols": ["Power units", "Carriers", "Share"],
+      "bar": 1,
+      "share": 1,
+      "rows": [["1-2", 9941], ["3-5", 3600], ["6-10", 1933], ["11-20", 1276], ["21-50", 1333], ["51-100", 641], ["101-1,000", 559], ["1,000+", 72]],
+      "source": "FMCSA Company Census (az4n-8mr2) power units. This band query totals 19,355 carriers; read it as the shape of the distribution."
+    },
+    "equipment": {
+      "caption": "Equipment that carriers hauling Amazon freight report owning",
+      "cols": ["Equipment on file", "Share of carriers"],
+      "bar": 1,
+      "pct": true,
+      "rows": [["Tractors, no trailers (power only)", 43.1], ["Tractors and trailers", 30.3], ["Box or straight trucks only", 14.6], ["Other or none listed", 12.0]],
+      "source": "FMCSA Company Census (az4n-8mr2) equipment counts for 16,943 carriers with an Amazon-shipper inspection since 2025-01-01."
+    },
+    "weight": {
+      "caption": "Vehicle weight class on Amazon-shipper inspections vs all other inspections",
+      "cols": ["Gross combination weight", "Amazon-shipper inspections", "All other inspections, 2025+"],
+      "bar": 1,
+      "pct": true,
+      "rows": [["Over 54,000 lb (tractor-trailer)", 87.7, 73.4], ["33,001-54,000 lb", 2.5, 8.7], ["19,501-26,000 lb (box truck)", 7.4, 9.0], ["14,001-19,500 lb (step van)", 0.7, 2.4], ["10,001-14,000 lb (large van)", 0.1, 1.1], ["10,000 lb or less", 0.0, 0.1]],
+      "source": "FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+    },
+    "staying": {
+      "caption": "Share of carriers caught with Amazon freight again in the next six months, by how recently they were last seen with it",
+      "cols": ["Last Amazon-shipper inspection before 2026-03-22", "Again carrying Amazon freight by 2026-09-22"],
+      "bar": 1,
+      "pct": true,
+      "rows": [["0-3 months before", 64.5], ["3-9 months", 39.4], ["9-15 months", 23.9], ["15-21 months", 21.4], ["21-27 months", 19.0], ["27-30 months", 15.2]],
+      "source": "FMCSA Vehicle Inspection File (fx4q-ay7w). Only carriers that were inspected at all between 2026-03-22 and 2026-09-22."
+    }
+  },
+  "headline": [
+    ["Inspections listing Amazon as shipper", 101444, "count", "2023-09-24 to 2026-09-22"],
+    ["Distinct carriers (USDOT numbers) with an Amazon-shipper inspection", 22866, "count", "2023-09-24 to 2026-09-22"],
+    ["Distinct carriers with an Amazon-shipper inspection", 16978, "count", "2025-01-01 to 2026-09-22"],
+    ["Carriers inspected in the window that had an Amazon-shipper inspection", 7932, "count", "2026-03-22 to 2026-09-22"],
+    ["All carriers inspected", 321311, "count", "2026-03-22 to 2026-09-22"],
+    ["Share of inspected carriers with an Amazon-shipper inspection", 2.47, "percent", "2026-03-22 to 2026-09-22"],
+    ["Inspection records in the public file", 8314133, "count", "as of 2026-09-24"],
+    ["Inspection records with a shipper name filled in", 67.0, "percent", "as of 2026-09-24"],
+    ["Distinct spellings of Amazon in the shipper field", 1064, "count", "2023-09-24 to 2026-09-22"]
+  ]
+}

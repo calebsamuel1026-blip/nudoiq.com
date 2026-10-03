@@ -63,6 +63,13 @@
       }catch(e){}
     })();
   </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
   <link rel="stylesheet" href="/assets/doc.css">
   <link rel="stylesheet" href="/assets/guide.css">
   <script type="application/ld+json">
@@ -72,9 +79,11 @@
   "headline": "Amazon Relay Insurance Requirements",
   "description": "Amazon Relay insurance guide: required coverages, minimum limits and why each type matters for your carrier account.",
   "mainEntityOfPage": "https://nudoiq.com/amazon-relay-insurance-requirements/",
+  "url": "https://nudoiq.com/amazon-relay-insurance-requirements/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
   "datePublished": "2026-09-20",
-  "dateModified": "2026-09-20",
+  "dateModified": "2026-10-02",
+  "inLanguage": "en-US",
   "author": {
     "@type": "Organization",
     "name": "NudoIQ",
@@ -82,12 +91,14 @@
   },
   "publisher": {
     "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
     "name": "NudoIQ",
     "logo": {
       "@type": "ImageObject",
       "url": "https://nudoiq.com/brand/mark/icon128.png"
     }
-  }
+  },
+  "abstract": "Amazon Relay requires $1,000,000 auto liability per occurrence, $100,000 cargo, and general liability of $1,000,000 per occurrence and $2,000,000 aggregate. Semi operators need $50,000 trailer interchange. Carriers with W-2 employees need workers' compensation in each state and $100,000 employer's liability. A lapse blocks booking until coverage is reinstated."
 }
   </script>
   <script type="application/ld+json">
@@ -142,7 +153,7 @@
       "name": "What if I fall short on one limit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Contact your broker and upgrade that coverage before applying. Amazon will not approve your account without all four coverages at the stated minimums."
+        "text": "Contact your broker and upgrade that coverage before applying. Amazon requires each coverage that applies to you at the stated minimums (workers' compensation and employer's liability apply if you have W-2 employees)."
       }
     },
     {
@@ -172,12 +183,53 @@
   ]
 }
   </script>
-  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
-       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
-  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
-    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
-      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/brand/mark/icon128.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://nudoiq.com/#software",
+      "name": "NudoIQ",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Browser Extension",
+      "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
+      "url": "https://nudoiq.com/",
+      "downloadUrl": "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+      "offers": {
+        "@type": "Offer",
+        "price": "49.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nudoiq.com/#pricing",
+        "description": "7-day free trial, no card needed to start. $49.99 per month after the trial. Cancel anytime.",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "49.99",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "billingDuration": "P1M"
+        }
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -197,61 +249,62 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay Insurance Requirements</span></nav>
     <h1 class="page-title">Amazon Relay Insurance Requirements</h1>
     <p class="page-subtitle">Amazon Relay requires four types of commercial insurance with specific minimum limits. Here's what each coverage is, what Amazon requires, and how to confirm you have enough protection.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-02">October 2, 2026</time></p>
   </div></div>
 
   <div class="container">
     <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>Amazon Relay requires $1,000,000 auto liability per occurrence, $100,000 cargo, and general liability of $1,000,000 per occurrence and $2,000,000 aggregate. Semi operators need $50,000 trailer interchange. Carriers with W-2 employees need workers' compensation in each state and $100,000 employer's liability. A lapse blocks booking until coverage is reinstated.</p></section>
 <h2 id="insurance-is-non-negotiable">Insurance is Non-Negotiable</h2>
-<p>Amazon will not approve your Relay account without proof of insurance. You must provide certificates of insurance (ACORD forms) showing that you meet their minimum limits in all four categories. Your insurance broker or agent can issue these forms—they typically take 1-2 business days to generate.</p>
-<p>Insurance costs vary widely based on your carrier's safety record, years in business, equipment type and location. <strong>Do not assume you have enough coverage just because you have an existing policy.</strong> Many carriers carry bare minimums for state registration, which fall short of Amazon's standards. Review your policies now and upgrade if needed before you apply.</p>
+<p>Amazon will not approve your Relay account without proof of insurance. You must provide certificates of insurance (ACORD forms) showing that you meet their minimum limits in all four categories. Your insurance broker or agent can issue these forms.</p>
+<p>Insurance costs vary widely based on your carrier's safety record, years in business, equipment type and location. <strong>Do not assume you have enough coverage just because you have an existing policy.</strong> Review your policies now and upgrade if needed before you apply.</p>
 <h2 id="required-coverages-and-limits">Required Coverages and Limits</h2>
 <div class="tbl"><table><thead><tr><th>Coverage Type</th><th>Minimum Limit</th><th>Notes</th></tr></thead><tbody><tr><td>Commercial General Liability</td><td>$1,000,000 per occurrence / $2,000,000 aggregate</td><td>Covers bodily injury, property damage, personal injury from your operations. The &quot;aggregate&quot; is your total liability across all incidents in a policy year.</td></tr><tr><td>Auto Liability</td><td>$1,000,000 per occurrence</td><td>Covers vehicle accidents, third-party injury and property damage. Includes $50,000 trailer replacement (trailer interchange) coverage.</td></tr><tr><td>Cargo Insurance</td><td>At least $100,000</td><td>Covers loss or damage to freight in your trailer or truck while in your care. This protects Amazon's goods during transport.</td></tr><tr><td>Workers' Compensation</td><td>Required in every state where you have employees</td><td>Covers employee injury or illness from work. Each state sets its own minimum; Amazon requires compliance with your state(s).</td></tr><tr><td>Employer's Liability</td><td>$100,000 per occurrence</td><td>Part of Workers' Compensation coverage; covers third-party claims related to employee injury.</td></tr></tbody></table></div>
 <h2 id="commercial-general-liability-1-000-000-2-000-000">Commercial General Liability: $1,000,000 / $2,000,000</h2>
 <p>This is your baseline liability protection. It covers bodily injury (someone is hurt because of your operations), property damage (you damage someone's building or equipment), and personal injury (defamation, wrongful eviction, etc.).</p>
-<p><strong>Per Occurrence</strong> means Amazon is covered for up to $1,000,000 on any single incident—a serious accident, a cargo spill, a load that causes property damage.</p>
+<p><strong>Per Occurrence</strong> means Amazon is covered for up to $1,000,000 on any single incident: a serious accident, a cargo spill, a load that causes property damage.</p>
 <p><strong>Aggregate</strong> means across all incidents in a 12-month policy period, your total liability coverage is $2,000,000. Once you hit that cap, you're self-insured for additional claims until your policy renews.</p>
 <p>For a carrier, this is foundational. If you cause a multi-vehicle accident, the other parties' medical bills, vehicle repairs and lost wages can easily exceed $1,000,000. Without this limit, you're liable for everything out of pocket.</p>
 <h2 id="auto-liability-1-000-000-with-50-000-trailer-interchange">Auto Liability: $1,000,000 with $50,000 Trailer Interchange</h2>
 <p>Auto Liability specifically covers vehicle accidents and third-party claims related to your truck or trailer.</p>
-<p>The <strong>$50,000 trailer interchange coverage</strong> is a specific requirement. This covers damage to trailers you're pulling that don't belong to you. If you're hauling a customer's or broker's trailer and you damage it (backing into a dock, overturning on a curve), trailer interchange coverage pays for repairs—up to $50,000 per incident. Amazon wants this protection because some Relay loads involve non-Amazon trailers.</p>
+<p>The <strong>$50,000 trailer interchange coverage</strong> is a specific requirement. This covers damage to trailers you're pulling that don't belong to you. If you're pulling a trailer you don't own and you damage it (backing into a dock, overturning on a curve), trailer interchange coverage pays for repairs up to your policy limit. Amazon requires at least $50,000 for semi operators because the majority of Relay loads are power only: you bring the tractor and pull an Amazon-owned trailer.</p>
 <p>If your current auto policy doesn't explicitly list &quot;$50,000 trailer interchange,&quot; contact your broker and ask them to add it.</p>
 <h2 id="cargo-insurance-at-least-100-000">Cargo Insurance: At Least $100,000</h2>
 <p>Cargo coverage protects Amazon's freight while it's in your truck or trailer. If cargo is damaged, lost, stolen or contaminated during transport, cargo insurance covers it up to your limit.</p>
-<p>$100,000 is Amazon's minimum. This covers most single loads. However, if you're hauling especially high-value freight (electronics, machinery, pharmaceuticals), confirm that a $100,000 limit is sufficient. You can purchase higher limits if needed—$250,000, $500,000 or $1,000,000—at higher premiums.</p>
+<p>$100,000 is Amazon's minimum. This covers most single loads. However, if you're hauling especially high-value freight (electronics, machinery, pharmaceuticals), confirm that a $100,000 limit is sufficient. You can purchase higher limits if needed ($250,000, $500,000 or $1,000,000) at higher premiums.</p>
 <p>Cargo claims can happen:</p>
 <ul><li>Load shifts during transit and is damaged.</li><li>Trailer is involved in an accident; goods are destroyed.</li><li>Cargo is stolen from an unsecured truck.</li><li>Refrigerated goods spoil if your reefer unit fails.</li></ul>
 <p>Without cargo coverage, you pay the shipper (Amazon, in most Relay cases) out of pocket.</p>
 <h2 id="workers-compensation-and-employer-s-liability">Workers' Compensation and Employer's Liability</h2>
-<p>If you have employees—drivers, dispatchers, mechanics—you are required by law to carry Workers' Compensation insurance in every state where they work.</p>
+<p>If you have employees (drivers, dispatchers, mechanics) you are required by law to carry Workers' Compensation insurance in every state where they work.</p>
 <p><strong>Workers' Compensation</strong> covers medical costs, lost wages and disability benefits if an employee is injured or becomes ill from work. The employee receives benefits without having to sue you; in exchange, they give up the right to sue for negligence.</p>
-<p><strong>Employer's Liability</strong> ($100,000 minimum per Amazon) covers third-party claims related to employee injury—for example, if an employee is injured on the job and sues a vendor or property owner, and that third party tries to recover damages from you as the employer.</p>
-<p>Workers' Compensation is required by law in all 50 states (with rare exceptions for sole proprietors). Amazon simply requires that you comply with your state's rules and carry the minimum coverage. Costs vary by state and industry classification. A trucking operation in California, for example, pays more than one in South Dakota.</p>
+<p><strong>Employer's Liability</strong> ($100,000 minimum per Amazon) covers third-party claims related to employee injury: for example, if an employee is injured on the job and sues a vendor or property owner, and that third party tries to recover damages from you as the employer.</p>
+<p>Workers' compensation rules are set by each state. Amazon requires coverage in every state where you have employees, plus $100,000 employer's liability. Costs vary by state and industry classification.</p>
 <p>If you're a sole proprietor with no employees, you don't need Workers' Compensation. But many states allow you to purchase it voluntarily if you want personal coverage. Check with your broker.</p>
-<h2 id="beneficial-owner-and-public-adjuster-information">Beneficial Owner and Public Adjuster Information</h2>
-<p>On your ACORD (certificate of insurance) form, Amazon is typically listed as an &quot;Additional Insured&quot;—meaning the policy covers Amazon if they're sued as a result of an incident with your freight.</p>
-<p>Your insurance broker will know how to list Amazon as an additional insured. It's a standard request and takes no extra time.</p>
+<h2 id="what-goes-on-your-certificate">What Goes on Your Certificate</h2>
+<p>Your certificate of insurance (ACORD form) needs to show every required coverage and limit. Ask your broker to match the certificate to the requirements listed in your Relay account, and check relay.amazon.com if you're unsure how Amazon wants it worded.</p>
 <h2 id="how-to-get-the-right-insurance">How to Get the Right Insurance</h2>
 <p><strong>Step 1: Gather Your Current Policies</strong> Pull out your auto and liability policies and review the limits. Write down what you currently carry.</p>
 <p><strong>Step 2: Compare to Amazon's Minimums</strong> Check if your current coverage meets Amazon's thresholds:</p>
 <ul><li>General Liability: $1M/$2M?</li><li>Auto Liability: $1M with $50K trailer interchange?</li><li>Cargo: $100K minimum?</li><li>Workers' Comp: Compliant with your state?</li></ul>
 <p><strong>Step 3: Contact Your Broker</strong> If you're short on any limit, call your insurance broker or agent. Tell them you need to meet Amazon Relay's minimums. They'll:</p>
-<ul><li>Quote higher limits if needed (often a modest cost increase).</li><li>Add trailer interchange coverage to your auto policy.</li><li>Issue an ACORD certificate listing the correct limits.</li></ul>
+<ul><li>Quote higher limits if needed.</li><li>Add trailer interchange coverage to your auto policy.</li><li>Issue an ACORD certificate listing the correct limits.</li></ul>
 <p><strong>Step 4: Upload to Your Relay Account</strong> Once you have certificates showing all four coverages at Amazon's minimums, upload them during your <a href="/amazon-relay-requirements/">Amazon Relay sign-up</a>.</p>
 <h2 id="insurance-cost-considerations">Insurance Cost Considerations</h2>
 <p>Insurance premiums depend on several factors:</p>
 <ul><li>Your carrier's safety record and claims history.</li><li>Years in business and driver experience.</li><li>Equipment type (box truck vs. tractor-trailer).</li><li>Geographic territory and annual mileage.</li><li>Your state's workers' compensation classification.</li></ul>
 <p><strong>There is no standard &quot;Amazon Relay insurance&quot; price.</strong> Two carriers with the same trucks can pay vastly different premiums based on their track record. A new carrier with no history will pay more than an established carrier with a clean record.</p>
-<p><strong>Do not call Amazon for premium quotes or rate recommendations.</strong> Contact a commercial truck insurance broker who works with owner-operators. Many specialize in this market and can find competitive rates. Allow several weeks to get quotes and bind a policy.</p>
+<p><strong>Do not call Amazon for premium quotes or rate recommendations.</strong> Contact a commercial truck insurance broker who works with owner-operators. Many specialize in this market and can find competitive rates.</p>
 <h2 id="what-happens-after-you-re-approved">What Happens After You're Approved</h2>
-<p>Once Amazon approves your account based on your insurance, your policy is in effect continuously. If your policy renews, lapses or changes, notify Amazon immediately. A lapse in coverage or a drop below the required limits can affect your Relay account—confirm the impact with Amazon Relay support.</p>
-<p>Many carriers use <a href="/amazon-relay-auto-refresh/">Amazon Relay auto-refresh</a> tools and <a href="/amazon-relay-auto-booker/">auto-booking extensions</a> to streamline load booking. If you want to add lane rate history, net profit analysis and <a href="/amazon-relay-scorecard/">scorecard dispute assistance</a>, NudoIQ integrates into the Relay board and costs <strong>$49.99 per month</strong>. Start with a <strong>7-day free trial</strong>, cancel anytime. <strong>5.0 rating</strong> on the Chrome Web Store. Used by 300+ carriers.</p>
+<p>Once you're approved, keep coverage current. <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements" target="_blank" rel="noopener">Amazon says</a> that if your coverage lapses, your company can't book or haul Relay loads until it's reinstated. Renew two to three weeks before your policy expires so RMIS can update your records, and add the updated details in the Insurance tab of your Relay account at least 5 days before the policy expires.</p>
+<p>Many carriers use <a href="/amazon-relay-auto-refresh/">Amazon Relay auto-refresh</a> tools and <a href="/amazon-relay-auto-booker/">auto-booking extensions</a> to streamline load booking. If you want to add lane rate history, net profit analysis and <a href="/amazon-relay-scorecard/">scorecard dispute assistance</a>, NudoIQ integrates into the Relay board and costs <strong>$49.99 per month</strong>. Start with a <strong>7-day free trial</strong>, no card needed to start, and cancel anytime. <strong>5.0 rating</strong> on the Chrome Web Store. Used by 300+ carriers.</p>
     </article>
 
     <section class="faq" aria-labelledby="faq-h">
       <h2 id="faq-h">Frequently asked questions</h2>
       <details><summary>How much does Amazon Relay insurance cost?</summary><div class="a"><p>It varies widely based on your safety record, years in business, equipment and location. Request quotes from commercial trucking insurance brokers who work with owner-operators.</p></div></details>
       <details><summary>Can I use my personal auto insurance for Amazon Relay?</summary><div class="a"><p>No. Personal auto policies exclude commercial freight work. You must use commercial auto insurance and commercial liability coverage.</p></div></details>
-      <details><summary>What if I fall short on one limit?</summary><div class="a"><p>Contact your broker and upgrade that coverage before applying. Amazon will not approve your account without all four coverages at the stated minimums.</p></div></details>
+      <details><summary>What if I fall short on one limit?</summary><div class="a"><p>Contact your broker and upgrade that coverage before applying. Amazon requires each coverage that applies to you at the stated minimums (workers' compensation and employer's liability apply if you have W-2 employees).</p></div></details>
       <details><summary>Do I need cargo insurance for every load?</summary><div class="a"><p>If you carry Amazon Relay loads, yes. Your cargo policy should cover all freight you haul on Relay. The $100,000 minimum is usually sufficient; check your policy to confirm.</p></div></details>
       <details><summary>What is &quot;trailer interchange&quot; and why does Amazon require it?</summary><div class="a"><p>Trailer interchange covers damage to trailers you pull that don't belong to you. If you hit a dock or overturn, interchange coverage pays for repairs instead of you.</p></div></details>
       <details><summary>Can I increase my cargo limit above $100,000?</summary><div class="a"><p>Yes. If you frequently haul high-value freight, ask your broker to increase your cargo limit to $250,000, $500,000 or higher.</p></div></details>
@@ -268,7 +321,7 @@
         <a href="/amazon-relay-box-truck/">Amazon Relay for Box Trucks</a>
         <a href="/how-much-does-amazon-relay-pay/">How Much Does Amazon Relay Pay?</a>
         <a href="/is-amazon-relay-worth-it/">Is Amazon Relay Worth It?</a>
-        <a href="/amazon-relay-scorecard/">Amazon Relay Scorecard: What It Measures and How to Dispute Violations</a>
+        <a href="/amazon-relay-scorecard/">Amazon Relay scorecard: how the performance score works and how to dispute it</a>
         <a href="/amazon-relay-auto-refresh/">Amazon Relay Auto Refresh: Why It Matters and How It Works</a>
         <a href="/amazon-relay-auto-booker/">Amazon Relay Auto Booker: How Automatic Booking Works</a>
       </div>

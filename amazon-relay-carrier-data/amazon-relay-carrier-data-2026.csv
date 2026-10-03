@@ -1,0 +1,63 @@
+section,label,metric,value,unit,window,source
+headline,Inspections listing Amazon as shipper,value,101444,count,2023-09-24 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w)
+headline,Distinct carriers (USDOT numbers) with an Amazon-shipper inspection,value,22866,count,2023-09-24 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w)
+headline,Distinct carriers with an Amazon-shipper inspection,value,16978,count,2025-01-01 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w)
+headline,Carriers inspected in the window that had an Amazon-shipper inspection,value,7932,count,2026-03-22 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w)
+headline,All carriers inspected,value,321311,count,2026-03-22 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w)
+headline,Share of inspected carriers with an Amazon-shipper inspection,value,2.47,percent,2026-03-22 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w)
+headline,Inspection records in the public file,value,8314133,count,as of 2026-09-24,FMCSA Vehicle Inspection File (fx4q-ay7w)
+headline,Inspection records with a shipper name filled in,value,67,percent,as of 2026-09-24,FMCSA Vehicle Inspection File (fx4q-ay7w)
+headline,Distinct spellings of Amazon in the shipper field,value,1064,count,2023-09-24 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w)
+by-year,2023 (Sep 24 to Dec 31),Inspections,7320,count,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), inspections where the shipper name contains AMAZON."
+by-year,2023 (Sep 24 to Dec 31),Distinct carriers,3681,count,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), inspections where the shipper name contains AMAZON."
+by-year,2024,Inspections,29036,count,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), inspections where the shipper name contains AMAZON."
+by-year,2024,Distinct carriers,9652,count,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), inspections where the shipper name contains AMAZON."
+by-year,2025,Inspections,35753,count,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), inspections where the shipper name contains AMAZON."
+by-year,2025,Distinct carriers,11322,count,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), inspections where the shipper name contains AMAZON."
+by-year,2026 (Jan 1 to Sep 22),Inspections,29335,count,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), inspections where the shipper name contains AMAZON."
+by-year,2026 (Jan 1 to Sep 22),Distinct carriers,10117,count,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), inspections where the shipper name contains AMAZON."
+new-carriers,Last ~30 days (from 2026-08-25),First-time carriers,558,count,2023-09-24 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w): carriers whose first Amazon-shipper inspection falls in the window.
+new-carriers,Last ~90 days (from 2026-07-01),First-time carriers,1584,count,2023-09-24 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w): carriers whose first Amazon-shipper inspection falls in the window.
+new-carriers,Last ~180 days (from 2026-04-01),First-time carriers,3167,count,2023-09-24 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w): carriers whose first Amazon-shipper inspection falls in the window.
+states,California,Carriers,3011,count,2023-09-24 to 2026-09-22,"Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+states,Ohio,Carriers,1689,count,2023-09-24 to 2026-09-22,"Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+states,Illinois,Carriers,1589,count,2023-09-24 to 2026-09-22,"Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+states,Pennsylvania,Carriers,1155,count,2023-09-24 to 2026-09-22,"Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+states,Texas,Carriers,972,count,2023-09-24 to 2026-09-22,"Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+states,Florida,Carriers,903,count,2023-09-24 to 2026-09-22,"Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+states,Minnesota,Carriers,709,count,2023-09-24 to 2026-09-22,"Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+states,Washington,Carriers,653,count,2023-09-24 to 2026-09-22,"Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+states,New Jersey,Carriers,568,count,2023-09-24 to 2026-09-22,"Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+states,North Carolina,Carriers,449,count,2023-09-24 to 2026-09-22,"Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+states,Georgia,Carriers,404,count,2023-09-24 to 2026-09-22,"Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+states,Michigan,Carriers,358,count,2023-09-24 to 2026-09-22,"Carrier physical state from the FMCSA Company Census (az4n-8mr2), joined on USDOT number."
+fleet,1-2,Carriers,9941,count,2023-09-24 to 2026-09-22,"FMCSA Company Census (az4n-8mr2) power units. This band query totals 19,355 carriers; read it as the shape of the distribution."
+fleet,3-5,Carriers,3600,count,2023-09-24 to 2026-09-22,"FMCSA Company Census (az4n-8mr2) power units. This band query totals 19,355 carriers; read it as the shape of the distribution."
+fleet,6-10,Carriers,1933,count,2023-09-24 to 2026-09-22,"FMCSA Company Census (az4n-8mr2) power units. This band query totals 19,355 carriers; read it as the shape of the distribution."
+fleet,11-20,Carriers,1276,count,2023-09-24 to 2026-09-22,"FMCSA Company Census (az4n-8mr2) power units. This band query totals 19,355 carriers; read it as the shape of the distribution."
+fleet,21-50,Carriers,1333,count,2023-09-24 to 2026-09-22,"FMCSA Company Census (az4n-8mr2) power units. This band query totals 19,355 carriers; read it as the shape of the distribution."
+fleet,51-100,Carriers,641,count,2023-09-24 to 2026-09-22,"FMCSA Company Census (az4n-8mr2) power units. This band query totals 19,355 carriers; read it as the shape of the distribution."
+fleet,"101-1,000",Carriers,559,count,2023-09-24 to 2026-09-22,"FMCSA Company Census (az4n-8mr2) power units. This band query totals 19,355 carriers; read it as the shape of the distribution."
+fleet,"1,000+",Carriers,72,count,2023-09-24 to 2026-09-22,"FMCSA Company Census (az4n-8mr2) power units. This band query totals 19,355 carriers; read it as the shape of the distribution."
+equipment,"Tractors, no trailers (power only)",Share of carriers,43.1,percent,2023-09-24 to 2026-09-22,"FMCSA Company Census (az4n-8mr2) equipment counts for 16,943 carriers with an Amazon-shipper inspection since 2025-01-01."
+equipment,Tractors and trailers,Share of carriers,30.3,percent,2023-09-24 to 2026-09-22,"FMCSA Company Census (az4n-8mr2) equipment counts for 16,943 carriers with an Amazon-shipper inspection since 2025-01-01."
+equipment,Box or straight trucks only,Share of carriers,14.6,percent,2023-09-24 to 2026-09-22,"FMCSA Company Census (az4n-8mr2) equipment counts for 16,943 carriers with an Amazon-shipper inspection since 2025-01-01."
+equipment,Other or none listed,Share of carriers,12,percent,2023-09-24 to 2026-09-22,"FMCSA Company Census (az4n-8mr2) equipment counts for 16,943 carriers with an Amazon-shipper inspection since 2025-01-01."
+weight,"Over 54,000 lb (tractor-trailer)",Amazon-shipper inspections,87.7,percent,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+weight,"Over 54,000 lb (tractor-trailer)","All other inspections, 2025+",73.4,percent,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+weight,"33,001-54,000 lb",Amazon-shipper inspections,2.5,percent,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+weight,"33,001-54,000 lb","All other inspections, 2025+",8.7,percent,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+weight,"19,501-26,000 lb (box truck)",Amazon-shipper inspections,7.4,percent,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+weight,"19,501-26,000 lb (box truck)","All other inspections, 2025+",9,percent,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+weight,"14,001-19,500 lb (step van)",Amazon-shipper inspections,0.7,percent,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+weight,"14,001-19,500 lb (step van)","All other inspections, 2025+",2.4,percent,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+weight,"10,001-14,000 lb (large van)",Amazon-shipper inspections,0.1,percent,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+weight,"10,001-14,000 lb (large van)","All other inspections, 2025+",1.1,percent,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+weight,"10,000 lb or less",Amazon-shipper inspections,0,percent,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+weight,"10,000 lb or less","All other inspections, 2025+",0.1,percent,2023-09-24 to 2026-09-22,"FMCSA Vehicle Inspection File (fx4q-ay7w), gross_comb_veh_wt, populated on 100,499 of 101,444 Amazon-shipper inspections."
+staying,0-3 months before,Again carrying Amazon freight by 2026-09-22,64.5,percent,2023-09-24 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w). Only carriers that were inspected at all between 2026-03-22 and 2026-09-22.
+staying,3-9 months,Again carrying Amazon freight by 2026-09-22,39.4,percent,2023-09-24 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w). Only carriers that were inspected at all between 2026-03-22 and 2026-09-22.
+staying,9-15 months,Again carrying Amazon freight by 2026-09-22,23.9,percent,2023-09-24 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w). Only carriers that were inspected at all between 2026-03-22 and 2026-09-22.
+staying,15-21 months,Again carrying Amazon freight by 2026-09-22,21.4,percent,2023-09-24 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w). Only carriers that were inspected at all between 2026-03-22 and 2026-09-22.
+staying,21-27 months,Again carrying Amazon freight by 2026-09-22,19,percent,2023-09-24 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w). Only carriers that were inspected at all between 2026-03-22 and 2026-09-22.
+staying,27-30 months,Again carrying Amazon freight by 2026-09-22,15.2,percent,2023-09-24 to 2026-09-22,FMCSA Vehicle Inspection File (fx4q-ay7w). Only carriers that were inspected at all between 2026-03-22 and 2026-09-22.

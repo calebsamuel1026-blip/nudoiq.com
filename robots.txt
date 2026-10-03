@@ -1,4 +1,4 @@
-# https://nudoiq.com/ — robots.txt
+# https://nudoiq.com/ robots.txt
 User-agent: *
 Allow: /
 
@@ -7,6 +7,12 @@ User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
 Allow: /
 
 # SEO crawlers (allowed so nudoiq.com can be audited in Semrush / Ahrefs)
@@ -19,20 +25,59 @@ Allow: /
 User-agent: AhrefsBot
 Allow: /
 
-# AI answer engines — allowed for brand visibility in AI search
+# AI answer engines and AI search: explicitly allowed for visibility in AI answers
+# OpenAI
 User-agent: GPTBot
 Allow: /
 
 User-agent: OAI-SearchBot
 Allow: /
 
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: ClaudeBot
+User-agent: Perplexity-User
+Allow: /
+
+# Google (Gemini / AI features) and Apple (Apple Intelligence)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Copilot uses Bingbot (above). Others:
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://nudoiq.com/sitemap.xml
 
-# Plain-language site summary for AI crawlers
-# https://nudoiq.com/llms.txt
+# Plain-language site summary for AI crawlers:
+#   https://nudoiq.com/llms.txt
+#   https://nudoiq.com/llms-full.txt

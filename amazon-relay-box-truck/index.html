@@ -63,6 +63,13 @@
       }catch(e){}
     })();
   </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
   <link rel="stylesheet" href="/assets/doc.css">
   <link rel="stylesheet" href="/assets/guide.css">
   <script type="application/ld+json">
@@ -72,9 +79,11 @@
   "headline": "Amazon Relay for Box Trucks",
   "description": "Run Amazon Relay with a 16 ft or 26 ft box truck with tuck-under liftgate. Cargo vans don't work. Find box truck loads and learn how rates vary.",
   "mainEntityOfPage": "https://nudoiq.com/amazon-relay-box-truck/",
+  "url": "https://nudoiq.com/amazon-relay-box-truck/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
   "datePublished": "2026-09-20",
-  "dateModified": "2026-09-20",
+  "dateModified": "2026-10-02",
+  "inLanguage": "en-US",
   "author": {
     "@type": "Organization",
     "name": "NudoIQ",
@@ -82,12 +91,14 @@
   },
   "publisher": {
     "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
     "name": "NudoIQ",
     "logo": {
       "@type": "ImageObject",
       "url": "https://nudoiq.com/brand/mark/icon128.png"
     }
-  }
+  },
+  "abstract": "Amazon Relay accepts 16 ft and 26 ft dock-height box trucks with a working tuck-under liftgate. Cargo vans are not supported. Box truck carriers still need a DOT number active at least 180 days, a valid MC number and Relay's insurance minimums, and can book one-way loads, spot loads and box truck contracts."
 }
   </script>
   <script type="application/ld+json">
@@ -142,7 +153,7 @@
       "name": "What if my box truck doesn't have a liftgate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You cannot book Relay loads without a liftgate. Amazon's freight is palletized and requires a lift to load/unload efficiently. Install one before applying, or it will limit you to hand-unload carriers (not Relay)."
+        "text": "Amazon requires a working tuck-under liftgate on 16 ft and 26 ft box trucks. Without one, the truck doesn't meet Relay's equipment rules, so install one before you apply."
       }
     },
     {
@@ -150,7 +161,7 @@
       "name": "What's the typical pay for a box truck load?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It varies by lane, season and time. You must calculate net profit on each load individually—posted rate minus your fuel, maintenance and deadhead costs—to know if it's worth accepting."
+        "text": "It varies by lane, season and time. You must calculate net profit on each load individually (posted rate minus your fuel, maintenance and deadhead costs) to know if it's worth accepting."
       }
     },
     {
@@ -172,12 +183,53 @@
   ]
 }
   </script>
-  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
-       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
-  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
-    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
-      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/brand/mark/icon128.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://nudoiq.com/#software",
+      "name": "NudoIQ",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Browser Extension",
+      "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
+      "url": "https://nudoiq.com/",
+      "downloadUrl": "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+      "offers": {
+        "@type": "Offer",
+        "price": "49.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nudoiq.com/#pricing",
+        "description": "7-day free trial, no card needed to start. $49.99 per month after the trial. Cancel anytime.",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "49.99",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "billingDuration": "P1M"
+        }
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -197,58 +249,58 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay for Box Trucks</span></nav>
     <h1 class="page-title">Amazon Relay for Box Trucks</h1>
     <p class="page-subtitle">Yes, you can run Amazon Relay with a box truck. Amazon accepts 16 ft and 26 ft box trucks with a working tuck-under liftgate. Cargo vans are not supported. Here's how to get started and what to expect.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-02">October 2, 2026</time></p>
   </div></div>
 
   <div class="container">
     <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>Amazon Relay accepts 16 ft and 26 ft dock-height box trucks with a working tuck-under liftgate. Cargo vans are not supported. Box truck carriers still need a DOT number active at least 180 days, a valid MC number and Relay's insurance minimums, and can book one-way loads, spot loads and box truck contracts.</p></section>
 <h2 id="box-truck-equipment-specs">Box Truck Equipment Specs</h2>
 <p>Amazon's box truck requirements are precise:</p>
-<ul><li><strong>16 ft box truck</strong> with a working tuck-under liftgate</li><li><strong>26 ft box truck</strong> with a working tuck-under liftgate</li><li>The liftgate is required—Amazon will not accept a box truck without one</li></ul>
-<p><strong>Cargo vans are not supported.</strong> This includes sprinter vans, Ford Transit vans, and any vehicle registered as a van. Even if you think a cargo van could handle a load, Amazon's system will not allow you to book on Relay with one.</p>
-<p>The liftgate is mandatory because Amazon's loads are palletized freight. The liftgate lets you load and unload pallets quickly at a dock or ground level without manual labor. Without a liftgate, you'd have to hand-unload freight, which is time-consuming and violates Amazon's loading standards.</p>
+<ul><li><strong>16 ft box truck</strong> with a working tuck-under liftgate</li><li><strong>26 ft box truck</strong> with a working tuck-under liftgate</li><li>The liftgate is required: Amazon will not accept a box truck without one</li></ul>
+<p><strong>Cargo vans are not supported.</strong> That includes sprinter vans and Ford Transit vans. Amazon says cargo vans can't be used on Relay.</p>
+<p>Amazon lists these box trucks as dock height (straight truck) with a working tuck-under liftgate. It doesn't explain the reason on its requirements page, so treat the liftgate as a hard requirement and check relay.amazon.com for current specs.</p>
 <h2 id="box-truck-load-availability">Box Truck Load Availability</h2>
-<p>Box truck loads post regularly on the Amazon Relay board. You'll see:</p>
-<ul><li><strong>Local / Regional Runs</strong>: Short-haul deliveries to nearby distribution centers or retail sites, picked up early morning and dropped same day.</li><li><strong>Cross-Dock Work</strong>: Pick up from one Amazon facility and drop at another. These are frequent and typically predictable in timing.</li><li><strong>Third-Party LTL</strong>: Less-than-truckload freight that Amazon brokers or Amazon-vetted shippers post. These often come from small vendors or retailers using Amazon's logistics network.</li><li><strong>Seasonal Spikes</strong>: During peak seasons (Q4, Prime Day), box truck loads increase significantly.</li></ul>
-<p>Box truck loads do not get the premium freight that dedicated reefers or large trailers get. The best loads (high pay, convenient timing) usually go to tractor-trailer carriers. Box truck loads tend to be shorter haul, more frequent turnarounds, and lower per-mile rates.</p>
-<p>But box truck carriers have advantages: lower fuel costs per mile, easier parking and dock access at smaller facilities, and lower insurance costs. For an owner-operator with a box truck, Relay offers steady work without constant hunting for loads.</p>
+<p>Amazon describes several kinds of box truck work:</p>
+<ul><li><strong>One-Way Loads</strong>: Amazon says one-way loads need a box truck or your own trailer.</li><li><strong>Spot Loads</strong>: Last-minute loads you book right away on the board.</li><li><strong>Contracts</strong>: Box truck contracts include 8-hour and 13-hour solo contracts with round trips.</li><li><strong>Post A Truck</strong>: Amazon lists box trucks as eligible, so you can post availability with a minimum rate per mile.</li><li><strong>Peak Seasons</strong>: Amazon says load volume nearly doubles during Prime Day and the holidays.</li></ul>
+<p>Amazon doesn't publish how box truck volume or pay compares with tractor-trailer freight. For more on getting loads, see our guide to <a href="/amazon-relay-box-truck-loads/">Amazon Relay box truck loads</a>.</p>
 <h2 id="finding-box-truck-loads-on-the-board">Finding Box Truck Loads on the Board</h2>
-<p>When you log into the <a href="/amazon-relay-load-board/">Amazon Relay load board</a>, you'll filter by equipment type. Set your filter to &quot;26 ft Box Truck&quot; or &quot;16 ft Box Truck&quot; (whichever you own), and the board shows only loads that your equipment can haul.</p>
+<p>When you log into the <a href="/amazon-relay-load-board/">Amazon Relay load board</a>, you'll filter by equipment type. Set the equipment type filter to the box truck size you run, and the board shows only loads that your equipment can haul.</p>
 <p>Good loads disappear in seconds. This is why many box truck carriers use <a href="/amazon-relay-auto-refresh/">auto-refresh tools</a> or <a href="/best-amazon-relay-extensions/">auto-booking extensions</a>:</p>
 <ul><li><strong>Refresher Extension</strong>: Automatically reload the board every 1-5 seconds so you see new loads instantly.</li><li><strong>Alert Mode</strong>: Get pinged on your phone when a load matching your filters appears.</li><li><strong>Auto-Book Mode</strong>: Automatically book a load if it meets your price and lane rules.</li></ul>
-<p>Even with an extension, competition is fierce. A good rate at a convenient time can book within seconds. This is why automation tools are nearly essential for box truck carriers who want to maximize load volume.</p>
+<p>Even with an extension, competition is fierce. A good rate at a convenient time can book within seconds. That's why many box truck carriers add a refresher or alerts.</p>
 <h2 id="rate-variability-for-box-trucks">Rate Variability for Box Trucks</h2>
-<p>Box truck rates on Amazon Relay vary based on several factors:</p>
-<p><strong>Season</strong> Peak seasons (Q4 holiday, Prime Day in summer) offer higher rates because demand is high and Amazon has more freight. Off-season rates tend to soften as demand drops.</p>
-<p><strong>Time of Day</strong> Early morning loads often pay better than afternoon or evening. Amazon plans most of its distribution work around early picks and mid-morning drops, so early slots fill first and command premium rates.</p>
-<p><strong>Origin and Destination</strong> Local, high-volume lanes pay better per load but lower per mile. Cross-country or remote drops (rural areas, small towns) pay more per mile but are less frequent. Box truck loads rarely go cross-country; most are regional.</p>
-<p><strong>Day of Week</strong> Monday-Wednesday usually see higher volumes and better rates than Thursday-Friday. Weekends (Saturday, Sunday) rarely have box truck loads.</p>
-<p><strong>Your Own Booking History</strong> If you accept most loads and have a high tender-acceptance rate, Amazon's algorithm may show you better-priced loads. If you decline frequently, Amazon deprioritizes your recommendations, and you see older, less attractive freight.</p>
-<p><strong>Volume on the Board That Day</strong> When many box trucks are online, rates soften because there's competition. When few are online (early morning, late evening, bad weather), rates can spike.</p>
+<p><a href="https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-rates" target="_blank" rel="noopener">Amazon says</a> a Relay rate shows a base rate, a fuel surcharge that tracks fuel prices, and tolls. What moves it:</p>
+<p><strong>Distance</strong> Including deadhead and trip direction.</p>
+<p><strong>Equipment Type and Availability</strong> What's available in the market for your kind of truck.</p>
+<p><strong>Load Characteristics</strong> For example, live loads.</p>
+<p><strong>Seasonal Demand</strong> Amazon says load volume nearly doubles during peak periods like Prime Day and the holidays.</p>
+<p><strong>Regional Market Conditions</strong> What's happening in the area you pick up from and deliver to.</p>
 <p>Amazon Relay does not publish &quot;typical&quot; box truck rates because they vary so much. Check the board yourself during your target hours and see what's posting. A rate that's good one day might be soft the next.</p>
 <h2 id="the-economics-of-box-truck-work">The Economics of Box Truck Work</h2>
 <p>To evaluate whether a Relay load makes sense, you need to calculate net profit:</p>
 <p><strong>Gross Rate</strong> (what Amazon pays) minus <strong>Fuel</strong>, <strong>Maintenance</strong>, <strong>Deadhead to Pickup</strong> = <strong>Net Profit</strong>.</p>
-<p>On every load, calculate the posted rate minus your estimated fuel, maintenance and deadhead costs. The remainder is your profit for that run. Many carriers set a <strong>profit floor</strong>—the minimum net profit below which they won't take a load. This protects you from unprofitable work.</p>
+<p>On every load, calculate the posted rate minus your estimated fuel, maintenance and deadhead costs. The remainder is your profit for that run. Many carriers set a <strong>profit floor</strong>: the minimum net profit below which they won't take a load. This protects you from unprofitable work.</p>
 <p><a href="/amazon-relay-auto-booker/">Amazon Relay auto-booker</a> extensions like NudoIQ let you set a profit floor automatically. They calculate net profit on every load and only book if it meets your minimum. This removes the guesswork and prevents low-margin mistakes.</p>
 <h2 id="advantages-of-running-a-box-truck-on-relay">Advantages of Running a Box Truck on Relay</h2>
-<ul><li><strong>No Haggling</strong>: Rates are set by Amazon. You accept or decline; there's no negotiation.</li><li><strong>Steady Work</strong>: Box truck loads post daily. You're rarely scrambling for freight.</li><li><strong>Weekly Pay</strong>: Amazon pays every Friday for loads completed Sunday-Saturday. Reliable cash flow.</li><li><strong>Predictable Hours</strong>: Box truck loads are typically day-length runs, so you can plan your week.</li><li><strong>Lower Operating Cost</strong>: Fuel, insurance and maintenance are cheaper than a tractor.</li></ul>
+<ul><li><strong>Listed Prices</strong>: Spot loads show an all-in price you can book as listed. On select urgent loads, top-performing carriers can name a price through Relay Assistant, and Post A Truck lets you set a minimum rate per mile.</li><li><strong>Several Ways to Get Work</strong>: The board, contracts and Post A Truck all work for box trucks.</li><li><strong>Weekly Pay</strong>: Loads completed by 11:59 pm Saturday are paid the following Friday. Invoices are automatic.</li><li><strong>Set Shift Lengths</strong>: Box truck contracts come in 8-hour and 13-hour solo versions, so you can plan your week.</li></ul>
 <h2 id="disadvantages-and-challenges">Disadvantages and Challenges</h2>
-<ul><li><strong>Lower Per-Mile Rates</strong>: Box truck loads pay less per mile than reefers or dedicated flatbeds because the freight is lower-value or shorter-haul.</li><li><strong>Board Competition</strong>: You're competing with other box truck carriers for the same loads. Speed and automation matter.</li><li><strong>Limited Deadhead</strong>: If you're far from the pickup, the deadhead eats into profit. Box truck loads tend to be local, so deadhead is usually manageable.</li><li><strong>Scorecard Pressure</strong>: Amazon's performance scorecard can be harsh. One missed pickup or late drop can tank your score and reduce load access.</li></ul>
+<ul><li><strong>Rate Swings</strong>: Rates move with distance, season, region and load type, so the same lane can pay differently.</li><li><strong>Board Competition</strong>: You're competing with other box truck carriers for the same loads. Speed and automation matter.</li><li><strong>Limited Deadhead</strong>: If you're far from the pickup, the deadhead eats into profit.</li><li><strong>Scorecard Pressure</strong>: Amazon grades on-time, acceptance, app usage and disruption-free, and your score is the lowest of the four. Late loads and cancellations can pull your grade down and limit access to contracts and early loads. See our <a href="/amazon-relay-scorecard/">scorecard guide</a>.</li></ul>
 <h2 id="getting-started-with-a-box-truck-on-relay">Getting Started with a Box Truck on Relay</h2>
-<ol><li><strong>Confirm <a href="/amazon-relay-requirements/">Equipment Requirements</a></strong>: You have a 16 ft or 26 ft box truck with a working tuck-under liftgate.</li><li><strong>Meet <a href="/amazon-relay-requirements/">Amazon's Eligibility Requirements</a></strong>: 180-day DOT authority, valid MC number, acceptable BASIC scores, <a href="/amazon-relay-insurance-requirements/">insurance minimums</a>.</li><li><strong>Sign Up at relay.amazon.com</strong>: Submit your application and insurance certificates.</li><li><strong>Add Your Box Truck to Your Profile</strong>: List the truck's specs, year, capacity and current location.</li><li><strong>Start Browsing the Load Board</strong>: Log in, filter by your equipment type, and refresh to see available loads.</li><li><strong>Consider an <a href="/amazon-relay-auto-refresh/">Auto-Refresh Tool</a></strong>: To keep up with competition, many carriers use an extension to refresh the board automatically and get alerts when new loads post.</li><li><strong>Set Your Profit Floor and Rules</strong>: If using an <a href="/amazon-relay-auto-booker/">auto-booking extension</a>, configure your minimum profit, lane preferences and max-books-per-day cap.</li></ol>
+<ol><li><strong>Confirm <a href="/amazon-relay-requirements/">Equipment Requirements</a></strong>: You have a 16 ft or 26 ft box truck with a working tuck-under liftgate.</li><li><strong>Meet <a href="/amazon-relay-requirements/">Amazon's Eligibility Requirements</a></strong>: DOT authority active for at least 180 days, valid MC number, an acceptable safety rating and BASIC scores, <a href="/amazon-relay-insurance-requirements/">insurance minimums</a>.</li><li><strong>Sign Up at relay.amazon.com</strong>: Submit your application and insurance certificates.</li><li><strong>Set Up Your Account</strong>: Invite your drivers (each needs their own Relay profile) and add your equipment.</li><li><strong>Start Browsing the Load Board</strong>: Log in, filter by your equipment type, and refresh to see available loads.</li><li><strong>Consider an <a href="/amazon-relay-auto-refresh/">Auto-Refresh Tool</a></strong>: To keep up with competition, many carriers use an extension to refresh the board automatically and get alerts when new loads post.</li><li><strong>Set Your Profit Floor and Rules</strong>: If using an <a href="/amazon-relay-auto-booker/">auto-booking extension</a>, configure your minimum profit, lane preferences and max-books-per-day cap.</li></ol>
 <h2 id="using-nudoiq-with-your-box-truck">Using NudoIQ with Your Box Truck</h2>
 <p>NudoIQ is designed for carriers on Amazon Relay. It works with <a href="/amazon-relay-box-truck/">box trucks</a>, tractors, trailers and containers.</p>
 <p>NudoIQ features that help box truck carriers:</p>
 <ul><li><strong>Auto-Refresh</strong>: Reload the board every 1-5 seconds with random jitter.</li><li><strong>Auto-Book with Rules</strong>: Book loads automatically if they meet your price, lane, and profit floor.</li><li><strong>Net Profit per Load</strong>: See what you'll actually keep after fuel, maintenance and deadhead.</li><li><strong>Instant Book</strong>: Book from the control bar in one click instead of the multi-step Relay process.</li><li><strong><a href="/amazon-relay-load-board/">Lane Intelligence</a></strong>: Check a posted rate against that lane's 90-day history to know if it's a deal or soft.</li><li><strong><a href="/amazon-relay-scorecard/">Scorecard Dispute Letters</a></strong>: If Amazon dings your score, NudoIQ reads the violation and drafts a dispute letter that cites policy.</li><li><strong><a href="/amazon-relay-load-board/">Backhaul Finder</a></strong>: Search loads from where your current run ends, headed back toward home, to minimize deadhead.</li></ul>
-<p>NudoIQ costs <strong>$49.99 per month</strong> for all features. Start with a <strong>7-day free trial</strong>, cancel anytime. <strong>5.0 rating</strong> on the Chrome Web Store. Used by 300+ carriers.</p>
+<p>NudoIQ costs <strong>$49.99 per month</strong> for all features. Start with a <strong>7-day free trial</strong>, no card needed to start, and cancel anytime. <strong>5.0 rating</strong> on the Chrome Web Store. Used by 300+ carriers.</p>
     </article>
 
     <section class="faq" aria-labelledby="faq-h">
       <h2 id="faq-h">Frequently asked questions</h2>
       <details><summary>Do I need a DOT number to run a box truck on Amazon Relay?</summary><div class="a"><p>Yes. Amazon requires a DOT number with interstate authority (active for at least 180 days), an MC number, and acceptable safety ratings and BASIC scores. You cannot apply as a gig driver or without formal carrier authority.</p></div></details>
       <details><summary>Can I use a sprinter van or Ford Transit?</summary><div class="a"><p>No. Amazon does not accept cargo vans or small commercial vans. Only 16 ft and 26 ft box trucks with a tuck-under liftgate qualify.</p></div></details>
-      <details><summary>What if my box truck doesn't have a liftgate?</summary><div class="a"><p>You cannot book Relay loads without a liftgate. Amazon's freight is palletized and requires a lift to load/unload efficiently. Install one before applying, or it will limit you to hand-unload carriers (not Relay).</p></div></details>
-      <details><summary>What's the typical pay for a box truck load?</summary><div class="a"><p>It varies by lane, season and time. You must calculate net profit on each load individually—posted rate minus your fuel, maintenance and deadhead costs—to know if it's worth accepting.</p></div></details>
+      <details><summary>What if my box truck doesn't have a liftgate?</summary><div class="a"><p>Amazon requires a working tuck-under liftgate on 16 ft and 26 ft box trucks. Without one, the truck doesn't meet Relay's equipment rules, so install one before you apply.</p></div></details>
+      <details><summary>What's the typical pay for a box truck load?</summary><div class="a"><p>It varies by lane, season and time. You must calculate net profit on each load individually (posted rate minus your fuel, maintenance and deadhead costs) to know if it's worth accepting.</p></div></details>
       <details><summary>How many box truck loads can I book in a day?</summary><div class="a"><p>As many as the board offers and you want to accept. It depends on your setup and profit targets. NudoIQ lets you set a max-books cap so you don't over-commit.</p></div></details>
       <details><summary>Is it worth running Relay if I'm far from Amazon facilities?</summary><div class="a"><p>Depends on your location. If you're near a major Amazon distribution center, loads will be available and deadhead costs will be reasonable. If you're very far from the nearest facility, deadhead costs might make most loads unprofitable.</p></div></details>
     </section>
@@ -263,7 +315,7 @@
       <div class="cards">
         <a href="/how-much-does-amazon-relay-pay/">How Much Does Amazon Relay Pay?</a>
         <a href="/is-amazon-relay-worth-it/">Is Amazon Relay Worth It?</a>
-        <a href="/amazon-relay-scorecard/">Amazon Relay Scorecard: What It Measures and How to Dispute Violations</a>
+        <a href="/amazon-relay-scorecard/">Amazon Relay scorecard: how the performance score works and how to dispute it</a>
         <a href="/amazon-relay-auto-refresh/">Amazon Relay Auto Refresh: Why It Matters and How It Works</a>
         <a href="/amazon-relay-auto-booker/">Amazon Relay Auto Booker: How Automatic Booking Works</a>
         <a href="/best-amazon-relay-extensions/">Best Amazon Relay Extensions: Refresher and Auto-Booker Tools</a>

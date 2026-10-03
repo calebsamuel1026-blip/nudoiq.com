@@ -1,70 +1,83 @@
 # NudoIQ
 
-> NudoIQ is an independent Chrome extension for Amazon Relay carriers. It adds
-> load alerts, booking rules, lane rate intelligence, truck routing, fleet
-> reporting, and printable driver pay statements on top of the Amazon Relay
-> load board. Built for owner-operators, dispatchers, and small fleets.
-
-NudoIQ is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc.
-Carriers remain responsible for their own accounts and for compliance with
-Amazon Relay's terms of service.
+> NudoIQ is a Chrome extension for carriers who haul on Amazon Relay: owner-operators, small fleets and dispatchers. It runs inside the Amazon Relay load board in the carrier's own signed-in browser tab and adds load board refreshing, rule-based alerts and booking, lane rate history, net profit per load and scorecard dispute letter drafting. It costs $49.99 a month for every feature, with a 7-day free trial and no card needed to start. NudoIQ is independent and is not affiliated with, endorsed by or approved by Amazon. It is published by Sami Enterprises LLC, Portland, Oregon.
 
 ## What it does
 
-- **Load alerts** — notifies you when a matching load is posted or changes price, so you do not have to watch the board continuously.
-- **Booking rules** — filters and limits that control what gets searched, alerted on, or auto-booked.
-- **Lane Intelligence** — compares a posted rate against recent observations and shows a target rate, a likely range, and a clearly marked confidence level.
-- **Bid Advisor** — when posting a truck, compares your bid against the current board median, the highest visible rate, and the historical floor, median and ceiling for that lane, shown in dollars per mile.
-- **Scorecard dispute letters** — reads your Amazon Relay scorecard, identifies the violations behind the score, and drafts an Amazon policy-based dispute letter for you to review, edit and submit. Amazon decides every dispute outcome.
-- **Truck routing** — a truck-appropriate route preview before you accept a load.
-- **Driver dispatch** — sends trip details to a driver by email or text on assignment.
-- **HOS overview** — available hours and warnings before committing to the next load.
-- **Fleet reporting** — revenue, miles, fuel, margin, drivers, and trips in one dashboard, with CSV import.
-- **Driver pay statements** — turns completed trips into a printable or PDF pay statement.
-- **Bilingual interface** — full English and Spanish, switchable.
+- **Refresher:** reloads the Amazon Relay load board at an interval set from 1 to 5 seconds, adds up to 20% random jitter per interval, and keeps the board tab from going idle.
+- **Control bar with three modes:** Alert (pings you when a load matches your rules), Search (highlights matches) and Autobook (books a matching load for you). Rules cover price and lanes, a profit floor and a max-books cap. Autobook stops at the cap and the profit floor.
+- **Telegram alerts** when a load lands.
+- **Instant Book:** books a load in one action from the control bar instead of the multi-step flow.
+- **Lane Intelligence:** compares the posted price with 90 days of that lane's history and shows a target rate, an expected range and a confidence level. Decision support, not a guarantee.
+- **Net Profit on every load card:** posted rate minus driver pay, fuel, maintenance and deadhead to pickup, in dollars and net rate per mile. Loads below a set profit floor can be hidden.
+- **Scorecard dispute letters:** reads the carrier's Relay scorecard, identifies the violation behind the score and drafts a dispute letter citing Amazon policy. The carrier reviews, edits and submits it.
+- **Backhaul finder:** searches loads from where the current load ends, pointed back toward home within a set radius and day window. Sorts by total pay, rate per mile, pickup time or distance home; the all-in rate counts the deadhead.
+- **Post A Truck helper:** shows origin, destination, distance and board price next to the carrier's minimum rate per mile and minimum payout, then posts with one button.
+- **Route check:** opens the routed trip, with every stop, in Google Maps (standard routing, not truck-specific).
+- **HOS overview** and **driver dispatch** by text or email on assignment.
+- English and Spanish interface.
 
 ## Pricing
 
-One plan at $49.99 per month, with a 7-day free trial. A payment method is
-required to start the trial. Cancel before the trial ends to avoid the first
-charge. No annual contract.
+- $49.99 per month, every feature included, the same price for one truck or twenty.
+- 7-day free trial for first-time signups, no card needed to start.
+- Cancel anytime from the Stripe customer portal. Payments are processed by Stripe.
+- Rated 5.0 on the Chrome Web Store. Used by 300+ carriers.
 
 ## Requirements
 
-Chrome or another Chromium-based browser (Edge, Brave). NudoIQ runs in the
-browser, so the Amazon Relay tab and the computer must stay available while it
-watches the load board.
+- Desktop Google Chrome.
+- An approved Amazon Relay carrier account. NudoIQ works inside the carrier's own signed-in Relay session; it does not create or grant Relay access.
 
 ## Important limitations
 
-NudoIQ does not guarantee rates, load availability, bookings, time savings, or
-earnings. Rate estimates shown in the product are planning aids, not promises. Figures shown in product screenshots are illustrative
-examples with identifying data removed.
+- NudoIQ does not guarantee loads, bookings, rates or earnings. Pay on Amazon Relay varies by lane, timing and equipment.
+- Lane rate estimates are decision support based on past lane data, not a promise of what a load will pay.
+- Dispute letters are drafts. Amazon decides every scorecard dispute, and NudoIQ cannot influence or promise the outcome.
+- NudoIQ is not made by Amazon and is not affiliated with, endorsed by or approved by Amazon.
 
-## Pages
+## Original data
 
-- [Homepage](https://nudoiq.com/): product overview, features, customer reviews, pricing, and FAQ.
-- [Inicio (Español)](https://nudoiq.com/es/): the full site in Spanish.
-- [Privacy Policy](https://nudoiq.com/privacy.html): what is collected, what is not, retention, third-party processors, and data rights.
-- [Refund Policy](https://nudoiq.com/refund-policy.html): trial terms, cancellation, and billing disputes.
+NudoIQ analyzed public FMCSA roadside inspection records that list Amazon as the shipper. From 2023-09-24 to 2026-09-22, 101,444 inspections listed Amazon as the shipper, across 22,866 distinct carriers (USDOT numbers); about 530 carriers per month appear for the first time, and about 70% of carriers with an Amazon-shipper inspection since 2025 run 1-5 power units. Counts are a floor (most loads are never inspected) and cover Amazon freight in general, not only Amazon Relay loads. Full method, charts and caveats: https://nudoiq.com/amazon-relay-carrier-data/
 
 ## Contact
 
 - Email: contact@nudoiq.com
-- Telegram: https://t.me/nudoiqsupport
+- Telegram support: https://t.me/nudoiqsupport
 
-## Amazon Relay guides
+## Pages
 
-- [All guides](https://nudoiq.com/guides/)
-- [How the Amazon Relay Load Board Works](https://nudoiq.com/amazon-relay-load-board/)
-- [What Is Amazon Relay?](https://nudoiq.com/what-is-amazon-relay/)
-- [Amazon Relay Requirements](https://nudoiq.com/amazon-relay-requirements/)
-- [Amazon Relay Insurance Requirements](https://nudoiq.com/amazon-relay-insurance-requirements/)
-- [Amazon Relay for Box Trucks](https://nudoiq.com/amazon-relay-box-truck/)
-- [How Much Does Amazon Relay Pay?](https://nudoiq.com/how-much-does-amazon-relay-pay/)
-- [Is Amazon Relay Worth It?](https://nudoiq.com/is-amazon-relay-worth-it/)
-- [Amazon Relay Scorecard: What It Measures and How to Dispute Violations](https://nudoiq.com/amazon-relay-scorecard/)
-- [Amazon Relay Auto Refresh: Why It Matters and How It Works](https://nudoiq.com/amazon-relay-auto-refresh/)
-- [Amazon Relay Auto Booker: How Automatic Booking Works](https://nudoiq.com/amazon-relay-auto-booker/)
-- [Best Amazon Relay Extensions: Refresher and Auto-Booker Tools](https://nudoiq.com/best-amazon-relay-extensions/)
-- [LoadFetcher vs NudoIQ: What's the Difference](https://nudoiq.com/loadfetcher-alternative/)
+- [NudoIQ home](https://nudoiq.com/): product overview, features, pricing and FAQ.
+- [NudoIQ en español](https://nudoiq.com/es/): the home page in Spanish.
+- [Amazon Relay guides](https://nudoiq.com/guides/): every guide below in one list.
+- [How the Amazon Relay Load Board Works](https://nudoiq.com/amazon-relay-load-board/): Complete guide to the Amazon Relay load board: filters, load types, rates, and why good loads book in seconds. Login at relay.amazon.com.
+- [What Is Amazon Relay?](https://nudoiq.com/what-is-amazon-relay/): What Amazon Relay is, who can join, equipment types, load boards, payment schedule and performance scorecards explained.
+- [Amazon Relay Requirements](https://nudoiq.com/amazon-relay-requirements/): Amazon Relay eligibility checklist: DOT/MC, authority age, safety rating, BASIC scores, insurance, equipment and ownership verification.
+- [Amazon Relay Insurance Requirements](https://nudoiq.com/amazon-relay-insurance-requirements/): Amazon Relay insurance guide: required coverages, minimum limits and why each type matters for your carrier account.
+- [Amazon Relay for Box Trucks](https://nudoiq.com/amazon-relay-box-truck/): Run Amazon Relay with a 16 ft or 26 ft box truck with tuck-under liftgate. Cargo vans don't work. Find box truck loads and learn how rates vary.
+- [How Much Does Amazon Relay Pay?](https://nudoiq.com/how-much-does-amazon-relay-pay/): Amazon Relay pay varies by lane, season, time of day and equipment. Understand what sets rates and how to evaluate pricing fairly.
+- [Is Amazon Relay Worth It?](https://nudoiq.com/is-amazon-relay-worth-it/): Amazon Relay has pros and cons. Fast weekly pay and steady loads, but board competition and rate changes. Who it works for.
+- [Amazon Relay scorecard: how the performance score works and how to dispute it](https://nudoiq.com/amazon-relay-scorecard/): How the Amazon Relay scorecard and performance score work: the four metrics, F to A+ grades, what each grade opens, and how to dispute an impact.
+- [Amazon Relay Auto Refresh: Why It Matters and How It Works](https://nudoiq.com/amazon-relay-auto-refresh/): How Amazon Relay auto-refreshers work, why refreshing matters, interval and jitter explained, and what to set for your operation.
+- [Amazon Relay Auto Booker: How Automatic Booking Works](https://nudoiq.com/amazon-relay-auto-booker/): How Amazon Relay auto-booker extensions work, how to set safe booking rules, and guardrails that prevent booking loads you don't want.
+- [Best Amazon Relay Extensions: Refresher and Auto-Booker Tools](https://nudoiq.com/best-amazon-relay-extensions/): Compare top Amazon Relay extensions. What to look for in a refresher and auto-booker, and how LoadFetcher, Rocket Relay and NudoIQ stack up.
+- [LoadFetcher vs NudoIQ: What's the Difference](https://nudoiq.com/loadfetcher-alternative/): Fair comparison of LoadFetcher and NudoIQ for Amazon Relay. What both tools do, where they differ, pricing, and which is right for you.
+- [Amazon Relay loads: load types, equipment and how to book them](https://nudoiq.com/amazon-relay-loads/): How to get Amazon Relay loads: load types (one-way, round trip, blocks, contracts), the equipment each needs, and how to find and book loads faster.
+- [Amazon Relay carrier data 2026: what FMCSA inspection records show](https://nudoiq.com/amazon-relay-carrier-data/): How many carriers haul Amazon freight? NudoIQ's analysis of 101,444 FMCSA roadside inspections listing Amazon as the shipper, from 2023 to 2026.
+- [Amazon Relay box truck loads: how to find and book them](https://nudoiq.com/amazon-relay-box-truck-loads/): How to find Amazon Relay box truck loads: filter the board for 16 or 26 ft trucks, set up Post A Truck, pick contracts or spot, and judge a rate.
+- [Amazon Relay power only: how it works and how to book it](https://nudoiq.com/amazon-relay-power-only/): Amazon Relay power only means you bring the tractor and Amazon provides the trailer. Which loads work that way, day cab vs sleeper, and judging a rate.
+- [Amazon Relay dispatcher: what the job is and how to do it well](https://nudoiq.com/amazon-relay-dispatcher/): What an Amazon Relay dispatcher does: booking loads, setting up drivers, tracking trips and protecting the score. Plus dispatch service vs DIY.
+- [Cannot Book Loads on Amazon Relay](https://nudoiq.com/amazon-relay-account-suspended/): If you cannot book or haul Relay loads, check your insurance status and compliance. What Amazon publishes and what it does not.
+- [When the Amazon Relay Load Board Shows No Loads](https://nudoiq.com/amazon-relay-load-board-not-showing-loads/): When the Relay load board is empty or sparse, check filters and account status in this order.
+- [Booking Multiple Loads on Amazon Relay](https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/): Use Relay's reload and return-trip suggestions, and plan against your HOS window when booking a second load.
+
+## Data
+
+- [amazon-relay-carrier-data-2026.csv](https://nudoiq.com/amazon-relay-carrier-data/amazon-relay-carrier-data-2026.csv): aggregate FMCSA inspection numbers behind https://nudoiq.com/amazon-relay-carrier-data/ (no carrier names or DOT numbers).
+
+## Optional
+
+- [Privacy policy](https://nudoiq.com/privacy.html)
+- [Refund policy](https://nudoiq.com/refund-policy.html)
+- [Terms](https://nudoiq.com/terms.html)
+- [Full text of every guide](https://nudoiq.com/llms-full.txt)

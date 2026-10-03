@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Amazon Relay Dispatcher: Dispatching Relay Loads | NudoIQ</title>
+  <meta name="description" content="What an Amazon Relay dispatcher does: booking loads, setting up drivers, tracking trips and protecting the score. Plus dispatch service vs DIY.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/amazon-relay-dispatcher/">
+  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="any">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:title" content="Amazon Relay Dispatcher: Dispatching Relay Loads | NudoIQ">
+  <meta property="og:description" content="What an Amazon Relay dispatcher does: booking loads, setting up drivers, tracking trips and protecting the score. Plus dispatch service vs DIY.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/amazon-relay-dispatcher/">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: "amazon-relay-dispatcher"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "amazon-relay-dispatcher"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Amazon Relay dispatcher: what the job is and how to do it well",
+  "description": "What an Amazon Relay dispatcher does: booking loads, setting up drivers, tracking trips and protecting the score. Plus dispatch service vs DIY.",
+  "mainEntityOfPage": "https://nudoiq.com/amazon-relay-dispatcher/",
+  "url": "https://nudoiq.com/amazon-relay-dispatcher/",
+  "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+  "datePublished": "2026-10-02",
+  "dateModified": "2026-10-02",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Organization",
+    "name": "NudoIQ",
+    "url": "https://nudoiq.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
+    "name": "NudoIQ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nudoiq.com/brand/mark/icon128.png"
+    }
+  },
+  "abstract": "An Amazon Relay dispatcher searches and books loads on the carrier's Relay account, assigns them to invited drivers, watches live load tracking and handles problems in transit. The carrier stays responsible for its account and performance score. Carriers can dispatch in-house, hire a dispatch service, or use tools that alert and book by rules."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nudoiq.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://nudoiq.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Amazon Relay dispatcher: what the job is and how to do it well",
+      "item": "https://nudoiq.com/amazon-relay-dispatcher/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Amazon allow third-party dispatchers on Relay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon doesn't publish rules about outside dispatch services. The carrier is responsible for its Relay account, so read Relay's terms before you bring in a service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a box truck dispatcher charge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dispatch services commonly charge either a percentage of each load or a flat fee. Prices vary by service, so get it in writing and compare it with the cost of dispatching in-house."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can drivers share one Amazon Relay account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Each driver needs their own Relay profile, created by invitation from the carrier, and Amazon doesn't allow shared accounts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does Amazon Relay driver verification take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon says the CDL and selfie review is typically done within 48 hours. Background checks are also required before a driver hauls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is responsible for Hours of Service on Amazon Relay loads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The carrier. Amazon says carriers stay responsible for Hours of Service, drug and alcohol testing and medical certification. Federal rules allow 11 hours of driving within a 14-hour window after 10 hours off."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/brand/mark/icon128.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://nudoiq.com/#software",
+      "name": "NudoIQ",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Browser Extension",
+      "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
+      "url": "https://nudoiq.com/",
+      "downloadUrl": "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+      "offers": {
+        "@type": "Offer",
+        "price": "49.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nudoiq.com/#pricing",
+        "description": "7-day free trial, no card needed to start. $49.99 per month after the trial. Cancel anytime.",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "49.99",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "billingDuration": "P1M"
+        }
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <div class="promo">7-day trial &middot; $49.99/month after trial &middot; Cancel anytime &middot; English and Spanish</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Main navigation">
+      <a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a><a href="/#faq">FAQ</a>
+    </nav>
+    <div class="navright">
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+    </div>
+  </div></header>
+
+  <div class="doc-hero"><div class="doc-hero-in">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay dispatcher: what the job is and how to do it well</span></nav>
+    <h1 class="page-title">Amazon Relay dispatcher: what the job is and how to do it well</h1>
+    <p class="page-subtitle">Dispatching on Amazon Relay means booking loads, getting them on the right driver and keeping the performance score clean. Here's how the job works, what Relay gives you to do it, and how to decide between a dispatch service, doing it yourself, or tools.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-10-02">October 2, 2026</time> &middot; Last updated <time datetime="2026-10-02">October 2, 2026</time></p>
+  </div></div>
+
+  <div class="container">
+    <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>An Amazon Relay dispatcher searches and books loads on the carrier's Relay account, assigns them to invited drivers, watches live load tracking and handles problems in transit. The carrier stays responsible for its account and performance score. Carriers can dispatch in-house, hire a dispatch service, or use tools that alert and book by rules.</p></section>
+<h2 id="what-does-an-amazon-relay-dispatcher-do">What does an Amazon Relay dispatcher do?</h2>
+<p>A Relay dispatcher finds and books loads on the carrier's account, puts each load on a driver, and watches it through delivery. When something goes wrong in transit, the dispatcher handles it, and when the score takes a hit, the dispatcher files the dispute. The job is booking, assigning, tracking and protecting the score.</p>
+<p>The day usually looks like this:</p>
+<ul><li><strong>Search and book.</strong> Work the <a href="/amazon-relay-load-board/">Relay load board</a>, saved searches and Post A Truck to keep every truck covered.</li><li><strong>Assign drivers.</strong> <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads" target="_blank" rel="noopener">Amazon says</a> carriers manage their drivers and decide which ones get Amazon loads.</li><li><strong>Watch the trip.</strong> Follow live tracking and step in when a load stalls.</li><li><strong>Handle disruptions and disputes.</strong> Carriers can dispute performance score impacts when something happens in transit. Amazon decides every dispute.</li><li><strong>Keep the paperwork straight.</strong> The carrier stays responsible for drug and alcohol testing, Hours of Service and medical certification.</li></ul>
+<p>If you're searching &quot;box truck dispatch&quot; or &quot;dispatchers for box trucks&quot;, the same job applies. Box trucks and tractors book on the same board, through the same account. See our guides to <a href="/amazon-relay-box-truck-loads/">Amazon Relay box truck loads</a> and <a href="/amazon-relay-power-only/">Relay power only</a>.</p>
+<h2 id="how-do-drivers-get-set-up-under-a-relay-carrier">How do drivers get set up under a Relay carrier?</h2>
+<p>Drivers can only create a Relay profile by invitation from a Relay-approved carrier, and there are no shared accounts. Amazon verifies each driver with the front and back of their CDL plus a selfie, usually within 48 hours, and runs background checks. Drivers then use the Relay app on iOS or Android.</p>
+<p>What a dispatcher needs to stay on top of:</p>
+<ol><li><strong>Send the invite</strong> from the carrier account. Each driver gets their own profile.</li><li><strong>Get verification done early.</strong> The CDL and selfie review is typically done within 48 hours, so don't promise a driver a load before they clear it.</li><li><strong>Expect selfies on the road.</strong> The app asks for periodic selfies during loads, for example at pickup or drop-off.</li><li><strong>Keep the app open with location on.</strong> Amazon's app usage metric checks that drivers keep the Relay app running and location services on for the whole trip.</li></ol>
+<p>That last one matters more than most dispatchers think. App usage is one of the four metrics in the <a href="https://relay.amazon.com/blog/amazon-relay-performance-score" target="_blank" rel="noopener">Amazon Relay performance score</a>, and a driver who closes the app can pull the whole score down.</p>
+<h2 id="what-can-a-dispatcher-see-in-relay-load-tracking">What can a dispatcher see in Relay load tracking?</h2>
+<p>Relay's load tracking shows owner-operators, fleet managers and dispatchers each trip in real time, updated about every 30 seconds. It includes disruption signals, a route view, weather, trip playback, and the driver's contact details and status. It only works while the driver keeps the app open with location services on.</p>
+<p>From <a href="https://relay.amazon.com/blog/load-tracking-with-amazon-relay" target="_blank" rel="noopener">Amazon's load tracking page</a>, here's what that gives you:</p>
+<div class="tbl"><table><thead><tr><th>Tracking feature</th><th>What a dispatcher uses it for</th></tr></thead><tbody><tr><td>Live position, about every 30 seconds</td><td>Seeing if a driver will make the check-in time</td></tr><tr><td>Disruption signals</td><td>Catching a stalled trailer before it becomes a score hit</td></tr><tr><td>Route view and weather</td><td>Planning around delays on the way</td></tr><tr><td>Trip playback</td><td>Backing up a dispute with what actually happened</td></tr><tr><td>Driver contact and status</td><td>Reaching the driver fast when plans change</td></tr></tbody></table></div>
+<h2 id="should-you-hire-a-dispatch-service-or-dispatch-yourself">Should you hire a dispatch service or dispatch yourself?</h2>
+<p>It depends on your time and your margins. Dispatch services commonly charge either a percentage of each load or a flat fee, so compare that with what it costs to do it in-house. Either way, the carrier stays responsible for its Relay account, its drivers and its performance score.</p>
+<div class="tbl"><table><thead><tr><th></th><th>Dispatch yourself</th><th>Hire a dispatch service</th><th>Dispatch with tools</th></tr></thead><tbody><tr><td>Who books</td><td>You or your office</td><td>The service</td><td>You, with alerts or rules-based booking</td></tr><tr><td>Cost</td><td>Your time</td><td>A percentage of each load or a flat fee</td><td>A software subscription</td></tr><tr><td>Who answers for the score</td><td>The carrier</td><td>Still the carrier</td><td>The carrier</td></tr><tr><td>What to watch</td><td>Burnout from watching the board</td><td>What they book in your name</td><td>Rules set too loose</td></tr></tbody></table></div>
+<p>Two things to check before you bring in a service:</p>
+<ul><li><strong>Amazon doesn't publish rules about outside dispatch services.</strong> Read Relay's terms yourself before you bring one in. Nothing here says Amazon allows or bans them.</li><li><strong>Every booking is yours.</strong> If a dispatcher books a load a driver can't make and it gets cancelled close to pickup, the acceptance penalty lands on your account.</li></ul>
+<h2 id="how-does-a-dispatcher-protect-the-relay-performance-score">How does a dispatcher protect the Relay performance score?</h2>
+<p>Book only what your drivers can run, get them there on time, and keep the app on. Amazon scores four metrics (on-time, acceptance, app usage and disruption-free), and your overall score is the lowest of the four. One weak metric sets the grade, and the grade decides access to contracts and early loads.</p>
+<p>Per <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/relay-performance-grades-how-to-unlock-hauling-opportunities" target="_blank" rel="noopener">Amazon's grade guide</a> and the score page:</p>
+<ul><li><strong>Acceptance.</strong> Cancelling a booked load counts against you, including loads that expire. The closer to pickup you cancel, the bigger the penalty. Decide early.</li><li><strong>On-time.</strong> Loads have to arrive by the planned time at origin and destination, measured from the check-in timestamp. Build slack for traffic and Hours of Service.</li><li><strong>App usage.</strong> Drivers keep the Relay app running with location on for the whole trip.</li><li><strong>Disruption-free.</strong> Stationary trailers and loads with no assigned driver count against you. Assign every load to a driver.</li></ul>
+<p>The score covers your last six weeks of hauls, and Amazon gives a daily prediction of your upcoming score in the account. Check it every morning. Our <a href="/amazon-relay-scorecard/">scorecard guide</a> goes deeper on grades and disputes.</p>
+<h2 id="what-load-boards-do-relay-dispatchers-use">What load boards do Relay dispatchers use?</h2>
+<p>For Amazon freight, the only board is the Relay load board. Amazon tenders its loads only through Relay, not on third-party boards. <a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">Amazon says</a> it's open 24/7 and free to search and book, with filters, saved searches, email alerts and mobile push notifications for a dispatcher working several trucks.</p>
+<p>Useful board features for dispatchers:</p>
+<ul><li><strong>Filters</strong> for origin, destination or radius, equipment type, trailer status, load type, driver type, max stops, trip length, rate range and pickup and delivery windows.</li><li><strong>Saved searches</strong>, one per truck or lane.</li><li><strong>Reload and return-trip suggestions</strong> to keep a driver moving after the first load.</li><li><strong>Post A Truck</strong> to post availability up to two weeks ahead with a minimum rate per mile.</li></ul>
+<p>Good loads still get booked within seconds, which is why many dispatchers add a <a href="/amazon-relay-auto-refresh/">refresher</a> or an <a href="/amazon-relay-auto-booker/">auto-booker</a>.</p>
+<h2 id="where-does-nudoiq-help-a-relay-dispatcher">Where does NudoIQ help a Relay dispatcher?</h2>
+<p>NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It watches the board for you, alerts you on loads that match your rules, and can book them with a cap and a profit floor. It's an independent tool, not made by or affiliated with Amazon.</p>
+<p>What a dispatcher gets:</p>
+<ul><li><strong>Alert, Search and Autobook modes</strong> with lane and price rules. Autobook stops at your max-books cap (set it to the trucks you can cover) and won't book under your profit floor.</li><li><strong>Telegram alerts</strong> when a load lands, so you're not tied to the screen.</li><li><strong>Lane Intelligence:</strong> the posted price next to that lane's 90-day history. It's decision support, not a guarantee.</li><li><strong>Net profit on every load card:</strong> the rate minus driver pay, fuel, maintenance and deadhead to pickup.</li><li><strong>Driver dispatch by text or email</strong> when you assign a load, plus an HOS overview.</li></ul>
+<p>It's <a href="/#pricing">$49.99 a month</a> for every feature, the same price for one truck or twenty. Start with a 7-day free trial, no card needed to start, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.</p>
+    </article>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <details><summary>Does Amazon allow third-party dispatchers on Relay?</summary><div class="a"><p>Amazon doesn't publish rules about outside dispatch services. The carrier is responsible for its Relay account, so read Relay's terms before you bring in a service.</p></div></details>
+      <details><summary>How much does a box truck dispatcher charge?</summary><div class="a"><p>Dispatch services commonly charge either a percentage of each load or a flat fee. Prices vary by service, so get it in writing and compare it with the cost of dispatching in-house.</p></div></details>
+      <details><summary>Can drivers share one Amazon Relay account?</summary><div class="a"><p>No. Each driver needs their own Relay profile, created by invitation from the carrier, and Amazon doesn't allow shared accounts.</p></div></details>
+      <details><summary>How long does Amazon Relay driver verification take?</summary><div class="a"><p>Amazon says the CDL and selfie review is typically done within 48 hours. Background checks are also required before a driver hauls.</p></div></details>
+      <details><summary>Who is responsible for Hours of Service on Amazon Relay loads?</summary><div class="a"><p>The carrier. Amazon says carriers stay responsible for Hours of Service, drug and alcohol testing and medical certification. Federal rules allow <a href="https://www.fmcsa.dot.gov/regulations/hours-service/summary-hours-service-regulations" target="_blank" rel="noopener">11 hours of driving within a 14-hour window</a> after 10 hours off.</p></div></details>
+    </section>
+
+    <aside class="cta">
+      <div><h2>Know what the next load is worth before you take it.</h2><p>7-day free trial &middot; Cancel anytime &middot; 5.0 on the Chrome Web Store</p></div>
+      <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Start the 7-day trial</a>
+    </aside>
+
+    <nav class="related" aria-label="More Amazon Relay guides">
+      <h2>More Amazon Relay guides</h2>
+      <div class="cards">
+        <a href="/amazon-relay-account-suspended/">Cannot Book Loads on Amazon Relay</a>
+        <a href="/amazon-relay-load-board-not-showing-loads/">When the Amazon Relay Load Board Shows No Loads</a>
+        <a href="/how-to-book-multiple-loads-on-amazon-relay/">Booking Multiple Loads on Amazon Relay</a>
+        <a href="/amazon-relay-load-board/">How the Amazon Relay Load Board Works</a>
+        <a href="/what-is-amazon-relay/">What Is Amazon Relay?</a>
+        <a href="/amazon-relay-requirements/">Amazon Relay Requirements</a>
+      </div>
+    </nav>
+
+    <div class="footer">
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/">Amazon Relay guides</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contact</a>
+    </div>
+    <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. Amazon Relay requirements change; confirm current rules at relay.amazon.com.</p>
+
+  </div>
+</body>
+</html>

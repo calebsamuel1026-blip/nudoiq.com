@@ -63,6 +63,13 @@
       }catch(e){}
     })();
   </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
   <link rel="stylesheet" href="/assets/doc.css">
   <link rel="stylesheet" href="/assets/guide.css">
   <script type="application/ld+json">
@@ -72,9 +79,11 @@
   "headline": "Amazon Relay Requirements",
   "description": "Amazon Relay eligibility checklist: DOT/MC, authority age, safety rating, BASIC scores, insurance, equipment and ownership verification.",
   "mainEntityOfPage": "https://nudoiq.com/amazon-relay-requirements/",
+  "url": "https://nudoiq.com/amazon-relay-requirements/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
   "datePublished": "2026-09-20",
-  "dateModified": "2026-09-20",
+  "dateModified": "2026-10-02",
+  "inLanguage": "en-US",
   "author": {
     "@type": "Organization",
     "name": "NudoIQ",
@@ -82,12 +91,14 @@
   },
   "publisher": {
     "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
     "name": "NudoIQ",
     "logo": {
       "@type": "ImageObject",
       "url": "https://nudoiq.com/brand/mark/icon128.png"
     }
-  }
+  },
+  "abstract": "Amazon Relay requires a DOT number with interstate authority active for at least 180 days, a valid MC number, and an FMCSA safety rating of Satisfactory, None or Not Rated. BASIC scores must stay under Amazon's limits, insurance must meet its minimums, equipment must be supported, and every owner above 25% is verified."
 }
   </script>
   <script type="application/ld+json">
@@ -126,7 +137,7 @@
       "name": "How long does Amazon Relay approval take?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Approvals typically complete within a few business days after you submit your application, assuming all requirements are met. If Amazon needs to verify information or you have issues, it may take longer."
+        "text": "Amazon doesn't publish an approval timeline. Missing documents or verification questions can slow things down, so have your insurance, authority and ownership documents ready."
       }
     },
     {
@@ -134,7 +145,7 @@
       "name": "What if my BASIC score is just slightly over the limit?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Amazon doesn't make exceptions for BASIC scores—the limits are firm. If you're over the limit on any category, your application will be delayed or rejected. Work on improving that score and reapply once you're in range."
+        "text": "Amazon publishes these limits as requirements. If you're over the limit on any category, your application will be delayed or rejected. Work on improving that score and reapply once you're in range."
       }
     },
     {
@@ -158,7 +169,7 @@
       "name": "Can I use my personal auto insurance?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Amazon requires commercial insurance—General Liability, Auto Liability, Cargo and Workers' Compensation. Personal policies don't cover commercial freight work and won't meet Amazon's minimums."
+        "text": "No. Amazon requires commercial insurance: General Liability, Auto Liability, Cargo and Workers' Compensation. Personal policies don't cover commercial freight work and won't meet Amazon's minimums."
       }
     },
     {
@@ -166,18 +177,59 @@
       "name": "What if I have a newer authority but all my other metrics are strong?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The 180-day rule is non-negotiable. You cannot get around it. Amazon will ask you to reapply after your authority reaches 180 days old. There are no exceptions, even for carriers with perfect BASIC scores or strong safety ratings."
+        "text": "Amazon requires authority active for at least 180 days, and strong BASIC scores don't replace it. Apply once your authority passes 180 days."
       }
     }
   ]
 }
   </script>
-  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
-       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
-  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
-    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
-      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/brand/mark/icon128.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://nudoiq.com/#software",
+      "name": "NudoIQ",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Browser Extension",
+      "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
+      "url": "https://nudoiq.com/",
+      "downloadUrl": "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+      "offers": {
+        "@type": "Offer",
+        "price": "49.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nudoiq.com/#pricing",
+        "description": "7-day free trial, no card needed to start. $49.99 per month after the trial. Cancel anytime.",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "49.99",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "billingDuration": "P1M"
+        }
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -197,21 +249,23 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay Requirements</span></nav>
     <h1 class="page-title">Amazon Relay Requirements</h1>
     <p class="page-subtitle">To sign up for Amazon Relay, your carrier must meet Amazon's eligibility criteria: a 180-day-old DOT authority, valid MC number, clean safety rating, insurance minimums, and BASIC score limits. Here's what you need and how to get started.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-02">October 2, 2026</time></p>
   </div></div>
 
   <div class="container">
     <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>Amazon Relay requires a DOT number with interstate authority active for at least 180 days, a valid MC number, and an FMCSA safety rating of Satisfactory, None or Not Rated. BASIC scores must stay under Amazon's limits, insurance must meet its minimums, equipment must be supported, and every owner above 25% is verified.</p></section>
 <h2 id="authority-and-operational-requirements">Authority and Operational Requirements</h2>
 <p>Before you can book your first load on Amazon Relay, your business must meet these foundational criteria:</p>
-<p><strong>DOT Number</strong> You need a DOT number with interstate authority. The critical requirement: your DOT authority must be active for at least 180 days. If you received your authority recently, you'll need to wait until you cross the 180-day mark. There's no exception to this rule—Amazon enforces it consistently.</p>
+<p><strong>DOT Number</strong> You need a DOT number with interstate authority. The critical requirement: your DOT authority must be active for at least 180 days. If you received your authority recently, you'll need to wait until you cross the 180-day mark.</p>
 <p><strong>MC (Motor Carrier) Number</strong> You must have a valid MC number. This number, issued by the FMCSA, shows that you're registered as an interstate carrier. When you get your DOT number, the MC application is usually filed at the same time.</p>
-<p><strong>Authority Age</strong> The 180-day rule is the single biggest barrier for new carriers. You can't rush it. Amazon checks this before approving your account. If your authority is newer, check back in 180 days; Amazon will not make exceptions.</p>
+<p><strong>Authority Age</strong> The 180-day rule is the single biggest barrier for new carriers. You can't rush it. Amazon checks this before approving your account. If your authority is newer, apply once it passes 180 days.</p>
 <h2 id="safety-rating-and-basic-score-requirements">Safety Rating and BASIC Score Requirements</h2>
 <p>Amazon requires a satisfactory safety profile. Amazon will check your FMCSA records, including your safety rating and your BASIC (Behavior Analysis and Safety Improvement Categories) scores.</p>
 <p><strong>FMCSA Safety Rating</strong> Your safety rating must be one of these three: Satisfactory, None, or Not Rated. Any rating below Satisfactory (such as Conditional or Unsatisfactory) disqualifies you from Relay.</p>
 <p><strong>BASIC Score Limits</strong> Your BASIC scores must stay within these limits:</p>
 <ul><li>Unsafe Driving: below 60%</li><li>HOS Compliance: below 60%</li><li>Vehicle Maintenance: below 75%</li><li>Controlled Substances/Alcohol: below 75%</li><li>Driver Fitness: below 75%</li></ul>
-<p>Additionally, your driver out-of-service violation rate must be at or below 35%, and your vehicle out-of-service violation rate must be at or below 50%.</p>
+<p>Additionally, your driver out-of-service violation rate must be at or below 35%, and your vehicle violation rate must be at or below 50%.</p>
 <p>These thresholds reflect Amazon's risk tolerance. If you're close to any limit, focus on improving that metric before applying. A violation that pushes you over the limit can delay approval.</p>
 <h2 id="insurance-minimums">Insurance Minimums</h2>
 <p><a href="/amazon-relay-insurance-requirements/">Insurance requirements</a> are strict and non-negotiable. Here's a summary; see the full insurance page for details on each coverage:</p>
@@ -220,40 +274,40 @@
 <h2 id="equipment-specifications">Equipment Specifications</h2>
 <p>Amazon accepts only specific types of equipment. Your <a href="/amazon-relay-box-truck/">equipment choices</a> determine what loads you can book:</p>
 <ul><li>Day cab tractors (single-engine cab, no sleeper)</li><li>Sleeper tractors (with sleeping compartment)</li><li>26 ft and 16 ft box trucks with a working tuck-under liftgate (the liftgate is required)</li><li>48 ft and 53 ft dry van trailers</li><li>Reefer trailers (temperature-controlled 48 ft and 53 ft)</li><li>20, 40 and 45 ft high-cube containers (UIIA compliant)</li></ul>
-<p><strong>Cargo vans are not supported.</strong> Do not apply with a cargo van—Amazon will not approve it, even if you think it meets the load specs.</p>
-<p>Each equipment type comes with different load availability. Sleepers and large trailers get more volume. Box trucks see steady work but at lower rates. Containers are for carriers with specialized equipment.</p>
+<p><strong>Cargo vans are not supported.</strong> Do not apply with a cargo van: Amazon will not approve it, even if you think it meets the load specs.</p>
+<p>Amazon says the majority of Relay loads are power only (you bring the tractor, Amazon provides the trailer), and one-way loads need a box truck or your own trailer.</p>
 <h2 id="beneficial-owner-verification">Beneficial Owner Verification</h2>
 <p>Amazon verifies the ownership of your carrier. This means:</p>
-<ul><li>Amazon verifies your business entity (LLC, S-Corp, Sole Proprietorship, etc.).</li><li>Amazon verifies every beneficial owner—anyone with more than 25% ownership—using government records and documentation you provide.</li></ul>
+<ul><li>Amazon verifies your business entity (LLC, S-Corp, Sole Proprietorship, etc.).</li><li>Amazon verifies every beneficial owner, anyone with more than 25% ownership, using government records and documentation you provide.</li></ul>
 <p>During the sign-up process, you'll be asked to provide ownership information. Have your business formation documents, tax ID and ownership structure ready.</p>
 <h2 id="steps-to-sign-up-for-amazon-relay">Steps to Sign Up for Amazon Relay</h2>
 <p>Once you confirm you meet the requirements, the process is straightforward:</p>
-<p><strong>1. Visit relay.amazon.com</strong> Go to the Amazon Relay homepage and select &quot;Sign up&quot; or &quot;Apply now.&quot; You'll need a business email address (not a personal Gmail or Yahoo). This will be your account login going forward.</p>
-<p><strong>2. Enter Your Business Information</strong> Provide your legal business name, entity type (LLC, S-Corp, etc.), your DOT and MC numbers, and the date your authority was granted. Double-check the authority date—if it's less than 180 days old, Amazon will ask you to reapply later.</p>
+<p><strong>1. Visit relay.amazon.com</strong> Go to the Amazon Relay homepage and select &quot;Sign up&quot; or &quot;Apply now.&quot;</p>
+<p><strong>2. Enter Your Business Information</strong> Provide your legal business name, entity type (LLC, S-Corp, etc.), your DOT and MC numbers, and the date your authority was granted. Double-check the authority date: if it's less than 180 days old, Amazon will ask you to reapply later.</p>
 <p><strong>3. Submit Safety and Compliance Records</strong> Amazon will pull your FMCSA records automatically once you provide your DOT number. If your BASIC scores are in range and your safety rating is acceptable, you'll move to the next step. If you're out of range on any metric, your application may be delayed or rejected.</p>
 <p><strong>4. Upload Insurance Documentation</strong> Provide proof of <a href="/amazon-relay-insurance-requirements/">insurance</a> for each coverage type (General Liability, Auto Liability, Cargo, Workers' Comp). Your insurance broker or agent can issue a certificate of insurance (ACORD form) that lists all required coverages and limits.</p>
 <p><strong>5. Verify Beneficial Ownership</strong> Provide documentation of your business structure and beneficial owners. If you're a sole proprietor, this is simple. If you're an LLC or corporation, you'll need operating agreements or articles of incorporation showing ownership percentages.</p>
-<p><strong>6. Review and Confirm</strong> Amazon will send you an approval notice via email once your application is processed. Once approved, you can log in to your Relay account and start browsing loads.</p>
-<p><strong>7. Set Up Your Profile</strong> Complete your carrier profile: add driver information, vehicle details, contact preferences (SMS or email dispatch alerts), and your preferred equipment and lanes. The more detailed your profile, the better Amazon can match you to work.</p>
+<p><strong>6. Review and Confirm</strong> Once approved, you can log in to your Relay account and start browsing loads.</p>
+<p><strong>7. Set Up Your Profile</strong> Complete your carrier profile: invite your drivers (each needs their own Relay profile, verified with a CDL and a selfie) and add your equipment details.</p>
 <h2 id="what-happens-if-you-don-t-meet-requirements">What Happens If You Don't Meet Requirements</h2>
-<p>If your DOT authority is too new, your BASIC scores are out of range, or your safety rating is below Satisfactory, Amazon will reject your application. You'll receive an email explaining which requirement you didn't meet.</p>
+<p>If your DOT authority is too new, your BASIC scores are out of range, or your safety rating is below Satisfactory, Amazon will reject your application.</p>
 <p>If it's the authority age, you simply need to wait. Apply again after 180 days.</p>
 <p>If it's a BASIC score or safety rating, work with your fleet manager or compliance officer to improve. Common issues:</p>
 <ul><li><strong>Unsafe Driving</strong>: Driver training or speed-governor limits.</li><li><strong>HOS Compliance</strong>: Better logging practices or dispatch timing.</li><li><strong>Vehicle Maintenance</strong>: Proactive vehicle inspections and repairs.</li><li><strong>Controlled Substances/Alcohol</strong>: Drug-screening programs.</li></ul>
 <p>Once you fix the issue, you can reapply. The FMCSA updates these records regularly, so improvements show up over time.</p>
 <h2 id="after-you-re-approved">After You're Approved</h2>
-<p>Once your account is active, you can <a href="/amazon-relay-load-board/">browse the load board</a>, post your truck for instant matching, and start accepting work. Many carriers use <a href="/amazon-relay-auto-refresh/">auto-refresh</a> tools or <a href="/amazon-relay-auto-booker/">auto-booking extensions</a> to speed up the process—NudoIQ is designed to work inside the Relay board and give you <a href="/amazon-relay-load-board/">lane rate history</a>, net profit per load, and <a href="/amazon-relay-scorecard/">scorecard dispute assistance</a>.</p>
-<p>NudoIQ costs <strong>$49.99 per month</strong> for all features. Start with a <strong>7-day free trial</strong>, cancel anytime. <strong>5.0 rating</strong> on the Chrome Web Store. Used by 300+ carriers.</p>
+<p>Once your account is active, you can <a href="/amazon-relay-load-board/">browse the load board</a>, post your truck for instant matching, and start accepting work. Many carriers use <a href="/amazon-relay-auto-refresh/">auto-refresh</a> tools or <a href="/amazon-relay-auto-booker/">auto-booking extensions</a> to speed up the process: NudoIQ is designed to work inside the Relay board and give you <a href="/amazon-relay-load-board/">lane rate history</a>, net profit per load, and <a href="/amazon-relay-scorecard/">scorecard dispute assistance</a>.</p>
+<p>NudoIQ costs <strong>$49.99 per month</strong> for all features. Start with a <strong>7-day free trial</strong>, no card needed to start, and cancel anytime. <strong>5.0 rating</strong> on the Chrome Web Store. Used by 300+ carriers.</p>
     </article>
 
     <section class="faq" aria-labelledby="faq-h">
       <h2 id="faq-h">Frequently asked questions</h2>
-      <details><summary>How long does Amazon Relay approval take?</summary><div class="a"><p>Approvals typically complete within a few business days after you submit your application, assuming all requirements are met. If Amazon needs to verify information or you have issues, it may take longer.</p></div></details>
-      <details><summary>What if my BASIC score is just slightly over the limit?</summary><div class="a"><p>Amazon doesn't make exceptions for BASIC scores—the limits are firm. If you're over the limit on any category, your application will be delayed or rejected. Work on improving that score and reapply once you're in range.</p></div></details>
+      <details><summary>How long does Amazon Relay approval take?</summary><div class="a"><p>Amazon doesn't publish an approval timeline. Missing documents or verification questions can slow things down, so have your insurance, authority and ownership documents ready.</p></div></details>
+      <details><summary>What if my BASIC score is just slightly over the limit?</summary><div class="a"><p>Amazon publishes these limits as requirements. If you're over the limit on any category, your application will be delayed or rejected. Work on improving that score and reapply once you're in range.</p></div></details>
       <details><summary>Can I appeal if my application is rejected?</summary><div class="a"><p>You can contact Amazon Relay support to understand why you were rejected. If the reason is temporary (authority age, BASIC score), you can reapply. If it's a persistent issue (unsatisfactory safety rating), you'll need to address it with the FMCSA first.</p></div></details>
       <details><summary>Do I need a business license?</summary><div class="a"><p>You need your DOT and MC numbers, which require business registration with your state and the FMCSA. A formal business license (LLC or S-Corp) is recommended but not always required; Sole Proprietor carriers can apply if they have DOT authority.</p></div></details>
-      <details><summary>Can I use my personal auto insurance?</summary><div class="a"><p>No. Amazon requires commercial insurance—General Liability, Auto Liability, Cargo and Workers' Compensation. Personal policies don't cover commercial freight work and won't meet Amazon's minimums.</p></div></details>
-      <details><summary>What if I have a newer authority but all my other metrics are strong?</summary><div class="a"><p>The 180-day rule is non-negotiable. You cannot get around it. Amazon will ask you to reapply after your authority reaches 180 days old. There are no exceptions, even for carriers with perfect BASIC scores or strong safety ratings.</p></div></details>
+      <details><summary>Can I use my personal auto insurance?</summary><div class="a"><p>No. Amazon requires commercial insurance: General Liability, Auto Liability, Cargo and Workers' Compensation. Personal policies don't cover commercial freight work and won't meet Amazon's minimums.</p></div></details>
+      <details><summary>What if I have a newer authority but all my other metrics are strong?</summary><div class="a"><p>Amazon requires authority active for at least 180 days, and strong BASIC scores don't replace it. Apply once your authority passes 180 days.</p></div></details>
     </section>
 
     <aside class="cta">
@@ -268,7 +322,7 @@
         <a href="/amazon-relay-box-truck/">Amazon Relay for Box Trucks</a>
         <a href="/how-much-does-amazon-relay-pay/">How Much Does Amazon Relay Pay?</a>
         <a href="/is-amazon-relay-worth-it/">Is Amazon Relay Worth It?</a>
-        <a href="/amazon-relay-scorecard/">Amazon Relay Scorecard: What It Measures and How to Dispute Violations</a>
+        <a href="/amazon-relay-scorecard/">Amazon Relay scorecard: how the performance score works and how to dispute it</a>
         <a href="/amazon-relay-auto-refresh/">Amazon Relay Auto Refresh: Why It Matters and How It Works</a>
       </div>
     </nav>

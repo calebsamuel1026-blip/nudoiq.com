@@ -63,6 +63,13 @@
       }catch(e){}
     })();
   </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
   <link rel="stylesheet" href="/assets/doc.css">
   <link rel="stylesheet" href="/assets/guide.css">
   <script type="application/ld+json">
@@ -72,9 +79,11 @@
   "headline": "Booking Multiple Loads on Amazon Relay",
   "description": "Use Relay's reload and return-trip suggestions, and plan against your HOS window when booking a second load.",
   "mainEntityOfPage": "https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/",
+  "url": "https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
   "datePublished": "2026-09-20",
-  "dateModified": "2026-09-20",
+  "dateModified": "2026-10-02",
+  "inLanguage": "en-US",
   "author": {
     "@type": "Organization",
     "name": "NudoIQ",
@@ -82,12 +91,14 @@
   },
   "publisher": {
     "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
     "name": "NudoIQ",
     "logo": {
       "@type": "ImageObject",
       "url": "https://nudoiq.com/brand/mark/icon128.png"
     }
-  }
+  },
+  "abstract": "To book multiple loads on Amazon Relay, use the board's reload and return-trip suggestions after the first booking, or post your truck with Post A Truck. Before booking a second load, check the pickup window, the deadhead and your Hours of Service: 11 hours of driving within a 14-hour window after 10 hours off."
 }
   </script>
   <script type="application/ld+json">
@@ -142,7 +153,7 @@
       "name": "How do I know my scorecard is good?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your scorecard is in the Relay portal under Performance. It tracks your record on loads you have completed."
+        "text": "Your scorecard is in the Relay portal. It tracks your record on loads you have completed."
       }
     },
     {
@@ -150,7 +161,7 @@
       "name": "Can I have multiple Post A Truck offers at the same time?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Amazon does not publish this information. Post A Truck works by listing your criteria and allowing shippers to instantly book matching loads. Contact support via the Relay portal if you have questions about posting limits."
+        "text": "Amazon does not publish this information. Post A Truck works by listing your criteria so Amazon can instantly book matching loads. Contact support via the Relay portal if you have questions about posting limits."
       }
     },
     {
@@ -172,12 +183,53 @@
   ]
 }
   </script>
-  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
-       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
-  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
-    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
-      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/brand/mark/icon128.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://nudoiq.com/#software",
+      "name": "NudoIQ",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Browser Extension",
+      "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
+      "url": "https://nudoiq.com/",
+      "downloadUrl": "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+      "offers": {
+        "@type": "Offer",
+        "price": "49.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nudoiq.com/#pricing",
+        "description": "7-day free trial, no card needed to start. $49.99 per month after the trial. Cancel anytime.",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "49.99",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "billingDuration": "P1M"
+        }
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -197,12 +249,14 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Booking Multiple Loads on Amazon Relay</span></nav>
     <h1 class="page-title">Booking Multiple Loads on Amazon Relay</h1>
     <p class="page-subtitle">The Relay board offers tools to help you find a second or third load. Understand how they work and how to plan your timing.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-02">October 2, 2026</time></p>
   </div></div>
 
   <div class="container">
     <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>To book multiple loads on Amazon Relay, use the board's reload and return-trip suggestions after the first booking, or post your truck with Post A Truck. Before booking a second load, check the pickup window, the deadhead and your Hours of Service: 11 hours of driving within a 14-hour window after 10 hours off.</p></section>
 <h2 id="how-the-board-suggests-additional-work">How the Board Suggests Additional Work</h2>
-<p>After you book a load, <a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">the Relay board can suggest return trips and reload recommendations to help you continue your journey</a>. These are loads posted by other shippers that match your truck and route. They are suggestions only. You still choose whether to book them.</p>
+<p>After you book a load, <a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">the Relay board can suggest return trips and reload recommendations to help you continue your journey</a>. These are loads Amazon suggests to keep your driver moving. They are suggestions only. You still choose whether to book them.</p>
 <p><a href="https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search" target="_blank" rel="noopener">Reload and return-trip suggestions come from the board's matching engine and from your saved searches and search history</a>.</p>
 <h2 id="pickup-time-options">Pickup Time Options</h2>
 <p><a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">On some loads you can choose your own pickup time at booking to allow for traffic, deadhead, or HOS planning</a>. If a load offers time options, you see them when you open the load details. This helps you fit a second load into your schedule without missing the pickup window.</p>
@@ -216,7 +270,7 @@
 <p>Instead of hunting the board for a second load, you can post your truck. <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search" target="_blank" rel="noopener">You list your truck's availability and minimum payout</a>, and <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search" target="_blank" rel="noopener">Relay will instantly book loads that match your criteria</a>.</p>
 <p>Post A Truck is useful if you know where you want to go and want to control your minimum rate. However, a post is not guaranteed. You might not get a match.</p>
 <h2 id="performance-and-load-access">Performance and Load Access</h2>
-<p><a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">High-performing carriers get first access to loads posted on the load board</a>. Your performance scorecard tracks your record on loads you book. The scorecard is in the Relay portal under Performance.</p>
+<p><a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">High-performing carriers get first access to loads posted on the load board</a>. Your performance scorecard tracks your record on loads you book. The scorecard is in the Relay portal.</p>
 <p>Higher scores open more load choices. Lower scores limit which loads you see first.</p>
 <h2 id="cancellations-and-scorecard">Cancellations and Scorecard</h2>
 <p>If you book a load and then cancel it, that shows on your scorecard. Your scorecard is visible in the Relay portal and affects which loads you see and when.</p>
@@ -233,8 +287,8 @@
       <h2 id="faq-h">Frequently asked questions</h2>
       <details><summary>Can the board suggest a load that does not work for me?</summary><div class="a"><p>Yes. Suggestions are based on the board's matching engine and your search history. Read the pickup window and delivery time and decide if it works for your HOS and schedule before you book.</p></div></details>
       <details><summary>What if a reload suggestion has a pickup time I cannot make?</summary><div class="a"><p>Do not book it. You need time between the end of your first delivery and the second pickup. If you cannot make the window, the load is not right for you.</p></div></details>
-      <details><summary>How do I know my scorecard is good?</summary><div class="a"><p>Your scorecard is in the Relay portal under Performance. It tracks your record on loads you have completed.</p></div></details>
-      <details><summary>Can I have multiple Post A Truck offers at the same time?</summary><div class="a"><p>Amazon does not publish this information. <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search" target="_blank" rel="noopener">Post A Truck works by listing your criteria and allowing shippers to instantly book matching loads</a>. Contact support via the Relay portal if you have questions about posting limits.</p></div></details>
+      <details><summary>How do I know my scorecard is good?</summary><div class="a"><p>Your scorecard is in the Relay portal. It tracks your record on loads you have completed.</p></div></details>
+      <details><summary>Can I have multiple Post A Truck offers at the same time?</summary><div class="a"><p>Amazon does not publish this information. <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search" target="_blank" rel="noopener">Post A Truck works by listing your criteria so Amazon can instantly book matching loads</a>. Contact support via the Relay portal if you have questions about posting limits.</p></div></details>
       <details><summary>What if I run out of HOS before finishing the second load?</summary><div class="a"><p>You cannot continue driving. Plan your loads so you finish both within your HOS window. <a href="https://www.fmcsa.dot.gov/regulations/hours-service/summary-hours-service-regulations" target="_blank" rel="noopener">Under FMCSA rules you have 11 hours driving within a 14-hour window</a>. Count the hours before you book.</p></div></details>
       <details><summary>Do all loads offer pickup time options?</summary><div class="a"><p>No. <a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">Some loads offer time options to allow for traffic and HOS planning, but not all loads have this</a>.</p></div></details>
     </section>
@@ -247,12 +301,12 @@
     <nav class="related" aria-label="More Amazon Relay guides">
       <h2>More Amazon Relay guides</h2>
       <div class="cards">
-        <a href="/loadfetcher-alternative/">LoadFetcher vs NudoIQ: What's the Difference</a>
-        <a href="/amazon-relay-account-suspended/">Cannot Book Loads on Amazon Relay</a>
-        <a href="/amazon-relay-load-board-not-showing-loads/">When the Amazon Relay Load Board Shows No Loads</a>
         <a href="/amazon-relay-load-board/">How the Amazon Relay Load Board Works</a>
         <a href="/what-is-amazon-relay/">What Is Amazon Relay?</a>
         <a href="/amazon-relay-requirements/">Amazon Relay Requirements</a>
+        <a href="/amazon-relay-insurance-requirements/">Amazon Relay Insurance Requirements</a>
+        <a href="/amazon-relay-box-truck/">Amazon Relay for Box Trucks</a>
+        <a href="/how-much-does-amazon-relay-pay/">How Much Does Amazon Relay Pay?</a>
       </div>
     </nav>
 

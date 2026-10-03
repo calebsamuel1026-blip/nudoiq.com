@@ -63,6 +63,13 @@
       }catch(e){}
     })();
   </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
   <link rel="stylesheet" href="/assets/doc.css">
   <link rel="stylesheet" href="/assets/guide.css">
   <script type="application/ld+json">
@@ -72,9 +79,11 @@
   "headline": "LoadFetcher vs NudoIQ: What's the Difference",
   "description": "Fair comparison of LoadFetcher and NudoIQ for Amazon Relay. What both tools do, where they differ, pricing, and which is right for you.",
   "mainEntityOfPage": "https://nudoiq.com/loadfetcher-alternative/",
+  "url": "https://nudoiq.com/loadfetcher-alternative/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
   "datePublished": "2026-09-20",
-  "dateModified": "2026-09-20",
+  "dateModified": "2026-10-02",
+  "inLanguage": "en-US",
   "author": {
     "@type": "Organization",
     "name": "NudoIQ",
@@ -82,12 +91,14 @@
   },
   "publisher": {
     "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
     "name": "NudoIQ",
     "logo": {
       "@type": "ImageObject",
       "url": "https://nudoiq.com/brand/mark/icon128.png"
     }
-  }
+  },
+  "abstract": "NudoIQ is a LoadFetcher alternative for Amazon Relay. Both refresh the load board and book loads, and LoadFetcher offers a free refresher tier. NudoIQ costs $49.99 a month after a 7-day free trial with no card needed to start, and adds lane rate history, net profit per load, scorecard dispute letters, a backhaul finder and a Post A Truck helper."
 }
   </script>
   <script type="application/ld+json">
@@ -134,7 +145,7 @@
       "name": "Does NudoIQ slow down the load board?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. NudoIQ runs inside the Relay tab and doesn't throttle the board's performance. It adds a control bar and calculates profit and lane data in the background, but it doesn't affect how fast the board loads or refreshes."
+        "text": "It's built not to. NudoIQ runs inside the Relay tab and adds a control bar that calculates profit and lane data. One Chrome Web Store reviewer, Futo, wrote that its features \"dont slow the load board down.\""
       }
     },
     {
@@ -142,7 +153,7 @@
       "name": "What if I use LoadFetcher now and want to switch to NudoIQ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Remove LoadFetcher from your extensions, then install NudoIQ from the Chrome Web Store. Sign up for the 7-day free trial, and you'll see all the features. Your Relay login and load board stay the same—you're just changing the extension."
+        "text": "Remove LoadFetcher from your extensions, then install NudoIQ from the Chrome Web Store. Sign up for the 7-day free trial, and you'll see all the features. Your Relay login and load board stay the same: you're just changing the extension."
       }
     },
     {
@@ -166,18 +177,59 @@
       "name": "How do I know if lane rate history is accurate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Lane rate history in NudoIQ comes from the Relay load board's posted rates over the past 90 days. It's not a prediction—it's what that lane actually paid. But Amazon's rates change based on season, volume, time of day, and other factors, so historical rates don't guarantee today's rate. That's why NudoIQ calls it decision support, not a guarantee."
+        "text": "Lane rate history in NudoIQ comes from the Relay load board's posted rates over the past 90 days. It's not a prediction: it's what that lane actually paid. But Amazon's rates change based on season, volume, time of day, and other factors, so historical rates don't guarantee today's rate. That's why NudoIQ calls it decision support, not a guarantee."
       }
     }
   ]
 }
   </script>
-  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
-       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
-  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
-    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
-      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/brand/mark/icon128.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://nudoiq.com/#software",
+      "name": "NudoIQ",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Browser Extension",
+      "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
+      "url": "https://nudoiq.com/",
+      "downloadUrl": "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+      "offers": {
+        "@type": "Offer",
+        "price": "49.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nudoiq.com/#pricing",
+        "description": "7-day free trial, no card needed to start. $49.99 per month after the trial. Cancel anytime.",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "49.99",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "billingDuration": "P1M"
+        }
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -197,29 +249,31 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">LoadFetcher vs NudoIQ: What's the Difference</span></nav>
     <h1 class="page-title">LoadFetcher vs NudoIQ: What's the Difference</h1>
     <p class="page-subtitle">Both LoadFetcher and NudoIQ refresh the Amazon Relay load board and book loads automatically. But they offer different feature sets and price points. Here's how they compare.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-02">October 2, 2026</time></p>
   </div></div>
 
   <div class="container">
     <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>NudoIQ is a LoadFetcher alternative for Amazon Relay. Both refresh the load board and book loads, and LoadFetcher offers a free refresher tier. NudoIQ costs $49.99 a month after a 7-day free trial with no card needed to start, and adds lane rate history, net profit per load, scorecard dispute letters, a backhaul finder and a Post A Truck helper.</p></section>
 <h2 id="what-both-tools-do">What Both Tools Do</h2>
 <p>LoadFetcher and NudoIQ are both Amazon Relay extensions. They both live in your browser, run on desktop Chrome, and do the same core job: refresh the load board automatically so you don't have to, and book matching loads for you if you set it up.</p>
 <p>That's the table-stakes feature set for any Relay extension. The load board refreshes when you reload it, good loads book within seconds, and manual refreshing every 30 seconds doesn't work if you're actually driving or managing your business. A refresher extension solves that.</p>
-<p>Both tools let you set booking rules—pick loads by lane, price, distance, equipment—and book automatically when a match posts. Both track your profit floor (the minimum payout you'll accept) and a maximum-books cap (stop booking once you hit it).</p>
+<p>Both tools refresh the board and book loads. NudoIQ also lets you set booking rules (lane, price, distance, equipment), a profit floor (the minimum net you'll accept) and a max-books cap (stop booking once you hit it). LoadFetcher doesn't advertise a profit floor or a cap.</p>
 <h2 id="where-loadfetcher-stops">Where LoadFetcher Stops</h2>
-<p>LoadFetcher's pitch is simplicity. It offers a free tier that includes the refresher and basic booking rules. If you only need to reload the board automatically and book loads that match your filters, LoadFetcher's free version does that.</p>
+<p>LoadFetcher's pitch is simplicity. It offers a free refresher tier and focuses on refreshing and booking. If that's all you need, the free version may cover it.</p>
 <p>LoadFetcher does not advertise lane rate history (what that route normally pays), net profit per load (what you keep after costs), scorecard dispute letters, backhaul finding, or Post A Truck helpers. Those features are not part of LoadFetcher's public offering.</p>
 <p>For a carrier who wants a refresher and basic booker, LoadFetcher's free tier is a zero-dollar way to work smarter than manual refreshing.</p>
 <h2 id="where-nudoiq-adds">Where NudoIQ Adds</h2>
 <p>NudoIQ starts where LoadFetcher's free tier ends. Every feature is included at one price: $49.99 a month.</p>
-<p><strong>Lane Intelligence</strong>: NudoIQ checks the posted rate against that lane's 90-day price history. It shows you a target rate (what the lane normally pays), an expected range, and a confidence level. You see, for example, &quot;$483 target next to a $407 board price.&quot; This is decision support, not a guarantee—Amazon sets rates based on season, time of day, volume, and other factors—but it tells you whether today's rate is high or low for that specific route.</p>
+<p><strong>Lane Intelligence</strong>: NudoIQ checks the posted rate against that lane's 90-day price history. It shows you a target rate (what the lane normally pays), an expected range, and a confidence level. You see, for example, &quot;$483 target next to a $407 board price.&quot; This is decision support, not a guarantee (Amazon sets rates based on season, time of day, volume, and other factors) but it tells you whether today's rate is high or low for that specific route.</p>
 <p><strong>Net Profit Per Load</strong>: Instead of just seeing the posted rate, you see the dollars you keep after subtracting driver pay, fuel, maintenance, and deadhead to pickup. The extension calculates this for every load card, so you can set a profit floor and hide loads that don't clear it. A $600 rate might net $200 after costs on one lane and $400 on another. NudoIQ shows you the actual take-home.</p>
-<p><strong>Scorecard Dispute Letters</strong>: Your performance scorecard in Relay tracks safety, on-time delivery, tender acceptance, and app usage. Low scores limit your access to loads. If Amazon dings your scorecard and you disagree with the violation, NudoIQ reads your scorecard, identifies the violation, and drafts a dispute letter citing Amazon policy. You review it, edit it if needed, and submit it yourself. Amazon makes the final decision, but NudoIQ saves you hours of writing and research.</p>
+<p><strong>Scorecard Dispute Letters</strong>: Amazon grades carriers on on-time, acceptance, app usage and disruption-free, and your overall score is the lowest of the four (see our <a href="/amazon-relay-scorecard/">scorecard guide</a>). Low grades limit your access to loads. If Amazon dings your scorecard and you disagree with the violation, NudoIQ reads your scorecard, identifies the violation, and drafts a dispute letter citing Amazon policy. You review it, edit it if needed, and submit it yourself. Amazon makes the final decision, but you don't start from a blank page.</p>
 <p><strong>Backhaul Finder</strong>: Once you complete a load and you're at the drop-off, NudoIQ searches for loads from that location back toward home (within your radius and time window). It sorts by total pay, rate per mile, pickup time, or distance home, so you can find a profitable return trip quickly instead of scrolling the entire board.</p>
 <p><strong>Post A Truck Helper</strong>: When you post availability on Relay's Post A Truck feature, NudoIQ shows your origin, destination, distance, and board price next to your minimum $/mile and minimum payout. Then it posts with one button.</p>
 <p><strong>Other Conveniences</strong>: HOS overview, driver dispatch by text/email on assignment, control bar with three modes (Alert to ping you on a match, Search to highlight matches, Autobook to book automatically).</p>
 <h2 id="pricing-free-vs-49-99-with-a-trial">Pricing: Free vs. $49.99 with a Trial</h2>
 <p>LoadFetcher's free tier costs nothing. NudoIQ costs $49.99 a month, with a 7-day free trial.</p>
-<p>If you want to try NudoIQ risk-free, sign up for the trial, see what the extra features do (lane history, net profit, dispute letters, backhaul), and decide if they're worth the monthly cost. Cancel anytime from your Stripe portal—no lock-in, no cancellation fees.</p>
+<p>To try NudoIQ, start the 7-day free trial (no card needed to start), see what the extra features do (lane history, net profit, dispute letters, backhaul), and decide if they're worth the monthly cost. Cancel anytime from your Stripe portal, with no lock-in.</p>
 <h2 id="who-should-stay-on-loadfetcher-s-free-tier">Who Should Stay on LoadFetcher's Free Tier</h2>
 <p>If you only need a refresher and basic booking rules, LoadFetcher's free tier does the job. You don't need lane rate history, net profit calculations, or dispute automation if:</p>
 <ul><li>You already know what lanes pay from experience.</li><li>You calculate profit in your head or a spreadsheet.</li><li>Your scorecard is clean and you don't expect to dispute anything.</li><li>You rarely book backhauls and find return trips manually.</li><li>You don't use Post A Truck.</li></ul>
@@ -229,31 +283,31 @@
 <ul><li>See rate history before deciding on a load (is $500 high or low for this lane today?).</li><li>Automate profit calculation so you only book loads that clear your floor.</li><li>Dispute scorecard violations without writing from scratch.</li><li>Find backhaul work systematically instead of hunting manually.</li><li>Post your truck availability and get matched without extra steps.</li></ul>
 <p>If you're managing dispatch across multiple drivers or trucks, the dispatch-by-text feature saves time. If you're watching HOS limits, the HOS overview adds context. If you run a tight operation and profit margins matter, the net profit calculator matters.</p>
 <h2 id="what-you-get-with-nudoiq">What You Get with NudoIQ</h2>
-<p>The extension is desktop Chrome only. It works in English and Spanish. When you sign up, you get a 7-day free trial. A credit card is required to start the trial, but you're not charged until day 8. If you cancel before then, no charge.</p>
-<p>After the trial, NudoIQ costs $49.99 a month. You can cancel anytime from your Stripe portal; no prorated refunds, but no lock-in either.</p>
-<p>You can run it on as many devices as you sign in on—one truck, one office, twenty trucks. The price stays $49.99.</p>
+<p>The extension is desktop Chrome only. It works in English and Spanish. When you sign up, you get a 7-day free trial, and no card is needed to start.</p>
+<p>After the trial, NudoIQ costs $49.99 a month. You can cancel anytime from your Stripe portal, with no lock-in.</p>
+<p>The price is the same for one truck or twenty: $49.99.</p>
 <h2 id="installation-and-privacy">Installation and Privacy</h2>
 <p>NudoIQ is published on the Chrome Web Store by Sami Enterprises LLC, Portland, Oregon. It's not made by, affiliated with, or endorsed by Amazon. You install it from the Web Store just like any other extension.</p>
-<p>The extension runs inside the Relay load board tab in your browser. It doesn't require a separate login or account beyond your existing Relay credentials. It doesn't upload your data to anyone. It's 5.0 rated on the Chrome Web Store.</p>
+<p>The extension runs inside the Relay load board tab in your browser. It runs where you're already signed in to Relay. It's 5.0 rated on the Chrome Web Store.</p>
 <h2 id="fair-comparison-table">Fair Comparison Table</h2>
-<div class="tbl"><table><thead><tr><th>Feature</th><th>LoadFetcher</th><th>NudoIQ</th></tr></thead><tbody><tr><td><strong>Refresh Control</strong></td><td>Advertised</td><td>Advertised</td></tr><tr><td><strong>Booking Rules</strong></td><td>Advertised</td><td>Advertised</td></tr><tr><td><strong>Profit Floor</strong></td><td>Advertised</td><td>Advertised</td></tr><tr><td><strong>Max Books Cap</strong></td><td>Advertised</td><td>Advertised</td></tr><tr><td><strong>Lane Rate History</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Net Profit Calculation</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Scorecard Dispute Drafting</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Backhaul Finder</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Post A Truck Helper</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>HOS Overview</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Telegram Alerts</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Price</strong></td><td>Free</td><td>$49.99/mo, 7-day trial</td></tr><tr><td><strong>Cancel Anytime</strong></td><td>N/A</td><td>Yes, no lock-in</td></tr><tr><td><strong>CWS Rating</strong></td><td>Not stated</td><td>5.0</td></tr></tbody></table></div>
+<div class="tbl"><table><thead><tr><th>Feature</th><th>LoadFetcher</th><th>NudoIQ</th></tr></thead><tbody><tr><td><strong>Refreshing and Booking</strong></td><td>Advertised</td><td>Advertised</td></tr><tr><td><strong>Booking Rules (lane, price, distance)</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Profit Floor</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Max Books Cap</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Lane Rate History</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Net Profit Calculation</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Scorecard Dispute Drafting</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Backhaul Finder</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Post A Truck Helper</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>HOS Overview</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Telegram Alerts</strong></td><td>Not advertised</td><td>Advertised</td></tr><tr><td><strong>Price</strong></td><td>Free tier</td><td>$49.99/mo, 7-day free trial, no card to start</td></tr><tr><td><strong>Cancel Anytime</strong></td><td>N/A</td><td>Yes, no lock-in</td></tr><tr><td><strong>CWS Rating</strong></td><td>Not stated</td><td>5.0</td></tr></tbody></table></div>
 <h2 id="making-the-decision">Making the Decision</h2>
 <p>Start by asking: what am I doing manually today that frustrates me most? Is it refreshing the board? Is it looking up lane rates? Is it calculating whether a load is profitable? Is it finding backhauls? Is it disputing scorecard issues?</p>
 <p>If it's just refreshing and basic booking, LoadFetcher's free tier fixes that. If it's also rate judgment, profit calculation, and dispute work, NudoIQ does more.</p>
 <p>Both tools run inside the Relay load board in your browser. Neither has anything to do with how Amazon operates. They're independent tools that help you work faster.</p>
-<h2 id="try-nudoiq-risk-free">Try NudoIQ Risk-Free</h2>
-<p>If you want to test NudoIQ's extra features without risking money, sign up for the 7-day free trial. You'll see lane history next to every load, net profit calculated automatically, and access to all the other tools. If they work for you, keep it. If not, cancel from Stripe before day 8 and you pay nothing.</p>
+<h2 id="try-nudoiq-free-for-7-days">Try NudoIQ Free for 7 Days</h2>
+<p>If you want to test NudoIQ's extra features, start the 7-day free trial. No card is needed to start. You'll see lane history next to every load, net profit calculated automatically, and access to all the other tools. If they work for you, keep it. If not, cancel anytime.</p>
 <p>Used by 300+ carriers and rated 5.0 on the Chrome Web Store, NudoIQ is built for owner-operators who want to make faster, better decisions on the Relay load board.</p>
     </article>
 
     <section class="faq" aria-labelledby="faq-h">
       <h2 id="faq-h">Frequently asked questions</h2>
       <details><summary>Can I use both LoadFetcher and NudoIQ at the same time?</summary><div class="a"><p>Both extensions run inside the same load board tab, so installing both could cause conflicts or unexpected behavior. Use one or the other, not both. You can always switch if you want to test different tools.</p></div></details>
-      <details><summary>Does NudoIQ slow down the load board?</summary><div class="a"><p>No. NudoIQ runs inside the Relay tab and doesn't throttle the board's performance. It adds a control bar and calculates profit and lane data in the background, but it doesn't affect how fast the board loads or refreshes.</p></div></details>
-      <details><summary>What if I use LoadFetcher now and want to switch to NudoIQ?</summary><div class="a"><p>Remove LoadFetcher from your extensions, then install NudoIQ from the Chrome Web Store. Sign up for the 7-day free trial, and you'll see all the features. Your Relay login and load board stay the same—you're just changing the extension.</p></div></details>
+      <details><summary>Does NudoIQ slow down the load board?</summary><div class="a"><p>It's built not to. NudoIQ runs inside the Relay tab and adds a control bar that calculates profit and lane data. One Chrome Web Store reviewer, Futo, wrote that its features &quot;dont slow the load board down.&quot;</p></div></details>
+      <details><summary>What if I use LoadFetcher now and want to switch to NudoIQ?</summary><div class="a"><p>Remove LoadFetcher from your extensions, then install NudoIQ from the Chrome Web Store. Sign up for the 7-day free trial, and you'll see all the features. Your Relay login and load board stay the same: you're just changing the extension.</p></div></details>
       <details><summary>Does NudoIQ tell me which loads to book?</summary><div class="a"><p>No. It shows you rate history, profit, and dispute data, but the booking decision is yours. NudoIQ is decision support. You set the rules (price, lane, minimum profit), and it alerts you or books automatically based on those rules. Amazon Relay is your business; the tool helps you run it smarter.</p></div></details>
       <details><summary>Is there a discount if I sign up for longer than one month?</summary><div class="a"><p>NudoIQ's pricing is month-to-month at $49.99. There's no annual pricing or discount. You pay for the month and can cancel anytime.</p></div></details>
-      <details><summary>How do I know if lane rate history is accurate?</summary><div class="a"><p>Lane rate history in NudoIQ comes from the Relay load board's posted rates over the past 90 days. It's not a prediction—it's what that lane actually paid. But Amazon's rates change based on season, volume, time of day, and other factors, so historical rates don't guarantee today's rate. That's why NudoIQ calls it decision support, not a guarantee.</p></div></details>
+      <details><summary>How do I know if lane rate history is accurate?</summary><div class="a"><p>Lane rate history in NudoIQ comes from the Relay load board's posted rates over the past 90 days. It's not a prediction: it's what that lane actually paid. But Amazon's rates change based on season, volume, time of day, and other factors, so historical rates don't guarantee today's rate. That's why NudoIQ calls it decision support, not a guarantee.</p></div></details>
     </section>
 
     <aside class="cta">
@@ -264,12 +318,12 @@
     <nav class="related" aria-label="More Amazon Relay guides">
       <h2>More Amazon Relay guides</h2>
       <div class="cards">
+        <a href="/amazon-relay-loads/">Amazon Relay loads: load types, equipment and how to book them</a>
+        <a href="/amazon-relay-carrier-data/">Amazon Relay carrier data 2026: what FMCSA inspection records show</a>
+        <a href="/amazon-relay-box-truck-loads/">Amazon Relay box truck loads: how to find and book them</a>
+        <a href="/amazon-relay-power-only/">Amazon Relay power only: how it works and how to book it</a>
+        <a href="/amazon-relay-dispatcher/">Amazon Relay dispatcher: what the job is and how to do it well</a>
         <a href="/amazon-relay-account-suspended/">Cannot Book Loads on Amazon Relay</a>
-        <a href="/amazon-relay-load-board-not-showing-loads/">When the Amazon Relay Load Board Shows No Loads</a>
-        <a href="/how-to-book-multiple-loads-on-amazon-relay/">Booking Multiple Loads on Amazon Relay</a>
-        <a href="/amazon-relay-load-board/">How the Amazon Relay Load Board Works</a>
-        <a href="/what-is-amazon-relay/">What Is Amazon Relay?</a>
-        <a href="/amazon-relay-requirements/">Amazon Relay Requirements</a>
       </div>
     </nav>
 

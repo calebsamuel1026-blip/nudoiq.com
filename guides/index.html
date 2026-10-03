@@ -63,6 +63,13 @@
       }catch(e){}
     })();
   </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
   <link rel="stylesheet" href="/assets/doc.css">
   <link rel="stylesheet" href="/assets/guide.css">
   <script type="application/ld+json">
@@ -136,7 +143,7 @@
       "@type": "ListItem",
       "position": 8,
       "url": "https://nudoiq.com/amazon-relay-scorecard/",
-      "name": "Amazon Relay Scorecard: What It Measures and How to Dispute Violations"
+      "name": "Amazon Relay scorecard: how the performance score works and how to dispute it"
     },
     {
       "@type": "ListItem",
@@ -165,30 +172,54 @@
     {
       "@type": "ListItem",
       "position": 13,
+      "url": "https://nudoiq.com/amazon-relay-loads/",
+      "name": "Amazon Relay loads: load types, equipment and how to book them"
+    },
+    {
+      "@type": "ListItem",
+      "position": 14,
+      "url": "https://nudoiq.com/amazon-relay-carrier-data/",
+      "name": "Amazon Relay carrier data 2026: what FMCSA inspection records show"
+    },
+    {
+      "@type": "ListItem",
+      "position": 15,
+      "url": "https://nudoiq.com/amazon-relay-box-truck-loads/",
+      "name": "Amazon Relay box truck loads: how to find and book them"
+    },
+    {
+      "@type": "ListItem",
+      "position": 16,
+      "url": "https://nudoiq.com/amazon-relay-power-only/",
+      "name": "Amazon Relay power only: how it works and how to book it"
+    },
+    {
+      "@type": "ListItem",
+      "position": 17,
+      "url": "https://nudoiq.com/amazon-relay-dispatcher/",
+      "name": "Amazon Relay dispatcher: what the job is and how to do it well"
+    },
+    {
+      "@type": "ListItem",
+      "position": 18,
       "url": "https://nudoiq.com/amazon-relay-account-suspended/",
       "name": "Cannot Book Loads on Amazon Relay"
     },
     {
       "@type": "ListItem",
-      "position": 14,
+      "position": 19,
       "url": "https://nudoiq.com/amazon-relay-load-board-not-showing-loads/",
       "name": "When the Amazon Relay Load Board Shows No Loads"
     },
     {
       "@type": "ListItem",
-      "position": 15,
+      "position": 20,
       "url": "https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/",
       "name": "Booking Multiple Loads on Amazon Relay"
     }
   ]
 }
   </script>
-  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
-       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
-  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
-    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
-      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
 </head>
 <body>
 
@@ -220,11 +251,16 @@
         <a href="/amazon-relay-box-truck/">Amazon Relay for Box Trucks<span>Run Amazon Relay with a 16 ft or 26 ft box truck with tuck-under liftgate. Cargo vans don't work. Find box truck loads and learn how rates vary.</span></a>
         <a href="/how-much-does-amazon-relay-pay/">How Much Does Amazon Relay Pay?<span>Amazon Relay pay varies by lane, season, time of day and equipment. Understand what sets rates and how to evaluate pricing fairly.</span></a>
         <a href="/is-amazon-relay-worth-it/">Is Amazon Relay Worth It?<span>Amazon Relay has pros and cons. Fast weekly pay and steady loads, but board competition and rate changes. Who it works for.</span></a>
-        <a href="/amazon-relay-scorecard/">Amazon Relay Scorecard: What It Measures and How to Dispute Violations<span>What the Amazon Relay scorecard measures, why it limits load access, and how to dispute violations step by step. Includes NudoIQ's dispute letter tool.</span></a>
+        <a href="/amazon-relay-scorecard/">Amazon Relay scorecard: how the performance score works and how to dispute it<span>How the Amazon Relay scorecard and performance score work: the four metrics, F to A+ grades, what each grade opens, and how to dispute an impact.</span></a>
         <a href="/amazon-relay-auto-refresh/">Amazon Relay Auto Refresh: Why It Matters and How It Works<span>How Amazon Relay auto-refreshers work, why refreshing matters, interval and jitter explained, and what to set for your operation.</span></a>
         <a href="/amazon-relay-auto-booker/">Amazon Relay Auto Booker: How Automatic Booking Works<span>How Amazon Relay auto-booker extensions work, how to set safe booking rules, and guardrails that prevent booking loads you don't want.</span></a>
         <a href="/best-amazon-relay-extensions/">Best Amazon Relay Extensions: Refresher and Auto-Booker Tools<span>Compare top Amazon Relay extensions. What to look for in a refresher and auto-booker, and how LoadFetcher, Rocket Relay and NudoIQ stack up.</span></a>
         <a href="/loadfetcher-alternative/">LoadFetcher vs NudoIQ: What's the Difference<span>Fair comparison of LoadFetcher and NudoIQ for Amazon Relay. What both tools do, where they differ, pricing, and which is right for you.</span></a>
+        <a href="/amazon-relay-loads/">Amazon Relay loads: load types, equipment and how to book them<span>How to get Amazon Relay loads: load types (one-way, round trip, blocks, contracts), the equipment each needs, and how to find and book loads faster.</span></a>
+        <a href="/amazon-relay-carrier-data/">Amazon Relay carrier data 2026: what FMCSA inspection records show<span>How many carriers haul Amazon freight? NudoIQ's analysis of 101,444 FMCSA roadside inspections listing Amazon as the shipper, from 2023 to 2026.</span></a>
+        <a href="/amazon-relay-box-truck-loads/">Amazon Relay box truck loads: how to find and book them<span>How to find Amazon Relay box truck loads: filter the board for 16 or 26 ft trucks, set up Post A Truck, pick contracts or spot, and judge a rate.</span></a>
+        <a href="/amazon-relay-power-only/">Amazon Relay power only: how it works and how to book it<span>Amazon Relay power only means you bring the tractor and Amazon provides the trailer. Which loads work that way, day cab vs sleeper, and judging a rate.</span></a>
+        <a href="/amazon-relay-dispatcher/">Amazon Relay dispatcher: what the job is and how to do it well<span>What an Amazon Relay dispatcher does: booking loads, setting up drivers, tracking trips and protecting the score. Plus dispatch service vs DIY.</span></a>
         <a href="/amazon-relay-account-suspended/">Cannot Book Loads on Amazon Relay<span>If you cannot book or haul Relay loads, check your insurance status and compliance. What Amazon publishes and what it does not.</span></a>
         <a href="/amazon-relay-load-board-not-showing-loads/">When the Amazon Relay Load Board Shows No Loads<span>When the Relay load board is empty or sparse, check filters and account status in this order.</span></a>
         <a href="/how-to-book-multiple-loads-on-amazon-relay/">Booking Multiple Loads on Amazon Relay<span>Use Relay's reload and return-trip suggestions, and plan against your HOS window when booking a second load.</span></a>

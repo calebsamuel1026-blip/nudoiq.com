@@ -63,6 +63,13 @@
       }catch(e){}
     })();
   </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
   <link rel="stylesheet" href="/assets/doc.css">
   <link rel="stylesheet" href="/assets/guide.css">
   <script type="application/ld+json">
@@ -72,9 +79,11 @@
   "headline": "How Much Does Amazon Relay Pay?",
   "description": "Amazon Relay pay varies by lane, season, time of day and equipment. Understand what sets rates and how to evaluate pricing fairly.",
   "mainEntityOfPage": "https://nudoiq.com/how-much-does-amazon-relay-pay/",
+  "url": "https://nudoiq.com/how-much-does-amazon-relay-pay/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
   "datePublished": "2026-09-20",
-  "dateModified": "2026-09-20",
+  "dateModified": "2026-10-02",
+  "inLanguage": "en-US",
   "author": {
     "@type": "Organization",
     "name": "NudoIQ",
@@ -82,12 +91,14 @@
   },
   "publisher": {
     "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
     "name": "NudoIQ",
     "logo": {
       "@type": "ImageObject",
       "url": "https://nudoiq.com/brand/mark/icon128.png"
     }
-  }
+  },
+  "abstract": "Amazon Relay pay varies by load, and Amazon does not publish typical rates. Each rate includes a base rate, a fuel surcharge and tolls, and moves with distance, deadhead, trip direction, equipment, live loads, season and region. Amazon pays weekly: loads finished by 11:59 pm Saturday are paid the following Friday."
 }
   </script>
   <script type="application/ld+json">
@@ -134,7 +145,7 @@
       "name": "Are rates higher in the morning or evening?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Generally, early morning (5-7 AM) and mid-morning (10 AM-12 PM) see better rates than afternoon or evening. Peak demand times usually have higher-priced loads available."
+        "text": "Amazon doesn't publish which hours pay more. Rates move with demand, so the same lane can pay differently at different times. Track your own lanes to see the pattern."
       }
     },
     {
@@ -142,7 +153,7 @@
       "name": "Can I negotiate a rate with Amazon?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Amazon sets the rate for each load and you accept or decline it. There's no back-and-forth negotiation on Relay."
+        "text": "Not on most spot loads, which book at the listed price. On select urgent loads, top-performing carriers can name a price through Relay Assistant, and Amazon may approve or counter. Post A Truck lets you set a minimum rate per mile, and auctions let you bid on contracts."
       }
     },
     {
@@ -150,7 +161,7 @@
       "name": "Do owner-operators make more than small fleet carriers?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. Amazon posts the same rate to every carrier on the board. Fleet size doesn't affect your per-load pricing."
+        "text": "Amazon doesn't publish anything that ties pay to fleet size, and there's no fleet size requirement to haul for Relay. Your performance grade decides access to things like contracts and early spot loads, and auction eligibility also considers equipment count, tenure and CARB compliance."
       }
     },
     {
@@ -158,7 +169,7 @@
       "name": "How long does it take to get paid after I complete a load?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If you complete the load before 11:59 PM Saturday, you're paid the following Friday. If you complete it after midnight Saturday, you're paid the Friday after that (one week later). Maximum wait is 8 days."
+        "text": "If you complete the load before 11:59 PM Saturday, you're paid the following Friday. If you finish it after midnight, it falls into the next Sunday to Saturday cycle and is paid the Friday after that cycle ends. So a load finished late Saturday is paid six days later, and one finished early Sunday is paid 12 days later."
       }
     },
     {
@@ -172,12 +183,53 @@
   ]
 }
   </script>
-  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
-       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18464861190"></script>
-  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
-    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
-      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/brand/mark/icon128.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://nudoiq.com/#software",
+      "name": "NudoIQ",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Browser Extension",
+      "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
+      "url": "https://nudoiq.com/",
+      "downloadUrl": "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+      "offers": {
+        "@type": "Offer",
+        "price": "49.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nudoiq.com/#pricing",
+        "description": "7-day free trial, no card needed to start. $49.99 per month after the trial. Cancel anytime.",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "49.99",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "billingDuration": "P1M"
+        }
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 
@@ -196,30 +248,32 @@
   <div class="doc-hero"><div class="doc-hero-in">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">How Much Does Amazon Relay Pay?</span></nav>
     <h1 class="page-title">How Much Does Amazon Relay Pay?</h1>
-    <p class="page-subtitle">Amazon Relay rates vary based on demand, season, time of day, pickup location, delivery destination, equipment type and your booking history. There's no &quot;average rate&quot;—each load is priced independently. Here's how Relay pricing works and how to judge whether a rate makes sense for your business.</p>
+    <p class="page-subtitle">Amazon Relay rates vary based on demand, season, time of day, pickup location, delivery destination, equipment type and your booking history. There's no &quot;average rate&quot;: each load is priced independently. Here's how Relay pricing works and how to judge whether a rate makes sense for your business.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-02">October 2, 2026</time></p>
   </div></div>
 
   <div class="container">
     <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>Amazon Relay pay varies by load, and Amazon does not publish typical rates. Each rate includes a base rate, a fuel surcharge and tolls, and moves with distance, deadhead, trip direction, equipment, live loads, season and region. Amazon pays weekly: loads finished by 11:59 pm Saturday are paid the following Friday.</p></section>
 <h2 id="what-sets-amazon-relay-rates">What Sets Amazon Relay Rates</h2>
 <p>Amazon Relay pricing is dynamic. No two loads are priced identically. Several factors influence the posted rate:</p>
-<p><strong>Season</strong> Demand for freight fluctuates throughout the year. Peak seasons (Q4 holiday, Prime Day, major sales events) bring higher rates because Amazon has more freight and fewer available carriers. Off-season (January-March, summer slowdown) rates soften as demand drops. Winter weather can also spike demand for certain lanes.</p>
-<p><strong>Time of Day</strong> Early morning loads typically pay better than afternoon or evening. Amazon plans most distribution around early picks and mid-morning drops, so early slots see higher competition and higher rates.</p>
-<p><strong>Origin and Destination</strong> Different lanes have different characteristics. Where you're picking up and delivering affects what Amazon offers.</p>
-<p><strong>Equipment Type</strong> Tractor-trailers (48/53 ft) get the most freight and generally lower rates because there's heavy competition. Reefers (refrigerated trailers) see premium rates for temperature-sensitive freight. Box trucks get steady work but lower rates than trailers. Sleeper capacity (multi-day runs) opens access to longer-haul, higher-paying freight.</p>
-<p><strong>Your Booking History</strong> Amazon's algorithm tracks how often you accept loads. If you accept most offers (high tender-acceptance rate), Amazon's system may prioritize showing you higher-priced loads. If you decline frequently, Amazon deprioritizes your recommendations and you see softer freight.</p>
-<p><strong>Daily Volume on the Board</strong> On days when many carriers are online, rates soften because there's competition for loads. Early mornings, late evenings, or bad weather days see fewer carriers, and rates can spike. Holidays and weekends often have fewer loads and less favorable rates.</p>
+<p><strong>Season</strong> Demand for freight changes through the year. <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-rates" target="_blank" rel="noopener">Amazon lists</a> seasonal demand as a rate factor and says load volume nearly doubles during peak periods like Prime Day and the holidays.</p>
+<p><strong>Time of Day</strong> When a load posts and picks up can change its price. Amazon doesn't publish which hours pay more, so watch your own lanes.</p>
+<p><strong>Origin and Destination</strong> Different lanes have different characteristics. Where you're picking up and delivering affects what Amazon offers, and Amazon says distance, including deadhead and trip direction, is part of the price. Regional market conditions and load characteristics (for example, live loads) matter too.</p>
+<p><strong>Equipment Type</strong> Amazon lists equipment type and availability as a rate factor, using reefer as an example. It doesn't publish rate comparisons between equipment types.</p>
+<p><strong>Your Booking History</strong> Your record affects what you see first. Amazon gives A+, A and B+ carriers early access to new spot loads, and cancelling loads you booked lowers your acceptance score.</p>
+<p><strong>Daily Volume on the Board</strong> How much freight is on the board that day affects what you see and what it pays. Amazon doesn't publish day-of-week or hour-by-hour patterns.</p>
 <p><strong>Booking Timing</strong> The moment a good load posts, it typically books within seconds. If you're not actively refreshing or using an auto-refresh tool, you'll miss premium loads and see older, less attractive freight. This is why <a href="/amazon-relay-auto-refresh/">auto-refresh extensions</a> are widespread among Relay carriers.</p>
 <h2 id="why-the-same-lane-pays-differently-hour-to-hour">Why the Same Lane Pays Differently Hour to Hour</h2>
-<p>Here's a concrete example of how rate variability works in practice:</p>
-<p><strong>Tuesday, 6:00 AM</strong> – A load posts from Distribution Center A to Hub B. Amazon posts it at a certain rate. It books within seconds.</p>
-<p><strong>Tuesday, 11:00 AM</strong> – Another load posts: same origin, same destination, same equipment type, same distance. Amazon posts it at a lower rate. This load sits longer because carriers are less interested.</p>
+<p>Here's a made-up example to show how it can play out:</p>
+<p><strong>Tuesday, 6:00 AM</strong>: A load posts from Distribution Center A to Hub B. Amazon posts it at a certain rate. It books within seconds.</p>
+<p><strong>Tuesday, 11:00 AM</strong>: Another load posts: same origin, same destination, same equipment type, same distance. Amazon posts it at a lower rate. This load sits longer because carriers are less interested.</p>
 <p>Why the difference? Amazon may have posted the first load with lower freight volume available that morning, so it priced higher to attract carriers. By 11 AM, more freight arrived, so Amazon prices softer. Or more carriers came online, so competition increased. Or Amazon's algorithm expected this lane to need coverage anyway, so it discounted it.</p>
 <p>The point: there's no &quot;typical&quot; rate for a lane. Rates change constantly, even for the same route. Each posting is independent.</p>
 <h2 id="weekly-payment-cycle">Weekly Payment Cycle</h2>
 <p>Amazon Relay pays weekly, regardless of rate:</p>
-<ul><li><strong>Payment Period</strong>: Sunday 12:00 AM through Saturday 11:59 PM</li><li><strong>Payment Date</strong>: The following Friday</li><li><strong>Invoice Generation</strong>: Automatic—no manual invoicing required</li><li><strong>Pay Disputes</strong>: Must be filed within 30 days of the original load completion date</li></ul>
-<p>This is one of Amazon Relay's consistent advantages: fast, predictable weekly pay. You know every Friday morning when your money will deposit.</p>
+<ul><li><strong>Payment Period</strong>: Sunday 12:00 AM through Saturday 11:59 PM</li><li><strong>Payment Date</strong>: The following Friday</li><li><strong>Invoice Generation</strong>: Automatic: no manual invoicing required</li><li><strong>Pay Disputes</strong>: Must be filed within 30 days of the original load completion date</li></ul>
+<p>Weekly pay on a set schedule is one of Amazon Relay's consistent advantages.</p>
 <h2 id="how-to-judge-whether-a-rate-is-good">How to Judge Whether a Rate Is Good</h2>
 <p>Since rates vary constantly and there's no industry benchmark, how do you know if a posted rate is worth accepting?</p>
 <p><strong>Calculate Your True Cost</strong></p>
@@ -228,33 +282,33 @@
 <p>The formula is straightforward: Posted rate minus your fuel, maintenance and deadhead costs equals your net profit. The same distance can yield different profits depending on your costs and positioning.</p>
 <p><strong>Set a Personal Profit Floor</strong></p>
 <p>Many carriers set a minimum net profit they require below which they decline a load. This prevents low-margin work and protects your revenue.</p>
-<p>NudoIQ calculates net profit on every load card and lets you set a profit floor. It hides or auto-rejects loads below your threshold.</p>
+<p>NudoIQ calculates net profit on every load card and lets you set a profit floor. It hides loads below your threshold and won't autobook under it.</p>
 <p><strong>Check Lane History</strong></p>
 <p>If you've run a lane before, you know its typical rate range. If a lane is posted below its usual range, it's a soft day for that route. You can decline and wait for a better rate, or accept if you need volume.</p>
 <p>If you're new to a lane, you have no history. <a href="/amazon-relay-load-board/">Lane Intelligence</a> tools (like NudoIQ) track posted rates on every lane over 90 days. They show you the target price, historical range and confidence level. This helps you know if a posted rate is strong or soft compared to history.</p>
 <p><strong>Consider the Positioning</strong></p>
 <p>If you're already at or near the pickup location, you can accept lower rates because you have zero deadhead. If you're far from the pickup, deadhead costs will eat into your margin and may make the load unprofitable.</p>
 <p><strong>Know When to Refresh</strong></p>
-<p>Early morning and mid-morning typically see more activity. Late afternoon and evening usually see softer freight. If you can time your availability to periods of higher demand, you'll see better-priced loads.</p>
+<p>Amazon doesn't publish which hours pay best. Track your own lanes by time of day, and use alerts so you see new loads when they post.</p>
 <h2 id="factors-that-don-t-affect-your-rate">Factors That DON'T Affect Your Rate</h2>
-<p><strong>Your Safety Rating or BASIC Score</strong> Amazon doesn't give discounts or premiums for clean records. All carriers on the platform see the same posted rates.</p>
+<p><strong>Your Safety Rating or BASIC Score</strong> Amazon doesn't publish any rate premium for a clean safety record. Your safety record decides whether you can haul at all, and your performance grade affects which loads you see first.</p>
 <p><strong>Your Equipment Condition or Age</strong> New or meticulously maintained equipment doesn't command higher rates. Amazon cares only that it's approved equipment.</p>
-<p><strong>Demand for Your Specific Truck</strong> Amazon doesn't negotiate rates with individual carriers. The posted rate is the posted rate for everyone.</p>
+<p><strong>Haggling on Spot Loads</strong> Spot loads book at the listed price. The ways to set your own price are Post A Truck (a minimum rate per mile), auctions (bids on contracts up to 6 months, most needing a C+ grade) and Relay Assistant (naming a price on eligible urgent loads, for top-performing carriers; Amazon may counter).</p>
 <h2 id="pay-disputes-and-30-day-deadline">Pay Disputes and 30-Day Deadline</h2>
-<p>If you think Amazon miscalculated a load, charged you a fee, or disputed a completion incorrectly, you have 30 days from the load date to file a claim. File sooner rather than later—after 30 days, Amazon closes the claim and won't reopen it.</p>
+<p>If you think Amazon miscalculated a load, charged you a fee, or disputed a completion incorrectly, you have 30 days from the load date to file a claim. File sooner rather than later: pay disputes must be filed within 30 days.</p>
 <p>Pay disputes are separate from scorecard disputes. A pay dispute is about money owed. A scorecard dispute is about a violation on your performance record (late delivery, rejected load, etc.).</p>
 <h2 id="understanding-rate-variability">Understanding Rate Variability</h2>
-<p>The takeaway: Amazon Relay does not publish &quot;typical&quot; or &quot;average&quot; rates because they vary so much by lane, time, season and carrier profile. Rates on the same route can fluctuate significantly day to day. Don't chase a single good rate you saw yesterday—instead, build a system (auto-refresh, profit floor, lane history) to evaluate each load individually and decide if it's worth your costs.</p>
-<p>Many carriers use <a href="/amazon-relay-auto-refresh/">auto-refresh</a> tools or <a href="/amazon-relay-auto-booker/">auto-booking extensions</a> to remove emotion and speed from the decision. If you want load intelligence built into the board—<a href="/amazon-relay-load-board/">lane rate history</a>, net profit calculation, and <a href="/amazon-relay-scorecard/">scorecard dispute assistance</a>—NudoIQ integrates into Relay and costs <strong>$49.99 per month</strong> for all features. Start with a <strong>7-day free trial</strong>, cancel anytime. <strong>5.0 rating</strong> on the Chrome Web Store. Used by 300+ carriers.</p>
+<p>The takeaway: Amazon Relay does not publish &quot;typical&quot; or &quot;average&quot; rates because they vary so much by lane, time, season and carrier profile. Rates on the same route can fluctuate significantly day to day. Don't chase a single good rate you saw yesterday: instead, build a system (auto-refresh, profit floor, lane history) to evaluate each load individually and decide if it's worth your costs.</p>
+<p>Many carriers use <a href="/amazon-relay-auto-refresh/">auto-refresh</a> tools or <a href="/amazon-relay-auto-booker/">auto-booking extensions</a> to remove emotion and speed from the decision. If you want <a href="/amazon-relay-load-board/">lane rate history</a>, net profit calculation and <a href="/amazon-relay-scorecard/">scorecard dispute assistance</a> built into the board, NudoIQ integrates into Relay and costs <strong>$49.99 per month</strong> for all features. Start with a <strong>7-day free trial</strong>, no card needed to start, and cancel anytime. <strong>5.0 rating</strong> on the Chrome Web Store. Used by 300+ carriers.</p>
     </article>
 
     <section class="faq" aria-labelledby="faq-h">
       <h2 id="faq-h">Frequently asked questions</h2>
       <details><summary>How much money can I make on Amazon Relay?</summary><div class="a"><p>There's no typical earning amount because rates vary so much by lane, season, time of day and your costs. Calculate net profit load-by-load and decide if each one meets your minimum. Some days you'll see good rates; other days you won't.</p></div></details>
-      <details><summary>Are rates higher in the morning or evening?</summary><div class="a"><p>Generally, early morning (5-7 AM) and mid-morning (10 AM-12 PM) see better rates than afternoon or evening. Peak demand times usually have higher-priced loads available.</p></div></details>
-      <details><summary>Can I negotiate a rate with Amazon?</summary><div class="a"><p>No. Amazon sets the rate for each load and you accept or decline it. There's no back-and-forth negotiation on Relay.</p></div></details>
-      <details><summary>Do owner-operators make more than small fleet carriers?</summary><div class="a"><p>No. Amazon posts the same rate to every carrier on the board. Fleet size doesn't affect your per-load pricing.</p></div></details>
-      <details><summary>How long does it take to get paid after I complete a load?</summary><div class="a"><p>If you complete the load before 11:59 PM Saturday, you're paid the following Friday. If you complete it after midnight Saturday, you're paid the Friday after that (one week later). Maximum wait is 8 days.</p></div></details>
+      <details><summary>Are rates higher in the morning or evening?</summary><div class="a"><p>Amazon doesn't publish which hours pay more. Rates move with demand, so the same lane can pay differently at different times. Track your own lanes to see the pattern.</p></div></details>
+      <details><summary>Can I negotiate a rate with Amazon?</summary><div class="a"><p>Not on most spot loads, which book at the listed price. On select urgent loads, top-performing carriers can name a price through Relay Assistant, and Amazon may approve or counter. Post A Truck lets you set a minimum rate per mile, and auctions let you bid on contracts.</p></div></details>
+      <details><summary>Do owner-operators make more than small fleet carriers?</summary><div class="a"><p>Amazon doesn't publish anything that ties pay to fleet size, and there's no fleet size requirement to haul for Relay. Your performance grade decides access to things like contracts and early spot loads, and auction eligibility also considers equipment count, tenure and CARB compliance.</p></div></details>
+      <details><summary>How long does it take to get paid after I complete a load?</summary><div class="a"><p>If you complete the load before 11:59 PM Saturday, you're paid the following Friday. If you finish it after midnight, it falls into the next Sunday to Saturday cycle and is paid the Friday after that cycle ends. So a load finished late Saturday is paid six days later, and one finished early Sunday is paid 12 days later.</p></div></details>
       <details><summary>What if I dispute a load's rate?</summary><div class="a"><p>You have 30 days from the load completion date to file a pay dispute. Contact Amazon Relay support through the portal and explain why you think the amount was wrong. Amazon reviews it and decides.</p></div></details>
     </section>
 
@@ -267,7 +321,7 @@
       <h2>More Amazon Relay guides</h2>
       <div class="cards">
         <a href="/is-amazon-relay-worth-it/">Is Amazon Relay Worth It?</a>
-        <a href="/amazon-relay-scorecard/">Amazon Relay Scorecard: What It Measures and How to Dispute Violations</a>
+        <a href="/amazon-relay-scorecard/">Amazon Relay scorecard: how the performance score works and how to dispute it</a>
         <a href="/amazon-relay-auto-refresh/">Amazon Relay Auto Refresh: Why It Matters and How It Works</a>
         <a href="/amazon-relay-auto-booker/">Amazon Relay Auto Booker: How Automatic Booking Works</a>
         <a href="/best-amazon-relay-extensions/">Best Amazon Relay Extensions: Refresher and Auto-Booker Tools</a>
