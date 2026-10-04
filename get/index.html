@@ -96,10 +96,10 @@
       padding:clamp(32px,4.4vw,56px) clamp(20px,3.4vw,48px);
       background:linear-gradient(158deg,#16255A 0%,#22459E 44%,#2C57CC 76%,#3563E8 100%)}
     .curves{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
-    .hero-grid{position:relative;z-index:2;max-width:1240px;margin:0 auto;display:grid;gap:36px;
+    .hero-grid{position:relative;z-index:2;max-width:1320px;margin:0 auto;display:grid;gap:36px;
       grid-template-columns:minmax(0,1fr)}
     @media (min-width:980px){
-      .hero-grid{grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:48px;align-items:center}
+      .hero-grid{grid-template-columns:minmax(0,.74fr) minmax(0,1.26fr);gap:40px;align-items:center}
     }
     .hero-copy{max-width:560px}
     .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;
@@ -146,10 +146,13 @@
 
     /* Product shot — the real NudoIQ bar on the real Relay load board. */
     .hero-shot{margin:0;position:relative}
-    .hero-shot .frame{background:#fff;border-radius:18px;padding:8px;box-shadow:var(--sh-3);
-      border:1px solid rgba(255,255,255,.5)}
-    .hero-shot .crop{overflow:hidden;border-radius:12px}
-    .hero-shot img{width:100%;transform:scale(1.5);transform-origin:0% 28%}
+    /* Same treatment as the homepage .stage-main (Caleb 2026-10-04): the whole board, uncropped, with the
+       dark "Dashboard / Load Board" header, rounded 18px, homepage shadow and navy backing. */
+    .hero-shot .frame{border-radius:18px;overflow:hidden;box-shadow:var(--sh-3);
+      border:1px solid rgba(255,255,255,.5);background:#0E2036}
+    .hero-shot .crop{overflow:visible}
+    .hero-shot img{width:100%;display:block}
+    @media (max-width:560px){ .hero-shot .frame{border-radius:12px} }
 
     @media (max-width:560px){
       .proofbar{flex-direction:column;gap:12px;padding:14px 20px;display:flex}
