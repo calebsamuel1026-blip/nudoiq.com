@@ -249,12 +249,12 @@
                Stripe list price tomorrow — see research/GET-PAGE-V2-2026-09-24.md. ── -->
           <section class="price">
             <div class="price-card" id="priceBlock">
-              <p class="price-eyebrow" id="priceEyebrow">50% off until Sunday</p>
+              <p class="price-eyebrow" id="priceEyebrow">50% off until end of day</p>
               <div class="price-row" id="priceRow">
                 <span class="price-old" id="priceOld">$99.98<span>/mo</span></span>
                 <span class="price-new" id="priceNew">$49.99<span>/mo</span></span>
               </div>
-              <p class="price-line" id="priceLine1">50% off until <b>Sunday, October 4</b>. You pay $49.99 a month.</p>
+              <p class="price-line" id="priceLine1">50% off until <b>end of day today</b>. You pay $49.99 a month.</p>
               <p class="price-line" id="priceLine2">Keep that discount for as long as you stay subscribed.</p>
               <div class="countdown" id="countdown">
                 <span class="cd-label">Offer ends in</span>
@@ -413,9 +413,16 @@
     // PREREQUISITE (not done by this page): $99/mo must be the real Stripe list
     // price starting tomorrow, or this page states a price change that isn't
     // true. See research/GET-PAGE-V2-2026-09-24.md.
-    var LAUNCH_END = "2026-10-04T23:59:59-04:00";   // Sunday — rolled 2026-09-28 (see note)
+    // Caleb 2026-10-04: the offer ends at end of day and resets every day. Counts down to the next midnight
+    // America/New_York, so it is the same deadline for every visitor and starts over at 00:00 ET.
+    function msToEtMidnight() {
+      var p = {}; new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour12: false,
+        hour: "2-digit", minute: "2-digit", second: "2-digit" }).formatToParts(new Date())
+        .forEach(function (x) { p[x.type] = +x.value; });
+      return (86400 - ((p.hour % 24) * 3600 + p.minute * 60 + p.second)) * 1000;
+    }
     function updateCountdown() {
-      var diff = new Date(LAUNCH_END).getTime() - Date.now();
+      var diff = msToEtMidnight();
       if (diff <= 0) {
         document.getElementById("priceEyebrow").hidden = true;
         document.getElementById("priceOld").hidden = true;

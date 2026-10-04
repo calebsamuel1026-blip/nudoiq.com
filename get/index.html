@@ -273,7 +273,7 @@
                  LAUNCH_END is 2026-10-04 23:59:59 ET (TONIGHT). After that the card shows the priceExpired
                  line only. Rolling or removing the offer is Caleb's call (see teardown doc). ── -->
             <div class="price-card" id="priceBlock">
-              <p class="price-eyebrow" id="priceEyebrow">50% off until Sunday</p>
+              <p class="price-eyebrow" id="priceEyebrow">50% off until end of day</p>
               <div class="price-top">
                 <div class="price-row" id="priceRow">
                   <span class="price-old" id="priceOld">$99.98<span>/mo</span></span>
@@ -285,7 +285,7 @@
                   <span class="cd-num" id="cdMins">--</span><span class="cd-label">m</span>
                 </div>
               </div>
-              <p class="price-line" id="priceLine1">50% off until <b>Sunday, October 4</b>. You pay $49.99 a month.</p>
+              <p class="price-line" id="priceLine1">50% off until <b>end of day today</b>. You pay $49.99 a month.</p>
               <p class="price-line" id="priceLine2">Keep that discount for as long as you stay subscribed.</p>
               <p class="price-expired" id="priceExpired" hidden>This week's discount has ended. NudoIQ is $49.99 a month.</p>
             </div>
@@ -390,14 +390,17 @@
       }).observe(heroCta);
     }
 
-    // ── PRICING COUNTDOWN (unchanged logic) ──────────────────────────────────
-    // Hard-coded datetime constant, NOT "today" recomputed from the visitor's clock, so it never resets on
-    // refresh and never restarts once it passes. After LAUNCH_END the card shows only the priceExpired line.
-    // Caleb: LAUNCH_END below is TONIGHT (Sunday 2026-10-04 23:59:59 ET). To roll it, change LAUNCH_END and the
-    // "Sunday, October 4" text in the price card together.
-    var LAUNCH_END = "2026-10-04T23:59:59-04:00";   // Sunday — rolled 2026-09-28 (see note)
+    // ── PRICING COUNTDOWN (daily, resets at midnight ET) ──────────────────────────────────
+    // Caleb 2026-10-04: the offer ends at end of day and resets every day. Counts down to the next midnight
+    // America/New_York, so it is the same deadline for every visitor and starts over at 00:00 ET.
+    function msToEtMidnight() {
+      var p = {}; new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour12: false,
+        hour: "2-digit", minute: "2-digit", second: "2-digit" }).formatToParts(new Date())
+        .forEach(function (x) { p[x.type] = +x.value; });
+      return (86400 - ((p.hour % 24) * 3600 + p.minute * 60 + p.second)) * 1000;
+    }
     function updateCountdown() {
-      var diff = new Date(LAUNCH_END).getTime() - Date.now();
+      var diff = msToEtMidnight();
       if (diff <= 0) {
         document.getElementById("priceEyebrow").hidden = true;
         document.getElementById("priceOld").hidden = true;
