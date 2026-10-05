@@ -78,6 +78,18 @@
         var iid = new URLSearchParams(location.search).get('i');
         if (iid && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(iid)) {
           var K = 'nudoiq_funnel_welcome_opened';
+          // 2026-10-05: the Google Ads click id that /get/ or /m/ stored before the Web Store hop (same origin), sent
+          // with this row so a trial or payment on this install can be uploaded to Google Ads as an offline
+          // conversion. Only clicks from the last 90 days (Google's upload window). null when there is none.
+          var adClick = function () {
+            try {
+              var s = JSON.parse(localStorage.getItem('nudoiq_gclid') || 'null');
+              if (!s || !s.id || !s.ts || Date.now() - s.ts > 90 * 864e5) return null;
+              var m = { surface: 'welcome', click_ts: new Date(s.ts).toISOString() };
+              m[s.type === 'gbraid' || s.type === 'wbraid' ? s.type : 'gclid'] = String(s.id).slice(0, 300);
+              return m;
+            } catch (x) { return null; }
+          };
           if (!localStorage.getItem(K)) {
             fetch('https://rxyuzshudfqgtmqenipi.supabase.co/functions/v1/record-funnel', {
               method: 'POST',
@@ -86,7 +98,7 @@
                 'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM',
                 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM'
               },
-              body: JSON.stringify({ installId: iid, step: 'welcome_opened' })
+              body: JSON.stringify({ installId: iid, step: 'welcome_opened', metadata: adClick() })
             }).then(function(r){ if (r.ok) localStorage.setItem(K, String(Date.now())); })
               .catch(function(){});
           }
