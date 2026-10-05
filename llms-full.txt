@@ -1415,7 +1415,7 @@ Yes. You can have NudoIQ running on multiple devices and multiple load board tab
 # Best Amazon Relay Extensions: Refresher and Auto-Booker Tools
 
 URL: https://nudoiq.com/best-amazon-relay-extensions/
-Published: 2026-09-20. Last updated: 2026-10-02.
+Published: 2026-09-20. Last updated: 2026-10-05.
 
 Short answer: The main Amazon Relay extensions are LoadFetcher and Rocket Relay, which offer free tiers focused on refreshing and booking, plus smaller tools like SwiftRelay and FlashRelay. NudoIQ costs $49.99 a month and adds lane rate history, net profit per load and scorecard dispute letters. Compare refresh control, booking guardrails, rate data and support.
 
@@ -1447,13 +1447,13 @@ Besides the bigger names, there are a dozen or so smaller refreshers in the cate
 
 ### LoadFetcher
 
-LoadFetcher is the largest Amazon Relay extension by installs. It offers a free refresher tier and is focused on refreshing and booking.
+[LoadFetcher](https://nudoiq.com/loadfetcher-alternative/) is the largest Amazon Relay extension by installs. It offers a free refresher tier and is focused on refreshing, pricing history and alerts.
 
-What's advertised: refreshing and booking. What's not advertised: lane rate history, net profit per load, or scorecard dispute letters.
+What's advertised: auto refresh, load pricing and history, backhaul search, Post Truck Manager, Telegram alerts and trip tracking. What's not listed: automatic booking, net profit per load, or scorecard dispute letters (checked October 4, 2026).
 
 LoadFetcher's pitch is simplicity and cost: a free refresher tier. If that's all you need, the free tier may be enough.
 
-**Best for**: Carriers who want a refresher and basic booker, nothing more, and prefer not to pay.
+**Best for**: Carriers who want a free refresher with pricing history and alerts, and who book by hand.
 
 ### Rocket Relay and Rocket Pro
 
@@ -1493,18 +1493,18 @@ NudoIQ is a browser extension that runs inside the Relay load board and includes
 
 | Feature | LoadFetcher | Rocket Relay | SwiftRelay | FlashRelay | NudoIQ |
 |---------|-------------|-------------|-----------|-----------|---------|
-| **Refreshing and Booking** | Advertised | Advertised | Advertised | Advertised | Advertised |
+| **Refreshing and Booking** | Refreshing advertised; auto booking not listed | Advertised | Advertised | Advertised | Advertised |
 | **Profit Floor & Max Cap** | Not advertised | Not advertised | Not advertised | Not advertised | Advertised |
-| **Lane Rate History** | Not advertised | Not advertised | Not advertised | Not advertised | Advertised |
+| **Lane Rate History** | Advertised (Plus plan) | Not advertised | Not advertised | Not advertised | Advertised |
 | **Net Profit Calculation** | Not advertised | Not advertised | Not advertised | Not advertised | Advertised |
 | **Scorecard Dispute Drafting** | Not advertised | Not advertised | Not advertised | Not advertised | Advertised |
-| **Backhaul Finder** | Not advertised | Not advertised | Not advertised | Not advertised | Advertised |
-| **Post A Truck Helper** | Not advertised | Not advertised | Not advertised | Not advertised | Advertised |
+| **Backhaul Finder** | Advertised (Plus plan) | Not advertised | Not advertised | Not advertised | Advertised |
+| **Post A Truck Helper** | Advertised | Not advertised | Not advertised | Not advertised | Advertised |
 | **Local-Only Data** | Not emphasized | Advertised | Not emphasized | Not emphasized | Not advertised |
-| **Telegram Alerts** | Not advertised | Not advertised | Not advertised | Not advertised | Advertised |
+| **Telegram Alerts** | Advertised (Plus plan) | Not advertised | Not advertised | Not advertised | Advertised |
 | **Free Tier** | Advertised | Advertised | Not stated | Not stated | 7-day free trial, no card to start |
-| **Paid Tier** | Not stated | Not stated | Not stated | Not stated | $49.99/mo |
-| **CWS Rating** | Not stated | Not stated | Not stated | Not stated | 5.0 |
+| **Paid Tier** | $24 to $90/mo | Not stated | Not stated | Not stated | $49.99/mo |
+| **CWS Rating** | 5.0 | Not stated | Not stated | Not stated | 5.0 |
 
 ## How to Choose
 
@@ -1661,7 +1661,7 @@ Remove or turn off LoadFetcher, add NudoIQ from the Chrome Web Store, open the R
 NudoIQ is a good Load Fetcher alternative if you want the extension to book loads for you. It refreshes the Amazon Relay load board, AutoBooks only loads that clear your minimum net profit, shows net profit on every load and drafts scorecard dispute letters, for $49.99 a month flat after a 7-day free trial.
 
 ### Is there a free Load Fetcher alternative?
-NudoIQ isn't free, but you can try it 7 days free with no card needed to start. If you need a tool that stays free, LoadFetcher itself has a permanent Free plan, and Rocket Pro and LODA Relay also list free options (checked October 2026).
+NudoIQ isn't free, but you can try it 7 days free with no card needed to start. If you need a tool that stays free, LoadFetcher itself has a permanent Free plan, LODA Relay is listed as free, and Rocket Pro lists a free plan on its website (checked October 2026).
 
 ### Does Load Fetcher auto book loads?
 Not according to its public listing. As of October 4, 2026, LoadFetcher's Chrome Web Store listing and plans section don't list automatic booking. Its screenshots show a Book button on each load for booking by hand. NudoIQ's AutoBook mode books matching loads that clear your own minimum net profit.

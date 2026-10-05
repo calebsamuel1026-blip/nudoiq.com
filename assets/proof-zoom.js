@@ -378,9 +378,38 @@
     return n;
   }
 
+  /* ── Two more dead-click targets (2026-10-05, research/seo/SITE-OPTIMIZATION-2026-10-05.md) ──
+   * Clarity, home page: the white card floating on the hero screenshot ("One extension handles it all.")
+   * took 20 dead clicks in 3 days, and the first proof card ("Every review is five stars") 17. The card
+   * sits on the screenshot, so a click on it now opens the same panel as a click on the screenshot. The
+   * review card goes where "Read every review" already goes (the store's reviews tab). No new words. */
+  function wireExtras() {
+    var n = 0;
+    var flag = document.querySelector('.hero-stage .f-flag');
+    var hero = document.querySelector('.hero-stage .stage-main img[data-nq-zoom]');
+    if (flag && hero) {
+      flag.style.cursor = 'zoom-in';
+      flag.addEventListener('click', function () { open(hero); });
+      n++;
+    }
+    var rv = document.querySelector('.strip .pcard [data-t="builtFor"]');
+    var card = rv && rv.closest('.pcard');
+    if (card && !card.querySelector('a')) {
+      var a = document.createElement('a');
+      a.href = STORE + '/reviews';
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.style.cssText = 'color:inherit;text-decoration:none;display:block;cursor:pointer';
+      while (card.firstChild) a.appendChild(card.firstChild);
+      card.appendChild(a);
+      n++;
+    }
+    return n;
+  }
+
   function init() {
     styles();
-    var s = wireShots(), p = wirePrice();
+    var s = wireShots(), p = wirePrice() + wireExtras();
     if (window.console && console.debug) {
       console.debug('[NudoIQ] proof-zoom: ' + s + ' shots, ' + p + ' price targets');
     }

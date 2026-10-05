@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <script>window.NQ_LATER=window.NQ_LATER||function(f){function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
@@ -93,6 +93,10 @@
   }
   *,*::before,*::after{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  /* 2026-10-05: keep anchor targets clear of the sticky header. ChatGPT sends visitors to /#pricing; on a phone the
+     Pricing heading landed under the header. research/seo/SITE-OPTIMIZATION-2026-10-05.md */
+  section[id]{scroll-margin-top:88px}
+  @media (max-width:720px){section[id]{scroll-margin-top:72px}}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}
     *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}}
   html[data-motion="off"] *{animation:none!important;transition:none!important}
@@ -1521,6 +1525,26 @@
 }
   </script>
   <script src="/assets/mobile-bridge.js?v=dd39030e" defer></script>
-  <script src="/assets/proof-zoom.js?v=5c560741" defer></script>
+  <!-- 2026-10-05: re-align a #hash landing (ChatGPT links to /#pricing) after the web font swaps in. The smooth jump is
+       computed with the fallback font; Inter Tight then shortens the hero and features text by ~110-150px, so the visitor
+       stopped short of or past the heading. Only runs on a hash URL, and never after the visitor has scrolled or typed.
+       research/seo/SITE-OPTIMIZATION-2026-10-05.md -->
+  <script>
+  (function () {
+    var h = location.hash, t, moved = false;
+    if (!h || h.length < 2) return;
+    try { t = document.getElementById(decodeURIComponent(h.slice(1))); } catch (e) { return; }
+    if (!t) return;
+    ["wheel", "touchstart", "keydown", "mousedown"].forEach(function (ev) { addEventListener(ev, function () { moved = true; }, { once: true, passive: true }); });
+    function fix() {
+      if (moved) return;
+      var want = parseFloat(getComputedStyle(t).scrollMarginTop) || 0, top = t.getBoundingClientRect().top;
+      if (Math.abs(top - want) > 8) t.scrollIntoView({ behavior: "instant", block: "start" });
+    }
+    var ready = document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve();
+    addEventListener("load", function () { ready.then(function () { setTimeout(fix, 900); }); });
+  })();
+  </script>
+  <script src="/assets/proof-zoom.js?v=801156d2" defer></script>
 </body>
 </html>
