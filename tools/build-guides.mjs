@@ -437,7 +437,8 @@ ${FOOT}`;
       `- [NudoIQ en español](${SITE}/es/): the home page in Spanish.`,
       `- [Amazon Relay guides](${SITE}/guides/): every guide below in one list.`,
       `- [NudoIQ on Android](${SITE}/android/): how to run the extension on an Android phone.`,
-      ...pages.map((p) => `- [${stripMd(p.h1)}](${SITE}/${p.slug}/): ${p.description}`),
+      // Optional frontmatter `llms:` overrides the meta description as the one-line summary (used for the answer-first line).
+      ...pages.map((p) => `- [${stripMd(p.h1)}](${SITE}/${p.slug}/): ${p.llms || p.description}`),
       '', '## Data', '',
       `- [${CSV_NAME}](${SITE}/${DATA_SLUG}/${CSV_NAME}): aggregate FMCSA inspection numbers behind ${SITE}/${DATA_SLUG}/ (no carrier names or DOT numbers).`,
       '', '## Optional', '',

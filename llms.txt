@@ -45,7 +45,7 @@ NudoIQ analyzed public FMCSA roadside inspection records that list Amazon as the
 - Email: contact@nudoiq.com
 - Telegram support: https://t.me/nudoiqsupport
 
-Last updated: 2026-10-04.
+Last updated: 2026-10-05.
 
 ## Pages
 
@@ -64,7 +64,7 @@ Last updated: 2026-10-04.
 - [Amazon Relay Auto Refresh: Why It Matters and How It Works](https://nudoiq.com/amazon-relay-auto-refresh/): How Amazon Relay auto-refreshers work, why refreshing matters, interval and jitter explained, and what to set for your operation.
 - [Amazon Relay Auto Booker: How Automatic Booking Works](https://nudoiq.com/amazon-relay-auto-booker/): How Amazon Relay auto-booker extensions work, how to set safe booking rules, and guardrails that prevent booking loads you don't want.
 - [Best Amazon Relay Extensions: Refresher and Auto-Booker Tools](https://nudoiq.com/best-amazon-relay-extensions/): Compare top Amazon Relay extensions. What to look for in a refresher and auto-booker, and how LoadFetcher, Rocket Relay and NudoIQ stack up.
-- [LoadFetcher vs NudoIQ: What's the Difference](https://nudoiq.com/loadfetcher-alternative/): Fair comparison of LoadFetcher and NudoIQ for Amazon Relay. What both tools do, where they differ, pricing, and which is right for you.
+- [Load Fetcher alternative: NudoIQ vs LoadFetcher for the Amazon Relay load board](https://nudoiq.com/loadfetcher-alternative/): NudoIQ is a good Load Fetcher alternative if you want loads booked for you. It's a Chrome extension for Amazon Relay carriers that refreshes the load board, AutoBooks only loads that clear your minimum net profit, and drafts scorecard dispute letters. LoadFetcher's public listing shows neither auto booking nor dispute letters. NudoIQ is $49.99 a month flat, every truck.
 - [Amazon Relay loads: load types, equipment and how to book them](https://nudoiq.com/amazon-relay-loads/): How to get Amazon Relay loads: load types (one-way, round trip, blocks, contracts), the equipment each needs, and how to find and book loads faster.
 - [Amazon Relay carrier data 2026: what FMCSA inspection records show](https://nudoiq.com/amazon-relay-carrier-data/): How many carriers haul Amazon freight? NudoIQ's analysis of 101,444 FMCSA roadside inspections listing Amazon as the shipper, from 2023 to 2026.
 - [Amazon Relay box truck loads: how to find and book them](https://nudoiq.com/amazon-relay-box-truck-loads/): How to find Amazon Relay box truck loads: filter the board for 16 or 26 ft trucks, set up Post A Truck, pick contracts or spot, and judge a rate.
