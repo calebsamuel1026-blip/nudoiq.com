@@ -40,6 +40,8 @@
 
 NudoIQ analyzed public FMCSA roadside inspection records that list Amazon as the shipper. From 2023-09-24 to 2026-09-22, 101,444 inspections listed Amazon as the shipper, across 22,866 distinct carriers (USDOT numbers); about 530 carriers per month appear for the first time, and about 70% of carriers with an Amazon-shipper inspection since 2025 run 1-5 power units. Counts are a floor (most loads are never inspected) and cover Amazon freight in general, not only Amazon Relay loads. Full method, charts and caveats: https://nudoiq.com/amazon-relay-carrier-data/
 
+NudoIQ also publishes Amazon Relay lane rates from loads its users saw on the Amazon Relay board: 4,066 distinct loads first seen July 7 to October 5, 2026, mostly starting in Tennessee. One-way loads had a median final board price of $2.90 per mile and round trips $2.36 per mile; 57% of loads were raised in price while posted. These are observed board prices, not carrier earnings, and Amazon did not provide the data. Lanes, method and caveats: https://nudoiq.com/amazon-relay-rates/
+
 ## Contact
 
 - Email: contact@nudoiq.com
@@ -67,6 +69,13 @@ Last updated: 2026-10-05.
 - [Load Fetcher alternative: NudoIQ vs LoadFetcher for the Amazon Relay load board](https://nudoiq.com/loadfetcher-alternative/): NudoIQ is a good Load Fetcher alternative if you want loads booked for you. It's a Chrome extension for Amazon Relay carriers that refreshes the load board, AutoBooks only loads that clear your minimum net profit, and drafts scorecard dispute letters. LoadFetcher's public listing shows neither auto booking nor dispute letters. NudoIQ is $49.99 a month flat, every truck.
 - [Amazon Relay loads: load types, equipment and how to book them](https://nudoiq.com/amazon-relay-loads/): How to get Amazon Relay loads: load types (one-way, round trip, blocks, contracts), the equipment each needs, and how to find and book loads faster.
 - [Amazon Relay carrier data 2026: what FMCSA inspection records show](https://nudoiq.com/amazon-relay-carrier-data/): How many carriers haul Amazon freight? NudoIQ's analysis of 101,444 FMCSA roadside inspections listing Amazon as the shipper, from 2023 to 2026.
+- [Amazon Relay rates by lane](https://nudoiq.com/amazon-relay-rates/): Amazon Relay rates from 4,066 loads seen Jul 7–Oct 5, 2026: one-way median $2.90/mile, round trip $2.36/mile, by lane.
+- [Amazon Relay rates: Tennessee to Tennessee (TN to TN)](https://nudoiq.com/amazon-relay-rates/tn-to-tn/): Amazon Relay TN to TN rates from 1,984 loads seen Jul 7–Oct 5, 2026: one-way median $386, $3.23/mile over 121 mi.
+- [Amazon Relay rates: Tennessee to Kentucky (TN to KY)](https://nudoiq.com/amazon-relay-rates/tn-to-ky/): Amazon Relay TN to KY rates from 662 loads seen Jul 7–Oct 5, 2026: one-way median $552, $2.81/mile over 202 mi.
+- [Amazon Relay rates: Tennessee to Georgia (TN to GA)](https://nudoiq.com/amazon-relay-rates/tn-to-ga/): Amazon Relay TN to GA rates from 356 loads seen Jul 7–Oct 5, 2026: one-way median $400, $2.80/mile over 146 mi.
+- [Amazon Relay rates: Tennessee to Virginia (TN to VA)](https://nudoiq.com/amazon-relay-rates/tn-to-va/): Amazon Relay TN to VA rates from 181 loads seen Jul 25–Oct 4, 2026: one-way median $537, $2.94/mile over 189 mi.
+- [Amazon Relay rates: Tennessee to Alabama (TN to AL)](https://nudoiq.com/amazon-relay-rates/tn-to-al/): Amazon Relay TN to AL rates from 136 loads seen Jul 25–Oct 5, 2026: one-way median $465, $3.01/mile over 161 mi.
+- [Amazon Relay rates: Tennessee to North Carolina (TN to NC)](https://nudoiq.com/amazon-relay-rates/tn-to-nc/): Amazon Relay TN to NC rates from 74 loads seen Jul 7–Oct 5, 2026: one-way median $407, $1.98/mile over 231 mi.
 - [Amazon Relay box truck loads: how to find and book them](https://nudoiq.com/amazon-relay-box-truck-loads/): How to find Amazon Relay box truck loads: filter the board for 16 or 26 ft trucks, set up Post A Truck, pick contracts or spot, and judge a rate.
 - [Amazon Relay power only: how it works and how to book it](https://nudoiq.com/amazon-relay-power-only/): Amazon Relay power only means you bring the tractor and Amazon provides the trailer. Which loads work that way, day cab vs sleeper, and judging a rate.
 - [Amazon Relay dispatcher: what the job is and how to do it well](https://nudoiq.com/amazon-relay-dispatcher/): What an Amazon Relay dispatcher does: booking loads, setting up drivers, tracking trips and protecting the score. Plus dispatch service vs DIY.
@@ -77,6 +86,7 @@ Last updated: 2026-10-05.
 ## Data
 
 - [amazon-relay-carrier-data-2026.csv](https://nudoiq.com/amazon-relay-carrier-data/amazon-relay-carrier-data-2026.csv): aggregate FMCSA inspection numbers behind https://nudoiq.com/amazon-relay-carrier-data/ (no carrier names or DOT numbers).
+- [amazon-relay-lane-rates-2026-10-05.csv](https://nudoiq.com/amazon-relay-rates/amazon-relay-lane-rates-2026-10-05.csv): aggregate Amazon Relay lane rate numbers behind https://nudoiq.com/amazon-relay-rates/ (no load IDs).
 
 ## Optional
 

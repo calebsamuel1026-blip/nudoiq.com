@@ -387,6 +387,46 @@ figure figcaption a{color:inherit}
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a good Amazon Relay scorecard grade?", "acceptedAnswer": {"@type": "Answer", "text": "Grades run from F to A+. C+ opens freight auctions, B opens new contracts, and B+, A and A+ get early access to new spot loads. Amazon does not publish the exact percentage behind each letter."}}, {"@type": "Question", "name": "How long does a late load stay on my Amazon Relay scorecard?", "acceptedAnswer": {"@type": "Answer", "text": "Amazon does not publish how long a single violation stays. The score reflects your last six weeks of hauls, so older loads stop counting as they fall out of that window."}}, {"@type": "Question", "name": "How many loads do I need for an Amazon Relay grade?", "acceptedAnswer": {"@type": "Answer", "text": "You become eligible for a grade after completing ten or more Relay loads in the last six active weeks. Below that, you don't get a letter grade."}}, {"@type": "Question", "name": "Does cancelling a load hurt my Amazon Relay score?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Cancelled and expired loads count against your acceptance metric, and the closer the cancellation is to pickup time, the bigger the penalty. If acceptance becomes your lowest metric, it becomes your score."}}, {"@type": "Question", "name": "Can I lose an Amazon Relay contract because of my score?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Amazon says carriers can lose booked contracts if they drop below C+. Booking new contracts requires B or above."}}, {"@type": "Question", "name": "Is there a deadline to dispute an Amazon Relay scorecard impact?", "acceptedAnswer": {"@type": "Answer", "text": "Amazon does not publish one. The 30-day window it lists is for pay disputes. File a score dispute in your Relay account as soon as you see the impact."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://nudoiq.com/#organization", "name": "NudoIQ", "url": "https://nudoiq.com/", "logo": "https://nudoiq.com/brand/mark/icon128.png", "email": "contact@nudoiq.com", "sameAs": ["https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk", "https://t.me/nudoiqsupport"]}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "HowTo", "name": "How to dispute an Amazon Relay performance score impact", "step": [{"@type": "HowToStep", "position": 1, "name": "Check-in times.", "text": "On-time is measured from the check-in timestamp, so your record of when the driver checked in is the first thing to pull."}, {"@type": "HowToStep", "position": 2, "name": "App and location records.", "text": "App usage depends on the app running and location services staying on. Anything showing the app stayed active helps."}, {"@type": "HowToStep", "position": 3, "name": "Messages with Relay.", "text": "Any contact with Relay support about the load, including delays you reported as they happened."}, {"@type": "HowToStep", "position": 4, "name": "Photos.", "text": "Gate lines, closed docks, road closures, equipment problems at pickup."}, {"@type": "HowToStep", "position": 5, "name": "Documents.", "text": "Bills of lading, gate receipts, anything with a time stamp on it."}, {"@type": "HowToStep", "position": 6, "name": "File the dispute", "text": "Then write it up plainly: the load, the impact you're disputing, what happened, and the evidence that shows it. Keep it short and factual."}]}</script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
 </head>
 <body data-layout="custom">
 <a class="skip" href="#main">Skip to content</a>
