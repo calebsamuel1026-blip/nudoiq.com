@@ -1180,6 +1180,8 @@
       <div>© 2026 NudoIQ · <span data-t="independent">Independent software for carriers</span></div>
       <div class="flinks"><a href="/guides/">Guides</a><a href="/privacy.html" data-t="privacy">Privacy</a><a href="/refund-policy.html" data-t="refund">Refund policy</a><a href="/terms.html" data-t="terms">Terms</a><a href="/support/" data-t="support">Support</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contact</a></div>
     </div>
+    <!-- Official profiles (rel="me"): the same list as Organization.sameAs, so search and AI engines tie them to nudoiq.com. -->
+    <div class="flinks fsocial" aria-label="NudoIQ elsewhere"><a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" rel="me noopener" target="_blank">Chrome Web Store</a><a href="https://www.youtube.com/@nudoiqapp" rel="me noopener" target="_blank">YouTube</a><a href="https://www.instagram.com/nudoiq/" rel="me noopener" target="_blank">Instagram</a><a href="https://www.tiktok.com/@nudoiq1" rel="me noopener" target="_blank">TikTok</a><a href="https://www.facebook.com/1279798471883588" rel="me noopener" target="_blank">Facebook</a><a href="https://t.me/nudoiqrelay" rel="me noopener" target="_blank">Telegram</a></div>
     <label class="motion"><input class="sw" type="checkbox" id="motionSw"><span>Turn on Reduced Motion</span></label>
     <p class="tm" data-t="trademarkNote">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc.</p>
   </div></footer>
@@ -1222,312 +1224,323 @@
   })();
   </script>
 
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+  <script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://nudoiq.com/#organization",
+   "name": "NudoIQ",
+   "url": "https://nudoiq.com/",
+   "description": "Independent software for Amazon Relay carriers, owner-operators, dispatchers and fleets.",
+   "email": "contact@nudoiq.com",
+   "sameAs": [
+    "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+    "https://www.youtube.com/@nudoiqapp",
+    "https://www.instagram.com/nudoiq/",
+    "https://www.tiktok.com/@nudoiq1",
+    "https://www.facebook.com/1279798471883588",
+    "https://t.me/nudoiqrelay",
+    "https://t.me/nudoiqsupport"
+   ],
+   "logo": {
+    "@type": "ImageObject",
+    "@id": "https://nudoiq.com/#logo",
+    "url": "https://nudoiq.com/assets/favicon.png",
+    "width": 2056,
+    "height": 765,
+    "caption": "NudoIQ"
+   },
+   "contactPoint": [
     {
-      "@type": "Organization",
-      "@id": "https://nudoiq.com/#organization",
-      "name": "NudoIQ",
-      "url": "https://nudoiq.com/",
-      "description": "Independent software for Amazon Relay carriers, owner-operators, dispatchers and fleets.",
-      "email": "contact@nudoiq.com",
-      "sameAs": [
-        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
-        "https://t.me/nudoiqsupport"
-      ],
-      "logo": {
-        "@type": "ImageObject",
-        "@id": "https://nudoiq.com/#logo",
-        "url": "https://nudoiq.com/assets/favicon.png",
-        "width": 2056,
-        "height": 765,
-        "caption": "NudoIQ"
-      },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "email": "contact@nudoiq.com",
-          "availableLanguage": [
-            "English",
-            "Spanish"
-          ]
-        }
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://nudoiq.com/#website",
-      "url": "https://nudoiq.com/",
-      "name": "NudoIQ",
-      "publisher": {
-        "@id": "https://nudoiq.com/#organization"
-      },
-      "inLanguage": [
-        "en-US",
-        "es-US"
-      ]
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://nudoiq.com/#webpage",
-      "url": "https://nudoiq.com/",
-      "name": "NudoIQ | Amazon Relay Load Board Tools & Chrome Extension",
-      "isPartOf": {
-        "@id": "https://nudoiq.com/#website"
-      },
-      "about": {
-        "@id": "https://nudoiq.com/#software"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://nudoiq.com/assets/og-image-1200x630.png"
-      },
-      "inLanguage": "en-US"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://nudoiq.com/#software",
-      "name": "NudoIQ",
-      "applicationCategory": "BusinessApplication",
-      "applicationSubCategory": "Browser Extension",
-      "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
-      "url": "https://nudoiq.com/",
-      "image": "https://nudoiq.com/assets/og-image-1200x630.png",
-      "description": "NudoIQ is a Chrome extension for Amazon Relay carriers. It adds market-rate intelligence, scorecard dispute letters, load alerts and price-change notifications, search and booking rules, lane rate intelligence, truck routing, and HOS overview.",
-      "inLanguage": [
-        "en-US",
-        "es-US"
-      ],
-      "publisher": {
-        "@id": "https://nudoiq.com/#organization"
-      },
-      "featureList": [
-        "Load alerts and price-change notifications",
-        "Board refresher with adjustable speed",
-        "Autobook on your own price and lane rules",
-        "Backhaul finder for the return load",
-        "One-click Post Truck",
-        "Instant Book",
-        "Search and booking rules",
-        "Lane Intelligence and rate support",
-        "Net profit per load after driver pay, fuel, maintenance and deadhead",
-        "Scorecard dispute letter generator",
-        "Truck routing",
-        "Driver dispatch",
-        "HOS overview",
-        "English and Spanish interface"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "price": "49.99",
-        "priceCurrency": "USD",
-        "availability": "https://schema.org/InStock",
-        "url": "https://nudoiq.com/#pricing",
-        "description": "7-day free trial, no card needed to start. $49.99 per month after the trial. Cancel anytime.",
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "price": "49.99",
-          "priceCurrency": "USD",
-          "unitCode": "MON",
-          "billingDuration": "P1M"
-        }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": 5,
-        "reviewCount": 5
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "sophialaim"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "reviewBody": "Their AI features to detect what prices will go to is amazing and have already made me more than $1000 I would not have made without the extension, which makes the 50 bucks feel like nothing. Life saver for relay.",
-          "datePublished": "2026-08-25",
-          "itemReviewed": {
-            "@id": "https://nudoiq.com/#software"
-          }
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Futo"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "reviewBody": "Their performance dispute feature is a life saver. Also their load booking features work really well, and they dont slow the load board down, other extensions seem to struggle with that.",
-          "datePublished": "2026-06-28",
-          "itemReviewed": {
-            "@id": "https://nudoiq.com/#software"
-          }
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Lalo"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "reviewBody": "Works great, good features, better than the others I have tried. Definitely worth it for the 50 bucks a month.",
-          "datePublished": "2026-06-10",
-          "itemReviewed": {
-            "@id": "https://nudoiq.com/#software"
-          }
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Miguel"
-          },
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "reviewBody": "Super worth the $50 per month.",
-          "datePublished": "2026-08-28",
-          "itemReviewed": {
-            "@id": "https://nudoiq.com/#software"
-          }
-        },
-        {
-          "@type": "Review",
-          "author": {
-            "@type": "Person",
-            "name": "Tristan"
-          },
-          "datePublished": "2026-08-28",
-          "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "reviewBody": "Best extension I have tried for Amazon Relay. Unique features and no problems. I will keep paying the 50 dollars every month.",
-          "itemReviewed": {
-            "@id": "https://nudoiq.com/#software"
-          }
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://nudoiq.com/#faq",
-      "isPartOf": {
-        "@id": "https://nudoiq.com/#webpage"
-      },
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do I need to leave my computer on?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. NudoIQ runs in your browser, so the Amazon Relay tab and computer need to remain available while it watches the load board. Alerts help you step away without staring at the screen."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does NudoIQ guarantee a rate or booking?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Rates, availability, and booking outcomes change constantly. NudoIQ provides alerts, historical context, estimates, and workflow tools to support your decision."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is NudoIQ affiliated with Amazon?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. NudoIQ is an independent browser extension and is not affiliated with or endorsed by Amazon.com, Inc. Carriers remain responsible for their accounts and compliance with applicable terms."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which browsers are supported?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "NudoIQ is built for Chrome and other Chromium-based browsers. Feature behavior can vary by browser version."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I cancel?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Go to nudoiq.com/billing and open your Stripe billing portal (Stripe will send a one-time code to your subscription email). Or email contact@nudoiq.com. Cancel during the 7-day trial with no charge; cancel later and the next renewal is stopped."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How can I get help?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Email contact@nudoiq.com or message NudoIQ support on Telegram."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the Amazon Relay load board?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "It is the board inside Amazon Relay where Amazon posts freight to contracted carriers. Carriers search it, book loads, and post available trucks against it. NudoIQ does not replace that board. It runs inside it and adds rate context, alerts and reporting to the screens you already use."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does NudoIQ see my Amazon Relay password?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "NudoIQ runs inside your signed-in Relay browser tab. It never asks for your Amazon password or stores it. Your subscription email, driver information, and trip details are stored only for your account."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does NudoIQ work on load boards other than Amazon Relay?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. NudoIQ is built specifically for the Amazon Relay load board and reads only Relay screens. It does not connect to DAT, Truckstop or other load boards."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Will NudoIQ get my account suspended?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "NudoIQ runs only in your own browser on Relay pages you're signed in to. It doesn't log in from another location or ask for your password. You control the refresh speed. Amazon's decisions about accounts are theirs alone, but NudoIQ stays within the Relay interface you already use."
-          }
-        }
-      ]
+     "@type": "ContactPoint",
+     "contactType": "customer support",
+     "email": "contact@nudoiq.com",
+     "availableLanguage": [
+      "English",
+      "Spanish"
+     ]
     }
-  ]
-}
-  </script>
+   ],
+   "alternateName": [
+    "Nudo IQ",
+    "NudoIQ Chrome extension"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://nudoiq.com/#website",
+   "url": "https://nudoiq.com/",
+   "name": "NudoIQ",
+   "publisher": {
+    "@id": "https://nudoiq.com/#organization"
+   },
+   "inLanguage": [
+    "en-US",
+    "es-US"
+   ],
+   "alternateName": [
+    "Nudo IQ",
+    "nudoiq.com"
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://nudoiq.com/#webpage",
+   "url": "https://nudoiq.com/",
+   "name": "NudoIQ | Amazon Relay Load Board Tools & Chrome Extension",
+   "isPartOf": {
+    "@id": "https://nudoiq.com/#website"
+   },
+   "about": {
+    "@id": "https://nudoiq.com/#software"
+   },
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://nudoiq.com/assets/og-image-1200x630.png"
+   },
+   "inLanguage": "en-US"
+  },
+  {
+   "@type": "SoftwareApplication",
+   "@id": "https://nudoiq.com/#software",
+   "name": "NudoIQ",
+   "applicationCategory": "BusinessApplication",
+   "applicationSubCategory": "Browser Extension",
+   "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
+   "url": "https://nudoiq.com/",
+   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+   "description": "NudoIQ is a Chrome extension for Amazon Relay carriers. It adds market-rate intelligence, scorecard dispute letters, load alerts and price-change notifications, search and booking rules, lane rate intelligence, truck routing, and HOS overview.",
+   "inLanguage": [
+    "en-US",
+    "es-US"
+   ],
+   "publisher": {
+    "@id": "https://nudoiq.com/#organization"
+   },
+   "featureList": [
+    "Load alerts and price-change notifications",
+    "Board refresher with adjustable speed",
+    "Autobook on your own price and lane rules",
+    "Backhaul finder for the return load",
+    "One-click Post Truck",
+    "Instant Book",
+    "Search and booking rules",
+    "Lane Intelligence and rate support",
+    "Net profit per load after driver pay, fuel, maintenance and deadhead",
+    "Scorecard dispute letter generator",
+    "Truck routing",
+    "Driver dispatch",
+    "HOS overview",
+    "English and Spanish interface"
+   ],
+   "offers": {
+    "@type": "Offer",
+    "price": "49.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://nudoiq.com/#pricing",
+    "description": "7-day free trial, no card needed to start. $49.99 per month after the trial. Cancel anytime.",
+    "priceSpecification": {
+     "@type": "UnitPriceSpecification",
+     "price": "49.99",
+     "priceCurrency": "USD",
+     "unitCode": "MON",
+     "billingDuration": "P1M"
+    }
+   },
+   "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": 5,
+    "reviewCount": 5
+   },
+   "review": [
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "sophialaim"
+     },
+     "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+     },
+     "reviewBody": "Their AI features to detect what prices will go to is amazing and have already made me more than $1000 I would not have made without the extension, which makes the 50 bucks feel like nothing. Life saver for relay.",
+     "datePublished": "2026-08-25",
+     "itemReviewed": {
+      "@id": "https://nudoiq.com/#software"
+     }
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Futo"
+     },
+     "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+     },
+     "reviewBody": "Their performance dispute feature is a life saver. Also their load booking features work really well, and they dont slow the load board down, other extensions seem to struggle with that.",
+     "datePublished": "2026-06-28",
+     "itemReviewed": {
+      "@id": "https://nudoiq.com/#software"
+     }
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Lalo"
+     },
+     "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+     },
+     "reviewBody": "Works great, good features, better than the others I have tried. Definitely worth it for the 50 bucks a month.",
+     "datePublished": "2026-06-10",
+     "itemReviewed": {
+      "@id": "https://nudoiq.com/#software"
+     }
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Miguel"
+     },
+     "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+     },
+     "reviewBody": "Super worth the $50 per month.",
+     "datePublished": "2026-08-28",
+     "itemReviewed": {
+      "@id": "https://nudoiq.com/#software"
+     }
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Tristan"
+     },
+     "datePublished": "2026-08-28",
+     "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "worstRating": "1"
+     },
+     "reviewBody": "Best extension I have tried for Amazon Relay. Unique features and no problems. I will keep paying the 50 dollars every month.",
+     "itemReviewed": {
+      "@id": "https://nudoiq.com/#software"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://nudoiq.com/#faq",
+   "isPartOf": {
+    "@id": "https://nudoiq.com/#webpage"
+   },
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Do I need to leave my computer on?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes. NudoIQ runs in your browser, so the Amazon Relay tab and computer need to remain available while it watches the load board. Alerts help you step away without staring at the screen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does NudoIQ guarantee a rate or booking?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Rates, availability, and booking outcomes change constantly. NudoIQ provides alerts, historical context, estimates, and workflow tools to support your decision."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is NudoIQ affiliated with Amazon?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. NudoIQ is an independent browser extension and is not affiliated with or endorsed by Amazon.com, Inc. Carriers remain responsible for their accounts and compliance with applicable terms."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Which browsers are supported?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "NudoIQ is built for Chrome and other Chromium-based browsers. Feature behavior can vary by browser version."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I cancel?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Go to nudoiq.com/billing and open your Stripe billing portal (Stripe will send a one-time code to your subscription email). Or email contact@nudoiq.com. Cancel during the 7-day trial with no charge; cancel later and the next renewal is stopped."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How can I get help?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Email contact@nudoiq.com or message NudoIQ support on Telegram."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the Amazon Relay load board?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It is the board inside Amazon Relay where Amazon posts freight to contracted carriers. Carriers search it, book loads, and post available trucks against it. NudoIQ does not replace that board. It runs inside it and adds rate context, alerts and reporting to the screens you already use."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does NudoIQ see my Amazon Relay password?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "NudoIQ runs inside your signed-in Relay browser tab. It never asks for your Amazon password or stores it. Your subscription email, driver information, and trip details are stored only for your account."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does NudoIQ work on load boards other than Amazon Relay?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. NudoIQ is built specifically for the Amazon Relay load board and reads only Relay screens. It does not connect to DAT, Truckstop or other load boards."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Will NudoIQ get my account suspended?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "NudoIQ runs only in your own browser on Relay pages you're signed in to. It doesn't log in from another location or ask for your password. You control the refresh speed. Amazon's decisions about accounts are theirs alone, but NudoIQ stays within the Relay interface you already use."
+     }
+    }
+   ]
+  }
+ ]
+}</script>
   <script src="/assets/mobile-bridge.js?v=dd39030e" defer></script>
   <script src="/assets/proof-zoom.js?v=5c560741" defer></script>
 </body>
