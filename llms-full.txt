@@ -952,7 +952,7 @@ Check the [equipment requirements](https://nudoiq.com/amazon-relay-requirements/
 # Amazon Relay scorecard: how the performance score works and how to dispute it
 
 URL: https://nudoiq.com/amazon-relay-scorecard/
-Published: 2026-09-20. Last updated: 2026-10-02.
+Published: 2026-09-20. Last updated: 2026-10-04.
 
 Short answer: The Amazon Relay scorecard gives each carrier a performance score from 0% to 100%, shown as a letter grade from F to A+. It covers the last six weeks of hauls and four metrics: on-time, acceptance, app usage and disruption-free. The overall score equals the lowest of the four, and higher grades open auctions, contracts and early spot loads.
 

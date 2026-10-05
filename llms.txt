@@ -45,11 +45,14 @@ NudoIQ analyzed public FMCSA roadside inspection records that list Amazon as the
 - Email: contact@nudoiq.com
 - Telegram support: https://t.me/nudoiqsupport
 
+Last updated: 2026-10-04.
+
 ## Pages
 
 - [NudoIQ home](https://nudoiq.com/): product overview, features, pricing and FAQ.
 - [NudoIQ en español](https://nudoiq.com/es/): the home page in Spanish.
 - [Amazon Relay guides](https://nudoiq.com/guides/): every guide below in one list.
+- [NudoIQ on Android](https://nudoiq.com/android/): how to run the extension on an Android phone.
 - [How the Amazon Relay Load Board Works](https://nudoiq.com/amazon-relay-load-board/): Complete guide to the Amazon Relay load board: filters, load types, rates, and why good loads book in seconds. Login at relay.amazon.com.
 - [What Is Amazon Relay?](https://nudoiq.com/what-is-amazon-relay/): What Amazon Relay is, who can join, equipment types, load boards, payment schedule and performance scorecards explained.
 - [Amazon Relay Requirements](https://nudoiq.com/amazon-relay-requirements/): Amazon Relay eligibility checklist: DOT/MC, authority age, safety rating, BASIC scores, insurance, equipment and ownership verification.

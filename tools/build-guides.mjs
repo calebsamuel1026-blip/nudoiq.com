@@ -227,7 +227,7 @@ ${extraLd.map((o) => `  <script type="application/ld+json">\n${JSON.stringify(o,
 
 const FOOT = `
     <div class="footer">
-      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/">Amazon Relay guides</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contact</a>
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/">Amazon Relay guides</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="/partners/">Partners</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contact</a>
     </div>
     <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. Amazon Relay requirements change; confirm current rules at relay.amazon.com.</p>
 
@@ -302,7 +302,7 @@ for (const p of pages) {
   const trail = [['Home', '/'], ['Guides', '/guides/'], [stripMd(p.h1), `/${p.slug}/`]];
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: stripMd(p.h1), description: p.description,
     mainEntityOfPage: url, url, image: `${SITE}/assets/og-image-1200x630.png`, datePublished: p.published, dateModified: p.updated,
-    inLanguage: 'en-US', author: authorLd,
+    inLanguage: 'en-US', author: authorLd, about: { '@id': `${SITE}/#software` },
     publisher: { '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'NudoIQ', logo: { '@type': 'ImageObject', url: `${SITE}/brand/mark/icon128.png` } } };
   if (p.answer) article.abstract = p.answer;
   const ld = [article, crumbLd(trail.map(([nm, u], i) => [nm, i === trail.length - 1 ? `/${p.slug}/` : u]))];
@@ -310,7 +310,10 @@ for (const p of pages) {
     ld.push({ '@context': 'https://schema.org', '@type': 'FAQPage',
       mainEntity: p.faq.map((f) => ({ '@type': 'Question', name: stripMd(f.q), acceptedAnswer: { '@type': 'Answer', text: stripMd(f.a) } })) });
   }
-  ld.push({ '@context': 'https://schema.org', '@graph': [ORG, SOFTWARE] });
+  // The full SoftwareApplication node lives on the home page only (it carries the rating there). Declaring it
+  // again here without aggregateRating/review fails Google's SoftwareApplication check (Semrush Site Audit
+  // flagged all 20 guides, 2026-10-04), so guides point to it by @id from Article.about instead.
+  ld.push({ '@context': 'https://schema.org', '@graph': [ORG] });
   if (isData) {
     ld.push({ '@context': 'https://schema.org', '@type': 'Dataset', name: stripMd(p.h1), description: p.description,
       url, creator: { '@id': `${SITE}/#organization` }, author: authorLd, datePublished: p.published, dateModified: p.updated,
@@ -359,7 +362,11 @@ ${related.slice(0, 6).map((o) => `        <a href="/${o.slug}/">${inline(o.h1)}<
     </nav>
 ${FOOT}`;
   fs.mkdirSync(path.join(ROOT, p.slug), { recursive: true });
-  fs.writeFileSync(path.join(ROOT, p.slug, 'index.html'), html);
+  // A page whose live HTML carries data-layout="custom" was hand-built (for example the scorecard page rebuilt
+  // 2026-10-04). Keep it in the hub, sitemap and llms files, but never overwrite its HTML from Markdown.
+  const out = path.join(ROOT, p.slug, 'index.html');
+  if (fs.existsSync(out) && /data-layout="custom"/.test(fs.readFileSync(out, 'utf8'))) { p.custom = true; continue; }
+  fs.writeFileSync(out, html);
 }
 if (pages.some((p) => p.slug === DATA_SLUG)) writeCsv();
 
@@ -428,6 +435,7 @@ ${FOOT}`;
       `- [NudoIQ home](${SITE}/): product overview, features, pricing and FAQ.`,
       `- [NudoIQ en español](${SITE}/es/): the home page in Spanish.`,
       `- [Amazon Relay guides](${SITE}/guides/): every guide below in one list.`,
+      `- [NudoIQ on Android](${SITE}/android/): how to run the extension on an Android phone.`,
       ...pages.map((p) => `- [${stripMd(p.h1)}](${SITE}/${p.slug}/): ${p.description}`),
       '', '## Data', '',
       `- [${CSV_NAME}](${SITE}/${DATA_SLUG}/${CSV_NAME}): aggregate FMCSA inspection numbers behind ${SITE}/${DATA_SLUG}/ (no carrier names or DOT numbers).`,
@@ -435,7 +443,8 @@ ${FOOT}`;
       `- [Privacy policy](${SITE}/privacy.html)`, `- [Refund policy](${SITE}/refund-policy.html)`, `- [Terms](${SITE}/terms.html)`,
       `- [Full text of every guide](${SITE}/llms-full.txt)`,
     ].join('\n');
-    fs.writeFileSync(path.join(ROOT, 'llms.txt'), `${prose}\n\n${index}\n`);
+    const newest = pages.reduce((m, p) => (p.updated > m ? p.updated : m), FIRST_PUBLISHED);
+    fs.writeFileSync(path.join(ROOT, 'llms.txt'), `${prose}\n\nLast updated: ${newest}.\n\n${index}\n`);
     const full = pages.map((p) => [
       `# ${stripMd(p.h1)}`, '', `URL: ${SITE}/${p.slug}/`, `Published: ${p.published}. Last updated: ${p.updated}.`, '',
       p.answer ? `Short answer: ${p.answer}\n` : '',
@@ -452,5 +461,5 @@ console.log(`Built ${pages.length} guides + hub:`);
 for (const p of pages) {
   const words = stripMd(p.body).split(' ').length;
   const warn = [p.title.length > 62 && `title ${p.title.length}ch`, p.description.length > 160 && `desc ${p.description.length}ch`, words < 700 && `${words} words`].filter(Boolean);
-  console.log(`  /${p.slug}/  ${words}w  ${p.faq.length} FAQ${warn.length ? '  ⚠ ' + warn.join(', ') : ''}`);
+  console.log(`  /${p.slug}/${p.custom ? ' (custom layout, HTML kept)' : ''}  ${words}w  ${p.faq.length} FAQ${warn.length ? '  ⚠ ' + warn.join(', ') : ''}`);
 }

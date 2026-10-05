@@ -41,7 +41,7 @@ const sections = copy.sections.map(s =>
   `    <div class="section">\n      <h2>${s.heading}</h2>\n      ${polish(s.html)}\n    </div>`
 ).join('\n\n');
 
-const title = 'Support | NudoIQ';
+const title = 'NudoIQ Support | Amazon Relay Chrome Extension';
 const desc  = copy.meta_description;
 
 const html = `<!DOCTYPE html>
