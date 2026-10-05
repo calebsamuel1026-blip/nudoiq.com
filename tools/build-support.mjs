@@ -47,6 +47,7 @@ const desc  = copy.meta_description;
 const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
@@ -74,7 +75,7 @@ const html = `<!DOCTYPE html>
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
     })(window, document, "clarity", "script", "y9n5ejt2k9");
   </script>
   <link rel="stylesheet" href="/assets/doc.css">
