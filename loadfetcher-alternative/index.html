@@ -5,6 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
+  <!-- Google Ads click id capture (2026-10-05, copied to /loadfetcher-alternative/ 2026-10-06 for the Competitor campaign; research/google-ads/RESTRUCTURE-2026-10-05.md). The Web Store hop loses the
+       ad click, so the gclid (or gbraid/wbraid on iOS/app traffic) is kept in localStorage on nudoiq.com, and /welcome/
+       (same origin, opened by the extension after install) sends it with the welcome_opened funnel row. That row is what
+       the "Trial started" / "Paid subscriber" offline conversions are matched back to. Kept 90 days (Google's upload
+       window); the newest click wins. Store links get utm_source/medium/campaign only: the Chrome Web Store dashboard
+       reports those three and passes nothing to the extension, so a per-click id in the store URL would carry nothing. -->
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search), keys = ["gclid", "gbraid", "wbraid"], i, v;
+        for (i = 0; i < keys.length; i++) {
+          v = q.get(keys[i]);
+          if (v && /^[\w.\-]{10,300}$/.test(v)) {
+            localStorage.setItem("nudoiq_gclid", JSON.stringify({ type: keys[i], id: v, ts: Date.now(), lp: location.pathname }));
+            break;
+          }
+        }
+        var s = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+        if (!s || !s.ts || Date.now() - s.ts > 90 * 864e5) return;
+        var camp = (q.get("utm_campaign") || "google_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "google_ads";
+        var tag = function () {
+          Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+            var u = new URL(a.href);
+            u.searchParams.set("utm_source", "google");
+            u.searchParams.set("utm_medium", "cpc");
+            u.searchParams.set("utm_campaign", camp);
+            a.href = u.toString();
+          });
+        };
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+      } catch (e) {}
+    })();
+  </script>
   <title>LoadFetcher Alternative: Relay Load Board Auto Booker 2026</title>
   <meta name="description" content="Load Fetcher alternative for the Amazon Relay load board: NudoIQ auto books loads at your profit floor. See the full comparison. Try it 7 days free.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
