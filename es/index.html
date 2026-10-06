@@ -641,27 +641,21 @@
   /* ── Proof band, directly under the hero strip ──────────────────────
      Not another row of cards: there are four of those immediately above it,
      and a fifth would read as one more claim rather than as people talking.
-     A rating, a count, three voices, and the person who built it — in that
-     order, because that is the order a sceptic checks them in. */
+     2026-10-06: one large review instead of three cards (Caleb: too much text). */
   .proof{background:var(--paper-2);border-bottom:1px solid var(--line)}
   .proof-in{max-width:var(--max);margin:0 auto;padding:44px 24px 46px}
-  .proof-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 18px}
-  .pstars{color:#F0A500;letter-spacing:2px;font-size:16px;margin:0}
-  .pscore{margin:0;font-size:17px;color:var(--ink-4)}
-  .pscore b{font-size:22px;font-weight:600;color:var(--ink);letter-spacing:-.02em}
-  .plink{margin-left:auto;font-size:14.5px;color:var(--blue);text-decoration:none;font-weight:500}
+  .pfeat{margin:0 auto;max-width:820px;text-align:center}
+  .pstars{color:#F0A500;letter-spacing:4px;font-size:22px;margin:0 0 18px}
+  .pfeat blockquote{margin:0;font-size:clamp(24px,3.4vw,36px);line-height:1.28;font-weight:600;color:var(--ink);
+    letter-spacing:-.022em;text-wrap:balance}
+  .pfeat blockquote::before{content:"\201C"}
+  .pfeat blockquote::after{content:"\201D"}
+  .pfeat figcaption{margin-top:18px;font-size:15px;color:var(--g3)}
+  .pfeat .pscore{color:var(--ink);font-weight:600}
+  .pfeat .pdot{margin:0 6px}
+  .plink{display:inline-block;margin-top:14px;font-size:15px;color:var(--blue);text-decoration:none;font-weight:500}
   .plink:hover{text-decoration:underline}
-  .pquotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:26px}
-  .pquotes figure{margin:0;background:#fff;border:1px solid var(--line-2);
-    border-radius:var(--ri);padding:22px 22px 18px}
-  .pquotes blockquote{margin:0;font-size:15.5px;line-height:1.5;color:var(--ink);letter-spacing:-.006em}
-  .pquotes figcaption{margin-top:12px;font-size:13px;color:var(--g3)}
-  .pfound{margin:26px 0 0;font-size:16.5px;line-height:1.5;color:var(--ink);
-    border-left:3px solid var(--peri-2);padding-left:16px;max-width:64ch}
-  .pfound .pby{display:block;margin-top:6px;font-size:13.5px;color:var(--g3)}
   @media (max-width:820px){
-    .pquotes{grid-template-columns:1fr;gap:14px}
-    .plink{margin-left:0;width:100%}
     .proof-in{padding:34px 24px 36px}
   }
 
@@ -672,6 +666,46 @@
   <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
     document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
       if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
 </head>
 <body data-clarity-unmask="true">
   <a class="skip" href="#main">Skip to content</a>
@@ -776,17 +810,14 @@
          on every surface a customer sees.
     -->
     <section class="proof"><div class="proof-in">
-      <div class="proof-head">
-        <p class="pstars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-        <p class="pscore"><b>5.0</b> <span data-t="proofCount">en Chrome Web Store</span></p>
+      <!-- 2026-10-06 Caleb: "too much text ... do one review, where users actually see it and digest it". One large quote
+           (Tristan: names Relay, beats the others, answers the price question); the other quotes and the founder line removed. -->
+      <figure class="pfeat">
+        <p class="pstars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <blockquote data-t="review5">La mejor extensión que he probado para Amazon Relay. Funciones únicas y sin problemas. Voy a seguir pagando los 50 dólares cada mes.</blockquote>
+        <figcaption>Tristan <span class="pdot" aria-hidden="true">&middot;</span> <b class="pscore">5.0</b> <span data-t="proofCount">en Chrome Web Store</span></figcaption>
         <a class="plink" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk/reviews" rel="noopener" target="_blank" data-t="vouchLink">Lee todas las reseñas</a>
-      </div>
-      <div class="pquotes">
-        <figure><blockquote data-t="review2">Su función de disputa de desempeño es un salvavidas. Sus funciones de reserva de cargas también funcionan muy bien y no ralentizan el tablero; otras extensiones parecen tener problemas con eso.</blockquote><figcaption data-t="review2By">Futo · Chrome Web Store</figcaption></figure>
-        <figure><blockquote data-t="review3">Funciona muy bien, buenas funciones, mejor que las otras que he probado. Definitivamente vale la pena por los 50 dólares al mes.</blockquote><figcaption data-t="review3By">Lalo · Chrome Web Store</figcaption></figure>
-        <figure><blockquote data-t="review5">La mejor extensión que he probado para Amazon Relay. Funciones únicas y sin problemas. Voy a seguir pagando los 50 dólares cada mes.</blockquote><figcaption data-t="review5By">Tristan · Chrome Web Store</figcaption></figure>
-      </div>
-      <p class="pfound"><span data-t="founderLine">Manejo una compañía en Relay y creé NudoIQ porque yo era el que le daba refrescar todo el día.</span> <span class="pby" data-t="founderBy">Caleb, fundador</span></p>
+      </figure>
     </div></section>
 
 
@@ -1186,8 +1217,10 @@
   <footer><div class="foot-in">
     <div class="foot-row">
       <div>© 2026 NudoIQ · <span data-t="independent">Software independiente para transportistas</span></div>
-      <div class="flinks"><a href="/guides/">Guides</a><a href="/privacy.html" data-t="privacy">Privacidad</a><a href="/refund-policy.html" data-t="refund">Reembolsos</a><a href="/terms.html" data-t="terms">Términos</a><a href="/support/" data-t="support">Soporte</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contacto</a></div>
+      <div class="flinks"><a href="/guides/">Guides</a><a href="/fleet/">Fleets</a><a href="/dispatch/">Dispatchers</a><a href="/privacy.html" data-t="privacy">Privacidad</a><a href="/refund-policy.html" data-t="refund">Reembolsos</a><a href="/terms.html" data-t="terms">Términos</a><a href="/support/" data-t="support">Soporte</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contacto</a></div>
     </div>
+    <!-- Official profiles (rel="me"): the same list as Organization.sameAs, so search and AI engines tie them to nudoiq.com. -->
+    <div class="flinks fsocial" aria-label="NudoIQ elsewhere"><a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" rel="me noopener" target="_blank">Chrome Web Store</a><a href="https://www.youtube.com/@nudoiqapp" rel="me noopener" target="_blank">YouTube</a><a href="https://www.instagram.com/nudoiq/" rel="me noopener" target="_blank">Instagram</a><a href="https://www.tiktok.com/@nudoiq1" rel="me noopener" target="_blank">TikTok</a><a href="https://www.facebook.com/1279798471883588" rel="me noopener" target="_blank">Facebook</a><a href="https://t.me/nudoiqrelay" rel="me noopener" target="_blank">Telegram</a></div>
     <label class="motion"><input class="sw" type="checkbox" id="motionSw"><span>Turn on Reduced Motion</span></label>
     <p class="tm" data-t="trademarkNote">Amazon y Amazon Relay son marcas registradas de Amazon.com, Inc. o sus afiliadas. NudoIQ es un producto independiente y no está afiliado, respaldado ni patrocinado por Amazon.com, Inc.</p>
   </div></footer>
@@ -1243,6 +1276,11 @@
       "email": "contact@nudoiq.com",
       "sameAs": [
         "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://www.youtube.com/@nudoiqapp",
+        "https://www.instagram.com/nudoiq/",
+        "https://www.tiktok.com/@nudoiq1",
+        "https://www.facebook.com/1279798471883588",
+        "https://t.me/nudoiqrelay",
         "https://t.me/nudoiqsupport"
       ],
       "logo": {
@@ -1263,6 +1301,10 @@
             "Spanish"
           ]
         }
+      ],
+      "alternateName": [
+        "Nudo IQ",
+        "NudoIQ Chrome extension"
       ]
     },
     {
@@ -1276,6 +1318,10 @@
       "inLanguage": [
         "en-US",
         "es-US"
+      ],
+      "alternateName": [
+        "Nudo IQ",
+        "nudoiq.com"
       ]
     },
     {

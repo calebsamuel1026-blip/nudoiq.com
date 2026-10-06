@@ -641,27 +641,21 @@
   /* ── Proof band, directly under the hero strip ──────────────────────
      Not another row of cards: there are four of those immediately above it,
      and a fifth would read as one more claim rather than as people talking.
-     A rating, a count, three voices, and the person who built it — in that
-     order, because that is the order a sceptic checks them in. */
+     2026-10-06: one large review instead of three cards (Caleb: too much text). */
   .proof{background:var(--paper-2);border-bottom:1px solid var(--line)}
   .proof-in{max-width:var(--max);margin:0 auto;padding:44px 24px 46px}
-  .proof-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 18px}
-  .pstars{color:#F0A500;letter-spacing:2px;font-size:16px;margin:0}
-  .pscore{margin:0;font-size:17px;color:var(--ink-4)}
-  .pscore b{font-size:22px;font-weight:600;color:var(--ink);letter-spacing:-.02em}
-  .plink{margin-left:auto;font-size:14.5px;color:var(--blue);text-decoration:none;font-weight:500}
+  .pfeat{margin:0 auto;max-width:820px;text-align:center}
+  .pstars{color:#F0A500;letter-spacing:4px;font-size:22px;margin:0 0 18px}
+  .pfeat blockquote{margin:0;font-size:clamp(24px,3.4vw,36px);line-height:1.28;font-weight:600;color:var(--ink);
+    letter-spacing:-.022em;text-wrap:balance}
+  .pfeat blockquote::before{content:"\201C"}
+  .pfeat blockquote::after{content:"\201D"}
+  .pfeat figcaption{margin-top:18px;font-size:15px;color:var(--g3)}
+  .pfeat .pscore{color:var(--ink);font-weight:600}
+  .pfeat .pdot{margin:0 6px}
+  .plink{display:inline-block;margin-top:14px;font-size:15px;color:var(--blue);text-decoration:none;font-weight:500}
   .plink:hover{text-decoration:underline}
-  .pquotes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:26px}
-  .pquotes figure{margin:0;background:#fff;border:1px solid var(--line-2);
-    border-radius:var(--ri);padding:22px 22px 18px}
-  .pquotes blockquote{margin:0;font-size:15.5px;line-height:1.5;color:var(--ink);letter-spacing:-.006em}
-  .pquotes figcaption{margin-top:12px;font-size:13px;color:var(--g3)}
-  .pfound{margin:26px 0 0;font-size:16.5px;line-height:1.5;color:var(--ink);
-    border-left:3px solid var(--peri-2);padding-left:16px;max-width:64ch}
-  .pfound .pby{display:block;margin-top:6px;font-size:13.5px;color:var(--g3)}
   @media (max-width:820px){
-    .pquotes{grid-template-columns:1fr;gap:14px}
-    .plink{margin-left:0;width:100%}
     .proof-in{padding:34px 24px 36px}
   }
 
@@ -816,17 +810,14 @@
          on every surface a customer sees.
     -->
     <section class="proof"><div class="proof-in">
-      <div class="proof-head">
-        <p class="pstars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
-        <p class="pscore"><b>5.0</b> <span data-t="proofCount">on the Chrome Web Store</span></p>
+      <!-- 2026-10-06 Caleb: "too much text ... do one review, where users actually see it and digest it". One large quote
+           (Tristan: names Relay, beats the others, answers the price question); the other quotes and the founder line removed. -->
+      <figure class="pfeat">
+        <p class="pstars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <blockquote data-t="review5">Best extension I have tried for Amazon Relay. Unique features and no problems. I will keep paying the 50 dollars every month.</blockquote>
+        <figcaption>Tristan <span class="pdot" aria-hidden="true">&middot;</span> <b class="pscore">5.0</b> <span data-t="proofCount">on the Chrome Web Store</span></figcaption>
         <a class="plink" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk/reviews" rel="noopener" target="_blank" data-t="vouchLink">Read every review</a>
-      </div>
-      <div class="pquotes">
-        <figure><blockquote data-t="review2">Their performance dispute feature is a life saver. Also their load booking features work really well, and they dont slow the load board down, other extensions seem to struggle with that.</blockquote><figcaption data-t="review2By">Futo &middot; Chrome Web Store</figcaption></figure>
-        <figure><blockquote data-t="review3">Works great, good features, better than the others I have tried. Definitely worth it for the 50 bucks a month.</blockquote><figcaption data-t="review3By">Lalo &middot; Chrome Web Store</figcaption></figure>
-        <figure><blockquote data-t="review5">Best extension I have tried for Amazon Relay. Unique features and no problems. I will keep paying the 50 dollars every month.</blockquote><figcaption data-t="review5By">Tristan &middot; Chrome Web Store</figcaption></figure>
-      </div>
-      <p class="pfound"><span data-t="founderLine">I run a carrier on Relay and built NudoIQ because I was the one hitting refresh all day.</span> <span class="pby" data-t="founderBy">Caleb, founder</span></p>
+      </figure>
     </div></section>
 
 
