@@ -11,6 +11,16 @@
   var c = q.get("c") || "census", view = q.get("view");
   var dest = (c === "cold-dispatch" ? "/dispatch/" : "/m/") + "?utm_source=outreach&utm_medium=email&utm_campaign=" + encodeURIComponent(c) + "&utm_content=variant-" + encodeURIComponent(v)
     + (view === "desktop" || view === "mobile" ? "&view=" + view : "");
+  // A/B 2026-10-06 (Caleb: find reach that converts): /m/ got 21 sessions in 3 days at ~32% scroll, so half of the DESKTOP
+  // carrier clicks skip the landing page and open the Chrome Web Store listing directly. Arm = parity of a hash of rid (stable per
+  // recipient; recomputable offline from outreach_clicks). Phones always keep /m/ (an extension can't install on a phone; /m/ has the
+  // send-to-my-computer bridge). Dispatch keeps /dispatch/. Store installs are split by utm_campaign "<c>-direct" in the CWS dashboard.
+  var mobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || view === "mobile";
+  var h = 0; for (var i = 0; i < rid.length; i++) { h = (h * 31 + rid.charCodeAt(i)) >>> 0; }
+  if (c !== "cold-dispatch" && !mobile && view !== "desktop-m" && rid.length >= 6 && h % 2 === 1) {
+    dest = "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=outreach&utm_medium=email&utm_campaign="
+      + encodeURIComponent(c + "-direct") + "&utm_content=variant-" + encodeURIComponent(v);
+  }
   var done = false, go = function () { if (!done) { done = true; location.replace(dest); } };
   setTimeout(go, 1200);
   if (rid.length < 6) { go(); return; }
