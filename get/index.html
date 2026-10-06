@@ -198,6 +198,20 @@
     .hero-shot img{width:100%;display:block}
     @media (max-width:560px){ .hero-shot .frame{border-radius:12px} }
 
+    /* People, copied from the homepage hero (.f-person) and feature header (.facepile). Caleb 2026-10-05: "we are
+       missing a couple human faces like the ones on our page on our ads landing page". AI portraits, decorative only:
+       no name, quote or claim beside them (research/SITE-BACKGROUND-PEOPLE-2026-09-15.md), so the facepile stays
+       away from the "300+ carrier users" line. Portrait sized to the homepage ratio (156px on a ~1015px board there,
+       ~124px on this 792px one) and dropped below the two-column breakpoint, as the homepage drops its floats. */
+    .f-person{position:absolute;z-index:4;width:min(15.5%,124px);right:-8px;bottom:-46px;border-radius:14px;
+      overflow:hidden;box-shadow:var(--sh-3);border:3px solid #fff;background:#DCE6FB;aspect-ratio:3/4}
+    .f-person img{width:100%;height:100%;object-fit:cover;object-position:52% 24%}
+    @media (max-width:979px){ .f-person{display:none} }
+    .facepile{display:flex;justify-content:center;margin:0 0 14px}
+    .facepile img{width:52px;height:52px;border-radius:50%;border:3px solid #fff;background:var(--peri);
+      object-fit:cover;object-position:center 26%;box-shadow:0 2px 6px rgba(22,22,22,.06)}
+    .facepile img+img{margin-left:-17px}
+
     @media (max-width:560px){
       .proofbar{flex-direction:column;gap:12px;padding:14px 20px;display:flex}
       .pb-rule{width:40px;height:1px}
@@ -383,6 +397,9 @@
             <div class="frame"><div class="crop">
               <img src="/assets/shot-hero-loadboard.webp" alt="The NudoIQ control bar running inside the Amazon Relay load board, with alert, search and autobook modes above 358 results out of Maryville, Tennessee" width="1892" height="1021" decoding="async" loading="eager" fetchpriority="high">
             </div></div>
+            <div class="f-person" aria-hidden="true">
+              <img src="/assets/people/portrait-door.webp" srcset="/assets/people/portrait-door-sm.webp 520w, /assets/people/portrait-door.webp 880w" sizes="124px" alt="" width="880" height="1168" decoding="async" loading="eager">
+            </div>
           </figure>
         </div>
       </div>
@@ -406,6 +423,11 @@
            Step lines are Martha's, from GET-PAGE-AND-INSTALL-EMAILS-2026-10-02.json (install_email.features 2-3,
            followup_day5.features 3), "Step N:" prefixes dropped because the number badge carries it. ── -->
       <section class="block" aria-labelledby="howH">
+        <div class="facepile" aria-hidden="true">
+          <img src="/assets/people/face-a.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
+          <img src="/assets/people/face-b.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
+          <img src="/assets/people/face-c.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
+        </div>
         <h2 class="sec" id="howH">Ready in a few minutes</h2>
         <ol class="steps">
           <li><span class="n">1</span><div><b>Add to Chrome</b>Click the button. When Chrome asks, click Add extension.</div></li>
@@ -428,7 +450,7 @@
 
       <!-- ── DEMO VIDEO — bottom of the page per D39, same element and files as before. ── -->
       <section class="block shot">
-        <video controls preload="metadata" playsinline poster="/assets/nudoiq-tutorial-poster.jpg"
+        <video controls preload="metadata" playsinline poster="/assets/nudoiq-tutorial-thumb.webp"
                aria-label="NudoIQ walkthrough: every feature, one at a time" width="1180" height="640">
           <source src="/assets/nudoiq-tutorial.mp4" type="video/mp4">
           <img src="/assets/email/shot-hero-loadboard.jpg" alt="NudoIQ" width="1180" height="640">
