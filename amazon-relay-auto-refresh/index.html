@@ -5,15 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
-  <title>Amazon Relay Auto Refresh Extension: Why It Matters | NudoIQ</title>
-  <meta name="description" content="How Amazon Relay auto-refreshers work, why refreshing matters, interval and jitter explained, and what to set for your operation.">
+  <title>Amazon Relay Auto Refresh Extension: How It Works | NudoIQ</title>
+  <meta name="description" content="How an Amazon Relay auto refresh extension works: refresh settings, new-load alerts, and Alert vs AutoBook. Try NudoIQ free for 7 days.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#FFBB8C">
   <link rel="canonical" href="https://nudoiq.com/amazon-relay-auto-refresh/">
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="any">
   <meta property="og:site_name" content="NudoIQ">
-  <meta property="og:title" content="Amazon Relay Auto Refresh Extension: Why It Matters | NudoIQ">
-  <meta property="og:description" content="How Amazon Relay auto-refreshers work, why refreshing matters, interval and jitter explained, and what to set for your operation.">
+  <meta property="og:title" content="Amazon Relay Auto Refresh Extension: How It Works | NudoIQ">
+  <meta property="og:description" content="How an Amazon Relay auto refresh extension works: refresh settings, new-load alerts, and Alert vs AutoBook. Try NudoIQ free for 7 days.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://nudoiq.com/amazon-relay-auto-refresh/">
   <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
@@ -78,12 +78,12 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Amazon Relay Auto Refresh: Why It Matters and How It Works",
-  "description": "How Amazon Relay auto-refreshers work, why refreshing matters, interval and jitter explained, and what to set for your operation.",
+  "description": "How an Amazon Relay auto refresh extension works: refresh settings, new-load alerts, and Alert vs AutoBook. Try NudoIQ free for 7 days.",
   "mainEntityOfPage": "https://nudoiq.com/amazon-relay-auto-refresh/",
   "url": "https://nudoiq.com/amazon-relay-auto-refresh/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
   "datePublished": "2026-09-20",
-  "dateModified": "2026-10-02",
+  "dateModified": "2026-10-06",
   "inLanguage": "en-US",
   "author": {
     "@type": "Organization",
@@ -322,11 +322,11 @@
 <p>Modern refreshers (including NudoIQ) include built-in protections to avoid overwhelming the server:</p>
 <ul><li><strong>Jitter</strong>: Random variation in the interval prevents synchronized requests.</li><li><strong>Rate limiting</strong>: Some tools wait a minimum time between refreshes even if you set a faster interval, to prevent abuse.</li><li><strong>Your account, your responsibility</strong>: The carrier is responsible for its Relay account and for following Relay's terms. Read them before you run any extension.</li></ul>
 <h2 id="the-role-of-refreshing-in-your-strategy">The Role of Refreshing in Your Strategy</h2>
-<p>Refreshing is the foundation. <a href="/amazon-relay-auto-booker/">Booking rules</a>, <a href="/amazon-relay-auto-booker/">profit calculation</a>, and <a href="/amazon-relay-auto-refresh/">rate history</a> add layers on top, but refreshing (fast, steady, consistent) is what gets you first look at loads.</p>
+<p>Refreshing is the foundation. <a href="/amazon-relay-auto-booker/">Booking rules</a>, <a href="/amazon-relay-auto-booker/">profit calculation</a>, and <a href="/amazon-relay-load-board/">rate history</a> add layers on top, but refreshing (fast, steady, consistent) is what gets you first look at loads.</p>
 <p>If your refresher runs on a 2-second interval and your competitor's runs on a 30-second interval (or no interval at all), you'll see loads before they do. That's the advantage.</p>
 <h2 id="nudoiq-s-refresh-approach">NudoIQ's Refresh Approach</h2>
 <p>NudoIQ's refresher lets you set the interval from 1 to 5 seconds with built-in jitter (up to 20% random variation per interval). The extension keeps the Relay tab from going idle and refreshes on schedule, even if you're not looking at it.</p>
-<p>It doesn't just refresh: it runs alongside <a href="/amazon-relay-auto-refresh/">Lane Intelligence</a> (showing rate history) and <a href="/amazon-relay-auto-booker/">Net Profit calculation</a> (showing what you keep), and it integrates with <a href="/amazon-relay-auto-booker/">Autobook</a> so you can set rules once and let it book automatically.</p>
+<p>It doesn't just refresh: it runs alongside <a href="/#features">Lane Intelligence</a> (showing rate history) and <a href="/amazon-relay-auto-booker/">Net Profit calculation</a> (showing what you keep), and it integrates with <a href="/amazon-relay-auto-booker/">Autobook</a> so you can set rules once and let it book automatically.</p>
 <p>The extension is 5.0 rated on the Chrome Web Store and runs on desktop Chrome in English and Spanish. It costs $49.99 a month for every feature, with a 7-day free trial (no card needed to start) so you can test the refresh and see what the rate history and profit tools do.</p>
     </article>
 
