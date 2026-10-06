@@ -250,7 +250,7 @@ ${extraLd.map((o) => `  <script type="application/ld+json">\n${JSON.stringify(o,
   })();
 </script>
 </head>
-<body>
+<body data-clarity-unmask="true">
 
   <div class="promo">7 days free, no card needed &middot; Runs in your own Chrome &middot; English and Spanish</div>
 

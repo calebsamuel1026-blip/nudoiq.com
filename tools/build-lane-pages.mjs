@@ -60,7 +60,7 @@ const HEAD_TPL = cut(/^<!DOCTYPE html>[\s\S]*?<link rel="stylesheet" href="\/ass
 const HEAD_TAIL = cut(/<link rel="stylesheet" href="\/assets\/guide\.css">\n[\s\S]*?<\/head>/, 'head tail')
   .replace(/^<link[^\n]*\n/, '').replace(/<\/head>$/, '')
   .replace(/ *<script type="application\/ld\+json">[\s\S]*?<\/script>\n?/g, '');
-const TOP_TPL = cut(/<body>[\s\S]*?<\/header>\n/, 'header');
+const TOP_TPL = cut(/<body[^>]*>[\s\S]*?<\/header>\n/, 'header');
 const CTA_TPL = cut(/ {4}<aside class="cta">[\s\S]*?<\/aside>\n/, 'CTA');
 const FOOT_TPL = cut(/ {4}<div class="footer">[\s\S]*$/, 'footer');
 const TPL_TITLE = T.match(/<title>([^<]*)<\/title>/)[1];
@@ -230,7 +230,7 @@ ${items.map(([u, t]) => `        <a href="${u}">${esc(t)}</a>`).join('\n')}
 }
 
 function page({ title, description, url, slug, ld, trail, h1, intro, byline, body, faq, extraRelated }) {
-  return head({ title, description, url, slug, ld }) + TOP_TPL.replace('<body>', '<body data-layout="lane-rates">') + `
+  return head({ title, description, url, slug, ld }) + TOP_TPL.replace(/<body[^>]*>/, '<body data-layout="lane-rates" data-clarity-unmask="true">') + `
   <div class="doc-hero"><div class="doc-hero-in">
     <nav class="crumbs" aria-label="Breadcrumb">${crumbs(trail.map(([n, u], i) => [n, i === trail.length - 1 ? null : u]))}</nav>
     <h1 class="page-title">${esc(h1)}</h1>

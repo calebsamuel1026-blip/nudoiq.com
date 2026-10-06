@@ -309,6 +309,7 @@
   .facepile img{width:52px;height:52px;border-radius:50%;border:3px solid #fff;
     background:var(--peri);object-fit:cover;object-position:center 26%;box-shadow:var(--sh-1)}
   .facepile img+img{margin-left:-17px}
+  .fcta{display:flex;justify-content:center;margin:30px 0 6px}
   .ftabs{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;background:var(--paper-2);
     border:1px solid #ECECF1;border-radius:var(--rc);padding:8px;
     margin:0 auto 46px;width:max-content;max-width:100%}
@@ -712,7 +713,7 @@
   })();
 </script>
 </head>
-<body>
+<body data-clarity-unmask="true">
   <a class="skip" href="#main">Skip to content</a>
 
   <div class="promo"><span data-t="heroMicro">50% off until end of day · $49.99/month · 7-day free trial · Cancel anytime</span></div>
@@ -1041,6 +1042,10 @@
         </div>
       </div>
 
+      <!-- Store button under the feature tabs. Clarity 2026-10-05: the tabs are the most used element (6 sessions clicked
+           ~8 of 11) and none of those sessions reached a store button; the section had none. Existing label/key. -->
+      <div class="fcta"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="installNow" data-cta="after-features" target="_blank" rel="noopener">Add NudoIQ to Chrome</a></div>
+
       <!-- The six supporting tools. They do not each deserve a split of their
            own, but every feature has to stay discoverable, so they sit as a
            quiet grid under the selector rather than as eleven more tabs. -->
@@ -1221,7 +1226,7 @@
   <footer><div class="foot-in">
     <div class="foot-row">
       <div>© 2026 NudoIQ · <span data-t="independent">Independent software for carriers</span></div>
-      <div class="flinks"><a href="/guides/">Guides</a><a href="/privacy.html" data-t="privacy">Privacy</a><a href="/refund-policy.html" data-t="refund">Refund policy</a><a href="/terms.html" data-t="terms">Terms</a><a href="/support/" data-t="support">Support</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contact</a></div>
+      <div class="flinks"><a href="/guides/">Guides</a><a href="/fleet/">Fleets</a><a href="/dispatch/">Dispatchers</a><a href="/privacy.html" data-t="privacy">Privacy</a><a href="/refund-policy.html" data-t="refund">Refund policy</a><a href="/terms.html" data-t="terms">Terms</a><a href="/support/" data-t="support">Support</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contact</a></div>
     </div>
     <!-- Official profiles (rel="me"): the same list as Organization.sameAs, so search and AI engines tie them to nudoiq.com. -->
     <div class="flinks fsocial" aria-label="NudoIQ elsewhere"><a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" rel="me noopener" target="_blank">Chrome Web Store</a><a href="https://www.youtube.com/@nudoiqapp" rel="me noopener" target="_blank">YouTube</a><a href="https://www.instagram.com/nudoiq/" rel="me noopener" target="_blank">Instagram</a><a href="https://www.tiktok.com/@nudoiq1" rel="me noopener" target="_blank">TikTok</a><a href="https://www.facebook.com/1279798471883588" rel="me noopener" target="_blank">Facebook</a><a href="https://t.me/nudoiqrelay" rel="me noopener" target="_blank">Telegram</a></div>
@@ -1584,7 +1589,7 @@
   }
  ]
 }</script>
-  <script src="/assets/mobile-bridge.js?v=dd39030e" defer></script>
+  <script src="/assets/mobile-bridge.js?v=b5ebdaf4" defer></script>
   <!-- 2026-10-05: re-align a #hash landing (ChatGPT links to /#pricing) after the web font swaps in. The smooth jump is
        computed with the fallback font; Inter Tight then shortens the hero and features text by ~110-150px, so the visitor
        stopped short of or past the heading. Only runs on a hash URL, and never after the visitor has scrolled or typed.

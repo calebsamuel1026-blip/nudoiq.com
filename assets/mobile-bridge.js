@@ -37,7 +37,13 @@
       desktop: "I'll open it on desktop",
       close: "Close",
       subject: "Your NudoIQ install link",
-      mailBody: "Install NudoIQ on your computer:\n\n{url}\n\nFree for 7 days, then $49.99/month. Cancel anytime.\nIndependent software. Not affiliated with Amazon."
+      mailBody: "Install NudoIQ on your computer:\n\n{url}\n\nFree for 7 days, then $49.99/month. Cancel anytime.\nIndependent software. Not affiliated with Amazon.",
+      // Capture strings reuse the reviewed /m/ form copy (m/index.html #f and #ok). A language without them keeps the
+      // mailto button. Clarity 2026-10-05: the mailto opened a blank draft and captured nothing; an iPhone prospect fell
+      // back to "Copy the link" twice, 5 days apart.
+      placeholder: "name@example.com",
+      sentTitle: "Check Your Email",
+      sentBody: "We sent you the install link. Open it on your computer and click Add to Chrome."
     },
     es: {
       title: "Instala NudoIQ en tu computadora",
@@ -53,6 +59,11 @@
   };
 
   var STORE_HOST = 'chromewebstore.google.com';
+
+  // install_link_requests: the same INSERT-only table and public anon key as the /m/ form (migration 20260920120000).
+  // tools/outreach/install_link.py emails the install link from contact@nudoiq.com every hour (dry run verified 2026-10-05).
+  var REQ_URL = 'https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/install_link_requests';
+  var ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM';
 
   // Substring matching on the raw href was wrong in a way that broke a live
   // feature: the mobile sheet's "email me the link" button is a mailto: whose
@@ -97,6 +108,13 @@
       '.nq-secondary{background:transparent;color:#fff;border:1px solid #1E2126 !important}',
       '.nq-tertiary{background:none;color:#6B7280;font-weight:400 !important;font-size:14px !important;padding:8px !important}',
       '.nq-note{font-size:12px;color:#6B7280;text-align:center;margin:12px 0 0}',
+      '.nq-form{margin:0 0 10px}',
+      '.nq-form input{display:block;width:100%;box-sizing:border-box;padding:15px 14px;margin:0 0 10px;border-radius:6px;' +
+        'border:1px solid #2A2F36;background:#0C0E11;color:#fff;font:16px/1.2 Inter,system-ui,sans-serif}',
+      '.nq-form input::placeholder{color:#6B7280}',
+      '.nq-sent{margin:0 0 10px;padding:16px;border:1px solid #1E2126;border-radius:6px}',
+      '.nq-sent h3{margin:0 0 6px;font-size:17px;line-height:1.25;color:#fff}',
+      '.nq-sent p{margin:0;font-size:14px;color:#A8ADB5}',
       // shown only when the clipboard refuses, so the link is still selectable by hand
       '.nq-url{width:100%;margin:10px 0 0;padding:12px;border-radius:12px;border:1px solid #1E2126;' +
         'background:#0C0E11;color:#fff;font-size:14px;font-family:inherit;-webkit-user-select:all;user-select:all}'
@@ -119,10 +137,17 @@
     var mail = 'mailto:?subject=' + encodeURIComponent(t.subject) +
                '&body=' + encodeURIComponent(t.mailBody.replace('{url}', storeUrl));
 
+    var emailBlock = t.sentTitle
+      ? '<form class="nq-form" data-clarity-mask="true" novalidate>' +
+          '<input class="nq-email" type="email" inputmode="email" autocomplete="email" required aria-label="Email" placeholder="' + t.placeholder + '">' +
+          '<button class="nq-btn nq-primary" type="submit">' + t.email + '</button>' +
+        '</form>'
+      : '<a class="nq-btn nq-primary" data-nq="email" href="' + mail + '">' + t.email + '</a>';
+
     sheet.innerHTML =
       '<h2>' + t.title + '</h2>' +
       '<p>' + t.body + '</p>' +
-      '<a class="nq-btn nq-primary" data-nq="email" href="' + mail + '">' + t.email + '</a>' +
+      emailBlock +
       '<button class="nq-secondary" data-nq="copy">' + t.copy + '</button>' +
       '<button class="nq-tertiary" data-nq="desktop">' + t.desktop + '</button>' +
       '<p class="nq-note">Independent software. Not affiliated with Amazon.</p>';
@@ -181,6 +206,31 @@
         track('MobileBridgeOverride', { url: storeUrl });
         window.location.href = storeUrl;
       }
+    });
+
+    var form = sheet.querySelector('.nq-form');
+    if (form) form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var input = form.querySelector('.nq-email'), btn = form.querySelector('button');
+      var v = (input.value || '').trim().toLowerCase();
+      if (!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/.test(v)) { input.focus(); return; }
+      btn.disabled = true;
+      var q = new URLSearchParams(location.search);
+      var src = ['sheet' + location.pathname].concat(['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'].map(function (k) {
+        return q.get(k) || ''; })).join('|').slice(0, 200);
+      var ck = function (n) { return (document.cookie.match(new RegExp('(?:^|; )' + n + '=([^;]+)')) || [])[1] || null; };
+      fetch(REQ_URL, { method: 'POST', headers: { 'Content-Type': 'application/json', 'apikey': ANON, 'Authorization': 'Bearer ' + ANON,
+        'Prefer': 'return=minimal' }, body: JSON.stringify({ email: v, source: src, fbc: ck('_fbc'), fbp: ck('_fbp') }) })
+        .then(function (r) {
+          if (!r.ok) throw new Error('status ' + r.status);
+          form.outerHTML = '<div class="nq-sent"><h3>' + t.sentTitle + '</h3><p>' + t.sentBody + '</p></div>';
+          track('MobileBridgeEmailCaptured', { url: storeUrl });
+        })
+        .catch(function () {                       // never strand the visitor: the old mailto still works
+          track('MobileBridgeEmailFailed', { url: storeUrl });
+          btn.disabled = false;
+          window.location.href = mail;
+        });
     });
 
     document.body.appendChild(backdrop);

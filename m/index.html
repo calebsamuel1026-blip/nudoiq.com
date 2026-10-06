@@ -272,7 +272,7 @@
   })();
 </script>
 </head>
-<body>
+<body data-clarity-unmask="true">
   <header class="top"><div class="topin"><a class="wm" href="/"><span>N</span>udoIQ</a><span class="topright"><a class="site" href="/">nudoiq.com</a><a class="top-cta js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" data-cta="header">Try it free</a></span></div></header>
 
   <main id="main">
@@ -328,7 +328,7 @@
             <div class="card" id="f-wrap">
               <!-- research/copy/GET-PAGE-HERO-2026-09-24.json mobile_sub (copywriter, haiku). Do not edit words here. -->
               <p style="margin:0 0 14px;color:var(--ink-4);font-size:14px;line-height:1.5" id="mobileSub">NudoIQ runs on a computer. We'll email you the install link and your 7-day free trial.</p>
-              <form id="f" novalidate>
+              <form id="f" novalidate data-clarity-mask="true">
                 <label for="e">Email Address</label>
                 <input id="e" type="email" inputmode="email" autocomplete="email" placeholder="name@example.com" required>
                 <button class="btn" id="b" type="submit">Send the Link</button>
@@ -528,7 +528,7 @@
       ev.preventDefault();
       cl("form_submit");
       var v = (e.value || "").trim().toLowerCase();
-      if (!/^[^@\s]+@[^@\s.]+\.[a-z]{2,}$/.test(v)) { e.focus(); return; }
+      if (!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/.test(v)) { e.focus(); return; }
       b.disabled = true;
       var src = ["utm_source", "utm_medium", "utm_campaign", "utm_content"].map(function (k) { return q.get(k) || ""; }).join("|").slice(0, 200);
       fetch(SB, { method: "POST", headers: { "Content-Type": "application/json", "apikey": KEY, "Authorization": "Bearer " + KEY, "Prefer": "return=minimal" },
