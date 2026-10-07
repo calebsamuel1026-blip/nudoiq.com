@@ -281,6 +281,28 @@
     .stickyin .btn{min-height:44px;padding:12px 24px;font-size:16px}
     body.has-sticky{padding-bottom:72px}
     @media (max-width:520px){.stickyin .txt span{display:none}}
+
+    /* ═══ LEMUR / ANDROID (2026-10-07, Caleb: "how to get the extension on lemur browser"). Quiet card below the
+       objections; words: research/copy/LEMUR-ANDROID-SECTION-2026-10-07.json (Martha). ═══ */
+    .lemur{max-width:760px;margin:44px auto 0;background:var(--paper-2);border:1px solid #E6E9F0;border-radius:var(--ri);padding:22px 24px;scroll-margin-top:84px}
+    .lemur h2{font-size:clamp(18px,2.2vw,22px);font-weight:600;color:var(--ink);margin:0 0 6px;letter-spacing:-.01em;text-align:left}
+    .lemur .l-intro{font-size:14.5px;line-height:1.5;color:var(--ink-4);margin:0 0 16px}
+    .lemur ol{list-style:none;margin:0;padding:0;display:grid;gap:12px 20px;grid-template-columns:1fr 1fr}
+    .lemur li{display:flex;gap:10px;font-size:14px;line-height:1.45;color:var(--ink-4)}
+    .lemur li b{display:block;color:var(--ink);font-size:15px;font-weight:600;margin-bottom:1px}
+    .lemur .l-n{flex:0 0 24px;height:24px;border-radius:12px;background:#fff;border:1px solid #D5DDF0;color:var(--blue-deep);
+      font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+    .lemur .l-acts{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 14px}
+    .lemur .l-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:var(--rp);
+      font:inherit;font-size:14.5px;font-weight:600;text-decoration:none;cursor:pointer;background:#fff;color:var(--ink);border:1px solid #CBD3E6}
+    .lemur .l-btn:hover{border-color:var(--blue);color:var(--blue-deep)}
+    .lemur .l-btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+    .lemur .l-note{font-size:13px;line-height:1.5;color:var(--ink-4);margin:0 0 4px}
+    .lemur .l-note a{color:var(--blue-deep);font-weight:600}
+    @media (max-width:640px){.lemur{padding:18px 18px}.lemur ol{grid-template-columns:1fr}.lemur .l-btn{flex:1 1 100%}}
+    .lemur-teaser{margin:4px 0 0;text-align:center;font-size:13.5px}
+    .lemur-teaser a{display:inline-block;padding:13px 8px;line-height:18px}
+    .lemur-teaser a{color:#fff;text-decoration:underline;text-underline-offset:3px;opacity:.9}
   </style>
   <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
 <script>
@@ -449,6 +471,26 @@
         </div>
       </section>
 
+    <!-- ── LEMUR / ANDROID — Caleb 2026-10-07. Words: research/copy/LEMUR-ANDROID-SECTION-2026-10-07.json (Martha).
+         The store link is copied, not linked: on Android, Chrome opens the Web Store but cannot install, so a tap
+         would dead-end; pasted into Lemur it installs. No tag code here (tracking totals unchanged). ── -->
+    <section class="lemur" id="lemur" aria-label="Install NudoIQ on Android with Lemur">
+        <h2>On an Android phone? Use Lemur Browser</h2>
+        <p class="l-intro">Lemur Browser is a free Android app that can install Chrome extensions from the Chrome Web Store.</p>
+        <ol>
+          <li><span class="l-n" aria-hidden="true">1</span><div><b>Get Lemur</b>Install Lemur Browser - Extensions from Google Play. It&rsquo;s free.</div></li>
+          <li><span class="l-n" aria-hidden="true">2</span><div><b>Open the store</b>Tap the four-squares icon at the bottom, then tap Chrome under Extensions Store.</div></li>
+          <li><span class="l-n" aria-hidden="true">3</span><div><b>Add NudoIQ</b>Search NudoIQ. Tap the NudoIQ card. Press Add to Chrome. Confirm the popup.</div></li>
+          <li><span class="l-n" aria-hidden="true">4</span><div><b>Open Relay</b>In Lemur, open relay.amazon.com and sign in to your Relay account.</div></li>
+        </ol>
+        <div class="l-acts">
+          <a class="l-btn" href="https://play.google.com/store/apps/details?id=com.lemurbrowser.exts" target="_blank" rel="noopener" data-cta="lemur-play" aria-label="Get Lemur Browser - Extensions on Google Play">Lemur on Google Play</a>
+          <button class="l-btn" type="button" id="lemurCopy" data-link="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-done="Link copied">Copy our store link</button>
+        </div>
+        <p class="l-note">We have not tested NudoIQ in Lemur ourselves. NudoIQ is built for a computer and some features may not work exactly as they do on desktop.</p>
+        <p class="l-note">iPhone can&rsquo;t install Chrome extensions. Use a computer instead. <a href="/android/">See the full Android guide</a></p>
+    </section>
+
       <!-- ── DEMO VIDEO — bottom of the page per D39, same element and files as before. ── -->
       <section class="block shot">
         <video controls preload="metadata" playsinline poster="/assets/nudoiq-demo-poster.webp"
@@ -529,6 +571,19 @@
     }
     updateCountdown();
     var cdTimer = setInterval(updateCountdown, 60000);
+  })();
+  </script>
+  <script>
+  // Lemur section: copy the store link (Clipboard API, textarea fallback). Separate from the store-button handlers.
+  (function () {
+    var b = document.getElementById("lemurCopy"); if (!b) return;
+    b.addEventListener("click", function () {
+      var url = b.getAttribute("data-link"), label = b.textContent;
+      function done() { b.textContent = b.getAttribute("data-done"); setTimeout(function () { b.textContent = label; }, 2500); }
+      function legacy() { var t = document.createElement("textarea"); t.value = url; t.setAttribute("readonly", ""); t.style.position = "fixed"; t.style.opacity = "0";
+        document.body.appendChild(t); t.select(); try { document.execCommand("copy"); } catch (e) {} document.body.removeChild(t); done(); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, legacy); else legacy();
+    });
   })();
   </script>
 </body>
