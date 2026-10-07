@@ -132,6 +132,10 @@ function md(src, { h2Ids = false } = {}) {
 
 const stripMd = (s) => s.replace(/\*\*|\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\s+/g, ' ').trim();
 
+// Hand-built native-Spanish twins (es/<slug>/index.html, not generated here). hreflang must be reciprocal,
+// so the English guide carries the pair too. Added 2026-10-07 with the two Spanish guides.
+const ES_TWIN = { 'amazon-relay-load-board': 'amazon-relay-en-espanol', 'amazon-relay-requirements': 'amazon-relay-requisitos' };
+
 function head({ title, description, url, extraLd, slug }) {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -144,7 +148,10 @@ function head({ title, description, url, extraLd, slug }) {
   <meta name="description" content="${esc(description)}">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#FFBB8C">
-  <link rel="canonical" href="${url}">
+  <link rel="canonical" href="${url}">${ES_TWIN[slug] ? `
+  <link rel="alternate" hreflang="en" href="${url}">
+  <link rel="alternate" hreflang="es" href="${SITE}/es/${ES_TWIN[slug]}/">
+  <link rel="alternate" hreflang="x-default" href="${url}">` : ''}
   <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="any">
   <meta property="og:site_name" content="NudoIQ">
   <meta property="og:title" content="${esc(title)}">
