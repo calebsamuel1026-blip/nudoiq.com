@@ -45,7 +45,8 @@ const ORDER = [
   'amazon-relay-auto-booker', 'best-amazon-relay-extensions', 'loadfetcher-alternative',
   'amazon-relay-loads', 'amazon-relay-carrier-data', 'amazon-relay-box-truck-loads', 'amazon-relay-power-only',
   'amazon-relay-dispatcher', 'amazon-relay-account-suspended', 'amazon-relay-load-board-not-showing-loads',
-  'how-to-book-multiple-loads-on-amazon-relay',
+  'how-to-book-multiple-loads-on-amazon-relay', 'amazon-relay-contracts', 'amazon-relay-auctions',
+  'amazon-relay-post-a-truck', 'amazon-relay-cancel-load', 'amazon-relay-cargo-van',
 ];
 
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');

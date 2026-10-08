@@ -89,7 +89,7 @@
   "url": "https://nudoiq.com/amazon-relay-auto-booker/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
   "datePublished": "2026-09-20",
-  "dateModified": "2026-10-06",
+  "dateModified": "2026-10-08",
   "inLanguage": "en-US",
   "author": {
     "@type": "Organization",
@@ -197,6 +197,22 @@
         "@type": "Answer",
         "text": "Yes. You can have NudoIQ running on multiple devices and multiple load board tabs. Just remember: if two devices/tabs are both running Autobook with the same rules, they might both try to book the same load, which could cause issues. Consider running Autobook on one device and Alert/Search mode on others."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Is an auto booker the same as Amazon's Post A Truck?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Post A Truck is Amazon's own tool: you post your truck's availability and a minimum rate per mile, and Relay books loads that match. An auto booker like NudoIQ's Autobook works on the spot board in your browser and books loads that match your rules and clear your Min Net Profit, stopping at your max-books cap. See how to post a truck on Amazon Relay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Amazon charge a fee if I cancel an auto-booked load?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon doesn't publish a cancellation fee, and the Relay FAQ says nothing about one. The cost Amazon does describe is to your acceptance metric, and it rises the closer to pickup you cancel. Our guide on cancelling a load on Amazon Relay covers what Amazon does and doesn't publish."
+      }
     }
   ]
 }
@@ -279,7 +295,7 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay Auto Booker: How Automatic Booking Works</span></nav>
     <h1 class="page-title">Amazon Relay Auto Booker: How Automatic Booking Works</h1>
     <p class="page-subtitle">An auto-booker extension can book loads for you automatically when they match your rules. But automatic booking only works when you set it up carefully. Here's how to do it safely.</p>
-    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-02">October 2, 2026</time></p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-08">October 8, 2026</time></p>
   </div></div>
 
   <div class="container">
@@ -364,6 +380,8 @@
       <details><summary>Can Autobook book loads when I'm offline?</summary><div class="a"><p>No. The extension runs inside your browser. If your device is off or your internet is down, the extension can't refresh the board or book loads. It only works when your browser is open and online.</p></div></details>
       <details><summary>Is booking via extension as reliable as booking manually?</summary><div class="a"><p>The extension books through the same board you use. Any booking it makes is yours, so set your rules carefully.</p></div></details>
       <details><summary>Can I use Autobook on multiple trucks at the same time?</summary><div class="a"><p>Yes. You can have NudoIQ running on multiple devices and multiple load board tabs. Just remember: if two devices/tabs are both running Autobook with the same rules, they might both try to book the same load, which could cause issues. Consider running Autobook on one device and Alert/Search mode on others.</p></div></details>
+      <details><summary>Is an auto booker the same as Amazon's Post A Truck?</summary><div class="a"><p>No. Post A Truck is Amazon's own tool: you post your truck's availability and a minimum rate per mile, and Relay books loads that match. An auto booker like NudoIQ's Autobook works on the spot board in your browser and books loads that match your rules and clear your Min Net Profit, stopping at your max-books cap. See <a href="/amazon-relay-post-a-truck/">how to post a truck on Amazon Relay</a>.</p></div></details>
+      <details><summary>Does Amazon charge a fee if I cancel an auto-booked load?</summary><div class="a"><p>Amazon doesn't publish a cancellation fee, and the Relay FAQ says nothing about one. The cost Amazon does describe is to your acceptance metric, and it rises the closer to pickup you cancel. Our guide on <a href="/amazon-relay-cancel-load/">cancelling a load on Amazon Relay</a> covers what Amazon does and doesn't publish.</p></div></details>
     </section>
 
     <aside class="cta">

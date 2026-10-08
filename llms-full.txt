@@ -2761,6 +2761,597 @@ No. Amazon tenders its loads only through Relay. See our [Amazon Relay loads gui
 
 ---
 
+# How do Amazon Relay contracts and blocks work?
+
+URL: https://nudoiq.com/amazon-relay-contracts/
+Published: 2026-10-08. Last updated: 2026-10-08.
+
+Short answer: An Amazon Relay contract is pre-planned work you book ahead, up to 6 months out, at a fixed rate. Amazon offers full-week, partial-week, reservation and standby contracts, with lengths from 8-hour box truck contracts to 119-hour team blocks. You need a B grade or better to book new contracts, and Amazon pays weekly for the previous week's completed work.
+
+## What is an Amazon Relay contract?
+
+A contract is work you book in advance instead of grabbing loads one at a time. [Amazon's contracts guide](https://relay.amazon.com/blog/amazon-trucking-contracts) describes contracts as pre-planned blocks of work out of a domicile (a city or area), at a fixed rate, built on round trips. You can book them up to 6 months out.
+
+Contracts sit alongside spot loads on the [Relay load board](https://nudoiq.com/amazon-relay-load-board/), Post A Truck, and freight auctions. Our [Amazon Relay loads guide](https://nudoiq.com/amazon-relay-loads/) compares the ways to get Relay work.
+
+## What is a block on Amazon Relay?
+
+A block is a chunk of time you reserve trucks and drivers for Relay. [Amazon says](https://relay.amazon.com/blog/trucking-work-amazon-relay) a block is paid even if Amazon doesn't use the full block.
+
+Two places spell this out:
+
+- **Reservation contracts.** Amazon's contracts guide says: "We still pay a competitive rate if the full block of time isn't used."
+- **Post A Truck block orders.** Trips start and end at the same location, and a matched block is paid in full even if Amazon doesn't use the whole block length. See [how to post a truck on Amazon Relay](https://nudoiq.com/amazon-relay-post-a-truck/).
+
+For the other contract types, Amazon's guide doesn't say how unused time is paid. Read the contract details before you click Book.
+
+## What types of Amazon Relay contracts are there?
+
+Amazon lists four types:
+
+| Contract type | What you get | Drivers |
+|---|---|---|
+| Full-week | Full weeks of work | Solo and team |
+| Partial-week | Weekly work that varies, with a minimum and a maximum | Solo |
+| Reservation | Three blocks of work a week, paid a competitive rate even if the full block isn't used | Solo |
+| Standby | A set start date and time window in which Amazon may tender a load | Not stated by Amazon |
+
+Full-week gives the steadiest schedule. Standby is the loosest: you hold a window, and Amazon may send a load in it.
+
+## How long are Amazon Relay contract blocks?
+
+Block length decides how long your driver is out and what truck you need.
+
+| Length | How it runs |
+|---|---|
+| 13-hour solo | Five 13-hour blocks a week, one driver, one day cab. The driver returns to the start after 13 hours of trips. |
+| 37-hour solo | Three pre-planned 37-hour blocks |
+| 109-hour solo | One round-trip block over five days in a row, then two days off in a row, usually the weekend |
+| 119-hour team | One round-trip block for two drivers |
+| Multi-week | Up to 10 weeks, with blocks locked in early at upfront rates |
+
+To find multi-week work, filter the contract search by contract duration.
+
+**Day cab or sleeper?** Amazon requires a sleeper cab whenever drivers spend nights on the road. The one exception is the 13-hour solo contract. So if you only run day cabs, the 13-hour solo is the contract built for you.
+
+## Are there box truck contracts on Amazon Relay?
+
+Yes. [Amazon's truck requirements page](https://relay.amazon.com/blog/amazon-relay-truck-requirements) lists box truck contracts, including 8-hour and 13-hour solo contracts with round trips. The truck has to be a 16 ft or 26 ft dock-height box truck with a working tuck-under liftgate. In the contract search, 26 ft box truck is one of the equipment filters.
+
+More on equipment in our [Amazon Relay box truck guide](https://nudoiq.com/amazon-relay-box-truck/). If you're starting with a van, read [can you use a cargo van for Amazon Relay](https://nudoiq.com/amazon-relay-cargo-van/) first.
+
+## Who can book Amazon Relay contracts?
+
+Your grade decides it. [Amazon's grades page](https://relay.amazon.com/blog/intro-to-amazon-relay/relay-performance-grades-how-to-unlock-hauling-opportunities) says:
+
+- **B or higher** to see and book new contracts.
+- **A+ and A** get contract price alerts.
+- **Below C+** puts the contracts you already booked at risk.
+
+Amazon also says contracts are only for carriers in good standing. You become eligible for a grade after ten or more Relay loads in the last six active weeks.
+
+Your grade is your lowest metric, and cancellations hit the acceptance metric. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains the metrics, and [what happens if you cancel a load](https://nudoiq.com/amazon-relay-cancel-load/) covers acceptance.
+
+## How do you book an Amazon Relay contract?
+
+1. In Relay's contract search, filter by **equipment**: 53 ft trailer, 26 ft box truck, reefer or intermodal.
+2. Filter by **driver type**: solo (1, 2 or 5 day) or team. Add contract duration if you want multi-week work.
+3. Check the **dates, equipment, driver type and estimated payout** on each contract.
+4. Click **Book** on one that works for you.
+5. Set each driver's **weekly availability**.
+6. **Assign drivers** to the blocks.
+
+Amazon says solo drivers can return home daily or every other day, and team drivers every five days. Plan who covers which block before you book, not after.
+
+## How do Amazon Relay contracts pay?
+
+At the contract's fixed rate, weekly. Amazon pays for the previous week's completed work. Relay's pay week runs Sunday to Saturday, and loads completed before 11:59 pm Saturday are paid the following Friday.
+
+You see an estimated payout on each contract before you book. Amazon doesn't publish typical contract rates, and pay varies by lane, timing and equipment. Our guide to [how much Amazon Relay pays](https://nudoiq.com/how-much-does-amazon-relay-pay/) explains what moves a rate.
+
+## What's the difference between contracts and auctions?
+
+Both lock in work ahead. The difference is how the price is set and where the truck goes.
+
+| | Contracts | Auctions |
+|---|---|---|
+| Based on | A domicile (city or area) | A domicile or a specific lane |
+| Price | Fixed rate | Open bidding; the winning rate is locked |
+| Trips | Round trips | Mostly one-way |
+| Grade to book | B or better | C+ or better (B for reefer, B+ for some box truck loads) |
+| Length | 13-hour blocks up to 10-week runs, booked up to 6 months out | 3 to 6 months of one-way contracts |
+
+The full bidding process is in our guide to [Amazon Relay auctions](https://nudoiq.com/amazon-relay-auctions/).
+
+## Where does NudoIQ fit with contracts?
+
+NudoIQ doesn't book contracts or touch blocks. You book those in Relay.
+
+Where it helps is the open days around a contract. A partial-week contract, or the two days off after a 109-hour block, can leave a truck sitting. Those days get filled from the spot board, and that's where NudoIQ works.
+
+NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It's an independent tool, not made by or affiliated with Amazon. It refreshes the board on a 1 to 5 second interval and alerts you when a load matches the lanes and price you set for those open days. In Autobook mode it books only loads that clear your own Min Net Profit and stops at your max-books cap. Every load card shows net profit after driver pay, fuel, maintenance and deadhead, so a filler load is judged on what it nets.
+
+It's used by 300+ carriers. Try it with a 7-day free trial, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
+
+## Frequently asked questions
+
+### How far in advance can you book Amazon Relay contracts?
+Up to 6 months out. Multi-week contracts run up to 10 weeks, with the blocks locked in early at upfront rates. Filter the contract search by contract duration to find them.
+
+### Do Amazon Relay blocks pay if Amazon doesn't use the full time?
+Amazon says a block is paid even if Amazon doesn't use the full block. Reservation contracts pay a competitive rate if the full block isn't used, and Post A Truck block orders pay in full. For other contract types, check the contract details before you book.
+
+### Can I run an Amazon Relay contract with a day cab?
+Yes, on the 13-hour solo contract, which is built for one driver and one day cab. Amazon requires a sleeper cab whenever drivers spend nights on the road, which rules a day cab out of the longer blocks.
+
+### What grade do you need for Amazon Relay contracts?
+B or higher to book new contracts. A+ and A carriers also get contract price alerts. If your grade drops below C+, contracts you already booked are at risk.
+
+### Can box trucks get Amazon Relay contracts?
+Yes. Amazon lists box truck contracts, including 8-hour and 13-hour solo contracts with round trips. The truck must be a 16 ft or 26 ft dock-height box truck with a working tuck-under liftgate.
+
+### What does 37-hour solo mean on Amazon Relay?
+One driver works three pre-planned 37-hour blocks. Amazon describes it as two days of loads, with the 10-hour rest break taken outside base cities, so plan where your driver sleeps.
+
+---
+
+# How do Amazon Relay freight auctions work?
+
+URL: https://nudoiq.com/amazon-relay-auctions/
+Published: 2026-10-08. Last updated: 2026-10-08.
+
+Short answer: Amazon Relay freight auctions let carriers bid on 3 to 6 month contracts for one-way lanes. To bid you complete Amazon's 15-minute auctions course and hold a C+ grade or better (B for reefer, B+ for some box truck loads). The leading bid at close wins, performance score breaks ties, and the winning rate is locked for the whole contract.
+
+## What do you win in an Amazon Relay auction?
+
+A lane, for months. [Amazon's auctions guide](https://relay.amazon.com/blog/freight-bidding-on-amazon-relays-auctions) says winning gives you 3 to 6 months of one-way contracts on dedicated lanes. Amazon's [rate-setting guide](https://relay.amazon.com/blog/booking-options/3-ways-to-set-your-own-freight-rates-on-amazon-relay) adds the key line: "if you win, that rate is locked in for the entire contract."
+
+There are two kinds:
+
+- **Open auctions** show the leading bid, so you can see where you stand.
+- **Domicile-based auctions** tender lanes between a starting domicile and an ending domicile, each a greater city area. If a lane is cancelled, Amazon says it "may be able to swap it" with other lanes between those domiciles.
+
+Most auction lanes are one-way, which is the big difference from round-trip contracts.
+
+## What equipment can bid in Relay auctions?
+
+Each auction type has its own equipment minimum:
+
+| Auction type | What you need |
+|---|---|
+| 53 ft power only | At least one day cab or sleeper |
+| 53 ft required | At least one trailer |
+| Box truck | At least one 26 ft or 27 ft reefer box truck |
+| Reefer | Trailer-required grocery contracts, at least one 53 ft or 48 ft reefer |
+| Hostler and shuttling | Short power only moves of trailers within or between Amazon yards |
+
+Requirements also vary by contract, such as trailer count and required drivers. Read each auction's details before you bid.
+
+## Who is eligible for Amazon Relay auctions?
+
+You need all of these:
+
+- **Onboarded to Relay**, with the 15-minute auctions course completed in the carrier portal.
+- **A grade of C+ or above** to view and bid. Reefer loads need B, and some box truck loads need B+.
+- **A trailer pool** of 1.5 times the trailers needed for daily routes on a contract day, dropped 24 hours before scheduled pickup and maintained to industry standards.
+- **Enough equipment, Relay tenure and CARB compliance** for California routes. [Amazon's grades page](https://relay.amazon.com/blog/intro-to-amazon-relay/relay-performance-grades-how-to-unlock-hauling-opportunities) lists all three.
+
+You earn a grade after ten or more Relay loads in the last six active weeks. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains how the grade is set.
+
+## How do you bid on an Amazon Relay auction?
+
+### One auction at a time
+
+Bid on a single auction in the portal. You can see the time remaining and the leading bid before you commit.
+
+### Many auctions at once, by spreadsheet
+
+1. Filter the contract search down to the auctions you want.
+2. Download the spreadsheet.
+3. Enter your bids.
+4. Upload the spreadsheet back.
+
+### With a minimum bid
+
+You can set a minimum bid. As prices drop, Relay lowers your bid automatically, but never below the limit you set. Set that limit from your own costs before the auction starts, not in the moment.
+
+## What should go into an auction bid?
+
+Amazon gives three rules:
+
+- **Bid your base rate only.** Fuel and tolls are paid after the load and are not part of the bid.
+- **Bid the full load volume** for the lane.
+- **Don't overbid (overcommit).** In plain terms, don't bid on more volume than your trucks, drivers and trailers can actually cover.
+
+Before you bid, count trucks, drivers and trailers for every lane at once, not one lane at a time. Winning three lanes you can't cover together is the risk Amazon warns about, and the penalties are below.
+
+## What happens after you place a bid?
+
+You see the leading bid price, how many bids share the lead, and how yours compares. If you lose the lead, you have two choices:
+
+- **Raise your bid**, or
+- **Withdraw.** Withdrawing ends your access to that auction, and you get one withdrawal per auction.
+
+## How are Amazon Relay auctions awarded?
+
+The leading bid at close wins. If bids match, Amazon says your "performance score will determine which company wins." Awards also weigh performance and other factors, so a strong grade helps in a close race.
+
+After you win, you get an email to accept or reject the contract. Once you accept, Amazon tenders weekly loads for the length of the contract.
+
+## What are the penalties in Relay auctions?
+
+Two, and both come from Amazon's guide:
+
+- **Overcommitting** may lead to contract termination or suspension from future auctions.
+- **Frequently rejecting awarded contracts** may lead Amazon to remove your auctions access.
+
+Once the contract runs, its weekly loads are tendered to you, and Amazon says a score can take a hit any time a carrier rejects tendered loads. See [what happens if you cancel a load on Amazon Relay](https://nudoiq.com/amazon-relay-cancel-load/).
+
+## How are auctions different from contracts?
+
+Contracts are built on a domicile, a fixed rate and round trips, and new ones need a B grade. Auctions use a domicile or a specific lane, open bidding and mostly one-way trips, and most need C+. Our guide to [Amazon Relay contracts and blocks](https://nudoiq.com/amazon-relay-contracts/) has the side-by-side table, and the [Amazon Relay loads guide](https://nudoiq.com/amazon-relay-loads/) covers every way to get work.
+
+## Does NudoIQ bid in Amazon Relay auctions?
+
+No. NudoIQ does not bid in auctions, book contracts or touch blocks. You do all of that in Relay.
+
+Where it can help is the homework before you bid. A bid is a base rate locked for months, so it pays to know what a lane has been paying on the spot board. NudoIQ is a Chrome extension that runs inside your signed-in Relay [load board](https://nudoiq.com/amazon-relay-load-board/) tab, and it's an independent tool, not made by or affiliated with Amazon. Its Lane Intelligence, the first button under a load card, shows that load's posted price next to the lane's 90-day history, with a target rate, an expected range and a confidence level.
+
+Two cautions. Spot prices are all-in (base rate, fuel surcharge and tolls), while an auction bid is base rate only, so don't copy a spot number straight into a bid. And Lane Intelligence is decision support for judging a price, not a guarantee and not a bid recommendation. Your bid comes from your own costs.
+
+Try it with a 7-day free trial, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
+
+## Frequently asked questions
+
+### What grade do you need for Amazon Relay auctions?
+C+ or above to view and bid. Reefer loads need B, and some box truck loads need B+. Equipment count, Relay tenure and CARB compliance for California routes also count.
+
+### Can box trucks bid in Amazon Relay auctions?
+Yes. Amazon's box truck auctions ask for at least one 26 ft or 27 ft reefer box truck, and some box truck loads need a B+ grade. Check each auction's requirements before bidding.
+
+### Do fuel and tolls go into my Amazon Relay auction bid?
+No. Bid your base rate only. Amazon pays fuel and tolls after the load, and they're not part of the bid.
+
+### Can I withdraw an Amazon Relay auction bid?
+Yes, once per auction. Withdrawing ends your access to that auction, so you can't come back in with a new bid.
+
+### How long are Amazon Relay auction contracts?
+Winning gives 3 to 6 months of one-way contracts, and Amazon says all auction contracts run up to 6 months. Your winning rate is locked for the whole contract.
+
+### What happens if I win an Amazon Relay auction?
+Amazon emails you to accept or reject the contract. Once you accept, weekly loads are tendered to you for the contract term. Rejecting awarded contracts often may cost you auctions access.
+
+---
+
+# How do you post a truck on Amazon Relay?
+
+URL: https://nudoiq.com/amazon-relay-post-a-truck/
+Published: 2026-10-08. Last updated: 2026-10-08.
+
+Short answer: To post a truck on Amazon Relay, create a Post A Truck order with your availability (up to two weeks ahead), a pickup radius and maximum deadhead, cities to include or exclude, one-way or round trip, distance or trip length limits, maximum stops, stem time and your minimum rate per mile. Relay matches loads to the order and books them for you. The order stays open until it matches or your availability window ends.
+
+## What is Post A Truck on Amazon Relay?
+
+Post A Truck is the opposite of searching the board. You post your equipment and driver availability, set the least you'll take, and Relay brings matching loads to you. [Amazon's Post A Truck guide](https://relay.amazon.com/blog/how-to-load-match-with-post-a-truck) says matched carriers get first access to freight in their window, before it reaches the load board.
+
+Amazon also says it will [instantly book loads that match your criteria](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search), so you don't have to watch the board. That's the upside and the risk in one sentence: whatever matches is yours to run.
+
+## Who can use Post A Truck?
+
+Amazon says approved Relay carriers can access it. Beyond that:
+
+- **Equipment.** [Amazon lists](https://relay.amazon.com/blog/booking-options/3-ways-to-set-your-own-freight-rates-on-amazon-relay) power only loads, box trucks (dock height and liftgate required) and live loads using your own tractor-trailer.
+- **Grades.** Every grade keeps Post A Truck. Higher grades get priority matching. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains how grades work.
+- **Account.** You need an approved carrier account first. See the [Amazon Relay requirements checklist](https://nudoiq.com/amazon-relay-requirements/).
+
+## How do you post a truck on Amazon Relay, step by step?
+
+Amazon's guides describe what goes into an order rather than a screen-by-screen path. These are the choices an order asks you to make, in a sensible order to work through them.
+
+1. **Pick how you start.** From scratch, from recommendations, or from a saved search (see the next section).
+2. **Set your availability.** The days and hours your truck and driver are free, up to two weeks in advance.
+3. **Set where the first pickup can be.** A radius for first pickup and a maximum deadhead.
+4. **Choose destinations.** Include or exclude cities, and add preferred destinations.
+5. **Pick one-way or round trip.** A round trip brings you back. A one-way needs a box truck or your own trailer.
+6. **Set distance or trip duration limits** so a match fits your driver's day.
+7. **Set maximum stops and stem time.**
+8. **Set your price.** Your minimum rate per mile and a payout amount.
+9. **Check the match outlook**, adjust if it's Low, and post the order.
+
+You can create several orders for different trucks and lanes, and edit or cancel them any time.
+
+## What are the three ways to start an order?
+
+| Way to start | How it works |
+|---|---|
+| From scratch | You fill in every setting yourself |
+| From recommendations | You enter a few settings and Relay fills the rest from your previous bookings |
+| From a saved search | A search you saved on the board becomes the template |
+
+If you already have a saved search for your home lane, starting from it is the fastest way to post.
+
+## What do High, Medium and Low match outlook mean?
+
+Match outlook is Relay's estimate of how likely your order is to match. It's based on your criteria and the previous 6 weeks of loads.
+
+| Outlook | What Amazon says | What to do |
+|---|---|---|
+| High | Good chance of a match | Post it |
+| Medium | Decent chance, room to improve | Loosen one setting if timing matters |
+| Low | Adjust radius, distance, destination or price | Change one of those and check again |
+
+Amazon says matching also uses market rates and Relay performance scores. Narrow criteria give fewer matches, and flexibility on routes or timing can help. So price isn't the only lever: Amazon lists radius, distance and destination right next to it.
+
+## What are linked orders and block orders?
+
+They solve two different problems.
+
+- **Linked orders** connect several orders as one fulfilled order, so you don't overbook the same truck. Once one is fulfilled, the unfulfilled trips are cancelled for you.
+- **Block orders** have trips that start and end at the same location. A matched block is paid in full even if Amazon doesn't use the entire block length. Blocks are explained in our guide to [Amazon Relay contracts and blocks](https://nudoiq.com/amazon-relay-contracts/).
+
+If you post one truck on several lanes at once, linked orders are the setting that keeps you from matching twice.
+
+## What happens when your order matches?
+
+An order stays open until it matches or your availability window expires. Amazon's general rule for booked loads is plain. In [Amazon's words](https://relay.amazon.com/blog/amazon-relay-performance-score), "if an Amazon load is booked, it's the Relay carrier's responsibility to execute it."
+
+Rejecting a booked load counts against your acceptance metric, and the closer to pickup, the higher the penalty. Our guide on [what happens if you cancel a load](https://nudoiq.com/amazon-relay-cancel-load/) covers it.
+
+## How do you cancel a Post A Truck order?
+
+Amazon says you can cancel an order if your availability changes, and edit or cancel orders any time. Do it as soon as plans change. An open order with the wrong hours can match a load your driver can't run, and then you're cancelling a booked load instead of an order.
+
+If you're using Post A Truck to chain work after a delivery, our guide to [booking multiple loads on Amazon Relay](https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/) walks through the hours math first.
+
+## How does NudoIQ's One-Click Post A Truck work?
+
+NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It's an independent tool, not made by or affiliated with Amazon. It adds a row of buttons under each load card, and the third one opens One-Click Post A Truck.
+
+The panel shows that load's origin, destination, distance and board price next to your minimum rate per mile and minimum payout. Above the price field sits a recommended bid, based on what that lane has paid before.
+
+Be clear on one thing: the recommended bid is not accurate right after install. It needs time gathering data about your area, and it improves with use. Treat it as a starting point and set your own price.
+
+When the price is right, click Post Truck Now and an order is created for that load automatically. You skip building the order from a blank form.
+
+NudoIQ is used by 300+ carriers. Try it with a 7-day free trial, and cancel anytime. It's rated 5.0 on the Chrome Web Store.
+
+## Frequently asked questions
+
+### How far ahead can you post a truck on Amazon Relay?
+Up to two weeks ahead. The order stays open until it matches or your availability window expires.
+
+### Can box trucks use Post A Truck on Amazon Relay?
+Yes. Amazon lists box trucks as eligible, as long as the truck is dock height with a liftgate. Power only loads and live loads with your own tractor-trailer are eligible too.
+
+### Why is my Post A Truck match outlook low?
+Low means your criteria don't line up well with the loads Relay saw in the previous 6 weeks. Amazon suggests adjusting your radius, distance, destination or price. More flexibility on routes or timing can help.
+
+### Does Post A Truck guarantee a load?
+No. Your order only books if a load matches it before your availability window ends. Higher grades get priority matching, and matching also weighs market rates.
+
+### Can I post more than one truck on Amazon Relay?
+Yes. You can create several orders for different trucks and lanes. Use linked orders when one truck is posted on more than one order, so unfulfilled trips are cancelled once one fills.
+
+### Does Post A Truck work for power only?
+Yes. Amazon lists power only loads as eligible. Choose round trip if you don't have your own trailer, because one-way loads need a box truck or your own trailer.
+
+---
+
+# What happens if you cancel a load on Amazon Relay?
+
+URL: https://nudoiq.com/amazon-relay-cancel-load/
+Published: 2026-10-08. Last updated: 2026-10-08.
+
+Short answer: Cancelling (rejecting) a load you booked on Amazon Relay counts against your acceptance metric, and so does letting a booked load expire. Amazon says the closer to pickup you reject, the higher the penalty. Your overall score equals your lowest metric, so a weak acceptance score can lower your grade. Loads that Amazon cancels don't count against you.
+
+## What counts as a cancellation on Amazon Relay?
+
+Amazon calls it a rejection. Its [performance score guide](https://relay.amazon.com/blog/amazon-relay-performance-score) defines the acceptance metric as "How often a carrier rejects loads that they book." Amazon's [grades page](https://relay.amazon.com/blog/intro-to-amazon-relay/relay-performance-grades-how-to-unlock-hauling-opportunities) says the same thing in other words: booking and completing loads without rejections, meaning carrier cancellations.
+
+Two things count:
+
+- **Rejecting a load you booked.** Any time you give a tendered load back, your score can take a hit.
+- **Letting a booked load expire.** Amazon says this counts too. Doing nothing isn't a way out.
+
+Amazon is plain about who owns a booking: "if an Amazon load is booked, it's the Relay carrier's responsibility to execute it."
+
+## Does it matter when you cancel?
+
+Yes, a lot. Amazon says: "The closer a carrier rejects to pick-up time, the higher the penalty."
+
+The practical rule is simple. The moment you know a load won't work, release it. A cancellation two days out costs less than the same cancellation two hours out. Amazon doesn't publish how much less, but it does say the penalty rises as pickup gets closer.
+
+## What if Amazon cancels the load?
+
+Then it doesn't count against you. Amazon says that if it cancels tendered loads, the carrier's performance score won't be impacted.
+
+You also don't lose the time completely. Amazon's [load board guide](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) says the board suggests replacements for cancelled loads. Check the pickup window, deadhead and your driver's hours before you take one.
+
+## How does one cancellation affect your whole grade?
+
+Your overall score equals your lowest metric. Amazon scores four: on-time, acceptance, app usage and disruption-free. If acceptance is your weakest, it sets your grade, even with a perfect on-time record.
+
+You become eligible for a grade after ten or more Relay loads in the last six active weeks. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) breaks down all four metrics.
+
+## What does a lower grade cost you?
+
+Access. Here's what Amazon says each grade level gets you:
+
+| Grade | What Amazon ties to it |
+|---|---|
+| All grades | Load board access, Relay Rewards eligibility, Post A Truck (higher grades get priority matching) |
+| C+ and up | Most freight auctions (B for reefer, B+ for some box truck loads) |
+| B and up | Seeing and booking new contracts |
+| A+, A and B+ | Early access to new spot loads |
+| A+ and A | Contract price alerts |
+| Below C+ | Contracts you already booked are at risk |
+
+Relay Rewards uses your lowest score too. Amazon evaluates your tier monthly, using your company's lowest score from the previous month. So a bad stretch on acceptance can reach past this week's loads into contracts, auctions and rewards. Our guides to [Amazon Relay contracts](https://nudoiq.com/amazon-relay-contracts/) and [auctions](https://nudoiq.com/amazon-relay-auctions/) explain what's on the line in each.
+
+## How do you avoid having to cancel?
+
+Amazon's own advice is to be selective when you browse the load board, so you don't book loads you can't haul. In practice:
+
+1. **Do the hours math before you book.** First load, deadhead and second load against your driver's remaining hours. Our guide to [booking multiple loads](https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/) has a checklist.
+2. **Check the pickup window, not just the price.** Can your driver make it with room to spare?
+3. **Use linked orders in Post A Truck.** If one truck is posted on several orders, linking them means unfulfilled trips are cancelled for you once one fills. See [how to post a truck on Amazon Relay](https://nudoiq.com/amazon-relay-post-a-truck/).
+4. **Keep your Post A Truck availability current.** Cancel an order the moment plans change, before it matches a load.
+5. **Release early when you must.** The penalty rises as pickup gets closer.
+
+## What doesn't Amazon publish about cancellations?
+
+More than most carriers expect. Amazon doesn't publish:
+
+- **Cancellation fees.** The [Relay FAQ](https://relay.amazon.com/faq) says nothing about cancellation fees, or about pay when a truck order isn't used.
+- **The size of the penalty** for a single rejection.
+- **How long one cancellation stays** on your score. Amazon says the score reflects your last six weeks of hauls.
+- **The score cutoffs** for each letter grade.
+- **A dispute route for acceptance.** Amazon's dispute language on the performance score page covers on-time impacts only. It doesn't describe a way to dispute an acceptance hit.
+
+If someone quotes you exact numbers for any of these, ask where they got them.
+
+## Where does NudoIQ fit?
+
+NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It's an independent tool, not made by or affiliated with Amazon. It doesn't change how Amazon scores a rejection. What it does is let you set rules up front about which loads get booked at all.
+
+In Autobook mode it's set to book only loads that clear rules you set:
+
+- **Min Net Profit.** It books only loads that clear your own minimum net profit.
+- **Max stops.** Loads with more stops than your limit are skipped.
+- **Complete data.** It never books a load with incomplete data.
+- **Pickup lead time.** With a minimum lead time set, it won't book a load whose pickup time is unknown.
+- **Max-books cap.** It stops after the number of bookings you set.
+
+If you'd rather decide every load yourself, Alert mode tells you about a match without booking it. More in our [auto-booker guide](https://nudoiq.com/amazon-relay-auto-booker/).
+
+Try it with a 7-day free trial, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
+
+## Frequently asked questions
+
+### Does rejecting a load on Amazon Relay hurt your score?
+Yes. Rejecting a load you booked counts against your acceptance metric, and the closer to pickup you reject, the higher the penalty. Because your overall score is your lowest metric, acceptance can set your whole grade.
+
+### Is there a fee for cancelling an Amazon Relay load?
+Amazon doesn't publish one. The Relay FAQ says nothing about cancellation fees. The cost Amazon does describe is to your performance score.
+
+### What happens if Amazon cancels my Relay load?
+Your score isn't affected. Amazon says carrier scores aren't impacted when it cancels tendered loads, and the load board suggests replacements for cancelled loads.
+
+### Does letting a load expire count as a rejection on Amazon Relay?
+Yes. Amazon says a performance score can take a hit any time a carrier rejects tendered loads, including letting loads expire.
+
+### Can I dispute an acceptance hit on my Relay scorecard?
+Amazon doesn't publish a dispute route for acceptance. Its dispute language covers on-time impacts. For account-access problems, Amazon's FAQ points to the Support Center when you're logged in. The 24/7 Relay Operations Center handles operational support through the Relay portal or Relay mobile.
+
+### How long does a cancellation stay on my Amazon Relay score?
+Amazon doesn't say how long a single cancellation stays. It says your score reflects your last six weeks of hauls.
+
+---
+
+# Can you use a cargo van for Amazon Relay?
+
+URL: https://nudoiq.com/amazon-relay-cargo-van/
+Published: 2026-10-08. Last updated: 2026-10-08.
+
+Short answer: No. Amazon's truck requirements page says "Cargo vans cannot be used for loads on Amazon Relay." The smallest equipment Amazon supports is a 16 ft dock-height box truck with a working tuck-under liftgate. Sprinter vans, pickup trucks and hotshot rigs aren't on Amazon's supported equipment list either.
+
+## What does Amazon say about cargo vans on Relay?
+
+Amazon says it in one line on its [truck requirements page](https://relay.amazon.com/blog/amazon-relay-truck-requirements): "Cargo vans cannot be used for loads on Amazon Relay." The [Relay FAQ](https://relay.amazon.com/faq) lists the same equipment and no vans.
+
+So there's no van category to apply under, and no van loads to book. It doesn't matter how big the van is or how much it can carry. If it's a cargo van, it's out.
+
+## What equipment does Amazon Relay accept?
+
+This is Amazon's full supported list:
+
+- **Tractors:** day cabs (short-distance) and sleeper cabs (long haul).
+- **Box trucks:** 26 ft and 16 ft, dock height (also called straight trucks), with a functional tuck-under liftgate.
+- **Trailers:** 48 ft trailers, 53 ft dry vans and 53 ft reefers. Reefers must meet the FDA Sanitary Transportation Rule.
+- **Containers:** 20, 40 and 45 ft high cube, UIIA compliant, for drayage from rail and sea ports.
+
+Two more things from the same page. Most Relay loads are power only: you bring the tractor and Relay supplies the trailer. And there's no fleet size requirement, so one truck can be enough.
+
+## Can you use a sprinter van, pickup or hotshot for Amazon Relay?
+
+Not on the list. Amazon's page doesn't name sprinter vans, pickup trucks or hotshot rigs at all. It lists what's supported, and none of them are on it.
+
+So if you run a hotshot or a pickup today, that rig isn't on the list Amazon supports. Plan around equipment that is.
+
+## What does FMCSA data show about trucks hauling Amazon freight?
+
+In roadside inspections, big trucks carry almost all of it. We counted public FMCSA roadside inspections that list Amazon as the shipper, from 2023-09-24 to 2026-09-22. Of the 100,499 inspection rows with a vehicle weight class:
+
+| Vehicle weight class | Share of Amazon-shipper rows |
+|---|---|
+| Over 54,000 lb (tractor-trailer) | 87.7% |
+| 33,001 to 54,000 lb | 2.5% |
+| 19,501 to 26,000 lb (box truck) | 7.4% |
+| 14,001 to 19,500 lb | 0.7% |
+| 10,001 to 14,000 lb | 0.1% |
+| 10,000 lb or less | 0.0% |
+
+At the carrier level, among carriers inspected with Amazon freight since 2025-01-01: tractor-trailer 83.9%, box truck 13.3%, step van 0.3%, and van 14,000 lb or less 0.1%.
+
+Two caveats. An inspection is not a load: most loads are never inspected, so these counts are a floor. And Amazon on the bill of lading means Amazon freight, not proof of a Relay booking. It includes Amazon's own fleets and contract carriers. The full method is on our [Amazon Relay carrier data page](https://nudoiq.com/amazon-relay-carrier-data/).
+
+## If you own a cargo van, what are your options for Relay?
+
+Three paths exist, and each one starts with supported equipment.
+
+### Run a box truck
+
+A 16 ft or 26 ft dock-height box truck with a working tuck-under liftgate is the smallest way in. Box trucks can book spot loads, one-way loads and contracts, including 8-hour and 13-hour solo contracts with round trips. Our [Amazon Relay box truck guide](https://nudoiq.com/amazon-relay-box-truck/) covers the truck, and [how Amazon Relay contracts work](https://nudoiq.com/amazon-relay-contracts/) covers booking weeks of work ahead.
+
+### Rent the equipment
+
+Amazon says "Discounts are available for renting box trucks and tractors for a load." The terms are on [Amazon's discounts page](https://relay.amazon.com/discounts), so check them there before you plan around a rental.
+
+### Go power only with a tractor
+
+Most Relay loads are power only. A day cab or sleeper tractor hooks to an Amazon trailer, so you don't need to own a trailer for most of the work. Read [how Amazon Relay power only works](https://nudoiq.com/amazon-relay-power-only/).
+
+## What else do you need besides the right truck?
+
+The equipment is only one gate. The carrier account has its own rules, and they're the same whatever truck you run:
+
+- A DOT number with interstate authority, active for at least 180 days, and a valid MC number.
+- An FMCSA safety rating of Satisfactory, None or Not Rated.
+- Insurance, including $1,000,000 auto liability per occurrence and at least $100,000 cargo.
+- Verification of the business and every beneficial owner (anyone with more than 25%).
+
+The full checklist is in our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/), with coverages in the [insurance requirements guide](https://nudoiq.com/amazon-relay-insurance-requirements/).
+
+## Where does NudoIQ fit?
+
+Straight answer: NudoIQ can't help a cargo van get on Relay. There are no Relay loads for vans, so there's nothing for it to find.
+
+Once you run supported equipment and have an approved Relay account, it's useful on the board. NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It refreshes the board on a 1 to 5 second interval, alerts you on box truck or power only loads that match your rules, and shows net profit on every load card after driver pay, fuel, maintenance and deadhead. It's an independent tool, not made by or affiliated with Amazon.
+
+When you're ready, try it with a 7-day free trial, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
+
+## Frequently asked questions
+
+### Can you use a sprinter van for Amazon Relay?
+No. Sprinter vans aren't on Amazon's supported equipment list, and Amazon says cargo vans can't be used for Relay loads. The smallest supported truck is a 16 ft dock-height box truck with a working tuck-under liftgate.
+
+### Can you use a pickup truck for Amazon Relay?
+Pickup trucks aren't on Amazon's supported equipment list. What Relay lists is day cab and sleeper tractors, 16 ft and 26 ft dock-height box trucks with a tuck-under liftgate, trailers and high cube containers.
+
+### Can you do Amazon Relay with a hotshot?
+Hotshot rigs aren't on Amazon's supported equipment list, so plan on a tractor or a box truck instead. Most Relay loads are power only, which means a day cab or sleeper tractor pulling an Amazon trailer.
+
+### Is there an Amazon Relay load board for cargo vans?
+No. Because Amazon says cargo vans can't be used on Relay, there are no van loads on the board. The smallest equipment that gets you onto the board is a 16 ft dock-height box truck with a working tuck-under liftgate.
+
+### What is the smallest truck you can use for Amazon Relay?
+A 16 ft box truck. It has to be dock height with a functional tuck-under liftgate. A 26 ft box truck with the same features also qualifies.
+
+### Does Amazon help with renting a truck for Relay?
+Amazon says discounts are available for renting box trucks and tractors for a load. The terms are on its discounts page at relay.amazon.com/discounts.
+
+---
+
 # Amazon Relay rates by lane (NudoIQ board data)
 
 URL: https://nudoiq.com/amazon-relay-rates/
