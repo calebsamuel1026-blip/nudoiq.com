@@ -98,9 +98,9 @@ const crumbs = (items) => items.map(([n, u]) => (u ? `<a href="${u}">${esc(n)}</
 const crumbLd = (items) => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList',
   itemListElement: items.map(([n, u], i) => ({ '@type': 'ListItem', position: i + 1, name: n, item: SITE + u })) });
 const ORG = { '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'NudoIQ', url: `${SITE}/`,
-  logo: `${SITE}/brand/mark/icon128.png`, email: 'contact@nudoiq.com',
+  logo: `${SITE}/icons/nudoiq-logo-512.png`, email: 'contact@nudoiq.com',
   sameAs: ['https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk', 'https://t.me/nudoiqsupport'] };
-const PUBLISHER = { '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'NudoIQ', logo: { '@type': 'ImageObject', url: `${SITE}/brand/mark/icon128.png` } };
+const PUBLISHER = { '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'NudoIQ', logo: { '@type': 'ImageObject', url: `${SITE}/icons/nudoiq-logo-512.png` } };
 const VARIABLES = [
   ['Final board price', 'USD', 'Median and interquartile range of the last price a NudoIQ user saw on the Amazon Relay board for each load'],
   ['Rate per mile', 'USD per mile', 'Final board price divided by the load miles shown on the board'],

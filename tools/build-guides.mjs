@@ -34,7 +34,7 @@ const SOFTWARE = {
   publisher: { '@id': 'https://nudoiq.com/#organization' },
 };
 const ORG = { '@type': 'Organization', '@id': 'https://nudoiq.com/#organization', name: 'NudoIQ', url: 'https://nudoiq.com/',
-  logo: 'https://nudoiq.com/brand/mark/icon128.png', email: 'contact@nudoiq.com',
+  logo: 'https://nudoiq.com/icons/nudoiq-logo-512.png', email: 'contact@nudoiq.com',
   sameAs: ['https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk', 'https://t.me/nudoiqsupport'] };
 
 // Display order on the hub and in "related" lists.
@@ -152,7 +152,13 @@ function head({ title, description, url, extraLd, slug }) {
   <link rel="alternate" hreflang="en" href="${url}">
   <link rel="alternate" hreflang="es" href="${SITE}/es/${ES_TWIN[slug]}/">
   <link rel="alternate" hreflang="x-default" href="${url}">` : ''}
-  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="any">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
   <meta property="og:site_name" content="NudoIQ">
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
@@ -351,7 +357,7 @@ for (const p of pages) {
   const article = { '@context': 'https://schema.org', '@type': 'Article', headline: stripMd(p.h1), description: p.description,
     mainEntityOfPage: url, url, image: `${SITE}/assets/og-image-1200x630.png`, datePublished: p.published, dateModified: p.updated,
     inLanguage: 'en-US', author: authorLd, about: { '@id': `${SITE}/#software` },
-    publisher: { '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'NudoIQ', logo: { '@type': 'ImageObject', url: `${SITE}/brand/mark/icon128.png` } } };
+    publisher: { '@type': 'Organization', '@id': `${SITE}/#organization`, name: 'NudoIQ', logo: { '@type': 'ImageObject', url: `${SITE}/icons/nudoiq-logo-512.png` } } };
   if (p.answer) article.abstract = p.answer;
   const ld = [article, crumbLd(trail.map(([nm, u], i) => [nm, i === trail.length - 1 ? `/${p.slug}/` : u]))];
   if (p.faq.length) {

@@ -212,5 +212,11 @@
   "scaleNote": "Los pagos por ruta varían según el mercado, el momento y tu historial. Estos resultados no están garantizados.",
   "payoffBig": "Recupera tu inversión en la primera carga",
   "support": "Soporte",
-  "navAndroid": "Android"
+  "navAndroid": "Android",
+  "faq11Q": "¿Qué hace diferente a NudoIQ de otras extensiones de Relay?",
+  "faq11A": "NudoIQ es la única extensión de Relay que reserva cargas según tu propia ganancia neta mínima y redacta cartas para disputar violaciones del scorecard (revisado el 5 de octubre de 2026, entre otras 52 extensiones de Relay en la tienda). Todas las funciones cuestan un solo precio de $49.99 al mes, igual para un camión que para veinte.",
+  "faq11L": "Mira la comparación lado a lado (en inglés).",
+  "faq12Q": "¿Por qué Chrome Web Store muestra menos usuarios que los 300+ transportistas que usan NudoIQ?",
+  "faq12A": "La tienda solo cuenta las instalaciones hechas desde la página de NudoIQ en la tienda, que se creó el 21 de mayo de 2026. Antes de eso, NudoIQ llegó a los transportistas directamente, sin la tienda, así que ellos no aparecen en ese número. En total, 300+ transportistas usan NudoIQ.",
+  "faq12L": "Lee cómo funciona el conteo de la tienda (en inglés)."
 }

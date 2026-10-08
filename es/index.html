@@ -17,6 +17,7 @@
   <link rel="alternate" hreflang="es" href="https://nudoiq.com/es/">
   <link rel="alternate" hreflang="x-default" href="https://nudoiq.com/">
   <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:logo" content="https://nudoiq.com/icons/nudoiq-logo-512.png">
   <meta property="og:title" content="NudoIQ | Herramientas para el tablero de cargas de Amazon Relay">
   <meta property="og:description" content="NudoIQ refresca tu load board de Relay, reserva cargas con tus reglas, predice el precio con IA y prepara disputas del scorecard. 7 días gratis, sin tarjeta.">
   <meta property="og:type" content="website">
@@ -32,8 +33,13 @@
   <meta name="twitter:description" content="NudoIQ refresca tu load board de Relay, reserva cargas con tus reglas, predice el precio con IA y prepara disputas del scorecard. 7 días gratis, sin tarjeta.">
   <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
   <meta name="twitter:image:alt" content="NudoIQ, a Chrome extension running inside the Amazon Relay load board">
-  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="any">
-  <link rel="apple-touch-icon" href="/assets/favicon.png">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" as="image" href="/assets/shot-hero-loadboard.webp" type="image/webp" fetchpriority="high">
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
@@ -549,6 +555,7 @@
   .flinks{display:flex;gap:24px;flex-wrap:wrap}
   .flinks a{text-decoration:none;color:var(--ink-4);font-size:14px;padding:6px 0;display:inline-block}
   .flinks a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+  .fguides{margin-top:14px}
   .motion{display:flex;align-items:center;gap:12px;margin-top:26px;font-size:13.5px;color:var(--ink-4)}
   .sw{appearance:none;-webkit-appearance:none;width:44px;height:25px;border-radius:var(--rp);
     background:var(--g1);position:relative;cursor:pointer;border:0;transition:background .2s;
@@ -1194,6 +1201,8 @@
         <details><summary data-t="faq8Q">¿NudoIQ ve mi contraseña de Amazon Relay?</summary><p data-t="faq8A">NudoIQ funciona en tu navegador dentro de Relay donde ya iniciaste sesión. Nunca pide ni guarda tu contraseña de Amazon. Tu email de suscripción, información de conductores y detalles de viajes se guardan solo en tu cuenta.</p></details>
         <details><summary data-t="faq10Q">¿NudoIQ suspenderá mi cuenta?</summary><p data-t="faq10A">NudoIQ funciona solo en tu navegador en páginas Relay donde ya estás iniciado. No inicia sesión desde otro lugar ni pide tu contraseña. Tú controlas la velocidad de actualización. Las decisiones de Amazon sobre cuentas son suyas, pero NudoIQ se mantiene dentro de la interfaz Relay que ya usas.</p></details>
         <details><summary data-t="faq9Q">¿NudoIQ funciona en otros tableros de cargas además de Amazon Relay?</summary><p data-t="faq9A">No. NudoIQ está hecho específicamente para el tablero de cargas de Amazon Relay y solo lee pantallas de Relay. No se conecta a DAT, Truckstop ni a otros tableros de cargas.</p></details>
+        <details><summary data-t="faq11Q">¿Qué hace diferente a NudoIQ de otras extensiones de Relay?</summary><p><span data-t="faq11A">NudoIQ es la única extensión de Relay que reserva cargas según tu propia ganancia neta mínima y redacta cartas para disputar violaciones del scorecard (revisado el 5 de octubre de 2026, entre otras 52 extensiones de Relay en la tienda). Todas las funciones cuestan un solo precio de $49.99 al mes, igual para un camión que para veinte.</span> <a href="/why-nudoiq/" data-t="faq11L">Mira la comparación lado a lado (en inglés).</a></p></details>
+        <details><summary data-t="faq12Q">¿Por qué Chrome Web Store muestra menos usuarios que los 300+ transportistas que usan NudoIQ?</summary><p><span data-t="faq12A">La tienda solo cuenta las instalaciones hechas desde la página de NudoIQ en la tienda, que se creó el 21 de mayo de 2026. Antes de eso, NudoIQ llegó a los transportistas directamente, sin la tienda, así que ellos no aparecen en ese número. En total, 300+ transportistas usan NudoIQ.</span> <a href="/chrome-web-store-user-count/" data-t="faq12L">Lee cómo funciona el conteo de la tienda (en inglés).</a></p></details>
       </div>
     </div></section>
 
@@ -1219,6 +1228,7 @@
       <div>© 2026 NudoIQ · <span data-t="independent">Software independiente para transportistas</span></div>
       <div class="flinks"><a href="/guides/">Guides</a><a href="/fleet/">Fleets</a><a href="/dispatch/">Dispatchers</a><a href="/privacy.html" data-t="privacy">Privacidad</a><a href="/refund-policy.html" data-t="refund">Reembolsos</a><a href="/terms.html" data-t="terms">Términos</a><a href="/support/" data-t="support">Soporte</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contacto</a></div>
     </div>
+    <nav class="flinks fguides" aria-label="Guides"><a href="/amazon-relay-auto-refresh/">Amazon Relay auto refresh extension</a><a href="/amazon-relay-auto-booker/">Amazon Relay auto booker</a><a href="/amazon-relay-load-board/">Amazon Relay load board guide</a><a href="/loadfetcher-alternative/">LoadFetcher alternative</a><a href="/why-nudoiq/">Why carriers choose NudoIQ</a><a href="/chrome-web-store-user-count/">Chrome Web Store user count</a></nav>
     <!-- Official profiles (rel="me"): the same list as Organization.sameAs, so search and AI engines tie them to nudoiq.com. -->
     <div class="flinks fsocial" aria-label="NudoIQ elsewhere"><a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" rel="me noopener" target="_blank">Chrome Web Store</a><a href="https://www.youtube.com/@nudoiqapp" rel="me noopener" target="_blank">YouTube</a><a href="https://www.instagram.com/nudoiq/" rel="me noopener" target="_blank">Instagram</a><a href="https://www.tiktok.com/@nudoiq1" rel="me noopener" target="_blank">TikTok</a><a href="https://www.facebook.com/1279798471883588" rel="me noopener" target="_blank">Facebook</a><a href="https://t.me/nudoiqrelay" rel="me noopener" target="_blank">Telegram</a></div>
     <label class="motion"><input class="sw" type="checkbox" id="motionSw"><span>Turn on Reduced Motion</span></label>
@@ -1286,9 +1296,10 @@
       "logo": {
         "@type": "ImageObject",
         "@id": "https://nudoiq.com/#logo",
-        "url": "https://nudoiq.com/assets/favicon.png",
-        "width": 2056,
-        "height": 765,
+        "url": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+        "contentUrl": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+        "width": 512,
+        "height": 512,
         "caption": "NudoIQ"
       },
       "contactPoint": [
@@ -1385,7 +1396,7 @@
         "ratingValue": "5",
         "bestRating": "5",
         "worstRating": "1",
-        "ratingCount": 5,
+        "ratingCount": 11,
         "reviewCount": 5
       },
       "review": [
@@ -1566,6 +1577,22 @@
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "NudoIQ funciona solo en tu navegador en páginas Relay donde ya estás iniciado. No inicia sesión desde otro lugar ni pide tu contraseña. Tú controlas la velocidad de actualización. Las decisiones de Amazon sobre cuentas son suyas, pero NudoIQ se mantiene dentro de la interfaz Relay que ya usas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué hace diferente a NudoIQ de otras extensiones de Relay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NudoIQ es la única extensión de Relay que reserva cargas según tu propia ganancia neta mínima y redacta cartas para disputar violaciones del scorecard (revisado el 5 de octubre de 2026, entre otras 52 extensiones de Relay en la tienda). Todas las funciones cuestan un solo precio de $49.99 al mes, igual para un camión que para veinte."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Por qué Chrome Web Store muestra menos usuarios que los 300+ transportistas que usan NudoIQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La tienda solo cuenta las instalaciones hechas desde la página de NudoIQ en la tienda, que se creó el 21 de mayo de 2026. Antes de eso, NudoIQ llegó a los transportistas directamente, sin la tienda, así que ellos no aparecen en ese número. En total, 300+ transportistas usan NudoIQ."
           }
         }
       ],

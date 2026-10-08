@@ -17,6 +17,7 @@
   <link rel="alternate" hreflang="es" href="https://nudoiq.com/es/">
   <link rel="alternate" hreflang="x-default" href="https://nudoiq.com/">
   <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:logo" content="https://nudoiq.com/icons/nudoiq-logo-512.png">
   <meta property="og:title" content="Amazon Relay Load Board Chrome Extension | NudoIQ">
   <meta property="og:description" content="See the target rate before you book, dispute Amazon Relay scorecard hits, and track what every truck earned. Chrome extension. 7-day free trial.">
   <meta property="og:type" content="website">
@@ -32,8 +33,13 @@
   <meta name="twitter:description" content="See the target rate before you book, dispute Amazon Relay scorecard hits, and track what every truck earned. Chrome extension. 7-day free trial.">
   <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
   <meta name="twitter:image:alt" content="NudoIQ, a Chrome extension running inside the Amazon Relay load board">
-  <link rel="icon" href="/assets/favicon.png" type="image/png" sizes="any">
-  <link rel="apple-touch-icon" href="/assets/favicon.png">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="preload" as="image" href="assets/shot-hero-loadboard.webp" type="image/webp" fetchpriority="high">
   <!-- Microsoft Clarity -->
   <script type="text/javascript">
@@ -1195,6 +1201,8 @@
         <details><summary data-t="faq8Q">Does NudoIQ see my Amazon Relay password?</summary><p data-t="faq8A">NudoIQ runs inside your signed-in Relay browser tab. It never asks for your Amazon password or stores it. Your subscription email, driver information, and trip details are stored only for your account.</p></details>
         <details><summary data-t="faq10Q">Will NudoIQ get my account suspended?</summary><p data-t="faq10A">NudoIQ runs only in your own browser on Relay pages you're signed in to. It doesn't log in from another location or ask for your password. You control the refresh speed. Amazon's decisions about accounts are theirs alone, but NudoIQ stays within the Relay interface you already use.</p></details>
         <details><summary data-t="faq9Q">Does NudoIQ work on load boards other than Amazon Relay?</summary><p data-t="faq9A">No. NudoIQ is built specifically for the Amazon Relay load board and reads only Relay screens. It does not connect to DAT, Truckstop or other load boards.</p></details>
+        <details><summary data-t="faq11Q">What makes NudoIQ different from other Relay extensions?</summary><p><span data-t="faq11A">NudoIQ is the only Relay extension that books loads to your own minimum net profit and drafts scorecard dispute letters (checked October 5, 2026, across 52 other store listings). Every feature is one flat $49.99 a month, the same for one truck or twenty.</span> <a href="/why-nudoiq/" data-t="faq11L">See the side-by-side comparison.</a></p></details>
+        <details><summary data-t="faq12Q">Why does the Chrome Web Store show fewer users than 300+ carriers?</summary><p><span data-t="faq12A">The store only counts installs made from NudoIQ's store listing, which was created on May 21, 2026. Before that, NudoIQ went to carriers directly, without the store, so they are not in that number. In total, NudoIQ is used by 300+ carriers.</span> <a href="/chrome-web-store-user-count/" data-t="faq12L">Read how the store count works.</a></p></details>
       </div>
     </div></section>
 
@@ -1220,7 +1228,7 @@
       <div>© 2026 NudoIQ · <span data-t="independent">Independent software for carriers</span></div>
       <div class="flinks"><a href="/guides/">Guides</a><a href="/fleet/">Fleets</a><a href="/dispatch/">Dispatchers</a><a href="/privacy.html" data-t="privacy">Privacy</a><a href="/refund-policy.html" data-t="refund">Refund policy</a><a href="/terms.html" data-t="terms">Terms</a><a href="/support/" data-t="support">Support</a><a href="mailto:contact@nudoiq.com" data-t="contact">Contact</a></div>
     </div>
-    <nav class="flinks fguides" aria-label="Guides"><a href="/amazon-relay-auto-refresh/">Amazon Relay auto refresh extension</a><a href="/amazon-relay-auto-booker/">Amazon Relay auto booker</a><a href="/amazon-relay-load-board/">Amazon Relay load board guide</a><a href="/loadfetcher-alternative/">LoadFetcher alternative</a></nav>
+    <nav class="flinks fguides" aria-label="Guides"><a href="/amazon-relay-auto-refresh/">Amazon Relay auto refresh extension</a><a href="/amazon-relay-auto-booker/">Amazon Relay auto booker</a><a href="/amazon-relay-load-board/">Amazon Relay load board guide</a><a href="/loadfetcher-alternative/">LoadFetcher alternative</a><a href="/why-nudoiq/">Why carriers choose NudoIQ</a><a href="/chrome-web-store-user-count/">Chrome Web Store user count</a></nav>
     <!-- Official profiles (rel="me"): the same list as Organization.sameAs, so search and AI engines tie them to nudoiq.com. -->
     <div class="flinks fsocial" aria-label="NudoIQ elsewhere"><a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" rel="me noopener" target="_blank">Chrome Web Store</a><a href="https://www.youtube.com/@nudoiqapp" rel="me noopener" target="_blank">YouTube</a><a href="https://www.instagram.com/nudoiq/" rel="me noopener" target="_blank">Instagram</a><a href="https://www.tiktok.com/@nudoiq1" rel="me noopener" target="_blank">TikTok</a><a href="https://www.facebook.com/1279798471883588" rel="me noopener" target="_blank">Facebook</a><a href="https://t.me/nudoiqrelay" rel="me noopener" target="_blank">Telegram</a></div>
     <label class="motion"><input class="sw" type="checkbox" id="motionSw"><span>Turn on Reduced Motion</span></label>
@@ -1287,9 +1295,10 @@
    "logo": {
     "@type": "ImageObject",
     "@id": "https://nudoiq.com/#logo",
-    "url": "https://nudoiq.com/assets/favicon.png",
-    "width": 2056,
-    "height": 765,
+    "url": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+    "contentUrl": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+    "width": 512,
+    "height": 512,
     "caption": "NudoIQ"
    },
    "contactPoint": [
@@ -1395,7 +1404,7 @@
     "ratingValue": "5",
     "bestRating": "5",
     "worstRating": "1",
-    "ratingCount": 5,
+    "ratingCount": 11,
     "reviewCount": 5
    },
    "review": [
@@ -1576,6 +1585,22 @@
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "NudoIQ runs only in your own browser on Relay pages you're signed in to. It doesn't log in from another location or ask for your password. You control the refresh speed. Amazon's decisions about accounts are theirs alone, but NudoIQ stays within the Relay interface you already use."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What makes NudoIQ different from other Relay extensions?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "NudoIQ is the only Relay extension that books loads to your own minimum net profit and drafts scorecard dispute letters (checked October 5, 2026, across 52 other store listings). Every feature is one flat $49.99 a month, the same for one truck or twenty. See the side-by-side comparison: https://nudoiq.com/why-nudoiq/"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why does the Chrome Web Store show fewer users than 300+ carriers?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The store only counts installs made from NudoIQ's store listing, which was created on May 21, 2026. Before that, NudoIQ went to carriers directly, without the store, so they are not in that number. In total, NudoIQ is used by 300+ carriers. Read how the store count works: https://nudoiq.com/chrome-web-store-user-count/"
      }
     }
    ]
