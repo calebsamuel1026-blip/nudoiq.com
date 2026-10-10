@@ -3870,3 +3870,155 @@ Yes, NudoIQ works in English and Spanish, including the load board buttons and a
 
 ### How does NudoIQ decide which loads to book?
 In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can't fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because [cancelling a booked load counts against you](https://nudoiq.com/amazon-relay-cancel-load/).
+
+---
+
+# RGD Auto Booker alternative: NudoIQ vs RGD for the Amazon Relay load board
+
+URL: https://nudoiq.com/rgd-alternative/
+Published: 2026-10-10. Last updated: 2026-10-10.
+
+Short answer: Pick NudoIQ if you want loads booked only when they clear your own net profit, after the costs you enter. NudoIQ also drafts scorecard dispute letters. RGD's listing and checked site pages show neither, but RGD can book several trips in one click. NudoIQ is $49.99 a month flat for every truck. RGD's plans are $79 and $249 a month.
+
+## What is a good RGD alternative for Amazon Relay?
+
+NudoIQ, if you want each booking to clear your own net profit. RGD auto books from filters such as custom locations and time ranges. NudoIQ [refreshes the board and books the loads that clear your number](https://nudoiq.com/amazon-relay-auto-refresh/), after the costs you enter.
+
+## How does NudoIQ compare to RGD for Amazon Relay?
+
+Here's how they line up on the Relay load board, with where every RGD fact came from.
+
+NudoIQ vs RGD for the Amazon Relay load board, from each product's store listing and website, checked October 9, 2026. "Not listed" means that item wasn't on RGD's store listing or the site pages in Sources that day. We did not test their product. Spot an error? Tell us on the [contact page](https://nudoiq.com/support/) and we'll fix it.
+
+| Item | NudoIQ | RGD |
+|---|---|---|
+| What it is | Chrome extension for Amazon Relay carriers and dispatchers | Chrome extension for Amazon Relay carriers, dispatchers and fleet owners |
+| Auto-refresh the load board | Yes | Yes, on both plans (Refresh Rate Console) |
+| Automatic booking | Yes. AutoBook books loads that clear your minimum net profit, and your minimum $/mile if you set one | Yes, on both plans ("Unlimited Auto Booking"), based on the filters you select |
+| Several loads in one click | Not in one click. One START books matching loads one at a time, up to a 1 to 20 cap | Yes. Multi Booking books 2, 3, 5 or even 10 trips with a single click in one search session |
+| Stop at the confirm step | ALERT mode tells you about a match without booking it | Yes. It can stop at the confirmation stage so you can check the load first |
+| Extra filters | Minimum net profit and minimum $/mile. Loads that miss them can be faded or hidden | Listing: custom locations, time ranges, load types. Plans: Time Frame and Exclude Locations on Business ($249) only |
+| Net profit on each load | Yes. Net dollars and $/mile next to the price, after the costs you enter | Not listed |
+| Lane price history | Lane Intelligence: 90-day price range for the lane, from the first button under each load | Not listed |
+| Backhaul search | Yes, Find backhaul button under each load | Not listed |
+| Post a Truck | One-Click Post A Truck with a recommended bid. The bid needs time to learn your area and improves with use | Not listed |
+| Scorecard dispute letters | Drafts the letter from the violation. You review and submit it. Amazon decides | Not listed |
+| Desktop notifications | No. Alert sounds and a flashing tab title instead | Yes, single or multiple, on both plans |
+| Telegram alerts | Yes, to your phone: new matching loads, price rises and AutoBook bookings, with quiet hours | Not listed |
+| Contracts | Yes. Refreshes short-term contract offers and can alert you or AutoBook the ones that meet your minimums | Yes, an AutoBooker for contracts on the Business plan |
+| Free plan | No. Free preview (refresh, alerts) until you start the free trial | Not listed. Its plans are Essential and Business |
+| Free trial | Yes. 7 days, no card needed to start | Yes. 7 days, no card required and no account needed |
+| Paid price | $49.99 a month flat, every truck, cancel anytime | Essential $79 or Business $249 a month, billed monthly, cancel anytime |
+| Languages | English and Spanish | Listing language: English |
+| Publisher | Sami Enterprises LLC | Rolling Global Digital |
+
+Sources:
+
+1. NudoIQ extension for Amazon Relay, and nudoiq.com/get/
+2. RGD Chrome Web Store listing for Amazon Relay (chromewebstore.google.com/detail/ehdmhmgjjjjjainokogkdokkadmboknm), v1.2.0, updated October 5, 2026, checked October 9, 2026
+3. RGD website for Amazon Relay, rolling-global.com (home page and Compare Plans), checked October 9, 2026
+4. RGD website for Amazon Relay, rolling-global.com/faq, checked October 9, 2026
+5. Chrome Web Store (NudoIQ listing for Amazon Relay), checked October 9, 2026
+
+RGD is a trademark of its owner, used here only to name and compare two Amazon Relay extensions. NudoIQ is not affiliated with Rolling Global Digital or with Amazon.
+
+To see how NudoIQ compares with RGD and five other Relay extensions on auto-booking, alerts and price, read [the full comparison](https://nudoiq.com/why-nudoiq/).
+
+## What is RGD?
+
+RGD is a Chrome extension for Amazon Relay carriers, dispatchers and fleet owners, from Rolling Global Digital. Its store listing names Multi Booking, advanced filters, a Board Intelligence Mode and a Related Loads block (checked October 9, 2026). Its website lists desktop notifications on both plans, and contracts on the Business plan. The listing also names nine Relay regions, including the US, Canada and the UK.
+
+## Does RGD auto book loads?
+
+Yes, RGD auto books loads based on the filters you select. Its Multi Booking can take 2, 3, 5 or even 10 trips in one click. RGD can stop at the confirmation step so you can check the load. On October 9, 2026, its listing and checked site pages named no net profit or cost setting. [NudoIQ's AutoBook books for you](https://nudoiq.com/amazon-relay-auto-booker/), and only loads that clear your minimum net profit.
+
+## What does NudoIQ do for your loads that RGD doesn't list?
+
+Three things RGD's listing and checked site pages don't name: a net profit floor for AutoBook, net profit per load, and scorecard dispute letters.
+
+- Net profit floor for AutoBook: it books only loads that clear your minimum. It skips any load it can't fully price and stops at your max-books cap.
+- Net profit on every load: net dollars and $/mile next to the price. It uses the costs you enter, like fuel, MPG, driver pay and maintenance.
+- [Scorecard dispute letters](https://nudoiq.com/amazon-relay-scorecard/): it drafts the letter from the violation. You read it, send it, and Amazon makes the call.
+- Also: Telegram alerts to your phone, Spanish, Lane Intelligence (90-day lane price range), backhaul search and One-Click Post A Truck.
+
+## What does RGD do for your loads that NudoIQ doesn't?
+
+As of October 9, 2026, RGD lists five things for your board that NudoIQ doesn't have. One smaller difference: RGD's free trial starts with no account, while NudoIQ's asks for an email.
+
+- Several loads in one click: its Multi Booking books 2, 3, 5 or even 10 trips with a single click. It also lists multi-load search and identical-trip series.
+- Desktop notifications on your computer: both RGD plans list them, single or multiple.
+- A stop at the confirm step: RGD can pause at the confirmation stage so you can check the chosen load first.
+- More filters: its listing names custom locations, time ranges and load types. Its plan table puts Time Frame and Exclude Locations on Business ($249) only, and no filters on Essential.
+- Board extras: a Related Loads block shows more trips while your main search is loading. It also alerts you when selected trips become unavailable.
+
+## How much does RGD cost you vs NudoIQ?
+
+On RGD, you choose Essential at $79 a month or Business at $249 a month. Business adds contracts and more filters. Both are billed monthly (checked October 9, 2026). NudoIQ starts with a free preview on install, then a 7-day free trial with no card needed. After that it's $49.99 a month flat for every truck. Cancel anytime.
+
+## Should you pick RGD or NudoIQ?
+
+### Pick RGD if
+
+- You want to book 2 to 10 trips with one click, or run identical trips for drivers on similar loads.
+- You want desktop notifications on your computer.
+- You want it to stop at the confirmation step so you can check each load first.
+- You filter by custom locations, time ranges or load types, or want Business ($249) for Time Frame and Exclude Locations.
+
+### Pick NudoIQ if
+
+- You want loads booked only when they clear your minimum net profit, after your own costs.
+- You want to see what each load nets you before you take it.
+- You fight scorecard hits and want the dispute letter drafted for you.
+- You want auto booking for $49.99 a month, or you work in Spanish.
+
+Not sure which is right for your board? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back. It costs you a week, not a dime.
+
+[Try NudoIQ 7 days free](https://nudoiq.com/get/)
+
+## How do you switch from RGD to NudoIQ?
+
+Turn off or remove RGD in your Chrome extensions. Add NudoIQ from the Chrome Web Store, [open the Relay load board](https://nudoiq.com/amazon-relay-load-board/) and press START. Your Relay login doesn't change. Run one load board extension at a time.
+
+## Frequently asked questions
+
+### What is the RGD auto booker for Amazon Relay?
+RGD is a Chrome extension that refreshes the Amazon Relay load board and auto books loads. Rolling Global Digital makes it. Its store listing names Multi Booking, advanced filters and a Board Intelligence Mode (checked October 9, 2026). NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit.
+
+### What is Rolling Global Digital?
+Rolling Global Digital is the company behind RGD, an auto booker and refresher for the Amazon Relay load board. Its website, rolling-global.com, carries both names (checked October 9, 2026). NudoIQ comes from a different company, Sami Enterprises LLC, and is not affiliated with Rolling Global Digital.
+
+### Is RGD AutoBooker a Chrome extension?
+Yes, RGD AutoBooker is a Chrome extension that runs on the Amazon Relay load board. You add it from its Chrome Web Store listing and start the trial inside the extension (checked October 9, 2026). NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so the two don't conflict.
+
+### Does RGD auto book loads?
+Yes, RGD auto books loads on both plans, based on the filters you select. Its Multi Booking can take 2, 3, 5 or even 10 trips in one click. On October 9, 2026, its listing and the site pages we checked named no net profit or cost setting. NudoIQ's AutoBook mode books matching loads that clear your own minimum net profit.
+
+### Can RGD book several loads in one click?
+Yes, with RGD's Multi Booking you can book 2, 3, 5 or even 10 trips with a single click in one search session. Its site also lists searching for several loads at once, and its FAQ describes series of identical trips (checked October 9, 2026). NudoIQ books several loads per session too, one at a time. One START books matching loads up to your max-books cap of 1 to 20.
+
+### Is RGD free?
+No free plan is listed, but you can try RGD free for 7 days with no card required. After the trial, Essential is $79 a month and Business is $249 (checked October 9, 2026). NudoIQ has a free preview until you start its 7-day free trial. After that it's $49.99 a month.
+
+### Does RGD have a free trial?
+Yes, you can try RGD free for 7 days, with no card required and no account needed. You start the trial inside the extension, per its store listing (checked October 9, 2026). NudoIQ also has a 7-day free trial with no card needed to start, and a free preview before it.
+
+### How much does RGD cost compared to NudoIQ?
+RGD costs you $79 a month on Essential or $249 a month on Business (checked October 9, 2026). Both are billed monthly, and Business adds contracts and more filters. NudoIQ is one $49.99 plan, the same for one truck or a whole fleet, with a 7-day free trial and cancel anytime.
+
+### Is there a free RGD alternative?
+NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan. RGD lists no free plan either. Rocket Relay lists a free plan with auto-refresh. EasyRelay lists a $0 one, with its refresher on paid plans (checked October 9, 2026).
+
+### Does RGD auto book Amazon Relay contracts?
+Yes, RGD's Business plan, at $249 a month, lists an AutoBooker for Amazon Relay contracts (checked October 9, 2026). NudoIQ also works on Relay's contracts page, in its one $49.99 plan. It refreshes short-term contract offers and can alert you or AutoBook the ones that meet your minimums.
+
+### How does NudoIQ decide which loads to book?
+In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can't fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because [cancelling a booked load counts against you](https://nudoiq.com/amazon-relay-cancel-load/).
+
+### Does NudoIQ work in Spanish?
+Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. RGD's store listing shows English as its language (checked October 9, 2026).
+
+### Can I switch from RGD to NudoIQ?
+Yes, you can switch in a few minutes. Turn off or remove RGD on Chrome's extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don't conflict.
+
+### Is NudoIQ or RGD made by Amazon?
+No, neither is made by Amazon, and both run inside the Relay load board in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. RGD comes from Rolling Global Digital, going by its website.
