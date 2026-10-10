@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <!-- Google Ads click id capture (2026-10-05, copied from /loadfetcher-alternative/ 2026-10-10 for /swiftrelay-alternative/; research/google-ads/RESTRUCTURE-2026-10-05.md). The Web Store hop loses the
+       ad click, so the gclid (or gbraid/wbraid on iOS/app traffic) is kept in localStorage on nudoiq.com, and /welcome/
+       (same origin, opened by the extension after install) sends it with the welcome_opened funnel row. That row is what
+       the "Trial started" / "Paid subscriber" offline conversions are matched back to. Kept 90 days (Google's upload
+       window); the newest click wins. Store links get utm_source/medium/campaign only: the Chrome Web Store dashboard
+       reports those three and passes nothing to the extension, so a per-click id in the store URL would carry nothing. -->
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search), keys = ["gclid", "gbraid", "wbraid"], i, v;
+        for (i = 0; i < keys.length; i++) {
+          v = q.get(keys[i]);
+          if (v && /^[\w.\-]{10,300}$/.test(v)) {
+            localStorage.setItem("nudoiq_gclid", JSON.stringify({ type: keys[i], id: v, ts: Date.now(), lp: location.pathname }));
+            break;
+          }
+        }
+        var s = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+        if (!s || !s.ts || Date.now() - s.ts > 90 * 864e5) return;
+        var camp = (q.get("utm_campaign") || "google_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "google_ads";
+        var tag = function () {
+          Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+            var u = new URL(a.href);
+            u.searchParams.set("utm_source", "google");
+            u.searchParams.set("utm_medium", "cpc");
+            u.searchParams.set("utm_campaign", camp);
+            a.href = u.toString();
+          });
+        };
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+      } catch (e) {}
+    })();
+  </script>
+  <title>SwiftRelay Alternative: NudoIQ vs Swift Relay Auto Booker</title>
+  <meta name="description" content="Swift Relay alternative for the Amazon Relay load board: NudoIQ auto books at your net profit floor. See the full comparison. Try it 7 days free.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/swiftrelay-alternative/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Swift Relay alternative: NudoIQ vs SwiftRelay (2026)">
+  <meta property="og:description" content="Swift Relay alternative for the Amazon Relay load board: NudoIQ auto books at your net profit floor. See the full comparison. Try it 7 days free.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/swiftrelay-alternative/">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="article:published_time" content="2026-10-10">
+  <meta property="article:modified_time" content="2026-10-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Swift Relay alternative: NudoIQ vs SwiftRelay (2026)">
+  <meta name="twitter:description" content="Swift Relay alternative for the Amazon Relay load board: NudoIQ auto books at your net profit floor. See the full comparison. Try it 7 days free.">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: "swiftrelay-alternative"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "swiftrelay-alternative"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <style>
+  /* Page-specific additions on top of doc.css + guide.css (hand-built page, data-layout="custom"). */
+  /* Contrast: the shared title-panel blues (#2551B8 on #B1CBFF = 4.36:1) and grey #888 (3.54:1) miss WCAG AA, so this page
+     uses navy in the panel and the scorecard page's darker grey. */
+  :root{--g3:#6F6F6F}
+  .lf .doc-hero .crumbs,.lf .doc-hero .crumbs a,.lf .page-subtitle,.lf .hero-cta .micro,.lf .byline,.cta p,.cta .micro{color:var(--navy)}
+  .lf .byline{opacity:1}
+  .lf caption a{color:var(--blue-deep)}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:999;border-radius:0 0 var(--ri) 0}
+  .skip:focus{left:0}
+  .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:0 8px}
+  .crumbs li+li::before{content:"\203A";margin-right:8px;color:var(--blue-deep)}
+  .lf .page-title{max-width:24ch;font-size:clamp(32px,4.4vw,52px)}
+  .lf .doc-hero .answer{background:#fff;border-color:rgba(22,22,22,.06);border-left-color:var(--blue);margin:22px 0 18px;max-width:var(--col)}
+  .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:22px}
+  .hero-cta .micro{color:var(--blue-deep);font-size:14px;font-weight:500}
+  .prose section{scroll-margin-top:88px}
+  .prose section > p{color:var(--ink-4);font-size:17px;line-height:1.68;margin:0 0 18px}
+  .prose section:first-child h2{margin-top:8px}
+  .lf .tbl{margin:10px 0 18px;background:#fff}
+  .lf .tbl:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+  .lf table{min-width:680px;font-size:14.5px}
+  .lf caption{caption-side:top;text-align:left;padding:14px 16px;font-size:13.5px;line-height:1.55;color:var(--ink-4);
+    background:var(--paper-2);border-bottom:1px solid rgba(22,22,22,.08)}
+  .lf caption span{display:block;position:sticky;left:16px;max-width:calc(100vw - 66px)}
+  .lf thead th{white-space:nowrap}
+  .lf thead th:nth-child(2){color:var(--blue-deep)}
+  .lf tbody th[scope=row]{background:#fff;color:var(--ink);font-weight:600;width:24%;position:sticky;left:0;z-index:1;
+    box-shadow:1px 0 0 rgba(22,22,22,.08)}
+  .lf thead th:first-child{position:sticky;left:0;z-index:2}
+  .lf tbody tr:last-child th{border-bottom:0}
+  .fn{font-size:11px;line-height:0;margin-left:3px;white-space:nowrap}
+  .fn a{text-decoration:none;font-weight:600;padding:0 2px}
+  .prose h3#sources{font-size:15px;margin:18px 0 8px}
+  .sources{font-size:14px;color:var(--ink-4)}
+  .prose .sources li{font-size:14px;line-height:1.55;margin:0 0 6px}
+  .sources a{word-break:break-all}
+  .sources li{scroll-margin-top:88px} /* footnote jumps land below the sticky header */
+  .prose section > p.tmnote{font-size:13px;color:var(--g3);line-height:1.55;margin:4px 0 0}
+  .pick{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 20px}
+  .pick-col{background:var(--paper-2);border:1px solid rgba(22,22,22,.07);border-radius:var(--ri);padding:20px 22px 6px}
+  .pick-nq{border-color:var(--peri-2);background:#F3F7FF}
+  .prose .pick h3{margin:0 0 10px;font-size:17px}
+  .prose .pick li{font-size:15.5px;line-height:1.55}
+  .midlink a{font-weight:600}
+  .prose .faq{margin:48px 0 0;max-width:none}
+  .prose .faq h2{margin:0 0 14px}
+  .faq .a p{font-size:16px;line-height:1.62}
+  .cta .micro{color:var(--navy);font-size:13.5px;margin-top:8px;text-align:center}
+  /* Freshness pill above the table: same component as /loadfetcher-alternative/ and /get/loadfetcher/ .checked. */
+  .prose section > p.upd{margin:0 0 2px}
+  .upd .checked{display:inline-flex;align-items:center;gap:6px;background:var(--paper-2);border:1px solid #E1E7F5;border-radius:var(--rp);padding:5px 14px;font-size:12.5px;font-weight:500;color:var(--ink-4)}
+  @media (max-width:660px){
+    .pick{grid-template-columns:1fr}
+    .prose section > p{font-size:16px}
+    .lf .doc-hero .answer{padding:16px 18px}
+    .hero-cta .btn{width:100%}
+    .hero-cta .micro{width:100%;text-align:center}
+    .cta-act{width:100%}
+  }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://nudoiq.com/swiftrelay-alternative/#article",
+      "headline": "Swift Relay alternative: NudoIQ vs SwiftRelay for the Amazon Relay load board",
+      "description": "Swift Relay alternative for the Amazon Relay load board: NudoIQ auto books at your net profit floor. See the full comparison. Try it 7 days free.",
+      "abstract": "If you want loads auto booked by net profit, after your own costs, NudoIQ is a good SwiftRelay alternative. NudoIQ's AutoBook comes in one $49.99 plan and takes a load only if it clears your minimum net profit. SwiftRelay lists auto-book on its Pro plan, $74.95 a month, and on Enterprise. Both offer a 7-day trial.",
+      "url": "https://nudoiq.com/swiftrelay-alternative/",
+      "mainEntityOfPage": "https://nudoiq.com/swiftrelay-alternative/",
+      "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+      "datePublished": "2026-10-10",
+      "dateModified": "2026-10-10",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://nudoiq.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://nudoiq.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://nudoiq.com/#software"
+      },
+      "about": [
+        {
+          "@id": "https://nudoiq.com/#software"
+        },
+        {
+          "@type": "Thing",
+          "name": "SwiftRelay",
+          "url": "https://swiftrelay.io/",
+          "sameAs": [
+            "https://chromewebstore.google.com/detail/oognmcankfkicedjeafnkffonabmbaaj"
+          ]
+        }
+      ],
+      "keywords": [
+        "SwiftRelay alternative",
+        "Swift Relay auto booker",
+        "Amazon Relay auto booker",
+        "Amazon Relay load board"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nudoiq.com/swiftrelay-alternative/#faq",
+      "url": "https://nudoiq.com/swiftrelay-alternative/",
+      "name": "Swift Relay alternative FAQ",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://nudoiq.com/#website"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is SwiftRelay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SwiftRelay is a Chrome extension for the Amazon Relay load board, published by Premier IT Solutions. Its site says it automates refresh, search and booking on the board. It says it is for carriers and dispatch teams, and its listing says it was designed for dispatchers (checked October 9, 2026). NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Swift Relay a Chrome extension?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, SwiftRelay is a Chrome extension for the Amazon Relay load board. You add it from the Chrome Web Store. Its listing shows version 4.4.12, updated June 15, 2025 (checked October 9, 2026). NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so the two don't conflict."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Swift Relay free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, SwiftRelay lists only paid plans for your board (checked October 9, 2026). Lite is $49.95 a month, Pro $74.95 and Enterprise $349. Its 7-day trial starts on first use. NudoIQ has a free preview with refresh and alerts, then a 7-day free trial with no card needed. After that it's $49.99 a month."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does SwiftRelay have a free trial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, SwiftRelay has a 7-day trial that starts the first time you use it, with no checkout. Its site says it's one trial per carrier (checked October 9, 2026). NudoIQ's 7-day free trial needs only an email and no card, and AutoBook comes with it. It's also one free week per Relay account and per install."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Swift Relay cost compared to NudoIQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SwiftRelay costs you $49.95 a month for Lite, $74.95 for Pro and $349 for Enterprise (checked October 9, 2026). Auto-book starts on Pro. NudoIQ is one $49.99 plan with AutoBook included. It's the same price for one truck or a whole fleet, with a 7-day free trial and cancel anytime."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Swift Relay auto book loads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, SwiftRelay auto books loads on its Pro and Enterprise plans. Its FAQ says the Lite plan does not auto-book. Lite refreshes, searches and highlights loads (checked October 9, 2026). NudoIQ's AutoBook comes in one $49.99 plan. It books only loads that clear your own minimum net profit, after the costs you enter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it SwiftRelay or Swift Relay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It's SwiftRelay, one word, a Chrome extension for the Amazon Relay load board. People also search for it as Swift Relay. Its Chrome Web Store listing is published by Premier IT Solutions (checked October 9, 2026). This page compares it with NudoIQ, a separate extension for the same board."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a free Swift Relay alternative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan. SwiftRelay lists no free plan either. Rocket Relay lists a free plan with auto-refresh. EasyRelay lists a $0 one, with its refresher on paid plans (checked October 9, 2026)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I switch from Swift Relay to NudoIQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can switch in a few minutes. Turn off or remove SwiftRelay on Chrome's extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don't conflict."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is NudoIQ or SwiftRelay made by Amazon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, neither is made by Amazon, and both run inside the Relay load board in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. SwiftRelay is published by Premier IT Solutions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does NudoIQ work in Spanish?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. SwiftRelay's store listing shows English as its language, and Spanish isn't listed on the pages we checked (checked October 9, 2026)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does NudoIQ decide which loads to book?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can't fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because cancelling a booked load counts against you."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nudoiq.com/swiftrelay-alternative/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nudoiq.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://nudoiq.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Swift Relay alternative",
+          "item": "https://nudoiq.com/swiftrelay-alternative/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body data-layout="custom" data-clarity-unmask="true">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="promo">7 days free, no card needed &middot; Runs in your own Chrome &middot; English and Spanish</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Main navigation">
+      <a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a><a href="/#faq">FAQ</a>
+    </nav>
+    <div class="navright">
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+    </div>
+  </div></header>
+
+  <main id="main">
+  <article class="lf">
+    <header class="doc-hero"><div class="doc-hero-in">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li><span aria-current="page">Swift Relay alternative</span></li></ol></nav>
+      <h1 class="page-title">Swift Relay alternative: NudoIQ vs SwiftRelay for the Amazon Relay load board</h1>
+      <div class="answer" id="short-answer"><p class="lbl">Short answer</p><p>If you want loads auto booked by net profit, after your own costs, NudoIQ is a good SwiftRelay alternative. NudoIQ&#x27;s AutoBook comes in one $49.99 plan and takes a load only if it clears your minimum net profit. SwiftRelay lists auto-book on its Pro plan, $74.95 a month, and on Enterprise. Both offer a 7-day trial.</p></div>
+      <p class="page-subtitle">Both refresh and auto book Relay loads. Here&#x27;s how they differ, from SwiftRelay&#x27;s pages on October 9, 2026.</p>
+      <div class="hero-cta"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Try it 7 days free</a><span class="micro">No card needed to start.</span></div>
+      <p class="byline">NudoIQ &middot; Published <time datetime="2026-10-10">October 10, 2026</time></p>
+    </div></header>
+
+    <div class="container">
+      <div class="prose">
+<section id="what-is-a-good-swift-relay-alternative" aria-labelledby="what-is-a-good-swift-relay-alternative-h">
+<h2 id="what-is-a-good-swift-relay-alternative-h">What is a good Swift Relay alternative?</h2>
+<!-- SwiftRelay source: https://swiftrelay.io/ (FAQ, How do Lite, Pro, and Enterprise differ?); https://swiftrelay.io/amazon-relay-auto-booker (FAQ, Does Lite auto-book loads? No); https://swiftrelay.io/ (Compare plans table), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 -->
+<p>NudoIQ, if you want loads booked by net profit, after your own costs. SwiftRelay&#x27;s site lists refresh and highlights on every plan, and auto-book from its Pro plan up. NudoIQ <a href="/amazon-relay-auto-refresh/">refreshes the board and books the loads that clear your number</a>.</p>
+</section>
+<section id="how-does-nudoiq-compare-to-swift-relay" aria-labelledby="how-does-nudoiq-compare-to-swift-relay-h">
+<h2 id="how-does-nudoiq-compare-to-swift-relay-h">How does NudoIQ compare to Swift Relay?</h2>
+<p>Here&#x27;s how they line up on the Relay load board, with where every SwiftRelay fact came from.</p>
+<!-- Freshness line reused from /loadfetcher-alternative/ (Martha 2026-10-09, research/copy/LOADFETCHER-ALT-SEO-2026-10-09.json A2). -->
+<p class="upd"><span class="checked"><time datetime="2026-10-10">Updated October 2026</time></span></p>
+<div class="tbl" role="region" aria-labelledby="cmp-cap" tabindex="0">
+<table id="comparison">
+<caption id="cmp-cap"><span>NudoIQ vs SwiftRelay for the Amazon Relay load board, from each product&#x27;s store listing and website, checked October 9, 2026. &quot;Not listed&quot; means that item wasn&#x27;t on SwiftRelay&#x27;s store listing or the site pages in Sources that day. We did not test their product. Spot an error? Tell us on the <a href="/support/">contact page</a> and we&#x27;ll fix it.</span></caption>
+<thead><tr><th scope="col">Item</th><th scope="col">NudoIQ</th><th scope="col">SwiftRelay</th></tr></thead>
+<tbody>
+<tr><th scope="row">What it is</th><td>Chrome extension for Amazon Relay carriers and dispatchers<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, overview: designed specifically for dispatchers); https://swiftrelay.io/ (FAQ, What is SwiftRelay?), accessed 2026-10-09 -->Chrome extension for Amazon Relay carriers and dispatch teams, per its site. Its listing says dispatchers<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Auto-refresh the load board</th><td>Yes<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://swiftrelay.io/ (FAQ, How do Lite, Pro, and Enterprise differ?); https://swiftrelay.io/amazon-relay-auto-booker (FAQ, Does Lite auto-book loads? No); https://swiftrelay.io/ (Compare plans table), accessed 2026-10-09 -->Yes, on every plan<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Automatic booking</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 -->Yes. AutoBook books loads that clear your minimum net profit, and your minimum $/mile if you set one<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://swiftrelay.io/swiftrelay-vs-alternatives (Lite ($49.95), Pro ($74.95), and Enterprise ($349)); https://swiftrelay.io/ (prices in USD, billed monthly through PayPal after your trial); https://swiftrelay.io/ (FAQ, How do Lite, Pro, and Enterprise differ?); https://swiftrelay.io/amazon-relay-auto-booker (FAQ, Does Lite auto-book loads? No), accessed 2026-10-09 -->Yes, on Pro ($74.95) and Enterprise ($349). Not on Lite<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Booking filters</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js showFiltersPopup: min net profit, min $/mile, off/fade/hide, checked 2026-10-09 -->Minimum net profit and minimum $/mile. Loads that miss them can be faded or hidden<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://swiftrelay.io/ (Compare plans table); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, Customizable Filters); https://swiftrelay.io/amazon-relay-auto-booker (filters for minimum payout, rate per mile, stops, stem time, and exclusions), accessed 2026-10-09 -->Min payout and rate, mileage per its listing, plus max stops, excluded states and stem time on Pro and up<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Net profit on each load</th><td>Yes. Net dollars and $/mile next to the price, after the costs you enter<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, Customizable Filters); https://swiftrelay.io/amazon-relay-auto-booker (filters for minimum payout, rate per mile, stops, stem time, and exclusions); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12: none listed); https://swiftrelay.io/ (home page and FAQ: none listed); https://swiftrelay.io/swiftrelay-vs-alternatives (comparison page: none listed); https://swiftrelay.io/amazon-relay-auto-booker (auto booker page: none listed), accessed 2026-10-09 -->Not listed. Filters cover payout and rate per mile, with no fuel or driver pay inputs listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">One-tap booking</th><td>Instant Book on new and price-up loads (one tap, no confirm screen)<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, One-Click Load Booking); https://swiftrelay.io/amazon-relay-auto-booker (Fast-book highlights on Lite), accessed 2026-10-09 -->One-click load booking. Fast-book highlights on Lite<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Loads booked by competitors</th><td>No<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, Competitor Insights), accessed 2026-10-09 -->Yes. Competitor Insights shows loads booked by competitors on the board<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">Lane price history</th><td>Lane Intelligence: 90-day price range for the lane, from the first button under each load<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, Real-Time Load Stats); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12: none listed); https://swiftrelay.io/ (home page and FAQ: none listed); https://swiftrelay.io/swiftrelay-vs-alternatives (comparison page: none listed); https://swiftrelay.io/amazon-relay-auto-booker (auto booker page: none listed), accessed 2026-10-09 -->Not listed. Its listing names live stats on rates, trends and new loads<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Backhaul search</th><td>Yes, Find backhaul button under each load<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12: none listed); https://swiftrelay.io/ (home page and FAQ: none listed); https://swiftrelay.io/swiftrelay-vs-alternatives (comparison page: none listed); https://swiftrelay.io/amazon-relay-auto-booker (auto booker page: none listed), accessed 2026-10-09 -->Not listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Post a Truck</th><td>One-Click Post A Truck with a recommended bid. The bid needs time to learn your area and improves with use<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12: none listed); https://swiftrelay.io/ (home page and FAQ: none listed); https://swiftrelay.io/swiftrelay-vs-alternatives (comparison page: none listed); https://swiftrelay.io/amazon-relay-auto-booker (auto booker page: none listed), accessed 2026-10-09 -->Not listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Scorecard dispute letters</th><td>Drafts the letter from the violation. You review and submit it. Amazon decides<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12: none listed); https://swiftrelay.io/ (home page and FAQ: none listed); https://swiftrelay.io/swiftrelay-vs-alternatives (comparison page: none listed); https://swiftrelay.io/amazon-relay-auto-booker (auto booker page: none listed), accessed 2026-10-09 -->Not listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Telegram alerts</th><td>Yes, to your phone: new matching loads, price rises and AutoBook bookings, with quiet hours<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12: none listed); https://swiftrelay.io/ (home page and FAQ: none listed); https://swiftrelay.io/swiftrelay-vs-alternatives (comparison page: none listed); https://swiftrelay.io/amazon-relay-auto-booker (auto booker page: none listed), accessed 2026-10-09 -->Not listed. Telegram is listed as a support contact<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Contracts</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js createContractsUI + instantBookContract: ALERT / AUTOBOOK on short-term contract offers, min per block, min total, max books 1 to 10, checked 2026-10-09 -->Yes. Refreshes short-term contract offers and can alert you or AutoBook the ones that meet your minimums<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12: none listed); https://swiftrelay.io/ (home page and FAQ: none listed); https://swiftrelay.io/swiftrelay-vs-alternatives (comparison page: none listed); https://swiftrelay.io/amazon-relay-auto-booker (auto booker page: none listed), accessed 2026-10-09 -->Not listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Enterprise plan extras</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->No. One plan for every truck<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://swiftrelay.io/swiftrelay-vs-alternatives (Lite ($49.95), Pro ($74.95), and Enterprise ($349)); https://swiftrelay.io/ (prices in USD, billed monthly through PayPal after your trial); https://swiftrelay.io/ (FAQ, How do Lite, Pro, and Enterprise differ?); https://swiftrelay.io/amazon-relay-auto-booker (FAQ, Does Lite auto-book loads? No); https://swiftrelay.io/ (Compare plans: Speed Optimizer, Enterprise only); https://swiftrelay.io/swiftrelay-vs-alternatives (Enterprise adds Speed Optimizer), accessed 2026-10-09 -->Speed Optimizer, one virtual machine and up to 10 devices, for $349 a month<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Free plan</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->No. Free preview (refresh, alerts) until you start the free trial<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://swiftrelay.io/swiftrelay-vs-alternatives (Lite ($49.95), Pro ($74.95), and Enterprise ($349)); https://swiftrelay.io/ (prices in USD, billed monthly through PayPal after your trial), accessed 2026-10-09 -->Not listed. Its plans are Lite, Pro and Enterprise<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Free trial</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->Yes. 7 days, no card needed to start<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://swiftrelay.io/ (FAQ, How do I start the free trial? 7-day trial starts on first use, no checkout, one trial per carrier), accessed 2026-10-09 -->Yes. 7 days, starts on first use with no checkout<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Paid price</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->$49.99 a month flat, every truck, cancel anytime<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://swiftrelay.io/swiftrelay-vs-alternatives (Lite ($49.95), Pro ($74.95), and Enterprise ($349)); https://swiftrelay.io/ (prices in USD, billed monthly through PayPal after your trial), accessed 2026-10-09 -->Lite $49.95, Pro $74.95, Enterprise $349, billed monthly through PayPal, cancel anytime<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Languages</th><td>English and Spanish<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing, Details: Languages English); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12: none listed); https://swiftrelay.io/ (home page and FAQ: none listed); https://swiftrelay.io/swiftrelay-vs-alternatives (comparison page: none listed); https://swiftrelay.io/amazon-relay-auto-booker (auto booker page: none listed), accessed 2026-10-09 -->Listing language: English. Spanish not listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Publisher</th><td>Sami Enterprises LLC<sup class="fn"><a href="#src-5" aria-label="Source 5">5</a></sup></td><td><!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing, Developer: Premier IT Solutions, Richmond, VA), accessed 2026-10-09 -->Premier IT Solutions<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="sources">Sources</h3>
+<ol class="sources">
+<li id="src-1">NudoIQ extension for Amazon Relay, and <a href="/get/">nudoiq.com/get/</a></li>
+<li id="src-2">SwiftRelay Chrome Web Store listing for Amazon Relay (<a href="https://chrome.google.com/webstore/detail/oognmcankfkicedjeafnkffonabmbaaj" target="_blank" rel="nofollow noopener">chromewebstore.google.com/detail/oognmcankfkicedjeafnkffonabmbaaj</a>), v4.4.12, updated June 15, 2025, checked October 9, 2026</li>
+<li id="src-3"><a href="https://swiftrelay.io/" target="_blank" rel="nofollow noopener">swiftrelay.io</a> home page (plans and FAQ) and Amazon Relay auto booker page, checked October 9, 2026</li>
+<li id="src-4"><a href="https://swiftrelay.io/swiftrelay-vs-alternatives" target="_blank" rel="nofollow noopener">swiftrelay.io</a>, SwiftRelay vs Other Amazon Relay Auto Bookers page, checked October 9, 2026</li>
+<li id="src-5"><a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Chrome Web Store</a> (NudoIQ listing for Amazon Relay), checked October 9, 2026</li>
+</ol>
+<p class="tmnote">SwiftRelay is a trademark of its owner, used here only to name and compare two Amazon Relay extensions. NudoIQ is not affiliated with SwiftRelay or with Amazon.</p>
+<p>To see how NudoIQ compares with SwiftRelay and five other Relay extensions on auto-booking, alerts and price, read <a href="/why-nudoiq/">the full comparison</a>.</p>
+</section>
+<section id="what-is-swiftrelay" aria-labelledby="what-is-swiftrelay-h">
+<h2 id="what-is-swiftrelay-h">What is SwiftRelay?</h2>
+<!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, overview: designed specifically for dispatchers); https://swiftrelay.io/ (FAQ, What is SwiftRelay?); https://swiftrelay.io/ (FAQ, How do Lite, Pro, and Enterprise differ?); https://swiftrelay.io/amazon-relay-auto-booker (FAQ, Does Lite auto-book loads? No); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, Customizable Filters); https://swiftrelay.io/amazon-relay-auto-booker (filters for minimum payout, rate per mile, stops, stem time, and exclusions); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, One-Click Load Booking); https://swiftrelay.io/amazon-relay-auto-booker (Fast-book highlights on Lite); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, Competitor Insights); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, Real-Time Load Stats); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, Google Maps Integration); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, Multi-Tab & Multi-Window Support); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing, Developer: Premier IT Solutions, Richmond, VA), accessed 2026-10-09 -->
+<p>SwiftRelay is a Chrome extension for the Amazon Relay load board, published by Premier IT Solutions. Its site names carriers and dispatch teams, and its listing names dispatchers. As of October 9, 2026, its site and listing name refresh, search, load highlights, one-click booking and filters. Pro and Enterprise add auto-book. The listing also names Competitor Insights, live load stats, Google Maps routes and multi-tab support.</p>
+</section>
+<section id="does-swift-relay-auto-book-loads" aria-labelledby="does-swift-relay-auto-book-loads-h">
+<h2 id="does-swift-relay-auto-book-loads-h">Does Swift Relay auto book loads?</h2>
+<!-- SwiftRelay source: https://swiftrelay.io/swiftrelay-vs-alternatives (Lite ($49.95), Pro ($74.95), and Enterprise ($349)); https://swiftrelay.io/ (prices in USD, billed monthly through PayPal after your trial); https://swiftrelay.io/ (FAQ, How do Lite, Pro, and Enterprise differ?); https://swiftrelay.io/amazon-relay-auto-booker (FAQ, Does Lite auto-book loads? No), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours; dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->
+<p>Yes, SwiftRelay auto books loads on its Pro and Enterprise plans. As of October 9, 2026, its FAQ says the Lite plan does not auto-book. Lite refreshes, searches and highlights loads. Pro is $74.95 a month and Enterprise is $349. <a href="/amazon-relay-auto-booker/">NudoIQ&#x27;s AutoBook books for you</a> in one $49.99 plan, and only loads that clear your minimum net profit, after the costs you enter.</p>
+</section>
+<section id="what-does-nudoiq-do-that-swift-relay-doesnt-list" aria-labelledby="what-does-nudoiq-do-that-swift-relay-doesnt-list-h">
+<h2 id="what-does-nudoiq-do-that-swift-relay-doesnt-list-h">What does NudoIQ do that Swift Relay doesn&#x27;t list?</h2>
+<!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12: none listed); https://swiftrelay.io/ (home page and FAQ: none listed); https://swiftrelay.io/swiftrelay-vs-alternatives (comparison page: none listed); https://swiftrelay.io/amazon-relay-auto-booker (auto booker page: none listed), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours; dist/nudoiq_v2.5.2.zip content.js createContractsUI + instantBookContract: ALERT / AUTOBOOK on short-term contract offers, min per block, min total, max books 1 to 10, checked 2026-10-09 -->
+<p>SwiftRelay&#x27;s listing and checked site pages didn&#x27;t name these three: an AutoBook net profit floor, net profit per load and scorecard dispute letters.</p>
+<ul><li><strong>Net profit floor for AutoBook:</strong> it books only loads that clear your minimum. It skips any load it can&#x27;t fully price and stops at your max-books cap.</li><li><strong>Net profit on every load:</strong> net dollars and $/mile next to the price. It uses the costs you enter, like fuel, MPG, driver pay and maintenance.</li><li><strong><a href="/amazon-relay-scorecard/">Scorecard dispute letters</a>:</strong> it drafts the letter from the violation. You read it, send it, and Amazon makes the call.</li><li><strong>Also:</strong> Spanish, Lane Intelligence (90-day lane price range), backhaul search and One-Click Post A Truck. Plus alerts or AutoBook on short-term contracts, and Telegram alerts to your phone.</li></ul>
+</section>
+<section id="what-does-swift-relay-do-that-nudoiq-doesnt" aria-labelledby="what-does-swift-relay-do-that-nudoiq-doesnt-h">
+<h2 id="what-does-swift-relay-do-that-nudoiq-doesnt-h">What does Swift Relay do that NudoIQ doesn&#x27;t?</h2>
+<!-- SwiftRelay source: https://swiftrelay.io/ (FAQ, How do Lite, Pro, and Enterprise differ?); https://swiftrelay.io/amazon-relay-auto-booker (FAQ, Does Lite auto-book loads? No); https://swiftrelay.io/ (Compare plans table); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, Competitor Insights); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, Multi-Tab & Multi-Window Support); https://swiftrelay.io/ (Compare plans: Speed Optimizer, Enterprise only); https://swiftrelay.io/swiftrelay-vs-alternatives (Enterprise adds Speed Optimizer), accessed 2026-10-09 -->
+<p>As of October 9, 2026, SwiftRelay lists Competitor Insights, which shows loads booked by competitors on the load board. Its Pro plan adds auto-book filters for max stops, excluded states and stem time. Its Enterprise plan adds Speed Optimizer and one virtual machine. NudoIQ has none of those. SwiftRelay also sells plans by device count, from 2 to 10 at once, and lists multi-tab and multi-window support.</p>
+
+</section>
+<section id="how-much-does-swift-relay-cost-vs-nudoiq" aria-labelledby="how-much-does-swift-relay-cost-vs-nudoiq-h">
+<h2 id="how-much-does-swift-relay-cost-vs-nudoiq-h">How much does Swift Relay cost vs NudoIQ?</h2>
+<!-- SwiftRelay source: https://swiftrelay.io/swiftrelay-vs-alternatives (Lite ($49.95), Pro ($74.95), and Enterprise ($349)); https://swiftrelay.io/ (prices in USD, billed monthly through PayPal after your trial); https://swiftrelay.io/ (FAQ, How do Lite, Pro, and Enterprise differ?); https://swiftrelay.io/amazon-relay-auto-booker (FAQ, Does Lite auto-book loads? No), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->
+<p>On SwiftRelay, your choice is Lite at $49.95 a month, Pro at $74.95 or Enterprise at $349. Auto-book starts on Pro (checked October 9, 2026). NudoIQ starts with a free preview on install, then a 7-day free trial with no card needed. After that it&#x27;s $49.99 a month flat for every truck. Cancel anytime.</p>
+</section>
+<section id="should-you-pick-swift-relay-or-nudoiq" aria-labelledby="should-you-pick-swift-relay-or-nudoiq-h">
+<h2 id="should-you-pick-swift-relay-or-nudoiq-h">Should you pick Swift Relay or NudoIQ?</h2>
+<div class="pick">
+<div class="pick-col"><h3>Pick SwiftRelay if</h3><!-- SwiftRelay source: https://swiftrelay.io/ (FAQ, How do Lite, Pro, and Enterprise differ?); https://swiftrelay.io/amazon-relay-auto-booker (FAQ, Does Lite auto-book loads? No); https://swiftrelay.io/ (Compare plans table); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, Competitor Insights); https://swiftrelay.io/ (Compare plans: Speed Optimizer, Enterprise only); https://swiftrelay.io/swiftrelay-vs-alternatives (Enterprise adds Speed Optimizer), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours; dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><ul><li>You want to see loads booked by competitors on your load board.</li><li>You want auto-book filters for max stops, excluded states and stem time.</li><li>You run a dispatch team and want plans sized by device count, up to 10 devices.</li><li>You want the Enterprise plan, which adds one virtual machine.</li></ul></div>
+<div class="pick-col pick-nq"><h3>Pick NudoIQ if</h3><ul><li>You want loads booked only when they clear your minimum net profit, after your own costs.</li><li>You want auto booking in one $49.99 plan for every truck.</li><li>You want lane prices, backhaul search and scorecard dispute letters in one extension.</li><li>You work in Spanish, or want Telegram load alerts on your phone.</li></ul></div>
+</div>
+<p>Not sure which is right for your board? Try NudoIQ 7 days free. If it doesn&#x27;t fit how you book, switch back. It costs you a week, not a dime.</p>
+<p class="midlink"><a href="/get/">Try NudoIQ 7 days free</a></p>
+</section>
+<section id="how-do-you-switch-from-swift-relay-to-nudoiq" aria-labelledby="how-do-you-switch-from-swift-relay-to-nudoiq-h">
+<h2 id="how-do-you-switch-from-swift-relay-to-nudoiq-h">How do you switch from Swift Relay to NudoIQ?</h2>
+<p>Turn off or remove SwiftRelay in your Chrome extensions. Add NudoIQ from the Chrome Web Store, <a href="/amazon-relay-load-board/">open the Relay load board</a> and press START. Your Relay login doesn&#x27;t change. Run one load board extension at a time.</p>
+</section>
+<section id="faq" class="faq" aria-labelledby="faq-h">
+<h2 id="faq-h">Swift Relay alternative FAQ</h2>
+<!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, overview: designed specifically for dispatchers); https://swiftrelay.io/ (FAQ, What is SwiftRelay?); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing, Developer: Premier IT Solutions, Richmond, VA), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 --><details><summary>What is SwiftRelay?</summary><div class="a"><p>SwiftRelay is a Chrome extension for the Amazon Relay load board, published by Premier IT Solutions. Its site says it automates refresh, search and booking on the board. It says it is for carriers and dispatch teams, and its listing says it was designed for dispatchers (checked October 9, 2026). NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit.</p></div></details>
+<!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, overview: designed specifically for dispatchers); https://swiftrelay.io/ (FAQ, What is SwiftRelay?); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing, Details: version 4.4.12, updated June 15, 2025), accessed 2026-10-09 --><details><summary>Is Swift Relay a Chrome extension?</summary><div class="a"><p>Yes, SwiftRelay is a Chrome extension for the Amazon Relay load board. You add it from the Chrome Web Store. Its listing shows version 4.4.12, updated June 15, 2025 (checked October 9, 2026). NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so the two don&#x27;t conflict.</p></div></details>
+<!-- SwiftRelay source: https://swiftrelay.io/swiftrelay-vs-alternatives (Lite ($49.95), Pro ($74.95), and Enterprise ($349)); https://swiftrelay.io/ (prices in USD, billed monthly through PayPal after your trial); https://swiftrelay.io/ (FAQ, How do I start the free trial? 7-day trial starts on first use, no checkout, one trial per carrier), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>Is Swift Relay free?</summary><div class="a"><p>No, SwiftRelay lists only paid plans for your board (checked October 9, 2026). Lite is $49.95 a month, Pro $74.95 and Enterprise $349. Its 7-day trial starts on first use. NudoIQ has a free preview with refresh and alerts, then a 7-day free trial with no card needed. After that it&#x27;s $49.99 a month.</p></div></details>
+<!-- SwiftRelay source: https://swiftrelay.io/ (FAQ, How do I start the free trial? 7-day trial starts on first use, no checkout, one trial per carrier), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51; D50 one free trial per Relay account and per install (DECISIONS-CURRENT); content.js nqAccessMode / trial claims, checked 2026-10-09 --><details><summary>Does SwiftRelay have a free trial?</summary><div class="a"><p>Yes, SwiftRelay has a 7-day trial that starts the first time you use it, with no checkout. Its site says it&#x27;s one trial per carrier (checked October 9, 2026). NudoIQ&#x27;s 7-day free trial needs only an email and no card, and AutoBook comes with it. It&#x27;s also one free week per Relay account and per install.</p></div></details>
+<!-- SwiftRelay source: https://swiftrelay.io/swiftrelay-vs-alternatives (Lite ($49.95), Pro ($74.95), and Enterprise ($349)); https://swiftrelay.io/ (prices in USD, billed monthly through PayPal after your trial); https://swiftrelay.io/ (FAQ, How do Lite, Pro, and Enterprise differ?); https://swiftrelay.io/amazon-relay-auto-booker (FAQ, Does Lite auto-book loads? No), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours; dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>How much does Swift Relay cost compared to NudoIQ?</summary><div class="a"><p>SwiftRelay costs you $49.95 a month for Lite, $74.95 for Pro and $349 for Enterprise (checked October 9, 2026). Auto-book starts on Pro. NudoIQ is one $49.99 plan with AutoBook included. It&#x27;s the same price for one truck or a whole fleet, with a 7-day free trial and cancel anytime.</p></div></details>
+<!-- SwiftRelay source: https://swiftrelay.io/ (FAQ, How do Lite, Pro, and Enterprise differ?); https://swiftrelay.io/amazon-relay-auto-booker (FAQ, Does Lite auto-book loads? No), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours; dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>Does Swift Relay auto book loads?</summary><div class="a"><p>Yes, SwiftRelay auto books loads on its Pro and Enterprise plans. Its FAQ says the Lite plan does not auto-book. Lite refreshes, searches and highlights loads (checked October 9, 2026). NudoIQ&#x27;s AutoBook comes in one $49.99 plan. It books only loads that clear your own minimum net profit, after the costs you enter.</p></div></details>
+<!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, overview: designed specifically for dispatchers); https://swiftrelay.io/ (FAQ, What is SwiftRelay?); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing, Developer: Premier IT Solutions, Richmond, VA), accessed 2026-10-09 --><details><summary>Is it SwiftRelay or Swift Relay?</summary><div class="a"><p>It&#x27;s SwiftRelay, one word, a Chrome extension for the Amazon Relay load board. People also search for it as Swift Relay. Its Chrome Web Store listing is published by Premier IT Solutions (checked October 9, 2026). This page compares it with NudoIQ, a separate extension for the same board.</p></div></details>
+<!-- SwiftRelay source: https://swiftrelay.io/swiftrelay-vs-alternatives (Lite ($49.95), Pro ($74.95), and Enterprise ($349)); https://swiftrelay.io/ (prices in USD, billed monthly through PayPal after your trial), accessed 2026-10-09 --><!-- EasyRelay source: https://www.easyrelay.us/en (pricing: Free $0, Pro Solo $14.99/mo, Pro Team $44.99/mo, Monthly or 6 Months (save up to 42%)); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, summary: Auto-refresh the load board); https://www.easyrelay.us/en (plans: Human-like Refresh in Pro Solo and Pro Team, not in Free), accessed 2026-10-09 --><!-- Rocket Relay source: https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>Is there a free Swift Relay alternative?</summary><div class="a"><p>NudoIQ&#x27;s free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it&#x27;s $49.99 a month to keep using it, so it isn&#x27;t a free plan. SwiftRelay lists no free plan either. <a href="/rocket-relay-alternative/">Rocket Relay</a> lists a free plan with auto-refresh. <a href="/easyrelay-alternative/">EasyRelay</a> lists a $0 one, with its refresher on paid plans (checked October 9, 2026).</p></div></details>
+<!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>Can I switch from Swift Relay to NudoIQ?</summary><div class="a"><p>Yes, you can switch in a few minutes. Turn off or remove SwiftRelay on Chrome&#x27;s extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don&#x27;t conflict.</p></div></details>
+<!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12, overview: designed specifically for dispatchers); https://swiftrelay.io/ (FAQ, What is SwiftRelay?); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing, Developer: Premier IT Solutions, Richmond, VA), accessed 2026-10-09 --><details><summary>Is NudoIQ or SwiftRelay made by Amazon?</summary><div class="a"><p>No, neither is made by Amazon, and both run inside the Relay load board in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. SwiftRelay is published by Premier IT Solutions.</p></div></details>
+<!-- SwiftRelay source: https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing, Details: Languages English); https://chromewebstore.google.com/detail/swiftrelay-auto-refresher/oognmcankfkicedjeafnkffonabmbaaj (store listing v4.4.12: none listed); https://swiftrelay.io/ (home page and FAQ: none listed); https://swiftrelay.io/swiftrelay-vs-alternatives (comparison page: none listed); https://swiftrelay.io/amazon-relay-auto-booker (auto booker page: none listed), accessed 2026-10-09 --><!-- NudoIQ source: NudoIQ Chrome Web Store listing v2.5.2 (Works on Amazon Relay sites for the US, Canada, UK, Germany, Spain, France, Italy, Poland, Czech Republic, and India), checked 2026-10-09 --><details><summary>Does NudoIQ work in Spanish?</summary><div class="a"><p>Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. SwiftRelay&#x27;s store listing shows English as its language, and Spanish isn&#x27;t listed on the pages we checked (checked October 9, 2026).</p></div></details>
+<!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 --><details><summary>How does NudoIQ decide which loads to book?</summary><div class="a"><p>In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can&#x27;t fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because <a href="/amazon-relay-cancel-load/">cancelling a booked load counts against you</a>.</p></div></details>
+</section>
+      </div>
+
+      <aside class="cta" aria-labelledby="cta-h">
+        <div><h2 id="cta-h">Let the board book itself, at your number.</h2><p>7 days free, then $49.99 a month for every truck. Cancel anytime.</p></div>
+        <div class="cta-act"><a class="btn btn-go" style="width:100%" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Try it 7 days free</a><p class="micro">No card needed to start.</p></div>
+      </aside>
+    </div>
+  </article>
+
+  <div class="container" style="padding-top:0">
+    <nav class="related" aria-label="More Amazon Relay guides">
+      <h2>More Amazon Relay guides</h2>
+      <div class="cards">
+        <a href="/amazon-relay-auto-booker/">Amazon Relay Auto Booker: How Automatic Booking Works</a>
+        <a href="/amazon-relay-auto-refresh/">Amazon Relay Auto Refresh: Why It Matters and How It Works</a>
+        <a href="/best-amazon-relay-extensions/">Best Amazon Relay Extensions: Refresher and Auto-Booker Tools</a>
+        <a href="/amazon-relay-scorecard/">Amazon Relay scorecard: how the performance score works and how to dispute it</a>
+        <a href="/amazon-relay-load-board/">How the Amazon Relay Load Board Works</a>
+      </div>
+    </nav>
+  </div>
+  </main>
+
+  <footer class="container" style="padding-top:0">
+    <div class="footer" style="margin-top:0">
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/">Amazon Relay guides</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="/partners/">Partners</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contact</a>
+    </div>
+    <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. Amazon Relay requirements change; confirm current rules at relay.amazon.com.</p>
+  </footer>
+</body>
+</html>

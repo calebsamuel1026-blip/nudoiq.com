@@ -3729,3 +3729,144 @@ Yes, NudoIQ works in English and Spanish, including the load board buttons and a
 
 ### How does NudoIQ decide which loads to book?
 In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can't fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because [cancelling a booked load counts against you](https://nudoiq.com/amazon-relay-cancel-load/).
+
+---
+
+# Swift Relay alternative: NudoIQ vs SwiftRelay for the Amazon Relay load board
+
+URL: https://nudoiq.com/swiftrelay-alternative/
+Published: 2026-10-10. Last updated: 2026-10-10.
+
+Short answer: If you want loads auto booked by net profit, after your own costs, NudoIQ is a good SwiftRelay alternative. NudoIQ's AutoBook comes in one $49.99 plan and takes a load only if it clears your minimum net profit. SwiftRelay lists auto-book on its Pro plan, $74.95 a month, and on Enterprise. Both offer a 7-day trial.
+
+## What is a good Swift Relay alternative?
+
+NudoIQ, if you want loads booked by net profit, after your own costs. SwiftRelay's site lists refresh and highlights on every plan, and auto-book from its Pro plan up. NudoIQ [refreshes the board and books the loads that clear your number](https://nudoiq.com/amazon-relay-auto-refresh/).
+
+## How does NudoIQ compare to Swift Relay?
+
+Here's how they line up on the Relay load board, with where every SwiftRelay fact came from.
+
+NudoIQ vs SwiftRelay for the Amazon Relay load board, from each product's store listing and website, checked October 9, 2026. "Not listed" means that item wasn't on SwiftRelay's store listing or the site pages in Sources that day. We did not test their product. Spot an error? Tell us on the [contact page](https://nudoiq.com/support/) and we'll fix it.
+
+| Item | NudoIQ | SwiftRelay |
+|---|---|---|
+| What it is | Chrome extension for Amazon Relay carriers and dispatchers | Chrome extension for Amazon Relay carriers and dispatch teams, per its site. Its listing says dispatchers |
+| Auto-refresh the load board | Yes | Yes, on every plan |
+| Automatic booking | Yes. AutoBook books loads that clear your minimum net profit, and your minimum $/mile if you set one | Yes, on Pro ($74.95) and Enterprise ($349). Not on Lite |
+| Booking filters | Minimum net profit and minimum $/mile. Loads that miss them can be faded or hidden | Min payout and rate, mileage per its listing, plus max stops, excluded states and stem time on Pro and up |
+| Net profit on each load | Yes. Net dollars and $/mile next to the price, after the costs you enter | Not listed. Filters cover payout and rate per mile, with no fuel or driver pay inputs listed |
+| One-tap booking | Instant Book on new and price-up loads (one tap, no confirm screen) | One-click load booking. Fast-book highlights on Lite |
+| Loads booked by competitors | No | Yes. Competitor Insights shows loads booked by competitors on the board |
+| Lane price history | Lane Intelligence: 90-day price range for the lane, from the first button under each load | Not listed. Its listing names live stats on rates, trends and new loads |
+| Backhaul search | Yes, Find backhaul button under each load | Not listed |
+| Post a Truck | One-Click Post A Truck with a recommended bid. The bid needs time to learn your area and improves with use | Not listed |
+| Scorecard dispute letters | Drafts the letter from the violation. You review and submit it. Amazon decides | Not listed |
+| Telegram alerts | Yes, to your phone: new matching loads, price rises and AutoBook bookings, with quiet hours | Not listed. Telegram is listed as a support contact |
+| Contracts | Yes. Refreshes short-term contract offers and can alert you or AutoBook the ones that meet your minimums | Not listed |
+| Enterprise plan extras | No. One plan for every truck | Speed Optimizer, one virtual machine and up to 10 devices, for $349 a month |
+| Free plan | No. Free preview (refresh, alerts) until you start the free trial | Not listed. Its plans are Lite, Pro and Enterprise |
+| Free trial | Yes. 7 days, no card needed to start | Yes. 7 days, starts on first use with no checkout |
+| Paid price | $49.99 a month flat, every truck, cancel anytime | Lite $49.95, Pro $74.95, Enterprise $349, billed monthly through PayPal, cancel anytime |
+| Languages | English and Spanish | Listing language: English. Spanish not listed |
+| Publisher | Sami Enterprises LLC | Premier IT Solutions |
+
+Sources:
+
+1. NudoIQ extension for Amazon Relay, and nudoiq.com/get/
+2. SwiftRelay Chrome Web Store listing for Amazon Relay (chromewebstore.google.com/detail/oognmcankfkicedjeafnkffonabmbaaj), v4.4.12, updated June 15, 2025, checked October 9, 2026
+3. swiftrelay.io home page (plans and FAQ) and Amazon Relay auto booker page, checked October 9, 2026
+4. swiftrelay.io, SwiftRelay vs Other Amazon Relay Auto Bookers page, checked October 9, 2026
+5. Chrome Web Store (NudoIQ listing for Amazon Relay), checked October 9, 2026
+
+SwiftRelay is a trademark of its owner, used here only to name and compare two Amazon Relay extensions. NudoIQ is not affiliated with SwiftRelay or with Amazon.
+
+To see how NudoIQ compares with SwiftRelay and five other Relay extensions on auto-booking, alerts and price, read [the full comparison](https://nudoiq.com/why-nudoiq/).
+
+## What is SwiftRelay?
+
+SwiftRelay is a Chrome extension for the Amazon Relay load board, published by Premier IT Solutions. Its site names carriers and dispatch teams, and its listing names dispatchers. As of October 9, 2026, its site and listing name refresh, search, load highlights, one-click booking and filters. Pro and Enterprise add auto-book. The listing also names Competitor Insights, live load stats, Google Maps routes and multi-tab support.
+
+## Does Swift Relay auto book loads?
+
+Yes, SwiftRelay auto books loads on its Pro and Enterprise plans. As of October 9, 2026, its FAQ says the Lite plan does not auto-book. Lite refreshes, searches and highlights loads. Pro is $74.95 a month and Enterprise is $349. [NudoIQ's AutoBook books for you](https://nudoiq.com/amazon-relay-auto-booker/) in one $49.99 plan, and only loads that clear your minimum net profit, after the costs you enter.
+
+## What does NudoIQ do that Swift Relay doesn't list?
+
+SwiftRelay's listing and checked site pages didn't name these three: an AutoBook net profit floor, net profit per load and scorecard dispute letters.
+
+- Net profit floor for AutoBook: it books only loads that clear your minimum. It skips any load it can't fully price and stops at your max-books cap.
+- Net profit on every load: net dollars and $/mile next to the price. It uses the costs you enter, like fuel, MPG, driver pay and maintenance.
+- [Scorecard dispute letters](https://nudoiq.com/amazon-relay-scorecard/): it drafts the letter from the violation. You read it, send it, and Amazon makes the call.
+- Also: Spanish, Lane Intelligence (90-day lane price range), backhaul search and One-Click Post A Truck. Plus alerts or AutoBook on short-term contracts, and Telegram alerts to your phone.
+
+## What does Swift Relay do that NudoIQ doesn't?
+
+As of October 9, 2026, SwiftRelay lists Competitor Insights, which shows loads booked by competitors on the load board. Its Pro plan adds auto-book filters for max stops, excluded states and stem time. Its Enterprise plan adds Speed Optimizer and one virtual machine. NudoIQ has none of those. SwiftRelay also sells plans by device count, from 2 to 10 at once, and lists multi-tab and multi-window support.
+
+
+## How much does Swift Relay cost vs NudoIQ?
+
+On SwiftRelay, your choice is Lite at $49.95 a month, Pro at $74.95 or Enterprise at $349. Auto-book starts on Pro (checked October 9, 2026). NudoIQ starts with a free preview on install, then a 7-day free trial with no card needed. After that it's $49.99 a month flat for every truck. Cancel anytime.
+
+## Should you pick Swift Relay or NudoIQ?
+
+### Pick SwiftRelay if
+
+- You want to see loads booked by competitors on your load board.
+- You want auto-book filters for max stops, excluded states and stem time.
+- You run a dispatch team and want plans sized by device count, up to 10 devices.
+- You want the Enterprise plan, which adds one virtual machine.
+
+### Pick NudoIQ if
+
+- You want loads booked only when they clear your minimum net profit, after your own costs.
+- You want auto booking in one $49.99 plan for every truck.
+- You want lane prices, backhaul search and scorecard dispute letters in one extension.
+- You work in Spanish, or want Telegram load alerts on your phone.
+
+Not sure which is right for your board? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back. It costs you a week, not a dime.
+
+[Try NudoIQ 7 days free](https://nudoiq.com/get/)
+
+## How do you switch from Swift Relay to NudoIQ?
+
+Turn off or remove SwiftRelay in your Chrome extensions. Add NudoIQ from the Chrome Web Store, [open the Relay load board](https://nudoiq.com/amazon-relay-load-board/) and press START. Your Relay login doesn't change. Run one load board extension at a time.
+
+## Frequently asked questions
+
+### What is SwiftRelay?
+SwiftRelay is a Chrome extension for the Amazon Relay load board, published by Premier IT Solutions. Its site says it automates refresh, search and booking on the board. It says it is for carriers and dispatch teams, and its listing says it was designed for dispatchers (checked October 9, 2026). NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit.
+
+### Is Swift Relay a Chrome extension?
+Yes, SwiftRelay is a Chrome extension for the Amazon Relay load board. You add it from the Chrome Web Store. Its listing shows version 4.4.12, updated June 15, 2025 (checked October 9, 2026). NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so the two don't conflict.
+
+### Is Swift Relay free?
+No, SwiftRelay lists only paid plans for your board (checked October 9, 2026). Lite is $49.95 a month, Pro $74.95 and Enterprise $349. Its 7-day trial starts on first use. NudoIQ has a free preview with refresh and alerts, then a 7-day free trial with no card needed. After that it's $49.99 a month.
+
+### Does SwiftRelay have a free trial?
+Yes, SwiftRelay has a 7-day trial that starts the first time you use it, with no checkout. Its site says it's one trial per carrier (checked October 9, 2026). NudoIQ's 7-day free trial needs only an email and no card, and AutoBook comes with it. It's also one free week per Relay account and per install.
+
+### How much does Swift Relay cost compared to NudoIQ?
+SwiftRelay costs you $49.95 a month for Lite, $74.95 for Pro and $349 for Enterprise (checked October 9, 2026). Auto-book starts on Pro. NudoIQ is one $49.99 plan with AutoBook included. It's the same price for one truck or a whole fleet, with a 7-day free trial and cancel anytime.
+
+### Does Swift Relay auto book loads?
+Yes, SwiftRelay auto books loads on its Pro and Enterprise plans. Its FAQ says the Lite plan does not auto-book. Lite refreshes, searches and highlights loads (checked October 9, 2026). NudoIQ's AutoBook comes in one $49.99 plan. It books only loads that clear your own minimum net profit, after the costs you enter.
+
+### Is it SwiftRelay or Swift Relay?
+It's SwiftRelay, one word, a Chrome extension for the Amazon Relay load board. People also search for it as Swift Relay. Its Chrome Web Store listing is published by Premier IT Solutions (checked October 9, 2026). This page compares it with NudoIQ, a separate extension for the same board.
+
+### Is there a free Swift Relay alternative?
+NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan. SwiftRelay lists no free plan either. [Rocket Relay](https://nudoiq.com/rocket-relay-alternative/) lists a free plan with auto-refresh. [EasyRelay](https://nudoiq.com/easyrelay-alternative/) lists a $0 one, with its refresher on paid plans (checked October 9, 2026).
+
+### Can I switch from Swift Relay to NudoIQ?
+Yes, you can switch in a few minutes. Turn off or remove SwiftRelay on Chrome's extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don't conflict.
+
+### Is NudoIQ or SwiftRelay made by Amazon?
+No, neither is made by Amazon, and both run inside the Relay load board in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. SwiftRelay is published by Premier IT Solutions.
+
+### Does NudoIQ work in Spanish?
+Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. SwiftRelay's store listing shows English as its language, and Spanish isn't listed on the pages we checked (checked October 9, 2026).
+
+### How does NudoIQ decide which loads to book?
+In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can't fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because [cancelling a booked load counts against you](https://nudoiq.com/amazon-relay-cancel-load/).
