@@ -4,7 +4,7 @@
 
 ## What it does
 
-- **Refresher:** reloads the Amazon Relay load board at an interval set from 1 to 5 seconds, adds up to 20% random jitter per interval, and keeps the board tab from going idle.
+- **Refresher:** reloads the Amazon Relay load board at an interval the carrier sets, adds up to 20% random jitter per interval, and keeps the board tab from going idle.
 - **Control bar with three modes:** Alert (pings you when a load matches your rules), Search (highlights matches) and Autobook (books a matching load for you). Rules cover price and lanes, a profit floor and a max-books cap. Autobook stops at the cap and the profit floor.
 - **Telegram alerts** when a load lands.
 - **Instant Book:** books a load in one action from the control bar instead of the multi-step flow.
@@ -105,7 +105,7 @@ This means two identical lanes can pay completely different amounts depending on
 
 ## Refreshing and Staying Competitive
 
-Manual refreshing works if you're sitting at your computer all day, but most owner-operators can't camp on the load board. Refreshing every 30 seconds by hand isn't practical. A [refresh extension](https://nudoiq.com/amazon-relay-auto-refresh/) solves this by automating the reload, typically at intervals of 1 to 5 seconds, with built-in jitter to avoid overwhelming the server.
+Manual refreshing works if you're sitting at your computer all day, but most owner-operators can't camp on the load board. Refreshing every 30 seconds by hand isn't practical. A [refresh extension](https://nudoiq.com/amazon-relay-auto-refresh/) solves this by automating the reload on an interval you set, with built-in jitter to avoid overwhelming the server.
 
 The jitter, random variation added to the interval, keeps the server stable by keeping many carriers from refreshing at exactly the same second. Without jitter, everyone hits at once; with it, requests spread out.
 
@@ -160,7 +160,7 @@ Loads post throughout the day as Amazon needs freight moved. There's no set time
 No. Amazon only posts loads on the Relay load board. Brokers and third-party platforms don't carry Amazon freight. You must use relay.amazon.com to find and book Amazon work.
 
 ### Why do good Amazon Relay loads get booked so fast?
-Many Relay carriers watch the same load board. When a profitable load posts, multiple carriers see it in the same second. The fastest person to click gets it. This is why carriers use refresher extensions: to reload the board every few seconds instead of manually, so they catch good loads before other carriers do.
+Many Relay carriers watch the same load board. When a profitable load posts, multiple carriers see it in the same second. The fastest person to click gets it. This is why carriers use refresher extensions: to reload the board automatically instead of by hand, so they see good loads sooner.
 
 ### How do I know if an Amazon Relay rate is good?
 Rates vary by lane, time of day, season, and volume. The same route can pay very differently hour to hour. The best way to judge a rate is to track what that lane has paid over the past 90 days, calculate your net profit after all costs (driver pay, fuel, maintenance, deadhead), and set a profit floor: don't book loads that don't clear it. [Lane Intelligence tools](https://nudoiq.com/amazon-relay-auto-refresh/) show you the history; a [profit calculator](https://nudoiq.com/amazon-relay-auto-booker/) shows you the net dollars.
@@ -169,7 +169,7 @@ Rates vary by lane, time of day, season, and volume. The same route can pay very
 Box truck loads are for 26 ft and 16 ft trucks with tuck-under liftgates. Tractor loads are for day cab and sleeper units moving 48/53 ft trailers or containers. The board filters by equipment type. Check which equipment you're registered with Relay and filter to loads that match it.
 
 ### How often should I refresh the load board?
-[Amazon says](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) the board auto-refreshes new spot freight matches every 30 seconds. A [refresh extension](https://nudoiq.com/amazon-relay-auto-refresh/) reloads faster, for example on a 1 to 5 second interval with jitter. This keeps you in the hunt for loads without you staring at the screen. Set the refresh interval based on your tolerance for notification noise and your internet connection.
+[Amazon says](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) the board auto-refreshes new spot freight matches every 30 seconds. A [refresh extension](https://nudoiq.com/amazon-relay-auto-refresh/) reloads more often, on an interval you set, with jitter. This keeps you in the hunt for loads without you staring at the screen. Set the refresh interval based on your tolerance for notification noise and your internet connection.
 
 ---
 
@@ -585,7 +585,7 @@ When you log into the [Amazon Relay load board](https://nudoiq.com/amazon-relay-
 
 Good loads disappear in seconds. This is why many box truck carriers use [auto-refresh tools](https://nudoiq.com/amazon-relay-auto-refresh/) or [auto-booking extensions](https://nudoiq.com/best-amazon-relay-extensions/):
 
-- **Refresher Extension**: Automatically reload the board every 1-5 seconds so you see new loads instantly.
+- **Refresher Extension**: Automatically reload the board on an interval you set so you see new loads sooner.
 - **Alert Mode**: Get pinged on your phone when a load matching your filters appears.
 - **Auto-Book Mode**: Automatically book a load if it meets your price and lane rules.
 
@@ -652,7 +652,7 @@ NudoIQ is designed for carriers on Amazon Relay. It works with [box trucks](http
 
 NudoIQ features that help box truck carriers:
 
-- **Auto-Refresh**: Reload the board every 1-5 seconds with random jitter.
+- **Auto-Refresh**: Reload the board on a set interval with random jitter.
 - **Auto-Book with Rules**: Book loads automatically if they meet your price, lane, and profit floor.
 - **Net Profit per Load**: See what you'll actually keep after fuel, maintenance and deadhead.
 - **Instant Book**: Book from the control bar in one click instead of the multi-step Relay process.
@@ -931,7 +931,7 @@ Start with the [7-day free trial](https://nudoiq.com/best-amazon-relay-extension
 
 If you decide Relay is worth your time, NudoIQ adds intelligence and automation:
 
-- **Auto-Refresh**: Reload the board every 1 to 5 seconds so you see new postings sooner.
+- **Auto-Refresh**: Reload the board automatically so you see new postings sooner.
 - **Auto-Book with Rules**: Book loads that meet your profit floor and lane preferences without manual intervention.
 - **Net Profit Calculation**: Know your actual profit before you book, not after.
 - **[Lane Rate History](https://nudoiq.com/amazon-relay-load-board/)**: See what a lane typically pays so you know if a posted rate is a deal.
@@ -1101,13 +1101,13 @@ Amazon does not publish one. The 30-day window it lists is for pay disputes. Fil
 URL: https://nudoiq.com/amazon-relay-auto-refresh/
 Published: 2026-09-20. Last updated: 2026-10-02.
 
-Short answer: An Amazon Relay auto refresh tool reloads the load board for you every few seconds, so new loads show up without you clicking reload. Good loads often book within seconds. NudoIQ's refresher sets an interval from 1 to 5 seconds, adds up to 20% random jitter, and keeps the board tab from going idle.
+Short answer: An Amazon Relay auto refresh tool reloads the load board for you on a timer, so new loads show up without you clicking reload. Good loads often book within seconds. NudoIQ's auto refresher lets you set the interval, adds up to 20% random jitter, and keeps the board tab from going idle.
 
 ## Why Refreshing the Load Board Matters
 
 [Amazon says](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) the load board auto-refreshes new spot freight matches every 30 seconds. Good loads can book within seconds, so many carriers reload faster than that to see new loads sooner. Manually refreshing every 30 seconds is impractical if you're driving, eating, or managing your business. You step away for five minutes and miss dozens of refreshes. In those five minutes, good loads can post and disappear.
 
-Carriers who want to stay competitive refresh constantly. The faster you refresh, the faster you see loads before other carriers do. A refresher extension automates this, reloading the board every few seconds without you lifting a finger. This is why [refresher and auto-booker extensions](https://nudoiq.com/best-amazon-relay-extensions/) exist: to keep you in the competition without requiring constant attention.
+Carriers who want to stay competitive refresh constantly. The faster you refresh, the faster you see loads before other carriers do. A refresher extension automates this, reloading the board on a timer without you lifting a finger. This is why [refresher and auto-booker extensions](https://nudoiq.com/best-amazon-relay-extensions/) exist: to keep you in the competition without requiring constant attention.
 
 ## Manual Refreshing: The Old Way
 
@@ -1119,11 +1119,11 @@ It also means you're one of many carriers refreshing at roughly the same time.
 
 ## What a Refresher Extension Does
 
-A refresher extension automates the reload. You set an interval (how many seconds between refreshes) and the extension does it for you. Instead of manually refreshing every 30 seconds, the extension refreshes every 2 seconds, or 3 seconds, or whatever you choose.
+A refresher extension automates the reload. You set an interval (how long it waits between refreshes) and the extension reloads for you, so you stop clicking reload by hand.
 
 The benefits are obvious:
 
-1. **You see loads faster.** A 2-second refresh means you see loads on average 1 second after they post. A 30-second refresh means you see them 15 seconds later. In that gap, another carrier can book the load.
+1. **You see loads faster.** A shorter interval means less time between a load posting and you seeing it. In that gap, another carrier can book the load.
 
 2. **You don't have to watch.** The extension reloads in the background while you do other things. You're not glued to the screen.
 
@@ -1133,13 +1133,13 @@ The benefits are obvious:
 
 ## Interval and Jitter Explained
 
-The **interval** is how often the board reloads. A 1-second interval means the board reloads every second. A 5-second interval means every five seconds. Faster intervals mean you see loads sooner, but they also mean more server load and more battery drain on your device.
+The **interval** is how often the board reloads. A shorter interval means the board reloads more often, so you see new loads sooner, but it also means more server load and more battery drain on your device.
 
-Pick the interval that fits how hard you're competing. Some carriers go to 1 second if they're trying to catch premium lanes. The tradeoff: faster intervals catch loads faster but hit the server harder and drain your battery quicker.
+Pick the interval that fits how hard you're competing. Some carriers go shorter on busy, premium lanes. The tradeoff: shorter intervals show new loads sooner but hit the server harder and drain your battery quicker.
 
-**Jitter** is random variation added to the interval. Instead of reloading at exactly 2 seconds, 4 seconds, 6 seconds (every 2 seconds), the extension reloads at 2.1 seconds, 4.3 seconds, 5.8 seconds. The variation is tiny (usually up to 20% of the interval) but enough to keep many carriers from hitting the server at exactly the same moment.
+**Jitter** is random variation added to the interval. Instead of reloading on an exact, even beat, the extension shifts each refresh a little earlier or later. The variation is small (NudoIQ uses up to 20% of the interval) but enough to keep many carriers from hitting the server at exactly the same moment.
 
-Without jitter, every carrier's extension reloads at 2:00, 2:02, 2:04, creating a spike of requests every two seconds. The server gets hammered. With jitter, refreshes spread out: some at 2:00, some at 2:01, some at 2:02, smoothing the load on the server.
+Without jitter, every carrier's extension reloads on the same even beat, creating a spike of requests at the same moments. The server gets hammered. With jitter, refreshes spread out, smoothing the load on the server.
 
 Think of it like traffic: if everyone leaves work at 5 p.m., the highway backs up. If people leave at 4:50, 5:00, 5:10, traffic flows. Jitter does the same for the server.
 
@@ -1147,9 +1147,9 @@ Think of it like traffic: if everyone leaves work at 5 p.m., the highway backs u
 
 It depends on your goals and your hardware:
 
-**For catching competitive loads (tractor/reefer on busy lanes)**: Use a 1 to 3 second interval. You'll see loads within seconds of posting. Your battery will drain faster and your device will work harder, but you'll catch good loads before other carriers.
+**For catching competitive loads (tractor/reefer on busy lanes)**: Use a shorter interval. You'll see new loads sooner after they post, but your battery will drain faster and your device will work harder.
 
-**For moderate competition (box truck, less busy lanes)**: Use a 3 to 5 second interval. You'll see loads within a few seconds. It's a good balance between speed and resource use.
+**For moderate competition (box truck, less busy lanes)**: Use a longer interval. You'll see new loads soon after they post. It's a good balance between speed and resource use.
 
 **If you're away from the truck**: Use a longer interval if you're not actively booking, or turn off refreshing entirely and set it to Alert mode: notify you when a load posts that matches your rules, and you'll decide whether to book.
 
@@ -1173,7 +1173,7 @@ To use a refresher extension, you typically:
 
 1. Install it from the Chrome Web Store.
 2. Sign in (or it uses your existing Relay login).
-3. Set your refresh interval (1 to 5 seconds, depending on how aggressive you want to be).
+3. Set your refresh interval (shorter or longer, depending on how hard you compete).
 4. Set your booking rules: lanes, price ranges, distance, equipment type, profit floor, and max-books cap.
 5. Set up alerts (NudoIQ uses Telegram).
 6. Leave it running.
@@ -1198,11 +1198,11 @@ Modern refreshers (including NudoIQ) include built-in protections to avoid overw
 
 Refreshing is the foundation. [Booking rules](https://nudoiq.com/amazon-relay-auto-booker/), [profit calculation](https://nudoiq.com/amazon-relay-auto-booker/), and [rate history](https://nudoiq.com/amazon-relay-auto-refresh/) add layers on top, but refreshing (fast, steady, consistent) is what gets you first look at loads.
 
-If your refresher runs on a 2-second interval and your competitor's runs on a 30-second interval (or no interval at all), you'll see loads before they do. That's the advantage.
+If your refresher runs on a short interval and your competitor reloads slowly (or not at all), you'll see new loads before they do. That's the advantage.
 
 ## NudoIQ's Refresh Approach
 
-NudoIQ's refresher lets you set the interval from 1 to 5 seconds with built-in jitter (up to 20% random variation per interval). The extension keeps the Relay tab from going idle and refreshes on schedule, even if you're not looking at it.
+NudoIQ's refresher lets you set the interval yourself, with built-in jitter (up to 20% random variation per interval). The extension keeps the Relay tab from going idle and refreshes on schedule, even if you're not looking at it.
 
 It doesn't just refresh: it runs alongside [Lane Intelligence](https://nudoiq.com/amazon-relay-auto-refresh/) (showing rate history) and [Net Profit calculation](https://nudoiq.com/amazon-relay-auto-booker/) (showing what you keep), and it integrates with [Autobook](https://nudoiq.com/amazon-relay-auto-booker/) so you can set rules once and let it book automatically.
 
@@ -1210,8 +1210,8 @@ The extension is 5.0 rated on the Chrome Web Store and runs on desktop Chrome in
 
 ## Frequently asked questions
 
-### Is a 1-second refresh interval too aggressive?
-A 1-second refresh is the fastest setting NudoIQ offers and uses the most battery. If you're competing for loads on busy lanes, it helps you see new loads sooner. If you're not in a hurry, 2 to 5 seconds is plenty.
+### Is a short refresh interval too aggressive?
+The shortest interval NudoIQ offers uses the most battery. If you're competing for loads on busy lanes, it helps you see new loads sooner. If you're not in a hurry, a longer interval is plenty.
 
 ### Will my extension's refresh get me kicked off Relay?
 Nobody can promise that, and we won't. The carrier is responsible for its Relay account and for following Relay's terms, so read them before you run any extension.
@@ -1220,10 +1220,10 @@ Nobody can promise that, and we won't. The carrier is responsible for its Relay 
 Yes, your browser window (or at least the tab with the Relay load board) needs to stay open. The refresher runs inside that tab. If you close the browser or the tab, the refresher stops.
 
 ### Can I set different refresh intervals for different times of day?
-Most refreshers don't have built-in scheduling, so you'd have to change the interval manually. Some carriers who compete hard in the morning but less at night might set a 2-second interval at 5 a.m. and drop it to 5 seconds at 2 p.m. You can do this, but it's manual.
+Most refreshers don't have built-in scheduling, so you'd have to change the interval manually. Some carriers who compete hard early but less later might run a short interval at 5 a.m. and a longer one at 2 p.m. You can do this, but it's manual.
 
 ### What if I set the interval too fast and it drains my battery?
-Stop the refresher, set a longer interval, or plug in your device. A 1 to 2 second interval on a laptop uses noticeable power. A 3 to 5 second interval is more balanced.
+Stop the refresher, set a longer interval, or plug in your device. The shortest intervals use noticeable power on a laptop. A longer interval is more balanced.
 
 ### Can a refresher book loads when I'm offline?
 No. The refresher runs inside your browser in real-time. If your internet drops, the refresher stops and can't reload the board. Once you're back online, it resumes.
@@ -1440,7 +1440,7 @@ Besides the bigger names, there are a dozen or so smaller refreshers in the cate
 
 ## What to Look For in a Relay Extension
 
-**Refresh Control**: Can you set the interval (how often it reloads) and does it add jitter (random variation to prevent server strain)? A good refresher lets you choose 1 to 5 second intervals and includes built-in jitter so every refresh isn't at the exact same moment.
+**Refresh Control**: Can you set the interval (how often it reloads) and does it add jitter (random variation to prevent server strain)? A good refresher lets you choose the interval and adds built-in jitter so every refresh isn't at the exact same moment.
 
 **Booking Rules**: Can you set rules to book only certain loads? Look for the ability to filter by lane, price range, load type, distance, and equipment. A tool that books only loads matching your criteria is safer than one that books indiscriminately.
 
@@ -1484,7 +1484,7 @@ Several smaller refreshers exist (SwiftRelay, FlashRelay, and others) that focus
 
 NudoIQ is a browser extension that runs inside the Relay load board and includes every feature in one monthly subscription: $49.99/month after a 7-day free trial, no card needed to start.
 
-**Refresh Control**: Slider sets the interval from 1 to 5 seconds with built-in jitter.
+**Refresh Control**: Set the interval on the NudoIQ bar, with built-in jitter.
 
 **Three Booking Modes**: Alert (pings you on a match), Search (highlights matching loads visually), Autobook (books automatically if your rules match). Set price and lane rules, a profit floor, and a max-books cap.
 
@@ -1779,7 +1779,7 @@ Amazon covers this in [understanding Relay rates](https://relay.amazon.com/blog/
 
 ## How can NudoIQ help you catch Amazon Relay loads?
 
-NudoIQ is a Chrome extension that runs inside the Amazon Relay load board in your browser. It refreshes the board every 1 to 5 seconds with random jitter, alerts you or books when a load matches your rules, and shows lane rate history and net profit on each load card. Bookings and rates are never guaranteed.
+NudoIQ is a Chrome extension that runs inside the Amazon Relay load board in your browser. It auto refreshes the board with random jitter, alerts you or books when a load matches your rules, and shows lane rate history and net profit on each load card. Bookings and rates are never guaranteed.
 
 You set the price and lane rules, a profit floor and a max-books cap, and pick Alert, Search or Autobook. Autobook stops at the cap and the profit floor. Telegram alerts tell you when a load lands. The backhaul finder searches loads from where your current load ends, pointed back toward home.
 
@@ -2111,13 +2111,13 @@ Good loads on the Relay board get booked within seconds because a lot of carrier
 What helps:
 
 - **Amazon's own alerts.** Saved searches, email alerts and mobile push notifications.
-- **A refresher.** It reloads the board every few seconds for you. See [how Amazon Relay auto refresh works](https://nudoiq.com/amazon-relay-auto-refresh/).
+- **A refresher.** It reloads the board for you on a timer. See [how Amazon Relay auto refresh works](https://nudoiq.com/amazon-relay-auto-refresh/).
 - **Rules and auto-booking.** An auto-booker books only loads that match your lane, price and limits. See our [auto-booker guide](https://nudoiq.com/amazon-relay-auto-booker/).
 - **Protecting acceptance.** Cancelling a booked load hurts your acceptance score, more the closer it is to pickup. Book only what the truck can run.
 
 ## Where does NudoIQ fit for a box truck carrier?
 
-NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It refreshes the board on a 1 to 5 second interval with jitter, alerts you on matching loads, and can book them by your rules. It's an independent tool, not made by or affiliated with Amazon.
+NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It auto refreshes the board with jitter, alerts you on matching loads, and can book them by your rules. It's an independent tool, not made by or affiliated with Amazon.
 
 - **Alert, Search and Autobook modes** with lane and price rules. Autobook stops at your max-books cap and won't book under your profit floor. Telegram alerts tell you when a load lands.
 - **Net profit on every load card**: the rate minus driver pay, fuel, maintenance and deadhead to pickup.
@@ -2247,7 +2247,7 @@ Relay supports 48 ft and 53 ft dry vans. A 53 ft reefer must meet the FDA Sanita
 
 ## Where does NudoIQ help a power only carrier?
 
-NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It refreshes the board on a 1 to 5 second interval with jitter, alerts you on matching power only loads, and can book them by your rules. It's an independent tool, not made by or affiliated with Amazon.
+NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It auto refreshes the board with jitter, alerts you on matching power only loads, and can book them by your rules. It's an independent tool, not made by or affiliated with Amazon.
 
 - **Alert, Search and Autobook modes** with lane and price rules. Autobook stops at your max-books cap and won't book under your profit floor. See our [auto-booker guide](https://nudoiq.com/amazon-relay-auto-booker/).
 - **Net profit on every load card:** the rate minus driver pay, fuel, maintenance and deadhead to pickup.
@@ -2591,7 +2591,7 @@ It could. Any extension that changes web pages can interfere with how the board 
 - Turn off your extensions one at a time, reloading the board after each, to see if one is the cause.
 - Try another Chromium browser, such as Microsoft Edge, or a fresh Chrome profile with no extensions.
 
-If you use NudoIQ, include it in that test. NudoIQ is a Chrome extension that runs in your own Chrome, inside your signed-in Relay tab, and never asks for your Amazon password. Its refresher reloads the board on an interval you set from 1 to 5 seconds, with up to 20% random jitter, and keeps the tab from going idle. Alert, Search and Autobook modes ping you on a match, highlight it, or book it by your rules. It's $49.99 a month after a 7-day free trial, no card needed to start. Compare options in our [best Amazon Relay extensions guide](https://nudoiq.com/best-amazon-relay-extensions/) and our [auto-refresh guide](https://nudoiq.com/amazon-relay-auto-refresh/).
+If you use NudoIQ, include it in that test. NudoIQ is a Chrome extension that runs in your own Chrome, inside your signed-in Relay tab, and never asks for your Amazon password. Its refresher reloads the board on an interval you set, with up to 20% random jitter, and keeps the tab from going idle. Alert, Search and Autobook modes ping you on a match, highlight it, or book it by your rules. It's $49.99 a month after a 7-day free trial, no card needed to start. Compare options in our [best Amazon Relay extensions guide](https://nudoiq.com/best-amazon-relay-extensions/) and our [auto-refresh guide](https://nudoiq.com/amazon-relay-auto-refresh/).
 
 ## When should I contact Relay support?
 
@@ -2869,7 +2869,7 @@ NudoIQ auto-refreshes the Relay contracts page. In Autobook mode it books short-
 
 It also helps with the open days around a contract. A partial-week contract, or the two days off after a 109-hour block, can leave a truck sitting. Those days get filled from the spot board, and that's where NudoIQ works.
 
-NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It's an independent tool, not made by or affiliated with Amazon. It refreshes the board on a 1 to 5 second interval and alerts you when a load matches the lanes and price you set for those open days. In Autobook mode it books only loads that clear your own Min Net Profit and stops at your max-books cap. Every load card shows net profit after driver pay, fuel, maintenance and deadhead, so a filler load is judged on what it nets.
+NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It's an independent tool, not made by or affiliated with Amazon. It auto refreshes the board and alerts you when a load matches the lanes and price you set for those open days. In Autobook mode it books only loads that clear your own Min Net Profit and stops at your max-books cap. Every load card shows net profit after driver pay, fuel, maintenance and deadhead, so a filler load is judged on what it nets.
 
 It's used by 300+ carriers. Try it with a 7-day free trial, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
 
@@ -3324,7 +3324,7 @@ The full checklist is in our [Amazon Relay requirements guide](https://nudoiq.co
 
 Straight answer: NudoIQ can't help a cargo van get on Relay. There are no Relay loads for vans, so there's nothing for it to find.
 
-Once you run supported equipment and have an approved Relay account, it's useful on the board. NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It refreshes the board on a 1 to 5 second interval, alerts you on box truck or power only loads that match your rules, and shows net profit on every load card after driver pay, fuel, maintenance and deadhead. It's an independent tool, not made by or affiliated with Amazon.
+Once you run supported equipment and have an approved Relay account, it's useful on the board. NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It auto refreshes the board, alerts you on box truck or power only loads that match your rules, and shows net profit on every load card after driver pay, fuel, maintenance and deadhead. It's an independent tool, not made by or affiliated with Amazon.
 
 When you're ready, try it with a 7-day free trial, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
 
