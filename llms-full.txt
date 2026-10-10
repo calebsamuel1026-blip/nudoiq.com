@@ -3574,3 +3574,158 @@ Yes. The NudoIQ interface is in English and Spanish.
 
 ### Is NudoIQ affiliated with Amazon?
 No. NudoIQ is an independent extension and is not affiliated with or endorsed by Amazon. It runs in your own signed-in Relay tab and never asks for your Amazon password.
+
+---
+
+# Rocket Relay alternative: NudoIQ vs Rocket Pro for the Amazon Relay load board
+
+URL: https://nudoiq.com/rocket-relay-alternative/
+Published: 2026-10-10. Last updated: 2026-10-10.
+
+Short answer: If you want loads booked by net profit, after your own costs, NudoIQ is a good Rocket Relay alternative. Its AutoBook takes a load only if it clears your minimum net profit. Rocket Relay lists many filters, but no place to enter fuel or driver pay. 7 days free with no card, then $49.99 a month flat, every truck.
+
+## What is a good Rocket Relay alternative?
+
+NudoIQ, if you want loads booked by net profit, after your own costs. Rocket Relay's pages say its Pro plan auto books by payout, price per mile and more filters. NudoIQ [refreshes the board and books the loads that clear your number](https://nudoiq.com/amazon-relay-auto-refresh/).
+
+## How does NudoIQ compare to Rocket Relay?
+
+Here's how they line up on the Relay load board, with where every Rocket Relay fact came from.
+
+NudoIQ vs Rocket Relay for the Amazon Relay load board, from each product's store listing and website, checked October 9, 2026. "Not listed" means that item wasn't on Rocket Relay's store listing or the site pages in Sources that day. We did not test their product. Spot an error? Tell us on the [contact page](https://nudoiq.com/support/) and we'll fix it.
+
+| Item | NudoIQ | Rocket Relay |
+|---|---|---|
+| What it is | Chrome extension for Amazon Relay carriers and dispatchers | Browser extension for Amazon Relay carriers, owner-operators, dispatchers and fleets |
+| Auto-refresh the load board | Yes | Yes, on the Free plan |
+| New loads and price rises flagged | Yes. A NEW or PRICE UP badge on the load | Yes. Alert mode plays a sound and shows a pop-up, plus price-change alerts past your threshold |
+| Automatic booking | Yes. AutoBook books loads that clear your minimum net profit, and your minimum $/mile if you set one | Yes, on Pro. Books matching trips best-paying first, up to the number you set |
+| Booking filters | Minimum net profit and minimum $/mile. Loads that miss them can be faded or hidden | On Pro: payout, price per mile, distance, stops, deadhead, stem time, time windows, location and several lanes at once |
+| Net profit on each load | Yes. Net dollars and $/mile next to the price, after the costs you enter | Not listed. Filters cover payout and price per mile, with no fuel or driver pay inputs listed |
+| One-tap booking | Instant Book on new and price-up loads (one tap, no confirm screen) | FastBook: one click on matched trips (Free), or on every trip (Pro) |
+| Lane price history | Lane Intelligence: 90-day price range for the lane, from the first button under each load | Not listed |
+| Backhaul search | Yes, Find backhaul button under each load | Not listed |
+| Post a Truck | One-Click Post A Truck with a recommended bid. The bid needs time to learn your area and improves with use | On Pro: one click from a load, pre-filled, plus bulk modify, clone or delete and assign drivers |
+| Scorecard dispute letters | Drafts the letter from the violation. You review and submit it. Amazon decides | Not listed |
+| Telegram alerts | Yes, to your phone: new matching loads, price rises and AutoBook bookings, with quiet hours | Not listed. Telegram appears only as a support contact |
+| Contracts | Yes. Refreshes short-term contract offers and can alert you or AutoBook the ones that meet your minimums | Not listed |
+| Where your load data stays | Lane prices pooled anonymously. Your driver list (trial or paid) and Fleet Dashboard trips are kept on its servers | Its listing says your loads, trips, payouts and drivers stay on your computer |
+| Free plan | No. Free preview (refresh, alerts) until you start the free trial | Yes. Auto-refresh, alerts and FastBook on matched trips, no card required |
+| Free trial | Yes. 7 days, no card needed to start | Yes, 7 days of Pro. A card is needed to start, and its FAQ says you aren't charged during it |
+| Paid price | $49.99 a month flat, every truck, cancel anytime | Pro $49 a month, plus any sales tax, cancel anytime |
+| Languages | English and Spanish | 10 listing languages, including English and Spanish |
+| Android and iPhone | Android in browsers that support extensions, such as Lemur. No iPhone | Android in Lemur or Quetta. No iPhone version |
+| Publisher | Sami Enterprises LLC | West Wanted |
+
+Sources:
+
+1. NudoIQ extension for Amazon Relay, and nudoiq.com/get/
+2. Rocket Relay Chrome Web Store listing (chromewebstore.google.com/detail/kcnegnbacaohnhpmeckfakhlnahliklf), v9.0.2, updated July 30, 2026, checked October 9, 2026
+3. Rocket Relay website, rocketrelaybooker.com (home, pricing, tools and FAQ pages), checked October 9, 2026
+4. Rocket Relay Post Truck Manager Chrome Web Store listing (chromewebstore.google.com/detail/pmlcbfihajkjdoaaocpphopbahfldcai), v3.0.2, updated May 20, 2025, checked October 9, 2026
+5. Chrome Web Store (NudoIQ listing for Amazon Relay), checked October 9, 2026
+6. nudoiq.com privacy policy on load prices, fleet trip data and driver contact details, checked October 9, 2026
+
+Rocket Relay is a trademark of its owner, used here only to name and compare two Amazon Relay extensions. NudoIQ is not affiliated with Rocket Relay or with Amazon.
+
+To see how NudoIQ compares with Rocket Relay and five other Relay extensions on auto-booking, alerts and price, read [the full comparison](https://nudoiq.com/why-nudoiq/).
+
+## What is Rocket Relay?
+
+Rocket Relay is a browser extension for the Amazon Relay load board, from West Wanted. Its store listing is called Relay Auto Booker Refresher Rocket Pro. As of October 9, 2026, its listing and site name Alert, Search and Auto-book modes and one-click FastBook. They also name filters, bulk Post-a-Truck, price-change alerts and custom sounds. It runs in Chrome, Edge and Brave, and on Android in Lemur or Quetta.
+
+## Does Rocket Relay auto book loads?
+
+Yes, Rocket Relay auto books loads on its Pro plan. As of October 9, 2026, its listing says Auto-book takes matching loads by your filters, best-paying first. It stops at the number you set and runs only after you press Start. [NudoIQ's AutoBook books for you](https://nudoiq.com/amazon-relay-auto-booker/) too, but only loads that clear your minimum net profit, after the costs you enter.
+
+## What does NudoIQ do that Rocket Relay doesn't list?
+
+Rocket Relay's listing and checked site pages didn't name these three: an AutoBook net profit floor, net profit per load and scorecard dispute letters.
+
+- Net profit floor for AutoBook: it books only loads that clear your minimum. It skips any load it can't fully price and stops at your max-books cap.
+- Net profit on every load: net dollars and $/mile next to the price. It uses the costs you enter, like fuel, MPG, driver pay and maintenance.
+- [Scorecard dispute letters](https://nudoiq.com/amazon-relay-scorecard/): it drafts the letter from the violation. You read it, send it, and Amazon makes the call.
+- Also: Lane Intelligence (90-day lane price range), backhaul search, alerts or AutoBook on short-term contract offers, and Telegram alerts to your phone.
+
+## What does Rocket Relay do that NudoIQ doesn't?
+
+As of October 9, 2026, Rocket Relay's own pages list these, and NudoIQ doesn't have them.
+
+- A Free plan you can stay on, with FastBook on matched trips and no card required. NudoIQ's free preview also refreshes and alerts, but it has no booking and ends when you start the trial.
+- More booking rules (Pro): location by state, ZIP or facility, distance, stops, deadhead, stem time and time windows. It can watch several lanes at once.
+- Bulk Post-a-Truck (Pro): modify, clone or delete many orders at once and assign drivers. Pro also puts FastBook on every trip.
+- More languages for your board: its listing names 10, from German to Ukrainian.
+- Local data: its listing says your loads, trips, payouts and drivers stay on your computer. NudoIQ keeps your driver list on a trial or paid plan, and any Fleet Dashboard trips, on its servers ([privacy policy](https://nudoiq.com/privacy.html)).
+- Also listed: a ~ key to start and stop and your own alert sounds (Free). Pro adds auto-expanded trip stops, trailer-status badges and a filter for loads at Amazon locations only.
+
+## How much does Rocket Relay cost vs NudoIQ?
+
+On Rocket Relay, you pick a Free plan or Pro at $49 a month (checked October 9, 2026). Its 7-day Pro trial takes a card, but you aren't charged during it. NudoIQ starts with a free preview on install, then a 7-day free trial with no card needed. After that it's $49.99 a month flat for every truck. Cancel anytime.
+
+## Should you pick Rocket Relay or NudoIQ?
+
+### Pick Rocket Relay if
+
+- You want to stay on a free plan. Its Free plan has auto-refresh, alerts and FastBook on matched trips.
+- You want auto booking by location, distance, stops or time windows, or on several lanes at once.
+- You post many trucks and want to change Post-a-Truck orders in bulk.
+- You want your load data kept on your own computer, or need a language beyond English and Spanish.
+
+### Pick NudoIQ if
+
+- You want loads booked only when they clear your minimum net profit, after your own costs.
+- You want to see what each load nets you, and what its lane has paid, before you take it.
+- You fight scorecard hits and want the dispute letter drafted for you.
+- You want 7 days of auto booking with no card, or Telegram load alerts on your phone.
+
+Not sure which is right for your board? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back. It costs you a week, not a dime.
+
+[Try NudoIQ 7 days free](https://nudoiq.com/get/)
+
+## How do you switch from Rocket Relay to NudoIQ?
+
+Turn off or remove Rocket Relay in your Chrome extensions. Add NudoIQ from the Chrome Web Store, [open the Relay load board](https://nudoiq.com/amazon-relay-load-board/) and press START. Your Relay login doesn't change. Paying for Rocket Pro? Its site says you cancel in the Stripe customer portal.
+
+## Frequently asked questions
+
+### What is Rocket Relay?
+Rocket Relay is a browser extension for the Amazon Relay load board, published by West Wanted. Its listing and site name Alert, Search and Auto-book modes, one-click FastBook, filters and bulk Post-a-Truck (checked October 9, 2026). It has a Free plan and a $49 Pro plan. NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit.
+
+### Is Rocket Relay a Chrome extension?
+Yes, Rocket Relay is a browser extension you add from the Chrome Web Store. Its listing names Chrome, Edge and Brave on desktop, plus Android browsers such as Lemur and Quetta (checked October 9, 2026). NudoIQ is a separate Chrome extension that also works on Android in browsers such as Lemur. Run one load board extension at a time so the two don't conflict.
+
+### Is Rocket Relay free?
+Yes, Rocket Relay has a Free plan with auto-refresh, new-trip alerts and FastBook on matched trips. No card is required. Search, Auto-book, the filters and Post-a-Truck are on Pro, at $49 a month (checked October 9, 2026). NudoIQ has no free plan. It has a free preview with refresh and alerts, then a 7-day free trial with no card needed.
+
+### Does Rocket Relay have a free trial?
+Yes, Rocket Relay's Pro plan starts with a 7-day free trial. Its FAQ says you add a card to begin but aren't charged during the trial (checked October 9, 2026). Its Free plan needs no card. NudoIQ's 7-day free trial needs only an email, no card. AutoBook, Instant Book and dispute letters come with it.
+
+### How much does Rocket Relay cost compared to NudoIQ?
+Rocket Relay Pro costs $49 a month plus any sales tax. Its Free plan costs nothing (checked October 9, 2026). NudoIQ is one $49.99 plan, the same price for one truck or a whole fleet, with a 7-day free trial and cancel anytime.
+
+### Does Rocket Relay auto book loads?
+Yes, Rocket Relay auto books loads on its Pro plan. Its listing says Auto-book takes matching loads by your filters, best-paying first, up to the number you set (checked October 9, 2026). It books only after you press Start. NudoIQ's AutoBook books only loads that clear your own minimum net profit, after the costs you enter.
+
+### Is Rocket Relay a refresher or an auto booker?
+Rocket Relay is both a load board refresher and an auto booker. Auto-refresh and new-trip alerts are in its Free plan, and Auto-book is on Pro, $49 a month (checked October 9, 2026). NudoIQ refreshes the board too, and its AutoBook books by your minimum net profit, after the costs you enter.
+
+### Is Rocket Pro the same as Rocket Relay?
+Yes, Rocket Pro is the Rocket Relay extension for the Amazon Relay load board. Its Chrome Web Store listing is named Relay Auto Booker Refresher Rocket Pro for Amazon Relay. The listing shows version 9.0.2, updated July 30, 2026. Pro is also the name of its paid plan, $49 a month (checked October 9, 2026).
+
+### What is Rocket Relay Post Truck Manager?
+Rocket Relay Post Truck Manager is a separate Chrome Web Store listing for Post a Truck orders. Its developer is Tasiev LLC, not West Wanted. It lists bulk delete, move and duplicate, at $39.99 a month after a 7-day trial (checked October 9, 2026). NudoIQ has no bulk order tools. It has [One-Click Post A Truck](https://nudoiq.com/amazon-relay-post-a-truck/) from a load, with a recommended bid that improves with use.
+
+### Is there a free Rocket Relay alternative?
+NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan. If you want to stay on a free plan, Rocket Relay's own Free plan has auto-refresh and alerts. [EasyRelay](https://nudoiq.com/easyrelay-alternative/) lists a $0 Free plan, with its refresher on paid plans (checked October 9, 2026).
+
+### Can I switch from Rocket Relay to NudoIQ?
+Yes, you can switch in a few minutes. Turn off or remove Rocket Relay on Chrome's extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don't conflict.
+
+### Is NudoIQ or Rocket Relay made by Amazon?
+No, neither is made by Amazon, and both run inside the Relay load board in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. Rocket Relay is published by West Wanted.
+
+### Does NudoIQ work in Spanish?
+Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. Rocket Relay's listing names Spanish too, among 10 languages (checked October 9, 2026).
+
+### How does NudoIQ decide which loads to book?
+In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can't fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because [cancelling a booked load counts against you](https://nudoiq.com/amazon-relay-cancel-load/).

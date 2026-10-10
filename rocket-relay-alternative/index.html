@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <!-- Google Ads click id capture (2026-10-05, copied from /loadfetcher-alternative/ 2026-10-10 for /rocket-relay-alternative/; research/google-ads/RESTRUCTURE-2026-10-05.md). The Web Store hop loses the
+       ad click, so the gclid (or gbraid/wbraid on iOS/app traffic) is kept in localStorage on nudoiq.com, and /welcome/
+       (same origin, opened by the extension after install) sends it with the welcome_opened funnel row. That row is what
+       the "Trial started" / "Paid subscriber" offline conversions are matched back to. Kept 90 days (Google's upload
+       window); the newest click wins. Store links get utm_source/medium/campaign only: the Chrome Web Store dashboard
+       reports those three and passes nothing to the extension, so a per-click id in the store URL would carry nothing. -->
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search), keys = ["gclid", "gbraid", "wbraid"], i, v;
+        for (i = 0; i < keys.length; i++) {
+          v = q.get(keys[i]);
+          if (v && /^[\w.\-]{10,300}$/.test(v)) {
+            localStorage.setItem("nudoiq_gclid", JSON.stringify({ type: keys[i], id: v, ts: Date.now(), lp: location.pathname }));
+            break;
+          }
+        }
+        var s = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+        if (!s || !s.ts || Date.now() - s.ts > 90 * 864e5) return;
+        var camp = (q.get("utm_campaign") || "google_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "google_ads";
+        var tag = function () {
+          Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+            var u = new URL(a.href);
+            u.searchParams.set("utm_source", "google");
+            u.searchParams.set("utm_medium", "cpc");
+            u.searchParams.set("utm_campaign", camp);
+            a.href = u.toString();
+          });
+        };
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+      } catch (e) {}
+    })();
+  </script>
+  <title>Rocket Relay Alternative: NudoIQ vs Rocket Pro Auto Booker</title>
+  <meta name="description" content="Rocket Relay alternative for the Amazon Relay load board: NudoIQ auto books at your net profit floor. See the full comparison. Try it 7 days free.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/rocket-relay-alternative/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Rocket Relay alternative: NudoIQ vs Rocket Pro (2026)">
+  <meta property="og:description" content="Rocket Relay alternative for the Amazon Relay load board: NudoIQ auto books at your net profit floor. See the full comparison. Try it 7 days free.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/rocket-relay-alternative/">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="article:published_time" content="2026-10-10">
+  <meta property="article:modified_time" content="2026-10-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rocket Relay alternative: NudoIQ vs Rocket Pro (2026)">
+  <meta name="twitter:description" content="Rocket Relay alternative for the Amazon Relay load board: NudoIQ auto books at your net profit floor. See the full comparison. Try it 7 days free.">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: "rocket-relay-alternative"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "rocket-relay-alternative"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <style>
+  /* Page-specific additions on top of doc.css + guide.css (hand-built page, data-layout="custom"). */
+  /* Contrast: the shared title-panel blues (#2551B8 on #B1CBFF = 4.36:1) and grey #888 (3.54:1) miss WCAG AA, so this page
+     uses navy in the panel and the scorecard page's darker grey. */
+  :root{--g3:#6F6F6F}
+  .lf .doc-hero .crumbs,.lf .doc-hero .crumbs a,.lf .page-subtitle,.lf .hero-cta .micro,.lf .byline,.cta p,.cta .micro{color:var(--navy)}
+  .lf .byline{opacity:1}
+  .lf caption a{color:var(--blue-deep)}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:999;border-radius:0 0 var(--ri) 0}
+  .skip:focus{left:0}
+  .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:0 8px}
+  .crumbs li+li::before{content:"\203A";margin-right:8px;color:var(--blue-deep)}
+  .lf .page-title{max-width:24ch;font-size:clamp(32px,4.4vw,52px)}
+  .lf .doc-hero .answer{background:#fff;border-color:rgba(22,22,22,.06);border-left-color:var(--blue);margin:22px 0 18px;max-width:var(--col)}
+  .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:22px}
+  .hero-cta .micro{color:var(--blue-deep);font-size:14px;font-weight:500}
+  .prose section{scroll-margin-top:88px}
+  .prose section > p{color:var(--ink-4);font-size:17px;line-height:1.68;margin:0 0 18px}
+  .prose section:first-child h2{margin-top:8px}
+  .lf .tbl{margin:10px 0 18px;background:#fff}
+  .lf .tbl:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+  .lf table{min-width:680px;font-size:14.5px}
+  .lf caption{caption-side:top;text-align:left;padding:14px 16px;font-size:13.5px;line-height:1.55;color:var(--ink-4);
+    background:var(--paper-2);border-bottom:1px solid rgba(22,22,22,.08)}
+  .lf caption span{display:block;position:sticky;left:16px;max-width:calc(100vw - 66px)}
+  .lf thead th{white-space:nowrap}
+  .lf thead th:nth-child(2){color:var(--blue-deep)}
+  .lf tbody th[scope=row]{background:#fff;color:var(--ink);font-weight:600;width:24%;position:sticky;left:0;z-index:1;
+    box-shadow:1px 0 0 rgba(22,22,22,.08)}
+  .lf thead th:first-child{position:sticky;left:0;z-index:2}
+  .lf tbody tr:last-child th{border-bottom:0}
+  .fn{font-size:11px;line-height:0;margin-left:3px;white-space:nowrap}
+  .fn a{text-decoration:none;font-weight:600;padding:0 2px}
+  .prose h3#sources{font-size:15px;margin:18px 0 8px}
+  .sources{font-size:14px;color:var(--ink-4)}
+  .prose .sources li{font-size:14px;line-height:1.55;margin:0 0 6px}
+  .sources a{word-break:break-all}
+  .sources li{scroll-margin-top:88px} /* footnote jumps land below the sticky header */
+  .prose section > p.tmnote{font-size:13px;color:var(--g3);line-height:1.55;margin:4px 0 0}
+  .pick{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 20px}
+  .pick-col{background:var(--paper-2);border:1px solid rgba(22,22,22,.07);border-radius:var(--ri);padding:20px 22px 6px}
+  .pick-nq{border-color:var(--peri-2);background:#F3F7FF}
+  .prose .pick h3{margin:0 0 10px;font-size:17px}
+  .prose .pick li{font-size:15.5px;line-height:1.55}
+  .midlink a{font-weight:600}
+  .prose .faq{margin:48px 0 0;max-width:none}
+  .prose .faq h2{margin:0 0 14px}
+  .faq .a p{font-size:16px;line-height:1.62}
+  .cta .micro{color:var(--navy);font-size:13.5px;margin-top:8px;text-align:center}
+  /* Freshness pill above the table: same component as /loadfetcher-alternative/ and /get/loadfetcher/ .checked. */
+  .prose section > p.upd{margin:0 0 2px}
+  .upd .checked{display:inline-flex;align-items:center;gap:6px;background:var(--paper-2);border:1px solid #E1E7F5;border-radius:var(--rp);padding:5px 14px;font-size:12.5px;font-weight:500;color:var(--ink-4)}
+  @media (max-width:660px){
+    .pick{grid-template-columns:1fr}
+    .prose section > p{font-size:16px}
+    .lf .doc-hero .answer{padding:16px 18px}
+    .hero-cta .btn{width:100%}
+    .hero-cta .micro{width:100%;text-align:center}
+    .cta-act{width:100%}
+  }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://nudoiq.com/rocket-relay-alternative/#article",
+      "headline": "Rocket Relay alternative: NudoIQ vs Rocket Pro for the Amazon Relay load board",
+      "description": "Rocket Relay alternative for the Amazon Relay load board: NudoIQ auto books at your net profit floor. See the full comparison. Try it 7 days free.",
+      "abstract": "If you want loads booked by net profit, after your own costs, NudoIQ is a good Rocket Relay alternative. Its AutoBook takes a load only if it clears your minimum net profit. Rocket Relay lists many filters, but no place to enter fuel or driver pay. 7 days free with no card, then $49.99 a month flat, every truck.",
+      "url": "https://nudoiq.com/rocket-relay-alternative/",
+      "mainEntityOfPage": "https://nudoiq.com/rocket-relay-alternative/",
+      "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+      "datePublished": "2026-10-10",
+      "dateModified": "2026-10-10",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://nudoiq.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://nudoiq.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://nudoiq.com/#software"
+      },
+      "about": [
+        {
+          "@id": "https://nudoiq.com/#software"
+        },
+        {
+          "@type": "Thing",
+          "name": "Rocket Relay",
+          "url": "https://rocketrelaybooker.com/",
+          "sameAs": [
+            "https://chromewebstore.google.com/detail/kcnegnbacaohnhpmeckfakhlnahliklf"
+          ]
+        }
+      ],
+      "keywords": [
+        "Rocket Relay alternative",
+        "Rocket Pro alternative",
+        "Rocket Relay auto booker",
+        "Amazon Relay auto booker"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nudoiq.com/rocket-relay-alternative/#faq",
+      "url": "https://nudoiq.com/rocket-relay-alternative/",
+      "name": "Rocket Relay alternative FAQ",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://nudoiq.com/#website"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Rocket Relay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rocket Relay is a browser extension for the Amazon Relay load board, published by West Wanted. Its listing and site name Alert, Search and Auto-book modes, one-click FastBook, filters and bulk Post-a-Truck (checked October 9, 2026). It has a Free plan and a $49 Pro plan. NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Rocket Relay a Chrome extension?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Rocket Relay is a browser extension you add from the Chrome Web Store. Its listing names Chrome, Edge and Brave on desktop, plus Android browsers such as Lemur and Quetta (checked October 9, 2026). NudoIQ is a separate Chrome extension that also works on Android in browsers such as Lemur. Run one load board extension at a time so the two don't conflict."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Rocket Relay free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Rocket Relay has a Free plan with auto-refresh, new-trip alerts and FastBook on matched trips. No card is required. Search, Auto-book, the filters and Post-a-Truck are on Pro, at $49 a month (checked October 9, 2026). NudoIQ has no free plan. It has a free preview with refresh and alerts, then a 7-day free trial with no card needed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Rocket Relay have a free trial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Rocket Relay's Pro plan starts with a 7-day free trial. Its FAQ says you add a card to begin but aren't charged during the trial (checked October 9, 2026). Its Free plan needs no card. NudoIQ's 7-day free trial needs only an email, no card. AutoBook, Instant Book and dispute letters come with it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Rocket Relay cost compared to NudoIQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rocket Relay Pro costs $49 a month plus any sales tax. Its Free plan costs nothing (checked October 9, 2026). NudoIQ is one $49.99 plan, the same price for one truck or a whole fleet, with a 7-day free trial and cancel anytime."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Rocket Relay auto book loads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Rocket Relay auto books loads on its Pro plan. Its listing says Auto-book takes matching loads by your filters, best-paying first, up to the number you set (checked October 9, 2026). It books only after you press Start. NudoIQ's AutoBook books only loads that clear your own minimum net profit, after the costs you enter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Rocket Relay a refresher or an auto booker?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rocket Relay is both a load board refresher and an auto booker. Auto-refresh and new-trip alerts are in its Free plan, and Auto-book is on Pro, $49 a month (checked October 9, 2026). NudoIQ refreshes the board too, and its AutoBook books by your minimum net profit, after the costs you enter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Rocket Pro the same as Rocket Relay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Rocket Pro is the Rocket Relay extension for the Amazon Relay load board. Its Chrome Web Store listing is named Relay Auto Booker Refresher Rocket Pro for Amazon Relay. The listing shows version 9.0.2, updated July 30, 2026. Pro is also the name of its paid plan, $49 a month (checked October 9, 2026)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is Rocket Relay Post Truck Manager?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Rocket Relay Post Truck Manager is a separate Chrome Web Store listing for Post a Truck orders. Its developer is Tasiev LLC, not West Wanted. It lists bulk delete, move and duplicate, at $39.99 a month after a 7-day trial (checked October 9, 2026). NudoIQ has no bulk order tools. It has One-Click Post A Truck from a load, with a recommended bid that improves with use."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a free Rocket Relay alternative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan. If you want to stay on a free plan, Rocket Relay's own Free plan has auto-refresh and alerts. EasyRelay lists a $0 Free plan, with its refresher on paid plans (checked October 9, 2026)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I switch from Rocket Relay to NudoIQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can switch in a few minutes. Turn off or remove Rocket Relay on Chrome's extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don't conflict."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is NudoIQ or Rocket Relay made by Amazon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, neither is made by Amazon, and both run inside the Relay load board in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. Rocket Relay is published by West Wanted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does NudoIQ work in Spanish?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. Rocket Relay's listing names Spanish too, among 10 languages (checked October 9, 2026)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does NudoIQ decide which loads to book?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can't fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because cancelling a booked load counts against you."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nudoiq.com/rocket-relay-alternative/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nudoiq.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://nudoiq.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rocket Relay alternative",
+          "item": "https://nudoiq.com/rocket-relay-alternative/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body data-layout="custom" data-clarity-unmask="true">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="promo">7 days free, no card needed &middot; Runs in your own Chrome &middot; English and Spanish</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Main navigation">
+      <a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a><a href="/#faq">FAQ</a>
+    </nav>
+    <div class="navright">
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+    </div>
+  </div></header>
+
+  <main id="main">
+  <article class="lf">
+    <header class="doc-hero"><div class="doc-hero-in">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li><span aria-current="page">Rocket Relay alternative</span></li></ol></nav>
+      <h1 class="page-title">Rocket Relay alternative: NudoIQ vs Rocket Pro for the Amazon Relay load board</h1>
+      <div class="answer" id="short-answer"><p class="lbl">Short answer</p><p>If you want loads booked by net profit, after your own costs, NudoIQ is a good Rocket Relay alternative. Its AutoBook takes a load only if it clears your minimum net profit. Rocket Relay lists many filters, but no place to enter fuel or driver pay. 7 days free with no card, then $49.99 a month flat, every truck.</p></div>
+      <p class="page-subtitle">Both refresh and auto book Relay loads. Here&#x27;s how they differ, from Rocket Relay&#x27;s pages on October 9, 2026.</p>
+      <div class="hero-cta"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Try it 7 days free</a><span class="micro">No card needed to start.</span></div>
+      <p class="byline">NudoIQ &middot; Published <time datetime="2026-10-10">October 10, 2026</time></p>
+    </div></header>
+
+    <div class="container">
+      <div class="prose">
+<section id="what-is-a-good-rocket-relay-alternative" aria-labelledby="what-is-a-good-rocket-relay-alternative-h">
+<h2 id="what-is-a-good-rocket-relay-alternative-h">What is a good Rocket Relay alternative?</h2>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, THE THREE MODES: Alert, Search, Auto-book); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, ADVANCED FILTERS: minimum payout and price per mile, distance, duration, start window, departure, stem time, deadhead, stops, location, quantity, multi-row); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 -->
+<p>NudoIQ, if you want loads booked by net profit, after your own costs. Rocket Relay&#x27;s pages say its Pro plan auto books by payout, price per mile and more filters. NudoIQ <a href="/amazon-relay-auto-refresh/">refreshes the board and books the loads that clear your number</a>.</p>
+</section>
+<section id="how-does-nudoiq-compare-to-rocket-relay" aria-labelledby="how-does-nudoiq-compare-to-rocket-relay-h">
+<h2 id="how-does-nudoiq-compare-to-rocket-relay-h">How does NudoIQ compare to Rocket Relay?</h2>
+<p>Here&#x27;s how they line up on the Relay load board, with where every Rocket Relay fact came from.</p>
+<!-- Freshness line reused from /loadfetcher-alternative/ (Martha 2026-10-09, research/copy/LOADFETCHER-ALT-SEO-2026-10-09.json A2). -->
+<p class="upd"><span class="checked"><time datetime="2026-10-10">Updated October 2026</time></span></p>
+<div class="tbl" role="region" aria-labelledby="cmp-cap" tabindex="0">
+<table id="comparison">
+<caption id="cmp-cap"><span>NudoIQ vs Rocket Relay for the Amazon Relay load board, from each product&#x27;s store listing and website, checked October 9, 2026. &quot;Not listed&quot; means that item wasn&#x27;t on Rocket Relay&#x27;s store listing or the site pages in Sources that day. We did not test their product. Spot an error? Tell us on the <a href="/support/">contact page</a> and we&#x27;ll fix it.</span></caption>
+<thead><tr><th scope="col">Item</th><th scope="col">NudoIQ</th><th scope="col">Rocket Relay</th></tr></thead>
+<tbody>
+<tr><th scope="row">What it is</th><td>Chrome extension for Amazon Relay carriers and dispatchers<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, overview); https://rocketrelaybooker.com/faq (FAQ, What is Rocket Relay?), accessed 2026-10-09 -->Browser extension for Amazon Relay carriers, owner-operators, dispatchers and fleets<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Auto-refresh the load board</th><td>Yes<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column), accessed 2026-10-09 -->Yes, on the Free plan<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">New loads and price rises flagged</th><td>Yes. A NEW or PRICE UP badge on the load<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, THE THREE MODES: Alert, Search, Auto-book); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, SMART SETTINGS: price-change alerts, custom sounds, hide similar trips, Tours trailer-status badges); https://rocketrelaybooker.com/faq (FAQ, support: email and Telegram); https://rocketrelaybooker.com/faq (FAQ: Alert tells you when a new trip is posted (a sound and a pop-up)), accessed 2026-10-09 -->Yes. Alert mode plays a sound and shows a pop-up, plus price-change alerts past your threshold<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Automatic booking</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 -->Yes. AutoBook books loads that clear your minimum net profit, and your minimum $/mile if you set one<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, THE THREE MODES: Alert, Search, Auto-book); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal), accessed 2026-10-09 -->Yes, on Pro. Books matching trips best-paying first, up to the number you set<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Booking filters</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js showFiltersPopup: min net profit, min $/mile, off/fade/hide, checked 2026-10-09 -->Minimum net profit and minimum $/mile. Loads that miss them can be faded or hidden<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, ADVANCED FILTERS: minimum payout and price per mile, distance, duration, start window, departure, stem time, deadhead, stops, location, quantity, multi-row); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal), accessed 2026-10-09 -->On Pro: payout, price per mile, distance, stops, deadhead, stem time, time windows, location and several lanes at once<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Net profit on each load</th><td>Yes. Net dollars and $/mile next to the price, after the costs you enter<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, ADVANCED FILTERS: minimum payout and price per mile, distance, duration, start window, departure, stem time, deadhead, stops, location, quantity, multi-row); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2: none listed); https://rocketrelaybooker.com/pricing (pricing page: none listed); https://rocketrelaybooker.com/faq (FAQ: none listed); https://rocketrelaybooker.com/ (home page: none listed), accessed 2026-10-09 -->Not listed. Filters cover payout and price per mile, with no fuel or driver pay inputs listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">One-tap booking</th><td>Instant Book on new and price-up loads (one tap, no confirm screen)<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, One-click FastBook); https://rocketrelaybooker.com/pricing (plans: FastBook on matched trips free, on every trip Pro), accessed 2026-10-09 -->FastBook: one click on matched trips (Free), or on every trip (Pro)<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Lane price history</th><td>Lane Intelligence: 90-day price range for the lane, from the first button under each load<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2: none listed); https://rocketrelaybooker.com/pricing (pricing page: none listed); https://rocketrelaybooker.com/faq (FAQ: none listed); https://rocketrelaybooker.com/ (home page: none listed), accessed 2026-10-09 -->Not listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Backhaul search</th><td>Yes, Find backhaul button under each load<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2: none listed); https://rocketrelaybooker.com/pricing (pricing page: none listed); https://rocketrelaybooker.com/faq (FAQ: none listed); https://rocketrelaybooker.com/ (home page: none listed), accessed 2026-10-09 -->Not listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Post a Truck</th><td>One-Click Post A Truck with a recommended bid. The bid needs time to learn your area and improves with use<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, BULK POST-A-TRUCK); https://rocketrelaybooker.com/pricing (plans: bulk Post-a-Truck is Pro); https://rocketrelaybooker.com/features (features page: the filters, Search, Auto-book, and Post-a-Truck are part of Pro); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal), accessed 2026-10-09 -->On Pro: one click from a load, pre-filled, plus bulk modify, clone or delete and assign drivers<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Scorecard dispute letters</th><td>Drafts the letter from the violation. You review and submit it. Amazon decides<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2: none listed); https://rocketrelaybooker.com/pricing (pricing page: none listed); https://rocketrelaybooker.com/faq (FAQ: none listed); https://rocketrelaybooker.com/ (home page: none listed), accessed 2026-10-09 -->Not listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Telegram alerts</th><td>Yes, to your phone: new matching loads, price rises and AutoBook bookings, with quiet hours<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, SMART SETTINGS: price-change alerts, custom sounds, hide similar trips, Tours trailer-status badges); https://rocketrelaybooker.com/faq (FAQ, support: email and Telegram); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2: none listed); https://rocketrelaybooker.com/pricing (pricing page: none listed); https://rocketrelaybooker.com/faq (FAQ: none listed); https://rocketrelaybooker.com/ (home page: none listed), accessed 2026-10-09 -->Not listed. Telegram appears only as a support contact<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Contracts</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js createContractsUI + instantBookContract: ALERT / AUTOBOOK on short-term contract offers, min per block, min total, max books 1 to 10, checked 2026-10-09 -->Yes. Refreshes short-term contract offers and can alert you or AutoBook the ones that meet your minimums<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2: none listed); https://rocketrelaybooker.com/pricing (pricing page: none listed); https://rocketrelaybooker.com/faq (FAQ: none listed); https://rocketrelaybooker.com/ (home page: none listed), accessed 2026-10-09 -->Not listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Where your load data stays</th><td><!-- NudoIQ source: https://nudoiq.com/privacy.html (Market intelligence: anonymized load pricing pooled across users; Fleet trip data: trip records and driver names; Driver contact details: Relay driver list copied during trial or paid), checked 2026-10-09 -->Lane prices pooled anonymously. Your driver list (trial or paid) and Fleet Dashboard trips are kept on its servers<sup class="fn"><a href="#src-6" aria-label="Source 6">6</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, Your data stays on your computer; PRIVATE BY DESIGN), accessed 2026-10-09 -->Its listing says your loads, trips, payouts and drivers stay on your computer<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">Free plan</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->No. Free preview (refresh, alerts) until you start the free trial<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column), accessed 2026-10-09 -->Yes. Auto-refresh, alerts and FastBook on matched trips, no card required<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Free trial</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->Yes. 7 days, no card needed to start<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://rocketrelaybooker.com/faq (FAQ, How does the free trial work? You add a card to begin); https://rocketrelaybooker.com/pricing (pricing page: A card is only needed to start the Pro trial); https://rocketrelaybooker.com/faq (FAQ: you add a card to begin, but you are not charged during the trial), accessed 2026-10-09 -->Yes, 7 days of Pro. A card is needed to start, and its FAQ says you aren&#x27;t charged during it<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Paid price</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->$49.99 a month flat, every truck, cancel anytime<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal), accessed 2026-10-09 -->Pro $49 a month, plus any sales tax, cancel anytime<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Languages</th><td>English and Spanish<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, Details: 10 languages), accessed 2026-10-09 -->10 listing languages, including English and Spanish<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">Android and iPhone</th><td><!-- NudoIQ source: research/PRODUCT-FACTS.md section 9 (Android via Chromium extension browsers, Kiwi tested 2026-10-07, Lemur current equivalent; iPhone no), checked 2026-10-09 -->Android in browsers that support extensions, such as Lemur. No iPhone<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, WORKS WHERE YOU DO: Chrome, Edge, Brave, Android browsers that support extensions (Lemur, Quetta)); https://rocketrelaybooker.com/faq (FAQ, Does it work on my phone? no iPhone version), accessed 2026-10-09 -->Android in Lemur or Quetta. No iPhone version<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Publisher</th><td>Sami Enterprises LLC<sup class="fn"><a href="#src-5" aria-label="Source 5">5</a></sup></td><td><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing, Developer: West Wanted, Spokane, WA), accessed 2026-10-09 -->West Wanted<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="sources">Sources</h3>
+<ol class="sources">
+<li id="src-1">NudoIQ extension for Amazon Relay, and <a href="/get/">nudoiq.com/get/</a></li>
+<li id="src-2">Rocket Relay Chrome Web Store listing (<a href="https://chrome.google.com/webstore/detail/kcnegnbacaohnhpmeckfakhlnahliklf" target="_blank" rel="nofollow noopener">chromewebstore.google.com/detail/kcnegnbacaohnhpmeckfakhlnahliklf</a>), v9.0.2, updated July 30, 2026, checked October 9, 2026</li>
+<li id="src-3">Rocket Relay website, <a href="https://rocketrelaybooker.com/" target="_blank" rel="nofollow noopener">rocketrelaybooker.com</a> (home, pricing, tools and FAQ pages), checked October 9, 2026</li>
+<li id="src-4">Rocket Relay Post Truck Manager Chrome Web Store listing (<a href="https://chrome.google.com/webstore/detail/pmlcbfihajkjdoaaocpphopbahfldcai" target="_blank" rel="nofollow noopener">chromewebstore.google.com/detail/pmlcbfihajkjdoaaocpphopbahfldcai</a>), v3.0.2, updated May 20, 2025, checked October 9, 2026</li>
+<li id="src-5"><a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Chrome Web Store</a> (NudoIQ listing for Amazon Relay), checked October 9, 2026</li>
+<li id="src-6"><a href="/privacy.html">nudoiq.com privacy policy</a> on load prices, fleet trip data and driver contact details, checked October 9, 2026</li>
+</ol>
+<p class="tmnote">Rocket Relay is a trademark of its owner, used here only to name and compare two Amazon Relay extensions. NudoIQ is not affiliated with Rocket Relay or with Amazon.</p>
+<p>To see how NudoIQ compares with Rocket Relay and five other Relay extensions on auto-booking, alerts and price, read <a href="/why-nudoiq/">the full comparison</a>.</p>
+</section>
+<section id="what-is-rocket-relay" aria-labelledby="what-is-rocket-relay-h">
+<h2 id="what-is-rocket-relay-h">What is Rocket Relay?</h2>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, overview); https://rocketrelaybooker.com/faq (FAQ, What is Rocket Relay?); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, THE THREE MODES: Alert, Search, Auto-book); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, One-click FastBook); https://rocketrelaybooker.com/pricing (plans: FastBook on matched trips free, on every trip Pro); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, ADVANCED FILTERS: minimum payout and price per mile, distance, duration, start window, departure, stem time, deadhead, stops, location, quantity, multi-row); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, BULK POST-A-TRUCK); https://rocketrelaybooker.com/pricing (plans: bulk Post-a-Truck is Pro); https://rocketrelaybooker.com/features (features page: the filters, Search, Auto-book, and Post-a-Truck are part of Pro); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, SMART SETTINGS: price-change alerts, custom sounds, hide similar trips, Tours trailer-status badges); https://rocketrelaybooker.com/faq (FAQ, support: email and Telegram); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, WORKS WHERE YOU DO: Chrome, Edge, Brave, Android browsers that support extensions (Lemur, Quetta)); https://rocketrelaybooker.com/faq (FAQ, Does it work on my phone? no iPhone version); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing: version 9.0.2, updated July 30, 2026; NEW (June 2026) compatible with the latest loadboard); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing, Developer: West Wanted, Spokane, WA), accessed 2026-10-09 -->
+<p>Rocket Relay is a browser extension for the Amazon Relay load board, from West Wanted. Its store listing is called Relay Auto Booker Refresher Rocket Pro. As of October 9, 2026, its listing and site name Alert, Search and Auto-book modes and one-click FastBook. They also name filters, bulk Post-a-Truck, price-change alerts and custom sounds. It runs in Chrome, Edge and Brave, and on Android in Lemur or Quetta.</p>
+</section>
+<section id="does-rocket-relay-auto-book-loads" aria-labelledby="does-rocket-relay-auto-book-loads-h">
+<h2 id="does-rocket-relay-auto-book-loads-h">Does Rocket Relay auto book loads?</h2>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, THE THREE MODES: Alert, Search, Auto-book); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 -->
+<p>Yes, Rocket Relay auto books loads on its Pro plan. As of October 9, 2026, its listing says Auto-book takes matching loads by your filters, best-paying first. It stops at the number you set and runs only after you press Start. <a href="/amazon-relay-auto-booker/">NudoIQ&#x27;s AutoBook books for you</a> too, but only loads that clear your minimum net profit, after the costs you enter.</p>
+</section>
+<section id="what-does-nudoiq-do-that-rocket-relay-doesnt-list" aria-labelledby="what-does-nudoiq-do-that-rocket-relay-doesnt-list-h">
+<h2 id="what-does-nudoiq-do-that-rocket-relay-doesnt-list-h">What does NudoIQ do that Rocket Relay doesn&#x27;t list?</h2>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2: none listed); https://rocketrelaybooker.com/pricing (pricing page: none listed); https://rocketrelaybooker.com/faq (FAQ: none listed); https://rocketrelaybooker.com/ (home page: none listed); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, ADVANCED FILTERS: minimum payout and price per mile, distance, duration, start window, departure, stem time, deadhead, stops, location, quantity, multi-row), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours; dist/nudoiq_v2.5.2.zip content.js createContractsUI + instantBookContract: ALERT / AUTOBOOK on short-term contract offers, min per block, min total, max books 1 to 10, checked 2026-10-09 -->
+<p>Rocket Relay&#x27;s listing and checked site pages didn&#x27;t name these three: an AutoBook net profit floor, net profit per load and scorecard dispute letters.</p>
+<ul><li><strong>Net profit floor for AutoBook:</strong> it books only loads that clear your minimum. It skips any load it can&#x27;t fully price and stops at your max-books cap.</li><li><strong>Net profit on every load:</strong> net dollars and $/mile next to the price. It uses the costs you enter, like fuel, MPG, driver pay and maintenance.</li><li><strong><a href="/amazon-relay-scorecard/">Scorecard dispute letters</a>:</strong> it drafts the letter from the violation. You read it, send it, and Amazon makes the call.</li><li><strong>Also:</strong> Lane Intelligence (90-day lane price range), backhaul search, alerts or AutoBook on short-term contract offers, and Telegram alerts to your phone.</li></ul>
+</section>
+<section id="what-does-rocket-relay-do-that-nudoiq-doesnt" aria-labelledby="what-does-rocket-relay-do-that-nudoiq-doesnt-h">
+<h2 id="what-does-rocket-relay-do-that-nudoiq-doesnt-h">What does Rocket Relay do that NudoIQ doesn&#x27;t?</h2>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, One-click FastBook); https://rocketrelaybooker.com/pricing (plans: FastBook on matched trips free, on every trip Pro); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, ADVANCED FILTERS: minimum payout and price per mile, distance, duration, start window, departure, stem time, deadhead, stops, location, quantity, multi-row); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, BULK POST-A-TRUCK); https://rocketrelaybooker.com/pricing (plans: bulk Post-a-Truck is Pro); https://rocketrelaybooker.com/features (features page: the filters, Search, Auto-book, and Post-a-Truck are part of Pro); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, SMART SETTINGS: price-change alerts, custom sounds, hide similar trips, Tours trailer-status badges); https://rocketrelaybooker.com/faq (FAQ, support: email and Telegram); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, Your data stays on your computer; PRIVATE BY DESIGN); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, Details: 10 languages); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column), accessed 2026-10-09 --><!-- NudoIQ source: https://nudoiq.com/privacy.html (Market intelligence: anonymized load pricing pooled across users; Fleet trip data: trip records and driver names; Driver contact details: Relay driver list copied during trial or paid), checked 2026-10-09 -->
+<p>As of October 9, 2026, Rocket Relay&#x27;s own pages list these, and NudoIQ doesn&#x27;t have them.</p>
+<ul><li>A Free plan you can stay on, with FastBook on matched trips and no card required. NudoIQ&#x27;s free preview also refreshes and alerts, but it has no booking and ends when you start the trial.</li><li><strong>More booking rules (Pro):</strong> location by state, ZIP or facility, distance, stops, deadhead, stem time and time windows. It can watch several lanes at once.</li><li><strong>Bulk Post-a-Truck (Pro):</strong> modify, clone or delete many orders at once and assign drivers. Pro also puts FastBook on every trip.</li><li><strong>More languages for your board:</strong> its listing names 10, from German to Ukrainian.</li><li><strong>Local data:</strong> its listing says your loads, trips, payouts and drivers stay on your computer. NudoIQ keeps your driver list on a trial or paid plan, and any Fleet Dashboard trips, on its servers (<a href="/privacy.html">privacy policy</a>).</li><li><strong>Also listed:</strong> a ~ key to start and stop and your own alert sounds (Free). Pro adds auto-expanded trip stops, trailer-status badges and a filter for loads at Amazon locations only.</li></ul>
+</section>
+<section id="how-much-does-rocket-relay-cost-vs-nudoiq" aria-labelledby="how-much-does-rocket-relay-cost-vs-nudoiq-h">
+<h2 id="how-much-does-rocket-relay-cost-vs-nudoiq-h">How much does Rocket Relay cost vs NudoIQ?</h2>
+<!-- Rocket Relay source: https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal); https://rocketrelaybooker.com/faq (FAQ, How does the free trial work? You add a card to begin); https://rocketrelaybooker.com/pricing (pricing page: A card is only needed to start the Pro trial), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->
+<p>On Rocket Relay, you pick a Free plan or Pro at $49 a month (checked October 9, 2026). Its 7-day Pro trial takes a card, but you aren&#x27;t charged during it. NudoIQ starts with a free preview on install, then a 7-day free trial with no card needed. After that it&#x27;s $49.99 a month flat for every truck. Cancel anytime.</p>
+</section>
+<section id="should-you-pick-rocket-relay-or-nudoiq" aria-labelledby="should-you-pick-rocket-relay-or-nudoiq-h">
+<h2 id="should-you-pick-rocket-relay-or-nudoiq-h">Should you pick Rocket Relay or NudoIQ?</h2>
+<div class="pick">
+<div class="pick-col"><h3>Pick Rocket Relay if</h3><!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, ADVANCED FILTERS: minimum payout and price per mile, distance, duration, start window, departure, stem time, deadhead, stops, location, quantity, multi-row); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, BULK POST-A-TRUCK); https://rocketrelaybooker.com/pricing (plans: bulk Post-a-Truck is Pro); https://rocketrelaybooker.com/features (features page: the filters, Search, Auto-book, and Post-a-Truck are part of Pro); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, Your data stays on your computer; PRIVATE BY DESIGN); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, Details: 10 languages); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours; dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><ul><li>You want to stay on a free plan. Its Free plan has auto-refresh, alerts and FastBook on matched trips.</li><li>You want auto booking by location, distance, stops or time windows, or on several lanes at once.</li><li>You post many trucks and want to change Post-a-Truck orders in bulk.</li><li>You want your load data kept on your own computer, or need a language beyond English and Spanish.</li></ul></div>
+<div class="pick-col pick-nq"><h3>Pick NudoIQ if</h3><ul><li>You want loads booked only when they clear your minimum net profit, after your own costs.</li><li>You want to see what each load nets you, and what its lane has paid, before you take it.</li><li>You fight scorecard hits and want the dispute letter drafted for you.</li><li>You want 7 days of auto booking with no card, or Telegram load alerts on your phone.</li></ul></div>
+</div>
+<p>Not sure which is right for your board? Try NudoIQ 7 days free. If it doesn&#x27;t fit how you book, switch back. It costs you a week, not a dime.</p>
+<p class="midlink"><a href="/get/">Try NudoIQ 7 days free</a></p>
+</section>
+<section id="how-do-you-switch-from-rocket-relay-to-nudoiq" aria-labelledby="how-do-you-switch-from-rocket-relay-to-nudoiq-h">
+<h2 id="how-do-you-switch-from-rocket-relay-to-nudoiq-h">How do you switch from Rocket Relay to NudoIQ?</h2>
+<!-- Rocket Relay source: https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal), accessed 2026-10-09 -->
+<p>Turn off or remove Rocket Relay in your Chrome extensions. Add NudoIQ from the Chrome Web Store, <a href="/amazon-relay-load-board/">open the Relay load board</a> and press START. Your Relay login doesn&#x27;t change. Paying for Rocket Pro? Its site says you cancel in the Stripe customer portal.</p>
+</section>
+<section id="faq" class="faq" aria-labelledby="faq-h">
+<h2 id="faq-h">Rocket Relay alternative FAQ</h2>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, overview); https://rocketrelaybooker.com/faq (FAQ, What is Rocket Relay?); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, THE THREE MODES: Alert, Search, Auto-book); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, One-click FastBook); https://rocketrelaybooker.com/pricing (plans: FastBook on matched trips free, on every trip Pro); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, ADVANCED FILTERS: minimum payout and price per mile, distance, duration, start window, departure, stem time, deadhead, stops, location, quantity, multi-row); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, BULK POST-A-TRUCK); https://rocketrelaybooker.com/pricing (plans: bulk Post-a-Truck is Pro); https://rocketrelaybooker.com/features (features page: the filters, Search, Auto-book, and Post-a-Truck are part of Pro); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing, Developer: West Wanted, Spokane, WA), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 --><details><summary>What is Rocket Relay?</summary><div class="a"><p>Rocket Relay is a browser extension for the Amazon Relay load board, published by West Wanted. Its listing and site name Alert, Search and Auto-book modes, one-click FastBook, filters and bulk Post-a-Truck (checked October 9, 2026). It has a Free plan and a $49 Pro plan. NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit.</p></div></details>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, overview); https://rocketrelaybooker.com/faq (FAQ, What is Rocket Relay?); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, WORKS WHERE YOU DO: Chrome, Edge, Brave, Android browsers that support extensions (Lemur, Quetta)); https://rocketrelaybooker.com/faq (FAQ, Does it work on my phone? no iPhone version), accessed 2026-10-09 --><!-- NudoIQ source: research/PRODUCT-FACTS.md section 9 (Android via Chromium extension browsers, Kiwi tested 2026-10-07, Lemur current equivalent; iPhone no), checked 2026-10-09 --><details><summary>Is Rocket Relay a Chrome extension?</summary><div class="a"><p>Yes, Rocket Relay is a browser extension you add from the Chrome Web Store. Its listing names Chrome, Edge and Brave on desktop, plus Android browsers such as Lemur and Quetta (checked October 9, 2026). NudoIQ is a separate Chrome extension that also works on Android in browsers such as Lemur. Run one load board extension at a time so the two don&#x27;t conflict.</p></div></details>
+<!-- Rocket Relay source: https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, BULK POST-A-TRUCK); https://rocketrelaybooker.com/pricing (plans: bulk Post-a-Truck is Pro); https://rocketrelaybooker.com/features (features page: the filters, Search, Auto-book, and Post-a-Truck are part of Pro), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>Is Rocket Relay free?</summary><div class="a"><p>Yes, Rocket Relay has a Free plan with auto-refresh, new-trip alerts and FastBook on matched trips. No card is required. Search, Auto-book, the filters and Post-a-Truck are on Pro, at $49 a month (checked October 9, 2026). NudoIQ has no free plan. It has a free preview with refresh and alerts, then a 7-day free trial with no card needed.</p></div></details>
+<!-- Rocket Relay source: https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column); https://rocketrelaybooker.com/faq (FAQ, How does the free trial work? You add a card to begin); https://rocketrelaybooker.com/pricing (pricing page: A card is only needed to start the Pro trial); https://rocketrelaybooker.com/faq (FAQ: you add a card to begin, but you are not charged during the trial), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>Does Rocket Relay have a free trial?</summary><div class="a"><p>Yes, Rocket Relay&#x27;s Pro plan starts with a 7-day free trial. Its FAQ says you add a card to begin but aren&#x27;t charged during the trial (checked October 9, 2026). Its Free plan needs no card. NudoIQ&#x27;s 7-day free trial needs only an email, no card. AutoBook, Instant Book and dispute letters come with it.</p></div></details>
+<!-- Rocket Relay source: https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>How much does Rocket Relay cost compared to NudoIQ?</summary><div class="a"><p>Rocket Relay Pro costs $49 a month plus any sales tax. Its Free plan costs nothing (checked October 9, 2026). NudoIQ is one $49.99 plan, the same price for one truck or a whole fleet, with a 7-day free trial and cancel anytime.</p></div></details>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, THE THREE MODES: Alert, Search, Auto-book); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 --><details><summary>Does Rocket Relay auto book loads?</summary><div class="a"><p>Yes, Rocket Relay auto books loads on its Pro plan. Its listing says Auto-book takes matching loads by your filters, best-paying first, up to the number you set (checked October 9, 2026). It books only after you press Start. NudoIQ&#x27;s AutoBook books only loads that clear your own minimum net profit, after the costs you enter.</p></div></details>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, THE THREE MODES: Alert, Search, Auto-book); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 --><details><summary>Is Rocket Relay a refresher or an auto booker?</summary><div class="a"><p>Rocket Relay is both a load board refresher and an auto booker. Auto-refresh and new-trip alerts are in its Free plan, and Auto-book is on Pro, $49 a month (checked October 9, 2026). NudoIQ refreshes the board too, and its AutoBook books by your minimum net profit, after the costs you enter.</p></div></details>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, overview); https://rocketrelaybooker.com/faq (FAQ, What is Rocket Relay?); https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: Pro is $49/month after a 7-day free trial and unlocks the filters, Search, Auto-book, FastBook on every trip and bulk Post-a-Truck; plus any sales tax; cancel in the Stripe customer portal); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing: version 9.0.2, updated July 30, 2026; NEW (June 2026) compatible with the latest loadboard), accessed 2026-10-09 --><details><summary>Is Rocket Pro the same as Rocket Relay?</summary><div class="a"><p>Yes, Rocket Pro is the Rocket Relay extension for the Amazon Relay load board. Its Chrome Web Store listing is named Relay Auto Booker Refresher Rocket Pro for Amazon Relay. The listing shows version 9.0.2, updated July 30, 2026. Pro is also the name of its paid plan, $49 a month (checked October 9, 2026).</p></div></details>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/rocket-relay-post-truck-m/pmlcbfihajkjdoaaocpphopbahfldcai (Rocket Relay Post Truck Manager store listing: bulk orders, $39.99/month after a 7-day trial; developer Tasiev LLC; version 3.0.2, updated May 20, 2025); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing, Developer: West Wanted, Spokane, WA), accessed 2026-10-09 --><details><summary>What is Rocket Relay Post Truck Manager?</summary><div class="a"><p>Rocket Relay Post Truck Manager is a separate Chrome Web Store listing for Post a Truck orders. Its developer is Tasiev LLC, not West Wanted. It lists bulk delete, move and duplicate, at $39.99 a month after a 7-day trial (checked October 9, 2026). NudoIQ has no bulk order tools. It has <a href="/amazon-relay-post-a-truck/">One-Click Post A Truck</a> from a load, with a recommended bid that improves with use.</p></div></details>
+<!-- Rocket Relay source: https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column), accessed 2026-10-09 --><!-- EasyRelay source: https://www.easyrelay.us/en (pricing: Free $0, Pro Solo $14.99/mo, Pro Team $44.99/mo, Monthly or 6 Months (save up to 42%)); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, summary: Auto-refresh the load board); https://www.easyrelay.us/en (plans: Human-like Refresh in Pro Solo and Pro Team, not in Free), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>Is there a free Rocket Relay alternative?</summary><div class="a"><p>NudoIQ&#x27;s free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it&#x27;s $49.99 a month to keep using it, so it isn&#x27;t a free plan. If you want to stay on a free plan, Rocket Relay&#x27;s own Free plan has auto-refresh and alerts. <a href="/easyrelay-alternative/">EasyRelay</a> lists a $0 Free plan, with its refresher on paid plans (checked October 9, 2026).</p></div></details>
+<!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>Can I switch from Rocket Relay to NudoIQ?</summary><div class="a"><p>Yes, you can switch in a few minutes. Turn off or remove Rocket Relay on Chrome&#x27;s extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don&#x27;t conflict.</p></div></details>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, overview); https://rocketrelaybooker.com/faq (FAQ, What is Rocket Relay?); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, WORKS WHERE YOU DO: Chrome, Edge, Brave, Android browsers that support extensions (Lemur, Quetta)); https://rocketrelaybooker.com/faq (FAQ, Does it work on my phone? no iPhone version); https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing, Developer: West Wanted, Spokane, WA), accessed 2026-10-09 --><details><summary>Is NudoIQ or Rocket Relay made by Amazon?</summary><div class="a"><p>No, neither is made by Amazon, and both run inside the Relay load board in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. Rocket Relay is published by West Wanted.</p></div></details>
+<!-- Rocket Relay source: https://chromewebstore.google.com/detail/relay-auto-booker-refresh/kcnegnbacaohnhpmeckfakhlnahliklf (store listing v9.0.2, Details: 10 languages), accessed 2026-10-09 --><!-- NudoIQ source: NudoIQ Chrome Web Store listing v2.5.2 (Works on Amazon Relay sites for the US, Canada, UK, Germany, Spain, France, Italy, Poland, Czech Republic, and India), checked 2026-10-09 --><details><summary>Does NudoIQ work in Spanish?</summary><div class="a"><p>Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. Rocket Relay&#x27;s listing names Spanish too, among 10 languages (checked October 9, 2026).</p></div></details>
+<!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 --><details><summary>How does NudoIQ decide which loads to book?</summary><div class="a"><p>In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can&#x27;t fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because <a href="/amazon-relay-cancel-load/">cancelling a booked load counts against you</a>.</p></div></details>
+</section>
+      </div>
+
+      <aside class="cta" aria-labelledby="cta-h">
+        <div><h2 id="cta-h">Let the board book itself, at your number.</h2><p>7 days free, then $49.99 a month for every truck. Cancel anytime.</p></div>
+        <div class="cta-act"><a class="btn btn-go" style="width:100%" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Try it 7 days free</a><p class="micro">No card needed to start.</p></div>
+      </aside>
+    </div>
+  </article>
+
+  <div class="container" style="padding-top:0">
+    <nav class="related" aria-label="More Amazon Relay guides">
+      <h2>More Amazon Relay guides</h2>
+      <div class="cards">
+        <a href="/amazon-relay-auto-booker/">Amazon Relay Auto Booker: How Automatic Booking Works</a>
+        <a href="/amazon-relay-auto-refresh/">Amazon Relay Auto Refresh: Why It Matters and How It Works</a>
+        <a href="/best-amazon-relay-extensions/">Best Amazon Relay Extensions: Refresher and Auto-Booker Tools</a>
+        <a href="/amazon-relay-scorecard/">Amazon Relay scorecard: how the performance score works and how to dispute it</a>
+        <a href="/amazon-relay-load-board/">How the Amazon Relay Load Board Works</a>
+      </div>
+    </nav>
+  </div>
+  </main>
+
+  <footer class="container" style="padding-top:0">
+    <div class="footer" style="margin-top:0">
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/">Amazon Relay guides</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="/partners/">Partners</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contact</a>
+    </div>
+    <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. Amazon Relay requirements change; confirm current rules at relay.amazon.com.</p>
+  </footer>
+</body>
+</html>
