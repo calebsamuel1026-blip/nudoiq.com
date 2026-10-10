@@ -1598,7 +1598,7 @@ NudoIQ vs LoadFetcher, from each product's public Chrome Web Store listing and w
 | What it is | Chrome extension for Amazon Relay carriers and dispatchers | Chrome extension for Amazon Relay carriers, owner-operators and dispatchers |
 | Auto-refresh the load board | Yes. Speed is adjustable, 3 seconds by default | Yes ("Auto-Refresher") |
 | Automatic booking | Yes. AutoBook mode books loads that match your rules and clear your Min Net Profit. It skips a load it can't fully price | Not listed on the store listing or the plans section |
-| One-tap booking | Instant Book on new and price-up loads (one tap, no confirm screen) | Book button on each load row |
+| One-tap booking | Instant Book on new and price-up loads (one tap, no confirm screen) | Not listed |
 | Net profit on each load | Yes. Net dollars and $/mile next to the price, after the costs you enter | Not listed as a per-load figure. Plus plan lists "Financials & driver earnings" |
 | Lane price history | Lane Intelligence: 90-day price range for the lane, from the first button under each load | Yes ("Load Pricing & History") |
 | Backhaul search | Yes, Find backhaul button under each load | Yes, on the Plus plan ("Load analytics & backhaul") |
@@ -1625,7 +1625,7 @@ LoadFetcher is a trademark of its owner, used here only to name and compare. Nud
 
 ## Does Load Fetcher auto book loads?
 
-Its public listing doesn't say it does. As of October 4, 2026, automatic booking isn't on LoadFetcher's store listing or plans section. It shows a Book button for booking each load by hand. NudoIQ's AutoBook books for you, and only loads that clear your Min Net Profit.
+Its public listing doesn't say it does. As of October 4, 2026, automatic booking isn't on LoadFetcher's store listing or plans section. NudoIQ's AutoBook books for you, and only loads that clear your Min Net Profit.
 
 ## What does NudoIQ do that Load Fetcher doesn't list?
 
@@ -1677,7 +1677,7 @@ NudoIQ is a good Load Fetcher alternative if you want the extension to book load
 NudoIQ isn't free, but you can try it 7 days free with no card needed to start. If you need a tool that stays free, LoadFetcher itself has a permanent Free plan, LODA Relay is listed as free, and Rocket Pro lists a free plan on its website (checked October 2026).
 
 ### Does Load Fetcher auto book loads?
-Not according to its public listing. As of October 4, 2026, LoadFetcher's Chrome Web Store listing and plans section don't list automatic booking. Its screenshots show a Book button on each load for booking by hand. NudoIQ's AutoBook mode books matching loads that clear your own minimum net profit.
+Not according to its public listing. As of October 4, 2026, LoadFetcher's Chrome Web Store listing and plans section don't list automatic booking. NudoIQ's AutoBook mode books matching loads that clear your own minimum net profit.
 
 ### What is the best Amazon Relay extension?
 The best Amazon Relay extension is the one that does the job you're stuck on. For a free refresher with Post a Truck tools, LoadFetcher's Free plan covers it. For automatic booking at your own profit floor, net profit per load and scorecard dispute letters, NudoIQ is built for that.
