@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <!-- Google Ads click id capture (2026-10-05, copied from /loadfetcher-alternative/ 2026-10-10 for /easyrelay-alternative/; research/google-ads/RESTRUCTURE-2026-10-05.md). The Web Store hop loses the
+       ad click, so the gclid (or gbraid/wbraid on iOS/app traffic) is kept in localStorage on nudoiq.com, and /welcome/
+       (same origin, opened by the extension after install) sends it with the welcome_opened funnel row. That row is what
+       the "Trial started" / "Paid subscriber" offline conversions are matched back to. Kept 90 days (Google's upload
+       window); the newest click wins. Store links get utm_source/medium/campaign only: the Chrome Web Store dashboard
+       reports those three and passes nothing to the extension, so a per-click id in the store URL would carry nothing. -->
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search), keys = ["gclid", "gbraid", "wbraid"], i, v;
+        for (i = 0; i < keys.length; i++) {
+          v = q.get(keys[i]);
+          if (v && /^[\w.\-]{10,300}$/.test(v)) {
+            localStorage.setItem("nudoiq_gclid", JSON.stringify({ type: keys[i], id: v, ts: Date.now(), lp: location.pathname }));
+            break;
+          }
+        }
+        var s = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+        if (!s || !s.ts || Date.now() - s.ts > 90 * 864e5) return;
+        var camp = (q.get("utm_campaign") || "google_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "google_ads";
+        var tag = function () {
+          Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+            var u = new URL(a.href);
+            u.searchParams.set("utm_source", "google");
+            u.searchParams.set("utm_medium", "cpc");
+            u.searchParams.set("utm_campaign", camp);
+            a.href = u.toString();
+          });
+        };
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+      } catch (e) {}
+    })();
+  </script>
+  <title>Easy Relay Extension Alternative for Amazon Relay (2026)</title>
+  <meta name="description" content="Easy Relay alternative for the Amazon Relay load board: NudoIQ auto books at your net profit floor. See the full comparison. Try it 7 days free.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/easyrelay-alternative/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Easy Relay alternative: NudoIQ vs EasyRelay (2026)">
+  <meta property="og:description" content="Easy Relay alternative for the Amazon Relay load board: NudoIQ auto books at your net profit floor. See the full comparison. Try it 7 days free.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/easyrelay-alternative/">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="article:published_time" content="2026-10-10">
+  <meta property="article:modified_time" content="2026-10-10">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Easy Relay alternative: NudoIQ vs EasyRelay (2026)">
+  <meta name="twitter:description" content="Easy Relay alternative for the Amazon Relay load board: NudoIQ auto books at your net profit floor. See the full comparison. Try it 7 days free.">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: "easyrelay-alternative"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "easyrelay-alternative"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <style>
+  /* Page-specific additions on top of doc.css + guide.css (hand-built page, data-layout="custom"). */
+  /* Contrast: the shared title-panel blues (#2551B8 on #B1CBFF = 4.36:1) and grey #888 (3.54:1) miss WCAG AA, so this page
+     uses navy in the panel and the scorecard page's darker grey. */
+  :root{--g3:#6F6F6F}
+  .lf .doc-hero .crumbs,.lf .doc-hero .crumbs a,.lf .page-subtitle,.lf .hero-cta .micro,.lf .byline,.cta p,.cta .micro{color:var(--navy)}
+  .lf .byline{opacity:1}
+  .lf caption a{color:var(--blue-deep)}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:999;border-radius:0 0 var(--ri) 0}
+  .skip:focus{left:0}
+  .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:0 8px}
+  .crumbs li+li::before{content:"\203A";margin-right:8px;color:var(--blue-deep)}
+  .lf .page-title{max-width:24ch;font-size:clamp(32px,4.4vw,52px)}
+  .lf .doc-hero .answer{background:#fff;border-color:rgba(22,22,22,.06);border-left-color:var(--blue);margin:22px 0 18px;max-width:var(--col)}
+  .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:22px}
+  .hero-cta .micro{color:var(--blue-deep);font-size:14px;font-weight:500}
+  .prose section{scroll-margin-top:88px}
+  .prose section > p{color:var(--ink-4);font-size:17px;line-height:1.68;margin:0 0 18px}
+  .prose section:first-child h2{margin-top:8px}
+  .lf .tbl{margin:10px 0 18px;background:#fff}
+  .lf .tbl:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+  .lf table{min-width:680px;font-size:14.5px}
+  .lf caption{caption-side:top;text-align:left;padding:14px 16px;font-size:13.5px;line-height:1.55;color:var(--ink-4);
+    background:var(--paper-2);border-bottom:1px solid rgba(22,22,22,.08)}
+  .lf caption span{display:block;position:sticky;left:16px;max-width:calc(100vw - 66px)}
+  .lf thead th{white-space:nowrap}
+  .lf thead th:nth-child(2){color:var(--blue-deep)}
+  .lf tbody th[scope=row]{background:#fff;color:var(--ink);font-weight:600;width:24%;position:sticky;left:0;z-index:1;
+    box-shadow:1px 0 0 rgba(22,22,22,.08)}
+  .lf thead th:first-child{position:sticky;left:0;z-index:2}
+  .lf tbody tr:last-child th{border-bottom:0}
+  .fn{font-size:11px;line-height:0;margin-left:3px;white-space:nowrap}
+  .fn a{text-decoration:none;font-weight:600;padding:0 2px}
+  .prose h3#sources{font-size:15px;margin:18px 0 8px}
+  .sources{font-size:14px;color:var(--ink-4)}
+  .prose .sources li{font-size:14px;line-height:1.55;margin:0 0 6px}
+  .sources a{word-break:break-all}
+  .sources li{scroll-margin-top:88px} /* footnote jumps land below the sticky header */
+  .prose section > p.tmnote{font-size:13px;color:var(--g3);line-height:1.55;margin:4px 0 0}
+  .pick{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 20px}
+  .pick-col{background:var(--paper-2);border:1px solid rgba(22,22,22,.07);border-radius:var(--ri);padding:20px 22px 6px}
+  .pick-nq{border-color:var(--peri-2);background:#F3F7FF}
+  .prose .pick h3{margin:0 0 10px;font-size:17px}
+  .prose .pick li{font-size:15.5px;line-height:1.55}
+  .midlink a{font-weight:600}
+  .prose .faq{margin:48px 0 0;max-width:none}
+  .prose .faq h2{margin:0 0 14px}
+  .faq .a p{font-size:16px;line-height:1.62}
+  .cta .micro{color:var(--navy);font-size:13.5px;margin-top:8px;text-align:center}
+  /* Freshness pill above the table: same component as /loadfetcher-alternative/ and /get/loadfetcher/ .checked. */
+  .prose section > p.upd{margin:0 0 2px}
+  .upd .checked{display:inline-flex;align-items:center;gap:6px;background:var(--paper-2);border:1px solid #E1E7F5;border-radius:var(--rp);padding:5px 14px;font-size:12.5px;font-weight:500;color:var(--ink-4)}
+  @media (max-width:660px){
+    .pick{grid-template-columns:1fr}
+    .prose section > p{font-size:16px}
+    .lf .doc-hero .answer{padding:16px 18px}
+    .hero-cta .btn{width:100%}
+    .hero-cta .micro{width:100%;text-align:center}
+    .cta-act{width:100%}
+  }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://nudoiq.com/easyrelay-alternative/#article",
+      "headline": "Easy Relay alternative: NudoIQ vs EasyRelay for the Amazon Relay load board",
+      "description": "Easy Relay alternative for the Amazon Relay load board: NudoIQ auto books at your net profit floor. See the full comparison. Try it 7 days free.",
+      "abstract": "Pick NudoIQ if you want loads booked for you, and only the ones that clear your own net profit. EasyRelay's listing and plans show no automatic booking. NudoIQ also drafts scorecard dispute letters. It's $49.99 a month flat for every truck, after a 7-day free trial with no card needed.",
+      "url": "https://nudoiq.com/easyrelay-alternative/",
+      "mainEntityOfPage": "https://nudoiq.com/easyrelay-alternative/",
+      "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+      "datePublished": "2026-10-10",
+      "dateModified": "2026-10-10",
+      "inLanguage": "en-US",
+      "author": {
+        "@id": "https://nudoiq.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://nudoiq.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://nudoiq.com/#software"
+      },
+      "about": [
+        {
+          "@id": "https://nudoiq.com/#software"
+        },
+        {
+          "@type": "Thing",
+          "name": "EasyRelay",
+          "url": "https://www.easyrelay.us/",
+          "sameAs": [
+            "https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag"
+          ]
+        }
+      ],
+      "keywords": [
+        "EasyRelay alternative",
+        "Easy Relay extension",
+        "Amazon Relay auto booker",
+        "Amazon Relay dispatcher tools"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nudoiq.com/easyrelay-alternative/#faq",
+      "url": "https://nudoiq.com/easyrelay-alternative/",
+      "name": "Easy Relay alternative FAQ",
+      "inLanguage": "en-US",
+      "isPartOf": {
+        "@id": "https://nudoiq.com/#website"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Easy Relay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Easy Relay, or EasyRelay, is a Chrome extension for Amazon Relay dispatchers and carrier owners, published by Easy Relay LLC. Its store listing names tools such as an auto refresher, Fast Book, tolls, backhaul and Telegram trip alerts (checked October 9, 2026). NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Easy Relay a Chrome extension?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Easy Relay is a Chrome extension for the Amazon Relay load board. You add it from its Chrome Web Store listing, where it's named EasyRelay (checked October 9, 2026). NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so the two don't conflict."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is it EasyRelay or Easy Relay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Both, for the same Amazon Relay extension. Its Chrome Web Store listing uses EasyRelay, and its website and company name use Easy Relay (Easy Relay LLC). This page compares it with NudoIQ, a separate extension for the same board."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Easy Relay auto book loads?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not according to its store listing, which lists Fast Book for booking a load with a double-click. As of October 9, 2026, automatic booking isn't on EasyRelay's listing or plans. Its website's description does mention auto-booking. NudoIQ's AutoBook mode books matching loads that clear your own minimum net profit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Easy Relay free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can use EasyRelay on a $0 Free plan. Its plans list the auto refresher only on Pro Solo, at $14.99 a month, and Pro Team, at $44.99 (checked October 9, 2026). NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Easy Relay have a free trial?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, its pages give you two ways to try it. Its home page lists a 7-day free trial, and its FAQ says the $0 Free plan lets you try the extension before Pro. Neither page says whether you need a card (checked October 9, 2026). NudoIQ has a 7-day free trial with no card needed to start, and a free preview before it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does Easy Relay cost compared to NudoIQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "EasyRelay costs you less. You can use its $0 Free plan, or get the refresher with Pro Solo at $14.99 a month or Pro Team at $44.99. A 6-month option, it says, saves up to 42% (checked October 9, 2026). NudoIQ is one $49.99 plan, the same for one truck or a whole fleet, with a 7-day free trial and cancel anytime."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is there a free Easy Relay alternative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan. If you want to stay free, EasyRelay's own Free plan is $0, but it doesn't list the refresher. Rocket Relay lists a free plan with auto-refresh and new-trip alerts (checked October 9, 2026)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Easy Relay track trips?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, EasyRelay's trip tools show your truck's current location, early or late ETAs, app usage and trailer ID. Its Telegram bot sends trip alerts such as yard checking, road restriction and driver check-in (checked October 9, 2026). NudoIQ partly covers trips. Its in-transit strip shows where the truck is, whether it's on time, early or late, and miles left, with no trip alerts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does NudoIQ decide which loads to book?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can't fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because cancelling a booked load counts against you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does NudoIQ work in Spanish?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. EasyRelay's store listing shows English as its language, and its website offers English and Russian (checked October 9, 2026)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I switch from Easy Relay to NudoIQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you can switch in a few minutes. Turn off or remove EasyRelay on Chrome's extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don't conflict."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is NudoIQ or Easy Relay made by Amazon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, neither is made by Amazon, and both run inside Amazon Relay in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. EasyRelay is published by Easy Relay LLC."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nudoiq.com/easyrelay-alternative/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://nudoiq.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guides",
+          "item": "https://nudoiq.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Easy Relay alternative",
+          "item": "https://nudoiq.com/easyrelay-alternative/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body data-layout="custom" data-clarity-unmask="true">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="promo">7 days free, no card needed &middot; Runs in your own Chrome &middot; English and Spanish</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Main navigation">
+      <a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a><a href="/#faq">FAQ</a>
+    </nav>
+    <div class="navright">
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+    </div>
+  </div></header>
+
+  <main id="main">
+  <article class="lf">
+    <header class="doc-hero"><div class="doc-hero-in">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/guides/">Guides</a></li><li><span aria-current="page">Easy Relay alternative</span></li></ol></nav>
+      <h1 class="page-title">Easy Relay alternative: NudoIQ vs EasyRelay for the Amazon Relay load board</h1>
+      <div class="answer" id="short-answer"><p class="lbl">Short answer</p><p>Pick NudoIQ if you want loads booked for you, and only the ones that clear your own net profit. EasyRelay&#x27;s listing and plans show no automatic booking. NudoIQ also drafts scorecard dispute letters. It&#x27;s $49.99 a month flat for every truck, after a 7-day free trial with no card needed.</p></div>
+      <p class="page-subtitle">Both work on the Relay load board. Here&#x27;s how they differ, from EasyRelay&#x27;s own pages on October 9, 2026.</p>
+      <div class="hero-cta"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Try it 7 days free</a><span class="micro">No card needed to start.</span></div>
+      <p class="byline">NudoIQ &middot; Published <time datetime="2026-10-10">October 10, 2026</time></p>
+    </div></header>
+
+    <div class="container">
+      <div class="prose">
+<section id="what-is-a-good-easy-relay-alternative" aria-labelledby="what-is-a-good-easy-relay-alternative-h">
+<h2 id="what-is-a-good-easy-relay-alternative-h">What is a good Easy Relay alternative?</h2>
+<!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, summary: Auto-refresh the load board); https://www.easyrelay.us/en (plans: Human-like Refresh in Pro Solo and Pro Team, not in Free); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, LOAD BOARD FEATURES); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, TRIPS FEATURES: Telegram Bot Notifications, Current Location, ETA Early/Late, App Usage, Trailer ID), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 -->
+<p>NudoIQ, if you want loads booked for you while you drive or dispatch. EasyRelay refreshes and sorts the board, helps you post trucks and tracks your trips. NudoIQ <a href="/amazon-relay-auto-refresh/">refreshes the board and books the loads that clear your number</a>.</p>
+</section>
+<section id="how-does-nudoiq-compare-to-easy-relay" aria-labelledby="how-does-nudoiq-compare-to-easy-relay-h">
+<h2 id="how-does-nudoiq-compare-to-easy-relay-h">How does NudoIQ compare to Easy Relay?</h2>
+<p>Here&#x27;s how they line up on the Relay load board, with where every EasyRelay fact came from.</p>
+<!-- Freshness line reused from /loadfetcher-alternative/ (Martha 2026-10-09, research/copy/LOADFETCHER-ALT-SEO-2026-10-09.json A2). -->
+<p class="upd"><span class="checked"><time datetime="2026-10-10">Updated October 2026</time></span></p>
+<div class="tbl" role="region" aria-labelledby="cmp-cap" tabindex="0">
+<table id="comparison">
+<caption id="cmp-cap"><span>NudoIQ vs EasyRelay for the Amazon Relay load board, from each product&#x27;s store listing and website, checked October 9, 2026. &quot;Not listed&quot; means that item wasn&#x27;t on EasyRelay&#x27;s store listing or the site pages in Sources that day. We did not test their product. Spot an error? Tell us on the <a href="/support/">contact page</a> and we&#x27;ll fix it.</span></caption>
+<thead><tr><th scope="col">Item</th><th scope="col">NudoIQ</th><th scope="col">EasyRelay</th></tr></thead>
+<tbody>
+<tr><th scope="row">What it is</th><td>Chrome extension for Amazon Relay carriers and dispatchers<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, overview); https://www.easyrelay.us/en (home page), accessed 2026-10-09 -->Chrome extension for Amazon Relay dispatchers and carrier owners<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Auto-refresh the load board</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->Yes, and it&#x27;s part of the free preview<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, summary: Auto-refresh the load board); https://www.easyrelay.us/en (plans: Human-like Refresh in Pro Solo and Pro Team, not in Free), accessed 2026-10-09 -->Yes, on Pro Solo and Pro Team. Not on the Free plan&#x27;s list<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Automatic booking</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 -->Yes. AutoBook books loads that clear your minimum net profit, and your minimum $/mile if you set one<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, Fast Book, double-click; no automatic booking listed); https://www.easyrelay.us/en (plan lists: no automatic booking; meta description mentions auto-book); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138: none listed); https://www.easyrelay.us/en (home page and plans: none listed); https://www.easyrelay.us/en/all-features (all-features page: none listed), accessed 2026-10-09 -->Not on its store listing or plans. Its website description says &quot;Auto-book loads&quot;<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Quick booking</th><td>Instant Book on new and price-up loads (one tap, no confirm screen)<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, Fast Book, double-click; no automatic booking listed); https://www.easyrelay.us/en (plan lists: no automatic booking; meta description mentions auto-book), accessed 2026-10-09 -->Fast Book: quick booking with a double-click<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">New loads and price rises flagged</th><td>Yes. A NEW or PRICE UP badge on the load<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, LOAD BOARD FEATURES), accessed 2026-10-09 -->Yes. Newest to Top, and a rate-change alert with a minimum change you set<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">Net profit on each load</th><td>Yes. Net dollars and $/mile next to the price, after the costs you enter<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138: none listed); https://www.easyrelay.us/en (home page and plans: none listed); https://www.easyrelay.us/en/all-features (all-features page: none listed); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, LOAD BOARD FEATURES); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, TRIPS FEATURES: Telegram Bot Notifications, Current Location, ETA Early/Late, App Usage, Trailer ID), accessed 2026-10-09 -->Not listed as a net figure. Shows tolls and deadhead to pickup on loads, gross per mile on trips<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Lane price history</th><td>Lane Intelligence: 90-day price range for the lane, from the first button under each load<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138: none listed); https://www.easyrelay.us/en (home page and plans: none listed); https://www.easyrelay.us/en/all-features (all-features page: none listed), accessed 2026-10-09 -->Not listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Backhaul search</th><td>Yes, Find backhaul button under each load<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, LOAD BOARD FEATURES); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, TRIPS FEATURES: Telegram Bot Notifications, Current Location, ETA Early/Late, App Usage, Trailer ID), accessed 2026-10-09 -->Yes. Return loads from the delivery city<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">Post a Truck</th><td>One-Click Post A Truck with a recommended bid. The bid needs time to learn your area and improves with use<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, LOAD BOARD FEATURES), accessed 2026-10-09 -->Yes. Fills out truck posting details for you<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">Scorecard dispute letters</th><td>Drafts the letter from the violation. You review and submit it. Amazon decides<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138: none listed); https://www.easyrelay.us/en (home page and plans: none listed); https://www.easyrelay.us/en/all-features (all-features page: none listed), accessed 2026-10-09 -->Not listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Contracts</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js createContractsUI + instantBookContract: ALERT / AUTOBOOK on short-term contract offers, min per block, min total, max books 1 to 10, checked 2026-10-09 -->Yes. Refreshes short-term contract offers and can alert you or AutoBook the ones that meet your minimums<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138: none listed); https://www.easyrelay.us/en (home page and plans: none listed); https://www.easyrelay.us/en/all-features (all-features page: none listed), accessed 2026-10-09 -->Not listed<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a>,<a href="#src-4" aria-label="Source 4">4</a></sup></td></tr>
+<tr><th scope="row">Trip tracking</th><td><!-- NudoIQ source: nudoiq-v1.9-audit/pro-views.js (FLAG_DEFAULTS inTransitSmart + loadProView on, trial and paid; miles left, ETA vs schedule, stop N of M, location; Pro View legs with facility code and address), shipped in 2.5.2 per D51; no road-restriction or late-ETA alerts, checked 2026-10-09 -->Partly. Where the truck is, ETA (on time, early or late) and miles left. No trip alerts<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, TRIPS FEATURES: Telegram Bot Notifications, Current Location, ETA Early/Late, App Usage, Trailer ID), accessed 2026-10-09 -->Yes. Current location, ETA early or late, app usage and trailer ID<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">Telegram alerts</th><td>Yes, to your phone: new matching loads, price rises and AutoBook bookings, with quiet hours<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, TRIPS FEATURES: Telegram Bot Notifications, Current Location, ETA Early/Late, App Usage, Trailer ID), accessed 2026-10-09 -->Yes, for trips: yard checking, new trip, road restriction, completed trip, driver check-in and more<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+<tr><th scope="row">Load board extras</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js showFiltersPopup: min net profit, min $/mile, off/fade/hide; dist/nudoiq_v2.5.2.zip content.js defaults suppressPromotedLoads: true, suppressRelayAlerts: true; hideSimilarMatchesSection, checked 2026-10-09 -->Hides promoted loads, Amazon&#x27;s truck-posting pop-ups and Relay&#x27;s Similar matches, all by default<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, LOAD BOARD FEATURES); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, Highlighted Trip Warnings); https://www.easyrelay.us/en (home page: A+ Board, Early Acceptance Check), accessed 2026-10-09 -->Hides promoted loads too, plus tolls, latest pickup time, highlighted trip warnings and an A+ Board<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Free plan</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->No. Free preview (refresh, alerts) until you start the free trial<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://www.easyrelay.us/en (pricing: Free $0, Pro Solo $14.99/mo, Pro Team $44.99/mo, Monthly or 6 Months (save up to 42%)), accessed 2026-10-09 -->Yes, a $0 Free plan<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Free trial</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->Yes. 7 days, no card needed to start<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://www.easyrelay.us/en (home page: 7-days free trial, cancel any time); https://www.easyrelay.us/en#faq (FAQ, Is there a free trial available? a free plan with basic features to try the extension; no card wording); https://www.easyrelay.us/en (home page: 7-days free trial, cancel any time; no card wording), accessed 2026-10-09 -->Home page lists 7 days. Its FAQ says the Free plan is the way to try it. Card not stated<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Paid price</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->$49.99 a month flat, every truck, cancel anytime<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://www.easyrelay.us/en (pricing: Free $0, Pro Solo $14.99/mo, Pro Team $44.99/mo, Monthly or 6 Months (save up to 42%)), accessed 2026-10-09 -->Pro Solo $14.99 or Pro Team $44.99 a month, cancel anytime<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">6-month billing</th><td><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->No. Month to month<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://www.easyrelay.us/en (pricing: Free $0, Pro Solo $14.99/mo, Pro Team $44.99/mo, Monthly or 6 Months (save up to 42%)), accessed 2026-10-09 -->Yes. Monthly, or every 6 months (&quot;Save up to 42%&quot;)<sup class="fn"><a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Languages</th><td>English and Spanish<sup class="fn"><a href="#src-1" aria-label="Source 1">1</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing, Details: Languages English); https://www.easyrelay.us/en (site language switch EN / RU), accessed 2026-10-09 -->Listing language: English. Website: English and Russian<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a>,<a href="#src-3" aria-label="Source 3">3</a></sup></td></tr>
+<tr><th scope="row">Publisher</th><td>Sami Enterprises LLC<sup class="fn"><a href="#src-5" aria-label="Source 5">5</a></sup></td><td><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing, Developer: Easy Relay LLC, West Chester Township, OH), accessed 2026-10-09 -->Easy Relay LLC<sup class="fn"><a href="#src-2" aria-label="Source 2">2</a></sup></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="sources">Sources</h3>
+<ol class="sources">
+<li id="src-1">NudoIQ extension for Amazon Relay, and <a href="/get/">nudoiq.com/get/</a></li>
+<li id="src-2">EasyRelay Chrome Web Store listing for Amazon Relay (<a href="https://chrome.google.com/webstore/detail/obmcimindeajfoacnmfbiifcoomomhag" target="_blank" rel="nofollow noopener">chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag</a>), v1.24.138, updated September 24, 2026, checked October 9, 2026</li>
+<li id="src-3">Easy Relay website, <a href="https://www.easyrelay.us/en" target="_blank" rel="nofollow noopener">easyrelay.us</a> (home page, plans and FAQ), checked October 9, 2026</li>
+<li id="src-4">Easy Relay website, <a href="https://www.easyrelay.us/en/all-features" target="_blank" rel="nofollow noopener">easyrelay.us</a> (full tool overview page), checked October 9, 2026</li>
+<li id="src-5"><a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Chrome Web Store</a> (NudoIQ listing for Amazon Relay), checked October 9, 2026</li>
+</ol>
+<p class="tmnote">EasyRelay is a trademark of its owner, used here only to name and compare two Amazon Relay extensions. NudoIQ is not affiliated with Easy Relay LLC or with Amazon.</p>
+<p>To see how NudoIQ compares with EasyRelay and five other Relay extensions on auto-booking, alerts and price, read <a href="/why-nudoiq/">the full comparison</a>.</p>
+</section>
+<section id="what-is-easy-relay" aria-labelledby="what-is-easy-relay-h">
+<h2 id="what-is-easy-relay-h">What is Easy Relay?</h2>
+<!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, overview); https://www.easyrelay.us/en (home page); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, Fast Book, double-click; no automatic booking listed); https://www.easyrelay.us/en (plan lists: no automatic booking; meta description mentions auto-book); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, LOAD BOARD FEATURES); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, TRIPS FEATURES: Telegram Bot Notifications, Current Location, ETA Early/Late, App Usage, Trailer ID); https://www.easyrelay.us/en (home page: A+ Board, Early Acceptance Check); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing, Developer: Easy Relay LLC, West Chester Township, OH); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, summary: Auto-refresh the load board); https://www.easyrelay.us/en (plans: Human-like Refresh in Pro Solo and Pro Team, not in Free), accessed 2026-10-09 -->
+<p>EasyRelay is a Chrome extension for Amazon Relay dispatchers and carrier owners, published by Easy Relay LLC. Its store listing names load board tools such as an auto refresher, Newest to Top, Fast Book, tolls, load weight and Post a Truck. For trips, it lists current location, early or late ETAs and Telegram alerts. Its website adds an A+ Board and an Early Acceptance Check.</p>
+</section>
+<section id="does-easy-relay-auto-book-loads" aria-labelledby="does-easy-relay-auto-book-loads-h">
+<h2 id="does-easy-relay-auto-book-loads-h">Does Easy Relay auto book loads?</h2>
+<!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, Fast Book, double-click; no automatic booking listed); https://www.easyrelay.us/en (plan lists: no automatic booking; meta description mentions auto-book); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138: none listed); https://www.easyrelay.us/en (home page and plans: none listed); https://www.easyrelay.us/en/all-features (all-features page: none listed), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 -->
+<p>Its store listing doesn&#x27;t say it auto books your loads. As of October 9, 2026, automatic booking isn&#x27;t on EasyRelay&#x27;s listing or in any of its plans. Its website&#x27;s description does mention auto-booking. The listing names Fast Book, for quick booking with a double-click. <a href="/amazon-relay-auto-booker/">NudoIQ&#x27;s AutoBook books for you</a>, and only loads that clear your minimum net profit.</p>
+</section>
+<section id="what-does-nudoiq-do-that-easy-relay-doesnt-list" aria-labelledby="what-does-nudoiq-do-that-easy-relay-doesnt-list-h">
+<h2 id="what-does-nudoiq-do-that-easy-relay-doesnt-list-h">What does NudoIQ do that Easy Relay doesn&#x27;t list?</h2>
+<!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138: none listed); https://www.easyrelay.us/en (home page and plans: none listed); https://www.easyrelay.us/en/all-features (all-features page: none listed), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours; dist/nudoiq_v2.5.2.zip content.js createContractsUI + instantBookContract: ALERT / AUTOBOOK on short-term contract offers, min per block, min total, max books 1 to 10, checked 2026-10-09 -->
+<p>Three things EasyRelay&#x27;s listing and plans don&#x27;t name: automatic booking at your net profit, net profit per load, and scorecard dispute letters.</p>
+<ul><li><strong>AutoBook:</strong> set your minimum net profit (and $/mile, if you like). It books matching loads, skips any it can&#x27;t fully price, and stops at your max-books cap.</li><li><strong>Net profit on every load:</strong> net dollars and $/mile next to the price. It uses the costs you enter, like fuel, MPG, driver pay and maintenance.</li><li><strong><a href="/amazon-relay-scorecard/">Scorecard dispute letters</a>:</strong> it drafts the letter from the violation. You read it, send it, and Amazon makes the call.</li><li><strong>Also:</strong> Spanish, alerts or AutoBook on short-term contract offers, and Lane Intelligence, a 90-day price range for the lane.</li></ul>
+</section>
+<section id="what-does-easy-relay-do-that-nudoiq-doesnt" aria-labelledby="what-does-easy-relay-do-that-nudoiq-doesnt-h">
+<h2 id="what-does-easy-relay-do-that-nudoiq-doesnt-h">What does Easy Relay do that NudoIQ doesn&#x27;t?</h2>
+<!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, LOAD BOARD FEATURES); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, Highlighted Trip Warnings); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, AI Load Mark, AI List); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, TRIPS FEATURES: Telegram Bot Notifications, Current Location, ETA Early/Late, App Usage, Trailer ID); https://www.easyrelay.us/en (home page: A+ Board, Early Acceptance Check); https://www.easyrelay.us/en (pricing: Free $0, Pro Solo $14.99/mo, Pro Team $44.99/mo, Monthly or 6 Months (save up to 42%)), accessed 2026-10-09 -->
+<p>As of October 9, 2026, EasyRelay costs less, has a free plan, and lists trip and board tools NudoIQ doesn&#x27;t have.</p>
+<ul><li><strong>What you pay:</strong> a $0 Free plan, or Pro Solo at $14.99 a month and Pro Team at $44.99. A 6-month option, it says, saves up to 42%.</li><li><strong>Trip alerts on Telegram:</strong> yard checks, new and completed trips, road restrictions, driver check-ins and check-outs, new notes and ready trailers.</li><li><strong>Trip details:</strong> driver app usage and trailer ID, plus a one-click copy of trip details.</li><li><strong>Load board tools:</strong> tolls, latest pickup time, a Google Maps deadhead check and state exclusions (Pro, per its FAQ). Plus Auto Expand, Screenshot and Keyboard Shortcut.</li><li><strong>Board highlights:</strong> bobtail, team and long-trip loads stand out right on the board, where NudoIQ tags team and bobtail in Pro View. Pro also lists loads where it expects price negotiation.</li><li><strong>A+ Board and early check-in:</strong> its website says the A+ Board shows higher-score loads ahead of time. Its Early Acceptance Check shows if early check-in is possible.</li></ul>
+</section>
+<section id="how-much-does-easy-relay-cost-vs-nudoiq" aria-labelledby="how-much-does-easy-relay-cost-vs-nudoiq-h">
+<h2 id="how-much-does-easy-relay-cost-vs-nudoiq-h">How much does Easy Relay cost vs NudoIQ?</h2>
+<!-- EasyRelay source: https://www.easyrelay.us/en (pricing: Free $0, Pro Solo $14.99/mo, Pro Team $44.99/mo, Monthly or 6 Months (save up to 42%)); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, summary: Auto-refresh the load board); https://www.easyrelay.us/en (plans: Human-like Refresh in Pro Solo and Pro Team, not in Free), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 -->
+<p>On EasyRelay, you can use a $0 Free plan. Its refresher comes with Pro Solo at $14.99 a month or Pro Team at $44.99 (checked October 9, 2026). NudoIQ costs more. It starts with a free preview on install, then a 7-day free trial with no card needed. After that it&#x27;s $49.99 a month flat for every truck. Cancel anytime.</p>
+</section>
+<section id="should-you-pick-easy-relay-or-nudoiq" aria-labelledby="should-you-pick-easy-relay-or-nudoiq-h">
+<h2 id="should-you-pick-easy-relay-or-nudoiq-h">Should you pick Easy Relay or NudoIQ?</h2>
+<div class="pick">
+<div class="pick-col"><h3>Pick EasyRelay if</h3><!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, LOAD BOARD FEATURES); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, TRIPS FEATURES: Telegram Bot Notifications, Current Location, ETA Early/Late, App Usage, Trailer ID); https://www.easyrelay.us/en (home page: A+ Board, Early Acceptance Check); https://www.easyrelay.us/en (pricing: Free $0, Pro Solo $14.99/mo, Pro Team $44.99/mo, Monthly or 6 Months (save up to 42%)); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, summary: Auto-refresh the load board); https://www.easyrelay.us/en (plans: Human-like Refresh in Pro Solo and Pro Team, not in Free), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours; dist/nudoiq_v2.5.2.zip content.js createContractsUI + instantBookContract: ALERT / AUTOBOOK on short-term contract offers, min per block, min total, max books 1 to 10, checked 2026-10-09 --><ul><li>You want a $0 Free plan, or Pro plans with the refresher from $14.99 a month.</li><li>You book each load by hand and want board tools like tolls, latest pickup time and deadhead checks.</li><li>You want trip alerts on Telegram for yard checks, road restrictions and driver check-ins.</li><li>You want the A+ Board or the Early Acceptance Check.</li></ul></div>
+<div class="pick-col pick-nq"><h3>Pick NudoIQ if</h3><ul><li>You want loads booked for you, and only the ones that clear your minimum net profit.</li><li>You want to see what each load nets you before you take it.</li><li>You fight scorecard hits and want the dispute letter drafted for you.</li><li>You book Relay&#x27;s short-term contracts, or you work in Spanish.</li></ul></div>
+</div>
+<p>Not sure which is right for your board? Try NudoIQ 7 days free. If it doesn&#x27;t fit how you book, switch back. It costs you a week, not a dime.</p>
+<p class="midlink"><a href="/get/">Try NudoIQ 7 days free</a></p>
+</section>
+<section id="how-do-you-switch-from-easy-relay-to-nudoiq" aria-labelledby="how-do-you-switch-from-easy-relay-to-nudoiq-h">
+<h2 id="how-do-you-switch-from-easy-relay-to-nudoiq-h">How do you switch from Easy Relay to NudoIQ?</h2>
+<p>Turn off or remove EasyRelay in your Chrome extensions. Add NudoIQ from the Chrome Web Store, <a href="/amazon-relay-load-board/">open the Relay load board</a> and press START. Your Relay login doesn&#x27;t change. Run one load board extension at a time.</p>
+</section>
+<section id="faq" class="faq" aria-labelledby="faq-h">
+<h2 id="faq-h">Easy Relay alternative FAQ</h2>
+<!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, overview); https://www.easyrelay.us/en (home page); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing, Developer: Easy Relay LLC, West Chester Township, OH); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, Fast Book, double-click; no automatic booking listed); https://www.easyrelay.us/en (plan lists: no automatic booking; meta description mentions auto-book); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, LOAD BOARD FEATURES); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, TRIPS FEATURES: Telegram Bot Notifications, Current Location, ETA Early/Late, App Usage, Trailer ID); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, summary: Auto-refresh the load board); https://www.easyrelay.us/en (plans: Human-like Refresh in Pro Solo and Pro Team, not in Free), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 --><details><summary>What is Easy Relay?</summary><div class="a"><p>Easy Relay, or EasyRelay, is a Chrome extension for Amazon Relay dispatchers and carrier owners, published by Easy Relay LLC. Its store listing names tools such as an auto refresher, Fast Book, tolls, backhaul and Telegram trip alerts (checked October 9, 2026). NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit.</p></div></details>
+<!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, overview); https://www.easyrelay.us/en (home page), accessed 2026-10-09 --><details><summary>Is Easy Relay a Chrome extension?</summary><div class="a"><p>Yes, Easy Relay is a Chrome extension for the Amazon Relay load board. You add it from its Chrome Web Store listing, where it&#x27;s named EasyRelay (checked October 9, 2026). NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so the two don&#x27;t conflict.</p></div></details>
+<!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, overview); https://www.easyrelay.us/en (home page); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing, Developer: Easy Relay LLC, West Chester Township, OH), accessed 2026-10-09 --><details><summary>Is it EasyRelay or Easy Relay?</summary><div class="a"><p>Both, for the same Amazon Relay extension. Its Chrome Web Store listing uses EasyRelay, and its website and company name use Easy Relay (Easy Relay LLC). This page compares it with NudoIQ, a separate extension for the same board.</p></div></details>
+<!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, Fast Book, double-click; no automatic booking listed); https://www.easyrelay.us/en (plan lists: no automatic booking; meta description mentions auto-book); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138: none listed); https://www.easyrelay.us/en (home page and plans: none listed); https://www.easyrelay.us/en/all-features (all-features page: none listed), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 --><details><summary>Does Easy Relay auto book loads?</summary><div class="a"><p>Not according to its store listing, which lists Fast Book for booking a load with a double-click. As of October 9, 2026, automatic booking isn&#x27;t on EasyRelay&#x27;s listing or plans. Its website&#x27;s description does mention auto-booking. NudoIQ&#x27;s AutoBook mode books matching loads that clear your own minimum net profit.</p></div></details>
+<!-- EasyRelay source: https://www.easyrelay.us/en (pricing: Free $0, Pro Solo $14.99/mo, Pro Team $44.99/mo, Monthly or 6 Months (save up to 42%)); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, summary: Auto-refresh the load board); https://www.easyrelay.us/en (plans: Human-like Refresh in Pro Solo and Pro Team, not in Free), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>Is Easy Relay free?</summary><div class="a"><p>Yes, you can use EasyRelay on a $0 Free plan. Its plans list the auto refresher only on Pro Solo, at $14.99 a month, and Pro Team, at $44.99 (checked October 9, 2026). NudoIQ&#x27;s free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it&#x27;s $49.99 a month to keep using it, so it isn&#x27;t a free plan.</p></div></details>
+<!-- EasyRelay source: https://www.easyrelay.us/en (home page: 7-days free trial, cancel any time); https://www.easyrelay.us/en#faq (FAQ, Is there a free trial available? a free plan with basic features to try the extension; no card wording); https://www.easyrelay.us/en (home page: 7-days free trial, cancel any time; no card wording), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>Does Easy Relay have a free trial?</summary><div class="a"><p>Yes, its pages give you two ways to try it. Its home page lists a 7-day free trial, and its FAQ says the $0 Free plan lets you try the extension before Pro. Neither page says whether you need a card (checked October 9, 2026). NudoIQ has a 7-day free trial with no card needed to start, and a free preview before it.</p></div></details>
+<!-- EasyRelay source: https://www.easyrelay.us/en (pricing: Free $0, Pro Solo $14.99/mo, Pro Team $44.99/mo, Monthly or 6 Months (save up to 42%)); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, summary: Auto-refresh the load board); https://www.easyrelay.us/en (plans: Human-like Refresh in Pro Solo and Pro Team, not in Free), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>How much does Easy Relay cost compared to NudoIQ?</summary><div class="a"><p>EasyRelay costs you less. You can use its $0 Free plan, or get the refresher with Pro Solo at $14.99 a month or Pro Team at $44.99. A 6-month option, it says, saves up to 42% (checked October 9, 2026). NudoIQ is one $49.99 plan, the same for one truck or a whole fleet, with a 7-day free trial and cancel anytime.</p></div></details>
+<!-- EasyRelay source: https://www.easyrelay.us/en (pricing: Free $0, Pro Solo $14.99/mo, Pro Team $44.99/mo, Monthly or 6 Months (save up to 42%)); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, summary: Auto-refresh the load board); https://www.easyrelay.us/en (plans: Human-like Refresh in Pro Solo and Pro Team, not in Free), accessed 2026-10-09 --><!-- Rocket Relay source: https://rocketrelaybooker.com/pricing (pricing page, last updated Jun 22, 2026: free to start, no card required; Free plan column), accessed 2026-10-09 --><!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>Is there a free Easy Relay alternative?</summary><div class="a"><p>NudoIQ&#x27;s free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it&#x27;s $49.99 a month to keep using it, so it isn&#x27;t a free plan. If you want to stay free, EasyRelay&#x27;s own Free plan is $0, but it doesn&#x27;t list the refresher. Rocket Relay lists a free plan with auto-refresh and new-trip alerts (checked October 9, 2026).</p></div></details>
+<!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, TRIPS FEATURES: Telegram Bot Notifications, Current Location, ETA Early/Late, App Usage, Trailer ID), accessed 2026-10-09 --><!-- NudoIQ source: nudoiq-v1.9-audit/pro-views.js (FLAG_DEFAULTS inTransitSmart + loadProView on, trial and paid; miles left, ETA vs schedule, stop N of M, location; Pro View legs with facility code and address), shipped in 2.5.2 per D51; no road-restriction or late-ETA alerts, checked 2026-10-09 --><details><summary>Does Easy Relay track trips?</summary><div class="a"><p>Yes, EasyRelay&#x27;s trip tools show your truck&#x27;s current location, early or late ETAs, app usage and trailer ID. Its Telegram bot sends trip alerts such as yard checking, road restriction and driver check-in (checked October 9, 2026). NudoIQ partly covers trips. Its in-transit strip shows where the truck is, whether it&#x27;s on time, early or late, and miles left, with no trip alerts.</p></div></details>
+<!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js match gate: passesProfit (minProfitFilter), passesRate (minRateFilter), passesData (complete data), maxBooksPerSession input 1 to 20; no UI for maxStopsFilter or autoBookMinPickupHours, checked 2026-10-09 --><details><summary>How does NudoIQ decide which loads to book?</summary><div class="a"><p>In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can&#x27;t fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because <a href="/amazon-relay-cancel-load/">cancelling a booked load counts against you</a>.</p></div></details>
+<!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing, Details: Languages English); https://www.easyrelay.us/en (site language switch EN / RU), accessed 2026-10-09 --><!-- NudoIQ source: NudoIQ Chrome Web Store listing v2.5.2 (Works on Amazon Relay sites for the US, Canada, UK, Germany, Spain, France, Italy, Poland, Czech Republic, and India), checked 2026-10-09 --><details><summary>Does NudoIQ work in Spanish?</summary><div class="a"><p>Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. EasyRelay&#x27;s store listing shows English as its language, and its website offers English and Russian (checked October 9, 2026).</p></div></details>
+<!-- NudoIQ source: dist/nudoiq_v2.5.2.zip content.js NQ_PREVIEW + nqAccessMode (preview only before the free week), D48 no-card trial, D51, checked 2026-10-09 --><details><summary>Can I switch from Easy Relay to NudoIQ?</summary><div class="a"><p>Yes, you can switch in a few minutes. Turn off or remove EasyRelay on Chrome&#x27;s extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don&#x27;t conflict.</p></div></details>
+<!-- EasyRelay source: https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing v1.24.138, overview); https://www.easyrelay.us/en (home page); https://chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag (store listing, Developer: Easy Relay LLC, West Chester Township, OH), accessed 2026-10-09 --><details><summary>Is NudoIQ or Easy Relay made by Amazon?</summary><div class="a"><p>No, neither is made by Amazon, and both run inside Amazon Relay in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. EasyRelay is published by Easy Relay LLC.</p></div></details>
+</section>
+      </div>
+
+      <aside class="cta" aria-labelledby="cta-h">
+        <div><h2 id="cta-h">Let the board book itself, at your number.</h2><p>7 days free, then $49.99 a month for every truck. Cancel anytime.</p></div>
+        <div class="cta-act"><a class="btn btn-go" style="width:100%" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Try it 7 days free</a><p class="micro">No card needed to start.</p></div>
+      </aside>
+    </div>
+  </article>
+
+  <div class="container" style="padding-top:0">
+    <nav class="related" aria-label="More Amazon Relay guides">
+      <h2>More Amazon Relay guides</h2>
+      <div class="cards">
+        <a href="/amazon-relay-auto-booker/">Amazon Relay Auto Booker: How Automatic Booking Works</a>
+        <a href="/amazon-relay-auto-refresh/">Amazon Relay Auto Refresh: Why It Matters and How It Works</a>
+        <a href="/best-amazon-relay-extensions/">Best Amazon Relay Extensions: Refresher and Auto-Booker Tools</a>
+        <a href="/amazon-relay-scorecard/">Amazon Relay scorecard: how the performance score works and how to dispute it</a>
+        <a href="/amazon-relay-load-board/">How the Amazon Relay Load Board Works</a>
+      </div>
+    </nav>
+  </div>
+  </main>
+
+  <footer class="container" style="padding-top:0">
+    <div class="footer" style="margin-top:0">
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/">Amazon Relay guides</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="/partners/">Partners</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contact</a>
+    </div>
+    <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. Amazon Relay requirements change; confirm current rules at relay.amazon.com.</p>
+  </footer>
+</body>
+</html>
