@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>You're in — set up NudoIQ | NudoIQ</title>
-  <meta name="description" content="NudoIQ is installed. Three steps to see bid targets on your Amazon Relay load board.">
+  <meta name="description" content="NudoIQ is installed. Open your Amazon Relay load board and start your free week from the NudoIQ bar.">
   <meta name="robots" content="noindex, follow">
   <meta name="theme-color" content="#FFFFFF">
   <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
@@ -166,6 +166,16 @@
     window.uetq.push("event", "install_welcome", { event_category: "install", event_label: "welcome" });
   }
 </script>
+  <style>
+    /* 2026-10-10 welcome v2: one action in the hero, short steps. Page-local. */
+    .hero .btn{margin-top:22px}
+    .hero p.lede.fw{font-size:17px;margin-top:18px;color:var(--ink-4)}
+    .steps .step{padding:18px 0}
+    .steps .step h3{margin-bottom:0;padding-top:10px}
+    .steps .step .n{font-size:38px}
+    .steps .prof{margin-top:18px;color:var(--ink-4);max-width:64ch}
+    @media (max-width:640px){.hero .btn{width:100%}}
+  </style>
 </head>
 <body>
 
@@ -175,10 +185,15 @@
 
   <main>
     <section class="hero"><div class="wrap">
-      <p class="done"><span class="tick" aria-hidden="true">&#10003;</span> NudoIQ is installed</p>
+      <!-- 2026-10-10 (Caleb: "it should say, nudoiq is installed or ready and then they open amazon relay and from there they
+           start their trial"): installed confirmation, ONE action (Open Amazon Relay), one free-week line. The reserve form
+           was rejected and never shipped. Words: Martha, research/copy/FUNNEL-FRICTION-SITE-COPY-2026-10-10-v2.json. -->
+      <p class="done"><span class="tick" aria-hidden="true">&#10003;</span> Your NudoIQ is installed</p>
       <!-- 2026-10-09: the 3 steps now sit directly under this hero, above the walkthrough video (Caleb approved moving them up, in chat 2026-10-09). Headline by Martha: research/copy/WELCOME-HERO-STEPS-FIRST-2026-10-09.json. Why: research/funnel/ACTIVATION-PREVIEW-2026-10-09.md; before the move step 1 sat at y1003 at 1366x768, under the video. -->
-      <h1>Your 3 steps, then the video.</h1>
-      <p class="lede">About four minutes. Once you're on Relay, the tools appear on your board.</p>
+      <h1>Next, open your Relay load board.</h1>
+      <p class="lede">Sign in to Relay as you normally would. The NudoIQ bar shows up above Relay's search.</p>
+      <a class="btn btn-go" href="https://relay.amazon.com/loadboard" target="_blank" rel="noopener" data-cta="welcome-open-relay">Open Amazon Relay</a>
+      <p class="lede fw">Start your free week from the NudoIQ bar on Relay. It's 7 days free with no card, then $49.99/month, and you can cancel anytime.</p>
       <!-- Partner code carried across the Web Store hop. A /with/<slug>/ page stored it before the
            install (tools/partners/partners.py); it is shown for 30 days, then ignored. The sentence is
            research/copy/PARTNER-AND-CASESTUDY-COPY-2026-09-20.json -> welcome_code_line_tpl. -->
@@ -204,33 +219,26 @@
       <div class="step">
         <div class="n">1</div>
         <div>
-          <!-- 2026-10-05: Clarity logged dead clicks on this heading (people click the step itself); it now opens the same
-               page as the button below. research/seo/SITE-OPTIMIZATION-2026-10-05.md -->
-          <h3><a href="https://relay.amazon.com/loadboard" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Open your Amazon Relay load board</a></h3>
-          <p>Sign in as you normally would. NudoIQ only runs on
-          <span class="k">the eleven Amazon Relay domains</span> — nowhere else, and it never sees another tab.</p>
-          <a class="btn btn-go" href="https://relay.amazon.com/loadboard" target="_blank" rel="noopener">Open the load board</a>
+          <!-- 2026-10-05: Clarity logged dead clicks on this heading (people click the step itself); it opens the load board. -->
+          <h3><a href="https://relay.amazon.com/loadboard" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">Open your Relay load board.</a></h3>
         </div>
       </div>
 
-      <!-- 2026-10-09: steps 2 and 3 match the free preview (store build 2.5.2): refresh starts only when START is
-           pressed, and the trial is offered in the bar at the first matching load. Words: Martha,
-           research/copy/WELCOME-START-STEPS-2026-10-09.json. Evidence: research/funnel/ACTIVATION-PREVIEW-2026-10-09.md (R3). -->
       <div class="step">
         <div class="n">2</div>
         <div>
-          <h3>Press START on your board</h3>
-          <p>Find the NudoIQ bar above Relay's search. START is the gray word next to the red STOP. NudoIQ waits until you press START.</p>
+          <h3>Start your free week from the NudoIQ bar.</h3>
         </div>
       </div>
 
       <div class="step">
         <div class="n">3</div>
         <div>
-          <h3>Your board refreshes on its own</h3>
-          <p>New loads get an orange NEW tag. When the first load matches, the NudoIQ bar offers 7 days free with just your email. No card needed.</p>
+          <h3>Press START so your board refreshes on its own.</h3>
         </div>
       </div>
+
+      <p class="prof">Open Relay in the same Chrome profile you installed NudoIQ in. That's the only place your NudoIQ bar shows.</p>
 
     </div></section>
 
@@ -252,9 +260,9 @@
 
     <section class="help"><div class="wrap">
       <h3>Nothing showing up?</h3>
-      <p>Refresh the Relay tab first — that fixes it nearly every time. If it still looks the same,
+      <p>Refresh the Relay tab first. That fixes it nearly every time. If it still looks the same,
       email <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a> and say which page you are on.
-      A real person answers.</p>
+      A person answers.</p>
     </div></section>
   </main>
 
