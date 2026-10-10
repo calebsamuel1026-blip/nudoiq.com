@@ -2766,11 +2766,11 @@ No. Amazon tenders its loads only through Relay. See our [Amazon Relay loads gui
 URL: https://nudoiq.com/amazon-relay-contracts/
 Published: 2026-10-08. Last updated: 2026-10-08.
 
-Short answer: An Amazon Relay contract is pre-planned work you book ahead, up to 6 months out, at a fixed rate. Amazon offers full-week, partial-week, reservation and standby contracts, with lengths from 8-hour box truck contracts to 119-hour team blocks. You need a B grade or better to book new contracts, and Amazon pays weekly for the previous week's completed work.
+Short answer: An Amazon Relay contract is pre-planned work you book weeks ahead, at a fixed rate, for up to 6 months. Amazon offers full-week, partial-week, reservation and standby contracts, with lengths from 8-hour box truck contracts to 119-hour team blocks. You need a B grade or better to book new contracts, and Amazon pays weekly for the previous week's completed work.
 
 ## What is an Amazon Relay contract?
 
-A contract is work you book in advance instead of grabbing loads one at a time. [Amazon's contracts guide](https://relay.amazon.com/blog/amazon-trucking-contracts) describes contracts as pre-planned blocks of work out of a domicile (a city or area), at a fixed rate, built on round trips. You can book them up to 6 months out.
+A contract is work you book in advance instead of grabbing loads one at a time. [Amazon's contracts guide](https://relay.amazon.com/blog/amazon-trucking-contracts) describes contracts as pre-planned blocks of work out of a domicile (a city or area), at a fixed rate, built on round trips. You book them weeks in advance, and they can last up to 6 months.
 
 Contracts sit alongside spot loads on the [Relay load board](https://nudoiq.com/amazon-relay-load-board/), Post A Truck, and freight auctions. Our [Amazon Relay loads guide](https://nudoiq.com/amazon-relay-loads/) compares the ways to get Relay work.
 
@@ -2859,15 +2859,15 @@ Both lock in work ahead. The difference is how the price is set and where the tr
 | Price | Fixed rate | Open bidding; the winning rate is locked |
 | Trips | Round trips | Mostly one-way |
 | Grade to book | B or better | C+ or better (B for reefer, B+ for some box truck loads) |
-| Length | 13-hour blocks up to 10-week runs, booked up to 6 months out | 3 to 6 months of one-way contracts |
+| Length | 13-hour blocks up to 10-week runs, booked weeks in advance | 3 to 6 months of one-way contracts |
 
 The full bidding process is in our guide to [Amazon Relay auctions](https://nudoiq.com/amazon-relay-auctions/).
 
 ## Where does NudoIQ fit with contracts?
 
-NudoIQ doesn't book contracts or touch blocks. You book those in Relay.
+NudoIQ auto-refreshes the Relay contracts page. In Autobook mode it books short-term offers that meet your minimums.
 
-Where it helps is the open days around a contract. A partial-week contract, or the two days off after a 109-hour block, can leave a truck sitting. Those days get filled from the spot board, and that's where NudoIQ works.
+It also helps with the open days around a contract. A partial-week contract, or the two days off after a 109-hour block, can leave a truck sitting. Those days get filled from the spot board, and that's where NudoIQ works.
 
 NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It's an independent tool, not made by or affiliated with Amazon. It refreshes the board on a 1 to 5 second interval and alerts you when a load matches the lanes and price you set for those open days. In Autobook mode it books only loads that clear your own Min Net Profit and stops at your max-books cap. Every load card shows net profit after driver pay, fuel, maintenance and deadhead, so a filler load is judged on what it nets.
 
@@ -2876,7 +2876,7 @@ It's used by 300+ carriers. Try it with a 7-day free trial, and cancel anytime. 
 ## Frequently asked questions
 
 ### How far in advance can you book Amazon Relay contracts?
-Up to 6 months out. Multi-week contracts run up to 10 weeks, with the blocks locked in early at upfront rates. Filter the contract search by contract duration to find them.
+Weeks in advance. Multi-week contracts run up to 10 weeks, with the blocks locked in early at upfront rates. Filter the contract search by contract duration to find them.
 
 ### Do Amazon Relay blocks pay if Amazon doesn't use the full time?
 Amazon says a block is paid even if Amazon doesn't use the full block. Reservation contracts pay a competitive rate if the full block isn't used, and Post A Truck block orders pay in full. For other contract types, check the contract details before you book.
@@ -2993,7 +2993,7 @@ Contracts are built on a domicile, a fixed rate and round trips, and new ones ne
 
 ## Does NudoIQ bid in Amazon Relay auctions?
 
-No. NudoIQ does not bid in auctions, book contracts or touch blocks. You do all of that in Relay.
+No. NudoIQ does not bid in auctions. You bid in Relay.
 
 Where it can help is the homework before you bid. A bid is a base rate locked for months, so it pays to know what a lane has been paying on the spot board. NudoIQ is a Chrome extension that runs inside your signed-in Relay [load board](https://nudoiq.com/amazon-relay-load-board/) tab, and it's an independent tool, not made by or affiliated with Amazon. Its Lane Intelligence, the first button under a load card, shows that load's posted price next to the lane's 90-day history, with a target rate, an expected range and a confidence level.
 
