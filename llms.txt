@@ -67,6 +67,8 @@ Last updated: 2026-10-08.
 - [NudoIQ home](https://nudoiq.com/): product overview, features, pricing and FAQ.
 - [NudoIQ en español](https://nudoiq.com/es/): the home page in Spanish.
 - [Amazon Relay guides](https://nudoiq.com/guides/): every guide below in one list.
+- [Write your Amazon Relay scorecard dispute letter](https://nudoiq.com/tools/relay-dispute-letter/): Free Amazon Relay scorecard dispute letter generator: pick the violation, tick what's true, copy a letter to submit in Relay. Runs in the browser, nothing is sent, and Amazon decides every dispute.
+- [See what a Relay load nets before you book](https://nudoiq.com/tools/relay-load-calculator/): Free Amazon Relay load calculator: enter pay, loaded and deadhead miles, fuel price, MPG and costs per mile to see the net, net per loaded mile and break-even rate. Runs in the browser.
 - [NudoIQ on Android](https://nudoiq.com/android/): how to run the extension on an Android phone.
 - [How the Amazon Relay Load Board Works](https://nudoiq.com/amazon-relay-load-board/): Complete guide to the Amazon Relay load board: filters, load types, rates, and why good loads book in seconds. Login at relay.amazon.com.
 - [What Is Amazon Relay?](https://nudoiq.com/what-is-amazon-relay/): Amazon Relay is Amazon's own load board for carriers. See who can join, how loads get booked, when Amazon pays you and how the scorecard grades you.

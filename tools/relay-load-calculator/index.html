@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Free Amazon Relay load profit calculator | NudoIQ</title>
+  <meta name="description" content="Type in a Relay load&#x27;s pay and miles to see your net, net per loaded mile and break-even rate before you book. Deadhead counts. Free, nothing to install.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/tools/relay-load-calculator/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:title" content="Free Amazon Relay load profit calculator | NudoIQ">
+  <meta property="og:description" content="Type in a Relay load&#x27;s pay and miles to see your net, net per loaded mile and break-even rate before you book. Deadhead counts. Free, nothing to install.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/tools/relay-load-calculator/">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'tool', content_name: "tool-relay-load-calculator"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "tool-relay-load-calculator"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "See what a Relay load nets before you book",
+  "url": "https://nudoiq.com/tools/relay-load-calculator/",
+  "description": "Type in a Relay load's pay and miles to see your net, net per loaded mile and break-even rate before you book. Deadhead counts. Free, nothing to install.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "browserRequirements": "Requires JavaScript",
+  "isAccessibleForFree": true,
+  "inLanguage": "en-US",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "datePublished": "2026-10-12",
+  "dateModified": "2026-10-12",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
+    "name": "NudoIQ"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nudoiq.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://nudoiq.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "See what a Relay load nets before you book",
+      "item": "https://nudoiq.com/tools/relay-load-calculator/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does deadhead count in the net?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Deadhead counts. It goes into your total miles, so fuel and other costs cover the empty drive to the pickup and back home. Net per mile and break-even are divided by loaded miles, since those are the miles the load pays for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What MPG should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use your truck's average over the last few fill-ups, loaded and empty together. The calculator starts at 9, but box trucks and tractors run very different numbers, so put in your own."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is what you type saved or sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nothing you type is sent anywhere. The math runs in your browser on this page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does NudoIQ show this on the Relay load board?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "On your Relay board, NudoIQ shows the net and net per mile under the price on every load card. It works from costs you set once in Settings and counts deadhead to the pickup and the drive home, but not tolls. It runs in Chrome on a computer, and the net shows without starting a trial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What goes in other cost per mile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Put in everything you pay per mile besides fuel: driver pay, maintenance, tires and insurance, each worked out per mile. If you pay something by the week, like insurance or a truck note, divide it by the miles your truck runs in a normal week."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+  <style>
+.martha{background:#FFF3B0;color:#5A4500;outline:2px dashed #C99A00}
+.tool-hero .doc-hero-in{padding:24px 40px 26px}
+.tool-hero .crumbs{margin-bottom:12px}
+.tool-hero .page-title{font-size:clamp(28px,3.4vw,40px);max-width:26ch;margin-bottom:8px}
+.tool-hero .page-subtitle{font-size:16.5px;color:var(--ink-4)}
+.privacy{display:inline-flex;align-items:center;gap:8px;margin-top:8px;font-size:13.5px;font-weight:500;color:var(--blue-deep)}
+.privacy svg{flex:none}
+.tool{max-width:var(--max);margin:20px auto 0;padding:0 var(--gut);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start}
+.pane{background:#fff;border:1px solid rgba(22,22,22,.10);border-radius:var(--ri);padding:22px 24px}
+.pane + .pane{margin-top:12px}
+.pane h2{font-size:17px;font-weight:600;letter-spacing:-.01em;color:var(--ink);margin:0 0 14px}
+.f{display:block;margin:0 0 14px;min-width:0}
+.f:last-child{margin-bottom:0}
+.f > span{display:block;font-size:14px;font-weight:600;color:var(--ink);margin:0 0 6px}
+.f small{display:block;font-size:12.5px;color:var(--g3);margin-top:5px;line-height:1.4}
+.f input,.f select,.f textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);background:var(--paper-2);border:1px solid rgba(22,22,22,.16);border-radius:12px;padding:11px 13px;min-height:46px}
+.f textarea{min-height:88px;resize:vertical;line-height:1.5}
+.f input:focus,.f select:focus,.f textarea:focus{outline:2px solid var(--blue);outline-offset:1px;border-color:var(--blue);background:#fff}
+.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.money{position:relative}
+.money i{position:absolute;left:13px;top:50%;transform:translateY(-50%);font-style:normal;color:var(--g3);pointer-events:none}
+.money input{padding-left:26px}
+.facts{border:0;margin:0 0 14px}
+.facts legend{font-size:14px;font-weight:600;color:var(--ink);margin:0 0 8px}
+.fact{border:1px solid rgba(22,22,22,.10);border-radius:12px;padding:10px 12px;margin:0 0 8px;background:var(--paper-2)}
+.fact label{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.4;color:var(--ink-3);cursor:pointer;min-height:28px}
+.fact input[type=checkbox]{width:20px;height:20px;flex:none;margin-top:1px;accent-color:var(--blue)}
+.fact .tm{display:none;margin:8px 0 0 30px;align-items:center;gap:8px;font-size:13px;color:var(--ink-4)}
+.fact.on .tm{display:flex}
+.fact .tm input[type=text]{flex:1;min-width:0}
+.fact .tm.place{flex-direction:column;align-items:stretch;gap:4px}
+.exnote{font-size:13px;font-weight:600;color:var(--blue-deep);background:var(--paper-2);border:1px dashed var(--peri-2);border-radius:10px;padding:8px 12px;margin:0 0 10px}
+.fact .tm input{font:inherit;font-size:16px;border:1px solid rgba(22,22,22,.16);border-radius:10px;padding:6px 10px;min-height:40px;background:#fff}
+.warn{display:none;border-radius:12px;background:#FFF4E5;color:#7A4100;border:1px solid #F5C98B;padding:10px 12px;font-size:14px;line-height:1.45;margin:0 0 12px}
+.warn.show{display:block}
+.btnrow{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:#000}
+.btn-ghost{background:transparent;color:var(--ink);border-color:rgba(22,22,22,.18)}
+.btn-ghost:hover{border-color:var(--ink)}
+.out{position:sticky;top:88px}
+.res{background:var(--navy);color:#fff;border-radius:var(--ri);padding:22px 24px}
+.res .lbl{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--peri)}
+.res .big{font-size:clamp(38px,5vw,52px);font-weight:600;letter-spacing:-.03em;line-height:1.05;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+.res.loss .big{color:#FFB4AB}
+.tiles{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;margin-top:10px}
+.tile{background:#fff;border:1px solid rgba(22,22,22,.10);border-radius:var(--ri);padding:14px 16px}
+.tile .lbl{font-size:12.5px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--blue-deep)}
+.tile .v{font-size:26px;font-weight:600;letter-spacing:-.02em;color:var(--ink);margin-top:4px;font-variant-numeric:tabular-nums}
+.tile small{display:block;font-size:12.5px;color:var(--ink-4);line-height:1.4;margin-top:4px}
+.bd{font-size:13.5px;color:var(--ink-4);margin:10px 2px 0;line-height:1.5}
+.note{font-size:13px;color:var(--g3);margin:8px 2px 0;line-height:1.45}
+.letter{background:#fff;border:1px solid rgba(22,22,22,.12);border-radius:var(--ri);overflow:hidden}
+.letter-h{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 16px;border-bottom:1px solid rgba(22,22,22,.08);background:var(--paper-2)}
+.letter-h h2{font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--blue-deep);margin:0}
+.letter textarea{display:block;width:100%;min-height:330px;border:0;padding:16px;font:inherit;font-size:15.5px;line-height:1.6;color:var(--ink);resize:vertical;background:#fff}
+.letter textarea:focus{outline:2px solid var(--blue);outline-offset:-2px}
+.letter textarea::placeholder{color:var(--g3)}
+.steps{margin:12px 2px 0;padding-left:20px;font-size:14px;color:var(--ink-4);line-height:1.55}
+.steps-h{font-size:14px;font-weight:600;color:var(--ink);margin:14px 2px 0}
+.tcta{margin-top:12px;background:var(--peri);border-radius:var(--ri);padding:20px 22px}
+.tcta h2{font-size:20px;font-weight:500;letter-spacing:-.02em;line-height:1.2;color:var(--ink);margin:0 0 6px}
+.tcta p{font-size:14.5px;color:var(--blue-deep);line-height:1.5;margin:0 0 14px}
+.tcta .btn{width:100%}
+.tcta .micro{font-size:13px;color:var(--ink-4);margin:10px 0 0;text-align:center}
+.tools-x{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 6px}
+.tools-x a{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border-radius:var(--rp);border:1px solid rgba(22,22,22,.12);background:var(--paper-2);color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
+.tools-x a:hover{border-color:var(--blue)}
+@media (max-width:899px){.tool{grid-template-columns:minmax(0,1fr)}.out{position:static}}
+@media (max-width:660px){.tool-hero .doc-hero-in{padding:18px 16px 18px}.tool-hero .page-title{font-size:27px}.tool-hero .page-subtitle{font-size:15px}.tool{padding:0 10px;margin-top:12px}.pane{padding:18px 16px}.res{padding:18px}.tile .v{font-size:22px}}
+</style>
+</head>
+<body data-clarity-unmask="true">
+
+  <div class="promo">7 days free, no card needed &middot; Runs in your own Chrome &middot; English and Spanish</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Main navigation">
+      <a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a><a href="/#faq">FAQ</a>
+    </nav>
+    <div class="navright">
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+    </div>
+  </div></header>
+
+  <div class="doc-hero tool-hero"><div class="doc-hero-in">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">See what a Relay load nets before you book</span></nav>
+    <h1 class="page-title">See what a Relay load nets before you book</h1>
+    <p class="page-subtitle">Enter the pay and miles. Get the net, net per loaded mile and the lowest rate that covers your costs. Free, no install.</p>
+    <p class="privacy"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="2"/></svg>Nothing you type into this tool is sent anywhere.</p>
+  </div></div>
+
+  <div class="tool" data-clarity-mask="true">
+    <form class="inp" id="cform" novalidate autocomplete="off">
+      <div class="pane">
+        <h2>The load</h2>
+        <label class="f"><span>Load pay ($)</span><span class="money"><i>$</i><input id="cpay" type="number" inputmode="decimal" min="0" step="any" value="850"></span><small>What the load pays, as posted on the board.</small></label>
+        <div class="row"><label class="f"><span>Loaded miles</span><input id="cload" type="number" inputmode="decimal" min="0" step="any" value="300"><small>Miles with freight on, from pickup to the last stop.</small></label><label class="f"><span>Deadhead miles</span><input id="cdead" type="number" inputmode="decimal" min="0" step="any" value="40"><small>Empty miles to the pickup and back home.</small></label></div>
+      </div>
+      <div class="pane">
+        <h2>Your costs</h2>
+        <div class="row"><label class="f"><span>Fuel price ($ per gallon)</span><span class="money"><i>$</i><input id="cfuel" type="number" inputmode="decimal" min="0" step="0.01" value="3.65"></span><small>What you pay at the pump.</small></label><label class="f"><span>Miles per gallon</span><input id="cmpg" type="number" inputmode="decimal" min="0" step="0.1" value="9"><small>Your truck&#x27;s average over a few fill-ups. Left blank, it uses 9.</small></label></div>
+        <div class="row"><label class="f"><span>Other cost per mile ($)</span><span class="money"><i>$</i><input id="cother" type="number" inputmode="decimal" min="0" step="0.01" value="1.10"></span><small>Driver pay, maintenance, insurance and anything else you pay per mile. Add them up.</small></label><label class="f"><span>Tolls ($)</span><span class="money"><i>$</i><input id="ctolls" type="number" inputmode="decimal" min="0" step="any" value="0"></span><small>Total tolls for your whole trip, if any.</small></label></div>
+      </div>
+    </form>
+    <div class="out" id="cout" aria-live="polite">
+      <p class="exnote" id="cex">Example load shown. Type in your own numbers to see what it nets.</p>
+      <div class="res" id="cres">
+        <p class="lbl" id="cnetl">Net on this load</p>
+        <p class="big" id="cnet">&nbsp;</p>
+      </div>
+      <div class="tiles">
+        <div class="tile"><p class="lbl">Net per loaded mile</p><p class="v" id="crpm">&nbsp;</p></div>
+        <div class="tile"><p class="lbl">Break-even rate</p><p class="v" id="cbe">&nbsp;</p><small>The lowest rate per loaded mile that covers your costs on this load.</small></div>
+      </div>
+      <p class="bd" id="cbd"></p>
+      <p class="note">An estimate from the numbers you entered. Check it against your own settlements.</p>
+      <div class="btnrow" style="margin-top:12px"><button class="btn btn-ink btn-sm" type="button" id="ccopy">Copy result</button></div>
+      <aside class="tcta" aria-label="NudoIQ">
+        <h2>See the net on every load on your board</h2>
+        <p>On your Relay load board, NudoIQ shows the net and net per mile under the price on every load card. It uses the costs you set once. Tolls aren&#x27;t counted.</p>
+        <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-cta="tool-calc" target="_blank" rel="noopener">Add to Chrome, it&#x27;s free</a>
+        <p class="micro">You can install it free, and the net shows without a trial.<br>5.0 on the Chrome Web Store</p>
+      </aside>
+    </div>
+  </div>
+
+  <div class="container">
+    <article class="prose">
+<h2 id="how-your-net-is-worked-out">How your net is worked out</h2>
+<p>Start with what the load pays. Then take off what the whole trip costs you, empty miles included. Your truck burns fuel on the way to the pickup and on the way home, so total miles are loaded miles plus deadhead.</p>
+<p>From there, the costs are:</p>
+<ul>
+<li>Fuel: total miles divided by your MPG, times the fuel price.</li>
+<li>Other costs: total miles times your other cost per mile.</li>
+<li>Tolls for the trip.</li>
+</ul>
+<p>Net is the pay minus those three. Net per loaded mile is that net divided by the loaded miles.</p>
+<h2 id="what-the-break-even-rate-tells-you">What the break-even rate tells you</h2>
+<p>Break-even is your total cost divided by the loaded miles. It is the lowest rate per loaded mile that covers your costs on this load. Below it, the load costs you money to run.</p>
+<p>Use it before you book. Compare it with the rate on the board. When the two are close, one long wait at the dock or a detour can wipe out what is left. Set your own floor from your own numbers. See <a href="/amazon-relay-rates/">Amazon Relay rates</a> for how pricing works.</p>
+<h2 id="why-net-per-mile-beats-the-posted-rate-per-mile">Why net per mile beats the posted rate per mile</h2>
+<p>The posted rate per mile does not know your truck. It leaves out your fuel, your driver pay and the empty miles you drive to get to the pickup.</p>
+<p>Two loads can post the same rate and leave you with very different money once deadhead is counted. Net per loaded mile puts every load on the same footing, so you compare what each one leaves you after costs. For what affects pay on Relay, read <a href="/how-much-does-amazon-relay-pay/">how much Amazon Relay pays</a>.</p>
+    </article>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <details><summary>Does deadhead count in the net?</summary><div class="a"><p>Deadhead counts. It goes into your total miles, so fuel and other costs cover the empty drive to the pickup and back home. Net per mile and break-even are divided by loaded miles, since those are the miles the load pays for.</p></div></details>
+      <details><summary>What MPG should I use?</summary><div class="a"><p>Use your truck&#x27;s average over the last few fill-ups, loaded and empty together. The calculator starts at 9, but box trucks and tractors run very different numbers, so put in your own.</p></div></details>
+      <details><summary>Is what you type saved or sent anywhere?</summary><div class="a"><p>Nothing you type is sent anywhere. The math runs in your browser on this page.</p></div></details>
+      <details><summary>Does NudoIQ show this on the Relay load board?</summary><div class="a"><p>On your Relay board, NudoIQ shows the net and net per mile under the price on every load card. It works from costs you set once in Settings and counts deadhead to the pickup and the drive home, but not tolls. It runs in Chrome on a computer, and the net shows without starting a trial.</p></div></details>
+      <details><summary>What goes in other cost per mile?</summary><div class="a"><p>Put in everything you pay per mile besides fuel: driver pay, maintenance, tires and insurance, each worked out per mile. If you pay something by the week, like insurance or a truck note, divide it by the miles your truck runs in a normal week.</p></div></details>
+    </section>
+
+    <nav class="related" aria-label="More free tools">
+      <h2>More free tools</h2>
+      <div class="tools-x"><a href="/tools/relay-dispute-letter/">Write your Amazon Relay scorecard dispute letter</a></div>
+    </nav>
+
+    <nav class="related" aria-label="More Amazon Relay guides">
+      <h2>More Amazon Relay guides</h2>
+      <div class="cards">
+        <a href="/amazon-relay-scorecard/">Amazon Relay scorecard: how the performance score works and how to dispute it</a>
+        <a href="/amazon-relay-rates/">Amazon Relay rates by lane</a>
+        <a href="/how-much-does-amazon-relay-pay/">How Much Does Amazon Relay Pay?</a>
+        <a href="/amazon-relay-chrome-extension/">An Amazon Relay Chrome extension for your load board</a>
+      </div>
+    </nav>
+
+    <div class="footer">
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/">Amazon Relay guides</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="/partners/">Partners</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contact</a>
+    </div>
+    <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. Amazon Relay requirements change; confirm current rules at relay.amazon.com.</p>
+
+  </div>
+  <script src="/assets/mobile-bridge.js?v=b5ebdaf4" defer></script>
+  <script>
+  // Load calculator. Runs only in this browser: no fetch, no storage. Analytics get one event name, never the numbers.
+  (function () {
+    var T = {"C_res_net": "Net on this load", "C_res_net_loss": "Loss on this load", "C_res_breakdown": "Fuel {fuel} + other {other} + tolls {tolls} over {miles} total miles", "C_res_empty": "Enter the pay and loaded miles to see what this load nets.", "C_copied": "Copied", "C_btn_copy": "Copy result", "C_copy_tpl": "Relay load: {pay} for {loaded} loaded miles + {dead} deadhead.\nNet {net} | {rpm} per loaded mile | break-even {be} per loaded mile"};
+    var $ = function (id) { return document.getElementById(id); }, sent = {}, touched = false, timer;
+    function ev(name) { if (sent[name]) return; sent[name] = 1;
+      try { window.clarity && clarity("event", name); } catch (x) {}
+      try { window.fbq && fbq("trackCustom", "ToolUsed", { content_name: "relay-load-calculator", action: name }); } catch (x) {} }
+    function num(id) { var v = parseFloat($(id).value); return isFinite(v) && v >= 0 ? v : NaN; }
+    function usd(n, dg) { var s = Math.abs(n).toLocaleString("en-US", { minimumFractionDigits: dg, maximumFractionDigits: dg }); return (n < 0 ? "-$" : "$") + s; }
+    function fill(s, o) { return s.replace(/\{(\w+)\}/g, function (m, k) { return o[k] != null ? o[k] : m; }); }
+    var last = null;
+    function calc() {
+      var pay = num("cpay"), lm = num("cload"), dm = num("cdead") || 0, fuel = num("cfuel") || 0, mpg = num("cmpg") > 0 ? num("cmpg") : 9,
+          oth = num("cother") || 0, tolls = num("ctolls") || 0;
+      if (!(pay > 0) || !(lm > 0)) { $("cnet").textContent = "-"; $("crpm").textContent = "-"; $("cbe").textContent = "-";
+        $("cbd").textContent = T.C_res_empty; $("cres").classList.remove("loss"); $("cnetl").textContent = T.C_res_net; last = null; return; }
+      var miles = lm + dm, fuelCost = mpg > 0 ? miles / mpg * fuel : 0, other = miles * oth, cost = fuelCost + other + tolls, net = pay - cost;
+      last = { net: usd(net, 2), rpm: usd(net / lm, 2), be: usd(cost / lm, 2), pay: usd(pay, 2), loaded: Math.round(lm), dead: Math.round(dm) };
+      $("cnet").textContent = usd(Math.abs(net), 2); $("crpm").textContent = last.rpm + "/mi"; $("cbe").textContent = last.be + "/mi";
+      $("cres").classList.toggle("loss", net < 0); $("cnetl").textContent = net < 0 ? T.C_res_net_loss : T.C_res_net;
+      $("cbd").textContent = fill(T.C_res_breakdown, { fuel: usd(fuelCost, 2), other: usd(other, 2), tolls: usd(tolls, 2), miles: Math.round(miles).toLocaleString("en-US") });
+      if (touched) { clearTimeout(timer); timer = setTimeout(function () { ev("tool_calc_used"); }, 1500); }
+    }
+    $("cform").addEventListener("input", function () { touched = true; $("cex").hidden = true; calc(); });
+    $("cform").addEventListener("submit", function (e) { e.preventDefault(); });
+    $("ccopy").addEventListener("click", function () {
+      if (!last) return; var txt = fill(T.C_copy_tpl, last), b = this;
+      var done = function () { b.textContent = T.C_copied; setTimeout(function () { b.textContent = T.C_btn_copy; }, 2200); ev("tool_calc_copied"); };
+      var legacy = function () { var ta = document.createElement("textarea"); ta.value = txt; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+        document.body.appendChild(ta); ta.select(); var ok = false; try { ok = document.execCommand("copy"); } catch (x) {} ta.remove(); if (ok) done(); };
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(done, legacy); else legacy();
+    });
+    calc();
+  })();
+  </script>
+</body>
+</html>

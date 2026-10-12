@@ -757,6 +757,8 @@ A posted rate is gross revenue, not profit. To know if a load is worth your time
 
 The formula is straightforward: Posted rate minus your fuel, maintenance and deadhead costs equals your net profit. The same distance can yield different profits depending on your costs and positioning.
 
+To check one load before you book, try our free Relay load calculator (https://nudoiq.com/tools/relay-load-calculator/), which shows the net, net per loaded mile and break-even rate.
+
 **Set a Personal Profit Floor**
 
 Many carriers set a minimum net profit they require below which they decline a load. This prevents low-margin work and protects your revenue.
@@ -1057,6 +1059,8 @@ Before you file, pull together evidence that shows what actually happened on tha
 - **Documents.** Bills of lading, gate receipts, anything with a time stamp on it.
 
 Then write it up plainly: the load, the impact you're disputing, what happened, and the evidence that shows it. Keep it short and factual.
+
+Our free Relay dispute letter tool (https://nudoiq.com/tools/relay-dispute-letter/) turns the facts you tick into a short letter you can edit and paste into your dispute.
 
 One thing that trips carriers up: the 30-day dispute window Amazon lists applies to pay disputes, not scorecard impacts. Don't assume you have 30 days on a score dispute.
 
@@ -4281,3 +4285,107 @@ Yes, you can switch in a few minutes. Turn off or remove EasyRelay on Chrome's e
 
 ### Is NudoIQ or Easy Relay made by Amazon?
 No, neither is made by Amazon, and both run inside Amazon Relay in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. EasyRelay is published by Easy Relay LLC.
+
+---
+
+# Write your Amazon Relay scorecard dispute letter
+
+URL: https://nudoiq.com/tools/relay-dispute-letter/
+Published: 2026-10-12. Last updated: 2026-10-12.
+
+Free Amazon Relay scorecard dispute letter generator: pick the violation, tick what's true, copy a letter to submit in Relay. Runs in the browser, nothing is sent, and Amazon decides every dispute.
+
+## What a strong Relay dispute letter does
+
+A strong letter makes one argument. Pick the one thing that went wrong on this trip and stay on it. Three loose reasons read like excuses, and the reviewer only needs one that holds up.
+
+Put times in it. "Arrived at the gate at 5:40, cleared at 6:55" says more than "the facility was slow," and Amazon can check it against its own records.
+
+Close with a clear ask. Ask Amazon to review the trip and remove the impact from your score, or to share the record that shows the violation. Either answer tells you where you stand.
+
+## Which reasons usually get denied
+
+Traffic, weather, a DOT or roadside inspection, or the app or phone failing usually get denied when they explain why your truck was late to the pickup or why the app went dark. Attaching more records rarely changes that.
+
+There is one case the tool does argue. If your driver left the pickup on time and heavy traffic or bad weather slowed the drive to a later stop, the letter says so, built on that on-time departure. Otherwise the lines this tool writes leave those reasons out, and if your own notes mention them, it warns you. When something else happened on that trip too, like a held door or a jammed gate, lead with that.
+
+Rejected loads are hard to turn around, and you get one appeal per dispute. Read how cancelling a Relay load hits your score (https://nudoiq.com/amazon-relay-cancel-load/) before you spend it.
+
+## What to gather before you file
+
+Pull these together while they are fresh:
+
+- Check-in or gate times. On-time is measured from check-in, so this comes first.
+- App and location records for the trip.
+- Messages with Relay support about the load.
+- Photos of the gate line, the dock or the site.
+- Bills of lading or gate receipts with a time stamp.
+
+Amazon does not publish a deadline for scorecard disputes, so file as soon as you spot the hit. For how the score itself works, see the Amazon Relay scorecard guide (https://nudoiq.com/amazon-relay-scorecard/).
+
+## Frequently asked questions
+
+### Do you have to pay or install anything to use this tool?
+It's free, and you don't install anything. It works in the browser on your phone or your computer.
+
+### Is the info you type sent anywhere?
+Your trip ID, facility and notes are never sent to us or anyone else. The letter is put together right here in your browser.
+
+### Will this letter get the violation removed from my scorecard?
+Nobody can promise you that. Amazon reviews every dispute and makes the call. A short letter with exact times and records makes your side easy to check.
+
+### How do I submit the letter in Relay?
+Copy the letter, open your scorecard in Relay and start a dispute on that trip. Paste the letter in, read it once more and submit. Amazon doesn't publish a deadline for scorecard disputes, so file while your records are fresh.
+
+### Can NudoIQ write the dispute letter for you automatically?
+You still tick what's true and submit the letter yourself. On your Relay scorecard page, NudoIQ lists the violations it finds and drafts the letter from the facts you tick. Dispute letters come with the 7-day free trial, then it's $49.99/month.
+
+---
+
+# See what a Relay load nets before you book
+
+URL: https://nudoiq.com/tools/relay-load-calculator/
+Published: 2026-10-12. Last updated: 2026-10-12.
+
+Free Amazon Relay load calculator: enter pay, loaded and deadhead miles, fuel price, MPG and costs per mile to see the net, net per loaded mile and break-even rate. Runs in the browser.
+
+## How your net is worked out
+
+Start with what the load pays. Then take off what the whole trip costs you, empty miles included. Your truck burns fuel on the way to the pickup and on the way home, so total miles are loaded miles plus deadhead.
+
+From there, the costs are:
+
+- Fuel: total miles divided by your MPG, times the fuel price.
+- Other costs: total miles times your other cost per mile.
+- Tolls for the trip.
+
+Net is the pay minus those three. Net per loaded mile is that net divided by the loaded miles.
+
+## What the break-even rate tells you
+
+Break-even is your total cost divided by the loaded miles. It is the lowest rate per loaded mile that covers your costs on this load. Below it, the load costs you money to run.
+
+Use it before you book. Compare it with the rate on the board. When the two are close, one long wait at the dock or a detour can wipe out what is left. Set your own floor from your own numbers. See Amazon Relay rates (https://nudoiq.com/amazon-relay-rates/) for how pricing works.
+
+## Why net per mile beats the posted rate per mile
+
+The posted rate per mile does not know your truck. It leaves out your fuel, your driver pay and the empty miles you drive to get to the pickup.
+
+Two loads can post the same rate and leave you with very different money once deadhead is counted. Net per loaded mile puts every load on the same footing, so you compare what each one leaves you after costs. For what affects pay on Relay, read how much Amazon Relay pays (https://nudoiq.com/how-much-does-amazon-relay-pay/).
+
+## Frequently asked questions
+
+### Does deadhead count in the net?
+Deadhead counts. It goes into your total miles, so fuel and other costs cover the empty drive to the pickup and back home. Net per mile and break-even are divided by loaded miles, since those are the miles the load pays for.
+
+### What MPG should I use?
+Use your truck's average over the last few fill-ups, loaded and empty together. The calculator starts at 9, but box trucks and tractors run very different numbers, so put in your own.
+
+### Is what you type saved or sent anywhere?
+Nothing you type is sent anywhere. The math runs in your browser on this page.
+
+### Does NudoIQ show this on the Relay load board?
+On your Relay board, NudoIQ shows the net and net per mile under the price on every load card. It works from costs you set once in Settings and counts deadhead to the pickup and the drive home, but not tolls. It runs in Chrome on a computer, and the net shows without starting a trial.
+
+### What goes in other cost per mile?
+Put in everything you pay per mile besides fuel: driver pay, maintenance, tires and insurance, each worked out per mile. If you pay something by the week, like insurance or a truck note, divide it by the miles your truck runs in a normal week.
