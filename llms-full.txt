@@ -252,6 +252,8 @@ Many carriers use [Amazon Relay auto-refresh](https://nudoiq.com/amazon-relay-au
 
 NudoIQ costs **$49.99 per month** for every feature: the same price whether you run one truck or twenty. Start with a **7-day free trial**, no card needed to start. Cancel anytime from the Stripe portal. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
 
+Our [Amazon Relay Chrome extension guide](/amazon-relay-chrome-extension/) shows what NudoIQ adds to your Relay tab and how to set it up.
+
 ## Frequently asked questions
 
 ### How do I sign in to Amazon Relay?
@@ -1180,6 +1182,8 @@ To use a refresher extension, you typically:
 
 Most refreshers add a control bar or popup to the Relay load board tab. You can adjust your rules and interval anytime without restarting.
 
+For NudoIQ's own bar and its four setup steps, see our [Amazon Relay Chrome extension setup guide](/amazon-relay-chrome-extension/).
+
 ## What Gets Refreshed
 
 The refresher reloads the entire load board: all available loads, all filters, everything. Every refresh shows you what's newly posted and what's still available from earlier refreshes.
@@ -1375,6 +1379,8 @@ The extension uses [Net Profit calculation](https://nudoiq.com/amazon-relay-auto
 
 If you're unsure about your rules, start in Alert mode and let NudoIQ suggest loads for a day. See if the suggestions are good. Then switch to Autobook.
 
+To get AutoBook on your own Relay board, follow the four steps in our [Amazon Relay Chrome extension guide](/amazon-relay-chrome-extension/).
+
 ## Setting a Profit Floor in NudoIQ
 
 When you set a profit floor in NudoIQ, you're saying "don't book anything that nets less than $X per load after subtracting driver pay, fuel, maintenance, and deadhead to pickup."
@@ -1502,6 +1508,8 @@ NudoIQ is a browser extension that runs inside the Relay load board and includes
 
 **Best for**: Carriers who want a full-featured refresher, rate history, profit calculation, dispute support, and backhaul finding all in one tool.
 
+You can see what NudoIQ adds to your Relay board, and how to set it up, on our [NudoIQ Chrome extension page](/amazon-relay-chrome-extension/).
+
 ## Comparison Table
 
 | Feature | LoadFetcher | Rocket Relay | SwiftRelay | FlashRelay | NudoIQ |
@@ -1573,6 +1581,108 @@ Set a profit floor and max-books cap. These are your primary defenses. A profit 
 
 ### Is NudoIQ's lane rate history always accurate?
 Lane rate history in NudoIQ comes from the Relay load board's posted rates over 90 days. It's historical fact, not a prediction. But Amazon rates change based on season, time of day, volume, and other factors, so past rates don't guarantee today's rate. That's why NudoIQ calls it decision support: it helps you judge whether today's rate is high or low, but you still decide whether to take it.
+
+---
+
+# An Amazon Relay Chrome extension for your load board
+
+URL: https://nudoiq.com/amazon-relay-chrome-extension/
+Published: 2026-10-12. Last updated: 2026-10-12.
+
+Short answer: An Amazon Relay Chrome extension is an add-on that works inside the Relay load board in your own browser. NudoIQ refreshes the board on a timer you set and tags new loads. It tells you about matches and can book loads that clear your Min Net Profit. It never asks for your Amazon password. Try it 7 days free.
+
+## What does an Amazon Relay Chrome extension do?
+
+An Amazon Relay Chrome extension is an add-on for your browser that works on the Relay load board. You still sign in to Relay the way you always do. The extension adds its tools on top of the board you already use. If you're new to the board itself, start with [how the Amazon Relay load board works](https://nudoiq.com/amazon-relay-load-board/).
+
+Good loads on Relay go fast, and nobody can sit and hit reload all day. An extension reloads the board for you, marks the new loads and, if you want, books the ones that fit your rules.
+
+NudoIQ puts a bar above Relay's search. On it you get START and STOP and a SPEED setting you choose. A badge says IDLE or ACTIVE, so you can tell at a glance if it's running.
+
+## What NudoIQ adds to your Relay load board
+
+Here is what you get on the board between the free preview and your free week. AutoBook, Instant Book, dispute letters, Pro View and trip ETAs start with the free week.
+
+- **Auto refresh.** The board reloads on a timer you set, so you stop hitting reload by hand. More in our [Amazon Relay auto refresh guide](https://nudoiq.com/amazon-relay-auto-refresh/).
+- **NEW and PRICE UP tags.** New loads get an orange NEW tag, and a load whose price went up gets a green PRICE UP tag.
+- **Three modes.** ALERT tells you when a matching load shows up, SEARCH gives you more ways to filter, and AUTOBOOK takes loads that match your rules.
+- **Limits you set on AutoBook.** It books only loads that clear your Min Net Profit and skips a load it can't fully price. It stops at your Max books, from 1 to 20. See [how the auto booker works](https://nudoiq.com/amazon-relay-auto-booker/).
+- **Instant Book.** On a NEW or PRICE UP row, Instant Book books the load in one tap, with no confirmation screen.
+- **Net profit on every load card.** You see the net and the $/mile before you book.
+- **Price History.** Lane Intelligence shows what that lane paid in the past.
+- **Open in Google Maps.** You can check the route the load takes before you commit.
+- **Post Truck.** You get a recommended bid that gets better the more you use it. It isn't accurate right after install. More on [posting a truck on Relay](https://nudoiq.com/amazon-relay-post-a-truck/).
+- **Find backhaul.** It helps you look for a load to take after this one ends.
+- **Scorecard dispute letters.** NudoIQ drafts the letter from the violation, and you submit it. More on the [Amazon Relay scorecard](https://nudoiq.com/amazon-relay-scorecard/).
+- **Pro View and trip ETAs.** You see each leg's facility code and address, times and driver type, plus miles left and ETA vs scheduled on your trips page.
+- **English and Spanish.** You can run NudoIQ in either language.
+
+## How do you install and set up NudoIQ?
+
+Setup takes four steps. Here they are for Chrome on a computer.
+
+1. [Add NudoIQ to Chrome](https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk) from the Chrome Web Store. It takes about a minute.
+2. Open Amazon Relay in the same Chrome profile and sign in as you normally do. The NudoIQ bar shows up above Relay's search.
+3. Start your free week from the NudoIQ bar. You don't need a card to start. It's 7 days free, then $49.99/month, and you can cancel anytime.
+4. Pick your mode and your SPEED, then press START. Your board now refreshes on its own.
+
+Before you turn on AUTOBOOK, set your Min Net Profit and your Max books. If you'd rather watch what matches first, start in ALERT mode and switch later.
+
+If the bar doesn't show up, refresh the Relay tab first. That fixes it nearly every time. If it still doesn't show, check that Relay is open in the same Chrome profile where you added NudoIQ.
+
+## Is an extension or a web app better for Relay?
+
+A web app is a separate site. You open it in its own tab and log in there. An extension works inside a page you already have open.
+
+NudoIQ is an extension, so it runs inside the Relay tab you are already signed in to, in your own Chrome. Here is what that means for you.
+
+- **No second login.** You use the Relay session you already have.
+- **No Amazon password.** NudoIQ never asks for your Amazon password and never stores it.
+- **The same board you know.** You still see the Relay board itself, with the NudoIQ bar and tags added.
+
+You are responsible for your Relay account and for following Relay's terms, so read them before you run any extension. NudoIQ is independent software and isn't affiliated with Amazon.
+
+## What do you need to run it?
+
+- **A computer with Chrome.** Edge, Brave and other Chromium browsers on a computer work too.
+- **An Amazon Relay carrier account.** NudoIQ works inside your account. It doesn't give you Relay access.
+- **Android works with the right browser.** You can use a Chromium browser that takes extensions, like Kiwi or Lemur.
+- **iPhone doesn't work.** NudoIQ can't run on an iPhone.
+
+## What does an Amazon Relay extension cost?
+
+You can start with the free preview. As soon as you install, you get auto refresh, alerts, the NudoIQ bar and Lane Intelligence on the first 5 priced loads each day.
+
+Your free week adds AutoBook, Instant Book and dispute letters, plus Pro View and trip ETAs. It's 7 days free with no card needed to start. After that it's $49.99/month, one price no matter how many trucks you run, and you can cancel anytime. See [pricing](https://nudoiq.com/#pricing) for the details.
+
+NudoIQ is rated 5.0 on the Chrome Web Store and used by 300+ carriers.
+
+## Want to compare extensions first?
+
+If you're still deciding, our guide to the [best Amazon Relay extensions](https://nudoiq.com/best-amazon-relay-extensions/) compares the options side by side. When you're ready, add NudoIQ to Chrome and try it on your own board for 7 days.
+
+## Frequently asked questions
+
+### Do you have to give NudoIQ your Amazon password?
+No, it never asks for your Amazon password and never stores it. It works inside the Relay tab you're already signed in to.
+
+### Can you use it on your phone?
+On Android, you can use it through a Chromium browser that takes extensions, like Kiwi or Lemur. It doesn't work on iPhone. On a computer, use Chrome or another Chromium browser.
+
+### Can you use it in Edge or Brave?
+Yes, you can use it in Edge, Brave and other Chromium browsers on a computer. Open Relay in the same browser where you added NudoIQ.
+
+### How much do you pay for NudoIQ?
+You get 7 days free with no card needed to start. After that it's $49.99/month, one price no matter how many trucks you run, and you can cancel anytime.
+
+### Is there a free version you can use?
+Yes, you get a free preview as soon as you install. It has auto refresh, alerts, the NudoIQ bar and Lane Intelligence on the first 5 priced loads a day. AutoBook, Instant Book, dispute letters, Pro View and trip ETAs come with the free week.
+
+### Can it get your Relay account in trouble?
+We can't promise you how Amazon treats any extension, and nobody honest can. You are responsible for your Relay account and for following Relay's terms, so read them before you run any extension. NudoIQ never asks for your Amazon password.
+
+### Can you use NudoIQ in Spanish?
+Yes, you can run NudoIQ in English or Spanish.
 
 ---
 
