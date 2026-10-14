@@ -438,6 +438,9 @@
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-temporada-alta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-peak-season/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-peak-season/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/es/que-es-amazon-relay/</loc>
@@ -507,30 +510,45 @@
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-horas-de-servicio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-hours-of-service/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-hours-of-service/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-rewards/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-recompensas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-rewards/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-rewards/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-learning-center/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-learning-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-learning-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-learning-center/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-hostler-shuttle-loads/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-shuttle/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-hostler-shuttle-loads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-hostler-shuttle-loads/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-intermodal/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-intermodal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-intermodal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-intermodal/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/es/amazon-relay-contacto/</loc>
@@ -594,5 +612,59 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-verificacion-de-antecedentes/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-background-check/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-background-check/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-recompensas/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-recompensas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-rewards/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-rewards/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-temporada-alta/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-temporada-alta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-peak-season/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-peak-season/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-horas-de-servicio/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-horas-de-servicio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-hours-of-service/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-hours-of-service/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-learning-center/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-learning-center/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-learning-center/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-learning-center/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-shuttle/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-shuttle/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-hostler-shuttle-loads/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-hostler-shuttle-loads/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-intermodal/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-intermodal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-intermodal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-intermodal/"/>
   </url>
 </urlset>

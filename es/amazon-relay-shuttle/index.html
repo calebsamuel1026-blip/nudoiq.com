@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Amazon Relay shuttle y hostler: cómo funcionan | NudoIQ</title>
+  <meta name="description" content="Cómo funcionan el hostling y el shuttle en Amazon Relay: reservas por bloque, el grado C+, los cursos, el tope de 12 horas, cargas spot y subastas.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/es/amazon-relay-shuttle/">
+  <link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-shuttle/">
+  <link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-hostler-shuttle-loads/">
+  <link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-hostler-shuttle-loads/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:title" content="Amazon Relay shuttle y hostler: cómo funcionan | NudoIQ">
+  <meta property="og:description" content="Cómo funcionan el hostling y el shuttle en Amazon Relay: reservas por bloque, el grado C+, los cursos, el tope de 12 horas, cargas spot y subastas.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/es/amazon-relay-shuttle/">
+  <meta property="og:locale" content="es_US">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: "es-amazon-relay-shuttle"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "es-amazon-relay-shuttle"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Amazon Relay shuttle y hostler: cómo funcionan",
+  "description": "Cómo funcionan el hostling y el shuttle en Amazon Relay: reservas por bloque, el grado C+, los cursos, el tope de 12 horas, cargas spot y subastas.",
+  "mainEntityOfPage": "https://nudoiq.com/es/amazon-relay-shuttle/",
+  "url": "https://nudoiq.com/es/amazon-relay-shuttle/",
+  "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+  "datePublished": "2026-10-14",
+  "dateModified": "2026-10-14",
+  "inLanguage": "es",
+  "author": {
+    "@type": "Organization",
+    "name": "NudoIQ",
+    "url": "https://nudoiq.com/"
+  },
+  "about": {
+    "@id": "https://nudoiq.com/#software"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
+    "name": "NudoIQ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nudoiq.com/icons/nudoiq-logo-512.png"
+    }
+  },
+  "abstract": "En Amazon Relay, hostling es mover tráileres dentro de un mismo sitio de Amazon, y un shuttle mueve tráileres entre sitios cercanos de Amazon, normalmente a menos de 50 millas. Los dos se reservan por bloques de tiempo, no por carga, y Amazon dice que te paga el bloque completo al que te comprometes. Necesitas tu propio day cab o hostler truck, una CDL, un grado C+ y dos cursos del Learning Center."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "NudoIQ",
+      "item": "https://nudoiq.com/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Amazon Relay shuttle",
+      "item": "https://nudoiq.com/es/amazon-relay-shuttle/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es el shuttle en Amazon Relay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un shuttle mueve tráileres entre sitios cercanos de Amazon, normalmente a menos de 50 millas, por ejemplo de un fulfillment center a un lote de almacenamiento. Es power only y se reserva por bloques de tiempo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué es un shuttle request en Amazon Relay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No encontramos ninguna página pública de Amazon Relay que use ese término. Los movimientos de shuttle se reservan como bloques de tiempo en el load board o se ganan en subastas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué necesito para hacer hostling en Amazon Relay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon pide tu propio day cab o hostler truck, una CDL vigente para el chofer, un performance grade de C+ y dos cursos del Learning Center, uno de hostling y otro de subastas de Relay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuántas horas puede trabajar un chofer en bloques de hostling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Un chofer puede trabajar varios bloques al día si no se enciman, pero Amazon dice que debe quedarse dentro de sus horas de servicio, con un máximo de 12 horas de hostling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Las cargas shuttle de Amazon Relay se pagan por hora?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Se reservan y se pagan por bloques de tiempo. Amazon dice que te paga el bloque completo al que te comprometes y que, en las subastas, Relay calcula una tarifa por hora por chofer cuando pujas. No publica tarifas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo encuentro cargas shuttle en el load board de Relay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon dice que filtres por cargas power only y escojas los horarios y lugares que te sirven. Su propio ejemplo es BNA5 a BNA5, un movimiento que empieza y termina en el mismo sitio."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body data-layout="custom">
+  <!-- 2026-10-14 (page-designer). Native-Spanish twin of /amazon-relay-hostler-shuttle-loads/. Words: research/copy/ES-GUIDES-BATCH-E2-2026-10-14.json
+       (Martha); CTA, promo, header and footer strings reused verbatim from the live Spanish guide shell (es/amazon-relay-requisitos).
+       Builder: research/seo/traffic-2026-10-14/build_es_guides_E.py. data-layout="custom": no generator overwrites it. -->
+  <div class="promo">7 días gratis, sin tarjeta para empezar · Funciona en tu propio Chrome · En español y en inglés</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/es/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Main navigation">
+      <a href="/es/#features">Funciones</a><a href="/es/#pricing">Precio</a><a href="/es/#faq">FAQ</a><a href="/android/">Android</a>
+    </nav>
+    <div class="navright">
+      <div class="lang" aria-label="Language"><a href="/amazon-relay-hostler-shuttle-loads/" hreflang="en">English</a><a href="/es/amazon-relay-shuttle/" hreflang="es" aria-current="page">Espa&ntilde;ol</a></div>
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Agregar NudoIQ a Chrome</a>
+    </div>
+  </div></header>
+
+  <div class="doc-hero"><div class="doc-hero-in">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/es/">NudoIQ</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay shuttle</span></nav>
+    <h1 class="page-title">Amazon Relay shuttle y hostler: cómo funcionan</h1>
+    <p class="page-subtitle">El hostling y el shuttle son los movimientos locales de tráileres en Relay, y se reservan por bloque de tiempo, no por carga. Así funcionan.</p>
+    <p class="byline">NudoIQ &middot; Publicado <time datetime="2026-10-14">14 de octubre de 2026</time> &middot; Última actualización <time datetime="2026-10-14">14 de octubre de 2026</time></p>
+  </div></div>
+
+  <div class="container">
+    <article class="prose">
+<section class="answer" aria-label="Respuesta corta"><p class="lbl">Respuesta corta</p><p>En Amazon Relay, hostling es mover tráileres dentro de un mismo sitio de Amazon, y un shuttle mueve tráileres entre sitios cercanos de Amazon, normalmente a menos de 50 millas. Los dos se reservan por bloques de tiempo, no por carga, y Amazon dice que te paga el bloque completo al que te comprometes. Necesitas tu propio day cab o hostler truck, una CDL, un grado C+ y dos cursos del Learning Center.</p></section>
+<h2 id="que-son-las-cargas-hostler-y-shuttle-en-relay">Qué son las cargas hostler y shuttle en Relay</h2>
+<p>Movimientos locales de tráileres. El <a href="https://relay.amazon.com/blog/booking-options/why-book-hostler-shuttle-loads-on-relay" target="_blank" rel="noopener">post de hostler</a> de Amazon lo explica fácil: si alguna vez moviste tráileres en un patio (yard), un muelle o un almacén, eso es hostling.</p>
+<p>Relay tiene dos tipos:</p>
+<ul><li><strong>Hostling en un solo sitio:</strong> mover tráileres dentro de un mismo sitio de Amazon. Por ejemplo, acomodar un tráiler para cargarlo o descargarlo en una delivery station.</li><li><strong>Shuttle runs:</strong> mover tráileres entre sitios cercanos de Amazon, normalmente a menos de 50 millas. Por ejemplo, llevar tráileres de un fulfillment center o un sort center muy lleno a un lote de almacenamiento fuera del sitio.</li></ul>
+<p>Amazon dice que la mayoría de los transportistas hacen las dos cosas durante un bloque: acomodar tráileres y cambiarlos.</p>
+<p>Son nuevos. El <a href="https://relay.amazon.com/blog/booking-options/new-freight-types-on-relay-how-amazon-is-expanding-load-opportunities" target="_blank" rel="noopener">resumen de RelayCon 2025</a> de Amazon dice que el hostling y el shuttle se lanzaron en 2025 y que son power only. Nuestra <a href="/amazon-relay-power-only/">guía de power only (en inglés)</a> cubre el resto del power only en Relay.</p>
+<h2 id="como-funcionan-los-bloques-de-hostling">Cómo funcionan los bloques de hostling</h2>
+<p>Reservas tiempo, no cargas. Amazon dice que estos movimientos se reservan por bloques de tiempo en lugar de cargas individuales. Tu chofer hace los movimientos de tráiler que salgan durante ese horario.</p>
+<p>Lo que dice Amazon de los bloques:</p>
+<ul><li><strong>Pago.</strong> Te pagan el bloque completo al que te comprometes, aunque Amazon no use todo el tiempo.</li><li><strong>Más de uno al día.</strong> Un chofer puede trabajar varios bloques al día si no se enciman.</li><li><strong>Un tope.</strong> Los choferes deben quedarse dentro de sus horas de servicio, con un máximo de 12 horas de hostling. Amazon dice que cuidar esos límites le toca al transportista. Más en <a href="/es/amazon-relay-horas-de-servicio/">horas de servicio en Amazon Relay</a>.</li><li><strong>Límite de reservas.</strong> Hay un tope de movimientos de hostling que puedes reservar, para repartir el trabajo entre los transportistas que califican.</li></ul>
+<h2 id="que-necesitas-para-hostling-y-shuttle-en-relay">Qué necesitas para hostling y shuttle en Relay</h2>
+<p>Además de ser transportista aprobado de Relay, Amazon pide:</p>
+<ol><li>Tu propio day cab o hostler truck</li><li>Una CDL vigente para el chofer, porque puede usar vías públicas para llegar a patios fuera del sitio</li><li>Un performance grade de C+</li><li>Dos cursos del Learning Center: uno sobre servicios de hostling para Amazon y otro sobre las subastas de Relay</li></ol>
+<p>Necesitas estar aprobado para tomar los cursos. Nuestra guía del <a href="/es/amazon-relay-learning-center/">Learning Center</a> explica dónde están, y la del <a href="/es/amazon-relay-scorecard/">scorecard</a> explica qué decide tu grado.</p>
+<h2 id="como-reservar-movimientos-de-hostling-y-shuttle">Cómo reservar movimientos de hostling y shuttle</h2>
+<p>Dos formas, según Amazon.</p>
+<p><strong>En el load board.</strong> Amazon dice que filtres por cargas power only y escojas los horarios y lugares que te sirven, con el ejemplo &quot;BNA5 -&gt; BNA5&quot;. En ese ejemplo, el movimiento empieza y termina en el mismo sitio, lo que parece hostling en un solo sitio. Esa es nuestra lectura. Amazon dice que ves la hora de inicio y de fin desde antes.</p>
+<p><strong>En subastas.</strong> Puedes pujar por rutas de hostling y shuttle. Amazon dice que Relay calcula la tarifa por hora por chofer mientras pujas, y que si tu empresa gana una subasta, recibe hasta 6 meses de movimientos. Nuestra <a href="/amazon-relay-auctions/">guía de subastas (en inglés)</a> explica cómo funcionan las pujas en Relay.</p>
+<p>¿Estás comparando un bloque con una carga power only normal? Nuestra <a href="/es/herramientas/calculadora-carga-relay/">calculadora gratis de cargas de Relay</a> te muestra la ganancia neta y el neto por milla cargada con el pago y las millas.</p>
+<h2 id="para-quien-son-las-cargas-hostler-y-shuttle">Para quién son las cargas hostler y shuttle</h2>
+<p>Amazon las ofrece a transportistas con day cabs parados que quieren trabajo local, más cerca de casa. Y en un <a href="https://relay.amazon.com/blog/booking-options/how-to-find-amazon-relays-fit-for-your-trucking-business" target="_blank" rel="noopener">post de septiembre de 2026</a> dice que opciones nuevas como &quot;hostler and shuttle and third-party shipper loads&quot; ayudan a los transportistas a diversificar.</p>
+<p>Lo que cedes es control. Comprometes un chofer y un camión a un bloque, y Amazon decide qué movimientos lo llenan.</p>
+<h2 id="lo-que-amazon-no-publica-sobre-hostling">Lo que Amazon no publica sobre hostling</h2>
+<ul><li>Tarifas por hora</li><li>El número del tope de reservas</li><li>Qué sitios tienen hostling</li><li>Especificaciones de los hostler trucks (yard tractors)</li><li>Si un shuttle necesita sleeper</li></ul>
+    </article>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Preguntas frecuentes</h2>
+      <details><summary>¿Qué es el shuttle en Amazon Relay?</summary><div class="a"><p>Un shuttle mueve tráileres entre sitios cercanos de Amazon, normalmente a menos de 50 millas, por ejemplo de un fulfillment center a un lote de almacenamiento. Es power only y se reserva por bloques de tiempo.</p></div></details>
+      <details><summary>¿Qué es un shuttle request en Amazon Relay?</summary><div class="a"><p>No encontramos ninguna página pública de Amazon Relay que use ese término. Los movimientos de shuttle se reservan como bloques de tiempo en el load board o se ganan en subastas.</p></div></details>
+      <details><summary>¿Qué necesito para hacer hostling en Amazon Relay?</summary><div class="a"><p>Amazon pide tu propio day cab o hostler truck, una CDL vigente para el chofer, un performance grade de C+ y dos cursos del Learning Center, uno de hostling y otro de subastas de Relay.</p></div></details>
+      <details><summary>¿Cuántas horas puede trabajar un chofer en bloques de hostling?</summary><div class="a"><p>Un chofer puede trabajar varios bloques al día si no se enciman, pero Amazon dice que debe quedarse dentro de sus horas de servicio, con un máximo de 12 horas de hostling.</p></div></details>
+      <details><summary>¿Las cargas shuttle de Amazon Relay se pagan por hora?</summary><div class="a"><p>Se reservan y se pagan por bloques de tiempo. Amazon dice que te paga el bloque completo al que te comprometes y que, en las subastas, Relay calcula una tarifa por hora por chofer cuando pujas. No publica tarifas.</p></div></details>
+      <details><summary>¿Cómo encuentro cargas shuttle en el load board de Relay?</summary><div class="a"><p>Amazon dice que filtres por cargas power only y escojas los horarios y lugares que te sirven. Su propio ejemplo es BNA5 a BNA5, un movimiento que empieza y termina en el mismo sitio.</p></div></details>
+    </section>
+
+    <aside class="cta">
+      <div><h2>Mira cuánto te deja la próxima carga antes de tomarla.</h2><p>7 días gratis, sin tarjeta para empezar · 5.0 en la Chrome Web Store</p></div>
+      <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Comenzar prueba de 7 días</a>
+    </aside>
+
+    <nav class="related" aria-label="Más guías de Amazon Relay">
+      <h2>Más guías de Amazon Relay</h2>
+      <div class="cards">
+        <a href="/es/amazon-relay-en-espanol/">Amazon Relay en español: cómo buscar y reservar cargas</a>
+        <a href="/es/amazon-relay-requisitos/">Requisitos de Amazon Relay para transportistas</a>
+        <a href="/es/que-es-amazon-relay/">¿Qué es Amazon Relay y cómo funciona?</a>
+        <a href="/es/cuanto-paga-amazon-relay/">¿Cuánto paga Amazon Relay?</a>
+        <a href="/es/amazon-relay-scorecard/">Scorecard de Amazon Relay: cómo funciona el puntaje y cómo disputarlo</a>
+        <a href="/es/herramientas/carta-disputa-relay/">Escribe tu carta de disputa del scorecard de Amazon Relay</a>
+        <a href="/es/herramientas/calculadora-carga-relay/">Mira cuánto te deja una carga de Relay antes de reservarla</a>
+        <a href="/es/amazon-relay-intermodal/">Amazon Relay intermodal: cómo funcionan las cargas de drayage</a>
+        <a href="/es/amazon-relay-learning-center/">Amazon Relay 101 y el Relay Learning Center</a>
+        <a href="/es/amazon-relay-horas-de-servicio/">Horas de servicio en Amazon Relay: HOS, ELD y team driving</a>
+        <a href="/es/">NudoIQ en español</a>
+      </div>
+    </nav>
+
+    <div class="footer">
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/es/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/" hreflang="en">Guías (en inglés)</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacidad</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Reembolsos</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Términos</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contacto</a>
+    </div>
+    <p class="tm">Amazon y Amazon Relay son marcas registradas de Amazon.com, Inc. o sus afiliadas. NudoIQ es un producto independiente y no está afiliado, respaldado ni patrocinado por Amazon.com, Inc. Los requisitos de Amazon Relay pueden cambiar, así que confirma las reglas vigentes en relay.amazon.com.</p>
+
+  </div>
+</body>
+</html>
