@@ -360,12 +360,18 @@
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-pagos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-payments/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-payments/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-disputes/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-disputas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-disputes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-disputes/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/es/herramientas/carta-disputa-relay/</loc>
@@ -390,24 +396,36 @@
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-contact/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-approval-time/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-tiempo-de-aprobacion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-approval-time/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-approval-time/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-background-check/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-verificacion-de-antecedentes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-background-check/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-background-check/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-app/</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/aplicacion-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-app/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-canada/</loc>
@@ -480,6 +498,9 @@
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-iniciar-sesion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-login/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-login/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-hours-of-service/</loc>
@@ -510,5 +531,68 @@
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-contacto/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-contact/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/aplicacion-amazon-relay/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/aplicacion-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-app/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-app/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-pagos/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-pagos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-payments/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-payments/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-iniciar-sesion/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-iniciar-sesion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-login/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-login/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-tiempo-de-aprobacion/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-tiempo-de-aprobacion/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-approval-time/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-approval-time/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-disputas/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-disputas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-disputes/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-disputes/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-verificacion-de-antecedentes/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-verificacion-de-antecedentes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-background-check/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-background-check/"/>
   </url>
 </urlset>

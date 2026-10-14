@@ -135,7 +135,7 @@ const stripMd = (s) => s.replace(/\*\*|\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/
 
 // Hand-built native-Spanish twins (es/<slug>/index.html, not generated here). hreflang must be reciprocal,
 // so the English guide carries the pair too. Added 2026-10-07 with the two Spanish guides.
-const ES_TWIN = { 'amazon-relay-load-board': 'amazon-relay-en-espanol', 'amazon-relay-requirements': 'amazon-relay-requisitos', 'what-is-amazon-relay': 'que-es-amazon-relay', 'how-much-does-amazon-relay-pay': 'cuanto-paga-amazon-relay', 'amazon-relay-scorecard': 'amazon-relay-scorecard', 'amazon-relay-auto-booker': 'amazon-relay-auto-booker', 'amazon-relay-auto-refresh': 'amazon-relay-auto-refresh', 'best-amazon-relay-extensions': 'mejores-extensiones-amazon-relay' };
+const ES_TWIN = { 'amazon-relay-load-board': 'amazon-relay-en-espanol', 'amazon-relay-requirements': 'amazon-relay-requisitos', 'what-is-amazon-relay': 'que-es-amazon-relay', 'how-much-does-amazon-relay-pay': 'cuanto-paga-amazon-relay', 'amazon-relay-scorecard': 'amazon-relay-scorecard', 'amazon-relay-auto-booker': 'amazon-relay-auto-booker', 'amazon-relay-auto-refresh': 'amazon-relay-auto-refresh', 'best-amazon-relay-extensions': 'mejores-extensiones-amazon-relay', 'amazon-relay-contact': 'amazon-relay-contacto', 'amazon-relay-app': 'aplicacion-amazon-relay', 'amazon-relay-payments': 'amazon-relay-pagos', 'amazon-relay-login': 'amazon-relay-iniciar-sesion', 'amazon-relay-approval-time': 'amazon-relay-tiempo-de-aprobacion', 'amazon-relay-disputes': 'amazon-relay-disputas', 'amazon-relay-background-check': 'amazon-relay-verificacion-de-antecedentes' };
 
 function head({ title, description, url, extraLd, slug }) {
   return `<!DOCTYPE html>
