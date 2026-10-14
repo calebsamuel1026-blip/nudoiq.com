@@ -190,7 +190,7 @@ Amazon says there's no fleet size requirement, so owner-operators and small flee
 
 Amazon has specific eligibility requirements to protect load security and ensure compliance:
 
-- Your DOT number must have interstate authority and be active for at least 180 days (a newer authority may disqualify you).
+- Your DOT number must have interstate authority, and Relay typically requires it to be at least 180 days old to complete onboarding. If yours is newer, Amazon's Relay FAQ still encourages you to apply early.
 - You must have a valid MC (Motor Carrier) number.
 - Your FMCSA safety rating must be Satisfactory, None, or Not Rated. A rating below Satisfactory disqualifies you.
 - Your BASIC scores must stay within limits: Unsafe Driving below 60%, HOS Compliance below 60%, Vehicle Maintenance below 75%, Controlled Substances/Alcohol below 75%, Driver Fitness below 75%. Your driver out-of-service violation rate must be at or below 35%, and vehicle violation rate at or below 50%.
@@ -257,7 +257,7 @@ Our [Amazon Relay Chrome extension guide](/amazon-relay-chrome-extension/) shows
 ## Frequently asked questions
 
 ### How do I sign in to Amazon Relay?
-Visit relay.amazon.com and sign in with your business credentials. You'll complete Amazon's approval process, which includes verifying your DOT number, MC number, insurance, safety rating and beneficial ownership. Amazon doesn't publish an approval timeline.
+Visit relay.amazon.com and sign in with your business credentials. You'll complete Amazon's approval process, which includes verifying your DOT number, MC number, insurance, safety rating and beneficial ownership. Amazon's Relay FAQ says a completed application is typically approved or rejected within 1 to 3 weeks.
 
 ### Can I run Amazon Relay part-time?
 Yes. You set your own availability with Post A Truck, and you choose which loads to book on the board. Amazon says there's no fleet size requirement. Just remember that cancelling loads you booked hurts your acceptance score.
@@ -288,13 +288,13 @@ Short answer: Amazon Relay requires a DOT number with interstate authority activ
 Before you can book your first load on Amazon Relay, your business must meet these foundational criteria:
 
 **DOT Number**
-You need a DOT number with interstate authority. The critical requirement: your DOT authority must be active for at least 180 days. If you received your authority recently, you'll need to wait until you cross the 180-day mark.
+You need a DOT number with interstate authority, and Relay typically requires that authority to be at least 180 days old to complete onboarding. If yours is newer, you can still apply. Amazon's Relay FAQ says "we encourage you to apply early," so it can start reviewing your information.
 
 **MC (Motor Carrier) Number**
 You must have a valid MC number. This number, issued by the FMCSA, shows that you're registered as an interstate carrier. When you get your DOT number, the MC application is usually filed at the same time.
 
 **Authority Age**
-The 180-day rule is the single biggest barrier for new carriers. You can't rush it. Amazon checks this before approving your account. If your authority is newer, apply once it passes 180 days.
+For a new carrier, the 180-day rule is the biggest barrier. Relay typically requires your DOT number to be at least 180 days old to complete onboarding. You don't have to wait to apply, though. Amazon's Relay FAQ says "we encourage you to apply early," so you're ready to move forward as soon as you meet the requirement.
 
 ## Safety Rating and BASIC Score Requirements
 
@@ -358,7 +358,7 @@ Once you confirm you meet the requirements, the process is straightforward:
 Go to the Amazon Relay homepage and select "Sign up" or "Apply now."
 
 **2. Enter Your Business Information**
-Provide your legal business name, entity type (LLC, S-Corp, etc.), your DOT and MC numbers, and the date your authority was granted. Double-check the authority date: if it's less than 180 days old, Amazon will ask you to reapply later.
+Provide your legal business name, entity type (LLC, S-Corp, etc.), your DOT and MC numbers, and the date your authority was granted. If your authority is under 180 days old, you can still apply. Amazon's Relay FAQ encourages you to apply early so it can begin reviewing your information.
 
 **3. Submit Safety and Compliance Records**
 Amazon will pull your FMCSA records automatically once you provide your DOT number. If your BASIC scores are in range and your safety rating is acceptable, you'll move to the next step. If you're out of range on any metric, your application may be delayed or rejected.
@@ -379,7 +379,7 @@ Complete your carrier profile: invite your drivers (each needs their own Relay p
 
 If your DOT authority is too new, your BASIC scores are out of range, or your safety rating is below Satisfactory, Amazon will reject your application.
 
-If it's the authority age, you simply need to wait. Apply again after 180 days.
+If it's the authority age, you don't have to sit out. Amazon's Relay FAQ encourages you to apply early, so it can start reviewing your information before your authority reaches 180 days. And if an application is turned down over authority status, Amazon says "you're welcome to reapply once it's been addressed."
 
 If it's a BASIC score or safety rating, work with your fleet manager or compliance officer to improve. Common issues:
 - **Unsafe Driving**: Driver training or speed-governor limits.
@@ -398,7 +398,7 @@ NudoIQ costs **$49.99 per month** for all features. Start with a **7-day free tr
 ## Frequently asked questions
 
 ### How long does Amazon Relay approval take?
-Amazon doesn't publish an approval timeline. Missing documents or verification questions can slow things down, so have your insurance, authority and ownership documents ready.
+Amazon's Relay FAQ says a completed application is typically approved or rejected within 1 to 3 weeks. Our approval time guide (https://nudoiq.com/amazon-relay-approval-time/) covers what slows it down and what to do if you hear nothing.
 
 ### What if my BASIC score is just slightly over the limit?
 Amazon publishes these limits as requirements. If you're over the limit on any category, your application will be delayed or rejected. Work on improving that score and reapply once you're in range.
@@ -413,7 +413,7 @@ You need your DOT and MC numbers, which require business registration with your 
 No. Amazon requires commercial insurance: General Liability, Auto Liability, Cargo and Workers' Compensation. Personal policies don't cover commercial freight work and won't meet Amazon's minimums.
 
 ### What if I have a newer authority but all my other metrics are strong?
-Amazon requires authority active for at least 180 days, and strong BASIC scores don't replace it. Apply once your authority passes 180 days.
+Relay typically requires your DOT number to be at least 180 days old to complete onboarding, and strong BASIC scores don't replace that. You can still apply now. Amazon's Relay FAQ says "we encourage you to apply early," so you're ready to move forward as soon as you meet the requirement.
 
 ---
 
@@ -737,9 +737,11 @@ Amazon Relay pays weekly, regardless of rate:
 - **Payment Period**: Sunday 12:00 AM through Saturday 11:59 PM
 - **Payment Date**: The following Friday
 - **Invoice Generation**: Automatic: no manual invoicing required
-- **Pay Disputes**: Must be filed within 30 days of the original load completion date
+- **Pay Disputes**: Submitted through the Amazon Relay portal within 30 days of reviewing your weekly invoice
 
 Weekly pay on a set schedule is one of Amazon Relay's consistent advantages.
+
+Our Amazon Relay payments guide (https://nudoiq.com/amazon-relay-payments/) covers the weekly schedule, invoices and what to do when pay looks wrong.
 
 ## How to Judge Whether a Rate Is Good
 
@@ -792,9 +794,9 @@ Spot loads book at the listed price. The ways to set your own price are Post A T
 
 ## Pay Disputes and 30-Day Deadline
 
-If you think Amazon miscalculated a load, charged you a fee, or disputed a completion incorrectly, you have 30 days from the load date to file a claim. File sooner rather than later: pay disputes must be filed within 30 days.
+If a payment looks wrong, [Amazon's Relay FAQ](https://relay.amazon.com/faq) says you can submit a payment dispute "directly through Amazon Relay portal within 30 days of reviewing your weekly invoice." Amazon doesn't publish what proof it wants or how long a review takes, so check each invoice against the pay breakdown you saw at booking and file soon if something's off.
 
-Pay disputes are separate from scorecard disputes. A pay dispute is about money owed. A scorecard dispute is about a violation on your performance record (late delivery, rejected load, etc.).
+Pay disputes and scorecard disputes are separate. A pay dispute is about money owed, and you file it in the Relay portal. On your scorecard, Amazon publishes dispute language only for on-time impacts, and no dispute route for rejected loads. More in our Amazon Relay disputes guide (https://nudoiq.com/amazon-relay-disputes/).
 
 ## Understanding Rate Variability
 
@@ -817,10 +819,10 @@ Not on most spot loads, which book at the listed price. On select urgent loads, 
 Amazon doesn't publish anything that ties pay to fleet size, and there's no fleet size requirement to haul for Relay. Your performance grade decides access to things like contracts and early spot loads, and auction eligibility also considers equipment count, tenure and CARB compliance.
 
 ### How long does it take to get paid after I complete a load?
-If you complete the load before 11:59 PM Saturday, you're paid the following Friday. If you finish it after midnight, it falls into the next Sunday to Saturday cycle and is paid the Friday after that cycle ends. So a load finished late Saturday is paid six days later, and one finished early Sunday is paid 12 days later.
+Amazon's Relay FAQ says the payment cycle runs weekly from Sunday to Saturday, and everything completed before 23:59 Saturday is paid out the following Friday. A load completed after that cutoff isn't in that week's batch.
 
 ### What if I dispute a load's rate?
-You have 30 days from the load completion date to file a pay dispute. Contact Amazon Relay support through the portal and explain why you think the amount was wrong. Amazon reviews it and decides.
+Amazon's Relay FAQ says you can submit a payment dispute through the Amazon Relay portal within 30 days of reviewing your weekly invoice. Explain why you think the amount is wrong. Amazon reviews it and decides.
 
 ---
 
@@ -1063,6 +1065,8 @@ Then write it up plainly: the load, the impact you're disputing, what happened, 
 Our free Relay dispute letter tool (https://nudoiq.com/tools/relay-dispute-letter/) turns the facts you tick into a short letter you can edit and paste into your dispute.
 
 One thing that trips carriers up: the 30-day dispute window Amazon lists applies to pay disputes, not scorecard impacts. Don't assume you have 30 days on a score dispute.
+
+Our Amazon Relay disputes guide (https://nudoiq.com/amazon-relay-disputes/) lists each dispute type and what Amazon publishes about it.
 
 ## What does Amazon not publish about the scorecard?
 
@@ -2615,7 +2619,7 @@ NudoIQ runs inside your own signed-in Relay tab and never asks for your Amazon p
 ## Frequently asked questions
 
 ### Is there a phone number for Amazon Relay support?
-Amazon doesn't publish one. Account problems go to the Support Center in your Relay account, and load problems go to the Relay Operations Center through the portal or Relay mobile.
+No, Amazon Relay has no support phone line. Amazon's Relay FAQ says Amazon Relay doesn't have an official contact phone number. Our guide to contacting Amazon Relay (https://nudoiq.com/amazon-relay-contact/) lists where Amazon sends each problem instead.
 
 ### How long does it take to get reinstated on Amazon Relay?
 Amazon doesn't publish a reinstatement timeline. For an insurance lapse, booking stays blocked until coverage is reinstated, so update the Insurance tab as soon as you renew.
@@ -3323,6 +3327,8 @@ More than most carriers expect. Amazon doesn't publish:
 - **A dispute route for acceptance.** Amazon's dispute language on the performance score page covers on-time impacts only. It doesn't describe a way to dispute an acceptance hit.
 
 If someone quotes you exact numbers for any of these, ask where they got them.
+
+Our Amazon Relay disputes guide (https://nudoiq.com/amazon-relay-disputes/) covers each dispute type and what Amazon publishes about it.
 
 ## Where does NudoIQ fit?
 
@@ -4309,7 +4315,7 @@ Traffic, weather, a DOT or roadside inspection, or the app or phone failing usua
 
 There is one case the tool does argue. If your driver left the pickup on time and heavy traffic or bad weather slowed the drive to a later stop, the letter says so, built on that on-time departure. Otherwise the lines this tool writes leave those reasons out, and if your own notes mention them, it warns you. When something else happened on that trip too, like a held door or a jammed gate, lead with that.
 
-Rejected loads are hard to turn around, and you get one appeal per dispute. Read how cancelling a Relay load hits your score (https://nudoiq.com/amazon-relay-cancel-load/) before you spend it.
+Rejected loads are hard to turn around, and Amazon doesn't publish a dispute route for acceptance. Read how cancelling a Relay load hits your score (https://nudoiq.com/amazon-relay-cancel-load/) before you file one.
 
 ## What to gather before you file
 
@@ -4389,3 +4395,886 @@ On your Relay board, NudoIQ shows the net and net per mile under the price on ev
 
 ### What goes in other cost per mile?
 Put in everything you pay per mile besides fuel: driver pay, maintenance, tires and insurance, each worked out per mile. If you pay something by the week, like insurance or a truck note, divide it by the miles your truck runs in a normal week.
+
+---
+
+# Amazon Relay payment schedule: when do carriers get paid?
+
+URL: https://nudoiq.com/amazon-relay-payments/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon Relay pays weekly. Its FAQ says the cycle runs Sunday to Saturday, and everything completed before 23:59 Saturday is paid the following Friday. Invoices are generated automatically in the Relay portal, and payment disputes are submitted there within 30 days of reviewing your weekly invoice. Amazon publishes no detention, TONU or layover policy for Relay.
+
+## When does Amazon Relay pay carriers?
+
+Amazon pays on a weekly cycle. Here is the rule, word for word, from [Amazon's Relay FAQ](https://relay.amazon.com/faq): "Payment cycle runs weekly from Sunday-Saturday. Everything completed before 23:59 Saturday will be paid out the following week on Friday."
+
+So the week closes Saturday night and payday is the Friday after. Amazon's [rates guide](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-rates) puts it simply: "Amazon pays carriers weekly for completed loads." Contract work runs on the same rhythm. Amazon's [contracts guide](https://relay.amazon.com/blog/amazon-trucking-contracts) says you're paid weekly for all work completed the week before.
+
+## How long does Amazon Relay take to pay?
+
+Amazon calls it 7-day pay. Its [RelayCon 2026 experts post](https://relay.amazon.com/blog/industry-trends/freight-industry-insights-from-experts-at-amazons-relaycon-2026) mentions "7-day payment terms and no factoring fees." Its [broker comparison](https://relay.amazon.com/blog/intro-to-amazon-relay/freight-brokers-vs-direct-booking-why-choose-amazon-relay) says "With Relay, you typically get paid within 7 days," and contrasts that with "30-60 day waits for payouts from logistics brokers."
+
+The rule that actually sets your payday is the FAQ one above. Look at which Sunday to Saturday week the load was completed in, then find the Friday after that week. A load completed after 23:59 Saturday isn't in that week's batch.
+
+## What are Amazon Relay's payment terms?
+
+Here's what Amazon publishes:
+
+- **Weekly cycle.** Sunday to Saturday, paid the following Friday.
+- **No invoicing on your end.** The FAQ says "Amazon Relay will generate invoices automatically."
+- **Pay shown before you book.** The rates guide says you see the full payout upfront, broken into base rate, fuel surcharge and tolls.
+- **No factoring fees.** Amazon's RelayCon 2026 experts post pairs 7-day payment terms with no factoring fees.
+- **Bank details at signup.** The [application steps](https://relay.amazon.com/blog/how-to-become-a-carrier-for-amazon-relay) end with "Payment information."
+
+Amazon doesn't publish the payment terms in its carrier agreement, the payment method (ACH or check), what time money lands on Friday, or holiday changes to the Friday payout. For what loads pay per mile, see our guide to [how much Amazon Relay pays](https://nudoiq.com/how-much-does-amazon-relay-pay/).
+
+## Where do you see Relay invoices and payment status?
+
+In your company's Relay account. The FAQ says "You will be able to review all invoices and payments in Amazon Relay portal." The rates guide adds that you can track payment status there too.
+
+## What does "payment pending" mean on Amazon Relay?
+
+Amazon doesn't publish what "pending" means or how long it lasts. What you can check yourself:
+
+1. **The completion date.** Was the load completed before 23:59 Saturday? If not, it belongs to a later week.
+2. **The invoice.** Open it in the portal and compare it to the base rate, fuel and tolls you saw when you booked.
+3. **Fraud checks.** The only cause of a payment delay Amazon names on its public pages is fraud. Its [geospoofing post](https://relay.amazon.com/blog/trucking-safety/geospoofing-how-amazon-relay-combats-fake-gps-technology) says fake GPS leads to "payment delays during fraud investigations."
+
+## What should you check when an Amazon Relay payment looks wrong?
+
+Amazon doesn't publish a list of common payment issues. These checks come straight from what it does publish:
+
+- **Amount vs. breakdown.** Line up each invoice with the pay breakdown from booking.
+- **Loads you didn't haul.** Amazon's geospoofing post says: "Review your invoices to make sure they match loads your company actually hauled." Report fraud to relay-network-reports@amazon.com.
+- **Bank account changes.** If your bank details changed and you didn't change them, the FAQ says to report it through the Support Center while logged into your Relay account.
+
+To see what a single load really left you, run it through our [free Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/). It shows net, net per loaded mile and break-even for one load.
+
+## How do you dispute an Amazon Relay payment?
+
+Through the portal. The FAQ says: "You can submit payment disputes directly through Amazon Relay portal within 30 days of reviewing your weekly invoice."
+
+Amazon doesn't publish what proof it wants, how long a review takes, or whether a correction comes in the next pay cycle or separately. So review each invoice the week it posts and file soon if something's off. Our [Amazon Relay disputes guide](https://nudoiq.com/amazon-relay-disputes/) covers payment disputes next to performance disputes and the other types.
+
+## Does Amazon Relay pay detention, TONU or layover?
+
+Amazon publishes no detention, TONU, layover or lumper policy for Relay. When we checked all 139 pages in Relay's public sitemap on October 14, 2026, none of them used the words "detention" or "layover."
+
+Here's what Amazon does publish:
+
+- **The price is all-in.** Amazon's [load board guide](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) says spot loads are "booked at the all-in price listed on Relay's load board. The base rate, fuel surcharges, and tolls charges are included."
+- **"Accessorials" means fuel and tolls.** Amazon's [auctions guide](https://relay.amazon.com/blog/freight-bidding-on-amazon-relays-auctions) says "Accessorials (fuel and tolls) are paid after the load is complete."
+- **Fuel surcharge is paid.** The rates guide says it "adjusts based on current fuel prices." Amazon says it's added in accordance with its Relay Program Policies, which aren't public, and it doesn't publish the formula.
+- **Blocks pay in full.** The load board guide says "Blocks are typically paid in full even if your drivers and equipment aren't needed." The [Post A Truck guide](https://relay.amazon.com/blog/how-to-load-match-with-post-a-truck) says the same for matched blocks, and the contracts guide says Amazon pays "a competitive rate if the full block of time isn't used."
+- **Lumper fees.** Amazon doesn't publish who pays a lumper on a Relay load or how it's reimbursed.
+
+If a load runs late, Amazon's [free freight search post](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search) says you can call the Relay Operations Center "about delays or unexpected changes to a load." Amazon's [hours of service post](https://relay.amazon.com/blog/trucking-safety/hours-of-service-how-to-comply-with-the-fmcsa) says reporting changes helps your performance score reflect "only the factors within your control." It doesn't say reporting adds pay.
+
+Detention, TONU and layover rates you may see online come from Amazon Freight's shipper terms. Those are charges Amazon Freight bills to shippers, not what Relay pays carriers.
+
+If pay on a delayed or changed load looks wrong, check the breakdown, then use the payment dispute route above. Amazon doesn't say whether that route covers accessorial claims.
+
+## Where does NudoIQ fit?
+
+NudoIQ is a Chrome extension for the Relay load board. It's an independent tool, not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence shows a lane's price history. So you know what a load should leave you before you book it, not when the invoice posts. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### What day does Amazon Relay pay carriers?
+You get paid on Friday. Amazon's Relay FAQ says the payment cycle runs Sunday to Saturday, and everything completed before 23:59 Saturday is paid out the following Friday.
+
+### Do I need to send Amazon Relay an invoice?
+You don't have to. Amazon's Relay FAQ says Amazon Relay generates invoices automatically, and you can review all invoices and payments in the Relay portal.
+
+### How long do I have to dispute an Amazon Relay payment?
+Amazon's Relay FAQ says you can submit payment disputes through the Amazon Relay portal within 30 days of reviewing your weekly invoice. Amazon doesn't publish how long a review takes.
+
+### Does Amazon Relay pay detention?
+Amazon doesn't publish a detention policy for Relay, and none of its public Relay pages mention detention. It says spot loads are paid at an all-in price that includes base rate, fuel surcharge and tolls.
+
+### Does Amazon Relay pay a fuel surcharge?
+You do get one. Amazon says the load price includes a fuel surcharge that adjusts based on current fuel prices. Amazon points to its Relay Program Policies, which aren't public, and doesn't publish the formula.
+
+### Does Amazon Relay offer quick pay?
+Amazon's public Relay pages don't describe a quick pay or early pay option today. The schedule Amazon publishes is weekly, paid the Friday after the Sunday to Saturday week.
+
+---
+
+# How do you file a dispute on Amazon Relay?
+
+URL: https://nudoiq.com/amazon-relay-disputes/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon publishes two dispute routes for Relay: payment disputes, submitted in the Relay portal within 30 days of reviewing your weekly invoice, and on-time performance disputes, where carriers can let Relay know and dispute score impacts. Amazon publishes no route for rejected loads, trip completion or driver verification, and says it won't offer an appeal for roadside inspection violation limits. There's no official phone number.
+
+## What can you dispute on Amazon Relay?
+
+Less than most carriers expect. Amazon publishes a dispute route for two things: payments and on-time performance. For most other problems it publishes nothing, and for one it says plainly there's no appeal.
+
+| Dispute type | Where Amazon says to file | Published deadline |
+|---|---|---|
+| Payment | The Amazon Relay portal | 30 days from reviewing your weekly invoice |
+| Performance (on-time) | "Let Relay know" (exact menu isn't public) | None published |
+| Rejected load (acceptance) | No route published | None |
+| Trip completion | Not mentioned anywhere | None |
+| Driver verification | No route; Amazon manually reviews failed selfie checks | None |
+| Roadside inspection violation limits | No appeal | Not applicable |
+| Cargo loss or theft | Relay support center, with documentation | None published |
+
+The exact menu path for every dispute type sits behind the Relay login, so we can't show it here.
+
+## How do you file a payment dispute on Amazon Relay?
+
+In the portal. [Amazon's Relay FAQ](https://relay.amazon.com/faq) says: "You can submit payment disputes directly through Amazon Relay portal within 30 days of reviewing your weekly invoice."
+
+That's the only dispute deadline Amazon publishes. It doesn't say what proof it wants or how long a review takes. Compare each invoice to the base rate, fuel and tolls you saw at booking, and file soon if something's off. Our [Amazon Relay payments guide](https://nudoiq.com/amazon-relay-payments/) covers the weekly pay cycle and what to check.
+
+## How do you file a performance dispute on Amazon Relay?
+
+Amazon's [performance score guide](https://relay.amazon.com/blog/amazon-relay-performance-score) says, in its on-time section: "If something happens along the way, carriers can let Relay know and dispute performance score impacts." Amazon measures on-time from the check-in timestamp at the site.
+
+Amazon doesn't publish a deadline for performance disputes, what evidence a dispute needs, how long a decision takes, or whether there's a second level of appeal.
+
+The same guide says Relay's support center for onboarded carriers "addresses common scenarios that affect performance scores." In September 2026 Amazon [said](https://relay.amazon.com/blog/intro-to-amazon-relay/how-amazon-relays-improving-to-support-carrier-growth) it's "now resolving performance disputes 20% faster," without giving a starting point.
+
+Two habits help. Report schedule changes to the Relay Operations Center as they happen. Amazon's [hours of service post](https://relay.amazon.com/blog/trucking-safety/hours-of-service-how-to-comply-with-the-fmcsa) says that helps your score reflect "only the factors within your control." And don't sit on a dispute, since no deadline is published. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains all four metrics. If you need to write one up, our [free Relay dispute letter tool](https://nudoiq.com/tools/relay-dispute-letter/) lets you tick what's true and copy a letter. Amazon decides.
+
+## Can you dispute a rejected load on Amazon Relay?
+
+Amazon publishes no route for it. The performance score guide says your score "can take a hit any time a carrier rejects tendered loads," and "That includes letting loads expire." Its dispute language covers on-time only.
+
+One thing does work in your favor. If Amazon cancels a tendered load, your score isn't impacted. More in our guide to [cancelling an Amazon Relay load](https://nudoiq.com/amazon-relay-cancel-load/).
+
+## Is there a trip completion or driver verification dispute?
+
+Not one Amazon publishes. The phrase "trip completion dispute" appears on no public Relay page. If a trip problem shows up in your pay, the payment dispute route above is the one Amazon documents.
+
+For driver verification, Amazon's [driver eligibility page](https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads) says "Amazon manually reviews unsuccessful selfie checks" and warns that "Multiple failed selfie checks can impact a driver's and carrier's access to Relay." It describes no dispute process. New driver documents (CDL front and back plus a selfie) are typically reviewed within 48 hours.
+
+## What can't you appeal on Amazon Relay?
+
+Roadside inspection violation limits. Amazon's [inspection violations post](https://relay.amazon.com/blog/trucking-safety/how-amazon-relay-uses-data-about-roadside-inspection-violations) says: "Like BASICs violations, we won't offer an appeal process." Carriers with "three or more inspections that exceed our violation limits may lose access to Relay loads."
+
+## Is there an Amazon Relay dispute phone number?
+
+No. The FAQ says it directly: "Amazon Relay doesn't have an official contact phone number." Our [guide to contacting Amazon Relay](https://nudoiq.com/amazon-relay-contact/) lists where Amazon sends each problem instead.
+
+## How do you report cargo loss or theft on Relay?
+
+Amazon's [cargo theft post](https://relay.amazon.com/blog/cargo-theft-reduce-your-companys-risk) says carriers "must also report loss prevention issues in the Relay support center with relevant documentation, such as a police report."
+
+## What about a legal dispute with Amazon?
+
+The [Conditions of Use](https://relay.amazon.com/terms) on the Relay site send "Any dispute or claim relating in any way to your use of any Amazon Service" to binding arbitration. Those are the general site terms. The carrier agreement itself isn't public.
+
+## Where does NudoIQ fit?
+
+NudoIQ is a Chrome extension for Amazon Relay, an independent tool not affiliated with Amazon. On the Relay scorecard page, it finds the violation and drafts a dispute letter. You check it and submit it, and Amazon decides. On the load board it shows net and net per mile under the price on every load card. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### Is there a phone number for Amazon Relay disputes?
+No, Relay has no dispute phone line. Amazon's Relay FAQ says Amazon Relay doesn't have an official contact phone number. Our guide to contacting Amazon Relay lists where Amazon sends each problem.
+
+### Is there a deadline for an Amazon Relay performance dispute?
+You won't find one published. The only published dispute deadline is for payment disputes: 30 days from reviewing your weekly invoice. Don't assume that window applies to your score.
+
+### How long does an Amazon Relay performance dispute take?
+You won't find a published decision time. In September 2026, Amazon said it is resolving performance disputes 20% faster, without giving a starting point.
+
+### Can I dispute a rejected load on Amazon Relay?
+You won't find a published dispute route for acceptance. Rejecting a tendered load, or letting it expire, can lower your score. Loads Amazon cancels don't affect your score.
+
+### Can I appeal Amazon Relay's roadside inspection violation limits?
+You can't. Amazon says it won't offer an appeal process for its inspection violation limits, and carriers with three or more inspections over those limits may lose access to Relay loads.
+
+### How do I report cargo theft on Amazon Relay?
+Amazon says carriers must report loss prevention issues in the Relay support center with relevant documentation, such as a police report.
+
+---
+
+# Amazon Relay phone number: how do you contact Amazon Relay?
+
+URL: https://nudoiq.com/amazon-relay-contact/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon's Relay FAQ says Amazon Relay doesn't have an official contact phone number. For a load in progress, the 24/7 Relay Operations Center (ROC) is reached through the Relay portal or Relay mobile. Account and security problems go to the Support Center when you're logged in, and applicants use Contact Us on the top right of the application page.
+
+## Does Amazon Relay have a phone number?
+
+No. [Amazon's Relay FAQ](https://relay.amazon.com/faq) says it plainly: "Amazon Relay doesn't have an official contact phone number."
+
+That surprises a lot of carriers, because search results are full of "Amazon Relay customer service" and "24/7" numbers. None of them is published on relay.amazon.com. Treat any number you find on another site as unverified, and never give it your login.
+
+One wrinkle. Amazon's [free freight search post](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search) says you can "call our operations center" about delays or unexpected changes to a load. It doesn't print a number. So the way in is still the Relay portal or the Relay app.
+
+## Who do you contact for each Relay problem?
+
+| Your problem | Where Amazon sends you |
+|---|---|
+| A load in progress: delay, change, breakdown | Relay Operations Center (ROC), 24/7, through the Relay portal or Relay mobile |
+| A driver needs help on the road | Relay Assistant chat in the Relay app |
+| Account access or security | Support Center, when logged into your Relay account |
+| Your application | Contact Us, top right of your application page |
+| Suspicious activity or double brokering | relay-network-reports@amazon.com |
+| A change of ownership | relay-ownership-transfers@amazon.com, at least 30 days ahead |
+| Privacy or data request | transportation-privacy@amazon.com |
+| A payment that looks wrong | Payment dispute in the Relay portal |
+| A life-threatening situation | 911 |
+
+## How do you reach the Relay Operations Center?
+
+Through Relay itself. The FAQ says: "Amazon provides 24/7 operational support for our carriers through the Relay Operations Center (ROC)." It adds that the ROC "can be reached through the Relay portal or Relay mobile."
+
+Report schedule changes as they happen. Amazon's [hours of service post](https://relay.amazon.com/blog/trucking-safety/hours-of-service-how-to-comply-with-the-fmcsa) says drivers and carriers "can use our app to connect with our operations for support," and that telling operations about a change helps your performance score reflect "only the factors within your control."
+
+Amazon doesn't publish a response time for the ROC. "24/7" is the only service promise on the page.
+
+## How do drivers get help on the road?
+
+In the app. Amazon's [mobile app post](https://relay.amazon.com/blog/how-truckers-use-the-amazon-relay-mobile-app) says drivers can "request support from Relay Assistant throughout their trip," an AI chat tool for problems out on the road. "If they have a breakdown or mechanical issue, they can report it in the app."
+
+The chat isn't a dead end. Amazon's [September 2026 update](https://relay.amazon.com/blog/intro-to-amazon-relay/how-amazon-relays-improving-to-support-carrier-growth) says: "When Relay Assistant can't resolve an issue, it connects you to a human operator with your conversation's full context."
+
+## Who do you contact about your Relay account?
+
+The Support Center. For account security, the FAQ says to "reach out to us through the Support Center when logged into your Relay account."
+
+If you can't log in at all, the FAQ's steps are to reset your password on Amazon's account recovery page, using the email address you sign into Relay with. Make sure it's the same email you first registered with. If the page keeps spinning, try a private window, clear your cookies or switch browsers.
+
+If your account is suspended rather than locked, our [account suspended guide](https://nudoiq.com/amazon-relay-account-suspended/) walks through what to check.
+
+Amazon also says it "doesn't request personal information like passwords, OTPs, and credit card numbers over phone or e-mail." Anyone who calls asking for them isn't Amazon.
+
+## Who do you contact about an application?
+
+Use Contact Us. The FAQ says to contact Relay support "by clicking Contact Us on the top right of your application page."
+
+Before you do, check your FMCSA record. Amazon's onboarding team reaches applicants using the contact information on file with FMCSA. If that doesn't match your application, its messages can miss you.
+
+## How do you report fraud or double brokering?
+
+By email. The FAQ says to "email relay-network-reports@amazon.com with a detailed description of the suspicious activity, including the DOT #s involved."
+
+If you've been a victim of fraud, Amazon's [geospoofing post](https://relay.amazon.com/blog/trucking-safety/geospoofing-how-amazon-relay-combats-fake-gps-technology) also says to "file a report with the Federal Trade Commission (FTC) at reportfraud.ftc.gov and your local law enforcement agency."
+
+Check the address bar too. Amazon's [email scams post](https://relay.amazon.com/blog/email-scams-how-to-spot-a-fake) says legitimate Relay websites have "relay.amazon.com" at the beginning of the URL.
+
+## Who handles ownership changes and privacy requests?
+
+* **Ownership changes.** The email scams post says to "email relay-ownership-transfers@amazon.com at least 30 days ahead."
+* **Privacy and data requests.** The FAQ says to contact transportation-privacy@amazon.com.
+
+## Who do you contact about pay or a scorecard hit?
+
+Pay problems go through the portal. The FAQ says you can submit payment disputes "directly through Amazon Relay portal within 30 days of reviewing your weekly invoice." Our [Amazon Relay disputes guide](https://nudoiq.com/amazon-relay-disputes/) lists each dispute type and where Amazon says to file it.
+
+For a late arrival or app usage hit you think is wrong, our [free Relay dispute letter tool](https://nudoiq.com/tools/relay-dispute-letter/) lets you tick what's true and copy a letter to submit. Amazon decides.
+
+## Do top carriers get faster support?
+
+Amazon says the top Relay Rewards tier gets "Dedicated office hours" with "priority assistance from Amazon Relay's support team," per its [Relay Rewards post](https://relay.amazon.com/blog/how-carriers-save-with-relay-rewards). It doesn't publish the hours or what the tier takes. The program is US only.
+
+In Canada, relay.amazon.ca gives the same ROC answer: it's reached through the Relay portal or Relay mobile.
+
+## What doesn't Amazon publish about contacting Relay?
+
+* Any phone number, for the US, Canada or "24/7" support
+* ROC hours beyond "24/7," or any response time
+* A route for someone fully locked out, beyond the account recovery steps
+* A mailing address for carriers
+* A dispute phone number
+
+If a site gives you a number for any of these, it didn't come from Amazon's Relay pages.
+
+## Where does NudoIQ fit?
+
+NudoIQ is a Chrome extension for the Relay load board, an independent tool not affiliated with Amazon, so it's not a way to reach Amazon support. On your Relay scorecard page it drafts a dispute letter from the violation, and you check it and submit it. Amazon decides. On the board it shows net and net per mile under the price on every load card, free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### Is there an Amazon Relay customer service phone number?
+No, Amazon Relay has no customer service line. Amazon's Relay FAQ says Amazon Relay doesn't have an official contact phone number. Load problems go to the 24/7 Relay Operations Center through the Relay portal or Relay mobile, and account problems go to the Support Center when you're logged in.
+
+### What is the Amazon Relay ROC phone number?
+Amazon doesn't publish a number for the Relay Operations Center. Its FAQ says the Relay Operations Center (ROC) gives 24/7 support and is reached through the Relay portal or Relay mobile. Treat any ROC number on a third-party site as unverified.
+
+### What is the Amazon Relay support email?
+Amazon Relay publishes no general support email. The emails it does publish are for specific jobs: relay-network-reports@amazon.com for suspicious activity, relay-ownership-transfers@amazon.com for ownership changes and transportation-privacy@amazon.com for privacy requests. Account help goes through the Support Center while logged in.
+
+### Is there an Amazon Relay phone number for drivers?
+No, drivers get help in the Relay app. They can chat with Relay Assistant during a trip and report breakdowns there, and Amazon says Relay Assistant connects them to a human operator when it can't resolve an issue.
+
+### What is the Amazon Relay contact number in Canada?
+Amazon doesn't publish a Relay phone number for Canada. The relay.amazon.ca page says the 24/7 Relay Operations Center is reached through the Relay portal or Relay mobile, the same as in the US.
+
+### How do I contact Amazon Relay about my application?
+Click Contact Us on the top right of your application page, as Amazon's FAQ says. If you haven't heard back in two weeks, first check that your FMCSA contact information matches your application exactly, since Amazon's onboarding team uses it to reach you.
+
+---
+
+# How long does it take to get approved for Amazon Relay?
+
+URL: https://nudoiq.com/amazon-relay-approval-time/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon's Relay FAQ says a completed application is typically approved or rejected within 1 to 3 weeks, and that any delay is due to validating insurance information. Amazon's blog posts give slightly different ranges: within three weeks, and 2 to 3 weeks. If you hear nothing after two weeks, check that your FMCSA contact information matches your Relay application exactly.
+
+## How long does Amazon Relay approval take?
+
+Usually one to three weeks. [Amazon's Relay FAQ](https://relay.amazon.com/faq) says that once Amazon receives your completed application, "it will typically be approved or rejected within 1-3 weeks."
+
+Amazon's own pages don't all give the same range, though:
+
+| Amazon page | What it says |
+|---|---|
+| [Relay FAQ](https://relay.amazon.com/faq) | Approved or rejected within 1 to 3 weeks |
+| [How to become a carrier](https://relay.amazon.com/blog/how-to-become-a-carrier-for-amazon-relay) | "Amazon generally reviews completed applications within three weeks." |
+| [Prime Day post](https://relay.amazon.com/blog/amazon-relay-news-events/prime-day-for-amazon-relay-carriers) | Approval "can take 2-3 weeks" |
+| [High volume events post](https://relay.amazon.com/blog/amazon-relay-news-events/best-practices-for-amazons-high-volume-events) | "about 1-3 weeks" |
+
+So plan on up to three weeks. And note the word "completed." The clock starts when Amazon has everything, not when you open the form.
+
+Filling out the form is the quick part. Amazon's carrier post says you can submit everything "in as little as 20 minutes." You'll give your DOT number and company details, verify a one-time password, list your equipment and add payment information. What you need to qualify is in our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/).
+
+In Canada it's faster on paper. The relay.amazon.ca page says applications are approved or rejected within 2 to 4 business days.
+
+## What slows a Relay application down?
+
+Insurance, by Amazon's own account. The FAQ says: "Delays, if any, will be due to validation of insurance information."
+
+What Amazon tells you to do about it:
+
+* **Have it all ready first.** Amazon "urges you to have all data ready prior to applying."
+* **Call your insurance provider if it stalls.** The FAQ says to reach out to them in the event of any delays.
+* **Get your insurance on file with FMCSA.** If your insurance gets flagged, Amazon says to "ensure your provider submits the information directly to FMCSA."
+* **Give new insurance time.** If you're already a Relay carrier and changing insurance, the high volume events post recommends allowing 2 weeks for it to process.
+
+Our [insurance requirements guide](https://nudoiq.com/amazon-relay-insurance-requirements/) lists the minimums your certificate needs to show.
+
+## Can you apply before your DOT number is 180 days old?
+
+Yes. The FAQ says Relay "typically requires your DOT number to be at least 180 days old to complete onboarding," but "we encourage you to apply early."
+
+Amazon's reason: starting now lets it begin reviewing your information, so you're ready to move forward as soon as you meet the requirement.
+
+## Haven't heard back after two weeks?
+
+Check your FMCSA record first. The FAQ says to check "that your FMCSA contact information matches your Relay application details, down to the dash or comma."
+
+That detail matters because "Our onboarding team uses your information on file with the FMCSA to reach you." If the phone number or email on file is old, Amazon's messages may never reach you.
+
+If everything matches and you still haven't heard, click Contact Us on the top right of your application page. The FAQ also says Amazon Relay doesn't have an official contact phone number, so don't go looking for one.
+
+You can watch progress from your phone. Amazon's carrier post says to "download the Relay app on iOS or Android to get started and track your application's progress on the go."
+
+## Can you reapply if Amazon Relay rejects your application?
+
+Often, yes. The FAQ says: "In many cases, you may be eligible to reapply." Amazon recommends first reviewing the reason for your rejection.
+
+* **Fixable reasons.** For issues "like insurance coverage, authority status, or missing documentation, you're welcome to reapply once it's been addressed."
+* **Serious reasons.** Amazon says some rejection reasons, such as serious compliance issues, may disqualify you from applying again.
+
+Amazon doesn't publish a waiting period before you reapply. Fix the cause first. If it was insurance, have your provider submit it to FMCSA before you send a new application.
+
+## What happens after you're approved?
+
+The FAQ says you'll get an email with instructions to access your Relay account. Then:
+
+1. **Complete the Relay 101 course** in Relay's Learning Center (about 10 minutes).
+2. **Add your drivers and equipment** to your Relay profile. Each driver is invited and verified separately.
+3. **Start booking** through the Relay load board.
+
+Before the first booking, work out what a load leaves you. Our [free Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) takes a load's pay and miles and shows your net and net per loaded mile, deadhead included.
+
+## What doesn't Amazon publish about approval?
+
+* What each application status, such as "in review," means
+* Any way to speed up a review
+* A waiting period before you reapply
+* A full list of rejection reasons
+* An approval rate
+
+If someone promises a faster approval, ask where that's written on relay.amazon.com.
+
+## Where does NudoIQ fit?
+
+Once you're approved, the load board is where the work starts. NudoIQ is a Chrome extension for the Relay load board, an independent tool not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence (the first button under a load) shows that lane's price history. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### How long does Amazon Relay take to approve an application?
+Amazon's Relay FAQ says a completed application is typically approved or rejected within 1 to 3 weeks. Other Amazon posts say within three weeks or 2 to 3 weeks, so plan on up to three. Delays come from insurance validation.
+
+### How do I check my Amazon Relay application status?
+Amazon says you can track your application's progress in the Relay app on iOS or Android. It doesn't publish what each status means. If you hear nothing in two weeks, check your FMCSA contact details, then click Contact Us on your application page.
+
+### Why was my Amazon Relay application rejected?
+Amazon tells you to start with the rejection reason it gives you. Its FAQ names insurance coverage, authority status and missing documentation as fixable reasons, and says serious compliance issues may disqualify you from applying again. It doesn't publish a full list.
+
+### Can I reapply to Amazon Relay after a rejection?
+In many cases, you can. Amazon's FAQ says you're welcome to reapply once a fixable issue like insurance coverage, authority status or missing documentation is addressed. It publishes no waiting period.
+
+### Does Amazon Relay accept new authority?
+Relay typically requires your DOT number to be at least 180 days old to complete onboarding. Amazon's FAQ still encourages you to apply early, so it can start reviewing your information before you meet the requirement.
+
+### How long does Amazon Relay approval take in Canada?
+The relay.amazon.ca page says Canadian applications are approved or rejected within 2 to 4 business days, with any delay due to insurance validation.
+
+---
+
+# Amazon Relay background check: what drivers and carriers should know
+
+URL: https://nudoiq.com/amazon-relay-background-check/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Every driver onboarding to Amazon Relay must meet standardized background check requirements before hauling Relay loads. The check starts in the driver's Relay app and is run by Amazon's approved provider, which looks for past criminal or motor vehicle record violations, and checks from other providers aren't accepted. The separate ID check (driver's license front and back plus a selfie) is typically reviewed within 48 hours. Amazon doesn't publish how far back the check goes or which offenses disqualify a driver.
+
+## How does a driver get onboarded to Amazon Relay?
+
+By invitation. [Amazon's Relay FAQ](https://relay.amazon.com/faq) says: "A carrier needs to invite their drivers to create a profile in the Relay app." Amazon's [driver eligibility post](https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads) adds that drivers can't share their accounts.
+
+The driver downloads the Relay app on iOS or Android and logs in to an Amazon account, or creates one. Then they enter their commercial driver's license and contact details. Two checks follow: an identity check and a background check. Our [dispatcher guide](https://nudoiq.com/amazon-relay-dispatcher/) covers the invite steps from the dispatch side.
+
+## What does the identity check involve?
+
+A license and a selfie. The FAQ says drivers "complete identity verification by submitting a selfie and a photo of their driver's license." The driver eligibility post says Amazon verifies the license front and back, and that "Amazon typically reviews the information within 48 hours."
+
+Only drivers who pass the identity check can haul Relay loads.
+
+## What does the Amazon Relay background check look at?
+
+The FAQ says "all drivers onboarding to Relay must meet standardized background check requirements before hauling Amazon Relay loads."
+
+Here's what Amazon says about how it works:
+
+* **It starts in the app.** The background check kicks off during onboarding in the driver's Relay app.
+* **Amazon picks the provider.** "Amazon works with our approved background check provider to look for past criminal or motor vehicle record violations."
+* **Outside checks don't count.** "We won't approve checks supplied by other providers."
+
+Amazon doesn't name the provider on its public pages.
+
+## How long does the Amazon Relay background check take?
+
+Amazon doesn't say. The only time it publishes is the 48-hour review for the identity check. Nothing on relay.amazon.com gives a time for the background check itself.
+
+Amazon also doesn't explain the statuses drivers search for, like "in review," "overdue" or "verification due." So give yourself room. Invite a new driver well before you plan to put them on a load.
+
+## Can you do Amazon Relay with a felony?
+
+Amazon doesn't publish an answer. It says the check looks for "past criminal or motor vehicle record violations," but it doesn't list which offenses disqualify a driver or how far back the check goes.
+
+Anyone who gives you a firm yes or no isn't quoting Amazon. The honest path is to have the driver go through onboarding and see the result.
+
+## Why does the Relay app ask drivers for selfies during loads?
+
+To confirm the right driver is on the load. The driver eligibility post says Relay uses facial recognition at specific times during loads. The app requests periodic selfies, "for example, at pickup and/or drop-off," and matches them to the selfie from onboarding.
+
+What Amazon says happens next:
+
+* "Amazon manually reviews unsuccessful selfie checks."
+* "Multiple failed selfie checks can impact a driver's and carrier's access to Relay."
+* Drivers can decline, but "this will prevent them from hauling Relay loads."
+
+Amazon's [secure freight page](https://relay.amazon.com/pages/secure-freight-how-amazon-prevents-trucking-fraud-theft) says facilities use "driver's license validation and real-time photo verification" so only authorized drivers get in.
+
+On data, the FAQ says Amazon may keep Facial Recognition Information for up to 30 days after it's generated, or longer for fraud detection or investigation, but not more than one year.
+
+## Can you dispute a failed selfie or background check?
+
+Amazon publishes no dispute route for either. Manual review of failed selfie checks is the only step it describes. Our [Amazon Relay disputes guide](https://nudoiq.com/amazon-relay-disputes/) lists the routes Amazon does publish.
+
+If a hold-up at the gate turns into a late arrival hit on your scorecard, that's an on-time issue, and Amazon does let carriers dispute on-time impacts. Our [free Relay dispute letter tool](https://nudoiq.com/tools/relay-dispute-letter/) lets you tick what's true and copy a letter to submit. Amazon decides.
+
+## What is the carrier responsible for?
+
+More than Amazon's checks. The driver eligibility post says "Relay-approved carriers are independent contractors, not Amazon employees. Carriers are responsible for their own drivers."
+
+Amazon lists what that covers: carriers manage "drug and alcohol screening, hours of service (HOS) compliance, medical certification," plus regular license checks and ongoing driver qualification.
+
+And one rule to put in writing for your dispatch desk: "Carriers should only assign Amazon loads to drivers who have successfully passed background checks and drug screenings" that meet or exceed federal rules.
+
+## Do carrier owners get verified too?
+
+Yes, through a separate check. The FAQ says carrier identity verification confirms "your business entity and the identity of all beneficial owners (anyone with more than 25% ownership)."
+
+Amazon's [get started page](https://relay.amazon.com/get-started) points owners to the Persona Privacy Policy for details on how Persona processes their information.
+
+## What doesn't Amazon publish about background checks?
+
+* The background check provider's name
+* How far back the check goes
+* Which offenses disqualify a driver
+* How long the background check takes
+* An appeal or dispute process for a failed check
+* What statuses like "verification due" or "asset verification" mean
+
+## Where does NudoIQ fit?
+
+NudoIQ has no part in driver checks. Those stay between your drivers and Amazon. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that shows net and net per mile under the price on every load card and drafts scorecard dispute letters you check and submit. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### How long does the Amazon Relay background check take?
+Amazon doesn't publish a time for the driver background check. The only time it gives is for the identity check, which Amazon typically reviews within 48 hours. Invite new drivers well before you need them on a load.
+
+### How far back does the Amazon Relay background check go?
+Amazon doesn't say how far back a driver's check goes. Its driver eligibility post says the check looks for past criminal or motor vehicle record violations, but it publishes no look-back period.
+
+### Can you do Amazon Relay with a felony?
+Amazon doesn't publish which offenses disqualify a driver. It says only that its approved provider looks for past criminal or motor vehicle record violations. The driver has to go through onboarding to get an answer.
+
+### What are the Amazon Relay background check requirements?
+Every driver onboarding to Relay must meet standardized background check requirements before hauling loads. The check starts in the driver's Relay app and is run by Amazon's approved provider, and Amazon won't approve checks from other providers.
+
+### What is Amazon Relay driver verification?
+It's the identity check every driver completes when onboarding: a photo of the driver's license, front and back, and a selfie. Amazon typically reviews it within 48 hours. During loads, the Relay app also asks for periodic selfies, for example at pickup or drop-off.
+
+### What does Amazon Relay background check in review mean?
+Amazon doesn't explain driver background check statuses on any public page. It publishes no route for status questions either. Our suggestion: start with the Support Center while logged in, the general route Amazon names for account issues, since Amazon publishes no phone number.
+
+---
+
+# Amazon Relay app: what it does and how drivers use it
+
+URL: https://nudoiq.com/amazon-relay-app/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: The Amazon Relay app is Amazon's mobile app for iOS and Android. Drivers who work for approved, onboarded Relay carriers use it to see their schedule, check in and out at facilities, follow truck-friendly routes, get load instructions and report issues. Amazon says the app must be open, with location services on, while a driver runs Relay loads.
+
+## What is the Amazon Relay app?
+
+It's Amazon's mobile app for Relay, on iOS and Android. Amazon's [mobile app post](https://relay.amazon.com/blog/how-truckers-use-the-amazon-relay-mobile-app) says it's "used by hundreds of thousands of truck drivers worldwide."
+
+It isn't open to everyone. "Only drivers that work for approved and onboarded Relay carriers can use our trucking app." A driver gets in by invitation from their carrier.
+
+Carriers use it too. Amazon's [Prime Day post](https://relay.amazon.com/blog/amazon-relay-news-events/prime-day-for-amazon-relay-carriers) says you can "Search and book freight anywhere you get a phone signal." You can also apply to Relay in the app and track your application's progress.
+
+The same app post says truckers rate Relay 4.7 out of 5 on iOS and 4.6 on Android. Ratings change, and that post was last updated in February 2026.
+
+## What can drivers do in the Relay app?
+
+From Amazon's app post and the [Relay home page](https://relay.amazon.com/), drivers can:
+
+* **Onboard to Relay** and see their schedule, with new loads added as they come
+* **Do asset inspections**
+* **Get step-by-step load instructions,** including pickup, drop-off and in-yard steps
+* **Follow truck-friendly routes** that avoid "residential areas and low-bridge locations"
+* **Watch route weather.** The forecast keeps updating until the end of the trip, with alerts for new severe weather
+* **Get cancellation alerts** within 5 hours before the scheduled time
+* **Add stops** for fuel, food and parking while planning a trip
+* **Review load history**
+* **Chat with Relay Assistant** and report issues
+
+## How does check-in work with the Relay app?
+
+Mostly automatically. The Relay home page says: "Our automated facility check-in/out process and electronic in-yard instructions reduce driver dwell time at the gate and in the yards."
+
+Amazon's [yard technology story](https://freight.amazon.com/newsroom/technology/2023-yard-tech) describes it at the gate. "Large monitors outside the truck's window show the driver where to go, such as which dock door to back into." The "instructions are provided on the driver's Relay mobile app, and the gate automatically opens."
+
+Check-in time matters for your score. Amazon's [performance score guide](https://relay.amazon.com/blog/amazon-relay-performance-score) says on-time is calculated "based on the check-in timestamp at the site."
+
+One hard stop for California: Amazon's [CARB post](https://relay.amazon.com/blog/intro-to-amazon-relay/carb-compliance-requirements-to-haul-with-amazon-relay) says "Trucks that travel through California for Amazon loads will be rejected at check-in without valid certificates."
+
+Amazon publishes no early or remote check-in policy.
+
+## Where are bills of lading in the Relay app?
+
+Amazon's yard technology story says the system uses "electronic proofs of delivery and bills of lading." Amazon's [load tracking post](https://relay.amazon.com/blog/load-tracking-with-amazon-relay) says carriers can play back a trip, including "document uploads (e.g., bills of lading)."
+
+Amazon doesn't publish what to do when a BOL doesn't show in the app. For a load in progress, the Relay Operations Center is the place to ask. It's open 24/7 through the Relay portal or Relay mobile.
+
+## How do drivers get help through the app?
+
+Through Relay Assistant and issue reports. The app post says drivers can "request support from Relay Assistant throughout their trip," an AI chat tool. They can report non-traffic issues causing a delay, and "If they have a breakdown or mechanical issue, they can report it in the app."
+
+Amazon's [September 2026 update](https://relay.amazon.com/blog/intro-to-amazon-relay/how-amazon-relays-improving-to-support-carrier-growth) says that when Relay Assistant can't resolve an issue, "it connects you to a human operator with your conversation's full context."
+
+There's no phone number to fall back on. [Amazon's Relay FAQ](https://relay.amazon.com/faq) says Amazon Relay "doesn't have an official contact phone number."
+
+## What app rules affect your scorecard?
+
+Two things to drill into every driver:
+
+1. **Keep the app open with location on.** The load tracking post says tracking needs "location services are turned on in the Relay app" and that "the app is open while a driver is executing Relay loads."
+2. **Run every Amazon load in the app.** Amazon's performance score guide says "Amazon requires all loads to be executed using the Relay mobile app."
+
+App usage is one of the four metrics in your Relay performance score. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains how it works with the other three. Amazon's Relay driver 101 course also covers Relay app usage, per its [Learning Center post](https://relay.amazon.com/blog/intro-to-amazon-relay/amazon-relays-learning-center).
+
+If an app usage or late arrival hit lands on your scorecard and you think it's wrong, our [free Relay dispute letter tool](https://nudoiq.com/tools/relay-dispute-letter/) lets you tick what's true and copy a letter to submit. Amazon decides.
+
+## Is the Relay app not working?
+
+Amazon doesn't publish app troubleshooting. Its only published fixes are for logging in, in the FAQ:
+
+* Reset your password on Amazon's account recovery page, using the email you sign into Relay with.
+* Make sure it's the same email you first registered with.
+* If a page keeps spinning, try a private window, clear your cookies or switch browsers.
+
+For a problem on a live load, contact the ROC through the portal. And don't hand your login to anyone. Amazon's [geospoofing post](https://relay.amazon.com/blog/trucking-safety/geospoofing-how-amazon-relay-combats-fake-gps-technology) says: "Don't share your login information with anyone."
+
+## What doesn't Amazon publish about the Relay app?
+
+* An early check-in policy or window
+* Remote check-in rules
+* How to fix a BOL that doesn't show in the app
+* How the app behaves with no signal
+* Troubleshooting for "app not working," beyond the login steps
+
+## Where does NudoIQ fit?
+
+NudoIQ isn't a phone app and doesn't replace the Relay app your drivers use. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that runs in desktop Chrome and on Android through the Lemur browser (see our [Android setup page](https://nudoiq.com/android/)), but not on iPhone. On the board it shows net and net per mile under the price on every load card, and it can auto-refresh the board for you. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### How do I download the Amazon Relay app?
+The Relay app is on iOS and Android. Carriers can use it to apply, track an application and search and book loads. Drivers can only use it if they work for an approved, onboarded Relay carrier that invites them.
+
+### Why is the Amazon Relay app not showing my BOL?
+Amazon doesn't publish a fix for a missing BOL in the Relay app. It says Relay uses electronic bills of lading and that carriers can see document uploads in trip playback. For a live load, ask the 24/7 Relay Operations Center through the Relay portal or Relay mobile.
+
+### Can I check in early with the Amazon Relay app?
+Amazon Relay publishes no early or remote check-in policy. It does say on-time is measured from the check-in timestamp at the site, so the time you check in counts toward your score.
+
+### How do I check in with the Amazon Relay app?
+Amazon says facility check-in and check-out are automated, with in-yard instructions sent to the driver's Relay app. At some gates, monitors show the driver where to go and the gate opens automatically.
+
+### Is there Amazon Relay app customer service?
+There's no Relay phone line. Amazon's FAQ says Amazon Relay doesn't have an official contact phone number. Drivers can chat with Relay Assistant in the app, which connects them to a human operator when it can't resolve an issue.
+
+### Can I use the Amazon Relay app without a carrier?
+No, a driver needs a carrier. Amazon says only drivers who work for approved and onboarded Relay carriers can use the app. Carriers invite their drivers to create a profile.
+
+---
+
+# Amazon Relay Canada: requirements, insurance and how to sign up
+
+URL: https://nudoiq.com/amazon-relay-canada/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon Relay Canada runs on relay.amazon.ca. To haul within Canada you need an active NSC number, and for cross-border work you also need a DOT number with interstate authority and a valid MC number. Insurance minimums are in CAD, with cargo coverage of at least $150,000, and Quebec operators also need CNESST registration. Amazon says Canadian applications are approved or rejected within 2 to 4 business days.
+
+## Is Amazon Relay available in Canada?
+
+Yes. Amazon runs a Canadian Relay site at [relay.amazon.ca](https://relay.amazon.ca/). The US site points there with a banner: "Looking for Amazon Relay Canada? Go to relay.amazon.ca." Amazon's [Conditions of Use page](https://relay.amazon.com/terms) says use of Relay in Canada is governed by the Conditions of Use (Canada).
+
+Most of this page comes from the relay.amazon.ca home page, which carries Amazon's Canada FAQ. Where we compare with the US or mention Relay Rewards, we cite Amazon's US pages and say so. A separate FAQ page on relay.amazon.ca asked for an Amazon sign-in when we checked on October 14, 2026, so we couldn't read it.
+
+## What do you need to haul for Amazon Relay in Canada?
+
+Your authority depends on where you run:
+
+* **Within Canada:** "an Active NSC number."
+* **Cross-border:** "An active NSC number, DOT number with interstate authority, and a valid MC number."
+
+The Canada page also lists a "Carrier" entity type that is authorized for property and for hire, and an FMCSA safety rating of Satisfactory, None or Not Rated. The US rules are in our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/).
+
+## What insurance does Amazon Relay Canada require?
+
+The Canada page says "All Requirements in CAD." Most limits use the same figures as the US. Cargo doesn't.
+
+| Coverage | Canada (CAD) | US (USD) |
+|---|---|---|
+| Commercial general liability | $1,000,000 per occurrence, $2,000,000 aggregate | $1,000,000 per occurrence, $2,000,000 aggregate |
+| Auto liability | $1,000,000 per occurrence, with $50,000 trailer replacement | $1,000,000 per occurrence, with $50,000 trailer replacement |
+| Cargo | At least $150,000 | At least $100,000 |
+| Workers' compensation | All jurisdictions where you operate | All jurisdictions where you operate |
+| Employer liability | $100,000 per occurrence | $100,000 per occurrence |
+
+The US column comes from [Amazon's US Relay FAQ](https://relay.amazon.com/faq). The figures match, but the currencies differ.
+
+Operating in Quebec adds one more step. The page says CNESST registration "is also required if your company operates in Quebec." Our [insurance requirements guide](https://nudoiq.com/amazon-relay-insurance-requirements/) explains each US coverage in more detail.
+
+## How long does Amazon Relay Canada approval take?
+
+Days, not weeks. The Canada page says "your application will be approved or rejected within 2-4 business days." Like the US, it says any delay is due to validating insurance information. Amazon urges you to have all data ready before you apply.
+
+Then: "Once approved, you will immediately be able to book loads from our load board." You also get access to the Relay portal's FAQs and operating guides.
+
+For comparison, Amazon's US FAQ says 1 to 3 weeks.
+
+## What equipment and loads are on Amazon Relay Canada?
+
+The Canada page lists:
+
+* **Tractor:** day cab, box truck and sleeper cab
+* **Trailers:** 53' dry van and 26' box truck
+
+The Relay load board lets you "View and book spot work for dry vans and box trucks, 24 hours a day, 7 days a week." With Post A Truck, you share "when and where your trucks are available for up to two weeks in advance," and Relay matches you with loads that meet your origin, destination and rate.
+
+The Canada page lists no reefer or intermodal equipment. That doesn't prove they're absent. Amazon just doesn't say.
+
+## How do pay and support work in Canada?
+
+The same way as the US, per the Canada page:
+
+* **Pay:** "Payment cycle runs weekly from Sunday-Saturday." Everything completed before 23:59 Saturday is paid the following Friday.
+* **Invoices:** Relay generates them automatically in the portal.
+* **Pay problems:** submit a payment dispute in the portal within 30 days of reviewing your weekly invoice.
+* **Load problems:** the Relay Operations Center gives 24/7 support, reached "through the Relay portal or Relay mobile."
+
+The Canada page gives no phone number.
+
+## What does Amazon expect from Canadian carriers?
+
+The Canada page lists "Compliance with safety, NSC, DOT, MC and insurance requirements," on-time delivery, consistent tender acceptance, and running loads on Relay technology. It adds: "All carriers and drivers are required to use our Amazon Relay products for all Amazon loads."
+
+Your performance shows on a scorecard in the Relay portal. The full expectations sit in the Carrier Terms of Service and Program Policies, which you see when you onboard.
+
+## Does Relay Rewards apply in Canada?
+
+Amazon's pages point two ways. The Canada home page lists "Rewards and Discounts" with "Early access to loads and discounts on fuel, tires, maintenance, and more." But Amazon's [Relay Rewards post](https://relay.amazon.com/blog/how-carriers-save-with-relay-rewards) says that program "is currently available only in the United States."
+
+Amazon doesn't publish which discounts, if any, Canadian carriers get. Ask Relay once you're onboarded.
+
+## How do you sign up for Amazon Relay Canada?
+
+Start on [relay.amazon.ca](https://relay.amazon.ca/) with Get started. Have these ready first:
+
+1. Your active NSC number, plus your DOT and MC numbers if you'll run cross-border
+2. Insurance certificates that meet the CAD limits above
+3. CNESST registration if you operate in Quebec
+
+Before your first booking, check what a load would leave you after costs. Our [free Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) does that from a load's pay and distance.
+
+## What doesn't Amazon publish for Canada?
+
+* A Canadian phone number
+* Whether reefer or intermodal loads run in Canada
+* How much of the work is cross-border
+* Which provinces are served
+* Which discounts Canadian carriers get
+* Whether support is offered in French
+
+## Where does NudoIQ fit?
+
+NudoIQ is an independent Chrome extension for the Amazon Relay load board, not affiliated with Amazon. On the US board at relay.amazon.com, it shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence (the first button under a load) shows a lane's price history. It's also set up to load on relay.amazon.ca, but our guides and screenshots show only the US board, so we make no feature claims for the Canadian site. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### What are the Amazon Relay Canada requirements?
+To haul within Canada, you need an active NSC number. For cross-border work you also need a DOT number with interstate authority and a valid MC number. Insurance is in CAD, including cargo coverage of at least $150,000, and Quebec operators need CNESST registration.
+
+### Is there an Amazon Relay Canada contact number?
+Amazon doesn't publish a Relay phone number for Canada. The relay.amazon.ca page says the 24/7 Relay Operations Center is reached through the Relay portal or Relay mobile.
+
+### How do I sign up for Amazon Relay Canada?
+Start with Get started on relay.amazon.ca. Have your NSC number, your DOT and MC numbers if you'll run cross-border, and insurance that meets the CAD minimums ready before you apply.
+
+### How long does Amazon Relay Canada take to approve an application?
+The relay.amazon.ca page says applications are approved or rejected within 2 to 4 business days, with any delay due to insurance validation. Once approved, you can book from the load board right away.
+
+### Does Amazon Relay Canada have a load board?
+Yes, Relay Canada has a load board. The relay.amazon.ca page says carriers can view and book spot work for dry vans and box trucks 24 hours a day, 7 days a week, and use Post A Truck to share availability up to two weeks ahead.
+
+### Is Amazon Relay Canada cargo insurance different from the US?
+Yes, your cargo limit is higher in Canada. The Canada page asks for cargo coverage of at least $150,000 CAD. Amazon's US FAQ asks for at least $100,000.
+
+---
+
+# Amazon Relay peak season 2026: dates, load volume and how to prepare
+
+URL: https://nudoiq.com/amazon-relay-peak-season/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon says Relay load volume spikes between October and January, and its peak season post says that in 2026 it expects over 4 million loads, with 300,000 a week by December. The season runs from Prime Big Deal Days (October 6 and 7, 2026) through Black Friday, Cyber Monday, Super Saturday and Christmas. Those are Amazon's freight volume numbers, not a forecast of carrier pay, and Amazon publishes no peak rates.
+
+## When is Amazon Relay peak season?
+
+October through January. Amazon's [peak season post](https://relay.amazon.com/blog/amazons-peak-season-for-carriers) says "load volume spikes during the 'haulidays' between October and January."
+
+It names four events that drive the volume:
+
+| Event | When |
+|---|---|
+| Prime Big Deal Days | October 6 and 7, 2026, per Amazon's [Prime Big Deal Days post](https://relay.amazon.com/blog/why-prime-big-deal-days-is-a-big-deal-for-carriers). Already done. |
+| Black Friday and Cyber Monday | Amazon runs major weeks of sales around the Friday and Monday after Thanksgiving. In 2026 those days are November 27 and November 30. |
+| Super Saturday | The last Saturday before Christmas. In 2026 that's December 19. |
+| Christmas | December 25 |
+
+The calendar dates for the last three are ours, worked out from Amazon's descriptions. Amazon's Relay posts don't give 2026 dates for those sales.
+
+Prime Big Deal Days being over doesn't end anything. Amazon says "the loads will continue even after Prime Big Deal Days has ended."
+
+## How many loads does Amazon expect in 2026?
+
+Amazon's peak season post says: "in 2026, we're expecting over 4 million loads," and "300 thousand per week by December." Amazon's [brokers vs direct booking post](https://relay.amazon.com/blog/intro-to-amazon-relay/freight-brokers-vs-direct-booking-why-choose-amazon-relay) describes Relay as "Thousands of loads during regular periods, nearly doubling during peak."
+
+Amazon gives the 4 million figure for 2026 as a whole. It doesn't say how many of those loads fall in peak season. Read these for what they are. They're Amazon's numbers about freight volume. They say nothing about rates or what any carrier takes home, and Amazon publishes no peak rates.
+
+What kind of freight? Amazon's [winter loads post](https://relay.amazon.com/blog/industry-trends/winter-load-solutions-for-flatbed-reefer-carriers) says the holidays are Amazon's busiest season, "where the majority of our loads are power-only."
+
+## How do you book peak freight on Amazon Relay?
+
+Amazon names these options for peak:
+
+* **Load board.** "Relay's load board auto-refreshes every 30 seconds with a list of available spot freight."
+* **Post A Truck.** Build a criteria order with your distance, duration, payment and more, and Relay matches you to loads automatically.
+* **Contracts.** Short-term contracts give weeks to months of steady round trips in one booking.
+* **Auctions.** Bid on a contract auction for a chance to name your own price.
+* **Equipment marketplace.** Rent trailers to Amazon.
+
+You can also turn on load alerts. Amazon's [Prime Day post](https://relay.amazon.com/blog/amazon-relay-news-events/prime-day-for-amazon-relay-carriers) describes instant notifications for loads "that meet your business's criteria." And the Prime Big Deal Days post suggests peak may be a good time to look at team driving or intermodal.
+
+Our [load board guide](https://nudoiq.com/amazon-relay-load-board/) explains how spot loads post and get booked.
+
+## Does your scorecard matter more during peak?
+
+It decides how much you can book. Amazon's [high volume events post](https://relay.amazon.com/blog/amazon-relay-news-events/best-practices-for-amazons-high-volume-events) says your performance score "determines how much and how often an approved carrier is able to book Amazon loads." A healthy score gives "access to the most freight opportunities during high volume events (including early access)."
+
+Two things from that post help here:
+
+* **Scores refresh every week.** You also get "a daily, real-time prediction of your upcoming score" in your account.
+* **Breakdowns can hit your score.** If a breakdown makes you late or forces you to reject a booked load, "your performance score can be impacted."
+
+Amazon doesn't say whether scorecard rules change during peak. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) covers how each metric works.
+
+## How should carriers prepare for peak?
+
+Here's Amazon's own list, from the high volume events post, plus one step of ours:
+
+1. **Update your contact info.** Keep your primary administrator's details current, so booking alerts and problem notices reach you.
+2. **Plan a backup.** Amazon suggests extra drivers or trucks for sick days and breakdowns, and says Relay has discounts for truck rentals.
+3. **Confirm load details before you book.** "Only book loads your company can confidently execute." Amazon says you'll usually know the equipment, arrival time, rate, locations and driver type before you commit.
+4. **Do preventive maintenance now.** Follow service schedules, and run pre- and post-trip inspections. Drivers can report equipment issues in the Relay app.
+5. **Plan around hours of service.** Amazon says Relay navigation factors HOS into tour planning. Its [hours of service post](https://relay.amazon.com/blog/trucking-safety/hours-of-service-how-to-comply-with-the-fmcsa) also says to account for seasonal delays, especially between November and February.
+6. **Check each load's numbers.** Our [free Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net and net per loaded mile from its pay and miles, deadhead included.
+
+## Is it too late to join Amazon Relay for peak 2026?
+
+Not necessarily, but approval takes time. [Amazon's Relay FAQ](https://relay.amazon.com/faq) says applications are typically approved or rejected within 1 to 3 weeks, and other Amazon posts say within three weeks or 2 to 3 weeks. So plan on up to three. Apply in mid-October and a decision could come by early November, ahead of Black Friday week.
+
+Two more things take time. Each driver has to clear an identity check, which Amazon typically reviews within 48 hours, plus a background check. And if you're an existing carrier changing insurance, Amazon recommends allowing 2 weeks for it to process.
+
+## What doesn't Amazon publish about peak season?
+
+* Peak rates or rate changes
+* Cut-off dates for booking or applying
+* Whether scorecard rules change during peak
+* Load numbers for Super Saturday or Black Friday 2026
+* 2026 dates for Black Friday, Cyber Monday or Super Saturday sales, in its Relay posts
+
+## Where does NudoIQ fit?
+
+Peak puts more loads on the board and leaves less time to size each one up. NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and AutoBook can book only loads that clear your own minimum net profit. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### When is Amazon Relay peak season?
+Amazon says Relay load volume spikes between October and January. The events it names are Prime Big Deal Days, Black Friday and Cyber Monday, Super Saturday and Christmas.
+
+### How many Amazon Relay loads does Amazon expect in 2026?
+Amazon's peak season post says it expects over 4 million loads in 2026, with 300 thousand per week by December. It doesn't say how many of those fall in peak. Those are freight volume numbers, not a forecast of carrier pay.
+
+### Does Amazon Relay pay more during peak season?
+Amazon Relay doesn't publish peak rates or rate changes. Its peak posts give load volume forecasts only. Check each load's price against your own costs before you book.
+
+### When was Prime Big Deal Days 2026 on Amazon Relay?
+For Relay carriers, Amazon says Prime Big Deal Days 2026 ran Tuesday, October 6, through Wednesday, October 7, 2026. It adds that loads continue after the event ends.
+
+### How long is Amazon Relay peak season?
+Relay peak runs about four months. Amazon's peak season post says load volume spikes between October and January, and says the freight lasts long after the holidays are over.
+
+### What booking options does Amazon Relay offer during peak season?
+Amazon names the load board, Post A Truck, short-term contracts, contract auctions and its equipment marketplace for renting trailers. It also offers load alerts for loads that meet your criteria.

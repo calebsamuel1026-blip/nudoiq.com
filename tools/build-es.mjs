@@ -40,6 +40,10 @@ doc = doc.replace(/<meta name="twitter:title" content="[^"]*">/, '<meta name="tw
 doc = doc.replace(/<meta property="og:description" content="[^"]*">/, '<meta property="og:description" content="' + SOCIAL_ES + '">');
 doc = doc.replace(/<meta name="twitter:description" content="[^"]*">/, '<meta name="twitter:description" content="' + SOCIAL_ES + '">');
 
+// Spanish free tools in the footer (2026-10-14, words: research/copy/FREE-TOOLS-ES-2026-10-14.json).
+doc = doc.replace("<div class=\"flinks\"><a href=\"/guides/\">Guides</a>",
+  "<div class=\"flinks\"><a href=\"/es/herramientas/carta-disputa-relay/\">Carta de disputa gratis</a><a href=\"/es/herramientas/calculadora-carga-relay/\">Calculadora de ganancia Relay</a><a href=\"/guides/\">Guides</a>");
+
 // page now lives one level down
 doc = doc.replace(/(src|href)="(assets\/[^"]+)"/g, '$1="/$2"');
 doc = doc.replace(/href="(privacy\.html|refund-policy\.html)"/g, 'href="/$1"');

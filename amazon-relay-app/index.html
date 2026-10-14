@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Amazon Relay App: Check-In, Navigation and Help | NudoIQ</title>
+  <meta name="description" content="What the Amazon Relay app does for drivers and carriers: check-in, navigation, BOLs, Relay Assistant, tracking, and the app rules tied to your score.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/amazon-relay-app/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:title" content="Amazon Relay App: Check-In, Navigation and Help | NudoIQ">
+  <meta property="og:description" content="What the Amazon Relay app does for drivers and carriers: check-in, navigation, BOLs, Relay Assistant, tracking, and the app rules tied to your score.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/amazon-relay-app/">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: "amazon-relay-app"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "amazon-relay-app"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Amazon Relay app: what it does and how drivers use it",
+  "description": "What the Amazon Relay app does for drivers and carriers: check-in, navigation, BOLs, Relay Assistant, tracking, and the app rules tied to your score.",
+  "mainEntityOfPage": "https://nudoiq.com/amazon-relay-app/",
+  "url": "https://nudoiq.com/amazon-relay-app/",
+  "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+  "datePublished": "2026-10-14",
+  "dateModified": "2026-10-14",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Organization",
+    "name": "NudoIQ",
+    "url": "https://nudoiq.com/"
+  },
+  "about": {
+    "@id": "https://nudoiq.com/#software"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
+    "name": "NudoIQ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nudoiq.com/icons/nudoiq-logo-512.png"
+    }
+  },
+  "abstract": "The Amazon Relay app is Amazon's mobile app for iOS and Android. Drivers who work for approved, onboarded Relay carriers use it to see their schedule, check in and out at facilities, follow truck-friendly routes, get load instructions and report issues. Amazon says the app must be open, with location services on, while a driver runs Relay loads."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nudoiq.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://nudoiq.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Amazon Relay app: what it does and how drivers use it",
+      "item": "https://nudoiq.com/amazon-relay-app/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I download the Amazon Relay app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Relay app is on iOS and Android. Carriers can use it to apply, track an application and search and book loads. Drivers can only use it if they work for an approved, onboarded Relay carrier that invites them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the Amazon Relay app not showing my BOL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon doesn't publish a fix for a missing BOL in the Relay app. It says Relay uses electronic bills of lading and that carriers can see document uploads in trip playback. For a live load, ask the 24/7 Relay Operations Center through the Relay portal or Relay mobile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I check in early with the Amazon Relay app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon Relay publishes no early or remote check-in policy. It does say on-time is measured from the check-in timestamp at the site, so the time you check in counts toward your score."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I check in with the Amazon Relay app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon says facility check-in and check-out are automated, with in-yard instructions sent to the driver's Relay app. At some gates, monitors show the driver where to go and the gate opens automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there Amazon Relay app customer service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There's no Relay phone line. Amazon's FAQ says Amazon Relay doesn't have an official contact phone number. Drivers can chat with Relay Assistant in the app, which connects them to a human operator when it can't resolve an issue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use the Amazon Relay app without a carrier?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, a driver needs a carrier. Amazon says only drivers who work for approved and onboarded Relay carriers can use the app. Carriers invite their drivers to create a profile."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body data-clarity-unmask="true">
+
+  <div class="promo">7 days free, no card needed &middot; Runs in your own Chrome &middot; English and Spanish</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Main navigation">
+      <a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a><a href="/#faq">FAQ</a>
+    </nav>
+    <div class="navright">
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+    </div>
+  </div></header>
+
+  <div class="doc-hero"><div class="doc-hero-in">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay app: what it does and how drivers use it</span></nav>
+    <h1 class="page-title">Amazon Relay app: what it does and how drivers use it</h1>
+    <p class="page-subtitle">Every Amazon load runs through the Relay app. Here's what it does at the gate, on the road and at the dock, the rules tied to it, and the problems Amazon doesn't publish fixes for.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-10-14">October 14, 2026</time> &middot; Last updated <time datetime="2026-10-14">October 14, 2026</time></p>
+  </div></div>
+
+  <div class="container">
+    <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>The Amazon Relay app is Amazon's mobile app for iOS and Android. Drivers who work for approved, onboarded Relay carriers use it to see their schedule, check in and out at facilities, follow truck-friendly routes, get load instructions and report issues. Amazon says the app must be open, with location services on, while a driver runs Relay loads.</p></section>
+<h2 id="what-is-the-amazon-relay-app">What is the Amazon Relay app?</h2>
+<p>It's Amazon's mobile app for Relay, on iOS and Android. Amazon's <a href="https://relay.amazon.com/blog/how-truckers-use-the-amazon-relay-mobile-app" target="_blank" rel="noopener">mobile app post</a> says it's &quot;used by hundreds of thousands of truck drivers worldwide.&quot;</p>
+<p>It isn't open to everyone. &quot;Only drivers that work for approved and onboarded Relay carriers can use our trucking app.&quot; A driver gets in by invitation from their carrier.</p>
+<p>Carriers use it too. Amazon's <a href="https://relay.amazon.com/blog/amazon-relay-news-events/prime-day-for-amazon-relay-carriers" target="_blank" rel="noopener">Prime Day post</a> says you can &quot;Search and book freight anywhere you get a phone signal.&quot; You can also apply to Relay in the app and track your application's progress.</p>
+<p>The same app post says truckers rate Relay 4.7 out of 5 on iOS and 4.6 on Android. Ratings change, and that post was last updated in February 2026.</p>
+<h2 id="what-can-drivers-do-in-the-relay-app">What can drivers do in the Relay app?</h2>
+<p>From Amazon's app post and the <a href="https://relay.amazon.com/" target="_blank" rel="noopener">Relay home page</a>, drivers can:</p>
+<ul><li><strong>Onboard to Relay</strong> and see their schedule, with new loads added as they come</li><li><strong>Do asset inspections</strong></li><li><strong>Get step-by-step load instructions,</strong> including pickup, drop-off and in-yard steps</li><li><strong>Follow truck-friendly routes</strong> that avoid &quot;residential areas and low-bridge locations&quot;</li><li><strong>Watch route weather.</strong> The forecast keeps updating until the end of the trip, with alerts for new severe weather</li><li><strong>Get cancellation alerts</strong> within 5 hours before the scheduled time</li><li><strong>Add stops</strong> for fuel, food and parking while planning a trip</li><li><strong>Review load history</strong></li><li><strong>Chat with Relay Assistant</strong> and report issues</li></ul>
+<h2 id="how-does-check-in-work-with-the-relay-app">How does check-in work with the Relay app?</h2>
+<p>Mostly automatically. The Relay home page says: &quot;Our automated facility check-in/out process and electronic in-yard instructions reduce driver dwell time at the gate and in the yards.&quot;</p>
+<p>Amazon's <a href="https://freight.amazon.com/newsroom/technology/2023-yard-tech" target="_blank" rel="noopener">yard technology story</a> describes it at the gate. &quot;Large monitors outside the truck's window show the driver where to go, such as which dock door to back into.&quot; The &quot;instructions are provided on the driver's Relay mobile app, and the gate automatically opens.&quot;</p>
+<p>Check-in time matters for your score. Amazon's <a href="https://relay.amazon.com/blog/amazon-relay-performance-score" target="_blank" rel="noopener">performance score guide</a> says on-time is calculated &quot;based on the check-in timestamp at the site.&quot;</p>
+<p>One hard stop for California: Amazon's <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/carb-compliance-requirements-to-haul-with-amazon-relay" target="_blank" rel="noopener">CARB post</a> says &quot;Trucks that travel through California for Amazon loads will be rejected at check-in without valid certificates.&quot;</p>
+<p>Amazon publishes no early or remote check-in policy.</p>
+<h2 id="where-are-bills-of-lading-in-the-relay-app">Where are bills of lading in the Relay app?</h2>
+<p>Amazon's yard technology story says the system uses &quot;electronic proofs of delivery and bills of lading.&quot; Amazon's <a href="https://relay.amazon.com/blog/load-tracking-with-amazon-relay" target="_blank" rel="noopener">load tracking post</a> says carriers can play back a trip, including &quot;document uploads (e.g., bills of lading).&quot;</p>
+<p>Amazon doesn't publish what to do when a BOL doesn't show in the app. For a load in progress, the Relay Operations Center is the place to ask. It's open 24/7 through the Relay portal or Relay mobile.</p>
+<h2 id="how-do-drivers-get-help-through-the-app">How do drivers get help through the app?</h2>
+<p>Through Relay Assistant and issue reports. The app post says drivers can &quot;request support from Relay Assistant throughout their trip,&quot; an AI chat tool. They can report non-traffic issues causing a delay, and &quot;If they have a breakdown or mechanical issue, they can report it in the app.&quot;</p>
+<p>Amazon's <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/how-amazon-relays-improving-to-support-carrier-growth" target="_blank" rel="noopener">September 2026 update</a> says that when Relay Assistant can't resolve an issue, &quot;it connects you to a human operator with your conversation's full context.&quot;</p>
+<p>There's no phone number to fall back on. <a href="https://relay.amazon.com/faq" target="_blank" rel="noopener">Amazon's Relay FAQ</a> says Amazon Relay &quot;doesn't have an official contact phone number.&quot;</p>
+<h2 id="what-app-rules-affect-your-scorecard">What app rules affect your scorecard?</h2>
+<p>Two things to drill into every driver:</p>
+<ol><li><strong>Keep the app open with location on.</strong> The load tracking post says tracking needs &quot;location services are turned on in the Relay app&quot; and that &quot;the app is open while a driver is executing Relay loads.&quot;</li><li><strong>Run every Amazon load in the app.</strong> Amazon's performance score guide says &quot;Amazon requires all loads to be executed using the Relay mobile app.&quot;</li></ol>
+<p>App usage is one of the four metrics in your Relay performance score. Our <a href="/amazon-relay-scorecard/">scorecard guide</a> explains how it works with the other three. Amazon's Relay driver 101 course also covers Relay app usage, per its <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/amazon-relays-learning-center" target="_blank" rel="noopener">Learning Center post</a>.</p>
+<p>If an app usage or late arrival hit lands on your scorecard and you think it's wrong, our <a href="/tools/relay-dispute-letter/">free Relay dispute letter tool</a> lets you tick what's true and copy a letter to submit. Amazon decides.</p>
+<h2 id="is-the-relay-app-not-working">Is the Relay app not working?</h2>
+<p>Amazon doesn't publish app troubleshooting. Its only published fixes are for logging in, in the FAQ:</p>
+<ul><li>Reset your password on Amazon's account recovery page, using the email you sign into Relay with.</li><li>Make sure it's the same email you first registered with.</li><li>If a page keeps spinning, try a private window, clear your cookies or switch browsers.</li></ul>
+<p>For a problem on a live load, contact the ROC through the portal. And don't hand your login to anyone. Amazon's <a href="https://relay.amazon.com/blog/trucking-safety/geospoofing-how-amazon-relay-combats-fake-gps-technology" target="_blank" rel="noopener">geospoofing post</a> says: &quot;Don't share your login information with anyone.&quot;</p>
+<h2 id="what-doesn-t-amazon-publish-about-the-relay-app">What doesn't Amazon publish about the Relay app?</h2>
+<ul><li>An early check-in policy or window</li><li>Remote check-in rules</li><li>How to fix a BOL that doesn't show in the app</li><li>How the app behaves with no signal</li><li>Troubleshooting for &quot;app not working,&quot; beyond the login steps</li></ul>
+<h2 id="where-does-nudoiq-fit">Where does NudoIQ fit?</h2>
+<p>NudoIQ isn't a phone app and doesn't replace the Relay app your drivers use. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that runs in desktop Chrome and on Android through the Lemur browser (see our <a href="/android/">Android setup page</a>), but not on iPhone. On the board it shows net and net per mile under the price on every load card, and it can auto-refresh the board for you. It's free for 7 days with no card needed to start, then $49.99 a month.</p>
+    </article>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <details><summary>How do I download the Amazon Relay app?</summary><div class="a"><p>The Relay app is on iOS and Android. Carriers can use it to apply, track an application and search and book loads. Drivers can only use it if they work for an approved, onboarded Relay carrier that invites them.</p></div></details>
+      <details><summary>Why is the Amazon Relay app not showing my BOL?</summary><div class="a"><p>Amazon doesn't publish a fix for a missing BOL in the Relay app. It says Relay uses electronic bills of lading and that carriers can see document uploads in trip playback. For a live load, ask the 24/7 Relay Operations Center through the Relay portal or Relay mobile.</p></div></details>
+      <details><summary>Can I check in early with the Amazon Relay app?</summary><div class="a"><p>Amazon Relay publishes no early or remote check-in policy. It does say on-time is measured from the check-in timestamp at the site, so the time you check in counts toward your score.</p></div></details>
+      <details><summary>How do I check in with the Amazon Relay app?</summary><div class="a"><p>Amazon says facility check-in and check-out are automated, with in-yard instructions sent to the driver's Relay app. At some gates, monitors show the driver where to go and the gate opens automatically.</p></div></details>
+      <details><summary>Is there Amazon Relay app customer service?</summary><div class="a"><p>There's no Relay phone line. Amazon's FAQ says Amazon Relay doesn't have an official contact phone number. Drivers can chat with Relay Assistant in the app, which connects them to a human operator when it can't resolve an issue.</p></div></details>
+      <details><summary>Can I use the Amazon Relay app without a carrier?</summary><div class="a"><p>No, a driver needs a carrier. Amazon says only drivers who work for approved and onboarded Relay carriers can use the app. Carriers invite their drivers to create a profile.</p></div></details>
+    </section>
+
+    <aside class="cta">
+      <div><h2>Know what the next load is worth before you take it.</h2><p>7 days free, no card needed &middot; 5.0 on the Chrome Web Store</p></div>
+      <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Start the 7-day trial</a>
+    </aside>
+
+    <nav class="related" aria-label="More Amazon Relay guides">
+      <h2>More Amazon Relay guides</h2>
+      <div class="cards">
+        <a href="/amazon-relay-cargo-van/">Can you use a cargo van for Amazon Relay?</a>
+        <a href="/amazon-relay-approval-time/">How long does it take to get approved for Amazon Relay?</a>
+        <a href="/amazon-relay-background-check/">Amazon Relay background check: what drivers and carriers should know</a>
+        <a href="/amazon-relay-canada/">Amazon Relay Canada: requirements, insurance and how to sign up</a>
+        <a href="/amazon-relay-chrome-extension/">An Amazon Relay Chrome extension for your load board</a>
+        <a href="/amazon-relay-contact/">Amazon Relay phone number: how do you contact Amazon Relay?</a>
+      </div>
+    </nav>
+
+    <div class="footer">
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/">Amazon Relay guides</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="/partners/">Partners</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contact</a>
+    </div>
+    <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. Amazon Relay requirements change; confirm current rules at relay.amazon.com.</p>
+
+  </div>
+</body>
+</html>
