@@ -1709,7 +1709,7 @@ Yes, you can run NudoIQ in English or Spanish.
 # Load Fetcher alternative: NudoIQ vs LoadFetcher for the Amazon Relay load board
 
 URL: https://nudoiq.com/loadfetcher-alternative/
-Published: 2026-09-20. Last updated: 2026-10-05.
+Published: 2026-09-20. Last updated: 2026-10-14.
 
 Short answer: NudoIQ is a good Load Fetcher alternative if you want loads booked for you. It's a Chrome extension for Amazon Relay carriers that refreshes the load board, AutoBooks only loads that clear your minimum net profit, and drafts scorecard dispute letters. LoadFetcher's public listing shows neither auto booking nor dispute letters. NudoIQ is $49.99 a month flat, every truck.
 
@@ -4887,7 +4887,7 @@ What Amazon says happens next:
 
 Amazon's [secure freight page](https://relay.amazon.com/pages/secure-freight-how-amazon-prevents-trucking-fraud-theft) says facilities use "driver's license validation and real-time photo verification" so only authorized drivers get in.
 
-On data, the FAQ says Amazon may keep Facial Recognition Information for up to 30 days after it's generated, or longer for fraud detection or investigation, but not more than one year.
+
 
 ## Can you dispute a failed selfie or background check?
 
@@ -4906,6 +4906,8 @@ And one rule to put in writing for your dispatch desk: "Carriers should only ass
 ## Do carrier owners get verified too?
 
 Yes, through a separate check. The FAQ says carrier identity verification confirms "your business entity and the identity of all beneficial owners (anyone with more than 25% ownership)."
+
+In its answer about carrier owners, the FAQ says Amazon may keep Facial Recognition Information for up to 30 days after it's generated, or longer for fraud detection or investigation, but not more than one year.
 
 Amazon's [get started page](https://relay.amazon.com/get-started) points owners to the Persona Privacy Policy for details on how Persona processes their information.
 
@@ -5480,7 +5482,7 @@ NudoIQ doesn't log hours or replace an ELD. It's an independent Chrome extension
 Amazon Relay has no ELD rule of its own. Federal law, 49 CFR 395.8, requires most motor carriers to install ELDs and have drivers use them, with a few exceptions such as vehicles made before model year 2000.
 
 ### What are the Amazon Relay hours of service rules?
-Relay loads follow federal rules. A driver needs 10 consecutive hours off before driving, can't drive after 14 hours on duty, can drive 11 hours in that window and needs a 30-minute break after 8 driving hours.
+Relay loads follow federal rules. A driver needs 10 consecutive hours off before driving, can't drive once 14 consecutive hours have passed since coming on duty, can drive 11 hours in that window and needs a 30-minute break from driving after 8 driving hours.
 
 ### Does Amazon Relay include HOS breaks in trip times?
 Yes, Relay builds break time into your trip. Amazon's hours of service post says Relay includes time for HOS breaks in your scheduled trip duration, and that it's on the carrier to plan accordingly.
@@ -5515,7 +5517,7 @@ Your tier is "evaluated and updated on the 5th of every month." Amazon's example
 
 Three things count:
 
-1. **Performance score.** "Your Rewards tier is calculated using your company's lowest score from the previous month." One weak metric can hold the whole tier down. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains the four metrics.
+1. **Performance score.** "Your Rewards tier is calculated using your company's lowest score from the previous month." So one low score during the month can hold your tier down, even if the rest of the month was strong. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains how the score works.
 2. **Engagement.** Total miles driven last month, with thresholds based on your number of verified drivers.
 3. **Tenure.** How long your company has been on Relay.
 
