@@ -60,6 +60,9 @@
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/que-es-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/what-is-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/what-is-amazon-relay/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-requirements/</loc>
@@ -84,6 +87,9 @@
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/cuanto-paga-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/how-much-does-amazon-relay-pay/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/how-much-does-amazon-relay-pay/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/is-amazon-relay-worth-it/</loc>
@@ -96,24 +102,36 @@
     <lastmod>2026-10-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-scorecard/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-scorecard/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-scorecard/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-auto-refresh/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-auto-refresh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-auto-refresh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-auto-refresh/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-auto-booker/</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-auto-booker/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-auto-booker/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-auto-booker/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/best-amazon-relay-extensions/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/mejores-extensiones-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/best-amazon-relay-extensions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/best-amazon-relay-extensions/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/loadfetcher-alternative/</loc>
@@ -402,5 +420,59 @@
     <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/que-es-amazon-relay/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/que-es-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/what-is-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/what-is-amazon-relay/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/cuanto-paga-amazon-relay/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/cuanto-paga-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/how-much-does-amazon-relay-pay/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/how-much-does-amazon-relay-pay/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-scorecard/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-scorecard/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-scorecard/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-scorecard/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-auto-booker/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-auto-booker/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-auto-booker/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-auto-booker/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-auto-refresh/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-auto-refresh/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-auto-refresh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-auto-refresh/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/mejores-extensiones-amazon-relay/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/mejores-extensiones-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/best-amazon-relay-extensions/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/best-amazon-relay-extensions/"/>
   </url>
 </urlset>

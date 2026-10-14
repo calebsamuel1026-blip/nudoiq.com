@@ -698,7 +698,7 @@ Short answer: Amazon Relay pay varies by load, and Amazon does not publish typic
 Amazon Relay pricing is dynamic. No two loads are priced identically. Several factors influence the posted rate:
 
 **Season**
-Demand for freight changes through the year. [Amazon lists](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-rates) seasonal demand as a rate factor and says load volume nearly doubles during peak periods like Prime Day and the holidays.
+The loads and rates you see change through the year. Amazon's [rates guide](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-rates) says "Seasonal demand fluctuations and regional market conditions will still impact the rates." Its [load board guide](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) says the board hosts thousands of loads at any given time, nearly doubling in volume when shopping is in full swing, such as Prime Day and the holidays.
 
 **Time of Day**
 When a load posts and picks up can change its price. Amazon doesn't publish which hours pay more, so watch your own lanes.
@@ -1442,9 +1442,9 @@ Yes. You can have NudoIQ running on multiple devices and multiple load board tab
 # Best Amazon Relay Extensions: Refresher and Auto-Booker Tools
 
 URL: https://nudoiq.com/best-amazon-relay-extensions/
-Published: 2026-09-20. Last updated: 2026-10-05.
+Published: 2026-09-20. Last updated: 2026-10-14.
 
-Short answer: The main Amazon Relay extensions are LoadFetcher and Rocket Relay, which offer free tiers focused on refreshing and booking, plus smaller tools like SwiftRelay and FlashRelay. NudoIQ costs $49.99 a month and adds lane rate history, net profit per load and scorecard dispute letters. Compare refresh control, booking guardrails, rate data and support.
+Short answer: The main Amazon Relay extensions are LoadFetcher and Rocket Relay, both with free plans, and Rocket's Pro plan auto books for $49 a month. Smaller tools include SwiftRelay, with auto-book from $74.95, and FlashRelay at $149. NudoIQ costs $49.99 a month and adds lane rate history, net profit per load and scorecard dispute letters. Compare refresh control, booking guardrails, rate data and support.
 
 ## Why You Need a Relay Extension
 
@@ -1454,9 +1454,9 @@ Besides the bigger names, there are a dozen or so smaller refreshers in the cate
 
 ## What to Look For in a Relay Extension
 
-**Refresh Control**: Can you set the interval (how often it reloads) and does it add jitter (random variation to prevent server strain)? A good refresher lets you choose the interval and adds built-in jitter so every refresh isn't at the exact same moment.
+**Refresh Control**: Can you set the interval (how often it reloads), and does it add jitter (a random variation in timing)? A good refresher lets you choose the interval and varies the timing so every refresh doesn't land at the exact same moment.
 
-**Booking Rules**: Can you set rules to book only certain loads? Look for the ability to filter by lane, price range, load type, distance, and equipment. A tool that books only loads matching your criteria is safer than one that books indiscriminately.
+**Booking Rules**: Can you set rules to book only certain loads? Look for the ability to filter by lane, price range, load type, distance, and equipment. A tool that books only loads matching your rules books fewer loads you didn't want.
 
 **Profit Floor and Max-Books Cap**: Does it let you set a minimum profit and a maximum number of books? These guardrails protect you from booking loads you didn't intend to take. A profit floor means "don't book anything below $X net profit." A max-books cap means "stop booking once I've booked 5 loads today."
 
@@ -1484,15 +1484,23 @@ LoadFetcher's pitch is simplicity and cost: a free refresher tier. If that's all
 
 ### Rocket Relay and Rocket Pro
 
-Rocket Relay is a refresher and booker with a free tier. Its core pitch is that your business data stays on your own computer. It's focused on refreshing and booking.
+[Rocket Relay](https://nudoiq.com/rocket-relay-alternative/) is a refresher and auto booker from West Wanted. Its Chrome Web Store listing is called Relay Auto Booker Refresher Rocket Pro. It has a Free plan with auto-refresh, alerts and FastBook on matched trips, no card required. Pro is $49 a month after a 7-day trial that needs a card (checked October 9, 2026).
 
-**Best for**: Carriers who want a free refresher and booker and prioritize keeping their data local.
+Pro auto books matching trips, best-paying first, and stops at the number of trips you set. Its filters include minimum payout, price per mile, distance, stops, deadhead and time windows, and Pro adds bulk Post A Truck tools. It doesn't list a filter for net profit after your own costs. Rocket also has a separate Rocket Relay Post Truck Manager listing, last updated May 20, 2025 (checked October 9, 2026).
+
+Its listing says your loads, trips, payouts and drivers stay on your computer. It's rated 4.1 from 66 ratings on the Chrome Web Store (checked October 5, 2026).
+
+**Best for**: Carriers who want a free plan, a long list of auto-book filters or bulk Post A Truck, and who want their data kept on their own computer.
 
 ### SwiftRelay and FlashRelay
 
-Several smaller refreshers exist (SwiftRelay, FlashRelay, and others) that focus on the core functionality: refreshing and booking.
+If you want a paid booker, two smaller options are SwiftRelay and FlashRelay, both billed through PayPal.
 
-**Best for**: Carriers who want a basic refresher.
+**[SwiftRelay](https://nudoiq.com/swiftrelay-alternative/)**, from Premier IT Solutions, refreshes the board on every plan. Auto-book starts on Pro at $74.95 a month. Lite, at $49.95, doesn't auto-book. Enterprise, at $349, adds Speed Optimizer, one virtual machine and up to 10 devices. Pro adds filters for max stops, excluded states and stem time. SwiftRelay also lists Competitor Insights, which shows loads booked by competitors on the board. NudoIQ doesn't have that. Its 7-day trial starts on first use. The listing was last updated June 15, 2025 (checked October 9, 2026). It's rated 4.5 from 54 ratings on the Chrome Web Store (checked October 5, 2026).
+
+**FlashRelay** lists auto booking and Telegram alerts for $149 a month per dispatcher. It doesn't state a trial length. Its last release was December 3, 2024, and it's rated 4.8 from 20 ratings on the Chrome Web Store (checked October 5, 2026).
+
+**Best for**: SwiftRelay fits dispatch teams that want competitor booking data or plans sized by device count. FlashRelay fits carriers who want a paid booker with Telegram alerts and don't mind $149 a month.
 
 ### NudoIQ
 
@@ -1516,24 +1524,26 @@ NudoIQ is a browser extension that runs inside the Relay load board and includes
 
 **Best for**: Carriers who want a full-featured refresher, rate history, profit calculation, dispute support, and backhaul finding all in one tool.
 
-You can see what NudoIQ adds to your Relay board, and how to set it up, on our [NudoIQ Chrome extension page](/amazon-relay-chrome-extension/).
+You can see what NudoIQ adds to your Relay board, and how to set it up, on our [NudoIQ Chrome extension page](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Comparison Table
 
 | Feature | LoadFetcher | Rocket Relay | SwiftRelay | FlashRelay | NudoIQ |
 |---------|-------------|-------------|-----------|-----------|---------|
-| **Refreshing and Booking** | Refreshing advertised; auto booking not listed | Advertised | Advertised | Advertised | Advertised |
-| **Profit Floor & Max Cap** | Not advertised | Not advertised | Not advertised | Not advertised | Advertised |
-| **Lane Rate History** | Advertised (Plus plan) | Not advertised | Not advertised | Not advertised | Advertised |
+| **Refreshing and Booking** | Refreshing advertised; auto booking not listed | Advertised (auto booking on Pro) | Advertised (auto booking on Pro and up) | Advertised | Advertised |
+| **Profit Floor & Max Cap** | Not advertised | Trip cap advertised (Pro); minimum payout filter, no profit floor | Not advertised (minimum payout and rate filters) | Not advertised | Advertised |
+| **Lane Rate History** | Advertised (Plus plan) | Not advertised | Not advertised (live load stats listed) | Not advertised | Advertised |
 | **Net Profit Calculation** | Not advertised | Not advertised | Not advertised | Not advertised | Advertised |
 | **Scorecard Dispute Drafting** | Not advertised | Not advertised | Not advertised | Not advertised | Advertised |
 | **Backhaul Finder** | Advertised (Plus plan) | Not advertised | Not advertised | Not advertised | Advertised |
-| **Post A Truck Helper** | Advertised | Not advertised | Not advertised | Not advertised | Advertised |
-| **Local-Only Data** | Not emphasized | Advertised | Not emphasized | Not emphasized | Not advertised |
-| **Telegram Alerts** | Advertised (Plus plan) | Not advertised | Not advertised | Not advertised | Advertised |
-| **Free Tier** | Advertised | Advertised | Not stated | Not stated | 7-day free trial, no card to start |
-| **Paid Tier** | $24 to $90/mo | Not stated | Not stated | Not stated | $49.99/mo |
-| **CWS Rating** | 5.0 | Not stated | Not stated | Not stated | 5.0 |
+| **Post A Truck Helper** | Advertised | Advertised (bulk Post A Truck on Pro) | Not advertised | Not advertised | Advertised |
+| **Local-Only Data** | Not emphasized | Advertised | Not stated | Not stated | Not advertised |
+| **Telegram Alerts** | Advertised (Plus plan) | Not advertised (support contact only) | Not advertised (support contact only) | Advertised | Advertised |
+| **Free Tier** | Advertised | Advertised (Free plan, no card) | No (7-day trial) | Not advertised (trial length not stated) | 7-day free trial, no card to start |
+| **Paid Tier** | $24 to $90/mo | Pro $49/mo | Lite $49.95, Pro $74.95 (auto-book), Enterprise $349 | $149/mo per dispatcher | $49.99/mo |
+| **CWS Rating** | 5.0 | 4.1 (66 ratings) | 4.5 (54 ratings) | 4.8 (20 ratings) | 5.0 |
+
+Checked on: LoadFetcher October 4, 2026. Rocket Relay and SwiftRelay listings and prices October 9, 2026, ratings October 5, 2026. FlashRelay October 5, 2026.
 
 ## How to Choose
 
@@ -1569,9 +1579,11 @@ A good extension for you is one that:
 
 ## Why NudoIQ Stands Out
 
-NudoIQ includes features that other extensions don't advertise: lane rate history, net profit calculation, scorecard dispute drafting, and backhaul finding. These go beyond refresh and booking and address the decisions that cost you time and money.
+NudoIQ does two things no other Relay extension lists: AutoBook that books only to your own minimum net profit after your own costs, and scorecard dispute letters (checked October 5, 2026, across 52 other Relay listings on the Chrome Web Store). No other listing shows net profit per load after your own driver pay, fuel, maintenance and deadhead.
 
 The extension is rated 5.0 on the Chrome Web Store and used by 300+ carriers. It costs $49.99 a month for every feature, with a 7-day free trial, no card needed to start.
+
+For a side-by-side of NudoIQ and six other Relay extensions, with prices and what each one lists publicly (checked October 5, 2026), see [why carriers choose NudoIQ](https://nudoiq.com/why-nudoiq/).
 
 ## Frequently asked questions
 

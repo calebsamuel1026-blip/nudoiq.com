@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Amazon Relay auto refresh: cómo funciona | NudoIQ</title>
+  <meta name="description" content="Tu load board de Relay puede recargarse solo con el intervalo que pongas. Así funciona una extensión de auto refresh, con alertas o autobook.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/es/amazon-relay-auto-refresh/">
+  <link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-auto-refresh/">
+  <link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-auto-refresh/">
+  <link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-auto-refresh/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:title" content="Amazon Relay auto refresh: cómo funciona | NudoIQ">
+  <meta property="og:description" content="Tu load board de Relay puede recargarse solo con el intervalo que pongas. Así funciona una extensión de auto refresh, con alertas o autobook.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/es/amazon-relay-auto-refresh/">
+  <meta property="og:locale" content="es_US">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: "es-amazon-relay-auto-refresh"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "es-amazon-relay-auto-refresh"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Auto refresh en Amazon Relay: para qué sirve y cómo funciona",
+  "description": "Tu load board de Relay puede recargarse solo con el intervalo que pongas. Así funciona una extensión de auto refresh, con alertas o autobook.",
+  "mainEntityOfPage": "https://nudoiq.com/es/amazon-relay-auto-refresh/",
+  "url": "https://nudoiq.com/es/amazon-relay-auto-refresh/",
+  "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+  "datePublished": "2026-10-14",
+  "dateModified": "2026-10-14",
+  "inLanguage": "es",
+  "author": {
+    "@type": "Organization",
+    "name": "NudoIQ",
+    "url": "https://nudoiq.com/"
+  },
+  "about": {
+    "@id": "https://nudoiq.com/#software"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
+    "name": "NudoIQ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nudoiq.com/icons/nudoiq-logo-512.png"
+    }
+  },
+  "abstract": "Un auto refresh de Amazon Relay recarga el load board por ti con un temporizador, así las cargas nuevas aparecen sin que le des a recargar. Las buenas cargas muchas veces se van en segundos. El auto refresh de NudoIQ te deja poner el intervalo, le agrega hasta 20% de variación al azar y evita que la pestaña del board se quede inactiva."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "NudoIQ",
+      "item": "https://nudoiq.com/es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Auto refresh de Amazon Relay",
+      "item": "https://nudoiq.com/es/amazon-relay-auto-refresh/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Un intervalo corto es demasiado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El intervalo más corto de NudoIQ es el que más batería gasta. Si compites por cargas en rutas movidas, te ayuda a ver antes las cargas nuevas. Si no tienes prisa, un intervalo más largo alcanza."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El refresh de mi extensión me puede sacar de Relay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nadie te lo puede prometer, y nosotros no lo vamos a hacer. El transportista es responsable de su cuenta de Relay y de cumplir los términos de Relay, así que léelos antes de correr cualquier extensión."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tengo que dejar el navegador abierto para que funcione el refresh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. La pestaña con el load board de Relay tiene que quedarse abierta, porque ahí corre el refresh. Si cierras la pestaña o el navegador, se detiene."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El refresh funciona si se cae el internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. El refresh corre en tu navegador en tiempo real. Si se cae el internet, se detiene y no puede recargar el board. Cuando vuelve la conexión, sigue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Es mejor Post A Truck que refrescar el load board?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hacen cosas distintas. Con Post A Truck publicas tu disponibilidad y tu tarifa mínima por milla hasta con dos semanas de anticipación, y los transportistas que coinciden tienen acceso a la carga antes de que llegue al board. El refresh mantiene al día el board para que veas las cargas spot nuevas cuando salen. Más en cómo publicar tu camión en Amazon Relay (en inglés)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Y si reservo una carga y después no la puedo correr?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cancelar una carga que reservaste cuenta contra tu acceptance, y Amazon dice que mientras más cerca de la recogida la rechaces, más alta es la penalidad. Dejarla vencer también cuenta. Si sabes que no va a funcionar, cancélala lo antes posible. Más en cancelar una carga en Amazon Relay (en inglés)."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body data-layout="custom">
+  <!-- 2026-10-14 (page-designer). Native-Spanish twin of /amazon-relay-auto-refresh/. Words: research/copy/ES-GUIDES-BATCH-D-2026-10-14.json
+       (Martha); CTA, promo, header and footer strings reused verbatim from the live Spanish guide shell (es/amazon-relay-requisitos).
+       Builder: research/seo/traffic-2026-10-14/build_es_guides.py. data-layout="custom": no generator overwrites it. -->
+  <div class="promo">7 días gratis, sin tarjeta para empezar · Funciona en tu propio Chrome · En español y en inglés</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/es/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Main navigation">
+      <a href="/es/#features">Funciones</a><a href="/es/#pricing">Precio</a><a href="/es/#faq">FAQ</a><a href="/android/">Android</a>
+    </nav>
+    <div class="navright">
+      <div class="lang" aria-label="Language"><a href="/amazon-relay-auto-refresh/" hreflang="en">English</a><a href="/es/amazon-relay-auto-refresh/" hreflang="es" aria-current="page">Espa&ntilde;ol</a></div>
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Agregar NudoIQ a Chrome</a>
+    </div>
+  </div></header>
+
+  <div class="doc-hero"><div class="doc-hero-in">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/es/">NudoIQ</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Auto refresh de Amazon Relay</span></nav>
+    <h1 class="page-title">Auto refresh en Amazon Relay: para qué sirve y cómo funciona</h1>
+    <p class="page-subtitle">Las buenas cargas del load board de Amazon Relay se van en segundos, y refrescar a mano no alcanza. Un auto refresh recarga el board por ti en intervalos cortos para que veas antes las cargas nuevas.</p>
+    <p class="byline">NudoIQ &middot; Publicado <time datetime="2026-10-14">14 de octubre de 2026</time> &middot; Última actualización <time datetime="2026-10-14">14 de octubre de 2026</time></p>
+  </div></div>
+
+  <div class="container">
+    <article class="prose">
+<section class="answer" aria-label="Respuesta corta"><p class="lbl">Respuesta corta</p><p>Un auto refresh de Amazon Relay recarga el load board por ti con un temporizador, así las cargas nuevas aparecen sin que le des a recargar. Las buenas cargas muchas veces se van en segundos. El auto refresh de NudoIQ te deja poner el intervalo, le agrega hasta 20% de variación al azar y evita que la pestaña del board se quede inactiva.</p></section>
+<h2 id="por-que-importa-refrescar-el-load-board">Por qué importa refrescar el load board</h2>
+<p><a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">Amazon dice</a> que el load board se actualiza automáticamente cada 30 segundos con las cargas spot nuevas. Las buenas cargas se pueden ir en segundos, así que muchos transportistas recargan más seguido para verlas antes. Refrescar a mano es difícil si estás manejando, comiendo o atendiendo tu negocio: te alejas cinco minutos y en ese tiempo una buena carga puede salir y desaparecer.</p>
+<p>Una extensión de refresh hace la recarga por ti con un temporizador. Por eso existen las <a href="/es/mejores-extensiones-amazon-relay/">extensiones de refresh y auto booker</a>: para que sigas compitiendo sin estar mirando la pantalla todo el día.</p>
+<h2 id="refrescar-a-mano">Refrescar a mano</h2>
+<p>Antes de estas extensiones había dos opciones: sentarse frente a la computadora a darle F5 o Ctrl+R por horas, o perder cargas. Refrescar a mano también significa que te pierdes lo que sale entre una recarga y otra, que estás amarrado a la computadora si quieres pelear por el mejor trabajo, y que recargas más o menos al mismo tiempo que muchos otros transportistas.</p>
+<h2 id="que-hace-una-extension-de-refresh">Qué hace una extensión de refresh</h2>
+<p>Pones un intervalo (cuánto espera entre una recarga y otra) y la extensión recarga por ti. Lo que ganas:</p>
+<ol><li><strong>Ves las cargas antes.</strong> Con un intervalo más corto pasa menos tiempo entre que sale una carga y que tú la ves. En ese tiempo, otro transportista la puede reservar.</li><li><strong>No tienes que estar mirando.</strong> La extensión recarga en segundo plano mientras haces otra cosa.</li><li><strong>Te avisa.</strong> Puede mandarte un aviso cuando sale una carga que cumple tus reglas.</li><li><strong>Puede reservar.</strong> En modo autobook, si una carga cumple tus reglas, la extensión la reserva sola.</li></ol>
+<h2 id="el-intervalo-y-la-variacion-jitter">El intervalo y la variación (jitter)</h2>
+<p>El <strong>intervalo</strong> es cada cuánto se recarga el board. Más corto significa que ves antes las cargas nuevas, pero también más trabajo para el servidor y más batería gastada en tu computadora. Algunos transportistas lo acortan en rutas con mucha competencia.</p>
+<p>El <strong>jitter</strong> es una variación al azar que se le suma al intervalo. En vez de recargar a un ritmo exacto, la extensión mueve cada recarga un poco antes o un poco después. La variación es pequeña (NudoIQ usa hasta 20% del intervalo), pero alcanza para que muchos transportistas no le peguen al servidor en el mismo instante. Es como el tráfico: si todos salen del trabajo a las 5 en punto, la carretera se congestiona; si unos salen a las 4:50, otros a las 5:00 y otros a las 5:10, el tráfico fluye.</p>
+<h2 id="que-intervalo-poner">Qué intervalo poner</h2>
+<ul><li><strong>Cargas con mucha competencia (tractor o reefer en rutas movidas):</strong> un intervalo más corto. Ves antes las cargas nuevas, pero gastas más batería y tu computadora trabaja más.</li><li><strong>Competencia moderada (box truck, rutas menos movidas):</strong> un intervalo más largo. Igual ves las cargas poco después de que salen, con un buen balance entre rapidez y recursos.</li><li><strong>Si estás lejos del camión o no estás reservando:</strong> un intervalo largo, o apaga el refresh y usa el modo alerta para que te avise cuando salga una carga que cumple tus reglas.</li><li><strong>Si te importa la batería:</strong> los intervalos largos gastan menos.</li></ul>
+<h2 id="alertas-o-reserva-automatica">Alertas o reserva automática</h2>
+<p><strong>Alert:</strong> la extensión refresca y te avisa cuando sale una carga que cumple tus reglas (NudoIQ manda alertas por Telegram). Tú decides, pero tienes que responder rápido.</p>
+<p><strong>Search:</strong> la extensión refresca y marca en el board las cargas que cumplen tus reglas. Tú las revisas y le das a Book.</p>
+<p><strong>Autobook:</strong> la extensión refresca, encuentra las cargas que cumplen tus reglas (ruta, precio, ganancia mínima y tope de reservas) y las reserva sola. Te avisa y tú revisas lo que reservó. Necesita reglas bien pensadas; lo explicamos en la guía del <a href="/es/amazon-relay-auto-booker/">auto booker</a>.</p>
+<p>Puedes combinarlos: autobook en las rutas que siempre quieres y alerta en las que prefieres decidir caso por caso.</p>
+<h2 id="como-se-instala">Cómo se instala</h2>
+<p>Normalmente:</p>
+<ol><li>Instálala desde la Chrome Web Store.</li><li>Inicia sesión, o usa tu sesión de Relay abierta.</li><li>Pon el intervalo.</li><li>Pon tus reglas: rutas, rangos de precio, distancia, equipo, ganancia mínima y tope de reservas.</li><li>Configura las alertas (NudoIQ usa Telegram).</li><li>Déjala corriendo.</li></ol>
+<p>La mayoría agrega una barra o un menú en la pestaña del load board, y puedes cambiar reglas e intervalo sin reiniciar. La barra de NudoIQ y sus cuatro pasos están en nuestra <a href="/amazon-relay-chrome-extension/">guía de la extensión de Chrome (en inglés)</a>.</p>
+<h2 id="lo-que-pasa-en-cada-recarga">Lo que pasa en cada recarga</h2>
+<p>La extensión recarga todo el load board: cargas, filtros, todo. Cada recarga te muestra lo nuevo y lo que sigue disponible. Cuando un transportista reserva una carga, desaparece del board, y la extensión no puede reservar una carga que ya no está. Si dos transportistas intentan reservar la misma carga casi al mismo tiempo, gana el primero. Por eso importa el intervalo.</p>
+<h2 id="tu-cuenta-tu-responsabilidad">Tu cuenta, tu responsabilidad</h2>
+<p>Además del jitter, algunas herramientas esperan un tiempo mínimo entre recargas aunque pongas un intervalo más corto. Y el transportista es responsable de su cuenta de Relay y de cumplir los términos de Relay. Léelos antes de correr cualquier extensión.</p>
+<h2 id="como-refresca-nudoiq">Cómo refresca NudoIQ</h2>
+<p>En NudoIQ tú pones el intervalo, con jitter incluido (hasta 20% de variación al azar en cada intervalo). La extensión evita que la pestaña de Relay se quede inactiva y refresca a su ritmo aunque no la estés mirando. Además del refresh, te muestra el historial de tarifas de cada ruta y la ganancia neta de cada carga, y se conecta con el autobook para que pongas tus reglas una vez. Antes de fijar tu ganancia mínima, puedes probar tus números en la <a href="/es/herramientas/calculadora-carga-relay/">calculadora gratis de ganancia</a>.</p>
+<p>NudoIQ tiene 5.0 en la Chrome Web Store y funciona en Chrome de escritorio en inglés y en español. Cuesta $49.99 al mes con todas las funciones, y lo pruebas 7 días gratis, sin tarjeta para empezar.</p>
+    </article>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Preguntas frecuentes</h2>
+      <details><summary>¿Un intervalo corto es demasiado?</summary><div class="a"><p>El intervalo más corto de NudoIQ es el que más batería gasta. Si compites por cargas en rutas movidas, te ayuda a ver antes las cargas nuevas. Si no tienes prisa, un intervalo más largo alcanza.</p></div></details>
+      <details><summary>¿El refresh de mi extensión me puede sacar de Relay?</summary><div class="a"><p>Nadie te lo puede prometer, y nosotros no lo vamos a hacer. El transportista es responsable de su cuenta de Relay y de cumplir los términos de Relay, así que léelos antes de correr cualquier extensión.</p></div></details>
+      <details><summary>¿Tengo que dejar el navegador abierto para que funcione el refresh?</summary><div class="a"><p>Sí. La pestaña con el load board de Relay tiene que quedarse abierta, porque ahí corre el refresh. Si cierras la pestaña o el navegador, se detiene.</p></div></details>
+      <details><summary>¿El refresh funciona si se cae el internet?</summary><div class="a"><p>No. El refresh corre en tu navegador en tiempo real. Si se cae el internet, se detiene y no puede recargar el board. Cuando vuelve la conexión, sigue.</p></div></details>
+      <details><summary>¿Es mejor Post A Truck que refrescar el load board?</summary><div class="a"><p>Hacen cosas distintas. Con Post A Truck publicas tu disponibilidad y tu tarifa mínima por milla hasta con dos semanas de anticipación, y los transportistas que coinciden tienen acceso a la carga antes de que llegue al board. El refresh mantiene al día el board para que veas las cargas spot nuevas cuando salen. Más en <a href="/amazon-relay-post-a-truck/">cómo publicar tu camión en Amazon Relay (en inglés)</a>.</p></div></details>
+      <details><summary>¿Y si reservo una carga y después no la puedo correr?</summary><div class="a"><p>Cancelar una carga que reservaste cuenta contra tu acceptance, y Amazon dice que mientras más cerca de la recogida la rechaces, más alta es la penalidad. Dejarla vencer también cuenta. Si sabes que no va a funcionar, cancélala lo antes posible. Más en <a href="/amazon-relay-cancel-load/">cancelar una carga en Amazon Relay (en inglés)</a>.</p></div></details>
+    </section>
+
+    <aside class="cta">
+      <div><h2>Mira cuánto te deja la próxima carga antes de tomarla.</h2><p>7 días gratis, sin tarjeta para empezar · 5.0 en la Chrome Web Store</p></div>
+      <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Comenzar prueba de 7 días</a>
+    </aside>
+
+    <nav class="related" aria-label="Más guías de Amazon Relay">
+      <h2>Más guías de Amazon Relay</h2>
+      <div class="cards">
+        <a href="/es/amazon-relay-en-espanol/">Amazon Relay en español: cómo buscar y reservar cargas</a>
+        <a href="/es/amazon-relay-requisitos/">Requisitos de Amazon Relay para transportistas</a>
+        <a href="/es/que-es-amazon-relay/">¿Qué es Amazon Relay y cómo funciona?</a>
+        <a href="/es/cuanto-paga-amazon-relay/">¿Cuánto paga Amazon Relay?</a>
+        <a href="/es/amazon-relay-scorecard/">Scorecard de Amazon Relay: cómo funciona el puntaje y cómo disputarlo</a>
+        <a href="/es/amazon-relay-auto-booker/">Auto booker de Amazon Relay: cómo funciona la reserva automática</a>
+        <a href="/es/mejores-extensiones-amazon-relay/">Mejores extensiones para Amazon Relay: refresh y auto booker</a>
+        <a href="/es/herramientas/carta-disputa-relay/">Escribe tu carta de disputa del scorecard de Amazon Relay</a>
+        <a href="/es/herramientas/calculadora-carga-relay/">Mira cuánto te deja una carga de Relay antes de reservarla</a>
+        <a href="/es/">NudoIQ en español</a>
+      </div>
+    </nav>
+
+    <div class="footer">
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/es/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/" hreflang="en">Guías (en inglés)</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacidad</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Reembolsos</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Términos</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contacto</a>
+    </div>
+    <p class="tm">Amazon y Amazon Relay son marcas registradas de Amazon.com, Inc. o sus afiliadas. NudoIQ es un producto independiente y no está afiliado, respaldado ni patrocinado por Amazon.com, Inc. Los requisitos de Amazon Relay pueden cambiar, así que confirma las reglas vigentes en relay.amazon.com.</p>
+
+  </div>
+</body>
+</html>
