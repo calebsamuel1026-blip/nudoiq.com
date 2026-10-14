@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Amazon Relay Hours of Service, ELD and Team Rules | NudoIQ</title>
+  <meta name="description" content="Hours of service on Amazon Relay: the federal 11 and 14-hour limits, the ELD rule, solo and team driver types, and what Relay builds into trip times.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/amazon-relay-hours-of-service/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:title" content="Amazon Relay Hours of Service, ELD and Team Rules | NudoIQ">
+  <meta property="og:description" content="Hours of service on Amazon Relay: the federal 11 and 14-hour limits, the ELD rule, solo and team driver types, and what Relay builds into trip times.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/amazon-relay-hours-of-service/">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: "amazon-relay-hours-of-service"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "amazon-relay-hours-of-service"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Amazon Relay hours of service: HOS, ELDs and team driving",
+  "description": "Hours of service on Amazon Relay: the federal 11 and 14-hour limits, the ELD rule, solo and team driver types, and what Relay builds into trip times.",
+  "mainEntityOfPage": "https://nudoiq.com/amazon-relay-hours-of-service/",
+  "url": "https://nudoiq.com/amazon-relay-hours-of-service/",
+  "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+  "datePublished": "2026-10-14",
+  "dateModified": "2026-10-14",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Organization",
+    "name": "NudoIQ",
+    "url": "https://nudoiq.com/"
+  },
+  "about": {
+    "@id": "https://nudoiq.com/#software"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
+    "name": "NudoIQ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nudoiq.com/icons/nudoiq-logo-512.png"
+    }
+  },
+  "abstract": "Amazon publishes no separate hours of service rules for Relay, so the federal rules apply. A property-carrying driver may drive 11 hours within 14 hours of coming on duty after 10 consecutive hours off, with a 30-minute break after 8 driving hours. Amazon says Relay includes time for HOS breaks in your scheduled trip duration, but it's on the carrier to plan. Amazon publishes no ELD rule of its own; federal law requires most carriers to use one."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nudoiq.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://nudoiq.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Amazon Relay hours of service: HOS, ELDs and team driving",
+      "item": "https://nudoiq.com/amazon-relay-hours-of-service/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Amazon Relay require an ELD?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon Relay has no ELD rule of its own. Federal law, 49 CFR 395.8, requires most motor carriers to install ELDs and have drivers use them, with a few exceptions such as vehicles made before model year 2000."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the Amazon Relay hours of service rules?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Relay loads follow federal rules. A driver needs 10 consecutive hours off before driving, can't drive after 14 hours on duty, can drive 11 hours in that window and needs a 30-minute break after 8 driving hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Amazon Relay include HOS breaks in trip times?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Relay builds break time into your trip. Amazon's hours of service post says Relay includes time for HOS breaks in your scheduled trip duration, and that it's on the carrier to plan accordingly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are team loads on Amazon Relay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Team loads use two drivers who trade off to keep the truck moving. Amazon says team truckers can drive for 6 days straight, and its contracts include a 119-hour team round trip with drivers home every five days."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is solo 2 or solo 5 on Amazon Relay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Relay's contract search filters solo drivers by 1, 2 or 5 days, or team. Amazon describes 13-hour and 37-hour solo work and a 109-hour solo contract over five days, but doesn't define each label further."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is stem time on Amazon Relay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon doesn't define stem time on any public Relay page. Check a load's times and miles on the load card before you book."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body data-clarity-unmask="true">
+
+  <div class="promo">7 days free, no card needed &middot; Runs in your own Chrome &middot; English and Spanish</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Main navigation">
+      <a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a><a href="/#faq">FAQ</a>
+    </nav>
+    <div class="navright">
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+    </div>
+  </div></header>
+
+  <div class="doc-hero"><div class="doc-hero-in">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay hours of service: HOS, ELDs and team driving</span></nav>
+    <h1 class="page-title">Amazon Relay hours of service: HOS, ELDs and team driving</h1>
+    <p class="page-subtitle">Relay loads run on the same federal clock as any other freight. Here are the rules in the regulation's own words, what Relay builds into its schedules, and how solo and team work fits.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-10-14">October 14, 2026</time> &middot; Last updated <time datetime="2026-10-14">October 14, 2026</time></p>
+  </div></div>
+
+  <div class="container">
+    <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>Amazon publishes no separate hours of service rules for Relay, so the federal rules apply. A property-carrying driver may drive 11 hours within 14 hours of coming on duty after 10 consecutive hours off, with a 30-minute break after 8 driving hours. Amazon says Relay includes time for HOS breaks in your scheduled trip duration, but it's on the carrier to plan. Amazon publishes no ELD rule of its own; federal law requires most carriers to use one.</p></section>
+<h2 id="who-sets-hours-of-service-on-amazon-relay-loads">Who sets hours of service on Amazon Relay loads?</h2>
+<p>The federal government, not Amazon. Amazon's <a href="https://relay.amazon.com/blog/trucking-safety/hours-of-service-how-to-comply-with-the-fmcsa" target="_blank" rel="noopener">hours of service post</a> says HOS rules were created by FMCSA &quot;to limit commercial driving time and avoid driver fatigue.&quot;</p>
+<p>Compliance is on you. Amazon's <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads" target="_blank" rel="noopener">driver eligibility post</a> says carriers manage their drivers, including &quot;hours of service (HOS) compliance.&quot;</p>
+<h2 id="what-are-the-federal-hours-of-service-limits">What are the federal hours of service limits?</h2>
+<p>These come from 49 CFR 395.3, the federal rule for property-carrying drivers, as published on eCFR:</p>
+<div class="tbl"><table><thead><tr><th>Rule</th><th>What the regulation says</th></tr></thead><tbody><tr><td>Start of shift</td><td>&quot;A driver may not drive without first taking 10 consecutive hours off duty&quot;</td></tr><tr><td>14-hour window</td><td>No driving &quot;after a period of 14 consecutive hours after coming on-duty following 10 consecutive hours off-duty&quot;</td></tr><tr><td>11-hour driving</td><td>&quot;A driver may drive a total of 11 hours&quot; inside that 14-hour window</td></tr><tr><td>30-minute break</td><td>No driving after more than 8 driving hours &quot;without at least a consecutive 30-minute interruption&quot;</td></tr><tr><td>Weekly limit</td><td>60 hours on duty in 7 days, or 70 hours on duty in 8 days if the carrier runs every day</td></tr><tr><td>Restart</td><td>The 7 or 8-day period &quot;may end with the beginning of an off-duty period of 34 or more consecutive hours&quot;</td></tr></tbody></table></div>
+<p>Trucks with a sleeper berth can split the 10-hour off-duty period. Under 49 CFR 395.1(g), one rest period must be at least 7 consecutive hours in the berth, the other at least 2 hours, and the two must total at least 10.</p>
+<p>One correction. Amazon's HOS post says a driver must take a 34-hour reset after driving 60 hours in a week. The regulation counts on-duty hours, not only driving, and the 34-hour restart is an option. Go by the regulation.</p>
+<h2 id="how-does-relay-build-hos-into-trip-times">How does Relay build HOS into trip times?</h2>
+<p>Amazon's HOS post says: &quot;Relay includes time for HOS breaks in your scheduled trip duration. It's on the carrier to plan accordingly.&quot; Amazon's <a href="https://relay.amazon.com/blog/amazon-relay-news-events/best-practices-for-amazons-high-volume-events" target="_blank" rel="noopener">high volume events post</a> adds that Relay navigation factors HOS into tour planning.</p>
+<p>Delays still land on you. &quot;Load delays lower your performance score,&quot; the HOS post says. It also says to account for seasonal delays, especially between November and February.</p>
+<p>Two habits Amazon suggests:</p>
+<ul><li><strong>Filter for a buffer.</strong> Its <a href="https://relay.amazon.com/blog/csa-scores-what-they-are-how-to-fix-them" target="_blank" rel="noopener">CSA post</a> says carriers &quot;can filter available loads by transit time and distance to buffer hours of service.&quot;</li><li><strong>Report changes.</strong> Drivers and carriers &quot;can use our app to connect with our operations for support&quot; when hours get tight.</li></ul>
+<p>Chaining two loads in one shift is its own puzzle. Our guide to <a href="/how-to-book-multiple-loads-on-amazon-relay/">booking multiple loads</a> has the checklist, and our <a href="/tools/relay-load-calculator/">free Relay load calculator</a> shows each load's net and net per loaded mile.</p>
+<h2 id="does-amazon-relay-require-an-eld">Does Amazon Relay require an ELD?</h2>
+<p>Amazon publishes no ELD rule of its own and no approved ELD list. Federal law does the requiring. 49 CFR 395.8(a)(1)(i) says &quot;a motor carrier operating commercial motor vehicles must install and require each of its drivers to use an ELD.&quot;</p>
+<p>The regulation lets a carrier use paper logs instead in a few cases, including:</p>
+<ul><li>A driver who needs a record of duty status &quot;on not more than 8 days within any 30-day period&quot;</li><li>Some driveaway-towaway operations</li><li>A vehicle &quot;manufactured before model year 2000&quot;</li></ul>
+<p>Short-haul drivers are exempt from the logging rule under 49 CFR 395.1(e)(1) if they stay &quot;within a 150 air-mile radius (172.6 statute miles)&quot; of their work reporting location and are released within 14 hours, among other conditions. Amazon doesn't say whether any Relay trips qualify.</p>
+<p>Amazon's HOS post only says &quot;An electronic logging device can help keep drivers aware of their HOS.&quot; In Amazon's <a href="https://relay.amazon.com/blog/load-tracking-with-amazon-relay" target="_blank" rel="noopener">load tracking post</a>, one carrier says &quot;You can use your own ELD, but this is tethered to Amazon loads.&quot; That's a carrier talking, not an Amazon rule.</p>
+<h2 id="what-are-solo-and-team-driver-types-on-relay">What are solo and team driver types on Relay?</h2>
+<p>Amazon's <a href="https://relay.amazon.com/blog/trucking-work-amazon-relay" target="_blank" rel="noopener">trucking work post</a> describes three:</p>
+<ul><li><strong>13-hour solo:</strong> &quot;One day of truck loads for a single driver, including 11 hours of drive time.&quot;</li><li><strong>37-hour solo:</strong> &quot;Two days of loads. A single truck driver spends their 10-hour rest break outside their base cities.&quot;</li><li><strong>Team:</strong> &quot;Two drivers trade off in order to keep the truck moving for days at a time.&quot; Amazon says &quot;Team truckers can drive for 6 days straight.&quot;</li></ul>
+<p>Contracts use longer blocks. Amazon's <a href="https://relay.amazon.com/blog/amazon-trucking-contracts" target="_blank" rel="noopener">contracts post</a> lists a 119-hour team round trip and a 109-hour solo round trip over five days. Team drivers get home every five days. A sleeper cab is needed for nights on the road, except on the 13-hour solo contract. Our <a href="/amazon-relay-contracts/">contracts guide</a> covers each type.</p>
+<h2 id="what-happens-if-a-driver-breaks-hos-rules">What happens if a driver breaks HOS rules?</h2>
+<p>Amazon's HOS post lists the costs: &quot;Fines for driver and carrier (anywhere from $300-$13,000),&quot; plus out-of-service orders, CDL suspension, a hit to CSA scores and higher insurance.</p>
+<p>Hostling has its own cap. Amazon's <a href="https://relay.amazon.com/blog/booking-options/why-book-hostler-shuttle-loads-on-relay" target="_blank" rel="noopener">hostler post</a> says drivers must stay within their hours of service limits, with a 12-hour maximum on hostling support.</p>
+<h2 id="what-doesn-t-amazon-publish-about-hos">What doesn't Amazon publish about HOS?</h2>
+<ul><li>An ELD requirement of its own, or a list of approved ELDs</li><li>How ELDs connect to Relay</li><li>Team load rules beyond the driver types above</li><li>A definition of &quot;stem time&quot;</li><li>Whether any Relay trips can use the short-haul exemption</li></ul>
+<h2 id="where-does-nudoiq-fit">Where does NudoIQ fit?</h2>
+<p>NudoIQ doesn't log hours or replace an ELD. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that shows net and net per mile under the price on every load card. During the free week or on the paid plan, its Pro View dropdown shows each leg's times and the load's driver type, Team or Solo, so you can check the fit before you book. It's free for 7 days with no card needed to start, then $49.99 a month.</p>
+    </article>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <details><summary>Does Amazon Relay require an ELD?</summary><div class="a"><p>Amazon Relay has no ELD rule of its own. Federal law, 49 CFR 395.8, requires most motor carriers to install ELDs and have drivers use them, with a few exceptions such as vehicles made before model year 2000.</p></div></details>
+      <details><summary>What are the Amazon Relay hours of service rules?</summary><div class="a"><p>Relay loads follow federal rules. A driver needs 10 consecutive hours off before driving, can't drive after 14 hours on duty, can drive 11 hours in that window and needs a 30-minute break after 8 driving hours.</p></div></details>
+      <details><summary>Does Amazon Relay include HOS breaks in trip times?</summary><div class="a"><p>Yes, Relay builds break time into your trip. Amazon's hours of service post says Relay includes time for HOS breaks in your scheduled trip duration, and that it's on the carrier to plan accordingly.</p></div></details>
+      <details><summary>What are team loads on Amazon Relay?</summary><div class="a"><p>Team loads use two drivers who trade off to keep the truck moving. Amazon says team truckers can drive for 6 days straight, and its contracts include a 119-hour team round trip with drivers home every five days.</p></div></details>
+      <details><summary>What is solo 2 or solo 5 on Amazon Relay?</summary><div class="a"><p>Relay's contract search filters solo drivers by 1, 2 or 5 days, or team. Amazon describes 13-hour and 37-hour solo work and a 109-hour solo contract over five days, but doesn't define each label further.</p></div></details>
+      <details><summary>What is stem time on Amazon Relay?</summary><div class="a"><p>Amazon doesn't define stem time on any public Relay page. Check a load's times and miles on the load card before you book.</p></div></details>
+    </section>
+
+    <aside class="cta">
+      <div><h2>Know what the next load is worth before you take it.</h2><p>7 days free, no card needed &middot; 5.0 on the Chrome Web Store</p></div>
+      <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Start the 7-day trial</a>
+    </aside>
+
+    <nav class="related" aria-label="More Amazon Relay guides">
+      <h2>More Amazon Relay guides</h2>
+      <div class="cards">
+        <a href="/amazon-relay-cargo-van/">Can you use a cargo van for Amazon Relay?</a>
+        <a href="/amazon-relay-app/">Amazon Relay app: what it does and how drivers use it</a>
+        <a href="/amazon-relay-approval-time/">How long does it take to get approved for Amazon Relay?</a>
+        <a href="/amazon-relay-background-check/">Amazon Relay background check: what drivers and carriers should know</a>
+        <a href="/amazon-relay-canada/">Amazon Relay Canada: requirements, insurance and how to sign up</a>
+        <a href="/amazon-relay-chrome-extension/">An Amazon Relay Chrome extension for your load board</a>
+      </div>
+    </nav>
+
+    <div class="footer">
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/">Amazon Relay guides</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="/partners/">Partners</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contact</a>
+    </div>
+    <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. Amazon Relay requirements change; confirm current rules at relay.amazon.com.</p>
+
+  </div>
+</body>
+</html>

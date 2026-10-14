@@ -4653,11 +4653,7 @@ The chat isn't a dead end. Amazon's [September 2026 update](https://relay.amazon
 
 The Support Center. For account security, the FAQ says to "reach out to us through the Support Center when logged into your Relay account."
 
-If you can't log in at all, the FAQ's steps are to reset your password on Amazon's account recovery page, using the email address you sign into Relay with. Make sure it's the same email you first registered with. If the page keeps spinning, try a private window, clear your cookies or switch browsers.
-
-If your account is suspended rather than locked, our [account suspended guide](https://nudoiq.com/amazon-relay-account-suspended/) walks through what to check.
-
-Amazon also says it "doesn't request personal information like passwords, OTPs, and credit card numbers over phone or e-mail." Anyone who calls asking for them isn't Amazon.
+Can't log in at all? Our [Amazon Relay login guide](https://nudoiq.com/amazon-relay-login/) walks through Amazon's reset steps and how to spot a fake login page. If your account is suspended rather than locked, our [account suspended guide](https://nudoiq.com/amazon-relay-account-suspended/) covers what to check.
 
 ## Who do you contact about an application?
 
@@ -4684,9 +4680,9 @@ Pay problems go through the portal. The FAQ says you can submit payment disputes
 
 For a late arrival or app usage hit you think is wrong, our [free Relay dispute letter tool](https://nudoiq.com/tools/relay-dispute-letter/) lets you tick what's true and copy a letter to submit. Amazon decides.
 
-## Do top carriers get faster support?
+## Do Relay Rewards carriers get faster support?
 
-Amazon says the top Relay Rewards tier gets "Dedicated office hours" with "priority assistance from Amazon Relay's support team," per its [Relay Rewards post](https://relay.amazon.com/blog/how-carriers-save-with-relay-rewards). It doesn't publish the hours or what the tier takes. The program is US only.
+Amazon's [Relay Rewards post](https://relay.amazon.com/blog/how-carriers-save-with-relay-rewards) lists "Dedicated office hours" with "priority assistance from Amazon Relay's support team" among the program's benefits. It doesn't say which tier gets them or publish the hours. That post says the program is US only, though relay.amazon.ca also lists "Rewards and Discounts" without details.
 
 In Canada, relay.amazon.ca gives the same ROC answer: it's reached through the Relay portal or Relay mobile.
 
@@ -5290,3 +5286,599 @@ Relay peak runs about four months. Amazon's peak season post says load volume sp
 
 ### What booking options does Amazon Relay offer during peak season?
 Amazon names the load board, Post A Truck, short-term contracts, contract auctions and its equipment marketplace for renting trailers. It also offers load alerts for loads that meet your criteria.
+
+---
+
+# Amazon Relay login: how to fix sign-in problems
+
+URL: https://nudoiq.com/amazon-relay-login/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon's Relay FAQ gives three fixes for login trouble. Reset your password on Amazon's account recovery page using the email you sign into Relay with, and make sure it's the email you first registered with. If the page keeps spinning or redirecting, try a private window, clear your cookies or switch browsers, and for unauthorized access use the Support Center while logged in.
+
+## How do you log into Amazon Relay?
+
+With an Amazon account. Amazon's [carrier sign-up post](https://relay.amazon.com/blog/how-to-become-a-carrier-for-amazon-relay) says: "Use your existing Amazon shopping account to start applying, or create a new account with a different email address." Whichever email you used then is the one Relay knows.
+
+Drivers sign in through the Relay app. Amazon's [driver eligibility post](https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads) says a driver will "log in to an existing Amazon account or create a new account" after their carrier invites them.
+
+Before you type anything, check the address. Amazon's [email scams post](https://relay.amazon.com/blog/email-scams-how-to-spot-a-fake) says: "Legitimate Amazon Relay websites have 'relay.amazon.com' at the beginning of the URL."
+
+## What should you do if you can't log into Amazon Relay?
+
+[Amazon's Relay FAQ](https://relay.amazon.com/faq) gives these steps, in this order:
+
+1. **Reset your password.** "Visit Amazon's account recovery page and follow the prompts to reset your password using the email address you use to sign into Relay."
+2. **Check the email address.** "Make sure you're using the same email address you originally registered with on Amazon Relay." If you're not sure which one, the FAQ says to look for earlier emails from Amazon Relay in your inbox.
+3. **Fix the browser.** If you entered your details but the page keeps redirecting or spinning, "Try using an incognito/private browser window. Clear your browser cookies and try again." Then "Try a different browser (Chrome, Firefox, Edge, Safari)."
+
+That's the whole published list. Once you're back on the board, our [free Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net and net per loaded mile from its pay and miles.
+
+## How do drivers log into the Relay app?
+
+Each driver needs their own profile. Drivers can only create one through an invitation from a Relay-approved carrier, and Amazon says "Drivers can't share their accounts." Our [Relay app guide](https://nudoiq.com/amazon-relay-app/) covers what the app does once a driver is in.
+
+## What if someone else got into your Relay account?
+
+Go to the Support Center. For account security, the FAQ says to "reach out to us through the Support Center when logged into your Relay account." That includes a bank account change you didn't make.
+
+The email scams post lists what to check once you're in:
+
+* Your driver list
+* Your admin and dispatcher list
+* Recent activity on the account
+* The bank account on file
+
+It also says to "Turn on multi-factor authentication (MFA) on your email," and warns that "Scammers set inbox rules to hide notifications." Check your email rules for anything you didn't set up.
+
+To report suspicious activity, the FAQ gives relay-network-reports@amazon.com. Our [guide to contacting Amazon Relay](https://nudoiq.com/amazon-relay-contact/) lists every route Amazon publishes.
+
+## How do you spot a fake Relay login page?
+
+Amazon describes the pattern. Scam emails link to fake pages, and "If you open the links in these emails and enter login info, the scammer can access your account, add unauthorized drivers" and more.
+
+Two rules from Amazon cover most of it:
+
+* **Amazon never asks for your secrets.** "Amazon Relay will never request Relay carrier's sensitive account information, password or the one-time password."
+* **Check the URL.** A real Relay page starts with relay.amazon.com.
+
+If a call or email asks for a one-time password, it isn't Amazon.
+
+## Should you share your Relay login?
+
+No. Amazon's [geospoofing post](https://relay.amazon.com/blog/trucking-safety/geospoofing-how-amazon-relay-combats-fake-gps-technology) advises: "Don't share your login information with anyone. Amazon Relay will never request that you share this information."
+
+The same post lists a separate, harsher penalty for GPS spoofing. "Anyone caught using GPS spoofing faces immediate account termination, a permanent ban from Amazon Relay, referral to law enforcement" and more. That post doesn't attach a penalty to login sharing itself.
+
+Amazon also uses face data from owners' photos and ID for identification. The FAQ says that includes using Facial Recognition Information "to make sure that your log-in credentials are not misused by a third party."
+
+If you can log in but can't book, that's usually not a password problem. Our [account suspended guide](https://nudoiq.com/amazon-relay-account-suspended/) walks through what to check.
+
+## What doesn't Amazon publish about Relay login?
+
+* A guide to two-step or one-time password problems
+* How to recover an account when you've lost the registered email
+* How long a lockout lasts
+* A support phone number. The FAQ says Amazon Relay "doesn't have an official contact phone number."
+
+If the FAQ steps don't work, the Support Center is the route Amazon names, and it needs you logged in. Amazon publishes nothing for someone fully locked out beyond the account recovery page.
+
+## Where does NudoIQ fit?
+
+NudoIQ runs inside your own signed-in Relay tab in Chrome, and it never asks for your Amazon password. It's an independent extension, not affiliated with Amazon, that shows net and net per mile under the price on every load card, from costs you set once. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### How do I reset my Amazon Relay password?
+Amazon's Relay FAQ says to visit Amazon's account recovery page and follow the prompts, using the email address you use to sign into Relay.
+
+### Why can't I log into Amazon Relay?
+Amazon's FAQ covers three causes of Relay login trouble: a forgotten password, the wrong email address and a browser problem. Reset your password, use the email you first registered with, and if the page keeps spinning, try a private window, clear cookies or switch browsers.
+
+### Is there Amazon Relay login support by phone?
+No, Relay has no phone line. Amazon's FAQ says Amazon Relay doesn't have an official contact phone number. For account security issues, it points you to the Support Center when you're logged into your Relay account.
+
+### How do drivers log into Amazon Relay?
+Drivers use the Relay app after their carrier invites them. Amazon says they log in to an existing Amazon account or create a new one, and drivers can't share accounts.
+
+### What is the Amazon Relay account recovery process?
+Amazon's FAQ says to reset your password on Amazon's account recovery page with the email you use for Relay. Amazon doesn't publish a recovery route for a lost email address.
+
+### Why is my Amazon Relay account blocked?
+Amazon doesn't publish a list of reasons a Relay login gets blocked. If you can sign in but can't book, check for a suspension or an insurance or compliance issue. Amazon advises never sharing your login information with anyone.
+
+---
+
+# Amazon Relay hours of service: HOS, ELDs and team driving
+
+URL: https://nudoiq.com/amazon-relay-hours-of-service/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon publishes no separate hours of service rules for Relay, so the federal rules apply. A property-carrying driver may drive 11 hours within 14 hours of coming on duty after 10 consecutive hours off, with a 30-minute break after 8 driving hours. Amazon says Relay includes time for HOS breaks in your scheduled trip duration, but it's on the carrier to plan. Amazon publishes no ELD rule of its own; federal law requires most carriers to use one.
+
+## Who sets hours of service on Amazon Relay loads?
+
+The federal government, not Amazon. Amazon's [hours of service post](https://relay.amazon.com/blog/trucking-safety/hours-of-service-how-to-comply-with-the-fmcsa) says HOS rules were created by FMCSA "to limit commercial driving time and avoid driver fatigue."
+
+Compliance is on you. Amazon's [driver eligibility post](https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads) says carriers manage their drivers, including "hours of service (HOS) compliance."
+
+## What are the federal hours of service limits?
+
+These come from 49 CFR 395.3, the federal rule for property-carrying drivers, as published on eCFR:
+
+| Rule | What the regulation says |
+|---|---|
+| Start of shift | "A driver may not drive without first taking 10 consecutive hours off duty" |
+| 14-hour window | No driving "after a period of 14 consecutive hours after coming on-duty following 10 consecutive hours off-duty" |
+| 11-hour driving | "A driver may drive a total of 11 hours" inside that 14-hour window |
+| 30-minute break | No driving after more than 8 driving hours "without at least a consecutive 30-minute interruption" |
+| Weekly limit | 60 hours on duty in 7 days, or 70 hours on duty in 8 days if the carrier runs every day |
+| Restart | The 7 or 8-day period "may end with the beginning of an off-duty period of 34 or more consecutive hours" |
+
+Trucks with a sleeper berth can split the 10-hour off-duty period. Under 49 CFR 395.1(g), one rest period must be at least 7 consecutive hours in the berth, the other at least 2 hours, and the two must total at least 10.
+
+One correction. Amazon's HOS post says a driver must take a 34-hour reset after driving 60 hours in a week. The regulation counts on-duty hours, not only driving, and the 34-hour restart is an option. Go by the regulation.
+
+## How does Relay build HOS into trip times?
+
+Amazon's HOS post says: "Relay includes time for HOS breaks in your scheduled trip duration. It's on the carrier to plan accordingly." Amazon's [high volume events post](https://relay.amazon.com/blog/amazon-relay-news-events/best-practices-for-amazons-high-volume-events) adds that Relay navigation factors HOS into tour planning.
+
+Delays still land on you. "Load delays lower your performance score," the HOS post says. It also says to account for seasonal delays, especially between November and February.
+
+Two habits Amazon suggests:
+
+* **Filter for a buffer.** Its [CSA post](https://relay.amazon.com/blog/csa-scores-what-they-are-how-to-fix-them) says carriers "can filter available loads by transit time and distance to buffer hours of service."
+* **Report changes.** Drivers and carriers "can use our app to connect with our operations for support" when hours get tight.
+
+Chaining two loads in one shift is its own puzzle. Our guide to [booking multiple loads](https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/) has the checklist, and our [free Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows each load's net and net per loaded mile.
+
+## Does Amazon Relay require an ELD?
+
+Amazon publishes no ELD rule of its own and no approved ELD list. Federal law does the requiring. 49 CFR 395.8(a)(1)(i) says "a motor carrier operating commercial motor vehicles must install and require each of its drivers to use an ELD."
+
+The regulation lets a carrier use paper logs instead in a few cases, including:
+
+* A driver who needs a record of duty status "on not more than 8 days within any 30-day period"
+* Some driveaway-towaway operations
+* A vehicle "manufactured before model year 2000"
+
+Short-haul drivers are exempt from the logging rule under 49 CFR 395.1(e)(1) if they stay "within a 150 air-mile radius (172.6 statute miles)" of their work reporting location and are released within 14 hours, among other conditions. Amazon doesn't say whether any Relay trips qualify.
+
+Amazon's HOS post only says "An electronic logging device can help keep drivers aware of their HOS." In Amazon's [load tracking post](https://relay.amazon.com/blog/load-tracking-with-amazon-relay), one carrier says "You can use your own ELD, but this is tethered to Amazon loads." That's a carrier talking, not an Amazon rule.
+
+## What are solo and team driver types on Relay?
+
+Amazon's [trucking work post](https://relay.amazon.com/blog/trucking-work-amazon-relay) describes three:
+
+* **13-hour solo:** "One day of truck loads for a single driver, including 11 hours of drive time."
+* **37-hour solo:** "Two days of loads. A single truck driver spends their 10-hour rest break outside their base cities."
+* **Team:** "Two drivers trade off in order to keep the truck moving for days at a time." Amazon says "Team truckers can drive for 6 days straight."
+
+Contracts use longer blocks. Amazon's [contracts post](https://relay.amazon.com/blog/amazon-trucking-contracts) lists a 119-hour team round trip and a 109-hour solo round trip over five days. Team drivers get home every five days. A sleeper cab is needed for nights on the road, except on the 13-hour solo contract. Our [contracts guide](https://nudoiq.com/amazon-relay-contracts/) covers each type.
+
+## What happens if a driver breaks HOS rules?
+
+Amazon's HOS post lists the costs: "Fines for driver and carrier (anywhere from $300-$13,000)," plus out-of-service orders, CDL suspension, a hit to CSA scores and higher insurance.
+
+Hostling has its own cap. Amazon's [hostler post](https://relay.amazon.com/blog/booking-options/why-book-hostler-shuttle-loads-on-relay) says drivers must stay within their hours of service limits, with a 12-hour maximum on hostling support.
+
+## What doesn't Amazon publish about HOS?
+
+* An ELD requirement of its own, or a list of approved ELDs
+* How ELDs connect to Relay
+* Team load rules beyond the driver types above
+* A definition of "stem time"
+* Whether any Relay trips can use the short-haul exemption
+
+## Where does NudoIQ fit?
+
+NudoIQ doesn't log hours or replace an ELD. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that shows net and net per mile under the price on every load card. During the free week or on the paid plan, its Pro View dropdown shows each leg's times and the load's driver type, Team or Solo, so you can check the fit before you book. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### Does Amazon Relay require an ELD?
+Amazon Relay has no ELD rule of its own. Federal law, 49 CFR 395.8, requires most motor carriers to install ELDs and have drivers use them, with a few exceptions such as vehicles made before model year 2000.
+
+### What are the Amazon Relay hours of service rules?
+Relay loads follow federal rules. A driver needs 10 consecutive hours off before driving, can't drive after 14 hours on duty, can drive 11 hours in that window and needs a 30-minute break after 8 driving hours.
+
+### Does Amazon Relay include HOS breaks in trip times?
+Yes, Relay builds break time into your trip. Amazon's hours of service post says Relay includes time for HOS breaks in your scheduled trip duration, and that it's on the carrier to plan accordingly.
+
+### What are team loads on Amazon Relay?
+Team loads use two drivers who trade off to keep the truck moving. Amazon says team truckers can drive for 6 days straight, and its contracts include a 119-hour team round trip with drivers home every five days.
+
+### What is solo 2 or solo 5 on Amazon Relay?
+Relay's contract search filters solo drivers by 1, 2 or 5 days, or team. Amazon describes 13-hour and 37-hour solo work and a 109-hour solo contract over five days, but doesn't define each label further.
+
+### What is stem time on Amazon Relay?
+Amazon doesn't define stem time on any public Relay page. Check a load's times and miles on the load card before you book.
+
+---
+
+# Amazon Relay Rewards program: tiers, benefits and discounts
+
+URL: https://nudoiq.com/amazon-relay-rewards/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Relay Rewards is Amazon's rewards program for approved Relay carriers; its Rewards post says it's US only. Everyone starts in the Basic tier, and your tier is updated on the 5th of each month using your company's lowest performance score from the previous month, miles driven against your number of verified drivers, and tenure. Benefits include promotional bonuses, deals and discounts, booking offers for the highest tiers, dedicated office hours and Amazon swag.
+
+## What is Amazon Relay Rewards?
+
+It's open to Relay carriers "of every size," per Amazon's [Relay Rewards post](https://relay.amazon.com/blog/how-carriers-save-with-relay-rewards), which says it "recognizes approved carriers for consistently meeting Amazon's high standards for safety, trust, and performance."
+
+"All new carriers start in the Basic tier." Amazon doesn't publish the names of the tiers above Basic or what it takes to reach each one. It says full details are in the official Relay Rewards documentation in the carrier portal.
+
+## How does Amazon decide your Relay Rewards tier?
+
+Your tier is "evaluated and updated on the 5th of every month." Amazon's example: October's performance sets your tier and benefits for November.
+
+Three things count:
+
+1. **Performance score.** "Your Rewards tier is calculated using your company's lowest score from the previous month." One weak metric can hold the whole tier down. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains the four metrics.
+2. **Engagement.** Total miles driven last month, with thresholds based on your number of verified drivers.
+3. **Tenure.** How long your company has been on Relay.
+
+If you drop a tier, "you won't lose any deals and discounts you've already enrolled in." You do have to requalify for higher-tier benefits.
+
+## What benefits come with Relay Rewards?
+
+Amazon lists five:
+
+* **Promotional bonuses** on select loads during limited-time promotions for certain regions, load types and dates. Amazon says bonus amounts increase with each tier and are "generally paid out within three weeks after the promotion ends."
+* **Deals and discounts** at Amazon's negotiated rates on fuel, insurance, truck rentals, tires, maintenance and more.
+* **Booking offers.** "We'll offer certain loads exclusively to our highest-tier carriers."
+* **Dedicated office hours** with "priority assistance from Amazon Relay's support team."
+* **Amazon swag** as you move up.
+
+Amazon doesn't publish bonus amounts or which loads count as booking offers.
+
+## What discounts can Relay carriers get?
+
+Amazon's [discounts page](https://relay.amazon.com/discounts) groups them into fuel and insurance, equipment and lending, safety tech, tire and maintenance, parking and tolls, carrier administration, and growth and education.
+
+Who qualifies: "Discounts and preferred pricing are only available to active Amazon Relay carriers and are subject to program policies." Each partner sets its own terms, so read them before you sign up.
+
+Discounts change your cost per mile, so rerun your numbers after you enroll. Our [free Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net and net per loaded mile from its pay and miles.
+
+## Is there an Amazon Relay fuel card?
+
+Yes, through Comdata. Amazon's [Comdata post](https://relay.amazon.com/blog/intro-to-amazon-relay/fuel-cost-management-relays-comdata-discount) describes "discounts at 4600+ Comdata locations across the United States" with "Comdata's fuel card," and calls it "our fuel card program." Amazon applies the discount at the time of the transaction.
+
+Fuel on the load itself is a separate matter. Spot loads are priced all-in, with fuel surcharge included. Our [Amazon Relay payments guide](https://nudoiq.com/amazon-relay-payments/) covers how pay is built.
+
+## What are Relay safety rewards?
+
+A separate, opt-in program for collision-free miles. Amazon's [safety rewards post](https://relay.amazon.com/blog/trucking-safety/amazon-relays-mileage-bonuses-for-collision-free-hauling) says it's for "approved carriers that have hauled at least one Relay load in the previous 12 months." You enroll from the Relay Rewards page in your account.
+
+You need a dash cam from Motive, Netradyne, Samsara or Verizon Connect. If you don't have one, "Every verified truck in your account qualifies for a free dash cam."
+
+Amazon's program terms list these per-mile bonus rates:
+
+| Collision-free miles in the year | Bonus per mile (Amazon's terms) |
+|---|---|
+| First 50,000 | $0.02 |
+| 50,001 to 200,000 | $0.03 |
+| 200,001 to 300,000 | $0.04 |
+| 300,001 to 400,000 | $0.05 |
+
+One line on the same page says "1 to 4 cents extra per mile," which doesn't match the tier list. The tier list and the discounts page both say $0.02 to $0.05.
+
+The rules that matter most:
+
+* "If your company experiences a severe collision event, your mileage count will reset."
+* Rewards are capped at 400,000 miles in one calendar year.
+* Amazon gives the 12,000-mile minimum two ways. One line lists "at least 12,000 miles hauled per year" as a program requirement. Its footnote ties the 12,000 miles to carriers that got dash cam support through the program.
+* The collision data "won't affect your Relay performance score."
+* If you leave the program after getting a dash cam, "you may owe back some of the dash cam setup cost."
+
+## Is Relay Rewards available in Canada?
+
+Amazon's pages point two ways. The Relay Rewards post says "This program is currently available only in the United States." But the relay.amazon.ca home page lists "Rewards and Discounts" with "Early access to loads and discounts on fuel, tires, maintenance, and more," without details. Our [Amazon Relay Canada guide](https://nudoiq.com/amazon-relay-canada/) covers what the Canadian site says.
+
+## What doesn't Amazon publish about Relay Rewards?
+
+* Tier names above Basic, and the thresholds for each
+* Promotional bonus amounts
+* Which loads count as booking offers
+* Each partner's full contract terms
+
+## Where does NudoIQ fit?
+
+NudoIQ isn't part of Relay Rewards and isn't affiliated with Amazon. It's a Chrome extension for the Relay load board that shows net and net per mile under the price on every load card, from costs you set once. If a fuel discount lowers your costs, update them and every card shows the new net. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### How does the Amazon Relay Rewards program work?
+Every new Relay carrier starts in the Basic tier. Amazon updates your tier on the 5th of each month from your company's lowest performance score last month, miles driven against your number of verified drivers, and tenure.
+
+### When is my Amazon Relay Rewards tier updated?
+Your tier is updated on the 5th of every month. Amazon's example: October's performance sets your tier and benefits for November.
+
+### What discounts does Amazon Relay offer?
+Amazon's discounts page covers fuel and insurance, equipment and lending, safety tech, tires and maintenance, parking and tolls, carrier administration, and growth and education. Only active Relay carriers qualify.
+
+### Does Amazon Relay have a fuel card?
+Yes, Relay carriers can use Comdata's fuel card, which Amazon calls its fuel card program. Amazon says carriers get discounts at 4600+ Comdata locations across the United States.
+
+### Do I lose my Relay discounts if my tier drops?
+No, you keep the discounts you're enrolled in. Amazon says you won't lose deals and discounts you've already enrolled in, but you have to requalify for higher-tier benefits.
+
+### Is Amazon Relay Rewards available outside the US?
+Amazon Relay's pages point two ways. The Relay Rewards post says the program is currently available only in the United States, but the relay.amazon.ca home page lists Rewards and Discounts, with early access to loads and discounts, without details.
+
+---
+
+# Amazon Relay 101 training and the Relay Learning Center
+
+URL: https://nudoiq.com/amazon-relay-learning-center/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Relay 101 is a short course in Relay's Learning Center, and Amazon's FAQ lists it as the first step after approval, at about 10 minutes. The Learning Center is a free library of self-paced courses inside your Relay account, with collections for carrier onboarding, drivers, high volume events, the performance score and road safety. We don't publish course answers: the courses are short, and they teach how Relay works.
+
+## What is the Amazon Relay Learning Center?
+
+It's Relay's built-in training library. Amazon's [Learning Center post](https://relay.amazon.com/blog/intro-to-amazon-relay/amazon-relays-learning-center) calls it "a free library of digital courses on safety, maintenance, and compliance." It adds: "All courses are self-paced, so you can learn on your schedule."
+
+You reach it from inside Relay once you're approved, and Amazon doesn't publish a public link to it. For the two hostling courses, Amazon's [hostler post](https://relay.amazon.com/blog/booking-options/why-book-hostler-shuttle-loads-on-relay) says "you'll need to be an approved Relay carrier to access these courses."
+
+## Where do you find Relay 101?
+
+Inside your Relay account, after you're approved. [Amazon's Relay FAQ](https://relay.amazon.com/faq) says you'll get an email with instructions to access your account. Once logged in, the first step it lists is: "Complete the Relay 101 course in Relay's Learning Center (about 10 minutes)."
+
+Then you add your drivers and equipment and start booking. If you're still waiting on approval, our guide to [Amazon Relay approval time](https://nudoiq.com/amazon-relay-approval-time/) covers the timeline.
+
+## What courses are in the Learning Center?
+
+Amazon groups them into collections:
+
+* **Carrier onboarding.** Payments, program policies, trip tracking, account management, load types and booking tools.
+* **Relay driver 101.** It covers "yard safety, Relay app usage, driver identification checks during loads," from before pickup to after delivery.
+* **High volume events.** For Prime Day and peak, when "Yards are busier, volume is extra high."
+* **Performance score.** Ways to track and improve your "on-time, load acceptance, disruption-free, and app usage metrics."
+* **Safer roads ahead.** A collection on driving techniques, from animal strikes to winter weather, with short "90-second garage" maintenance videos.
+
+You also get RelayCon keynotes. Amazon's [secure freight page](https://relay.amazon.com/pages/secure-freight-how-amazon-prevents-trucking-fraud-theft) mentions free courses "incorporating best practices from the Transported Asset Protection Association," and its [geospoofing post](https://relay.amazon.com/blog/trucking-safety/geospoofing-how-amazon-relay-combats-fake-gps-technology) says Relay offers security tips in the Learning Center too.
+
+## Are there answers to the Amazon Relay 101 training?
+
+Not from us, and not from Amazon. Amazon publishes no test questions or pass mark. Relay 101 takes about 10 minutes, and the point is to learn how Relay runs before your first load. A shortcut skips exactly what your drivers will face at the gate and in the app.
+
+## Which Learning Center courses does Amazon require?
+
+Amazon's [Relay home page](https://relay.amazon.com/) says: "Once your application is approved and you complete a few digital courses in Relay's Learning Center, you'll immediately be able to book loads from our load board." It doesn't name those courses. The FAQ lists Relay 101 as the first step after approval, without using the word "required."
+
+Three cases are spelled out on Amazon's public pages:
+
+1. **Contracts.** Amazon's [carriers set the pace post](https://relay.amazon.com/blog/carriers-set-the-pace-amazon-relay-keeps-them-moving) says contracts are available to carriers that meet asset count requirements "and complete a short virtual course." Its [more than a load board post](https://relay.amazon.com/blog/amazon-relay-more-than-a-load-board) says trailer-required contracts mean you "take the contracts course in the Relay Learning Center."
+2. **Hostling and shuttle work.** The hostler post requires "Completion of two digital courses in the Relay Learning Center," one on hostling services for Amazon and one on Relay auctions.
+3. **Intermodal.** Amazon's [intermodal post](https://relay.amazon.com/blog/booking-options/intermodal-trucking-at-amazon-relay) says it requires approved carriers "to take our online intermodal safety courses before booking drayage loads."
+
+## How do you assign courses to your drivers?
+
+From your carrier account. Amazon says you can "assign specific courses or collections to drivers on your roster." There are tools to "bulk assign and calendar view courses" and to "set completion dates."
+
+It doubles as paperwork. Amazon says "you can also keep these records for compliance and safety documentation."
+
+A good habit: assign the driver 101 collection before a new driver's first load. It covers the app and the selfie checks they'll see. Our [Relay app guide](https://nudoiq.com/amazon-relay-app/) covers the app side.
+
+## Can the Learning Center help your scorecard?
+
+Amazon says carriers who use these resources "may see progress in their Relay performance scores." It promises no more than that. The performance score collection is the one aimed at it. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains each metric.
+
+If a hit lands that you think is wrong, a course won't undo it. Our [free Relay dispute letter tool](https://nudoiq.com/tools/relay-dispute-letter/) lets you tick what's true and copy a letter to submit for a late arrival or app usage hit. Amazon decides.
+
+## What doesn't Amazon publish about the Learning Center?
+
+* Test questions, answers or a pass mark
+* A full course list beyond the collections
+* Whether courses give certificates
+* A public URL for the Learning Center
+
+## Where does NudoIQ fit?
+
+NudoIQ has nothing to do with Relay's courses. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that shows net and net per mile under the price on every load card and drafts scorecard dispute letters you check and submit. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### How long is the Amazon Relay 101 training?
+Amazon's Relay FAQ says the Relay 101 course takes about 10 minutes. It's the first step it lists after your carrier account is approved.
+
+### Where do I find Amazon Relay 101 training?
+In Relay's Learning Center, inside your Relay account. Amazon's FAQ lists Relay 101 as the first step once you're approved and logged in, and Amazon doesn't publish a public link.
+
+### Are there answers to the Amazon Relay 101 training?
+Relay 101 has no published answers. Amazon publishes no test questions or answers, and we don't publish them either. The course is short and teaches how Relay works before your first load.
+
+### Is there Amazon Relay driver training?
+Yes, for your drivers. The Relay driver 101 collection covers yard safety, Relay app usage and driver identification checks during loads. Carriers can assign it to drivers on their roster.
+
+### Is the Amazon Relay Learning Center free?
+Yes, Relay's Learning Center is free. Amazon calls it a free library of digital courses on safety, maintenance and compliance. You reach it inside your Relay account once you're approved.
+
+### Which Amazon Relay courses are required?
+Amazon Relay's home page says you complete a few digital courses in the Learning Center after approval before booking, and the FAQ lists Relay 101 first. Amazon also ties courses to contracts (a contracts course), hostling (two courses) and drayage (its intermodal safety courses).
+
+---
+
+# Amazon Relay shuttle and hostler loads: how they work
+
+URL: https://nudoiq.com/amazon-relay-hostler-shuttle-loads/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Hostling on Amazon Relay means moving trailers within one Amazon location, and shuttle runs move trailers between nearby Amazon sites, usually within 50 miles. You book both by blocks of time instead of individual loads, and Amazon says you're paid for the full block you commit to. You need your own day cab or hostler truck, a CDL, a C+ performance grade and two Learning Center courses.
+
+## What are hostler and shuttle loads on Amazon Relay?
+
+Local trailer moves. Amazon's [hostler post](https://relay.amazon.com/blog/booking-options/why-book-hostler-shuttle-loads-on-relay) puts it simply: if you've ever moved trailers around a yard, dock or warehouse site, that's hostling.
+
+Relay has two kinds:
+
+* **Single-site hostling:** "Moving trailers within one Amazon location." For example, positioning a trailer for loading or unloading at a delivery station.
+* **Shuttle runs:** "Moving trailers between nearby Amazon sites (usually within 50 miles)." For example, hauling trailers from a busy fulfillment or sort center to an offsite storage lot.
+
+Amazon says most carriers handle both trailer staging and swapping during a block.
+
+They're new. Amazon's [RelayCon 2025 write-up](https://relay.amazon.com/blog/booking-options/new-freight-types-on-relay-how-amazon-is-expanding-load-opportunities) says hostling and shuttle work launched in 2025, and that "they're power-only." Our [power only guide](https://nudoiq.com/amazon-relay-power-only/) covers the wider power-only side of Relay.
+
+## How do hostling blocks work?
+
+You book time, not loads. "You'll book these moves by blocks of time instead of individual loads." Your driver handles whatever trailer moves come up during the slot.
+
+What Amazon says about blocks:
+
+* **Pay.** "You'll be paid for the full block of time that you commit to," even if Amazon doesn't use all the time.
+* **More than one a day.** "One driver can work multiple blocks per day as long as they don't overlap."
+* **A hard cap.** Drivers must stay within their hours of service limits, with a 12-hour maximum on hostling support. Amazon says keeping drivers inside those limits is the carrier's job.
+* **Booking limits.** "There's a cap on the amount of hostling moves you can book," so the work spreads across eligible carriers.
+
+## What do you need for Amazon Relay hostling and shuttle runs?
+
+On top of being an approved Relay carrier, Amazon lists:
+
+1. Your own day cab or hostler truck
+2. A valid CDL for the driver, since "public roads may be used to access offsite yards"
+3. A C+ performance grade
+4. Two Learning Center courses: one on hostling services for Amazon and one on Relay auctions
+
+You need to be approved before you can take the courses. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains what sets your grade.
+
+## How do you book hostling and shuttle moves?
+
+Two ways, per Amazon.
+
+**On the load board.** "Just filter by power-only loads and pick the times and locations that work for you (e.g., BNA5 -> BNA5)." In Amazon's example, the move starts and ends at the same site, which reads like single-site hostling. That's our reading. Amazon says you see start and end times up front.
+
+**Through auctions.** You can bid on hostling and shuttle lanes. "Relay will calculate the hourly rate per driver as you place a bid." And "When your company wins an auction, you'll get up to 6 months of moves." Our [auctions guide](https://nudoiq.com/amazon-relay-auctions/) covers how Relay bidding works.
+
+Weighing a block against a regular power-only load? Our [free Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net and net per loaded mile from its pay and miles.
+
+## Who are hostler and shuttle loads a fit for?
+
+Amazon pitches them to carriers with idle day cabs who want local work closer to home. It also says, in a [September 2026 post](https://relay.amazon.com/blog/booking-options/how-to-find-amazon-relays-fit-for-your-trucking-business), that newer options like "hostler and shuttle and third-party shipper loads" help carriers diversify.
+
+The trade-off is control. You commit a driver and a truck to a block, and Amazon decides which moves fill it.
+
+## What doesn't Amazon publish about hostling?
+
+* Hourly rates
+* The booking cap number
+* Which facilities offer hostling
+* Specs for hostler trucks (yard tractors)
+* Whether a shuttle run needs a sleeper
+
+## Where does NudoIQ fit?
+
+NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence (the first button under a load) shows a lane's price history. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### What is shuttle work on Amazon Relay?
+Shuttle runs move trailers between nearby Amazon sites, usually within 50 miles, such as from a fulfillment center to an offsite storage lot. They're power-only and booked by blocks of time.
+
+### What is a shuttle request on Amazon Relay?
+We found no public Amazon Relay page that uses the term. Shuttle moves are booked as blocks of time on the load board or won through auctions.
+
+### What do I need to do hostling on Amazon Relay?
+Amazon lists your own day cab or hostler truck, a valid CDL for the driver, a C+ performance grade and two Learning Center courses, one on hostling and one on Relay auctions.
+
+### How long can a driver work hostling blocks on Relay?
+One driver can work several blocks a day if they don't overlap, but Amazon says drivers must stay within their hours of service limits, with a 12-hour maximum on hostling support.
+
+### Are Amazon Relay shuttle loads paid by the hour?
+Shuttle loads are booked and paid by blocks of time. Amazon says you're paid for the full block you commit to, and that Relay calculates an hourly rate per driver when you bid in an auction. It doesn't publish rates.
+
+### How do I find shuttle loads on the Amazon Relay load board?
+Amazon says to filter by power-only loads and pick times and locations that work for you. Amazon's own example is BNA5 to BNA5, a move that starts and ends at the same site.
+
+---
+
+# Amazon Relay intermodal: how drayage loads work
+
+URL: https://nudoiq.com/amazon-relay-intermodal/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon Relay's intermodal loads are power-only drayage runs between Amazon sites and rail ramps, typically under 3 hours of driving one way. You need a Class 8 truck, UIIA certification with the railroad addenda you want, and Amazon's online intermodal safety courses. Amazon partners with railroads to provide the chassis, so carriers don't pay chassis rental charges at rail ramps.
+
+## What is intermodal drayage on Amazon Relay?
+
+Short container runs to and from the rail. Amazon's [intermodal post](https://relay.amazon.com/blog/booking-options/intermodal-trucking-at-amazon-relay) says its drayage loads go to and from rail hubs and are "typically less than 3 hours of driving one way."
+
+"In trucking, domestic drayage shipments are over-the-road moves for 53' containers." Relay carriers run them between Amazon sites and rail ramps, and some over the road between Amazon locations.
+
+"Each drayage run is one shift." Amazon says that even with several moves, drivers are typically home by the end of the day.
+
+## What do you need for Amazon Relay intermodal loads?
+
+* **A Class 8 truck.** "Our intermodal loads are power-only, so all carriers need is a driver and a Class 8 truck" that meets Relay's standards.
+* **UIIA certification.** "Intermodal loads require a certification from the Uniform Intermodal Interchange Agreement (UIIA)."
+* **Amazon's courses.** Amazon requires approved carriers "to take our online intermodal safety courses before booking drayage loads."
+
+You don't upload the certificate by hand. "We get a direct feed from UIIA confirming that carriers are certified." Amazon says it then enables your company for the loads tied to the addenda you've filed in the portal.
+
+## Do you need railroad addenda?
+
+Amazon recommends adding addenda for all of its railroad providers to your UIIA certification. "There's no cost to add railroad addendums. Some railroads might run a credit check."
+
+Check your insurance too. Amazon says there may be extra insurance requirements for intermodal, and "Most rail addendums often require worker's compensation coverage." Talk to your agent about exclusions. Our [insurance requirements guide](https://nudoiq.com/amazon-relay-insurance-requirements/) covers Relay's standard minimums.
+
+## What does Amazon provide?
+
+The chassis. "Amazon partners with railroads to provide the chassis for all shipments, so carriers don't pay rental charges when they use rail ramps."
+
+You also don't need to bring a container to swap. Amazon says it has no requirement to bring a container into a railyard, and "we allow drivers to bobtail into pick-up."
+
+Containers are a different story. The intermodal post describes domestic drayage for 53' containers. Separately, Amazon's FAQ lists "20', 40', and 45' high cube containers (UIIA compliant)" among the equipment it works with. That's not a list of what Amazon provides.
+
+## Drop/drop or live load?
+
+Mostly drop/drop. "Amazon's intermodal drayage saves time using drop/drop with pre-loaded containers already on the chassis." At Amazon facilities, Amazon says everything will be on the chassis.
+
+Some ramps work differently. "Certain ramps are live load only, but carriers will know ahead of time when they sign a railroad's addendum." In a live load, the driver picks up a chassis first, then the railroad lowers a container onto it by crane.
+
+## What kinds of drayage trips are on Relay?
+
+"Approved Relay carriers can book one-way shipments and two-leg tours on Relay for either empty or loaded shipments." Amazon says there's no pre-work or post-work beyond what you sign up for.
+
+Ports come up only in passing. The intermodal post mentions moving containers from ports or railyards. Amazon's [Prime Day post](https://relay.amazon.com/blog/amazon-relay-news-events/prime-day-for-amazon-relay-carriers) says: "Book port and rail drayage loads if your company is UIIA certified." And its [RelayCon 2025 write-up](https://relay.amazon.com/blog/booking-options/new-freight-types-on-relay-how-amazon-is-expanding-load-opportunities) says third-party shippers bring "drayage from rail and shipyards."
+
+## How do you book drayage on Amazon Relay?
+
+Three ways, on desktop or in the Relay app:
+
+1. **Load board.** Much of it is spot freight. Filter power-only loads by container equipment type and your rail certifications.
+2. **Contracts.** "Book weeks to months of drayage." Amazon says reserved blocks pay for the time even if it doesn't use the full duration.
+3. **Post A Truck.** Build an order to auto-tender at your rate. Amazon suggests stacking short moves that start around the same time. Our [Post A Truck guide](https://nudoiq.com/amazon-relay-post-a-truck/) explains orders.
+
+Short moves can look small on the board. Our [free Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net and net per loaded mile from its pay and miles, deadhead included.
+
+## What doesn't Amazon publish about intermodal?
+
+* Which railroads and ramps it uses
+* Extra insurance amounts for intermodal
+* Drayage rates
+* Port drayage details beyond a few passing mentions
+
+## Where does NudoIQ fit?
+
+NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence (the first button under a load) shows a lane's price history. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### Does Amazon Relay have intermodal loads?
+Yes, Relay has power-only domestic drayage for 53' containers between Amazon sites and rail ramps, typically under 3 hours of driving one way. You need UIIA certification to haul them.
+
+### What do I need for Amazon Relay drayage?
+Amazon lists a driver and a Class 8 truck that meets Relay standards, UIIA certification and its online intermodal safety courses. It recommends adding addenda for all its railroad providers.
+
+### Does Amazon Relay provide the chassis for drayage?
+Yes, you don't bring a chassis. Amazon says it partners with railroads to provide the chassis for all shipments, so carriers don't pay rental charges at rail ramps.
+
+### Are Amazon Relay container loads drop and hook?
+Most Relay drayage is drop and hook. Amazon says its drayage uses drop/drop with pre-loaded containers on the chassis, but certain ramps are live load only, which you'll know when you sign that railroad's addendum.
+
+### How do I find drayage loads on Amazon Relay?
+On the load board, filter power-only loads by container equipment type and your rail certifications. You can also book drayage contracts or build a Post A Truck order.
+
+### Does Amazon Relay have port drayage?
+Relay mentions ports only in passing. Amazon's Prime Day post tells UIIA-certified carriers to book port and rail drayage loads around Prime Day. It says third-party shippers bring drayage from rail and shipyards, but publishes no port details.
