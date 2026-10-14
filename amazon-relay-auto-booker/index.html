@@ -92,7 +92,7 @@
   "url": "https://nudoiq.com/amazon-relay-auto-booker/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
   "datePublished": "2026-09-20",
-  "dateModified": "2026-10-12",
+  "dateModified": "2026-10-14",
   "inLanguage": "en-US",
   "author": {
     "@type": "Organization",
@@ -150,7 +150,7 @@
       "name": "Can I set different booking rules for different times of day?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most auto-bookers don't have built-in scheduling. You'd have to change your rules manually if you want to book different loads at different times. Some carriers adjust their profit floor during slow hours (willing to take lower margin loads when work is scarce) but keep it higher during busy hours. You can do this, but it's manual."
+        "text": "You'd change them by hand. NudoIQ has no time-of-day schedule for its rules, so if you want a different minimum at different hours, update your Min Net Profit, price and lane rules in NudoIQ yourself. Whatever you set, AutoBook never books a load under your Min Net Profit."
       }
     },
     {
@@ -166,7 +166,7 @@
       "name": "How do I adjust my profit floor if my costs change?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most auto-bookers let you change your profit floor anytime. If your fuel costs drop or your driver pay changes, update the floor and the extension respects the new number immediately."
+        "text": "In NudoIQ, change your Min Net Profit whenever your costs change, for example when fuel or driver pay moves. The next check uses the new number, and AutoBook won't book a load under it."
       }
     },
     {
@@ -298,7 +298,7 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay Auto Booker: How Automatic Booking Works</span></nav>
     <h1 class="page-title">Amazon Relay Auto Booker: How Automatic Booking Works</h1>
     <p class="page-subtitle">An auto-booker extension can book loads for you automatically when they match your rules. But automatic booking only works when you set it up carefully. Here's how to do it safely.</p>
-    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-12">October 12, 2026</time></p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-14">October 14, 2026</time></p>
   </div></div>
 
   <div class="container">
@@ -309,7 +309,7 @@
 <p>Example: You set rules that say &quot;book any load from Portland to Eugene for $400 or more, if the profit is at least $150 after costs.&quot; When a load matching those criteria posts, the extension sees it and books it for you. You get a notification that it booked something, and you review what you got.</p>
 <p>The advantage is obvious: you can act on loads faster, and you're not glued to the screen. The risk is equally obvious: without good guardrails, you can book loads that don't work for your operation.</p>
 <h2 id="the-risk-of-unintended-bookings">The Risk of Unintended Bookings</h2>
-<p>The biggest mistake carriers make with auto-bookers is setting rules that are too loose. Set a rule that says &quot;book any load over $200&quot; and you might book a 200-mile haul at $2 per mile (which nets you nothing after costs). Set a rule that says &quot;book anything from Oregon&quot; and you might book a load that goes to California, adding six hours you didn't plan.</p>
+<p>Your biggest risk with an auto-booker is rules that are too loose. A made-up example: a rule that says &quot;book any load paying $400 or more&quot; will also book a 400-mile run at $400, which is $1 a mile and may not cover your costs. A rule that says &quot;book anything from Oregon&quot; can book a load that ends hundreds of miles from where you planned to be.</p>
 <p>Auto-bookers book fast and without mercy. If your rules match, they book. No &quot;wait, let me think about this.&quot; No second-guessing. If you set the rules wrong, you'll book loads you didn't want.</p>
 <p>This is why guardrails matter. The best auto-bookers make it hard to book the wrong load.</p>
 <h2 id="essential-guardrails-rules-profit-floor-and-max-books-cap">Essential Guardrails: Rules, Profit Floor, and Max-Books Cap</h2>
@@ -350,8 +350,8 @@
 <p>From Amazon's perspective, you booked the load. It's your obligation. You accepted it. If you can't take it later, cancelling hits your acceptance score, and the closer to pickup, the bigger the penalty.</p>
 <p>This is why profit floor and max-books cap are non-negotiable. If you set a bad rule and the extension books 10 loads you can't handle, you cancel most of them and your scorecard suffers.</p>
 <h2 id="instant-book-one-click-booking">Instant Book: One-Click Booking</h2>
-<p>Some extensions (including NudoIQ) offer an Instant Book feature: a button on the load card that books the load in one click, instead of the multi-step flow (find load, read details, click Book, fill shipping info, confirm).</p>
-<p>Instant Book isn't automatic, you still click the button manually, but it's faster than the standard booking flow. You see a load, check it's good, and hit Instant Book instead of navigating menus.</p>
+<p>Some extensions (including NudoIQ) have an Instant Book button. In NudoIQ, it sits on highlighted load rows, and one tap books the load. There's no confirmation screen, so check the load before you tap.</p>
+<p>You still press Instant Book yourself, after you've looked at the load and decided you want it. It isn't automatic.</p>
 <h2 id="common-autobook-mistakes">Common Autobook Mistakes</h2>
 <p><strong>Mistake 1: Too-Loose Rules</strong> Setting rules that are too broad (&quot;book any load over $100&quot; or &quot;book anything from California&quot;) leads to unwanted bookings. Start narrow and widen only after testing.</p>
 <p><strong>Mistake 2: No Profit Floor</strong> A $500 rate sounds good until you realize it nets $50 after paying your driver and fuel. Always set a profit floor.</p>
@@ -379,9 +379,9 @@
 
     <section class="faq" aria-labelledby="faq-h">
       <h2 id="faq-h">Frequently asked questions</h2>
-      <details><summary>Can I set different booking rules for different times of day?</summary><div class="a"><p>Most auto-bookers don't have built-in scheduling. You'd have to change your rules manually if you want to book different loads at different times. Some carriers adjust their profit floor during slow hours (willing to take lower margin loads when work is scarce) but keep it higher during busy hours. You can do this, but it's manual.</p></div></details>
+      <details><summary>Can I set different booking rules for different times of day?</summary><div class="a"><p>You'd change them by hand. NudoIQ has no time-of-day schedule for its rules, so if you want a different minimum at different hours, update your Min Net Profit, price and lane rules in NudoIQ yourself. Whatever you set, AutoBook never books a load under your Min Net Profit.</p></div></details>
       <details><summary>What happens if I set my max-books cap too low?</summary><div class="a"><p>You'll stop getting bookings after you hit the cap, even if perfect loads post. If you cap at 2 loads a day and the board is flooded with great work, you'll miss it after your 2 are booked. Set a cap based on your actual capacity, and review it regularly.</p></div></details>
-      <details><summary>How do I adjust my profit floor if my costs change?</summary><div class="a"><p>Most auto-bookers let you change your profit floor anytime. If your fuel costs drop or your driver pay changes, update the floor and the extension respects the new number immediately.</p></div></details>
+      <details><summary>How do I adjust my profit floor if my costs change?</summary><div class="a"><p>In NudoIQ, change your Min Net Profit whenever your costs change, for example when fuel or driver pay moves. The next check uses the new number, and AutoBook won't book a load under it.</p></div></details>
       <details><summary>What if the extension books a load and I want to cancel it?</summary><div class="a"><p>You can cancel a booked load, but it counts against your tender-acceptance score on your Relay scorecard. Cancel if you absolutely have to, but do it sparingly. This is why testing your rules in Alert mode first matters: fewer bad bookings means fewer cancellations.</p></div></details>
       <details><summary>Can Autobook book loads when I'm offline?</summary><div class="a"><p>No. The extension runs inside your browser. If your device is off or your internet is down, the extension can't refresh the board or book loads. It only works when your browser is open and online.</p></div></details>
       <details><summary>Is booking via extension as reliable as booking manually?</summary><div class="a"><p>The extension books through the same board you use. Any booking it makes is yours, so set your rules carefully.</p></div></details>

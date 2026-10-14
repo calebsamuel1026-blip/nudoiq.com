@@ -176,7 +176,7 @@ Box truck loads are for 26 ft and 16 ft trucks with tuck-under liftgates. Tracto
 # What Is Amazon Relay?
 
 URL: https://nudoiq.com/what-is-amazon-relay/
-Published: 2026-09-20. Last updated: 2026-10-02.
+Published: 2026-09-20. Last updated: 2026-10-14.
 
 Short answer: Amazon Relay is Amazon's platform for carriers to find and book Amazon freight. Approved carriers with a DOT number active at least 180 days and a valid MC number book spot loads, round trips, blocks and short-term contracts, or post availability with Post A Truck. Amazon pays weekly and grades carriers on a performance score.
 
@@ -209,7 +209,7 @@ Relay supports specific equipment types, and what you own affects your load volu
 
 **Cargo vans are not supported: this is an explicit exclusion.** Even if you think a large cargo van could handle loads, Amazon does not accept it on the platform.
 
-Amazon says the majority of Relay loads are [power only](https://nudoiq.com/amazon-relay-power-only/): you bring the tractor and Amazon provides the trailer. Round trips usually need only a tractor, while one-way loads need a box truck or your own trailer.
+Amazon says the majority of Relay loads are [power only](https://nudoiq.com/amazon-relay-power-only/): you bring the tractor and Amazon provides the trailer. A [2024 Amazon post](https://relay.amazon.com/blog/trucking-work-amazon-relay) says round trips usually need only a tractor, and that for one-way loads you'll "most likely" need a box truck or your own trailer.
 
 ## How Loads Get Posted and Booked
 
@@ -263,7 +263,7 @@ Visit relay.amazon.com and sign in with your business credentials. You'll comple
 Yes. You set your own availability with Post A Truck, and you choose which loads to book on the board. Amazon says there's no fleet size requirement. Just remember that cancelling loads you booked hurts your acceptance score.
 
 ### What happens if I miss a pickup?
-A late or missed pickup counts against your on-time metric, and a lower grade can reduce your load access. You can file a dispute if the miss was beyond your control (weather, breakdown, traffic) but Amazon makes the final decision.
+A late or missed pickup counts against your on-time metric, which Amazon measures from your check-in time at the site, and a lower grade can reduce your load access. If something happens along the way, Amazon says you can let Relay know and dispute the score impact. Our free [dispute letter tool](https://nudoiq.com/tools/relay-dispute-letter/) helps you write it up.
 
 ### Does my scorecard affect how much I get paid?
 Amazon doesn't say your grade changes a load's price. It changes access: A+, A and B+ carriers see new spot loads first, B and above can book new contracts, and higher grades get priority matching on Post A Truck.
@@ -689,7 +689,7 @@ Depends on your location. If you're near a major Amazon distribution center, loa
 # How Much Does Amazon Relay Pay?
 
 URL: https://nudoiq.com/how-much-does-amazon-relay-pay/
-Published: 2026-09-20. Last updated: 2026-10-02.
+Published: 2026-09-20. Last updated: 2026-10-14.
 
 Short answer: Amazon Relay pay varies by load, and Amazon does not publish typical rates. Each rate includes a base rate, a fuel surcharge and tolls, and moves with distance, deadhead, trip direction, equipment, live loads, season and region. Amazon pays weekly: loads finished by 11:59 pm Saturday are paid the following Friday.
 
@@ -709,8 +709,8 @@ Different lanes have different characteristics. Where you're picking up and deli
 **Equipment Type**
 Amazon lists equipment type and availability as a rate factor, using reefer as an example. It doesn't publish rate comparisons between equipment types.
 
-**Your Booking History**
-Your record affects what you see first. Amazon gives A+, A and B+ carriers early access to new spot loads, and cancelling loads you booked lowers your acceptance score.
+**Your Performance Grade**
+Your grade changes access, not the posted price. Amazon gives A+, A and B+ carriers early access to new spot loads, and it doesn't say a grade changes what a load pays. Cancelling loads you booked lowers your acceptance score, which can pull your grade down.
 
 **Daily Volume on the Board**
 How much freight is on the board that day affects what you see and what it pays. Amazon doesn't publish day-of-week or hour-by-hour patterns.
@@ -726,7 +726,7 @@ Here's a made-up example to show how it can play out:
 
 **Tuesday, 11:00 AM**: Another load posts: same origin, same destination, same equipment type, same distance. Amazon posts it at a lower rate. This load sits longer because carriers are less interested.
 
-Why the difference? Amazon may have posted the first load with lower freight volume available that morning, so it priced higher to attract carriers. By 11 AM, more freight arrived, so Amazon prices softer. Or more carriers came online, so competition increased. Or Amazon's algorithm expected this lane to need coverage anyway, so it discounted it.
+Why the difference? Amazon doesn't say. It publishes no pricing logic for individual loads. Its [rates guide](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-rates) says "Rates fluctuate. Demand shifts." and names the factors: distance (including deadhead and trip direction), equipment type and availability, load details such as live loads, and seasonal and regional market conditions. How those mix on a given morning isn't public.
 
 The point: there's no "typical" rate for a lane. Rates change constantly, even for the same route. Each posting is independent.
 
@@ -786,8 +786,8 @@ Amazon doesn't publish which hours pay best. Track your own lanes by time of day
 **Your Safety Rating or BASIC Score**
 Amazon doesn't publish any rate premium for a clean safety record. Your safety record decides whether you can haul at all, and your performance grade affects which loads you see first.
 
-**Your Equipment Condition or Age**
-New or meticulously maintained equipment doesn't command higher rates. Amazon cares only that it's approved equipment.
+**Your Equipment's Age or Condition**
+Amazon publishes nothing that ties a rate to how old or well kept your equipment is. What it does publish are equipment requirements, such as valid CARB certificates for trucks running California loads, which are checked at check-in.
 
 **Haggling on Spot Loads**
 Spot loads book at the listed price. The ways to set your own price are Post A Truck (a minimum rate per mile), auctions (bids on contracts up to 6 months, most needing a C+ grade) and Relay Assistant (naming a price on eligible urgent loads, for top-performing carriers; Amazon may counter).
@@ -1109,7 +1109,7 @@ Amazon does not publish one. The 30-day window it lists is for pay disputes. Fil
 # Amazon Relay Auto Refresh: Why It Matters and How It Works
 
 URL: https://nudoiq.com/amazon-relay-auto-refresh/
-Published: 2026-09-20. Last updated: 2026-10-02.
+Published: 2026-09-20. Last updated: 2026-10-14.
 
 Short answer: An Amazon Relay auto refresh tool reloads the load board for you on a timer, so new loads show up without you clicking reload. Good loads often book within seconds. NudoIQ's auto refresher lets you set the interval, adds up to 20% random jitter, and keeps the board tab from going idle.
 
@@ -1123,7 +1123,7 @@ Carriers who want to stay competitive refresh constantly. The faster you refresh
 
 Before refresher extensions became standard, carriers had two choices: sit at the computer and hit reload repeatedly, or miss loads. Some carriers sat at their desk hitting F5 or Ctrl+R for hours, watching for loads.
 
-Manually refreshing every 30 seconds means you see new loads 30 seconds after they post (on average 15 seconds, assuming they post mid-cycle). It means you miss the loads that post between your refreshes. It means you're tethered to your computer if you want to compete for the best work.
+Refreshing by hand means you only see what's on the board at the moment you reload. A load that posts and books between your clicks, you never see. And you're tied to your computer for as long as you want to watch the board.
 
 It also means you're one of many carriers refreshing at roughly the same time.
 
@@ -1232,7 +1232,7 @@ Nobody can promise that, and we won't. The carrier is responsible for its Relay 
 Yes, your browser window (or at least the tab with the Relay load board) needs to stay open. The refresher runs inside that tab. If you close the browser or the tab, the refresher stops.
 
 ### Can I set different refresh intervals for different times of day?
-Most refreshers don't have built-in scheduling, so you'd have to change the interval manually. Some carriers who compete hard early but less later might run a short interval at 5 a.m. and a longer one at 2 p.m. You can do this, but it's manual.
+You'd change it by hand. NudoIQ has no time-of-day schedule for refreshing, so if you want one interval early in the morning and another in the afternoon, move the speed control on the NudoIQ bar yourself.
 
 ### What if I set the interval too fast and it drains my battery?
 Stop the refresher, set a longer interval, or plug in your device. The shortest intervals use noticeable power on a laptop. A longer interval is more balanced.
@@ -1248,7 +1248,7 @@ Not if you're using Autobook. The extension will book for you automatically base
 # Amazon Relay Auto Booker: How Automatic Booking Works
 
 URL: https://nudoiq.com/amazon-relay-auto-booker/
-Published: 2026-09-20. Last updated: 2026-10-02.
+Published: 2026-09-20. Last updated: 2026-10-14.
 
 Short answer: An Amazon Relay auto booker is a browser extension that books loads matching rules you set, such as lane, price and profit. Every booking is the carrier's commitment, so guardrails matter: a profit floor, a max-books cap and testing rules in alert mode first. Cancelling booked loads hurts the acceptance score.
 
@@ -1262,7 +1262,7 @@ The advantage is obvious: you can act on loads faster, and you're not glued to t
 
 ## The Risk of Unintended Bookings
 
-The biggest mistake carriers make with auto-bookers is setting rules that are too loose. Set a rule that says "book any load over $200" and you might book a 200-mile haul at $2 per mile (which nets you nothing after costs). Set a rule that says "book anything from Oregon" and you might book a load that goes to California, adding six hours you didn't plan.
+Your biggest risk with an auto-booker is rules that are too loose. A made-up example: a rule that says "book any load paying $400 or more" will also book a 400-mile run at $400, which is $1 a mile and may not cover your costs. A rule that says "book anything from Oregon" can book a load that ends hundreds of miles from where you planned to be.
 
 Auto-bookers book fast and without mercy. If your rules match, they book. No "wait, let me think about this." No second-guessing. If you set the rules wrong, you'll book loads you didn't want.
 
@@ -1356,9 +1356,9 @@ This is why profit floor and max-books cap are non-negotiable. If you set a bad 
 
 ## Instant Book: One-Click Booking
 
-Some extensions (including NudoIQ) offer an Instant Book feature: a button on the load card that books the load in one click, instead of the multi-step flow (find load, read details, click Book, fill shipping info, confirm).
+Some extensions (including NudoIQ) have an Instant Book button. In NudoIQ, it sits on highlighted load rows, and one tap books the load. There's no confirmation screen, so check the load before you tap.
 
-Instant Book isn't automatic, you still click the button manually, but it's faster than the standard booking flow. You see a load, check it's good, and hit Instant Book instead of navigating menus.
+You still press Instant Book yourself, after you've looked at the load and decided you want it. It isn't automatic.
 
 ## Common Autobook Mistakes
 
@@ -1417,13 +1417,13 @@ Use Alert mode or Search mode as long as you need to. There's no shame in manual
 ## Frequently asked questions
 
 ### Can I set different booking rules for different times of day?
-Most auto-bookers don't have built-in scheduling. You'd have to change your rules manually if you want to book different loads at different times. Some carriers adjust their profit floor during slow hours (willing to take lower margin loads when work is scarce) but keep it higher during busy hours. You can do this, but it's manual.
+You'd change them by hand. NudoIQ has no time-of-day schedule for its rules, so if you want a different minimum at different hours, update your Min Net Profit, price and lane rules in NudoIQ yourself. Whatever you set, AutoBook never books a load under your Min Net Profit.
 
 ### What happens if I set my max-books cap too low?
 You'll stop getting bookings after you hit the cap, even if perfect loads post. If you cap at 2 loads a day and the board is flooded with great work, you'll miss it after your 2 are booked. Set a cap based on your actual capacity, and review it regularly.
 
 ### How do I adjust my profit floor if my costs change?
-Most auto-bookers let you change your profit floor anytime. If your fuel costs drop or your driver pay changes, update the floor and the extension respects the new number immediately.
+In NudoIQ, change your Min Net Profit whenever your costs change, for example when fuel or driver pay moves. The next check uses the new number, and AutoBook won't book a load under it.
 
 ### What if the extension books a load and I want to cancel it?
 You can cancel a booked load, but it counts against your tender-acceptance score on your Relay scorecard. Cancel if you absolutely have to, but do it sparingly. This is why testing your rules in Alert mode first matters: fewer bad bookings means fewer cancellations.
@@ -1448,7 +1448,7 @@ Short answer: The main Amazon Relay extensions are LoadFetcher and Rocket Relay,
 
 ## Why You Need a Relay Extension
 
-The Amazon Relay load board refreshes when you reload it. Good loads book within seconds. Manual refreshing every 30 seconds isn't practical if you're driving, managing dispatch, or running your business. An extension automates the reload and notifies you or books loads for you, so you don't have to watch the screen.
+[Amazon says](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) the Relay load board auto-refreshes new spot freight matches every 30 seconds, and Relay now shows its own auto-refresh control. Good loads can still go fast, and watching the board all day isn't practical if you're driving, managing dispatch or running your business. An extension reloads the board for you and alerts you or books loads by your rules, so you don't have to watch the screen.
 
 Besides the bigger names, there are a dozen or so smaller refreshers in the category. Understanding what to look for helps you pick the right one.
 
@@ -4617,7 +4617,7 @@ Short answer: Amazon's Relay FAQ says Amazon Relay doesn't have an official cont
 
 No. [Amazon's Relay FAQ](https://relay.amazon.com/faq) says it plainly: "Amazon Relay doesn't have an official contact phone number."
 
-That surprises a lot of carriers, because search results are full of "Amazon Relay customer service" and "24/7" numbers. None of them is published on relay.amazon.com. Treat any number you find on another site as unverified, and never give it your login.
+People still search for one, with queries like "amazon relay phone number usa 24 7". No such number is published on relay.amazon.com. Treat any number you find on another site as unverified, and never give it your login.
 
 One wrinkle. Amazon's [free freight search post](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search) says you can "call our operations center" about delays or unexpected changes to a load. It doesn't print a number. So the way in is still the Relay portal or the Relay app.
 
@@ -4940,7 +4940,7 @@ Every driver onboarding to Relay must meet standardized background check require
 It's the identity check every driver completes when onboarding: a photo of the driver's license, front and back, and a selfie. Amazon typically reviews it within 48 hours. During loads, the Relay app also asks for periodic selfies, for example at pickup or drop-off.
 
 ### What does Amazon Relay background check in review mean?
-Amazon doesn't explain driver background check statuses on any public page. It publishes no route for status questions either. Our suggestion: start with the Support Center while logged in, the general route Amazon names for account issues, since Amazon publishes no phone number.
+Amazon doesn't explain driver background check statuses on any public page, and it publishes no route for status questions. Our suggestion: start with the Support Center while logged in, the channel Amazon names for account and security issues, since Amazon publishes no phone number.
 
 ---
 
