@@ -5884,3 +5884,980 @@ On the load board, filter power-only loads by container equipment type and your 
 
 ### Does Amazon Relay have port drayage?
 Relay mentions ports only in passing. Amazon's Prime Day post tells UIIA-certified carriers to book port and rail drayage loads around Prime Day. It says third-party shippers bring drayage from rail and shipyards, but publishes no port details.
+
+---
+
+# Amazon Relay for owner-operators: what you need to haul
+
+URL: https://nudoiq.com/amazon-relay-owner-operator/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Yes, owner-operators can haul on Amazon Relay, and Amazon has no fleet size minimum. You need your own DOT number with interstate authority, active for at least 180 days, plus a valid MC number and a truck type Amazon accepts (cargo vans are out). Relay isn't a job: approved carriers are independent contractors who book Amazon loads for their own business, not Amazon employees.
+
+## What is an owner-operator on Amazon Relay?
+
+Amazon's [owner-operator post](https://relay.amazon.com/blog/intro-to-amazon-relay/how-owner-operators-thrive-with-amazon-relay) puts it simply: "An owner-operator is a truck driver who owns and operates their own trucking business." It adds: "This can mean driving your own truck or managing a small fleet."
+
+So on Relay you're a carrier like any other. You apply as a company, book loads as a company and get paid as a company.
+
+## Can a one-truck owner-operator join Amazon Relay?
+
+Yes. Amazon's [truck requirements post](https://relay.amazon.com/blog/amazon-relay-truck-requirements) says: "There are no fleet size requirements to haul for Relay as long as you have the right types of trucks for our freight."
+
+Amazon doesn't publish whether one-truck carriers see fewer loads than bigger fleets.
+
+## Do you need your own DOT and MC number?
+
+Yes, both. The [Relay FAQ](https://relay.amazon.com/faq) asks for a DOT number with interstate authority that has been active for at least 180 days, and a valid MC number. Your entity type has to be "Carrier," and it has to be "Authorized for Property and for Hire."
+
+A DOT number alone isn't enough. Amazon lists the MC number too.
+
+What about leasing on to another carrier? Amazon doesn't describe a lease-on route for Relay. The FAQ asks for your own DOT and MC. If you drive under someone else's authority, you can drive for their Relay account instead. The FAQ says: "A carrier needs to invite their drivers to create a profile in the Relay app." Every driver goes through Amazon's driver check, including an owner who drives. Our [background check guide](https://nudoiq.com/amazon-relay-background-check/) covers it.
+
+The full list, including safety scores, is in our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/). Insurance minimums are in the [insurance requirements guide](https://nudoiq.com/amazon-relay-insurance-requirements/), and timing is in [how long Relay approval takes](https://nudoiq.com/amazon-relay-approval-time/).
+
+## What trucks can an owner-operator use on Relay?
+
+Amazon's owner-operator post lists this equipment:
+
+* Day cab or sleeper cab
+* 26' or 16' box truck
+* 48' trailer
+* 53' dry van
+* 53' reefer
+* 20' container, or 40' and 45' high cube container
+
+Cargo vans are out. The truck requirements post says: "Cargo vans cannot be used for loads on Amazon Relay." Our [cargo van guide](https://nudoiq.com/amazon-relay-cargo-van/) has more.
+
+Amazon doesn't publish a truck age or model year rule.
+
+## Is Amazon Relay an owner-operator job?
+
+No. People search for "Amazon Relay owner operator jobs," but Relay isn't hiring drivers. Amazon's [driver eligibility post](https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads) says: "Relay-approved carriers are independent contractors, not Amazon employees. Carriers are responsible for their own drivers."
+
+You run your own business and pick your own loads. Nobody assigns you a route.
+
+## How do owner-operators find and book loads?
+
+Access is free. Amazon's [home page](https://relay.amazon.com/) says Relay gives "trucking companies of all sizes free access to instantly book spot loads and contracts."
+
+From the owner-operator post, your options are:
+
+* **Spot loads and contracts.** Both can be booked instantly.
+* **Auctions.** You "have a chance to name your own price" in load auctions. See our [auctions guide](https://nudoiq.com/amazon-relay-auctions/).
+* **Negotiation on some loads.** "On certain loads, you can negotiate arrival times and rates." That runs through [Relay Assistant](https://nudoiq.com/amazon-relay-assistant/).
+* **Post A Truck.** You tell Relay where your truck will be. Our [Post A Truck guide](https://nudoiq.com/amazon-relay-post-a-truck/) explains it.
+
+Amazon also says Relay offers "personalized recommendations, as well as cancellation replacements and reloads," and work "that gets you home daily." It suggests "balancing your business strategy with spot loads and contracted work."
+
+Before you book, know your numbers. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net, net per loaded mile and break-even rate from its pay, miles and your costs.
+
+## What does Amazon Relay pay owner-operators?
+
+Amazon doesn't publish owner-operator pay, revenue or miles, and we won't guess. Each load shows its own price. Our guide to [how much Amazon Relay pays](https://nudoiq.com/how-much-does-amazon-relay-pay/) explains how that price is built, and the [payments guide](https://nudoiq.com/amazon-relay-payments/) covers the weekly pay schedule.
+
+Hours of service rules also shape what one truck can run in a week. See our [hours of service guide](https://nudoiq.com/amazon-relay-hours-of-service/).
+
+## How do small carriers keep loads coming?
+
+Amazon ties access to performance. The owner-operator post says to "Build a strong performance score by delivering reliably and on time," and says a strong score can open early access to loads and more work.
+
+It also says: "Keep your assets, insurance, and certifications up to date." Paperwork sits in one place, where you "track BOLS and invoices in one portal" (Amazon's spelling).
+
+## Do Relay rewards and discounts apply to owner-operators?
+
+Amazon says yes. The owner-operator post says Relay Rewards is set up "so even small owner-operators can achieve top benefits," and that owner-operators "can access Relay's trucking discounts on fuel, vehicle rentals, insurance, tires, and more." Tier rules and the discount list are in our [Relay rewards guide](https://nudoiq.com/amazon-relay-rewards/).
+
+Small and disadvantaged carriers can also look at Amazon's Supplier Development and Impact (SDI) program. The [SDI post](https://relay.amazon.com/blog/intro-to-amazon-relay/amazon-relays-supplier-development-impact-program-for-carriers) says "A carrier must be actively certified by a third-party organization to participate." Relay "also supports companies that qualify as a small business according to the size thresholds established by the Small Business Administration (SBA)." Amazon says it generally validates certification "within one-two weeks."
+
+SDI benefits Amazon lists:
+
+* A direct line to the SDI team
+* Program office hours and information sessions
+* Eligibility for certification reimbursement (WBENC, NMSDC, NVBDC, NaVOBA, NGLCC, Disability:IN)
+
+## What doesn't Amazon publish for owner-operators?
+
+* Owner-operator pay, revenue or miles
+* Any lease-on option under another carrier's authority
+* Whether one-truck carriers see fewer loads
+* A truck age or model year rule
+* A minimum number of loads per week
+* A separate owner-operator support line
+
+## Where does NudoIQ fit?
+
+If you book your own loads, NudoIQ is a Chrome extension for the Relay load board. It shows net profit and lane price history on each load, from costs you set once. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### Can owner-operators use Amazon Relay?
+Yes. Amazon says there are no fleet size requirements as long as you have the right types of trucks, and its owner-operator post covers both one-truck operators and small fleets.
+
+### Does Amazon Relay need an MC number, or is a DOT number enough?
+You need both. The Relay FAQ asks for a DOT number with interstate authority, active for at least 180 days, and a valid MC number.
+
+### Can I lease on to another carrier and use Amazon Relay?
+Amazon doesn't describe a lease-on route for Relay carriers. You can drive for a Relay carrier if that carrier invites you to create a driver profile in the Relay app.
+
+### Are there Amazon Relay owner-operator jobs?
+No. Amazon says Relay carriers are independent contractors, not Amazon employees. You book loads for your own business.
+
+### Can I use a cargo van on Amazon Relay?
+No. Amazon says cargo vans can't be used for Relay loads. Its list includes 16' and 26' box trucks, day cabs and sleeper cabs.
+
+### How much do owner-operators make on Amazon Relay?
+Amazon doesn't publish owner-operator pay or revenue on Relay. Each load shows its own price, and our [load calculator](https://nudoiq.com/tools/relay-load-calculator/) turns that price into net after your costs.
+
+### Do owner-operators get Relay discounts?
+Amazon says owner-operators can access Relay's trucking discounts on fuel, vehicle rentals, insurance, tires and more. See our [rewards guide](https://nudoiq.com/amazon-relay-rewards/) for the list.
+
+---
+
+# Amazon Relay safety score: the Safety Scorecard and CSA limits
+
+URL: https://nudoiq.com/amazon-relay-safety-score/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon Relay's safety score lives in a Safety Scorecard in your Relay account, separate from your performance score. It shows your FMCSA BASIC percentiles, your safety rating and a Yes/No on whether you meet Relay's requirements. Amazon also checks violation rates from the last 12 months of FMCSA inspections: the driver rate must be at or below 35% and the vehicle rate at or below 50%, and Amazon offers no appeal on these limits.
+
+## What is the Amazon Relay safety score?
+
+It's not one number. Amazon added a Safety Scorecard that sits next to Relay's performance score. Amazon's [Safety Scorecard post](https://relay.amazon.com/blog/trucking-safety/safety-scorecard-helps-relay-carriers-monitor-performance) says "you can view your BASIC percentiles and FMCSA safety rating right in your Relay account."
+
+Here's what Amazon says it shows:
+
+* **Trends.** "Track how your safety scores change month-over-month."
+* **Violation data.** Amazon says it turns complex safety data into "clear, actionable insights."
+* **A pass or fail check.** "Instantly see if you meet Relay's carrier requirements to haul freight with a simple Yes/No indicator."
+* **Free courses** "on winter driving, fatigue management, and other critical topics."
+
+Amazon's [violations post](https://relay.amazon.com/blog/trucking-safety/how-amazon-relay-uses-data-about-roadside-inspection-violations) says where to find it: "Approved Relay carriers have a Safety Scorecard in their account on the Relay portal or app."
+
+A change is coming. In its [2026 improvements post](https://relay.amazon.com/blog/intro-to-amazon-relay/how-amazon-relays-improving-to-support-carrier-growth), Amazon says: "This year, we're combining safety, compliance, and actions on the same page." It hasn't said when that ships.
+
+The performance score is a separate scorecard. Our [Relay scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) covers that one.
+
+## What CSA scores does Amazon Relay require?
+
+Relay uses your public FMCSA BASIC percentiles. Per the [Relay FAQ](https://relay.amazon.com/faq), Unsafe Driving and HOS Compliance must be below 60%, and Vehicle Maintenance, Controlled Substances / Alcohol and Driver Fitness below 75%. Your FMCSA safety rating must be "Satisfactory," "None," or "Not Rated." The full list sits in our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/).
+
+Amazon's [CSA post](https://relay.amazon.com/blog/csa-scores-what-they-are-how-to-fix-them) says: "Our standards are 5% lower than federal thresholds, which means our demands for safety are stricter."
+
+A few CSA basics from the same post:
+
+* "Lower scores indicate higher safety."
+* "Only five of the seven CSA BASIC categories are public." Relay doesn't use the crash indicator ("Since this is private data, Relay doesn't monitor this metric") or the hazmat BASIC.
+* SMS scores are built "factoring in the last 24 months of data," and "newer violations weigh more (3x points for 1-6 months)."
+* "Each month, Relay reaches out to carriers when their CSA score ranking nears a threshold."
+
+You can see your own private data too: "You can check your private CSA score data by registering for a Personal Identification Number with your DOT or Motor Carrier number."
+
+## How does Amazon Relay calculate violation rates?
+
+On top of BASICs, Relay checks two violation rates. From the violations post:
+
+* **Driver violation rate:** "Must be at or below 35% to haul with Relay."
+* **Vehicle violation rate:** "Must be at or below 50% to haul with Relay."
+
+The formula, in Amazon's words: "We add non-OOS violations to OOS violations (which are weighted twice as much to reflect their higher risk), then divide by total inspections." OOS means out-of-service. Amazon says the same formula applies to driver and vehicle rates.
+
+The rates use "FMCSA inspection data over the past 12 months." Five categories count: Unsafe Driving, HOS Compliance, Vehicle Maintenance, Controlled Substance and Driver Fitness.
+
+New carriers have been screened "starting October 31, 2025." For carriers already on Relay, Amazon said: "We'll start enforcing these limits for existing carriers in February 2026."
+
+## What happens if you go over Relay's safety limits?
+
+You can lose access. Amazon says: "Carriers with three or more inspections that exceed our violation limits may lose access to Relay loads."
+
+Amazon doesn't explain what "three or more inspections that exceed" means in practice. It also doesn't publish a grace period or a path back after losing access.
+
+If your account is already blocked, our [account suspended guide](https://nudoiq.com/amazon-relay-account-suspended/) covers what Amazon checks to keep a carrier active.
+
+## Can you appeal an Amazon Relay safety score?
+
+No. Amazon's violations post is direct: "Like BASICs violations, we won't offer an appeal process." Our [Relay disputes guide](https://nudoiq.com/amazon-relay-disputes/) lists what you can and can't dispute on Relay.
+
+So the work happens before the inspection, not after.
+
+## How do you keep your Relay safety numbers in range?
+
+Amazon puts it on the carrier: "Carriers are responsible for flagging their most common violations and introducing targeted solutions." Its tips:
+
+* Do pre-trip inspections, keep up with maintenance and keep clean maintenance records.
+* Coach drivers on speed, HOS compliance and controlled-substance policies.
+* "Keep driver documentation (e.g. license, medical card, etc) current and available for inspection."
+* Filter loads by transit time and distance to give hours of service a buffer. Our [hours of service guide](https://nudoiq.com/amazon-relay-hours-of-service/) covers the rules.
+* Update your MCS-150 more often than you have to. Carriers "have to update every two years," but Amazon says "we recommend a six-month cadence."
+* Take the free safety courses. Our [Learning Center guide](https://nudoiq.com/amazon-relay-learning-center/) shows where they live.
+
+Safety rewards are a separate program. Amazon says the collision data used for them "won't affect your Relay performance score." Details are in our [Relay rewards guide](https://nudoiq.com/amazon-relay-rewards/).
+
+## Who checks Relay carrier compliance?
+
+The FAQ says: "Amazon uses a variety of tools, including our internal compliance teams and a third-party compliance monitoring service, to validate and continually monitor carrier compliance."
+
+Amazon doesn't name the third-party service.
+
+## What doesn't Amazon publish about the safety score?
+
+* Screenshots or field names of the Safety Scorecard
+* How often violation rates refresh
+* What "three or more inspections that exceed" means in practice
+* A grace period or reinstatement path after losing access
+* The name of the third-party compliance monitoring service
+* How safety status feeds the A to F performance grade
+* When the merged scorecard ships
+
+## Where does NudoIQ fit?
+
+NudoIQ won't change a safety score. Safety comes from your trucks and drivers. Once you're clear to haul, NudoIQ is an independent Chrome extension for the Relay load board that shows net profit on each load, from costs you set once. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### What is the Amazon Relay Safety Scorecard?
+It's a page in your Relay account, on the portal or app, that shows your FMCSA BASIC percentiles, your safety rating, month-over-month trends and a Yes/No on whether you meet Relay's requirements. It's separate from the performance score.
+
+### What CSA score do you need for Amazon Relay?
+Per the Relay FAQ, Unsafe Driving and HOS Compliance must be below 60%, and Vehicle Maintenance, Controlled Substances / Alcohol and Driver Fitness below 75%. See our [requirements guide](https://nudoiq.com/amazon-relay-requirements/) for the full list.
+
+### What are the Amazon Relay violation rate limits?
+The driver violation rate must be at or below 35% and the vehicle violation rate at or below 50%. Amazon uses 12 months of FMCSA inspection data and counts OOS violations twice.
+
+### Can I appeal Amazon Relay's safety limits?
+No. Amazon says that, like BASICs violations, it won't offer an appeal process for violation rate limits.
+
+### Does Amazon Relay use the crash indicator?
+No. Amazon's CSA post says the crash indicator is private data and Relay doesn't monitor it. Relay also doesn't use the hazmat BASIC.
+
+### Who is Amazon Relay's third-party compliance partner?
+Amazon doesn't name the service Relay uses. The FAQ only says it uses internal compliance teams and a third-party compliance monitoring service.
+
+### How often should I update my MCS-150 for Relay?
+You have to update it every two years, but Amazon's CSA post recommends every six months.
+
+---
+
+# Amazon Relay fraud: double brokering, geospoofing and cargo theft
+
+URL: https://nudoiq.com/amazon-relay-fraud/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon doesn't allow double brokering, and it tenders loads only to approved carriers on the Relay portal or app, never through third-party load boards, so an "Amazon load" offered anywhere else wasn't tendered by Amazon. Report suspicious activity to relay-network-reports@amazon.com with a detailed description and the DOT numbers involved. In an emergency such as an active theft, call 911; Amazon publishes no fraud department phone number.
+
+## What kinds of fraud hit Amazon Relay carriers?
+
+Amazon's pages cover four: double brokering, geospoofing, account takeover and cargo theft. Each one can cost an honest carrier money or loads, even if that carrier did nothing wrong.
+
+## Does Amazon allow double brokering?
+
+No. Amazon's [double brokering post](https://relay.amazon.com/blog/whats-the-deal-with-double-brokering) says: "Amazon doesn't allow double brokering because it can lead to payment and safety issues."
+
+Brokering in general isn't the problem. The same post notes "nothing about double brokering is inherently illegal if done right," and says brokers need FMCSA property broker authority and a bond. For Amazon freight, the rule is narrow: "Only businesses with express, written authorization directly from Amazon are allowed to broker Amazon loads."
+
+Carriers can't pass Amazon loads along either. Amazon's [secure freight page](https://relay.amazon.com/pages/secure-freight-how-amazon-prevents-trucking-fraud-theft) says carriers can't re-tender loads through unauthorized subcontracting.
+
+Here's the risk for the carrier who hauls a double-brokered load: "the fraudster cuts off communication with the hauling carrier and they never get paid for their work."
+
+Amazon doesn't publish its list of authorized brokers.
+
+## Are Amazon loads on other load boards real?
+
+Not as Amazon tenders. The [Relay FAQ](https://relay.amazon.com/faq) says: "Amazon does not tender loads through any third-party load boards." The double brokering post adds: "We directly tender all of our loads to Relay carriers on the Relay portal only."
+
+If you also work other boards, Amazon repeats FMCSA's red flags:
+
+* Confirm phone numbers using SAFER, and check insurance documents and BOLs.
+* Watch for P.O. box addresses, recently activated authority, and anyone who won't share a driver phone number or tracking.
+* Stop if you're asked to present yourself under a different name or told it's a "blind load."
+* Stop if you're offered more pay quickly, or a rate that "far exceeds the current market rate."
+
+Our [Amazon Relay vs DAT guide](https://nudoiq.com/amazon-relay-vs-dat/) compares how the two boards handle this.
+
+## What is geospoofing on Amazon Relay?
+
+Amazon's [geospoofing post](https://relay.amazon.com/blog/trucking-safety/geospoofing-how-amazon-relay-combats-fake-gps-technology) says fraudsters "manipulate Global Positioning System location data to make it appear they're hauling loads they've actually stolen."
+
+It hurts carriers who play it straight: "When fraudsters book loads they never intend to haul, those routes become unavailable to legitimate carriers."
+
+The penalty is heavy. Amazon lists "immediate account termination, a permanent ban from Amazon Relay, referral to law enforcement" for anyone caught.
+
+Amazon's warning: "Be cautious of anyone asking you to use fake GPS location tools, spoof geolocation, or deliver their loads." It also says: "Review your invoices to make sure they match loads your company actually hauled." Our [payments guide](https://nudoiq.com/amazon-relay-payments/) shows where invoices live.
+
+Amazon doesn't publish how it detects geospoofing.
+
+## How do scammers take over Relay accounts?
+
+Often through fake emails. Amazon's [email scams post](https://relay.amazon.com/blog/email-scams-how-to-spot-a-fake) says that if you open the links in these emails and enter login info, the scammer can get into your account. Once inside, scammers "add unauthorized drivers, and book loads they intend to steal." It's hard to notice because "They often don't change passwords or bank details."
+
+Warning signs and rules from Amazon:
+
+* **Watch for buyers.** A red flag is "Unsolicited offers to buy your business or manage your loads."
+* **Don't sell your account.** "Never transfer or sell your account to someone you don't know." Ownership changes go to relay-ownership-transfers@amazon.com at least 30 days ahead.
+* **Keep your login to yourself.** "Don't share your login information with anyone. Amazon Relay will never request that you share this information."
+
+Our [Relay login guide](https://nudoiq.com/amazon-relay-login/) covers fake login pages, email security and what to check in your account. Amazon also says carrier identity verification "helps protect carriers from account fraud and unauthorized access." Driver checks are in our [background check guide](https://nudoiq.com/amazon-relay-background-check/).
+
+## How do you protect a Relay load from cargo theft?
+
+Amazon's [cargo theft post](https://relay.amazon.com/blog/cargo-theft-reduce-your-companys-risk) says "Across North America, cargo theft is up 300%, with annual losses now over $20 billion each year." Amazon doesn't give a source for that figure.
+
+It names three types: intrusion (seal tampering), deception (impersonating authority, redirecting drivers, spoofed caller ID, blocking communication) and hijacking.
+
+Two rules from Amazon help against deception:
+
+* **Amazon won't reroute you by phone.** "Amazon will never call or email you to re-route freight or change a delivery address." Changes from Amazon show in the app: "the most up-to-date load information will immediately be in the Relay driver app."
+* **Check the seal.** Seal numbers must match the BOL, and "any mismatches can indicate load tampering."
+
+If a theft happens, Amazon lists these steps:
+
+1. "For any emergency situation, including an active theft incident, call 911." Police may ask for the driver's name, truck and trailer plates, a vehicle description, the location, the incident type and whether anyone needs medical help.
+2. Onboarded carriers "can also notify Amazon through Click to Call."
+3. Drivers "must request a callback from our support team as soon as they can safely do so."
+4. Carriers "must also report loss prevention issues in the Relay support center with relevant documentation, such as a police report."
+
+Our [Relay disputes guide](https://nudoiq.com/amazon-relay-disputes/) covers reporting cargo loss.
+
+## What does Amazon do to stop fraud?
+
+Amazon's secure freight page lists:
+
+* Telematics signals on its trailers to follow each load's progress
+* "tamper detection and automated alerts if trailer doors are opened during transit"
+* "Validating load pickup and drop-off with virtual geofences"
+* "driver's license validation and real-time photo verification"
+
+The page also lists enforcement cases. One is a wire fraud guilty plea for "stealing carrier identities and submitting fraudulent invoices." Another is an organized crime case with "13 arrests."
+
+For what a dispatcher can see on a load, see our [dispatcher guide](https://nudoiq.com/amazon-relay-dispatcher/).
+
+## How do you report Amazon Relay fraud?
+
+Email relay-network-reports@amazon.com "with a detailed description of the suspicious activity, including the DOT #s involved." The FAQ says "You'll receive an automated email confirming receipt."
+
+Amazon also tells fraud victims to file a report with the Federal Trade Commission at reportfraud.ftc.gov and with local law enforcement.
+
+There's no fraud department phone line. The FAQ says "Amazon Relay doesn't have an official contact phone number." A number for Relay you find on another website isn't on relay.amazon.com. Our [Relay contact guide](https://nudoiq.com/amazon-relay-contact/) lists every route Amazon publishes.
+
+## What doesn't Amazon publish about fraud?
+
+* A fraud department phone number
+* How long an investigation takes
+* Whether a carrier whose account was taken over is paid or charged for fraudulent loads
+* The Click to Call number
+* The list of authorized brokers
+* A "theft prevention alert" for carriers
+* How geospoofing is detected
+
+## Where does NudoIQ fit?
+
+NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net profit and lane price history on each load, and it never asks for your Amazon password. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### Does Amazon Relay allow double brokering?
+No. Amazon says it doesn't allow double brokering, and only businesses with express, written authorization from Amazon may broker Amazon loads.
+
+### Are Amazon loads on DAT or other load boards legit?
+Amazon says it does not tender loads through any third-party load boards. It tenders loads directly to approved carriers on the Relay portal or app only.
+
+### Is there an Amazon Relay fraud department phone number?
+No, Amazon doesn't publish a phone number for Relay fraud. Email relay-network-reports@amazon.com with the details and DOT numbers, and call 911 in an emergency.
+
+### What happens if you get caught geospoofing on Amazon Relay?
+Amazon lists immediate account termination, a permanent ban from Amazon Relay and referral to law enforcement.
+
+### Will Amazon ever call to reroute a load?
+No. Amazon says it will never call or email you to re-route freight or change a delivery address. Changes from Amazon show in the Relay driver app.
+
+### Someone offered to buy my Relay account. Is that allowed?
+Amazon lists unsolicited offers to buy your business or manage your loads as a warning sign and says never to sell your account to someone you don't know. Ownership changes go to relay-ownership-transfers@amazon.com at least 30 days ahead.
+
+### What should a driver do during a cargo theft?
+The driver calls 911 first, then requests a callback from Amazon support as soon as they safely can, and the carrier reports it in the Relay support center with documentation such as a police report.
+
+---
+
+# Amazon Relay CARB compliance: Clean Truck Check for California loads
+
+URL: https://nudoiq.com/amazon-relay-california-carb/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: To haul Amazon Relay loads that travel through California, your diesel and alternative fuel trucks over 14,000 pounds need CARB Clean Truck Check (CTC) certification, even if they're registered in another state. Register in CARB's CTC-VIS portal, then upload your certificates to your Relay account (verification typically takes 2 business days) or attest that you won't operate in California. Trucks without valid certificates are rejected at check-in, and Amazon doesn't pay for loads that aren't hauled.
+
+## What does CARB compliance mean on Amazon Relay?
+
+It means Clean Truck Check. Amazon's [CARB post](https://relay.amazon.com/blog/intro-to-amazon-relay/carb-compliance-requirements-to-haul-with-amazon-relay) says: "You'll need Clean Truck Check (CTC) certification first." It explains: "CTC certificates show that diesel and alternative fuel vehicles over 14,000 pounds meet California's emissions standards."
+
+## Do out-of-state trucks need CARB certification for Relay?
+
+Yes, if the load goes through California. Amazon says: "Even if your trucks aren't registered in California, you'll need certification to haul loads that travel through the state."
+
+CARB says the same on its own [Clean Truck Check page](https://ww2.arb.ca.gov/our-work/programs/CTC), posted March 10, 2026. The requirements "are in effect for subject vehicles, including vehicles registered outside of California when operating in the state."
+
+Some trucks are exempt: "Zero-emission and gasoline vehicles don't need CTC certificates."
+
+## How do you get CTC certified for Amazon Relay?
+
+1. **Register with CARB.** Amazon says to register with the California CTC Vehicle Inspection System (CTC-VIS) Portal.
+2. **Get the right certificate.** Amazon names two types:
+   * Vehicle Compliance Certificates for individual trucks, renewed every 6 months
+   * Affirmation of Fleet Wide Compliance for the entire fleet, renewed every 12 months
+3. **Upload to Relay.** "Make sure they list all the VINs you'll use for Amazon loads that pass through California." Then: "Verification typically takes 2 business days once you upload them to your Relay account."
+
+CARB's notice also lists an annual vehicle compliance fee. Amazon doesn't state the amount, and we don't either. Testing frequency and fees are CARB's rules, so check [CARB's page](https://ww2.arb.ca.gov/our-work/programs/CTC). CARB lists its CTC contact as hdim@arb.ca.gov or (866) 634-3735.
+
+## What does Relay ask for at onboarding?
+
+Amazon asks you to either upload your CTC documents or attest that you don't plan to operate in California. Amazon adds: "You can always update your attestation later." So if you attested no California and later want those loads, get your trucks certified and uploaded first, then update the attestation.
+
+After that, your Relay account shows each truck as CTC compliant or not compliant. "We'll send you reminders when expiration is close."
+
+## What happens if a truck isn't CARB compliant?
+
+It gets turned away. Amazon says: "Trucks that travel through California for Amazon loads will be rejected at check-in without valid certificates." Our [Relay app guide](https://nudoiq.com/amazon-relay-app/) covers how check-in works.
+
+And a rejected load isn't paid: "We don't pay carriers for loads that aren't hauled."
+
+So check the lane before you book. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net, net per loaded mile and break-even rate from its pay, miles and your costs, which helps you see what a California load is worth to you.
+
+CARB status also affects auctions. Amazon's [performance grades post](https://relay.amazon.com/blog/intro-to-amazon-relay/relay-performance-grades-how-to-unlock-hauling-opportunities) says: "Eligibility to bid also depends on your equipment count, Relay tenure, and CARB compliance for California routes." Our [auctions guide](https://nudoiq.com/amazon-relay-auctions/) has the other rules. The full carrier checklist is in our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/).
+
+If you run more than one truck, only send trucks that show as CTC compliant on loads that travel through California.
+
+## What should you check before a California Relay load?
+
+Run through this before you book:
+
+1. **Does the truck need CTC at all?** It does if it's diesel or alternative fuel and over 14,000 pounds. Zero-emission and gasoline trucks don't.
+2. **Is the certificate current?** Vehicle certificates renew every 6 months. Fleet affirmations renew every 12 months.
+3. **Is the right VIN listed?** The certificate in Relay has to list the VIN of the truck you're sending.
+4. **Has Relay verified it?** Verification typically takes 2 business days, so don't upload the morning of the load.
+5. **Pulling a reefer?** Check ARBER registration too (see below).
+6. **Renting trailers to Amazon?** Those trailers have their own CARB rule (see below).
+
+## What are the CARB rules for reefers on Relay?
+
+Reefer units have their own step. Amazon says to register your reefers in CARB's ARBER system and meet CARB's Airborne Toxic Control Measure standards, "even if you're based outside of California."
+
+Our [Amazon Relay reefer guide](https://nudoiq.com/amazon-relay-reefer/) covers the rest of the reefer rules.
+
+## Do trailers rented to Amazon need CARB compliance?
+
+Yes. To rent your trailers to Amazon, Amazon's [trailer auctions post](https://relay.amazon.com/blog/trailer-auctions-how-to-rent-equipment-to-amazon) asks for "CARB compliant or SmartWay designated trailers." Our [trailer rental guide](https://nudoiq.com/amazon-relay-trailer-rental/) explains how those auctions work.
+
+## Is there help paying for cleaner trucks?
+
+There are public programs. Amazon's [clean truck funding post](https://relay.amazon.com/blog/industry-trends/clean-truck-funding-applying-for-public-grants-incentives) lists California's HVIP voucher at a maximum of $7,500 to $420,000, "based on vehicle weight class and fuel type (electric or hydrogen)." That's a program term, not money you're sure to get. The same post lists other federal and state programs too. Check each program's own rules before you apply.
+
+Relay's [discounts page](https://relay.amazon.com/discounts) also lists "Clean truck grant writing services" at preferred pricing. Our [Relay rewards guide](https://nudoiq.com/amazon-relay-rewards/) covers the discount list.
+
+## What doesn't Amazon publish about CARB?
+
+* CTC fee amounts
+* How often trucks must be tested
+* What happens to a contract or booked load if a certificate lapses mid-term
+* How to tell which Relay loads route through California
+* Whether non-diesel reefer units follow different rules
+
+For fees and testing, CARB's own page is the source to trust.
+
+## Where does NudoIQ fit?
+
+NudoIQ is an independent Chrome extension for the Relay load board. It shows net profit and lane price history on each load, so you can weigh a California lane before you book it. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### Does Amazon Relay require CARB compliance?
+Yes, for trucks on loads that travel through California. Amazon says you'll need Clean Truck Check (CTC) certification first.
+
+### Do I need CARB if my truck isn't registered in California?
+Yes, if you haul Relay loads through the state. Both Amazon and CARB say out-of-state trucks need certification when operating in California.
+
+### Which trucks are exempt from Clean Truck Check on Relay?
+Amazon says zero-emission and gasoline trucks don't need CTC certificates. The rule covers diesel and alternative fuel vehicles over 14,000 pounds.
+
+### How long does Relay take to verify CARB certificates?
+Amazon says verification typically takes 2 business days once you upload them to your Relay account.
+
+### Do I need CTC if I don't run loads in California?
+At onboarding you can attest that you don't plan to operate in California instead of uploading documents. Amazon says you can update that attestation later.
+
+### What happens if my truck's CARB certificate expires?
+Trucks without valid certificates are rejected at check-in for loads that travel through California, and Amazon doesn't pay for loads that aren't hauled. Amazon sends reminders when expiration is close.
+
+### Do reefers need anything extra for California loads?
+Yes. Amazon says to register reefers in CARB's ARBER system and meet CARB's Airborne Toxic Control Measure standards, even if you're based outside California.
+
+---
+
+# Amazon Relay Assistant: rate negotiation and trip support
+
+URL: https://nudoiq.com/amazon-relay-assistant/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Relay Assistant is Amazon Relay's AI-powered chat. Top-performing carriers with strong Relay performance scores can use it to negotiate rates and pickup times on urgent spot loads, and Amazon either approves the request so you can book right away or may send a counteroffer. Drivers also use it during trips for issues like trailer availability and site closures, and it connects you to a human operator when it can't solve the problem.
+
+## What is Amazon Relay Assistant?
+
+It's Amazon's AI chat inside Relay. Amazon's [RelayCon 2025 recap](https://relay.amazon.com/blog/amazon-relay-news-events/amazon-relaycon-2025-recap) calls it "Relay Assistant, an AI-powered chat tool for rate negotiations and faster load support."
+
+So it has two jobs: rate talks on some loads, and help during a trip.
+
+## How do you negotiate a rate with Relay Assistant?
+
+Amazon's [post on setting your own rates](https://relay.amazon.com/blog/booking-options/3-ways-to-set-your-own-freight-rates-on-amazon-relay) says: "When an urgent load needs coverage, you can now negotiate freight rates and pickup times through this AI-powered chat."
+
+Here's how it works, in Amazon's words:
+
+1. **Find the icon.** "Just look for the chat bubble icon to pitch your price and ask questions about promising loads."
+2. **Make your case.** "Relay Assistant will consider any details you offer to negotiate the rate, and immediately evaluate your rate request."
+3. **Get an answer.** "If approved, you can book the load right away. You may receive a counteroffer."
+
+It's open around the clock: "Relay Assistant is ready 24/7 for eligible load board listings." Amazon's [load board post](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) says you can name your own price on select spot loads.
+
+There are limits. Amazon says "final rates still depend on real-time supply and demand." Its footnote adds that your rate preferences are considered, but final rates "reflect current market conditions and other factors."
+
+A carrier interviewed on Amazon's blog [described it this way](https://relay.amazon.com/blog/amazon-carrier-spotlights/carrier-spotlight-bigg-vic-tv-of-newton-ventures-llc): "You're able to converse back and forth with AI to negotiate the rate you think a load deserves." That's one carrier's description, not Amazon policy.
+
+## Who can negotiate rates with Relay Assistant?
+
+Not everyone. Amazon says only top-performing Relay carriers with strong Relay performance scores get rate negotiation. Its [rates post](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-rates) says the same: "Top-performing carriers can negotiate rates on urgent spot loads through AI-powered chat."
+
+Amazon doesn't publish the grade or score you need. Our [Relay scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explains how the performance score works.
+
+## How do you decide what rate to ask for?
+
+Know your floor before you pitch. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) takes the pay, loaded miles, deadhead and your costs, and gives you net, net per loaded mile and a break-even rate. The break-even rate is the lowest rate per loaded mile that covers your costs on that load.
+
+Then ask with that number in mind. Amazon decides, and the final rate reflects market conditions, so a request could be approved, countered or turned down.
+
+Amazon says Relay Assistant "will consider any details you offer," so give it the facts that matter to you: when your truck is free, where it is, and the rate you need to make the load work.
+
+Our guide to [how much Amazon Relay pays](https://nudoiq.com/how-much-does-amazon-relay-pay/) explains how Relay prices are built.
+
+## What other ways can you set your own rate on Relay?
+
+Relay Assistant isn't the only one. Amazon's [owner-operator post](https://relay.amazon.com/blog/intro-to-amazon-relay/how-owner-operators-thrive-with-amazon-relay) says: "On certain loads, you can negotiate arrival times and rates," and that in load auctions you "have a chance to name your own price."
+
+* **Auctions.** Amazon says auctions "are available for trailer-required, power-only, box truck, and reefer contracts." See our [auctions guide](https://nudoiq.com/amazon-relay-auctions/).
+* **Post A Truck.** You post where your truck will be. One carrier on Amazon's blog put it this way: "On Post A Truck, you can put the amount that you drive for." That's a carrier's words, not Amazon policy. Our [Post A Truck guide](https://nudoiq.com/amazon-relay-post-a-truck/) covers how it works.
+
+Relay Assistant is the one built for urgent spot loads.
+
+## What can Relay Assistant do during a trip?
+
+Drivers use it on the road. Amazon's [app post](https://relay.amazon.com/blog/how-truckers-use-the-amazon-relay-mobile-app) says drivers "request support from Relay Assistant throughout their trip."
+
+From Amazon's [2026 improvements post](https://relay.amazon.com/blog/intro-to-amazon-relay/how-amazon-relays-improving-to-support-carrier-growth):
+
+* It "can resolve over-the-road issues on the spot" such as trailer availability, site closures and basic trip information.
+* For disruptions, its answers come back "including the ability to reroute and release drivers."
+* "When Relay Assistant can't resolve an issue, it connects you to a human operator with your conversation's full context."
+
+You don't have to use the chat. Amazon's [free freight search post](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search) says "you can also call our operations center for direct communication about delays or unexpected changes to a load." Our [Relay contact guide](https://nudoiq.com/amazon-relay-contact/) lists how Amazon says to reach the operations center, and our [Relay app guide](https://nudoiq.com/amazon-relay-app/) covers driver help in the app.
+
+## Does Relay Assistant handle late or on-time disputes?
+
+Amazon doesn't say it does. In the same 2026 post, Amazon says it's "now resolving performance disputes 20% faster," with no baseline given.
+
+Our [Relay disputes guide](https://nudoiq.com/amazon-relay-disputes/) covers how disputes work. If a late arrival or other on-time hit landed on your scorecard, our free [dispute letter tool](https://nudoiq.com/tools/relay-dispute-letter/) writes a letter from what happened on the trip, which you edit and paste into Relay.
+
+## What's planned for Relay Assistant?
+
+These are plans, not live tools yet. Amazon says: "By end of this year, carriers will be able to ask RA to repeat Post A Truck orders." It also lists load availability, schedule changes and route patterns as planned areas.
+
+Today, Amazon describes no way for Relay Assistant to book loads on its own.
+
+## What doesn't Amazon publish about Relay Assistant?
+
+* The grade or score needed for rate negotiation
+* Which loads are eligible
+* How many counteroffers you can get
+* Whether a negotiated rate differs from the listed price after booking
+* Whether Relay Assistant works in Canada
+* How long chat data is kept
+
+## Where does NudoIQ fit?
+
+NudoIQ is an independent Chrome extension for the Relay load board. On loads Amazon marks negotiable, it can show a negotiate icon that opens Relay's own Relay Assistant chat. It opens the general chat, not a chat about that specific load. NudoIQ also shows net profit on each load, so you can see your number before you pitch. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### What is Amazon Relay Assistant?
+It's Amazon Relay's AI-powered chat. Top-performing carriers can negotiate rates and pickup times on urgent spot loads with it, and drivers use it for help during trips.
+
+### Who can negotiate rates with Relay Assistant?
+Amazon says only top-performing Relay carriers with strong Relay performance scores. It doesn't publish the exact grade needed.
+
+### How do I find Relay Assistant on the load board?
+Amazon says to look for the chat bubble icon on eligible load board listings. It's available 24/7 for those listings.
+
+### Does Relay Assistant always accept my rate?
+No. Amazon evaluates each request: if approved, you can book right away, or you may get a counteroffer. Final rates depend on real-time supply and demand.
+
+### Is Relay Assistant a bot or a person?
+Relay Assistant is an AI-powered chat. Amazon says that when it can't resolve an issue, it connects you to a human operator with your conversation's full context.
+
+### Can Relay Assistant reroute a driver?
+Amazon says Relay Assistant's answers for disruptions include the ability to reroute and release drivers.
+
+### Can Relay Assistant book loads for me?
+Amazon doesn't describe Relay Assistant booking loads on its own today. It says that by the end of 2026, you'll be able to ask it to repeat Post A Truck orders.
+
+---
+
+# Amazon Relay vs DAT load board: how they compare
+
+URL: https://nudoiq.com/amazon-relay-vs-dat/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon Relay is Amazon's own load board: access is free once you're approved, Amazon tenders its own loads directly to carriers, and pay runs on a weekly cycle. DAT is a paid subscription board where brokers and shippers post freight, with carrier plans from $59 a month per dat.com, checked October 14, 2026. Amazon doesn't tender loads through DAT or any other third-party board, so which one fits depends on whether you qualify for Relay and what freight you want.
+
+## What's the main difference between Amazon Relay and DAT?
+
+Who posts the freight. On Relay, Amazon tenders its own loads straight to carriers, plus what Amazon calls "Newer load options like hostler and shuttle and third-party shipper loads." On DAT, brokers and shippers post loads for carriers to find.
+
+DAT facts below are per DAT's website, checked October 2026. Relay facts are from Amazon's own pages.
+
+| | Amazon Relay | DAT (per dat.com, checked October 2026) |
+|---|---|---|
+| Who posts loads | Amazon, plus some third-party shipper loads | Brokers and shippers |
+| Cost to carriers | Free access | Plans from $59 a month (October 14, 2026) |
+| How you get in | Approval: DOT, MC, safety and insurance limits | A paid subscription |
+| Load volume | "Thousands of loads during regular periods" | "722,500 loads posted every business day" |
+| Pay | Weekly cycle from Amazon | Depends on each broker |
+| Fraud checks | Verified carriers, identity verification | Company reviews and credit scores |
+| Mobile app | Relay app | DAT One app in all plans |
+
+## How much does Amazon Relay cost compared to DAT?
+
+Relay is free to use. Amazon's [home page](https://relay.amazon.com/) says Relay gives "trucking companies of all sizes free access to instantly book spot loads and contracts."
+
+DAT charges a monthly subscription. Per [DAT's pricing section](https://www.dat.com/load-boards#pricing), checked October 14, 2026, carrier plans were:
+
+* DAT One Standard: $59 a month, with "up to 500 load searches and truck posts per month"
+* DAT One Enhanced: $149 a month
+* DAT One Pro: $169 a month
+* DAT One Select: $259 a month, plus $169 per additional user
+* DAT One Office: $339 a month, plus $169 per additional user
+
+That day, DAT's page also showed a limited-time "Gear Up Event" upgrade running until October 23, 2026. Prices and offers change, so check DAT's site before you buy.
+
+Amazon's [brokers vs direct booking post](https://relay.amazon.com/blog/intro-to-amazon-relay/freight-brokers-vs-direct-booking-why-choose-amazon-relay) says traditional load boards "Often require paid subscriptions." That's Amazon's general view of load boards and brokers, not a statement about DAT by name.
+
+## How do you get access to each one?
+
+Relay requires approval first. The [Relay FAQ](https://relay.amazon.com/faq) asks for a DOT number active at least 180 days, a valid MC number, safety scores within Amazon's BASIC limits and insurance minimums. Our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/) has the full list. After approval, access depends on how you perform: Amazon's comparison table lists "Performance-based access to loads" for Relay.
+
+DAT is a subscription. You pick a plan and pay. DAT also sells operating authority services, factoring, a fuel card and insurance, per its product menu. DAT doesn't publish a minimum authority age on the pages we checked.
+
+## Who posts the loads, and does it matter?
+
+On Relay, Amazon is the shipper. Amazon says it doesn't tender loads through any third-party load boards, and that Amazon loads "will only be tendered directly to approved and onboarded carriers via the Relay web portal or Relay mobile app."
+
+Amazon's brokers post claims that brokers "take a finder's fee for each load (usually 13-15%)." That's Amazon's claim about brokers in general.
+
+On DAT, you deal with brokers and shippers. Here's where DAT does well. Per [DAT's load boards page](https://www.dat.com/load-boards), it offers "More loads than any other load board, plus company reviews and credit scores," and it says "more than 291 million loads & trucks posted annually." Per [DAT's carriers page](https://www.dat.com/carriers), carriers get "access to 722,500 loads posted every business day."
+
+Amazon doesn't publish a load count that matches DAT's "posted every business day" number, so the two can't be compared directly. Amazon's [peak season post](https://relay.amazon.com/blog/amazons-peak-season-for-carriers) forecasts 300 thousand loads per week by December 2026.
+
+## How does pay work on Relay and DAT?
+
+Relay pays on a set schedule. The FAQ says: "Payment cycle runs weekly from Sunday-Saturday. Everything completed before 23:59 Saturday will be paid out the following week on Friday." Amazon also contrasts this with "30-60 day waits for payouts from logistics brokers," which is Amazon's claim about brokers in general. Our [payments guide](https://nudoiq.com/amazon-relay-payments/) covers invoices and disputes.
+
+On DAT, pay terms depend on each broker. DAT doesn't publish one schedule. Its higher plans include DAT Assurance, where "Our team helps carriers with past-due freight payments."
+
+## How do Relay and DAT handle fraud?
+
+Amazon's comparison table lists three controls for Relay: "Verified carriers only," "No double brokering" and "Identity verification." Because Amazon doesn't tender loads through third-party boards, an "Amazon load" offered on another board wasn't tendered by Amazon.
+
+DAT gives you tools to check the other side: company reviews and credit scores on brokers.
+
+Our [Amazon Relay fraud guide](https://nudoiq.com/amazon-relay-fraud/) covers double brokering, fake loads and the red flags Amazon lists.
+
+## Which one fits your trucking business?
+
+It depends on your situation, not on which board is "better."
+
+* **If you can't meet Relay's requirements yet,** Relay isn't open to you until you do. DAT is a paid subscription instead of an approval.
+* **If you qualify for Relay,** you get Amazon's freight free, with weekly pay and access tied to your performance.
+* **If you want broker freight from many shippers,** that's DAT's market.
+
+Whichever board a load comes from, run the numbers the same way. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows net, net per loaded mile and break-even rate from the pay, miles and your costs. For how Relay prices loads, see [how much Amazon Relay pays](https://nudoiq.com/how-much-does-amazon-relay-pay/) and our [Relay rates pages](https://nudoiq.com/amazon-relay-rates/). Our [Relay load board guide](https://nudoiq.com/amazon-relay-load-board/) covers the board itself.
+
+## What doesn't either side publish?
+
+* A Relay load count that matches DAT's per-business-day number
+* DAT's payment terms, which depend on each broker
+* A rate comparison between the two
+* Whether DAT requires a minimum authority age
+
+We don't compare rates between the two, because neither publishes one.
+
+## Where does NudoIQ fit?
+
+NudoIQ works on the Relay load board only, not on DAT. It's an independent Chrome extension, not affiliated with Amazon, that shows net profit and lane price history on each Relay load, from costs you set once. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### Is Amazon Relay free compared to DAT?
+Yes. Amazon says Relay gives trucking companies free access once approved. DAT carrier plans started at $59 a month per dat.com, checked October 14, 2026.
+
+### Can I find Amazon Relay loads on DAT?
+Amazon says it does not tender loads through any third-party load boards. Amazon loads are tendered only to approved carriers on the Relay portal or app.
+
+### Is Amazon Relay better than DAT?
+Neither is better for every carrier. Relay is free but needs approval and only carries Amazon freight plus some third-party shipper loads, while DAT is paid and carries broker and shipper freight.
+
+### Does DAT pay faster than Amazon Relay?
+On DAT, your pay comes from each broker on its own terms. Relay pays weekly: work completed by 23:59 Saturday is paid the following Friday, per Amazon's FAQ.
+
+### How many loads does DAT have compared to Relay?
+DAT says 722,500 loads are posted every business day. Amazon doesn't publish a matching number; it says thousands of loads in regular periods.
+
+### What does a DAT load board subscription cost per month?
+Per dat.com on October 14, 2026, carrier plans were $59, $149, $169, $259 and $339 a month, with $169 per additional user on Select and Office. Check DAT's site, since prices change.
+
+---
+
+# Amazon Relay reefer loads: what Amazon requires
+
+URL: https://nudoiq.com/amazon-relay-reefer/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Yes, Amazon Relay has reefer loads, including grocery shipments, and Amazon says they're available to all carriers based on performance score. Chilled loads run at 33°F and frozen loads at -10°F, units must be pre-cooled at least 1.5 hours before pickup, trucks must be food grade, and cargo insurance must be at least $100,000 including reefer breakdown coverage. You can book spot reefer loads with Relay's 53', 48' and 26' reefer filters, and reefer auctions need at least a B grade.
+
+## Does Amazon Relay have reefer loads?
+
+Yes. Amazon's [reefer post](https://relay.amazon.com/blog/reefer-trucking-with-amazon-relay) says: "Reefer loads are currently available on Amazon Relay to all carriers based on performance score."
+
+Amazon names the freight: "On Amazon Relay, you'll find grocery shipments." It says mixed loads are the most common.
+
+Amazon expects more. Its [2026 freight expansion post](https://relay.amazon.com/blog/intro-to-amazon-relay/inside-amazon-relays-freight-expansion-faster-facilities-safer-trailers-more-choices) says: "Amazon's grocery business is growing fast. That means reefer loads on Relay are, too." It adds: "40+ new sites are launching, and same-day grocery delivery is increasing from 1,000 to 2,300 locations," with primary hubs in California, the Midwest and the Mid-Atlantic.
+
+Amazon doesn't publish which sites run reefer freight.
+
+## What temperatures do Relay reefer loads run at?
+
+From the reefer post:
+
+* **Chilled loads:** 33 degrees Fahrenheit
+* **Frozen loads:** -10 degrees Fahrenheit
+
+"Reefers can be single temp throughout the trailer or multi-temp with two different temperatures in one trailer."
+
+Amazon doesn't publish a temperature tolerance range.
+
+## What are the pre-cooling and delivery rules?
+
+Pre-cool before you get to the dock. Amazon says "reefer units must be turned on and pre-cooled to their load temps at least 1.5 hours before pick-up to receive cargo."
+
+At delivery, "an associate will use an infrared thermometer to check a pallet's temp."
+
+Amazon doesn't publish how pre-cooling is verified at pickup.
+
+## What equipment can run reefer on Relay?
+
+Amazon says: "Live loads and unloads are available for 53' and 48' reefer trailers (yours or ours)." It also uses "26' reefer box trucks to handle small loads over quick distances."
+
+Amazon doesn't say whether its own reefer trailers come as power-only reefer loads.
+
+## What are the food safety and insurance rules?
+
+Food safety comes first. Carriers must meet "the FDA's Sanitary Transportation Rule," and trucks must be "food grade, clean, dry, pest-free, allergen-free, chemical-free, and odor-free."
+
+Insurance has one extra piece: "Carriers need cargo insurance with a limit of at least $100,000 (including reefer breakdown coverage)." Our [Relay insurance requirements guide](https://nudoiq.com/amazon-relay-insurance-requirements/) covers the other minimums.
+
+Beyond that, it's the same bar as dry van: "Reefer carriers are held to the same performance, safety, and insurance standards required for dry loads." And "There's no extra training for Relay carriers to get into this type of trucking."
+
+## What's the work like on a Relay reefer load?
+
+Expect stops and unloading. Amazon says: "Each trip will include multiple stops and drivers are required to unload freight using Amazon-provided equipment."
+
+Amazon doesn't publish unload or lumper pay on these multi-stop grocery runs, or who pays reefer fuel. Build that time and fuel into your own numbers. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net, net per loaded mile and break-even rate from its pay, miles, fuel and your other costs per mile.
+
+## How do you book reefer loads on Relay?
+
+**Spot loads.** Amazon says to filter by "53' Reefer," "48' Reefer," "26' Reefer," and/or the load's temperature setting, and you book "at one all-in price." Our [Relay load board guide](https://nudoiq.com/amazon-relay-load-board/) covers the filters.
+
+**Auctions.** High performers can bid on reefer contracts "based on rate per mile." Amazon warns: "You won't know the exact lanes while you're bidding." Reefer auctions have a grade bar: Amazon's [rates post](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-rates) says "reefer auctions require at least a B." Our [auctions guide](https://nudoiq.com/amazon-relay-auctions/) and [Relay scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explain grades and bidding.
+
+## Are there California rules for reefers?
+
+Yes. Amazon says to register your reefers in CARB's ARBER system and meet CARB's Airborne Toxic Control Measure standards, even if you're based outside California. Our [Amazon Relay CARB guide](https://nudoiq.com/amazon-relay-california-carb/) covers Clean Truck Check and the reefer steps.
+
+## What should you check before your first Relay reefer load?
+
+A short list, all from Amazon's rules above:
+
+1. **Insurance.** Your cargo policy is at least $100,000 and includes reefer breakdown coverage.
+2. **The trailer.** It's food grade, clean, dry, pest-free, allergen-free, chemical-free and odor-free.
+3. **The temperature.** You know the load's setting, chilled at 33°F or frozen at -10°F, or multi-temp.
+4. **Pre-cooling.** The unit is on and at load temperature at least 1.5 hours before pickup.
+5. **The driver.** Your driver knows the trip has multiple stops and that they'll unload with Amazon-provided equipment.
+6. **California.** If the load runs through California, the reefer is in ARBER and the truck has Clean Truck Check.
+7. **Your score.** Reefer access depends on performance score, and reefer auctions need at least a B.
+
+## Does Amazon Relay have flatbed loads?
+
+Not as a load type. The [Relay FAQ](https://relay.amazon.com/faq) equipment list (day cab, sleeper cab, 26' and 16' box trucks, 48' trailer, 53' dry van, 53' reefer, containers) has no flatbed.
+
+Amazon's [winter loads post](https://relay.amazon.com/blog/industry-trends/winter-load-solutions-for-flatbed-reefer-carriers) pitches power-only work to flatbed carriers instead. It says the holidays are Amazon's busiest season, when most of its loads are power-only, and that no trailer investment is needed because Amazon provides the equipment. Our [Relay power-only guide](https://nudoiq.com/amazon-relay-power-only/) explains how that works.
+
+## What doesn't Amazon publish about reefer loads?
+
+* Reefer rates or pay premiums
+* Temperature tolerance ranges
+* How pre-cooling is verified
+* Who pays reefer fuel
+* Unload or lumper pay on grocery multi-stops
+* Which sites run reefer
+* Whether Amazon's own reefer trailers come as power-only loads
+* Any flatbed load program
+
+## Where does NudoIQ fit?
+
+NudoIQ is an independent Chrome extension for the Relay load board. It shows net profit and lane price history on each load, from costs you set once, so you can check a reefer load's numbers before you book. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### Does Amazon Relay have reefer loads?
+Yes. Amazon says reefer loads are available to all carriers based on performance score, and you'll find grocery shipments there.
+
+### What temperature are Amazon Relay reefer loads?
+Amazon lists 33 degrees Fahrenheit for chilled loads and -10 degrees Fahrenheit for frozen loads. Some loads are multi-temp, with two temperatures in one trailer.
+
+### How long do I pre-cool for an Amazon reefer load?
+Amazon says reefer units must be on and pre-cooled to the load temperature at least 1.5 hours before pickup.
+
+### What insurance do I need for Relay reefer loads?
+Amazon says you need cargo insurance with a limit of at least $100,000, including reefer breakdown coverage. See our [insurance guide](https://nudoiq.com/amazon-relay-insurance-requirements/) for the rest.
+
+### Can a box truck haul reefer on Relay?
+Yes. Amazon says it uses 26' reefer box trucks for small loads over quick distances, and you can filter for 26' Reefer on the load board.
+
+### What grade do I need for Relay reefer auctions?
+Amazon says you need at least a B grade for reefer auctions.
+
+### Does Amazon Relay have flatbed loads?
+Amazon's FAQ equipment list for Relay has no flatbed. Amazon offers flatbed carriers power-only work instead, with Amazon providing the trailer.
+
+### Do reefer loads pay more on Amazon Relay?
+Amazon doesn't publish Relay reefer rates, so we don't compare them. Each load shows its own price on the board.
+
+---
+
+# Amazon Relay trailer rental: renting your trailers to Amazon
+
+URL: https://nudoiq.com/amazon-relay-trailer-rental/
+Published: 2026-10-14. Last updated: 2026-10-14.
+
+Short answer: Amazon Relay trailer rental runs through Relay's equipment marketplace, where approved carriers bid in live auctions to rent their 53' dry van trailers to Amazon, entering a rate per trailer per week. Trailers must be CARB compliant or SmartWay designated, have skirts and a valid DOT inspection, and Amazon picks them up and drops them off. If you want to rent equipment to run Relay instead, Amazon says most Relay loads are power-only, and Relay's discounts include truck rentals.
+
+## What is Amazon Relay trailer rental?
+
+It's renting your trailers to Amazon. Amazon's [trailer auctions post](https://relay.amazon.com/blog/trailer-auctions-how-to-rent-equipment-to-amazon) says: "Relay's equipment marketplace holds live trailer auctions where Relay carriers can rent their 53' semi-trailers to Amazon."
+
+Amazon describes it the same way on other pages. The [Relay home page](https://relay.amazon.com/) says: "Rent your company's unused trailers to Amazon to reduce idle time." Amazon's [power-only post](https://relay.amazon.com/blog/load-types-programs/power-only-loads-on-amazon-relay) calls it "an equipment marketplace to lease your trailers to Amazon."
+
+Amazon's [post on Relay work types](https://relay.amazon.com/blog/booking-options/what-trucking-work-is-on-amazon-relay) says "idle trailers can be leased to Amazon for pick-up through Relay's equipment marketplace." So this is for trailers you aren't using, not for trailers you need on your own loads.
+
+Peak season is one time Amazon promotes it. Its [Prime Big Deal Days post](https://relay.amazon.com/blog/why-prime-big-deal-days-is-a-big-deal-for-carriers) says: "Rent your idle assets to Amazon for Prime Big Deal Days demand." Amazon names the equipment marketplace as a peak booking option next to the load board, Post A Truck, contracts and auctions. Our [Relay peak season guide](https://nudoiq.com/amazon-relay-peak-season/) covers the others.
+
+## What do you need to rent trailers to Amazon?
+
+For your company, Amazon lists:
+
+* An active Relay account
+* "Sufficient 53' trailers to participate during contract dates"
+* "CARB compliant or SmartWay designated trailers"
+* "Valid DOT inspection throughout the semi-trailer lease contract"
+* Proof of ownership (or sub-lease authority)
+
+For each trailer:
+
+* "53' dry van trailers within maximum manufacturing age"
+* "Mandatory trailer skirts"
+* "Swing or roll up type doors"
+* "Air or spring type suspension"
+
+Amazon doesn't publish the maximum age number. Our [Amazon Relay CARB guide](https://nudoiq.com/amazon-relay-california-carb/) covers California compliance.
+
+## How do Relay trailer auctions work?
+
+Each auction lists the equipment count, the contract dates (start and end) and the auction cut-off time.
+
+1. **Bid.** Amazon says "bidding is as simple as entering your rate per trailer per week."
+2. **Watch where you stand.** "You'll always know where you stand compared to the bids placed by other carriers."
+3. **If you win.** "Amazon reaches out to you for trailer documentation and payment details."
+4. **Handoff.** "We pick the equipment up and drop the equipment off." Amazon will also install GPS and decals and perform pre-inspections.
+
+These are equipment auctions. Load and contract auctions work differently; see our [Relay auctions guide](https://nudoiq.com/amazon-relay-auctions/).
+
+## What should you check before you bid?
+
+Each item comes from Amazon's requirements above:
+
+1. **Count your trailers.** You need enough 53' trailers to cover the full contract dates, not just the first week.
+2. **Check inspection dates.** The DOT inspection has to stay valid for the whole lease contract.
+3. **Check CARB or SmartWay.** Each trailer needs one or the other.
+4. **Check the specs.** Skirts, swing or roll-up doors, and air or spring suspension.
+5. **Have your papers ready.** Proof of ownership, or sub-lease authority, plus trailer documentation if you win.
+6. **Watch the cut-off.** Every auction lists its cut-off time.
+
+## How should you think about your bid?
+
+Start with what the trailer costs you. Amazon's post says: "Truck and trailer payments are the second highest vehicle-based expense for carriers, behind fuel." That's Amazon's claim, with no source given.
+
+Your weekly rate is your call. Look at the contract dates too: Amazon doesn't publish typical contract lengths, but each auction lists its start and end dates, and your trailers are gone for that whole stretch. Before you bid, ask Amazon what it doesn't publish: who carries insurance and damage risk while Amazon holds your trailer, and when rental payments are made.
+
+If you're weighing a trailer rental against hauling with that trailer yourself, price your loads too. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net, net per loaded mile and break-even rate from its pay, miles and your costs.
+
+## Can you rent equipment to run Amazon Relay?
+
+That's the other way people search this. Here's what Amazon publishes.
+
+You may not need a trailer. Amazon's [truck requirements post](https://relay.amazon.com/blog/amazon-relay-truck-requirements) says "The majority of Amazon Relay loads are power-only," meaning you bring the tractor and Amazon provides the trailer. Amazon's [2026 freight expansion post](https://relay.amazon.com/blog/intro-to-amazon-relay/inside-amazon-relays-freight-expansion-faster-facilities-safer-trailers-more-choices) counts "More than 80,000 Amazon trailers." The [Relay FAQ](https://relay.amazon.com/faq) says Amazon trailers have "automated inflation alert technology, ABS II, a kingpin hook safety securing plate, and rear corner safety grab handles." Our [Relay power-only guide](https://nudoiq.com/amazon-relay-power-only/) covers how those loads work.
+
+For trucks, Relay has rental discounts. Relay's [discounts page](https://relay.amazon.com/discounts) lists truck rentals "Up to 40% off, including high roof gas and diesel vans, 16ft box trucks, 26ft box trucks, and daycabs." The list names no trailer rentals.
+
+Amazon's [2026 improvements post](https://relay.amazon.com/blog/intro-to-amazon-relay/how-amazon-relays-improving-to-support-carrier-growth) adds: "You already have a 40% off on rentals from Ryder," and mentions "a 3-year leasing option with a 10% discount." Our [Relay rewards guide](https://nudoiq.com/amazon-relay-rewards/) covers the discount list.
+
+## What doesn't Amazon publish about trailer rental?
+
+* The maximum manufacturing age number
+* Typical rental contract lengths
+* When and how rental payments are made
+* Insurance and damage responsibility while Amazon holds your trailer
+* Whether reefers or 48' trailers can be rented
+* The grade needed to bid
+* How often auctions run
+* Any program to rent trailers from Amazon for non-Amazon work
+
+## Where does NudoIQ fit?
+
+NudoIQ is an independent Chrome extension for the Relay load board. If you run power-only with Amazon's trailers, it shows net profit and lane price history on each load, from costs you set once. It's free for 7 days with no card needed to start, then $49.99 a month.
+
+## Frequently asked questions
+
+### Can I rent my trailers to Amazon Relay?
+Yes. Approved Relay carriers can rent 53' dry van trailers to Amazon through live auctions in Relay's equipment marketplace.
+
+### How do you bid in a Relay trailer auction?
+Amazon says you enter your rate per trailer per week, and you can see where you stand compared to other carriers' bids.
+
+### What trailers can you rent to Amazon?
+Amazon asks you for 53' dry van trailers within a maximum manufacturing age, with skirts, swing or roll-up doors, air or spring suspension, a valid DOT inspection and CARB compliance or SmartWay designation.
+
+### What's the maximum trailer age for Amazon Relay rentals?
+Amazon doesn't publish the age limit for Relay trailer rentals. It only says trailers must be within maximum manufacturing age.
+
+### If you win a Relay trailer auction, who picks up the trailer?
+Amazon picks up your trailer. It says it picks the equipment up and drops it off, and installs GPS and decals and performs pre-inspections.
+
+### Can I rent a trailer from Amazon Relay?
+Amazon publishes no program to rent its trailers to you. Most Relay loads are power-only, where Amazon provides the trailer for that load.
+
+### Does Amazon Relay offer truck rental discounts?
+Yes. Relay's discounts page lists truck rentals up to 40% off, including vans, 16ft and 26ft box trucks and day cabs. See our [rewards guide](https://nudoiq.com/amazon-relay-rewards/).

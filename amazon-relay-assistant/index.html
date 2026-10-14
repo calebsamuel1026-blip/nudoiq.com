@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Amazon Relay Assistant: How the AI Chat Works | NudoIQ</title>
+  <meta name="description" content="What Amazon Relay Assistant does: AI chat to negotiate rates and pickup times on urgent loads, who can use it, counteroffers, trip help and human handoff.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/amazon-relay-assistant/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:title" content="Amazon Relay Assistant: How the AI Chat Works | NudoIQ">
+  <meta property="og:description" content="What Amazon Relay Assistant does: AI chat to negotiate rates and pickup times on urgent loads, who can use it, counteroffers, trip help and human handoff.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/amazon-relay-assistant/">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: "amazon-relay-assistant"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "amazon-relay-assistant"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Amazon Relay Assistant: rate negotiation and trip support",
+  "description": "What Amazon Relay Assistant does: AI chat to negotiate rates and pickup times on urgent loads, who can use it, counteroffers, trip help and human handoff.",
+  "mainEntityOfPage": "https://nudoiq.com/amazon-relay-assistant/",
+  "url": "https://nudoiq.com/amazon-relay-assistant/",
+  "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+  "datePublished": "2026-10-14",
+  "dateModified": "2026-10-14",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Organization",
+    "name": "NudoIQ",
+    "url": "https://nudoiq.com/"
+  },
+  "about": {
+    "@id": "https://nudoiq.com/#software"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
+    "name": "NudoIQ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nudoiq.com/icons/nudoiq-logo-512.png"
+    }
+  },
+  "abstract": "Relay Assistant is Amazon Relay's AI-powered chat. Top-performing carriers with strong Relay performance scores can use it to negotiate rates and pickup times on urgent spot loads, and Amazon either approves the request so you can book right away or may send a counteroffer. Drivers also use it during trips for issues like trailer availability and site closures, and it connects you to a human operator when it can't solve the problem."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nudoiq.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://nudoiq.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Amazon Relay Assistant: rate negotiation and trip support",
+      "item": "https://nudoiq.com/amazon-relay-assistant/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Amazon Relay Assistant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's Amazon Relay's AI-powered chat. Top-performing carriers can negotiate rates and pickup times on urgent spot loads with it, and drivers use it for help during trips."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can negotiate rates with Relay Assistant?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon says only top-performing Relay carriers with strong Relay performance scores. It doesn't publish the exact grade needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find Relay Assistant on the load board?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon says to look for the chat bubble icon on eligible load board listings. It's available 24/7 for those listings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Relay Assistant always accept my rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Amazon evaluates each request: if approved, you can book right away, or you may get a counteroffer. Final rates depend on real-time supply and demand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Relay Assistant a bot or a person?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Relay Assistant is an AI-powered chat. Amazon says that when it can't resolve an issue, it connects you to a human operator with your conversation's full context."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Relay Assistant reroute a driver?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon says Relay Assistant's answers for disruptions include the ability to reroute and release drivers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can Relay Assistant book loads for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon doesn't describe Relay Assistant booking loads on its own today. It says that by the end of 2026, you'll be able to ask it to repeat Post A Truck orders."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body data-clarity-unmask="true">
+
+  <div class="promo">7 days free, no card needed &middot; Runs in your own Chrome &middot; English and Spanish</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Main navigation">
+      <a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a><a href="/#faq">FAQ</a>
+    </nav>
+    <div class="navright">
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+    </div>
+  </div></header>
+
+  <div class="doc-hero"><div class="doc-hero-in">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay Assistant: rate negotiation and trip support</span></nav>
+    <h1 class="page-title">Amazon Relay Assistant: rate negotiation and trip support</h1>
+    <p class="page-subtitle">Relay Assistant is the AI chat inside Amazon Relay. Here's what it does today, who can negotiate rates with it, and what Amazon says is coming next.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-10-14">October 14, 2026</time> &middot; Last updated <time datetime="2026-10-14">October 14, 2026</time></p>
+  </div></div>
+
+  <div class="container">
+    <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>Relay Assistant is Amazon Relay's AI-powered chat. Top-performing carriers with strong Relay performance scores can use it to negotiate rates and pickup times on urgent spot loads, and Amazon either approves the request so you can book right away or may send a counteroffer. Drivers also use it during trips for issues like trailer availability and site closures, and it connects you to a human operator when it can't solve the problem.</p></section>
+<h2 id="what-is-amazon-relay-assistant">What is Amazon Relay Assistant?</h2>
+<p>It's Amazon's AI chat inside Relay. Amazon's <a href="https://relay.amazon.com/blog/amazon-relay-news-events/amazon-relaycon-2025-recap" target="_blank" rel="noopener">RelayCon 2025 recap</a> calls it &quot;Relay Assistant, an AI-powered chat tool for rate negotiations and faster load support.&quot;</p>
+<p>So it has two jobs: rate talks on some loads, and help during a trip.</p>
+<h2 id="how-do-you-negotiate-a-rate-with-relay-assistant">How do you negotiate a rate with Relay Assistant?</h2>
+<p>Amazon's <a href="https://relay.amazon.com/blog/booking-options/3-ways-to-set-your-own-freight-rates-on-amazon-relay" target="_blank" rel="noopener">post on setting your own rates</a> says: &quot;When an urgent load needs coverage, you can now negotiate freight rates and pickup times through this AI-powered chat.&quot;</p>
+<p>Here's how it works, in Amazon's words:</p>
+<ol><li><strong>Find the icon.</strong> &quot;Just look for the chat bubble icon to pitch your price and ask questions about promising loads.&quot;</li><li><strong>Make your case.</strong> &quot;Relay Assistant will consider any details you offer to negotiate the rate, and immediately evaluate your rate request.&quot;</li><li><strong>Get an answer.</strong> &quot;If approved, you can book the load right away. You may receive a counteroffer.&quot;</li></ol>
+<p>It's open around the clock: &quot;Relay Assistant is ready 24/7 for eligible load board listings.&quot; Amazon's <a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">load board post</a> says you can name your own price on select spot loads.</p>
+<p>There are limits. Amazon says &quot;final rates still depend on real-time supply and demand.&quot; Its footnote adds that your rate preferences are considered, but final rates &quot;reflect current market conditions and other factors.&quot;</p>
+<p>A carrier interviewed on Amazon's blog <a href="https://relay.amazon.com/blog/amazon-carrier-spotlights/carrier-spotlight-bigg-vic-tv-of-newton-ventures-llc" target="_blank" rel="noopener">described it this way</a>: &quot;You're able to converse back and forth with AI to negotiate the rate you think a load deserves.&quot; That's one carrier's description, not Amazon policy.</p>
+<h2 id="who-can-negotiate-rates-with-relay-assistant">Who can negotiate rates with Relay Assistant?</h2>
+<p>Not everyone. Amazon says only top-performing Relay carriers with strong Relay performance scores get rate negotiation. Its <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-rates" target="_blank" rel="noopener">rates post</a> says the same: &quot;Top-performing carriers can negotiate rates on urgent spot loads through AI-powered chat.&quot;</p>
+<p>Amazon doesn't publish the grade or score you need. Our <a href="/amazon-relay-scorecard/">Relay scorecard guide</a> explains how the performance score works.</p>
+<h2 id="how-do-you-decide-what-rate-to-ask-for">How do you decide what rate to ask for?</h2>
+<p>Know your floor before you pitch. Our free <a href="/tools/relay-load-calculator/">Relay load calculator</a> takes the pay, loaded miles, deadhead and your costs, and gives you net, net per loaded mile and a break-even rate. The break-even rate is the lowest rate per loaded mile that covers your costs on that load.</p>
+<p>Then ask with that number in mind. Amazon decides, and the final rate reflects market conditions, so a request could be approved, countered or turned down.</p>
+<p>Amazon says Relay Assistant &quot;will consider any details you offer,&quot; so give it the facts that matter to you: when your truck is free, where it is, and the rate you need to make the load work.</p>
+<p>Our guide to <a href="/how-much-does-amazon-relay-pay/">how much Amazon Relay pays</a> explains how Relay prices are built.</p>
+<h2 id="what-other-ways-can-you-set-your-own-rate-on-relay">What other ways can you set your own rate on Relay?</h2>
+<p>Relay Assistant isn't the only one. Amazon's <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/how-owner-operators-thrive-with-amazon-relay" target="_blank" rel="noopener">owner-operator post</a> says: &quot;On certain loads, you can negotiate arrival times and rates,&quot; and that in load auctions you &quot;have a chance to name your own price.&quot;</p>
+<ul><li><strong>Auctions.</strong> Amazon says auctions &quot;are available for trailer-required, power-only, box truck, and reefer contracts.&quot; See our <a href="/amazon-relay-auctions/">auctions guide</a>.</li><li><strong>Post A Truck.</strong> You post where your truck will be. One carrier on Amazon's blog put it this way: &quot;On Post A Truck, you can put the amount that you drive for.&quot; That's a carrier's words, not Amazon policy. Our <a href="/amazon-relay-post-a-truck/">Post A Truck guide</a> covers how it works.</li></ul>
+<p>Relay Assistant is the one built for urgent spot loads.</p>
+<h2 id="what-can-relay-assistant-do-during-a-trip">What can Relay Assistant do during a trip?</h2>
+<p>Drivers use it on the road. Amazon's <a href="https://relay.amazon.com/blog/how-truckers-use-the-amazon-relay-mobile-app" target="_blank" rel="noopener">app post</a> says drivers &quot;request support from Relay Assistant throughout their trip.&quot;</p>
+<p>From Amazon's <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/how-amazon-relays-improving-to-support-carrier-growth" target="_blank" rel="noopener">2026 improvements post</a>:</p>
+<ul><li>It &quot;can resolve over-the-road issues on the spot&quot; such as trailer availability, site closures and basic trip information.</li><li>For disruptions, its answers come back &quot;including the ability to reroute and release drivers.&quot;</li><li>&quot;When Relay Assistant can't resolve an issue, it connects you to a human operator with your conversation's full context.&quot;</li></ul>
+<p>You don't have to use the chat. Amazon's <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search" target="_blank" rel="noopener">free freight search post</a> says &quot;you can also call our operations center for direct communication about delays or unexpected changes to a load.&quot; Our <a href="/amazon-relay-contact/">Relay contact guide</a> lists how Amazon says to reach the operations center, and our <a href="/amazon-relay-app/">Relay app guide</a> covers driver help in the app.</p>
+<h2 id="does-relay-assistant-handle-late-or-on-time-disputes">Does Relay Assistant handle late or on-time disputes?</h2>
+<p>Amazon doesn't say it does. In the same 2026 post, Amazon says it's &quot;now resolving performance disputes 20% faster,&quot; with no baseline given.</p>
+<p>Our <a href="/amazon-relay-disputes/">Relay disputes guide</a> covers how disputes work. If a late arrival or other on-time hit landed on your scorecard, our free <a href="/tools/relay-dispute-letter/">dispute letter tool</a> writes a letter from what happened on the trip, which you edit and paste into Relay.</p>
+<h2 id="what-s-planned-for-relay-assistant">What's planned for Relay Assistant?</h2>
+<p>These are plans, not live tools yet. Amazon says: &quot;By end of this year, carriers will be able to ask RA to repeat Post A Truck orders.&quot; It also lists load availability, schedule changes and route patterns as planned areas.</p>
+<p>Today, Amazon describes no way for Relay Assistant to book loads on its own.</p>
+<h2 id="what-doesn-t-amazon-publish-about-relay-assistant">What doesn't Amazon publish about Relay Assistant?</h2>
+<ul><li>The grade or score needed for rate negotiation</li><li>Which loads are eligible</li><li>How many counteroffers you can get</li><li>Whether a negotiated rate differs from the listed price after booking</li><li>Whether Relay Assistant works in Canada</li><li>How long chat data is kept</li></ul>
+<h2 id="where-does-nudoiq-fit">Where does NudoIQ fit?</h2>
+<p>NudoIQ is an independent Chrome extension for the Relay load board. On loads Amazon marks negotiable, it can show a negotiate icon that opens Relay's own Relay Assistant chat. It opens the general chat, not a chat about that specific load. NudoIQ also shows net profit on each load, so you can see your number before you pitch. It's free for 7 days with no card needed to start, then $49.99 a month.</p>
+    </article>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <details><summary>What is Amazon Relay Assistant?</summary><div class="a"><p>It's Amazon Relay's AI-powered chat. Top-performing carriers can negotiate rates and pickup times on urgent spot loads with it, and drivers use it for help during trips.</p></div></details>
+      <details><summary>Who can negotiate rates with Relay Assistant?</summary><div class="a"><p>Amazon says only top-performing Relay carriers with strong Relay performance scores. It doesn't publish the exact grade needed.</p></div></details>
+      <details><summary>How do I find Relay Assistant on the load board?</summary><div class="a"><p>Amazon says to look for the chat bubble icon on eligible load board listings. It's available 24/7 for those listings.</p></div></details>
+      <details><summary>Does Relay Assistant always accept my rate?</summary><div class="a"><p>No. Amazon evaluates each request: if approved, you can book right away, or you may get a counteroffer. Final rates depend on real-time supply and demand.</p></div></details>
+      <details><summary>Is Relay Assistant a bot or a person?</summary><div class="a"><p>Relay Assistant is an AI-powered chat. Amazon says that when it can't resolve an issue, it connects you to a human operator with your conversation's full context.</p></div></details>
+      <details><summary>Can Relay Assistant reroute a driver?</summary><div class="a"><p>Amazon says Relay Assistant's answers for disruptions include the ability to reroute and release drivers.</p></div></details>
+      <details><summary>Can Relay Assistant book loads for me?</summary><div class="a"><p>Amazon doesn't describe Relay Assistant booking loads on its own today. It says that by the end of 2026, you'll be able to ask it to repeat Post A Truck orders.</p></div></details>
+    </section>
+
+    <aside class="cta">
+      <div><h2>Know what the next load is worth before you take it.</h2><p>7 days free, no card needed &middot; 5.0 on the Chrome Web Store</p></div>
+      <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Start the 7-day trial</a>
+    </aside>
+
+    <nav class="related" aria-label="More Amazon Relay guides">
+      <h2>More Amazon Relay guides</h2>
+      <div class="cards">
+        <a href="/amazon-relay-cargo-van/">Can you use a cargo van for Amazon Relay?</a>
+        <a href="/amazon-relay-app/">Amazon Relay app: what it does and how drivers use it</a>
+        <a href="/amazon-relay-approval-time/">How long does it take to get approved for Amazon Relay?</a>
+        <a href="/amazon-relay-background-check/">Amazon Relay background check: what drivers and carriers should know</a>
+        <a href="/amazon-relay-california-carb/">Amazon Relay CARB compliance: Clean Truck Check for California loads</a>
+        <a href="/amazon-relay-canada/">Amazon Relay Canada: requirements, insurance and how to sign up</a>
+      </div>
+    </nav>
+
+    <div class="footer">
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/">Amazon Relay guides</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="/partners/">Partners</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contact</a>
+    </div>
+    <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. Amazon Relay requirements change; confirm current rules at relay.amazon.com.</p>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <title>Amazon Relay Safety Score and CSA Limits Explained | NudoIQ</title>
+  <meta name="description" content="How the Amazon Relay safety score works: the Safety Scorecard, CSA BASIC limits, the 35% and 50% violation rate limits, and why there's no appeal.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/amazon-relay-safety-score/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:title" content="Amazon Relay Safety Score and CSA Limits Explained | NudoIQ">
+  <meta property="og:description" content="How the Amazon Relay safety score works: the Safety Scorecard, CSA BASIC limits, the 35% and 50% violation rate limits, and why there's no appeal.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/amazon-relay-safety-score/">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: "amazon-relay-safety-score"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "amazon-relay-safety-score"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Amazon Relay safety score: the Safety Scorecard and CSA limits",
+  "description": "How the Amazon Relay safety score works: the Safety Scorecard, CSA BASIC limits, the 35% and 50% violation rate limits, and why there's no appeal.",
+  "mainEntityOfPage": "https://nudoiq.com/amazon-relay-safety-score/",
+  "url": "https://nudoiq.com/amazon-relay-safety-score/",
+  "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+  "datePublished": "2026-10-14",
+  "dateModified": "2026-10-14",
+  "inLanguage": "en-US",
+  "author": {
+    "@type": "Organization",
+    "name": "NudoIQ",
+    "url": "https://nudoiq.com/"
+  },
+  "about": {
+    "@id": "https://nudoiq.com/#software"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://nudoiq.com/#organization",
+    "name": "NudoIQ",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nudoiq.com/icons/nudoiq-logo-512.png"
+    }
+  },
+  "abstract": "Amazon Relay's safety score lives in a Safety Scorecard in your Relay account, separate from your performance score. It shows your FMCSA BASIC percentiles, your safety rating and a Yes/No on whether you meet Relay's requirements. Amazon also checks violation rates from the last 12 months of FMCSA inspections: the driver rate must be at or below 35% and the vehicle rate at or below 50%, and Amazon offers no appeal on these limits."
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://nudoiq.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Guides",
+      "item": "https://nudoiq.com/guides/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Amazon Relay safety score: the Safety Scorecard and CSA limits",
+      "item": "https://nudoiq.com/amazon-relay-safety-score/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Amazon Relay Safety Scorecard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's a page in your Relay account, on the portal or app, that shows your FMCSA BASIC percentiles, your safety rating, month-over-month trends and a Yes/No on whether you meet Relay's requirements. It's separate from the performance score."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What CSA score do you need for Amazon Relay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per the Relay FAQ, Unsafe Driving and HOS Compliance must be below 60%, and Vehicle Maintenance, Controlled Substances / Alcohol and Driver Fitness below 75%. See our requirements guide for the full list."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the Amazon Relay violation rate limits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The driver violation rate must be at or below 35% and the vehicle violation rate at or below 50%. Amazon uses 12 months of FMCSA inspection data and counts OOS violations twice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I appeal Amazon Relay's safety limits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Amazon says that, like BASICs violations, it won't offer an appeal process for violation rate limits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Amazon Relay use the crash indicator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Amazon's CSA post says the crash indicator is private data and Relay doesn't monitor it. Relay also doesn't use the hazmat BASIC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who is Amazon Relay's third-party compliance partner?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Amazon doesn't name the service Relay uses. The FAQ only says it uses internal compliance teams and a third-party compliance monitoring service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I update my MCS-150 for Relay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You have to update it every two years, but Amazon's CSA post recommends every six months."
+      }
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body data-clarity-unmask="true">
+
+  <div class="promo">7 days free, no card needed &middot; Runs in your own Chrome &middot; English and Spanish</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Main navigation">
+      <a href="/#features">Features</a><a href="/#pricing">Pricing</a><a href="/guides/">Guides</a><a href="/#faq">FAQ</a>
+    </nav>
+    <div class="navright">
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+    </div>
+  </div></header>
+
+  <div class="doc-hero"><div class="doc-hero-in">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay safety score: the Safety Scorecard and CSA limits</span></nav>
+    <h1 class="page-title">Amazon Relay safety score: the Safety Scorecard and CSA limits</h1>
+    <p class="page-subtitle">Relay checks your safety record two ways: your FMCSA BASIC percentiles and its own violation rates. Here's how each one works, from Amazon's own pages.</p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-10-14">October 14, 2026</time> &middot; Last updated <time datetime="2026-10-14">October 14, 2026</time></p>
+  </div></div>
+
+  <div class="container">
+    <article class="prose">
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>Amazon Relay's safety score lives in a Safety Scorecard in your Relay account, separate from your performance score. It shows your FMCSA BASIC percentiles, your safety rating and a Yes/No on whether you meet Relay's requirements. Amazon also checks violation rates from the last 12 months of FMCSA inspections: the driver rate must be at or below 35% and the vehicle rate at or below 50%, and Amazon offers no appeal on these limits.</p></section>
+<h2 id="what-is-the-amazon-relay-safety-score">What is the Amazon Relay safety score?</h2>
+<p>It's not one number. Amazon added a Safety Scorecard that sits next to Relay's performance score. Amazon's <a href="https://relay.amazon.com/blog/trucking-safety/safety-scorecard-helps-relay-carriers-monitor-performance" target="_blank" rel="noopener">Safety Scorecard post</a> says &quot;you can view your BASIC percentiles and FMCSA safety rating right in your Relay account.&quot;</p>
+<p>Here's what Amazon says it shows:</p>
+<ul><li><strong>Trends.</strong> &quot;Track how your safety scores change month-over-month.&quot;</li><li><strong>Violation data.</strong> Amazon says it turns complex safety data into &quot;clear, actionable insights.&quot;</li><li><strong>A pass or fail check.</strong> &quot;Instantly see if you meet Relay's carrier requirements to haul freight with a simple Yes/No indicator.&quot;</li><li><strong>Free courses</strong> &quot;on winter driving, fatigue management, and other critical topics.&quot;</li></ul>
+<p>Amazon's <a href="https://relay.amazon.com/blog/trucking-safety/how-amazon-relay-uses-data-about-roadside-inspection-violations" target="_blank" rel="noopener">violations post</a> says where to find it: &quot;Approved Relay carriers have a Safety Scorecard in their account on the Relay portal or app.&quot;</p>
+<p>A change is coming. In its <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/how-amazon-relays-improving-to-support-carrier-growth" target="_blank" rel="noopener">2026 improvements post</a>, Amazon says: &quot;This year, we're combining safety, compliance, and actions on the same page.&quot; It hasn't said when that ships.</p>
+<p>The performance score is a separate scorecard. Our <a href="/amazon-relay-scorecard/">Relay scorecard guide</a> covers that one.</p>
+<h2 id="what-csa-scores-does-amazon-relay-require">What CSA scores does Amazon Relay require?</h2>
+<p>Relay uses your public FMCSA BASIC percentiles. Per the <a href="https://relay.amazon.com/faq" target="_blank" rel="noopener">Relay FAQ</a>, Unsafe Driving and HOS Compliance must be below 60%, and Vehicle Maintenance, Controlled Substances / Alcohol and Driver Fitness below 75%. Your FMCSA safety rating must be &quot;Satisfactory,&quot; &quot;None,&quot; or &quot;Not Rated.&quot; The full list sits in our <a href="/amazon-relay-requirements/">Amazon Relay requirements guide</a>.</p>
+<p>Amazon's <a href="https://relay.amazon.com/blog/csa-scores-what-they-are-how-to-fix-them" target="_blank" rel="noopener">CSA post</a> says: &quot;Our standards are 5% lower than federal thresholds, which means our demands for safety are stricter.&quot;</p>
+<p>A few CSA basics from the same post:</p>
+<ul><li>&quot;Lower scores indicate higher safety.&quot;</li><li>&quot;Only five of the seven CSA BASIC categories are public.&quot; Relay doesn't use the crash indicator (&quot;Since this is private data, Relay doesn't monitor this metric&quot;) or the hazmat BASIC.</li><li>SMS scores are built &quot;factoring in the last 24 months of data,&quot; and &quot;newer violations weigh more (3x points for 1-6 months).&quot;</li><li>&quot;Each month, Relay reaches out to carriers when their CSA score ranking nears a threshold.&quot;</li></ul>
+<p>You can see your own private data too: &quot;You can check your private CSA score data by registering for a Personal Identification Number with your DOT or Motor Carrier number.&quot;</p>
+<h2 id="how-does-amazon-relay-calculate-violation-rates">How does Amazon Relay calculate violation rates?</h2>
+<p>On top of BASICs, Relay checks two violation rates. From the violations post:</p>
+<ul><li><strong>Driver violation rate:</strong> &quot;Must be at or below 35% to haul with Relay.&quot;</li><li><strong>Vehicle violation rate:</strong> &quot;Must be at or below 50% to haul with Relay.&quot;</li></ul>
+<p>The formula, in Amazon's words: &quot;We add non-OOS violations to OOS violations (which are weighted twice as much to reflect their higher risk), then divide by total inspections.&quot; OOS means out-of-service. Amazon says the same formula applies to driver and vehicle rates.</p>
+<p>The rates use &quot;FMCSA inspection data over the past 12 months.&quot; Five categories count: Unsafe Driving, HOS Compliance, Vehicle Maintenance, Controlled Substance and Driver Fitness.</p>
+<p>New carriers have been screened &quot;starting October 31, 2025.&quot; For carriers already on Relay, Amazon said: &quot;We'll start enforcing these limits for existing carriers in February 2026.&quot;</p>
+<h2 id="what-happens-if-you-go-over-relay-s-safety-limits">What happens if you go over Relay's safety limits?</h2>
+<p>You can lose access. Amazon says: &quot;Carriers with three or more inspections that exceed our violation limits may lose access to Relay loads.&quot;</p>
+<p>Amazon doesn't explain what &quot;three or more inspections that exceed&quot; means in practice. It also doesn't publish a grace period or a path back after losing access.</p>
+<p>If your account is already blocked, our <a href="/amazon-relay-account-suspended/">account suspended guide</a> covers what Amazon checks to keep a carrier active.</p>
+<h2 id="can-you-appeal-an-amazon-relay-safety-score">Can you appeal an Amazon Relay safety score?</h2>
+<p>No. Amazon's violations post is direct: &quot;Like BASICs violations, we won't offer an appeal process.&quot; Our <a href="/amazon-relay-disputes/">Relay disputes guide</a> lists what you can and can't dispute on Relay.</p>
+<p>So the work happens before the inspection, not after.</p>
+<h2 id="how-do-you-keep-your-relay-safety-numbers-in-range">How do you keep your Relay safety numbers in range?</h2>
+<p>Amazon puts it on the carrier: &quot;Carriers are responsible for flagging their most common violations and introducing targeted solutions.&quot; Its tips:</p>
+<ul><li>Do pre-trip inspections, keep up with maintenance and keep clean maintenance records.</li><li>Coach drivers on speed, HOS compliance and controlled-substance policies.</li><li>&quot;Keep driver documentation (e.g. license, medical card, etc) current and available for inspection.&quot;</li><li>Filter loads by transit time and distance to give hours of service a buffer. Our <a href="/amazon-relay-hours-of-service/">hours of service guide</a> covers the rules.</li><li>Update your MCS-150 more often than you have to. Carriers &quot;have to update every two years,&quot; but Amazon says &quot;we recommend a six-month cadence.&quot;</li><li>Take the free safety courses. Our <a href="/amazon-relay-learning-center/">Learning Center guide</a> shows where they live.</li></ul>
+<p>Safety rewards are a separate program. Amazon says the collision data used for them &quot;won't affect your Relay performance score.&quot; Details are in our <a href="/amazon-relay-rewards/">Relay rewards guide</a>.</p>
+<h2 id="who-checks-relay-carrier-compliance">Who checks Relay carrier compliance?</h2>
+<p>The FAQ says: &quot;Amazon uses a variety of tools, including our internal compliance teams and a third-party compliance monitoring service, to validate and continually monitor carrier compliance.&quot;</p>
+<p>Amazon doesn't name the third-party service.</p>
+<h2 id="what-doesn-t-amazon-publish-about-the-safety-score">What doesn't Amazon publish about the safety score?</h2>
+<ul><li>Screenshots or field names of the Safety Scorecard</li><li>How often violation rates refresh</li><li>What &quot;three or more inspections that exceed&quot; means in practice</li><li>A grace period or reinstatement path after losing access</li><li>The name of the third-party compliance monitoring service</li><li>How safety status feeds the A to F performance grade</li><li>When the merged scorecard ships</li></ul>
+<h2 id="where-does-nudoiq-fit">Where does NudoIQ fit?</h2>
+<p>NudoIQ won't change a safety score. Safety comes from your trucks and drivers. Once you're clear to haul, NudoIQ is an independent Chrome extension for the Relay load board that shows net profit on each load, from costs you set once. It's free for 7 days with no card needed to start, then $49.99 a month.</p>
+    </article>
+
+    <section class="faq" aria-labelledby="faq-h">
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <details><summary>What is the Amazon Relay Safety Scorecard?</summary><div class="a"><p>It's a page in your Relay account, on the portal or app, that shows your FMCSA BASIC percentiles, your safety rating, month-over-month trends and a Yes/No on whether you meet Relay's requirements. It's separate from the performance score.</p></div></details>
+      <details><summary>What CSA score do you need for Amazon Relay?</summary><div class="a"><p>Per the Relay FAQ, Unsafe Driving and HOS Compliance must be below 60%, and Vehicle Maintenance, Controlled Substances / Alcohol and Driver Fitness below 75%. See our <a href="/amazon-relay-requirements/">requirements guide</a> for the full list.</p></div></details>
+      <details><summary>What are the Amazon Relay violation rate limits?</summary><div class="a"><p>The driver violation rate must be at or below 35% and the vehicle violation rate at or below 50%. Amazon uses 12 months of FMCSA inspection data and counts OOS violations twice.</p></div></details>
+      <details><summary>Can I appeal Amazon Relay's safety limits?</summary><div class="a"><p>No. Amazon says that, like BASICs violations, it won't offer an appeal process for violation rate limits.</p></div></details>
+      <details><summary>Does Amazon Relay use the crash indicator?</summary><div class="a"><p>No. Amazon's CSA post says the crash indicator is private data and Relay doesn't monitor it. Relay also doesn't use the hazmat BASIC.</p></div></details>
+      <details><summary>Who is Amazon Relay's third-party compliance partner?</summary><div class="a"><p>Amazon doesn't name the service Relay uses. The FAQ only says it uses internal compliance teams and a third-party compliance monitoring service.</p></div></details>
+      <details><summary>How often should I update my MCS-150 for Relay?</summary><div class="a"><p>You have to update it every two years, but Amazon's CSA post recommends every six months.</p></div></details>
+    </section>
+
+    <aside class="cta">
+      <div><h2>Know what the next load is worth before you take it.</h2><p>7 days free, no card needed &middot; 5.0 on the Chrome Web Store</p></div>
+      <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Start the 7-day trial</a>
+    </aside>
+
+    <nav class="related" aria-label="More Amazon Relay guides">
+      <h2>More Amazon Relay guides</h2>
+      <div class="cards">
+        <a href="/amazon-relay-cargo-van/">Can you use a cargo van for Amazon Relay?</a>
+        <a href="/amazon-relay-app/">Amazon Relay app: what it does and how drivers use it</a>
+        <a href="/amazon-relay-approval-time/">How long does it take to get approved for Amazon Relay?</a>
+        <a href="/amazon-relay-assistant/">Amazon Relay Assistant: rate negotiation and trip support</a>
+        <a href="/amazon-relay-background-check/">Amazon Relay background check: what drivers and carriers should know</a>
+        <a href="/amazon-relay-california-carb/">Amazon Relay CARB compliance: Clean Truck Check for California loads</a>
+      </div>
+    </nav>
+
+    <div class="footer">
+      &copy; 2026 NudoIQ &nbsp;&middot;&nbsp; <a href="/">nudoiq.com</a> &nbsp;&middot;&nbsp; <a href="/guides/">Amazon Relay guides</a> &nbsp;&middot;&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;&middot;&nbsp; <a href="/refund-policy.html">Refund policy</a> &nbsp;&middot;&nbsp; <a href="/terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="/partners/">Partners</a> &nbsp;&middot;&nbsp; <a href="mailto:contact@nudoiq.com">Contact</a>
+    </div>
+    <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. Amazon Relay requirements change; confirm current rules at relay.amazon.com.</p>
+
+  </div>
+</body>
+</html>
