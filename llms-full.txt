@@ -5933,9 +5933,9 @@ Amazon doesn't publish a truck age or model year rule.
 
 ## Is Amazon Relay an owner-operator job?
 
-No. People search for "Amazon Relay owner operator jobs," but Relay isn't hiring drivers. Amazon's [driver eligibility post](https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads) says: "Relay-approved carriers are independent contractors, not Amazon employees. Carriers are responsible for their own drivers."
+No. People search for "Amazon Relay owner operator jobs," but Relay isn't a job listing. Amazon's [driver eligibility post](https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads) says: "Relay-approved carriers are independent contractors, not Amazon employees. Carriers are responsible for their own drivers."
 
-You run your own business and pick your own loads. Nobody assigns you a route.
+You run your own business and choose which loads and contracts to take.
 
 ## How do owner-operators find and book loads?
 
@@ -6143,7 +6143,7 @@ You have to update it every two years, but Amazon's CSA post recommends every si
 URL: https://nudoiq.com/amazon-relay-fraud/
 Published: 2026-10-14. Last updated: 2026-10-14.
 
-Short answer: Amazon doesn't allow double brokering, and it tenders loads only to approved carriers on the Relay portal or app, never through third-party load boards, so an "Amazon load" offered anywhere else wasn't tendered by Amazon. Report suspicious activity to relay-network-reports@amazon.com with a detailed description and the DOT numbers involved. In an emergency such as an active theft, call 911; Amazon publishes no fraud department phone number.
+Short answer: Amazon doesn't allow double brokering, and it tenders loads only to approved carriers on the Relay portal or app, never through third-party load boards, so an "Amazon load" offered anywhere else wasn't tendered by Amazon. Report suspicious activity to relay-network-reports@amazon.com with a detailed description and DOT numbers if you know them, or contact the Relay Operations Center, which Amazon says takes reports 24/7 through the Relay portal or app. In an emergency such as an active theft, call 911; Amazon doesn't publish a fraud phone number.
 
 ## What kinds of fraud hit Amazon Relay carriers?
 
@@ -6167,10 +6167,10 @@ Not as Amazon tenders. The [Relay FAQ](https://relay.amazon.com/faq) says: "Amaz
 
 If you also work other boards, Amazon repeats FMCSA's red flags:
 
-* Confirm phone numbers using SAFER, and check insurance documents and BOLs.
-* Watch for P.O. box addresses, recently activated authority, and anyone who won't share a driver phone number or tracking.
+* Confirm brokers' and carriers' phone numbers using SAFER, and check insurance documents and BOLs.
+* Watch for carriers with P.O. box addresses or recently activated authority, and carriers who won't share a driver phone number or tracking.
 * Stop if you're asked to present yourself under a different name or told it's a "blind load."
-* Stop if you're offered more pay quickly, or a rate that "far exceeds the current market rate."
+* Stop if a broker is quick to agree to pay you more, or the rate "far exceeds the current market rate."
 
 Our [Amazon Relay vs DAT guide](https://nudoiq.com/amazon-relay-vs-dat/) compares how the two boards handle this.
 
@@ -6233,11 +6233,11 @@ For what a dispatcher can see on a load, see our [dispatcher guide](https://nudo
 
 ## How do you report Amazon Relay fraud?
 
-Email relay-network-reports@amazon.com "with a detailed description of the suspicious activity, including the DOT #s involved." The FAQ says "You'll receive an automated email confirming receipt."
+Email relay-network-reports@amazon.com "with a detailed description of the suspicious activity, including the DOT #s involved (if known)." Amazon's [secure freight page](https://relay.amazon.com/pages/secure-freight-how-amazon-prevents-trucking-fraud-theft) says carriers and drivers can also report suspicious activity any time by contacting the operations center. The FAQ says the Relay Operations Center gives 24/7 support and "can be reached through the Relay portal or Relay mobile." It also says "You'll receive an automated email confirming receipt."
 
 Amazon also tells fraud victims to file a report with the Federal Trade Commission at reportfraud.ftc.gov and with local law enforcement.
 
-There's no fraud department phone line. The FAQ says "Amazon Relay doesn't have an official contact phone number." A number for Relay you find on another website isn't on relay.amazon.com. Our [Relay contact guide](https://nudoiq.com/amazon-relay-contact/) lists every route Amazon publishes.
+Amazon doesn't publish a fraud phone number. relay.amazon.com publishes no phone number for Relay support or fraud, so treat any number you find elsewhere with caution. Our [Relay contact guide](https://nudoiq.com/amazon-relay-contact/) lists every route Amazon publishes.
 
 ## What doesn't Amazon publish about fraud?
 
@@ -6251,7 +6251,7 @@ There's no fraud department phone line. The FAQ says "Amazon Relay doesn't have 
 
 ## Where does NudoIQ fit?
 
-NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net profit and lane price history on each load, and it never asks for your Amazon password. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net profit and lane price history on each load. It's free for 7 days with no card needed to start, then $49.99 a month.
 
 ## Frequently asked questions
 
@@ -6262,7 +6262,7 @@ No. Amazon says it doesn't allow double brokering, and only businesses with expr
 Amazon says it does not tender loads through any third-party load boards. It tenders loads directly to approved carriers on the Relay portal or app only.
 
 ### Is there an Amazon Relay fraud department phone number?
-No, Amazon doesn't publish a phone number for Relay fraud. Email relay-network-reports@amazon.com with the details and DOT numbers, and call 911 in an emergency.
+No, Amazon doesn't publish a phone number for Relay fraud. Email relay-network-reports@amazon.com with the details (DOT numbers if known), or contact the Relay Operations Center 24/7 through the Relay portal or app. Call 911 in an emergency.
 
 ### What happens if you get caught geospoofing on Amazon Relay?
 Amazon lists immediate account termination, a permanent ban from Amazon Relay and referral to law enforcement.
@@ -6430,7 +6430,7 @@ Amazon doesn't publish the grade or score you need. Our [Relay scorecard guide](
 
 Know your floor before you pitch. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) takes the pay, loaded miles, deadhead and your costs, and gives you net, net per loaded mile and a break-even rate. The break-even rate is the lowest rate per loaded mile that covers your costs on that load.
 
-Then ask with that number in mind. Amazon decides, and the final rate reflects market conditions, so a request could be approved, countered or turned down.
+Then ask with that number in mind. Amazon decides, and the final rate reflects market conditions, so a request could be approved or met with a counteroffer, and Amazon doesn't say every request gets one or the other.
 
 Amazon says Relay Assistant "will consider any details you offer," so give it the facts that matter to you: when your truck is free, where it is, and the rate you need to make the load work.
 
@@ -6465,9 +6465,9 @@ Our [Relay disputes guide](https://nudoiq.com/amazon-relay-disputes/) covers how
 
 ## What's planned for Relay Assistant?
 
-These are plans, not live tools yet. Amazon says: "By end of this year, carriers will be able to ask RA to repeat Post A Truck orders." It also lists load availability, schedule changes and route patterns as planned areas.
+These are plans, not live tools yet. Amazon says: "By end of this year, carriers will be able to ask RA to repeat Post A Truck orders." Amazon describes Post A Truck orders as automatically booking loads that match your search criteria. It also lists load availability, schedule changes and route patterns as planned areas.
 
-Today, Amazon describes no way for Relay Assistant to book loads on its own.
+Today, Amazon doesn't describe Relay Assistant booking loads by itself.
 
 ## What doesn't Amazon publish about Relay Assistant?
 
@@ -6480,7 +6480,7 @@ Today, Amazon describes no way for Relay Assistant to book loads on its own.
 
 ## Where does NudoIQ fit?
 
-NudoIQ is an independent Chrome extension for the Relay load board. On loads Amazon marks negotiable, it can show a negotiate icon that opens Relay's own Relay Assistant chat. It opens the general chat, not a chat about that specific load. NudoIQ also shows net profit on each load, so you can see your number before you pitch. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. On loads Amazon marks negotiable, it can show a negotiate icon that opens Relay's own Relay Assistant chat. It opens the general chat, not a chat about that specific load. NudoIQ also shows net profit on each load, so you can see your number before you pitch. It's free for 7 days with no card needed to start, then $49.99 a month.
 
 ## Frequently asked questions
 
@@ -6503,7 +6503,7 @@ Relay Assistant is an AI-powered chat. Amazon says that when it can't resolve an
 Amazon says Relay Assistant's answers for disruptions include the ability to reroute and release drivers.
 
 ### Can Relay Assistant book loads for me?
-Amazon doesn't describe Relay Assistant booking loads on its own today. It says that by the end of 2026, you'll be able to ask it to repeat Post A Truck orders.
+Amazon doesn't describe Relay Assistant booking loads on its own today. It says that by the end of 2026, you'll be able to ask it to repeat Post A Truck orders, which automatically book loads that match your search criteria.
 
 ---
 
@@ -6518,16 +6518,16 @@ Short answer: Amazon Relay is Amazon's own load board: access is free once you'r
 
 Who posts the freight. On Relay, Amazon tenders its own loads straight to carriers, plus what Amazon calls "Newer load options like hostler and shuttle and third-party shipper loads." On DAT, brokers and shippers post loads for carriers to find.
 
-DAT facts below are per DAT's website, checked October 2026. Relay facts are from Amazon's own pages.
+DAT facts below are per DAT's website, checked October 14, 2026. Relay facts are from Amazon's own pages.
 
-| | Amazon Relay | DAT (per dat.com, checked October 2026) |
+| | Amazon Relay | DAT (per dat.com, checked October 14, 2026) |
 |---|---|---|
 | Who posts loads | Amazon, plus some third-party shipper loads | Brokers and shippers |
-| Cost to carriers | Free access | Plans from $59 a month (October 14, 2026) |
-| How you get in | Approval: DOT, MC, safety and insurance limits | A paid subscription |
+| Cost to carriers | Free access | Plans from $59 a month for partial loads; $149 recommended for new owner-operators |
+| How you get in | Approval: DOT, MC, safety and insurance limits | Buy a plan (dat.com lists no signup requirements) |
 | Load volume | "Thousands of loads during regular periods" | "722,500 loads posted every business day" |
-| Pay | Weekly cycle from Amazon | Depends on each broker |
-| Fraud checks | Verified carriers, identity verification | Company reviews and credit scores |
+| Pay | Weekly cycle from Amazon | Each broker's terms; DAT shows brokers' average days to pay |
+| Fraud checks (each company's own description) | Amazon's table: verified carriers, identity verification, fraud prevention | Company reviews and credit scores |
 | Mobile app | Relay app | DAT One app in all plans |
 
 ## How much does Amazon Relay cost compared to DAT?
@@ -6536,13 +6536,13 @@ Relay is free to use. Amazon's [home page](https://relay.amazon.com/) says Relay
 
 DAT charges a monthly subscription. Per [DAT's pricing section](https://www.dat.com/load-boards#pricing), checked October 14, 2026, carrier plans were:
 
-* DAT One Standard: $59 a month, with "up to 500 load searches and truck posts per month"
-* DAT One Enhanced: $149 a month
+* DAT One Standard: $59 a month, with "up to 500 load searches and truck posts per month" (DAT recommends it for partial loads, like box trucks and sprinter vans)
+* DAT One Enhanced: $149 a month (DAT's pick for new owner-operators)
 * DAT One Pro: $169 a month
 * DAT One Select: $259 a month, plus $169 per additional user
 * DAT One Office: $339 a month, plus $169 per additional user
 
-That day, DAT's page also showed a limited-time "Gear Up Event" upgrade running until October 23, 2026. Prices and offers change, so check DAT's site before you buy.
+That day, DAT's page said that during its "Gear Up Event" it was giving "Best-Fit rates until October 23." Prices and offers change, so check DAT's site before you buy.
 
 Amazon's [brokers vs direct booking post](https://relay.amazon.com/blog/intro-to-amazon-relay/freight-brokers-vs-direct-booking-why-choose-amazon-relay) says traditional load boards "Often require paid subscriptions." That's Amazon's general view of load boards and brokers, not a statement about DAT by name.
 
@@ -6550,7 +6550,7 @@ Amazon's [brokers vs direct booking post](https://relay.amazon.com/blog/intro-to
 
 Relay requires approval first. The [Relay FAQ](https://relay.amazon.com/faq) asks for a DOT number active at least 180 days, a valid MC number, safety scores within Amazon's BASIC limits and insurance minimums. Our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/) has the full list. After approval, access depends on how you perform: Amazon's comparison table lists "Performance-based access to loads" for Relay.
 
-DAT is a subscription. You pick a plan and pay. DAT also sells operating authority services, factoring, a fuel card and insurance, per its product menu. DAT doesn't publish a minimum authority age on the pages we checked.
+DAT's pages we checked on October 14, 2026 list plans to buy and don't publish signup requirements or a minimum authority age. DAT also sells operating authority services, factoring, a fuel card and insurance, per its product menu.
 
 ## Who posts the loads, and does it matter?
 
@@ -6558,7 +6558,7 @@ On Relay, Amazon is the shipper. Amazon says it doesn't tender loads through any
 
 Amazon's brokers post claims that brokers "take a finder's fee for each load (usually 13-15%)." That's Amazon's claim about brokers in general.
 
-On DAT, you deal with brokers and shippers. Here's where DAT does well. Per [DAT's load boards page](https://www.dat.com/load-boards), it offers "More loads than any other load board, plus company reviews and credit scores," and it says "more than 291 million loads & trucks posted annually." Per [DAT's carriers page](https://www.dat.com/carriers), carriers get "access to 722,500 loads posted every business day."
+On DAT, you deal with brokers and shippers. Here's where DAT does well. Per [DAT's load boards page](https://www.dat.com/load-boards) on October 14, 2026, it offers "More loads than any other load board, plus company reviews and credit scores," and it says "more than 291 million loads & trucks posted annually." Per [DAT's carriers page](https://www.dat.com/carriers) that day, carriers get "access to 722,500 loads posted every business day."
 
 Amazon doesn't publish a load count that matches DAT's "posted every business day" number, so the two can't be compared directly. Amazon's [peak season post](https://relay.amazon.com/blog/amazons-peak-season-for-carriers) forecasts 300 thousand loads per week by December 2026.
 
@@ -6566,11 +6566,11 @@ Amazon doesn't publish a load count that matches DAT's "posted every business da
 
 Relay pays on a set schedule. The FAQ says: "Payment cycle runs weekly from Sunday-Saturday. Everything completed before 23:59 Saturday will be paid out the following week on Friday." Amazon also contrasts this with "30-60 day waits for payouts from logistics brokers," which is Amazon's claim about brokers in general. Our [payments guide](https://nudoiq.com/amazon-relay-payments/) covers invoices and disputes.
 
-On DAT, pay terms depend on each broker. DAT doesn't publish one schedule. Its higher plans include DAT Assurance, where "Our team helps carriers with past-due freight payments."
+DAT doesn't set one schedule; each broker pays on its own terms. Per dat.com on October 14, 2026, its plans show each broker's average days to pay and credit score, and DAT said: "On average, our brokers pay within 28 days." DAT also sells factoring (DAT Outgo) for faster payment, at a cost. Its Pro, Select and Office plans include DAT Assurance, where "Our team helps carriers with past-due freight payments," with credits of $250, $500 and $1,000 by plan.
 
 ## How do Relay and DAT handle fraud?
 
-Amazon's comparison table lists three controls for Relay: "Verified carriers only," "No double brokering" and "Identity verification." Because Amazon doesn't tender loads through third-party boards, an "Amazon load" offered on another board wasn't tendered by Amazon.
+Amazon's own comparison table lists four for Relay: "Verified carriers only," "No double brokering," "Identity verification" and "Fraud prevention." That's Amazon's description of its own board. Because Amazon doesn't tender loads through third-party boards, an "Amazon load" offered on another board wasn't tendered by Amazon.
 
 DAT gives you tools to check the other side: company reviews and credit scores on brokers.
 
@@ -6580,8 +6580,8 @@ Our [Amazon Relay fraud guide](https://nudoiq.com/amazon-relay-fraud/) covers do
 
 It depends on your situation, not on which board is "better."
 
-* **If you can't meet Relay's requirements yet,** Relay isn't open to you until you do. DAT is a paid subscription instead of an approval.
-* **If you qualify for Relay,** you get Amazon's freight free, with weekly pay and access tied to your performance.
+* **If you can't meet Relay's requirements yet,** Relay isn't open to you until you do. DAT's pages don't publish entry requirements.
+* **If you qualify for Relay,** access to Amazon's freight is free, with weekly pay and access tied to your performance.
 * **If you want broker freight from many shippers,** that's DAT's market.
 
 Whichever board a load comes from, run the numbers the same way. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows net, net per loaded mile and break-even rate from the pay, miles and your costs. For how Relay prices loads, see [how much Amazon Relay pays](https://nudoiq.com/how-much-does-amazon-relay-pay/) and our [Relay rates pages](https://nudoiq.com/amazon-relay-rates/). Our [Relay load board guide](https://nudoiq.com/amazon-relay-load-board/) covers the board itself.
@@ -6589,7 +6589,7 @@ Whichever board a load comes from, run the numbers the same way. Our free [Relay
 ## What doesn't either side publish?
 
 * A Relay load count that matches DAT's per-business-day number
-* DAT's payment terms, which depend on each broker
+* One payment schedule for all DAT loads
 * A rate comparison between the two
 * Whether DAT requires a minimum authority age
 
@@ -6597,24 +6597,24 @@ We don't compare rates between the two, because neither publishes one.
 
 ## Where does NudoIQ fit?
 
-NudoIQ works on the Relay load board only, not on DAT. It's an independent Chrome extension, not affiliated with Amazon, that shows net profit and lane price history on each Relay load, from costs you set once. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ works only on Amazon Relay's website, not on DAT. It's an independent Chrome extension, not affiliated with Amazon, that shows net profit and lane price history on each Relay load, from costs you set once. It's free for 7 days with no card needed to start, then $49.99 a month.
 
 ## Frequently asked questions
 
 ### Is Amazon Relay free compared to DAT?
-Yes. Amazon says Relay gives trucking companies free access once approved. DAT carrier plans started at $59 a month per dat.com, checked October 14, 2026.
+Yes. Amazon says Relay gives trucking companies free access once approved. Per dat.com on October 14, 2026, DAT carrier plans started at $59 a month for partial loads, and DAT recommended its $149 plan for new owner-operators.
 
 ### Can I find Amazon Relay loads on DAT?
 Amazon says it does not tender loads through any third-party load boards. Amazon loads are tendered only to approved carriers on the Relay portal or app.
 
 ### Is Amazon Relay better than DAT?
-Neither is better for every carrier. Relay is free but needs approval and only carries Amazon freight plus some third-party shipper loads, while DAT is paid and carries broker and shipper freight.
+Neither is better for every carrier. Relay is free but needs approval and only carries Amazon freight plus some third-party shipper loads, while DAT, per dat.com on October 14, 2026, is paid and carries broker and shipper freight.
 
 ### Does DAT pay faster than Amazon Relay?
-On DAT, your pay comes from each broker on its own terms. Relay pays weekly: work completed by 23:59 Saturday is paid the following Friday, per Amazon's FAQ.
+On DAT, your pay comes from each broker on its own terms; per dat.com on October 14, 2026, DAT said its brokers pay within 28 days on average. Relay pays weekly: work completed by 23:59 Saturday is paid the following Friday, per Amazon's FAQ.
 
 ### How many loads does DAT have compared to Relay?
-DAT says 722,500 loads are posted every business day. Amazon doesn't publish a matching number; it says thousands of loads in regular periods.
+Per dat.com on October 14, 2026, DAT said 722,500 loads are posted every business day. Amazon doesn't publish a matching number; it says thousands of loads in regular periods.
 
 ### What does a DAT load board subscription cost per month?
 Per dat.com on October 14, 2026, carrier plans were $59, $149, $169, $259 and $339 a month, with $169 per additional user on Select and Office. Check DAT's site, since prices change.
