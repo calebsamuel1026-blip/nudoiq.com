@@ -1498,7 +1498,7 @@ NudoIQ is a browser extension that runs inside the Relay load board and includes
 
 **Post A Truck Helper**: When posting availability, NudoIQ shows origin, destination, distance, and board price alongside your minimums, then posts with one click.
 
-**Other Features**: HOS overview, and Telegram alerts if you connect Telegram.
+**Other Features**: Telegram alerts if you connect Telegram.
 
 **Best for**: Carriers who want a full-featured refresher, rate history, profit calculation, dispute support, and backhaul finding all in one tool.
 
