@@ -66,6 +66,12 @@ Last updated: 2026-10-08.
 
 - [NudoIQ home](https://nudoiq.com/): product overview, features, pricing and FAQ.
 - [NudoIQ en español](https://nudoiq.com/es/): the home page in Spanish.
+- [Бронируйте нужные грузы для каждого перевозчика раньше других](https://nudoiq.com/ru/): Расширение для load board Amazon Relay для диспетчеров: чистая прибыль по грузу, Lane Intelligence, AutoBook и backhaul. 7 дней бесплатно, карта не нужна.
+- [Альтернатива Load Fetcher: NudoIQ и LoadFetcher для load board в Amazon Relay](https://nudoiq.com/ru/loadfetcher-alternative/): Load Fetcher vs NudoIQ: NudoIQ бронирует грузы Relay, которые проходят ваш минимум прибыли. В тарифах LoadFetcher не указано (окт. 2026). 7 дней бесплатно.
+- [Лучшие расширения для Amazon Relay: рефрешеры и автобукеры](https://nudoiq.com/ru/best-amazon-relay-extensions/): Сравнение расширений для Amazon Relay: на что смотреть в рефрешере и автобукере и чем отличаются LoadFetcher, Rocket Relay и NudoIQ.
+- [Автобукер для Amazon Relay: как работает автоматическое бронирование](https://nudoiq.com/ru/amazon-relay-auto-booker/): Задайте Min Net Profit и лимит Max books, чтобы автобукер в Relay брал только нужные грузы. Как работает AutoBook. 7 дней бесплатно.
+- [Сколько груз Relay даст чистыми: узнайте до бронирования](https://nudoiq.com/ru/tools/relay-load-calculator/): Введите оплату и мили груза Relay и узнайте чистую прибыль, чистыми за груженую милю и ставку безубыточности до бронирования. Deadhead учтен. Бесплатно.
+- [Письмо для диспута по scorecard Amazon Relay](https://nudoiq.com/ru/tools/relay-dispute-letter/): Опоздание или нарушение по app usage в scorecard Amazon Relay? Отметьте, что верно, и получите письмо для диспута, готовое для Relay. Бесплатно.
 - [Amazon Relay guides](https://nudoiq.com/guides/): every guide below in one list.
 - [Write your Amazon Relay scorecard dispute letter](https://nudoiq.com/tools/relay-dispute-letter/): Free Amazon Relay scorecard dispute letter generator: pick the violation, tick what's true, copy a letter to submit in Relay. Runs in the browser, nothing is sent, and Amazon decides every dispute.
 - [See what a Relay load nets before you book](https://nudoiq.com/tools/relay-load-calculator/): Free Amazon Relay load calculator: enter pay, loaded and deadhead miles, fuel price, MPG and costs per mile to see the net, net per loaded mile and break-even rate. Runs in the browser.

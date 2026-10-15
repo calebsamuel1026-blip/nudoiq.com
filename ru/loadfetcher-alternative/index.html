@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <!-- Google Ads click id capture (2026-10-05, copied to /loadfetcher-alternative/ 2026-10-06 for the Competitor campaign; research/google-ads/RESTRUCTURE-2026-10-05.md). The Web Store hop loses the
+       ad click, so the gclid (or gbraid/wbraid on iOS/app traffic) is kept in localStorage on nudoiq.com, and /welcome/
+       (same origin, opened by the extension after install) sends it with the welcome_opened funnel row. That row is what
+       the "Trial started" / "Paid subscriber" offline conversions are matched back to. Kept 90 days (Google's upload
+       window); the newest click wins. Store links get utm_source/medium/campaign only: the Chrome Web Store dashboard
+       reports those three and passes nothing to the extension, so a per-click id in the store URL would carry nothing. -->
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search), keys = ["gclid", "gbraid", "wbraid"], i, v;
+        for (i = 0; i < keys.length; i++) {
+          v = q.get(keys[i]);
+          if (v && /^[\w.\-]{10,300}$/.test(v)) {
+            localStorage.setItem("nudoiq_gclid", JSON.stringify({ type: keys[i], id: v, ts: Date.now(), lp: location.pathname }));
+            break;
+          }
+        }
+        var s = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+        if (!s || !s.ts || Date.now() - s.ts > 90 * 864e5) return;
+        var camp = (q.get("utm_campaign") || "google_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "google_ads";
+        var tag = function () {
+          Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+            var u = new URL(a.href);
+            u.searchParams.set("utm_source", "google");
+            u.searchParams.set("utm_medium", "cpc");
+            u.searchParams.set("utm_campaign", camp);
+            a.href = u.toString();
+          });
+        };
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+      } catch (e) {}
+    })();
+  </script>
+  <title>Load Fetcher vs NudoIQ: автобронирование, цена, бесплатная неделя</title>
+  <meta name="description" content="Load Fetcher vs NudoIQ: NudoIQ бронирует грузы Relay, которые проходят ваш минимум прибыли. В тарифах LoadFetcher не указано (окт. 2026). 7 дней бесплатно.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/ru/loadfetcher-alternative/">
+  <link rel="alternate" hreflang="en" href="https://nudoiq.com/loadfetcher-alternative/">
+  <link rel="alternate" hreflang="ru" href="https://nudoiq.com/ru/loadfetcher-alternative/">
+  <link rel="alternate" hreflang="x-default" href="https://nudoiq.com/loadfetcher-alternative/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Load Fetcher vs NudoIQ: автобронирование, цена, бесплатная неделя">
+  <meta property="og:description" content="Load Fetcher vs NudoIQ: NudoIQ бронирует грузы Relay, которые проходят ваш минимум прибыли. В тарифах LoadFetcher не указано (окт. 2026). 7 дней бесплатно.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/ru/loadfetcher-alternative/">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="article:published_time" content="2026-09-20">
+  <meta property="article:modified_time" content="2026-10-14">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Load Fetcher vs NudoIQ: автобронирование, цена, бесплатная неделя">
+  <meta name="twitter:description" content="Load Fetcher vs NudoIQ: NudoIQ бронирует грузы Relay, которые проходят ваш минимум прибыли. В тарифах LoadFetcher не указано (окт. 2026). 7 дней бесплатно.">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: "ru-loadfetcher-alternative"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "ru-loadfetcher-alternative"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <style>
+  /* Page-specific additions on top of doc.css + guide.css (hand-built page, data-layout="custom"). */
+  /* Contrast: the shared title-panel blues (#2551B8 on #B1CBFF = 4.36:1) and grey #888 (3.54:1) miss WCAG AA, so this page
+     uses navy in the panel and the scorecard page's darker grey. */
+  :root{--g3:#6F6F6F}
+  .lf .doc-hero .crumbs,.lf .doc-hero .crumbs a,.lf .page-subtitle,.lf .hero-cta .micro,.lf .byline,.cta p,.cta .micro{color:var(--navy)}
+  .lf .byline{opacity:1}
+  .lf caption a{color:var(--blue-deep)}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:999;border-radius:0 0 var(--ri) 0}
+  .skip:focus{left:0}
+  .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:0 8px}
+  .crumbs li+li::before{content:"\203A";margin-right:8px;color:var(--blue-deep)}
+  .lf .page-title{max-width:24ch;font-size:clamp(32px,4.4vw,52px)}
+  .lf .doc-hero .answer{background:#fff;border-color:rgba(22,22,22,.06);border-left-color:var(--blue);margin:22px 0 18px;max-width:var(--col)}
+  .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:22px}
+  .hero-cta .micro{color:var(--blue-deep);font-size:14px;font-weight:500}
+  .prose section{scroll-margin-top:88px}
+  .prose section > p{color:var(--ink-4);font-size:17px;line-height:1.68;margin:0 0 18px}
+  .prose section:first-child h2{margin-top:8px}
+  .lf .tbl{margin:10px 0 18px;background:#fff}
+  .lf .tbl:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+  .lf table{min-width:680px;font-size:14.5px}
+  .lf caption{caption-side:top;text-align:left;padding:14px 16px;font-size:13.5px;line-height:1.55;color:var(--ink-4);
+    background:var(--paper-2);border-bottom:1px solid rgba(22,22,22,.08)}
+  .lf caption span{display:block;position:sticky;left:16px;max-width:calc(100vw - 66px)}
+  .lf thead th{white-space:nowrap}
+  .lf thead th:nth-child(2){color:var(--blue-deep)}
+  .lf tbody th[scope=row]{background:#fff;color:var(--ink);font-weight:600;width:24%;position:sticky;left:0;z-index:1;
+    box-shadow:1px 0 0 rgba(22,22,22,.08)}
+  .lf thead th:first-child{position:sticky;left:0;z-index:2}
+  .lf tbody tr:last-child th{border-bottom:0}
+  .fn{font-size:11px;line-height:0;margin-left:3px;white-space:nowrap}
+  .fn a{text-decoration:none;font-weight:600;padding:0 2px}
+  .prose h3#sources{font-size:15px;margin:18px 0 8px}
+  .sources{font-size:14px;color:var(--ink-4)}
+  .prose .sources li{font-size:14px;line-height:1.55;margin:0 0 6px}
+  .sources a{word-break:break-all}
+  .prose section > p.tmnote{font-size:13px;color:var(--g3);line-height:1.55;margin:4px 0 0}
+  .pick{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 20px}
+  .pick-col{background:var(--paper-2);border:1px solid rgba(22,22,22,.07);border-radius:var(--ri);padding:20px 22px 6px}
+  .pick-nq{border-color:var(--peri-2);background:#F3F7FF}
+  .prose .pick h3{margin:0 0 10px;font-size:17px}
+  .prose .pick li{font-size:15.5px;line-height:1.55}
+  .midlink a{font-weight:600}
+  .prose .faq{margin:48px 0 0;max-width:none}
+  .prose .faq h2{margin:0 0 14px}
+  .faq .a p{font-size:16px;line-height:1.62}
+  .cta .micro{color:var(--navy);font-size:13.5px;margin-top:8px;text-align:center}
+  /* 2026-10-09 freshness pill above the table: same component as /get/loadfetcher/ .checked (ClickUp's dated pill). */
+  .prose section > p.upd{margin:0 0 2px}
+  .upd .checked{display:inline-flex;align-items:center;gap:6px;background:var(--paper-2);border:1px solid #E1E7F5;border-radius:var(--rp);padding:5px 14px;font-size:12.5px;font-weight:500;color:var(--ink-4)}
+  @media (max-width:660px){
+    .pick{grid-template-columns:1fr}
+    .prose section > p{font-size:16px}
+    .lf .doc-hero .answer{padding:16px 18px}
+    .hero-cta .btn{width:100%}
+    .hero-cta .micro{width:100%;text-align:center}
+    .cta-act{width:100%}
+  }
+  /* 2026-10-14 CTR pass: hero "at a glance" card. Desktop (>=1100px): H1 spans the panel, the card takes the right
+     column beside the short answer, so the hero CTA keeps its fold position. Smaller: the card follows the byline;
+     under 640px it stays a compact 3-column table (smaller type and padding, check glyphs hidden). */
+  .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .glance{background:#fff;border:1px solid rgba(22,22,22,.06);border-radius:var(--ri);padding:16px 16px 12px;margin-top:22px;
+    box-shadow:0 1px 2px rgba(22,30,60,.05),0 8px 24px rgba(22,30,60,.06)}
+  .glance-lbl{font-size:12.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--blue-deep);margin:0 0 8px}
+  .lf .gl{min-width:0;width:100%;border-collapse:separate;border-spacing:0;font-size:13px;line-height:1.38}
+  .gl th,.gl td{padding:7px 7px;border-bottom:1px solid #E6E9F0;vertical-align:top;text-align:left}
+  .gl thead th{font-size:13.5px;font-weight:600;color:var(--ink);padding-top:4px;padding-bottom:8px}
+  .gl thead .nq{color:var(--blue-deep)}
+  .gl tbody th{font-weight:600;color:var(--ink);width:25%}
+  .gl .nq{background:#F3F7FF;color:var(--ink)}
+  .gl td:not(.nq){color:var(--ink-4)}
+  .gl tbody tr:last-child th,.gl tbody tr:last-child td{border-bottom:0}
+  .gl .yes{display:inline-flex;gap:6px;align-items:flex-start}
+  .gl .ck{flex:0 0 14px;width:14px;height:14px;margin-top:2px;color:var(--blue)}
+  .lf .glance-note{font-size:12.5px;line-height:1.5;color:var(--ink-4);margin:10px 2px 0}
+  .glance-note a{color:var(--blue-deep);font-weight:600;display:inline-block;padding:6px 0;margin:-6px 0}
+  @media (min-width:1100px){
+    .lf .doc-hero-in{display:grid;grid-template-columns:minmax(0,1fr) 396px;column-gap:28px;align-items:start;grid-template-rows:auto auto auto auto auto auto 1fr}
+    .lf .doc-hero-in > *{grid-column:1}
+    .lf .doc-hero-in > .crumbs,.lf .doc-hero-in > .page-title{grid-column:1 / -1}
+    .lf .page-title{max-width:none}
+    .lf .doc-hero-in > .glance{grid-column:2;grid-row:3 / 8;margin-top:22px}
+  }
+  @media (max-width:640px){
+    .glance{padding:14px 10px 10px}
+    .lf .gl{font-size:12.5px}
+    .gl th,.gl td{padding:7px 5px}
+    .gl tbody th{width:26%}
+    .gl .ck{display:none}
+  }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://nudoiq.com/ru/loadfetcher-alternative/#article",
+      "headline": "Альтернатива Load Fetcher: NudoIQ и LoadFetcher для load board в Amazon Relay",
+      "description": "Load Fetcher vs NudoIQ: NudoIQ бронирует грузы Relay, которые проходят ваш минимум прибыли. В тарифах LoadFetcher не указано (окт. 2026). 7 дней бесплатно.",
+      "abstract": "NudoIQ подойдет как альтернатива Load Fetcher, если вы хотите, чтобы грузы бронировались за вас. Это расширение для Chrome для перевозчиков Amazon Relay: оно обновляет load board, через AutoBook бронирует только грузы, которые проходят ваш минимум чистой прибыли, и составляет письма для диспута по scorecard. В открытом описании LoadFetcher нет ни автобронирования, ни писем для диспута. NudoIQ стоит $49.99 в месяц, одна цена для всех траков.",
+      "url": "https://nudoiq.com/ru/loadfetcher-alternative/",
+      "mainEntityOfPage": "https://nudoiq.com/ru/loadfetcher-alternative/",
+      "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+      "datePublished": "2026-09-20",
+      "dateModified": "2026-10-14",
+      "inLanguage": "ru",
+      "author": {
+        "@id": "https://nudoiq.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://nudoiq.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://nudoiq.com/#software"
+      },
+      "about": [
+        {
+          "@id": "https://nudoiq.com/#software"
+        },
+        {
+          "@type": "Thing",
+          "name": "LoadFetcher",
+          "url": "https://loadfetcher.com/",
+          "sameAs": [
+            "https://chromewebstore.google.com/detail/ihcgicdogclbieclnldfjmlglkolankb"
+          ]
+        }
+      ],
+      "keywords": [
+        "Load Fetcher alternative",
+        "LoadFetcher alternative",
+        "Amazon Relay load board",
+        "Amazon Relay auto booker"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nudoiq.com/ru/loadfetcher-alternative/#faq",
+      "url": "https://nudoiq.com/ru/loadfetcher-alternative/",
+      "name": "Вопросы об альтернативе Load Fetcher",
+      "inLanguage": "ru",
+      "isPartOf": {
+        "@id": "https://nudoiq.com/#website"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Что такое Load Fetcher?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "LoadFetcher: расширение для Chrome для load board в Amazon Relay, его выпускает Fierce Trade LLC. В описании в магазине названы такие инструменты, как автообновление, отслеживание рейсов, оповещения и Post Truck Manager (проверено 14 октября 2026 г.). NudoIQ: отдельное расширение для того же load board, с AutoBook по вашему минимуму чистой прибыли."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Является ли Load Fetcher расширением для Chrome?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. LoadFetcher работает как расширение для Chrome. Его добавляют в Chrome со страницы в Chrome Web Store. В описании сказано, что он встроен в load board Relay (проверено 14 октября 2026 г.). NudoIQ: отдельное расширение для Chrome. Если пробуете оба, запускайте только одно расширение для load board за раз, чтобы они не конфликтовали."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Является ли Load Fetcher самим load board?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. LoadFetcher: расширение для Chrome, которое работает внутри load board Relay от Amazon. В его описании сказано, что он встроен прямо в load board Relay (проверено 14 октября 2026 г.). NudoIQ: отдельное расширение для Chrome для того же load board. Он обновляет load board и может бронировать грузы, которые проходят ваш минимум чистой прибыли."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Load Fetcher бесплатный?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, у LoadFetcher есть бесплатный тариф за $0 с автообновлением, фильтрами и инструментами Post a Truck. Платные тарифы: Plus $24, Pro $49 и Team $90 в месяц за 2 места (проверено 14 октября 2026 г.). У NudoIQ нет бесплатного тарифа. Его бесплатный ознакомительный режим работает до старта бесплатного пробного периода на 7 дней, карта не нужна. Затем $49.99 в месяц."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какая альтернатива Load Fetcher лучше всего подойдет?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NudoIQ подойдет как альтернатива Load Fetcher, если вы хотите, чтобы расширение бронировало грузы за вас. Оно обновляет load board в Amazon Relay, через AutoBook бронирует только грузы, которые проходят ваш минимум чистой прибыли, показывает чистую прибыль по каждому грузу и составляет письма для диспута по scorecard, за $49.99 в месяц после бесплатного пробного периода на 7 дней."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Есть ли бесплатная альтернатива Load Fetcher?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Бесплатный ознакомительный режим NudoIQ с обновлением и оповещениями работает до старта бесплатного пробного периода на 7 дней, для которого карта не нужна. После пробного периода пользоваться можно за $49.99 в месяц, поэтому это не бесплатный тариф. У LODA Relay и Rocket Pro указаны бесплатные варианты (проверено в октябре 2026 г.)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Есть ли у Load Fetcher бесплатный пробный период?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. В FAQ LoadFetcher сказано, что бесплатного пробного периода нет. Вместо него есть бесплатный тариф, которым можно пользоваться без платежных данных (проверено 14 октября 2026 г.). У NudoIQ есть бесплатный пробный период на 7 дней, карта для старта не нужна, а перед ним бесплатный ознакомительный режим."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Бронирует ли Load Fetcher грузы автоматически?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "В открытом описании этого нет. На 14 октября 2026 г. в описании LoadFetcher в Chrome Web Store и в разделе тарифов автоматическое бронирование не указано. При этом в заголовке его сайта автобронирование упоминается. Режим AutoBook в NudoIQ бронирует подходящие грузы, которые проходят ваш собственный минимум чистой прибыли."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Какое расширение для Amazon Relay лучшее?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Лучшим будет то расширение для Amazon Relay, которое решает именно вашу задачу. Если нужно бесплатное автообновление с инструментами Post a Truck, хватит бесплатного тарифа LoadFetcher. Для автоматического бронирования по вашему порогу прибыли, чистой прибыли по каждому грузу и писем для диспута по scorecard создан NudoIQ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Во сколько обходится Load Fetcher в сравнении с NudoIQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "У LoadFetcher есть бесплатный тариф и платные за $24, $49 и $90 в месяц. У NudoIQ один тариф за $49.99. Тариф Team у LoadFetcher стоит $45 за место (проверено 14 октября 2026 г.). Цена NudoIQ одинакова для одного трака и для целого автопарка, есть бесплатный пробный период на 7 дней, отменить можно в любой момент."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работает ли NudoIQ на испанском?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Кнопки и оповещения NudoIQ на load board работают на английском и испанском (сообщения в Telegram приходят на английском). Русского интерфейса пока нет. В описании LoadFetcher в магазине язык указан как English (United States)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли перейти с Load Fetcher на NudoIQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, это займет несколько минут. Отключите или удалите LoadFetcher на странице расширений Chrome, добавьте NudoIQ из Chrome Web Store и начните бесплатный пробный период на 7 дней. Вход в Relay и load board остаются прежними. Запускайте только одно расширение для load board за раз, чтобы они не конфликтовали."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Выпускает ли Amazon NudoIQ или Load Fetcher?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Нет. NudoIQ: независимый продукт Sami Enterprises LLC, он не аффилирован с Amazon, не одобрен и не спонсируется им. LoadFetcher выпускает Fierce Trade LLC. Оба работают внутри load board Relay в вашем собственном Chrome."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как правильно: LoadFetcher или Lotfetcher?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Правильно LoadFetcher, иногда пишут Load Fetcher. Lotfetcher: частая опечатка в названии того же расширения для Amazon Relay, а на этой странице LoadFetcher сравнивается с NudoIQ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Помогает ли NudoIQ с Post A Truck от Amazon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Третья кнопка под карточкой груза открывает панель One-Click Post A Truck в NudoIQ: пункт погрузки, пункт доставки, расстояние и цена на load board рядом с вашим минимумом за милю и минимальной выплатой. Над полем цены стоит рекомендуемая ставка; сразу после установки она неточна и становится точнее по мере того, как собирает данные о вашем регионе. Вот как работает Post A Truck в Amazon Relay (на английском)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как NudoIQ решает, какие грузы бронировать?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "В режиме AutoBook NudoIQ бронирует только грузы, которые проходят ваш Min Net Profit, никогда не бронирует груз с неполными данными и останавливается на вашем лимите Max books. Режим ALERT сообщает о подходящем грузе, не бронируя его. Это важно, потому что отмена забронированного груза снижает ваш показатель acceptance: смотрите, что будет, если отменить груз в Amazon Relay (на английском)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nudoiq.com/ru/loadfetcher-alternative/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://nudoiq.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Руководства",
+          "item": "https://nudoiq.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Альтернатива Load Fetcher",
+          "item": "https://nudoiq.com/ru/loadfetcher-alternative/"
+        }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://nudoiq.com/#software",
+      "name": "NudoIQ",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Browser Extension",
+      "operatingSystem": "Chrome, Microsoft Edge, Brave, and other Chromium-based browsers",
+      "url": "https://nudoiq.com/",
+      "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+      "inLanguage": [
+        "en-US",
+        "es-US"
+      ],
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      },
+      "downloadUrl": "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+      "offers": {
+        "@type": "Offer",
+        "price": "49.99",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock",
+        "url": "https://nudoiq.com/#pricing",
+        "description": "Бесплатный пробный период 7 дней, карта для старта не нужна. $49.99 в месяц после пробного периода. Отменить можно в любой момент.",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "49.99",
+          "priceCurrency": "USD",
+          "unitCode": "MON",
+          "billingDuration": "P1M"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": 13
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+</head>
+<!-- ru/loadfetcher-alternative: Russian twin of /loadfetcher-alternative/ built by research/seo/ru-2026-10-14/ru_twin.py from RU-TWIN-loadfetcher-alternative-2026-10-14.json (Martha). Head tags, tracking, ids and source comments are the English page's. -->
+<body data-layout="custom" data-clarity-unmask="true">
+  <a class="skip" href="#main">Перейти к содержанию</a>
+
+  <div class="promo">7 дней бесплатно, карта не нужна · Работает в вашем Chrome · Интерфейс на английском и испанском</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/ru/" aria-label="Главная страница NudoIQ"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Основная навигация">
+      <a href="/ru/#features">Возможности</a><a href="/ru/#pricing">Цена</a><a href="/guides/">Руководства</a><a href="/ru/#faq">Вопросы</a>
+    </nav>
+    <div class="navright">
+      <div class="lang" aria-label="Language"><a href="/loadfetcher-alternative/" hreflang="en">English</a><a href="/ru/loadfetcher-alternative/" hreflang="ru" aria-current="page">Русский</a></div>
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=loadfetcher-alternative" target="_blank" rel="noopener">Добавить NudoIQ в Chrome</a>
+    </div>
+  </div></header>
+
+  <main id="main">
+  <article class="lf">
+    <header class="doc-hero"><div class="doc-hero-in">
+      <nav class="crumbs" aria-label="Навигационная цепочка"><ol><li><a href="/ru/">Главная</a></li><li><a href="/guides/">Руководства</a></li><li><span aria-current="page">Альтернатива Load Fetcher</span></li></ol></nav>
+      <h1 class="page-title">Альтернатива Load Fetcher: NudoIQ и LoadFetcher для load board в Amazon Relay</h1>
+      <div class="answer" id="short-answer"><p class="lbl">Коротко</p><p>NudoIQ подойдет как альтернатива Load Fetcher, если вы хотите, чтобы грузы бронировались за вас. Это расширение для Chrome для перевозчиков Amazon Relay: оно обновляет load board, через AutoBook бронирует только грузы, которые проходят ваш минимум чистой прибыли, и составляет письма для диспута по scorecard. В открытом описании LoadFetcher нет ни автобронирования, ни писем для диспута. NudoIQ стоит $49.99 в месяц, одна цена для всех траков.</p></div>
+      <p class="page-subtitle">Оба расширения обновляют load board в Relay. Ниже отличия, сверенные с описанием и тарифами самого LoadFetcher 14 октября 2026 г.</p>
+      <div class="hero-cta"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=loadfetcher-alternative" target="_blank" rel="noopener">Попробовать 7 дней бесплатно</a><span class="micro">Карта для старта не нужна.</span></div>
+      <p class="byline">NudoIQ · Опубликовано <time datetime="2026-09-20">20 сентября 2026 г.</time> · Обновлено <time datetime="2026-10-14">14 октября 2026 г.</time></p>
+      <!-- 2026-10-14 CTR pass: hero "at a glance" card (words: research/copy/LF-ALT-CTR-2026-10-14.json; LoadFetcher facts from its store listing v3.25.2 and loadfetcher.com plans + FAQ, accessed 2026-10-14, evidence in research/seo/lf-alt-ctr-2026-10-14/evidence/; component: /get/loadfetcher/ .cmp table, ClickUp-derived). -->
+      <aside class="glance" aria-labelledby="glance-lbl">
+        <p class="glance-lbl" id="glance-lbl">Быстрое сравнение</p>
+        <table class="gl"><thead><tr><th scope="col"><span class="vh">Функция</span></th><th scope="col" class="nq">NudoIQ</th><th scope="col">LoadFetcher</th></tr></thead>
+        <tbody><tr><th scope="row">Автобронирование</th><td class="nq" data-label="NudoIQ"><span class="yes"><svg class="ck" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Да, грузы, которые проходят ваш Min Net Profit</span></span></td><td data-label="LoadFetcher">Не указано</td></tr>
+<tr><th scope="row">Бесплатный пробный период</th><td class="nq" data-label="NudoIQ"><span class="yes"><svg class="ck" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>7 дней, карта для старта не нужна</span></span></td><td data-label="LoadFetcher">Нет, по его FAQ. Вместо этого бесплатный тариф за $0</td></tr>
+<tr><th scope="row">Цена в месяц</th><td class="nq" data-label="NudoIQ">$49.99, одна цена для всех траков</td><td data-label="LoadFetcher">$0, $24, $49 или Team $90 (2 места)</td></tr>
+<tr><th scope="row">Письма для диспута по scorecard</th><td class="nq" data-label="NudoIQ"><span class="yes"><svg class="ck" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Составляет черновик. Отправляете вы, решает Amazon</span></span></td><td data-label="LoadFetcher">Не указано</td></tr>
+<tr><th scope="row">Оповещения о рейсах</th><td class="nq" data-label="NudoIQ">Нет. Показывает ETA, оставшиеся мили, адреса складов (facility)</td><td data-label="LoadFetcher"><span class="yes"><svg class="ck" viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3 8.5l3.2 3.2L13 4.8" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Да. Дорожные ограничения, опоздания по ETA, check-in водителей</span></span></td></tr></tbody></table>
+        <p class="glance-note">Проверено 14 октября 2026 г. на сайте LoadFetcher и в его описании в магазине. «Не указано» значит, что этого не было в описании или тарифах в тот день. <a href="#comparison">Смотреть полную таблицу сравнения</a></p>
+      </aside>
+    </div></header>
+
+    <div class="container">
+      <div class="prose">
+<section id="what-is-a-good-load-fetcher-alternative" aria-labelledby="what-is-a-good-load-fetcher-alternative-h">
+<h2 id="what-is-a-good-load-fetcher-alternative-h">Какая альтернатива Load Fetcher лучше всего подойдет?</h2>
+<p>NudoIQ, если вы хотите, чтобы грузы бронировались за вас, пока вы за рулем или ведете диспетчерскую работу. LoadFetcher обновляет load board, помогает выставлять траки (Post a Truck) и отслеживать рейсы. NudoIQ <a href="/amazon-relay-auto-refresh/">обновляет load board и бронирует грузы, которые проходят ваш порог</a>.</p>
+</section>
+
+<section id="how-does-nudoiq-compare-to-load-fetcher" aria-labelledby="how-does-nudoiq-compare-to-load-fetcher-h">
+<h2 id="how-does-nudoiq-compare-to-load-fetcher-h">Чем NudoIQ отличается от Load Fetcher?</h2>
+<p>Ниже все функции рядом, с источником каждого факта о LoadFetcher.</p>
+<!-- Freshness line (Martha 2026-10-09, research/copy/LOADFETCHER-ALT-SEO-2026-10-09.json A2). -->
+<p class="upd"><span class="checked"><time datetime="2026-10-14">Обновлено в октябре 2026 г.</time></span></p>
+<div class="tbl" role="region" aria-labelledby="cmp-cap" tabindex="0">
+<table id="comparison">
+<caption id="cmp-cap"><span>NudoIQ и LoadFetcher по открытым описаниям каждого продукта в Chrome Web Store и на сайтах, проверено 14 октября 2026 г. «Не указано» значит, что этого пункта не было в описании или тарифах LoadFetcher в тот день. Мы не тестировали их продукт. Нашли ошибку? Напишите нам через <a href="/support/">страницу контактов (на английском)</a>, и мы исправим.</span></caption>
+<thead><tr><th scope="col">Функция</th><th scope="col">NudoIQ</th><th scope="col">LoadFetcher</th></tr></thead>
+<tbody>
+<tr><th scope="row">Что это</th><td>Расширение Chrome для перевозчиков и диспетчеров Amazon Relay<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, overview: all-in-one toolkit for Amazon Relay carriers, owner-operators, and dispatchers), accessed 2026-10-14 -->Расширение Chrome для перевозчиков, owner-operator и диспетчеров Amazon Relay<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a></sup></td></tr>
+<tr><th scope="row">Автообновление load board</th><td>Да<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, feature list: Auto-Refresher), accessed 2026-10-14 -->Да («Auto-Refresher»)<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a></sup></td></tr>
+<tr><th scope="row">Отметка новых грузов и роста цены</th><td>Да. Значок NEW или PRICE UP на грузе<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, Smart Notifications: instant alerts for new loads, in your browser or Telegram); https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store screenshots, screenshot 1 caption "Instant Audible Notifications for New Loads and Price Surges", price rise shown on a load), accessed 2026-10-14 -->Да. Оповещения о новых грузах и подсветка скачков цены<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a>,<a href="#src-4" aria-label="Источник 4">4</a></sup></td></tr>
+<tr><th scope="row">Автоматическое бронирование</th><td>Да. Режим AutoBook бронирует грузы, которые подходят под ваши правила и проходят ваш Min Net Profit. Груз, который нельзя полностью рассчитать, он пропускает<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, no automatic booking in the description or feature list); https://loadfetcher.com/ (plans section, Free, Plus, Pro, Team: no automatic booking); note: loadfetcher.com page title and meta description mention auto book; corroboration: t.me/loadfetcher/48 (2026-07-18) says there is no autobook, accessed 2026-10-14 -->Не указано ни в описании в магазине, ни в разделе тарифов<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a>,<a href="#src-3" aria-label="Источник 3">3</a></sup></td></tr>
+<tr><th scope="row">Бронирование в один клик</th><td>Instant Book на новых грузах и грузах с ростом цены (один клик, без экрана подтверждения)<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, no one-tap or instant booking listed; the Book button in its screenshots is Relay's own), https://loadfetcher.com/ (plans), accessed 2026-10-14; corrected 2026-10-10 -->Не указано<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a>,<a href="#src-3" aria-label="Источник 3">3</a></sup></td></tr>
+<tr><th scope="row">Чистая прибыль по каждому грузу</th><td>Да. Сумма чистыми и $ за милю рядом с ценой, после расходов, которые вы ввели<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://loadfetcher.com/ (plans section, Plus: Financials & driver earnings; no per-load net figure listed), accessed 2026-10-14 -->Чистая прибыль по каждому грузу не указана. В тарифе Plus указано «Financials &amp; driver earnings»<sup class="fn"><a href="#src-3" aria-label="Источник 3">3</a></sup></td></tr>
+<tr><th scope="row">История цен по направлению</th><td>Lane Intelligence: диапазон цен по направлению за 90 дней, по первой кнопке под каждым грузом<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, feature list: Load Pricing & History), accessed 2026-10-14 -->Да («Load Pricing &amp; History»)<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a></sup></td></tr>
+<tr><th scope="row">Поиск backhaul</th><td>Да, кнопка Find backhaul под каждым грузом<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://loadfetcher.com/ (plans section, Plus: Load analytics & backhaul), accessed 2026-10-14 -->Да, в тарифе Plus («Load analytics &amp; backhaul»)<sup class="fn"><a href="#src-3" aria-label="Источник 3">3</a></sup></td></tr>
+<tr><th scope="row">Post a Truck</th><td>One-Click Post A Truck с рекомендуемой ставкой. Сначала ставка приблизительная и становится точнее, по мере того как NudoIQ собирает данные о вашем регионе<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, feature list: Post Truck Manager); https://loadfetcher.com/ (plans section, Free: Quick Post a Truck creation), accessed 2026-10-14 -->Да («Post Truck Manager»), быстрое создание Post a Truck на бесплатном тарифе<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a>,<a href="#src-3" aria-label="Источник 3">3</a></sup></td></tr>
+<tr><th scope="row">Письма для диспута по scorecard</th><td>Составляет черновик письма по нарушению. Вы проверяете и отправляете его. Решает Amazon<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, no dispute letters listed); https://loadfetcher.com/ (plans section, no dispute letters listed), accessed 2026-10-14 -->Не указано<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a>,<a href="#src-3" aria-label="Источник 3">3</a></sup></td></tr>
+<tr><th scope="row">Оповещения</th><td>Режим ALERT и оповещения в Telegram<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, Smart Notifications, in your browser or Telegram); https://loadfetcher.com/ (plans section, Plus: Telegram notifications), accessed 2026-10-14 -->Оповещения в браузере и в Telegram. Telegram в тарифе Plus<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a>,<a href="#src-3" aria-label="Источник 3">3</a></sup></td></tr>
+<tr><th scope="row">Отслеживание рейсов, ETA, дорожные ограничения и данные о складах</th><td><!-- NudoIQ source: nudoiq-v1.9-audit/pro-views.js (FLAG_DEFAULTS inTransitSmart + loadProView on, trial and paid; stripHTML: miles left, ETA vs schedule, stop N of M, current location; Pro View legs with facility code and address), shipped in 2.5.2 per D51; no road-restriction or late-ETA alerts in content.js, background.js or pro-views.js, checked 2026-10-09 -->Частично. ETA рейсов, оставшиеся мили и адреса складов. Без оповещений о рейсах и дорожных ограничениях<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, Trip Tracking & ETAs; Road-Restricted Trips & Facility Info), accessed 2026-10-14 -->Да, все указано<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a></sup></td></tr>
+<tr><th scope="row">Командное пространство</th><td>Общего пространства нет. Одна цена для всех траков<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://loadfetcher.com/ (plans section, Team: Shared team workspace, Invite team members), accessed 2026-10-14 -->Да, тариф Team (общее пространство, приглашение участников)<sup class="fn"><a href="#src-3" aria-label="Источник 3">3</a></sup></td></tr>
+<tr><th scope="row">Бесплатный тариф</th><td><!-- NudoIQ source: nudoiq-v1.9-audit/content.js NQ_PREVIEW + nqAccessMode (preview only before the free week; after it, $49.99/month or it stops), D51, checked 2026-10-09 -->Нет. Бесплатный ознакомительный режим (обновление, оповещения) до старта бесплатного пробного периода<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://loadfetcher.com/ (plans section, Free $0); https://loadfetcher.com/ (FAQ, free tier usable without payment information), accessed 2026-10-14 -->Да, бесплатный тариф за $0, платежные данные не нужны<sup class="fn"><a href="#src-3" aria-label="Источник 3">3</a></sup></td></tr>
+<tr><th scope="row">Бесплатный пробный период</th><td>Да. 7 дней, карта для старта не нужна<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://loadfetcher.com/ (FAQ, "While we don't offer a free trial, we do have a free tier available that you can use without providing payment information."), accessed 2026-10-14 -->Нет, по его FAQ. Вместо этого есть бесплатный тариф<sup class="fn"><a href="#src-3" aria-label="Источник 3">3</a></sup></td></tr>
+<tr><th scope="row">Цена платного тарифа</th><td>$49.99 в месяц, одна цена для всех траков, отменить можно в любой момент<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://loadfetcher.com/ (plans section, Plus $24, Pro $49, Team $90 a month, $45 a seat; monthly or yearly), accessed 2026-10-14 -->Plus $24, Pro $49, Team $90 в месяц ($45 за место)<sup class="fn"><a href="#src-3" aria-label="Источник 3">3</a></sup></td></tr>
+<tr><th scope="row">Оплата за год</th><td>Нет. Помесячно<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://loadfetcher.com/ (plans section, Monthly / Yearly toggle, yearly shown as "-32%"), accessed 2026-10-14 -->Да, помесячно или за год (годовая оплата показана как «-32%»)<sup class="fn"><a href="#src-3" aria-label="Источник 3">3</a></sup></td></tr>
+<tr><th scope="row">Языки</th><td>Английский и испанский<sup class="fn"><a href="#src-1" aria-label="Источник 1">1</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, Details: Languages English (United States)), accessed 2026-10-14 -->Язык описания: English (United States)<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a></sup></td></tr>
+<tr><th scope="row">Рейтинг в Chrome Web Store</th><td>5.0<sup class="fn"><a href="#src-5" aria-label="Источник 5">5</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, rating 5.0), accessed 2026-10-14 -->5.0<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a></sup></td></tr>
+<tr><th scope="row">Издатель</th><td>Sami Enterprises LLC<sup class="fn"><a href="#src-5" aria-label="Источник 5">5</a></sup></td><td><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, Developer: Fierce Trade LLC), accessed 2026-10-14 -->Fierce Trade LLC<sup class="fn"><a href="#src-2" aria-label="Источник 2">2</a></sup></td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="sources">Источники</h3>
+<ol class="sources">
+<li id="src-1">Расширение NudoIQ и <a href="/get/">nudoiq.com/get/</a></li>
+<li id="src-2">Описание LoadFetcher в Chrome Web Store (<a href="https://chrome.google.com/webstore/detail/ihcgicdogclbieclnldfjmlglkolankb" target="_blank" rel="nofollow noopener">chromewebstore.google.com/detail/ihcgicdogclbieclnldfjmlglkolankb</a>), v3.25.2, обновлено 10 октября 2026 г., проверено 14 октября 2026 г.</li>
+<li id="src-3">Тарифы и FAQ на <a href="https://loadfetcher.com/" target="_blank" rel="nofollow noopener">loadfetcher.com</a>, проверено 14 октября 2026 г.</li>
+<li id="src-4">Скриншоты LoadFetcher в магазине (<a href="https://chrome.google.com/webstore/detail/ihcgicdogclbieclnldfjmlglkolankb" target="_blank" rel="nofollow noopener">описание в Chrome Web Store</a>), проверено 14 октября 2026 г.</li>
+<li id="src-5"><a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=loadfetcher-alternative" target="_blank" rel="noopener">Chrome Web Store</a> (описание NudoIQ), проверено 14 октября 2026 г.</li>
+</ol>
+<p class="tmnote">LoadFetcher: товарный знак своего владельца, название упоминается здесь только для сравнения. NudoIQ не аффилирован ни с LoadFetcher, ни с Amazon.</p>
+<p>Как NudoIQ выглядит рядом с LoadFetcher и еще пятью расширениями для Relay по автобронированию, оповещениям и цене, смотрите в <a href="/why-nudoiq/">полном сравнении (на английском)</a>.</p>
+</section>
+
+<section id="what-is-load-fetcher" aria-labelledby="what-is-load-fetcher-h">
+<h2 id="what-is-load-fetcher-h">Что такое Load Fetcher?</h2>
+<!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, overview: all-in-one toolkit for Amazon Relay carriers, owner-operators, and dispatchers, built right into the Relay load board; feature list; Developer: Fierce Trade LLC), accessed 2026-10-14 -->
+<p>LoadFetcher: расширение для Chrome, встроенное в load board Relay. Оно рассчитано на перевозчиков, owner-operator и диспетчеров Amazon Relay. Его выпускает Fierce Trade LLC. В описании в магазине (проверено 14 октября 2026 г.) названы автообновление, оповещения, цены и история грузов и отслеживание рейсов. Также названы Post Truck Manager, карты и маршруты, данные о дорожных ограничениях и складах.</p>
+</section>
+
+<section id="does-load-fetcher-auto-book-loads" aria-labelledby="does-load-fetcher-auto-book-loads-h">
+<h2 id="does-load-fetcher-auto-book-loads-h">Бронирует ли Load Fetcher грузы автоматически?</h2>
+<!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, no automatic booking listed); https://loadfetcher.com/ (plans section, no automatic booking listed); loadfetcher.com page title: LoadFetcher - Amazon Relay Load Board & Auto Book Tool, accessed 2026-10-14 -->
+<p>В его открытом описании об этом не сказано. На 14 октября 2026 г. автоматического бронирования нет ни в описании LoadFetcher в магазине, ни в разделе тарифов. При этом в заголовке его сайта автобронирование упоминается. <a href="/ru/amazon-relay-auto-booker/">AutoBook в NudoIQ бронирует за вас</a>, и только грузы, которые проходят ваш Min Net Profit.</p>
+</section>
+
+<section id="what-does-nudoiq-do-that-load-fetcher-doesn-t-list" aria-labelledby="what-does-nudoiq-do-that-load-fetcher-doesn-t-list-h">
+<h2 id="what-does-nudoiq-do-that-load-fetcher-doesn-t-list-h">Что есть в NudoIQ, чего нет в описании Load Fetcher?</h2>
+<p>Три вещи: автоматическое бронирование по вашему порогу прибыли, чистая прибыль на карточке каждого груза и письма для диспута по scorecard.</p>
+<ul><!-- 2026-10-10 fact fix: 2.5.2 has no max-stops control (dist/nudoiq_v2.5.2.zip content.js: maxStopsFilter default only, no input); words research/copy/FACT-FIXES-2026-10-10.json lf_autobook_bullet --><li><strong>AutoBook:</strong> задайте минимальную чистую прибыль и лимит Max books. Он бронирует подходящие грузы и пропускает любой груз, который не может полностью рассчитать.</li><li><strong>Чистая прибыль по каждому грузу:</strong> сумма чистыми и $ за милю прямо рядом с ценой, по расходам, которые вы ввели.</li><li><strong><a href="/amazon-relay-scorecard/">Письма для диспута по scorecard</a>:</strong> расширение составляет черновик письма по нарушению. Вы читаете его и отправляете, а решение принимает Amazon.</li><li><strong>Также:</strong> интерфейс на английском и испанском, Instant Book на новых грузах и грузах с ростом цены, Lane Intelligence (диапазон цен по направлению за 90 дней), поиск backhaul, One-Click Post A Truck.</li></ul>
+</section>
+
+<section id="what-does-load-fetcher-do-that-nudoiq-doesn-t" aria-labelledby="what-does-load-fetcher-do-that-nudoiq-doesn-t-h">
+<h2 id="what-does-load-fetcher-do-that-nudoiq-doesn-t-h">Что есть в Load Fetcher, чего нет в NudoIQ?</h2>
+<!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, Trip Tracking & ETAs; Smart Notifications incl. late ETAs; Road-Restricted Trips & Facility Info); https://loadfetcher.com/ (plans section, Free $0; Team: Shared team workspace; Monthly / Yearly toggle); https://loadfetcher.com/ (FAQ, free tier), accessed 2026-10-14 -->
+<!-- NudoIQ source: nudoiq-v1.9-audit/pro-views.js (FLAG_DEFAULTS inTransitSmart + loadProView on, trial and paid; stripHTML: miles left, ETA vs schedule, stop N of M, current location; Pro View legs with facility code and address), shipped in 2.5.2 per D51; no road-restriction or late-ETA alerts in content.js, background.js or pro-views.js, checked 2026-10-09 -->
+<p>На 14 октября 2026 г. у LoadFetcher указаны бесплатный тариф за $0 в месяц, общее командное пространство и оплата за год. В его описании также названы оповещения о дорожных ограничениях, опозданиях по ETA и check-in водителей. В NudoIQ ничего из этого нет.</p>
+</section>
+
+<section id="how-much-does-load-fetcher-cost-vs-nudoiq" aria-labelledby="how-much-does-load-fetcher-cost-vs-nudoiq-h">
+<h2 id="how-much-does-load-fetcher-cost-vs-nudoiq-h">Сколько стоит Load Fetcher по сравнению с NudoIQ?</h2>
+<!-- LoadFetcher source: https://loadfetcher.com/ (plans section, Free, Plus $24, Pro $49, Team $90 a month, $45 a seat; Monthly / Yearly toggle), accessed 2026-10-14 -->
+<p>LoadFetcher: Free, Plus $24, Pro $49, Team $90 в месяц ($45 за место), есть оплата за год, проверено 14 октября 2026 г. NudoIQ: бесплатный ознакомительный режим после установки, затем бесплатный пробный период на 7 дней, карта для старта не нужна. После этого $49.99 в месяц, одна цена для всех траков. Отменить можно в любой момент.</p>
+</section>
+
+<section id="should-you-pick-load-fetcher-or-nudoiq" aria-labelledby="should-you-pick-load-fetcher-or-nudoiq-h">
+<h2 id="should-you-pick-load-fetcher-or-nudoiq-h">Что выбрать: Load Fetcher или NudoIQ?</h2>
+<div class="pick">
+<div class="pick-col"><h3>Выбирайте LoadFetcher, если</h3><ul><li>Вы хотите остаться на бесплатном тарифе. В его бесплатном тарифе есть автообновление с фильтрами и инструменты Post a Truck.</li><li>Вы бронируете грузы вручную, и вам нужно лишь вовремя их видеть.</li><li><!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, Trip Tracking & ETAs; Smart Notifications incl. late ETAs and driver check-ins; Road-Restricted Trips & Facility Info), accessed 2026-10-14 -->Вам нужны оповещения о дорожных ограничениях, опозданиях по ETA и check-in водителей.</li><li>У вас команда, которой нужно общее пространство и управление местами.</li></ul></div>
+<div class="pick-col pick-nq"><h3>Выбирайте NudoIQ, если</h3><ul><li>Вы хотите, чтобы грузы бронировались за вас, и только те, что проходят ваш минимум чистой прибыли.</li><li>Вы хотите видеть, сколько груз оставит вам чистыми, до того как его взять.</li><li>Вы боретесь с нарушениями в scorecard и хотите, чтобы письмо для диспута составлялось за вас.</li><li>У вас несколько траков, и вам нужна одна цена на все, или вы работаете на испанском.</li></ul></div>
+</div>
+<p>Не уверены? Попробуйте NudoIQ 7 дней бесплатно. Если он не подойдет под то, как вы бронируете, вернитесь к прежнему инструменту. Это займет неделю и не будет стоить ни цента.</p>
+<p class="midlink"><a href="/ru/">Попробовать NudoIQ 7 дней бесплатно</a></p>
+</section>
+
+<section id="how-do-you-switch-from-load-fetcher-to-nudoiq" aria-labelledby="how-do-you-switch-from-load-fetcher-to-nudoiq-h">
+<h2 id="how-do-you-switch-from-load-fetcher-to-nudoiq-h">Как перейти с Load Fetcher на NudoIQ?</h2>
+<p>Удалите или отключите LoadFetcher, добавьте NudoIQ из Chrome Web Store, <a href="/amazon-relay-load-board/">откройте load board в Relay</a> и нажмите START. Вход в Relay не меняется.</p>
+</section>
+
+<section id="faq" class="faq" aria-labelledby="faq-h">
+<h2 id="faq-h">Вопросы об альтернативе Load Fetcher</h2>
+<!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, overview, feature list, Developer: Fierce Trade LLC), accessed 2026-10-14 --><details><summary>Что такое Load Fetcher?</summary><div class="a"><p>LoadFetcher: расширение для Chrome для load board в Amazon Relay, его выпускает Fierce Trade LLC. В описании в магазине названы такие инструменты, как автообновление, отслеживание рейсов, оповещения и Post Truck Manager (проверено 14 октября 2026 г.). NudoIQ: отдельное расширение для того же load board, с AutoBook по вашему минимуму чистой прибыли.</p></div></details>
+<!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, listed as an Extension with an Add to Chrome button; overview: built right into the Relay load board), accessed 2026-10-14 --><details><summary>Является ли Load Fetcher расширением для Chrome?</summary><div class="a"><p>Да. LoadFetcher работает как расширение для Chrome. Его добавляют в Chrome со страницы в Chrome Web Store. В описании сказано, что он встроен в load board Relay (проверено 14 октября 2026 г.). NudoIQ: отдельное расширение для Chrome. Если пробуете оба, запускайте только одно расширение для load board за раз, чтобы они не конфликтовали.</p></div></details>
+<!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, overview: built right into the Relay load board); https://loadfetcher.com/ (plans: Free $0, Plus $24, Pro $49, Team $90 a month for 2 seats; FAQ: free tier without payment information, no free trial), accessed 2026-10-14 --><details><summary>Является ли Load Fetcher самим load board?</summary><div class="a"><p>Нет. LoadFetcher: расширение для Chrome, которое работает внутри load board Relay от Amazon. В его описании сказано, что он встроен прямо в load board Relay (проверено 14 октября 2026 г.). NudoIQ: отдельное расширение для Chrome для того же load board. Он обновляет load board и может бронировать грузы, которые проходят ваш минимум чистой прибыли.</p></div></details>
+<!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, overview: built right into the Relay load board); https://loadfetcher.com/ (plans: Free $0, Plus $24, Pro $49, Team $90 a month for 2 seats; FAQ: free tier without payment information, no free trial), accessed 2026-10-14 --><details><summary>Load Fetcher бесплатный?</summary><div class="a"><p>Да, у LoadFetcher есть бесплатный тариф за $0 с автообновлением, фильтрами и инструментами Post a Truck. Платные тарифы: Plus $24, Pro $49 и Team $90 в месяц за 2 места (проверено 14 октября 2026 г.). У NudoIQ нет бесплатного тарифа. Его бесплатный ознакомительный режим работает до старта бесплатного пробного периода на 7 дней, карта не нужна. Затем $49.99 в месяц.</p></div></details>
+<details><summary>Какая альтернатива Load Fetcher лучше всего подойдет?</summary><div class="a"><p>NudoIQ подойдет как альтернатива Load Fetcher, если вы хотите, чтобы расширение бронировало грузы за вас. Оно обновляет load board в Amazon Relay, через AutoBook бронирует только грузы, которые проходят ваш минимум чистой прибыли, показывает чистую прибыль по каждому грузу и составляет письма для диспута по scorecard, за $49.99 в месяц после бесплатного пробного периода на 7 дней.</p></div></details>
+<!-- NudoIQ facts: free preview per nudoiq-v1.9-audit/content.js NQ_PREVIEW + nqAccessMode (only before the free week, D51); after the week: card at $49.99/month or it stops (content.js trialAskSmall). Other tools: LODA Relay store listing https://chromewebstore.google.com/detail/lfcjhneiffifbimoidceecbpcjnfmiai ('No subscription. No paid plan. Free to use.', captured 2026-10-10, research/seo/competitor-alt-evidence-2026-10-09/loda-cws-2026-10-10.txt); https://rocketrelaybooker.com/ ('Start free. Go Pro when it pays off.'), accessed 2026-10-14 --><details><summary>Есть ли бесплатная альтернатива Load Fetcher?</summary><div class="a"><p>Бесплатный ознакомительный режим NudoIQ с обновлением и оповещениями работает до старта бесплатного пробного периода на 7 дней, для которого карта не нужна. После пробного периода пользоваться можно за $49.99 в месяц, поэтому это не бесплатный тариф. У LODA Relay и Rocket Pro указаны бесплатные варианты (проверено в октябре 2026 г.).</p></div></details>
+<!-- LoadFetcher source: https://loadfetcher.com/ (FAQ, "While we don't offer a free trial, we do have a free tier available ..."), accessed 2026-10-14 --><details><summary>Есть ли у Load Fetcher бесплатный пробный период?</summary><div class="a"><p>Нет. В FAQ LoadFetcher сказано, что бесплатного пробного периода нет. Вместо него есть бесплатный тариф, которым можно пользоваться без платежных данных (проверено 14 октября 2026 г.). У NudoIQ есть бесплатный пробный период на 7 дней, карта для старта не нужна, а перед ним бесплатный ознакомительный режим.</p></div></details>
+<!-- LoadFetcher source: https://chromewebstore.google.com/detail/loadfetcher-relay-amazon/ihcgicdogclbieclnldfjmlglkolankb (store listing v3.25.2, no automatic booking listed); https://loadfetcher.com/ (plans section, no automatic booking listed); loadfetcher.com page title: LoadFetcher - Amazon Relay Load Board & Auto Book Tool, accessed 2026-10-14 --><details><summary>Бронирует ли Load Fetcher грузы автоматически?</summary><div class="a"><p>В открытом описании этого нет. На 14 октября 2026 г. в описании LoadFetcher в Chrome Web Store и в разделе тарифов автоматическое бронирование не указано. При этом в заголовке его сайта автобронирование упоминается. Режим AutoBook в NudoIQ бронирует подходящие грузы, которые проходят ваш собственный минимум чистой прибыли.</p></div></details>
+<details><summary>Какое расширение для Amazon Relay лучшее?</summary><div class="a"><p><a href="/ru/best-amazon-relay-extensions/">Лучшим будет то расширение для Amazon Relay</a>, которое решает именно вашу задачу. Если нужно бесплатное автообновление с инструментами Post a Truck, хватит бесплатного тарифа LoadFetcher. Для автоматического бронирования по вашему порогу прибыли, чистой прибыли по каждому грузу и писем для диспута по scorecard создан NudoIQ.</p></div></details>
+<!-- LoadFetcher source: https://loadfetcher.com/ (plans section, Free, Plus $24, Pro $49, Team $90 a month, $45 a seat), accessed 2026-10-14 --><details><summary>Во сколько обходится Load Fetcher в сравнении с NudoIQ?</summary><div class="a"><p>У LoadFetcher есть бесплатный тариф и платные за $24, $49 и $90 в месяц. У NudoIQ один тариф за $49.99. Тариф Team у LoadFetcher стоит $45 за место (проверено 14 октября 2026 г.). Цена NudoIQ одинакова для одного трака и для целого автопарка, есть бесплатный пробный период на 7 дней, отменить можно в любой момент.</p></div></details>
+<details><summary>Работает ли NudoIQ на испанском?</summary><div class="a"><p>Да. Кнопки и оповещения NudoIQ на load board работают на английском и испанском (сообщения в Telegram приходят на английском). Русского интерфейса пока нет. В описании LoadFetcher в магазине язык указан как English (United States).</p></div></details>
+<details><summary>Можно ли перейти с Load Fetcher на NudoIQ?</summary><div class="a"><p>Да, это займет несколько минут. Отключите или удалите LoadFetcher на странице расширений Chrome, добавьте NudoIQ из Chrome Web Store и начните бесплатный пробный период на 7 дней. Вход в Relay и load board остаются прежними. Запускайте только одно расширение для load board за раз, чтобы они не конфликтовали.</p></div></details>
+<details><summary>Выпускает ли Amazon NudoIQ или Load Fetcher?</summary><div class="a"><p>Нет. NudoIQ: независимый продукт Sami Enterprises LLC, он не аффилирован с Amazon, не одобрен и не спонсируется им. LoadFetcher выпускает Fierce Trade LLC. Оба работают внутри load board Relay в вашем собственном Chrome.</p></div></details>
+<details><summary>Как правильно: LoadFetcher или Lotfetcher?</summary><div class="a"><p>Правильно LoadFetcher, иногда пишут Load Fetcher. Lotfetcher: частая опечатка в названии того же расширения для Amazon Relay, а на этой странице LoadFetcher сравнивается с NudoIQ.</p></div></details>
+<details><summary>Помогает ли NudoIQ с Post A Truck от Amazon?</summary><div class="a"><p>Да. Третья кнопка под карточкой груза открывает панель One-Click Post A Truck в NudoIQ: пункт погрузки, пункт доставки, расстояние и цена на load board рядом с вашим минимумом за милю и минимальной выплатой. Над полем цены стоит рекомендуемая ставка; сразу после установки она неточна и становится точнее по мере того, как собирает данные о вашем регионе. Вот <a href="/amazon-relay-post-a-truck/">как работает Post A Truck в Amazon Relay (на английском)</a>.</p></div></details>
+<!-- 2026-10-10 fact fix: no max-stops or pickup-lead-time control in 2.5.2 (dist/nudoiq_v2.5.2.zip content.js maxStopsFilter / autoBookMinPickupHours: defaults only); words research/copy/FACT-FIXES-2026-10-10.json lf_faq_how_decide --><details><summary>Как NudoIQ решает, какие грузы бронировать?</summary><div class="a"><p>В режиме AutoBook NudoIQ бронирует только грузы, которые проходят ваш Min Net Profit, никогда не бронирует груз с неполными данными и останавливается на вашем лимите Max books. Режим ALERT сообщает о подходящем грузе, не бронируя его. Это важно, потому что отмена забронированного груза снижает ваш показатель acceptance: смотрите, <a href="/amazon-relay-cancel-load/">что будет, если отменить груз в Amazon Relay (на английском)</a>.</p></div></details>
+</section>
+      </div>
+
+      <aside class="cta" aria-labelledby="cta-h">
+        <div><h2 id="cta-h">Пусть NudoIQ бронирует грузы за вас, не ниже вашего минимума.</h2><p>7 дней бесплатно, затем $49.99 в месяц за все траки. Отменить можно в любой момент.</p></div>
+        <div class="cta-act"><a class="btn btn-go" style="width:100%" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=loadfetcher-alternative" target="_blank" rel="noopener">Попробовать 7 дней бесплатно</a><p class="micro">Карта для старта не нужна.</p></div>
+      </aside>
+    </div>
+  </article>
+
+  <div class="container" style="padding-top:0">
+    <nav class="related" aria-label="More Amazon Relay guides">
+      <h2>Другие руководства по Amazon Relay</h2>
+      <div class="cards">
+        <a href="/ru/amazon-relay-auto-booker/">Автобукер для Amazon Relay: как работает автоматическое бронирование</a> <a href="/amazon-relay-auto-refresh/">Автообновление в Amazon Relay: зачем оно нужно и как работает (на английском)</a> <a href="/ru/best-amazon-relay-extensions/">Лучшие расширения для Amazon Relay: рефрешеры и автобукеры</a> <a href="/amazon-relay-scorecard/">Scorecard в Amazon Relay: как считается оценка и как ее оспорить (на английском)</a> <a href="/amazon-relay-load-board/">Как работает load board в Amazon Relay (на английском)</a>
+      </div>
+    </nav>
+  </div>
+  </main>
+
+  <footer class="container" style="padding-top:0">
+    <div class="footer" style="margin-top:0">
+      © 2026 NudoIQ  ·  <a href="/ru/">nudoiq.com</a>  ·  <a href="/guides/">Руководства по Amazon Relay</a>  ·  <a href="/privacy.html">Конфиденциальность</a>  ·  <a href="/refund-policy.html">Возврат средств</a>  ·  <a href="/terms.html">Условия</a>  ·  <a href="/partners/">Партнерам</a>  ·  <a href="mailto:contact@nudoiq.com">Контакты</a>
+    </div>
+    <p class="tm">Amazon и Amazon Relay являются товарными знаками Amazon.com, Inc. или ее аффилированных лиц. NudoIQ является независимым продуктом и не аффилирован с Amazon.com, Inc., не одобрен и не спонсируется ею. Требования Amazon Relay меняются; актуальные правила уточняйте на relay.amazon.com.</p>
+  </footer>
+</body>
+</html>

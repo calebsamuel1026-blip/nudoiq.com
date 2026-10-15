@@ -137,6 +137,9 @@ const stripMd = (s) => s.replace(/\*\*|\*/g, '').replace(/\[([^\]]+)\]\([^)]+\)/
 // so the English guide carries the pair too. Added 2026-10-07 with the two Spanish guides.
 const ES_TWIN = { 'amazon-relay-load-board': 'amazon-relay-en-espanol', 'amazon-relay-requirements': 'amazon-relay-requisitos', 'what-is-amazon-relay': 'que-es-amazon-relay', 'how-much-does-amazon-relay-pay': 'cuanto-paga-amazon-relay', 'amazon-relay-scorecard': 'amazon-relay-scorecard', 'amazon-relay-auto-booker': 'amazon-relay-auto-booker', 'amazon-relay-auto-refresh': 'amazon-relay-auto-refresh', 'best-amazon-relay-extensions': 'mejores-extensiones-amazon-relay', 'amazon-relay-contact': 'amazon-relay-contacto', 'amazon-relay-app': 'aplicacion-amazon-relay', 'amazon-relay-payments': 'amazon-relay-pagos', 'amazon-relay-login': 'amazon-relay-iniciar-sesion', 'amazon-relay-approval-time': 'amazon-relay-tiempo-de-aprobacion', 'amazon-relay-disputes': 'amazon-relay-disputas', 'amazon-relay-background-check': 'amazon-relay-verificacion-de-antecedentes', 'amazon-relay-rewards': 'amazon-relay-recompensas', 'amazon-relay-peak-season': 'amazon-relay-temporada-alta', 'amazon-relay-hours-of-service': 'amazon-relay-horas-de-servicio', 'amazon-relay-learning-center': 'amazon-relay-learning-center', 'amazon-relay-hostler-shuttle-loads': 'amazon-relay-shuttle', 'amazon-relay-intermodal': 'amazon-relay-intermodal' };
 
+// Russian twins (ru/<slug>/, hand-built 2026-10-14, research/seo/ru-2026-10-14/): reciprocal hreflang ru.
+const RU_TWIN = { 'amazon-relay-auto-booker': 'ru/amazon-relay-auto-booker', 'best-amazon-relay-extensions': 'ru/best-amazon-relay-extensions' };
+
 function head({ title, description, url, extraLd, slug }) {
   return `<!DOCTYPE html>
 <html lang="en">
@@ -152,7 +155,8 @@ function head({ title, description, url, extraLd, slug }) {
   <link rel="canonical" href="${url}">${ES_TWIN[slug] ? `
   <link rel="alternate" hreflang="en" href="${url}">
   <link rel="alternate" hreflang="es" href="${SITE}/es/${ES_TWIN[slug]}/">
-  <link rel="alternate" hreflang="x-default" href="${url}">` : ''}
+${RU_TWIN[slug] ? `  <link rel="alternate" hreflang="ru" href="${SITE}/${RU_TWIN[slug]}/">
+` : ''}  <link rel="alternate" hreflang="x-default" href="${url}">` : ''}
   <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
   <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
   <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">

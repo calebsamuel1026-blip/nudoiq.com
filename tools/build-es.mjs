@@ -24,6 +24,7 @@ doc = doc.replace('<html lang="en">', '<html lang="es">');
 // new markup or the Spanish page keeps English as the current language.
 doc = doc.replace('<a href="/" hreflang="en" aria-current="page">English</a><a href="/es/" hreflang="es">Espa&ntilde;ol</a>',
                   '<a href="/" hreflang="en">English</a><a href="/es/" hreflang="es" aria-current="page">Espa&ntilde;ol</a>');
+// 2026-10-14: the Russian page (/ru/) sits in the switcher and hreflang of index.html, so nothing more to swap here.
 
 const TITLE_ES = 'NudoIQ | Herramientas para el tablero de cargas de Amazon Relay';
 const DESC_ES = 'Refresca el load board de Amazon Relay, reserva cargas con tus reglas y compara cada precio con una predicción de IA. 7 días gratis, sin tarjeta.';

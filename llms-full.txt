@@ -1256,7 +1256,7 @@ Short answer: An Amazon Relay auto booker is a browser extension that books load
 
 An auto-booker extension (also called an autobooker or auto-book tool) refreshes the Relay load board constantly and books loads that match the rules you set. You don't have to click Book. The extension does it automatically.
 
-Example: You set rules that say "book any load from Portland to Eugene for $400 or more, if the profit is at least $150 after costs." When a load matching those criteria posts, the extension sees it and books it for you. You get a notification that it booked something, and you review what you got.
+Example: You set rules that say "book any load from Portland to Eugene for $400 or more, if the profit is at least $150 after costs." When a load matching those criteria posts, the extension sees it and books it for you. Then you review what you got (NudoIQ can send each AutoBook to Telegram, if you connect it).
 
 The advantage is obvious: you can act on loads faster, and you're not glued to the screen. The risk is equally obvious: without good guardrails, you can book loads that don't work for your operation.
 
@@ -1285,7 +1285,7 @@ Booking rules narrow the field. They say "of all the loads on the board, only co
 
 A profit floor is your second line of defense. Even if a load matches your lane, price, and distance rules, the extension checks the net profit. If it doesn't clear the floor, no book.
 
-**Max-Books Cap**: Set a maximum number of loads the extension will book per day or per week. Example: "Stop booking after you've booked 5 loads today."
+**Max-Books Cap**: Set a maximum number of loads the extension will book. Depending on the tool, the cap counts per day, per week or per run (in NudoIQ, Max books is 1 to 20 per START). Example: "Stop booking after you've booked 5 loads."
 
 The max-books cap is your third line of defense. It prevents you from overbooking and running out of drivers. Once you hit the cap, the extension stops booking for that period, even if perfect loads post.
 
@@ -1295,7 +1295,7 @@ Together, these three guardrails protect you from booking loads you didn't inten
 
 Different auto-booker extensions offer different modes:
 
-**Alert Mode**: The extension refreshes the board and notifies you when a load matches your rules. You get a Telegram alert with details about the load. You decide whether to book. You stay in control but have to respond quickly, because other carriers might book the same load while you're thinking.
+**Alert Mode**: The extension refreshes the board and tells you when a load matches your rules. In NudoIQ that's a sound on the page, plus a Telegram message with the load details if you connect Telegram. You decide whether to book. You stay in control but have to respond quickly, because other carriers might book the same load while you're thinking.
 
 Alert mode is good when you want to be involved in the decision but don't want to stare at the board. It's also good for testing your rules before you turn on Autobook: use Alert mode first, see what loads it suggests, and verify they're the right ones.
 
@@ -1303,19 +1303,19 @@ Alert mode is good when you want to be involved in the decision but don't want t
 
 Search mode is good when you want to make the final decision but want the extension to do the scanning for you. It's also good for less time-sensitive work: if you're not in a race to be first, you can look and decide.
 
-**Autobook Mode**: The extension refreshes the board, finds loads matching your rules, and books them automatically. The extension handles the booking; you don't have to be there. You get a notification that it booked something.
+**Autobook Mode**: The extension refreshes the board, finds loads matching your rules, and books them automatically. The extension handles the booking; you don't have to watch the screen, but your browser has to stay open. NudoIQ sends each AutoBook to Telegram if you connect it.
 
 Autobook mode is the most hands-off but requires the most confidence in your rules. You need to trust that your lane, price, distance, profit floor, and max-books rules will produce bookings you want.
 
-## Setting Your Booking Rules Safely
+## Setting Your Booking Rules Carefully
 
-To use Autobook safely, follow this process:
+To make sure Autobook books only what you want, follow this process:
 
 **Step 1: Define Your Operation**
 - What lanes do I actually run? (e.g., Portland to Eugene, Portland to Seattle, Portland to Los Angeles)
 - What's my minimum profit per load? (e.g., $150 net)
 - What's my maximum distance? (e.g., 400 miles)
-- What's my maximum number of drivers available? (e.g., 5, so I'll book 5 loads max per day)
+- What's my maximum number of drivers available? (e.g., 5, so I'll book 5 loads max at a time)
 
 Write these down. They're the foundation of your rules.
 
@@ -1334,9 +1334,9 @@ Alert mode is a testing ground. Use it to verify your rules produce the loads yo
 - Again, ask: "Is it suggesting loads I'd actually take?"
 
 **Step 4: Set a Max-Books Cap**
-- Decide how many loads you can handle per day. (Don't overbuild.)
+- Decide how many loads you can handle at a time. (Don't overbuild.)
 - Set the cap to that number.
-- Example: cap at 5 loads per day.
+- Example: cap at 5 loads. In NudoIQ, Max books counts per START.
 
 **Step 5: Try Autobook**
 - Once you're confident in your rules, switch to Autobook.
@@ -1379,11 +1379,11 @@ Jumping straight to Autobook without testing your rules is asking for trouble. U
 
 ## How NudoIQ's Autobook Works
 
-NudoIQ's control bar includes three modes: Alert (pings you), Search (highlights matches), and Autobook (books automatically). You set price and lane rules, a profit floor, and a max-books cap.
+NudoIQ's control bar includes three modes: Alert (sounds an alert), Search (highlights matches), and Autobook (books automatically). Lane, equipment and dates come from your Relay search, because NudoIQ works on the loads your board shows. In NudoIQ you set Min $/Mile, Min Net Profit and Max books (1 to 20 per START).
 
 The extension uses [Net Profit calculation](https://nudoiq.com/amazon-relay-auto-booker/) to check whether a load clears your profit floor. So you're not just setting a dollar target: you're setting a profit target after costs.
 
-[Instant Book](https://nudoiq.com/amazon-relay-auto-booker/) is one click on the load card. Telegram alerts notify you when the extension books something, so you know immediately what was booked.
+[Instant Book](https://nudoiq.com/amazon-relay-auto-booker/) is one click on the load card. If you connect Telegram alerts, they tell you when the extension books something, so you know immediately what was booked.
 
 If you're unsure about your rules, start in Alert mode and let NudoIQ suggest loads for a day. See if the suggestions are good. Then switch to Autobook.
 
@@ -1417,10 +1417,10 @@ Use Alert mode or Search mode as long as you need to. There's no shame in manual
 ## Frequently asked questions
 
 ### Can I set different booking rules for different times of day?
-You'd change them by hand. NudoIQ has no time-of-day schedule for its rules, so if you want a different minimum at different hours, update your Min Net Profit, price and lane rules in NudoIQ yourself. Whatever you set, AutoBook never books a load under your Min Net Profit.
+You'd change them by hand. NudoIQ has no time-of-day schedule for its rules, so if you want a different minimum at different hours, update your Min Net Profit and Min $/Mile in NudoIQ, and your lane in your Relay search, yourself. Whatever you set, AutoBook never books a load under your Min Net Profit.
 
 ### What happens if I set my max-books cap too low?
-You'll stop getting bookings after you hit the cap, even if perfect loads post. If you cap at 2 loads a day and the board is flooded with great work, you'll miss it after your 2 are booked. Set a cap based on your actual capacity, and review it regularly.
+You'll stop getting bookings after you hit the cap, even if perfect loads post. If you cap at 2 loads and the board is flooded with great work, you'll miss it after your 2 are booked. In NudoIQ, Max books counts per START. Set a cap based on your actual capacity, and review it regularly.
 
 ### How do I adjust my profit floor if my costs change?
 In NudoIQ, change your Min Net Profit whenever your costs change, for example when fuel or driver pay moves. The next check uses the new number, and AutoBook won't book a load under it.
@@ -1458,7 +1458,7 @@ Besides the bigger names, there are a dozen or so smaller refreshers in the cate
 
 **Booking Rules**: Can you set rules to book only certain loads? Look for the ability to filter by lane, price range, load type, distance, and equipment. A tool that books only loads matching your rules books fewer loads you didn't want.
 
-**Profit Floor and Max-Books Cap**: Does it let you set a minimum profit and a maximum number of books? These guardrails protect you from booking loads you didn't intend to take. A profit floor means "don't book anything below $X net profit." A max-books cap means "stop booking once I've booked 5 loads today."
+**Profit Floor and Max-Books Cap**: Does it let you set a minimum profit and a maximum number of books? These guardrails protect you from booking loads you didn't intend to take. A profit floor means "don't book anything below $X net profit." A max-books cap means "stop booking once I've booked 5 loads."
 
 **Rate Data and Decision Support**: Does it show you lane history, net profit per load, or other rate context? Or does it just notify you when a load posts and let you decide? Tools that surface rate data help you make faster decisions.
 
@@ -1474,7 +1474,7 @@ Besides the bigger names, there are a dozen or so smaller refreshers in the cate
 
 ### LoadFetcher
 
-[LoadFetcher](https://nudoiq.com/loadfetcher-alternative/) is the largest Amazon Relay extension by installs. It offers a free refresher tier and is focused on refreshing, pricing history and alerts.
+[LoadFetcher](https://nudoiq.com/loadfetcher-alternative/) offers a free refresher tier and is focused on refreshing, pricing history and alerts.
 
 What's advertised: auto refresh, load pricing and history, backhaul search, Post Truck Manager, Telegram alerts and trip tracking. What's not listed: automatic booking, net profit per load, or scorecard dispute letters (checked October 4, 2026).
 
@@ -1486,7 +1486,7 @@ LoadFetcher's pitch is simplicity and cost: a free refresher tier. If that's all
 
 [Rocket Relay](https://nudoiq.com/rocket-relay-alternative/) is a refresher and auto booker from West Wanted. Its Chrome Web Store listing is called Relay Auto Booker Refresher Rocket Pro. It has a Free plan with auto-refresh, alerts and FastBook on matched trips, no card required. Pro is $49 a month after a 7-day trial that needs a card (checked October 9, 2026).
 
-Pro auto books matching trips, best-paying first, and stops at the number of trips you set. Its filters include minimum payout, price per mile, distance, stops, deadhead and time windows, and Pro adds bulk Post A Truck tools. It doesn't list a filter for net profit after your own costs. Rocket also has a separate Rocket Relay Post Truck Manager listing, last updated May 20, 2025 (checked October 9, 2026).
+Pro auto books matching trips, best-paying first, and stops at the number of trips you set. Its filters include minimum payout, price per mile, distance, stops, deadhead and time windows, and Pro adds bulk Post A Truck tools. It doesn't list a filter for net profit after your own costs. There is also a separate Rocket Relay Post Truck Manager extension, published by Tasiev LLC per its listing, last updated May 20, 2025 (checked October 9, 2026).
 
 Its listing says your loads, trips, payouts and drivers stay on your computer. It's rated 4.1 from 66 ratings on the Chrome Web Store (checked October 5, 2026).
 
@@ -1508,19 +1508,19 @@ NudoIQ is a browser extension that runs inside the Relay load board and includes
 
 **Refresh Control**: Set the interval on the NudoIQ bar, with built-in jitter.
 
-**Three Booking Modes**: Alert (pings you on a match), Search (highlights matching loads visually), Autobook (books automatically if your rules match). Set price and lane rules, a profit floor, and a max-books cap.
+**Three Booking Modes**: Alert (sounds an alert on a match), Search (highlights matching loads visually), Autobook (books automatically if your rules match). Lane and equipment come from your Relay search; in NudoIQ you set Min $/Mile, Min Net Profit and a max-books cap.
 
 **Lane Intelligence**: For each load, NudoIQ shows the 90-day rate history for that lane, a target rate, an expected range, and a confidence level. Example: "$483 target next to a $407 board price." This is decision support, not a guarantee: Amazon rates change based on season, time of day, volume, and other factors.
 
 **Net Profit Per Load**: Instead of just the posted rate, NudoIQ calculates the dollars you keep after subtracting driver pay, fuel, maintenance, and deadhead to pickup. You see the net profit and net $/mile for every load.
 
-**Scorecard Dispute Drafting**: NudoIQ reads your Relay scorecard, identifies the violation, and drafts a dispute letter citing Amazon policy. You review, edit, and submit. Amazon makes the final decision.
+**Scorecard Dispute Drafting**: NudoIQ drafts a dispute letter from the violation on your Relay scorecard. You review, edit, and submit. Amazon makes the final decision.
 
 **Backhaul Finder**: Search for loads from your current drop-off back toward home within your radius and time window. Sort by total pay, rate per mile, pickup time, or distance home.
 
 **Post A Truck Helper**: When posting availability, NudoIQ shows origin, destination, distance, and board price alongside your minimums, then posts with one click.
 
-**Other Features**: HOS overview, driver dispatch by text/email on assignment, Telegram alerts.
+**Other Features**: HOS overview, Telegram alerts.
 
 **Best for**: Carriers who want a full-featured refresher, rate history, profit calculation, dispute support, and backhaul finding all in one tool.
 
@@ -1600,7 +1600,7 @@ An extension in Autobook mode books as soon as it sees a matching load on a refr
 Set a profit floor and max-books cap. These are your primary defenses. A profit floor means the extension won't book loads that don't clear your minimum profit. A max-books cap means it stops booking once you've booked, say, 5 loads. Together, they prevent unwanted bookings.
 
 ### Is NudoIQ's lane rate history always accurate?
-Lane rate history in NudoIQ comes from the Relay load board's posted rates over 90 days. It's historical fact, not a prediction. But Amazon rates change based on season, time of day, volume, and other factors, so past rates don't guarantee today's rate. That's why NudoIQ calls it decision support: it helps you judge whether today's rate is high or low, but you still decide whether to take it.
+The 90-day range in NudoIQ comes from the Relay load board's posted rates. The target rate is an estimate built on that history, not a guarantee, and the confidence level shows how much data is behind it. Amazon rates change based on season, time of day, volume, and other factors, so past rates don't guarantee today's rate. That's why NudoIQ calls it decision support: it helps you judge whether today's rate is high or low, but you still decide whether to take it.
 
 ---
 
@@ -1816,7 +1816,7 @@ The best Amazon Relay extension is the one that does the job you're stuck on. Fo
 LoadFetcher has a Free plan and paid plans at $24, $49 and $90 a month; NudoIQ is one $49.99 plan. LoadFetcher's Team plan is $45 a seat (checked October 4, 2026). NudoIQ's price is the same for one truck or a whole fleet, with a 7-day free trial and cancel anytime.
 
 ### Does NudoIQ work in Spanish?
-Yes. NudoIQ works in English and Spanish, including the load board buttons and alerts. LoadFetcher's store listing shows English (United States) as its language.
+Yes. NudoIQ works in English and Spanish, including the buttons and banners on the load board (Telegram messages are in English). LoadFetcher's store listing shows English (United States) as its language.
 
 ### Can I switch from Load Fetcher to NudoIQ?
 Yes, it takes a few minutes. Turn off or remove LoadFetcher on Chrome's extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don't conflict.
