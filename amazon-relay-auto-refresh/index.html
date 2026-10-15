@@ -111,7 +111,7 @@
       "url": "https://nudoiq.com/icons/nudoiq-logo-512.png"
     }
   },
-  "abstract": "An Amazon Relay auto refresh tool reloads the load board for you on a timer, so new loads show up without you clicking reload. Good loads often book within seconds. NudoIQ's auto refresher lets you set the interval and keeps the board tab from going idle."
+  "abstract": "An Amazon Relay auto refresh tool reloads the load board for you on a timer, so new loads show up without you clicking reload. Good loads often book within seconds. NudoIQ's auto refresher lets you set the interval."
 }
   </script>
   <script type="application/ld+json">
@@ -303,7 +303,7 @@
 
   <div class="container">
     <article class="prose">
-<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>An Amazon Relay auto refresh tool reloads the load board for you on a timer, so new loads show up without you clicking reload. Good loads often book within seconds. NudoIQ's auto refresher lets you set the interval and keeps the board tab from going idle.</p></section>
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>An Amazon Relay auto refresh tool reloads the load board for you on a timer, so new loads show up without you clicking reload. Good loads often book within seconds. NudoIQ's auto refresher lets you set the interval.</p></section>
 <h2 id="why-refreshing-the-load-board-matters">Why Refreshing the Load Board Matters</h2>
 <p><a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">Amazon says</a> the load board auto-refreshes new spot freight matches every 30 seconds. Good loads can book within seconds, so many carriers reload faster than that to see new loads sooner. Manually refreshing every 30 seconds is impractical if you're driving, eating, or managing your business. You step away for five minutes and miss dozens of refreshes. In those five minutes, good loads can post and disappear.</p>
 <p>Carriers who want to stay competitive refresh constantly. The faster you refresh, the faster you see loads before other carriers do. A refresher extension automates this, reloading the board on a timer without you lifting a finger. This is why <a href="/best-amazon-relay-extensions/">refresher and auto-booker extensions</a> exist: to keep you in the competition without requiring constant attention.</p>
@@ -316,7 +316,7 @@
 <p>The benefits are obvious:</p>
 <ol><li><strong>You see loads faster.</strong> A shorter interval means less time between a load posting and you seeing it. In that gap, another carrier can book the load.</li></ol>
 <ol><li><strong>You don't have to watch.</strong> The extension reloads in the background while you do other things. You're not glued to the screen.</li></ol>
-<ol><li><strong>Alerts notify you.</strong> The refresher can ping you when a load matching your rules posts, so you don't have to scan the board manually.</li></ol>
+<ol><li><strong>Alerts do the watching.</strong> The refresher sounds an alert on the page when a load that meets your minimums posts, and sends a Telegram message if you connect Telegram, so you don't have to scan the board manually.</li></ol>
 <ol><li><strong>Autobook handles it.</strong> If you set it to Autobook and your rules match, the extension books for you automatically. You don't even have to be at your computer.</li></ol>
 <h2 id="choosing-your-refresh-interval">Choosing Your Refresh Interval</h2>
 <p>The <strong>interval</strong> is how often the board reloads. A shorter interval means the board reloads more often, so you see new loads sooner, but it also means more server load and more battery drain on your device.</p>
@@ -325,12 +325,12 @@
 <p>It depends on your goals and your hardware:</p>
 <p><strong>For catching competitive loads (tractor/reefer on busy lanes)</strong>: Use a shorter interval. You'll see new loads sooner after they post, but your battery will drain faster and your device will work harder.</p>
 <p><strong>For moderate competition (box truck, less busy lanes)</strong>: Use a longer interval. You'll see new loads soon after they post. It's a good balance between speed and resource use.</p>
-<p><strong>If you're away from the truck</strong>: Use a longer interval if you're not actively booking, or turn off refreshing entirely and set it to Alert mode: notify you when a load posts that matches your rules, and you'll decide whether to book.</p>
+<p><strong>If you're away from the truck</strong>: Use a longer interval if you're not actively booking, or turn off refreshing entirely and set it to Alert mode: it sounds an alert on the page when a load posts that matches your rules, and you'll decide whether to book.</p>
 <p><strong>If battery life matters</strong>: Longer intervals use less battery. Shorter intervals use more because your processor is reloading constantly.</p>
 <h2 id="alerts-vs-auto-booking">Alerts vs. Auto-Booking</h2>
 <p>A refresher can work in different modes:</p>
 <p><strong>Alert Mode</strong>: The extension refreshes the board and pings you when a load matching your rules posts. In NudoIQ that's a sound on the page, plus a Telegram message with the load details if you connect Telegram. Then you decide whether to book. This is low-friction, you're in control, but it requires you to respond quickly.</p>
-<p><strong>Search Mode</strong>: The extension refreshes the board and highlights (visually marks) loads that match your rules. You scan the board, see the highlights, and click Book if you want. This is also low-friction but requires you to be looking at the board.</p>
+<p><strong>Search Mode</strong>: The extension refreshes the board and gives you more ways to filter it. You narrow the loads, look over what's left, and click Book if you want. This is also low-friction but requires you to be looking at the board.</p>
 <p><strong>Autobook Mode</strong>: The extension refreshes the board, finds loads matching your rules, and books them automatically. Lane and equipment come from your Relay search; you set minimums (net profit, $/mile) and a max-books cap, and the extension books. NudoIQ sends each booking to Telegram if you connect it, and you review what it booked. This is hands-off but requires careful rule-setting to avoid booking loads you didn't want.</p>
 <p>You can mix these. Some carriers have Autobook running on certain lanes they always want, and Alert mode on others where they want to decide case-by-case.</p>
 <h2 id="setting-up-your-refresher">Setting Up Your Refresher</h2>
@@ -348,7 +348,7 @@
 <p>Refreshing is the foundation. <a href="/amazon-relay-auto-booker/">Booking rules</a>, <a href="/amazon-relay-auto-booker/">profit calculation</a>, and <a href="/amazon-relay-load-board/">rate history</a> add layers on top, but refreshing (fast, steady, consistent) is what gets you first look at loads.</p>
 <p>If your refresher runs on a short interval and your competitor reloads slowly (or not at all), you'll see new loads before they do. That's the advantage.</p>
 <h2 id="nudoiq-s-refresh-approach">NudoIQ's Refresh Approach</h2>
-<p>NudoIQ's refresher lets you set the interval yourself, right on the NudoIQ bar. The extension keeps the Relay tab from going idle and refreshes on schedule, even if you're not looking at it.</p>
+<p>NudoIQ's refresher lets you set the interval yourself, right on the NudoIQ bar. The extension refreshes on schedule, even if you're not looking at it.</p>
 <p>It doesn't just refresh: it runs alongside <a href="/#features">Lane Intelligence</a> (showing rate history) and <a href="/amazon-relay-auto-booker/">Net Profit calculation</a> (showing what you keep), and it integrates with <a href="/amazon-relay-auto-booker/">Autobook</a> so you can set rules once and let it book automatically.</p>
 <p>The extension is 5.0 rated on the Chrome Web Store and runs on desktop Chrome in English and Spanish. It costs $49.99 a month for every feature, with a 7-day free trial (no card needed to start) so you can test the refresh and see what the rate history and profit tools do.</p>
 <!-- 2026-10-14 CTR pass: contextual link, words research/copy/LF-ALT-CTR-2026-10-14.json link_autorefresh -->

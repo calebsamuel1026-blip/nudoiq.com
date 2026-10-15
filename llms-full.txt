@@ -4,8 +4,8 @@
 
 ## What it does
 
-- **Refresher:** reloads the Amazon Relay load board at an interval the carrier sets and keeps the board tab from going idle.
-- **Control bar with three modes:** Alert (pings you when a load matches your rules), Search (highlights matches) and Autobook (books a matching load for you). Rules: Min Net Profit, Min $/Mile, a load-pay minimum and a max-books cap per START; lanes come from Relay search. Autobook stops at the cap and the profit floor.
+- **Refresher:** reloads the Amazon Relay load board at an interval the carrier sets.
+- **Control bar with three modes:** Alert (pings you when a load matches your rules), Search (more ways to filter the board) and Autobook (books a matching load for you). Rules: Min Net Profit, Min $/Mile, a load-pay minimum and a max-books cap per START; lanes come from Relay search. Autobook stops at the cap and the profit floor.
 - **Telegram alerts** when a load lands.
 - **Instant Book:** books a load in one action from the control bar instead of the multi-step flow.
 - **Lane Intelligence:** compares the posted price with 90 days of that lane's history and shows a target rate, an expected range and a confidence level. Decision support, not a guarantee.
@@ -130,7 +130,7 @@ If you accept a load and then cancel it, that counts against you, and the closer
 
 ## Where NudoIQ Fits
 
-NudoIQ runs inside the Relay load board in your browser. It adds a control bar with three modes: Alert (pings you on a match), Search (highlights matches) and Autobook (books automatically). You set up rules once and stop watching manually.
+NudoIQ runs inside the Relay load board in your browser. It adds a control bar with three modes: Alert (pings you on a match), Search (more ways to filter the board) and Autobook (books automatically). You set up rules once and stop watching manually.
 
 It also shows [Lane Intelligence](https://nudoiq.com/amazon-relay-auto-refresh/) next to each rate, so you can see what that lane normally pays and whether today's rate is high or low. A [Net Profit calculator](https://nudoiq.com/amazon-relay-auto-booker/) shows you the dollars left after driver pay, fuel, maintenance, and deadhead to pickup, so you can set a profit floor and only book loads that clear it.
 
@@ -168,7 +168,7 @@ Rates vary by lane, time of day, season, and volume. The same route can pay very
 Box truck loads are for 26 ft and 16 ft trucks with tuck-under liftgates. Tractor loads are for day cab and sleeper units moving 48/53 ft trailers or containers. The board filters by equipment type. Check which equipment you're registered with Relay and filter to loads that match it.
 
 ### How often should I refresh the load board?
-[Amazon says](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) the board auto-refreshes new spot freight matches every 30 seconds. A [refresh extension](https://nudoiq.com/amazon-relay-auto-refresh/) reloads more often, on an interval you set. This keeps you in the hunt for loads without you staring at the screen. Set the refresh interval based on your tolerance for notification noise and your internet connection.
+[Amazon says](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) the board auto-refreshes new spot freight matches every 30 seconds. A [refresh extension](https://nudoiq.com/amazon-relay-auto-refresh/) reloads more often, on an interval you set. This keeps you in the hunt for loads without you staring at the screen. Set the refresh interval based on your tolerance for alert noise and your internet connection.
 
 ---
 
@@ -338,7 +338,7 @@ Amazon accepts only specific types of equipment. Your [equipment choices](https:
 
 **Cargo vans are not supported.** Do not apply with a cargo van: Amazon will not approve it, even if you think it meets the load specs.
 
-Amazon says the majority of Relay loads are power only (you bring the tractor, Amazon provides the trailer), and one-way loads need a box truck or your own trailer.
+Amazon says the majority of Relay loads are power only (you bring the tractor, Amazon provides the trailer), and one-way loads will most likely need a box truck or your own trailer.
 
 ## Beneficial Owner Verification
 
@@ -572,7 +572,7 @@ Amazon lists these box trucks as dock height (straight truck) with a working tuc
 
 Amazon describes several kinds of box truck work:
 
-- **One-Way Loads**: Amazon says one-way loads need a box truck or your own trailer.
+- **One-Way Loads**: Amazon says one-way loads will most likely need a box truck or your own trailer.
 - **Spot Loads**: Last-minute loads you book right away on the board.
 - **Contracts**: Box truck contracts include 8-hour and 13-hour solo contracts with round trips.
 - **Post A Truck**: Amazon lists box trucks as eligible, so you can post availability with a minimum rate per mile.
@@ -587,8 +587,8 @@ When you log into the [Amazon Relay load board](https://nudoiq.com/amazon-relay-
 Good loads disappear in seconds. This is why many box truck carriers use [auto-refresh tools](https://nudoiq.com/amazon-relay-auto-refresh/) or [auto-booking extensions](https://nudoiq.com/best-amazon-relay-extensions/):
 
 - **Refresher Extension**: Automatically reload the board on an interval you set so you see new loads sooner.
-- **Alert Mode**: Get pinged on your phone when a load matching your filters appears.
-- **Auto-Book Mode**: Automatically book a load if it meets your price and lane rules.
+- **Alert Mode**: Get an alert when a load that meets your minimums appears.
+- **Auto-Book Mode**: Automatically book a load if it meets your minimums, such as load pay or pay per mile.
 
 Even with an extension, competition is fierce. A good rate at a convenient time can book within seconds. That's why many box truck carriers add a refresher or alerts.
 
@@ -1110,7 +1110,7 @@ Amazon does not publish one. The 30-day window it lists is for pay disputes. Fil
 URL: https://nudoiq.com/amazon-relay-auto-refresh/
 Published: 2026-09-20. Last updated: 2026-10-14.
 
-Short answer: An Amazon Relay auto refresh tool reloads the load board for you on a timer, so new loads show up without you clicking reload. Good loads often book within seconds. NudoIQ's auto refresher lets you set the interval and keeps the board tab from going idle.
+Short answer: An Amazon Relay auto refresh tool reloads the load board for you on a timer, so new loads show up without you clicking reload. Good loads often book within seconds. NudoIQ's auto refresher lets you set the interval.
 
 ## Why Refreshing the Load Board Matters
 
@@ -1136,7 +1136,7 @@ The benefits are obvious:
 
 2. **You don't have to watch.** The extension reloads in the background while you do other things. You're not glued to the screen.
 
-3. **Alerts notify you.** The refresher can ping you when a load matching your rules posts, so you don't have to scan the board manually.
+3. **Alerts do the watching.** The refresher sounds an alert on the page when a load that meets your minimums posts, and sends a Telegram message if you connect Telegram, so you don't have to scan the board manually.
 
 4. **Autobook handles it.** If you set it to Autobook and your rules match, the extension books for you automatically. You don't even have to be at your computer.
 
@@ -1157,7 +1157,7 @@ It depends on your goals and your hardware:
 
 **For moderate competition (box truck, less busy lanes)**: Use a longer interval. You'll see new loads soon after they post. It's a good balance between speed and resource use.
 
-**If you're away from the truck**: Use a longer interval if you're not actively booking, or turn off refreshing entirely and set it to Alert mode: notify you when a load posts that matches your rules, and you'll decide whether to book.
+**If you're away from the truck**: Use a longer interval if you're not actively booking, or turn off refreshing entirely and set it to Alert mode: it sounds an alert on the page when a load posts that matches your rules, and you'll decide whether to book.
 
 **If battery life matters**: Longer intervals use less battery. Shorter intervals use more because your processor is reloading constantly.
 
@@ -1167,7 +1167,7 @@ A refresher can work in different modes:
 
 **Alert Mode**: The extension refreshes the board and pings you when a load matching your rules posts. In NudoIQ that's a sound on the page, plus a Telegram message with the load details if you connect Telegram. Then you decide whether to book. This is low-friction, you're in control, but it requires you to respond quickly.
 
-**Search Mode**: The extension refreshes the board and highlights (visually marks) loads that match your rules. You scan the board, see the highlights, and click Book if you want. This is also low-friction but requires you to be looking at the board.
+**Search Mode**: The extension refreshes the board and gives you more ways to filter it. You narrow the loads, look over what's left, and click Book if you want. This is also low-friction but requires you to be looking at the board.
 
 **Autobook Mode**: The extension refreshes the board, finds loads matching your rules, and books them automatically. Lane and equipment come from your Relay search; you set minimums (net profit, $/mile) and a max-books cap, and the extension books. NudoIQ sends each booking to Telegram if you connect it, and you review what it booked. This is hands-off but requires careful rule-setting to avoid booking loads you didn't want.
 
@@ -1209,7 +1209,7 @@ If your refresher runs on a short interval and your competitor reloads slowly (o
 
 ## NudoIQ's Refresh Approach
 
-NudoIQ's refresher lets you set the interval yourself, right on the NudoIQ bar. The extension keeps the Relay tab from going idle and refreshes on schedule, even if you're not looking at it.
+NudoIQ's refresher lets you set the interval yourself, right on the NudoIQ bar. The extension refreshes on schedule, even if you're not looking at it.
 
 It doesn't just refresh: it runs alongside [Lane Intelligence](https://nudoiq.com/amazon-relay-auto-refresh/) (showing rate history) and [Net Profit calculation](https://nudoiq.com/amazon-relay-auto-booker/) (showing what you keep), and it integrates with [Autobook](https://nudoiq.com/amazon-relay-auto-booker/) so you can set rules once and let it book automatically.
 
@@ -1245,7 +1245,7 @@ Not if you're using Autobook. It books loads that clear your minimums, up to you
 URL: https://nudoiq.com/amazon-relay-auto-booker/
 Published: 2026-09-20. Last updated: 2026-10-14.
 
-Short answer: An Amazon Relay auto booker is a browser extension that books loads matching rules you set, such as lane, price and profit. Every booking is the carrier's commitment, so guardrails matter: a profit floor, a max-books cap and testing rules in alert mode first. Cancelling booked loads hurts the acceptance score.
+Short answer: An Amazon Relay auto booker is a browser extension that refreshes the load board and books loads that meet minimums you set, such as net profit or pay per mile. Every booking is the carrier's commitment, so guardrails matter: a profit floor, a max-books cap and testing rules in alert mode first. Cancelling booked loads hurts the acceptance score.
 
 ## What an Auto-Booker Does
 
@@ -1278,7 +1278,7 @@ Booking rules narrow the field. They say "of all the loads on the board, only co
 
 **Profit Floor**: Set a minimum profit the extension must see before it books. Example: "Don't book anything that nets less than $150 after subtracting driver pay, fuel, maintenance, and deadhead."
 
-A profit floor is your second line of defense. Even if a load matches your lane, price, and distance rules, the extension checks the net profit. If it doesn't clear the floor, no book.
+A profit floor is your second line of defense. Even if a load is in your Relay search and clears your $/mile and load-pay minimums, the extension checks the net profit. If it doesn't clear the floor, no book.
 
 **Max-Books Cap**: Set a maximum number of loads the extension will book. Depending on the tool, the cap counts per day, per week or per run (in NudoIQ, Max books is 1 to 20 per START). Example: "Stop booking after you've booked 5 loads."
 
@@ -1300,7 +1300,7 @@ Search mode is good when you want to make the final decision but want the extens
 
 **Autobook Mode**: The extension refreshes the board, finds loads matching your rules, and books them automatically. The extension handles the booking; you don't have to watch the screen, but your browser has to stay open. NudoIQ sends each AutoBook to Telegram if you connect it.
 
-Autobook mode is the most hands-off but requires the most confidence in your rules. You need to trust that your lane, price, distance, profit floor, and max-books rules will produce bookings you want.
+Autobook mode is the most hands-off but requires the most confidence in your settings. You need to trust that your minimums (net profit, $/mile, load pay) and your max-books cap will produce bookings you want.
 
 ## Setting Your Booking Rules Carefully
 
@@ -1374,7 +1374,7 @@ Jumping straight to Autobook without testing your rules is asking for trouble. U
 
 ## How NudoIQ's Autobook Works
 
-NudoIQ's control bar includes three modes: Alert (sounds an alert), Search (highlights matches), and Autobook (books automatically). Lane, equipment and dates come from your Relay search, because NudoIQ works on the loads your board shows. In NudoIQ you set Min $/Mile, Min Net Profit and Max books (1 to 20 per START).
+NudoIQ's control bar includes three modes: Alert (sounds an alert), Search (more ways to filter the board), and Autobook (books automatically). Lane, equipment and dates come from your Relay search, because NudoIQ works on the loads your board shows. In NudoIQ you set Min $/Mile, Min Net Profit and Max books (1 to 20 per START).
 
 The extension uses [Net Profit calculation](https://nudoiq.com/amazon-relay-auto-booker/) to check whether a load clears your profit floor. So you're not just setting a dollar target: you're setting a profit target after costs.
 
@@ -1836,7 +1836,7 @@ Amazon describes the board in its [load board guide](https://relay.amazon.com/bl
 
 ## What types of loads are on Amazon Relay?
 
-Amazon Relay offers one-way loads, round trips, blocks, spot freight, short-term contracts and auctions. Round trips start and end at the same domicile and usually need only a tractor. One-way loads need a box truck or your own trailer. Blocks reserve your truck and driver for a set time, and contracts book weeks of loads in advance.
+Amazon Relay offers one-way loads, round trips, blocks, spot freight, short-term contracts and auctions. Round trips start and end at the same domicile and usually need only a tractor. One-way loads will most likely need a box truck or your own trailer. Blocks reserve your truck and driver for a set time, and contracts book weeks of loads in advance.
 
 Amazon breaks these down in its overview of [trucking work on Relay](https://relay.amazon.com/blog/trucking-work-amazon-relay):
 
@@ -1919,7 +1919,7 @@ No. Amazon tenders Relay loads only through the Amazon Relay load board. Third-p
 A block is a chunk of time you reserve your trucks and drivers for Relay. Amazon pays for the block even if it doesn't use the full time.
 
 ### Do I need my own trailer for Amazon Relay?
-Not for most loads. The majority of Relay loads are power only, where Amazon provides the trailer. One-way loads need a box truck or your own trailer.
+Not for most loads. The majority of Relay loads are power only, where Amazon provides the trailer. One-way loads will most likely need a box truck or your own trailer.
 
 ### Can I haul Amazon Relay loads with a cargo van?
 No. Cargo vans can't be used. The smallest supported equipment is a 16 ft box truck with a working tuck-under liftgate.
@@ -2155,7 +2155,7 @@ Amazon Relay has work for 16 ft and 26 ft box trucks that are dock height and ha
 
 That's from [Amazon's truck requirements page](https://relay.amazon.com/blog/amazon-relay-truck-requirements). To check your truck, insurance and authority first, see our [box truck requirements guide](https://nudoiq.com/amazon-relay-box-truck/).
 
-- **One-way loads.** [Amazon says](https://relay.amazon.com/blog/trucking-work-amazon-relay) one-way loads need a box truck or your own trailer, an edge over a tractor with no trailer.
+- **One-way loads.** [Amazon says](https://relay.amazon.com/blog/trucking-work-amazon-relay) one-way loads will most likely need a box truck or your own trailer, an edge over a tractor with no trailer.
 - **Spot freight.** Last-minute loads you book right away.
 - **Contracts.** Full or partial weeks of loads booked ahead. A 13-hour solo contract is one day of loads with 11 hours of drive time.
 - **Post A Truck.** You post when and where the truck is free, and Amazon matches loads to it.
@@ -2237,7 +2237,7 @@ What helps:
 
 - **Amazon's own alerts.** Saved searches, email alerts and mobile push notifications.
 - **A refresher.** It reloads the board for you on a timer. See [how Amazon Relay auto refresh works](https://nudoiq.com/amazon-relay-auto-refresh/).
-- **Rules and auto-booking.** An auto-booker books only loads that match your lane, price and limits. See our [auto-booker guide](https://nudoiq.com/amazon-relay-auto-booker/).
+- **Rules and auto-booking.** An auto-booker books only loads from your Relay search that meet your minimums, and stops at your max-books cap. See our [auto-booker guide](https://nudoiq.com/amazon-relay-auto-booker/).
 - **Protecting acceptance.** Cancelling a booked load hurts your acceptance score, more the closer it is to pickup. Book only what the truck can run.
 
 ## Where does NudoIQ fit for a box truck carrier?
@@ -2276,7 +2276,7 @@ Amazon pays weekly on a Sunday to Saturday cycle. Loads finished before 11:59 pm
 URL: https://nudoiq.com/amazon-relay-power-only/
 Published: 2026-10-02. Last updated: 2026-10-14.
 
-Short answer: Power only on Amazon Relay means the carrier brings the tractor and Amazon provides the trailer. Amazon says the majority of Relay loads are power only, and round trips usually need only a tractor. Day cab and sleeper tractors both qualify. One-way loads need your own trailer or a box truck.
+Short answer: Power only on Amazon Relay means the carrier brings the tractor and Amazon provides the trailer. Amazon says the majority of Relay loads are power only, and round trips usually need only a tractor. Day cab and sleeper tractors both qualify. One-way loads will most likely need your own trailer or a box truck.
 
 ## What does power only mean on Amazon Relay?
 
@@ -2297,7 +2297,7 @@ How the main work types line up for a tractor with no trailer:
 | Work type | What it is | Power only fit |
 |---|---|---|
 | Round trip | Starts and ends at the same domicile | Usually tractor only |
-| One-way | Head haul or backhaul to cut deadhead | Needs your own trailer (or a box truck) |
+| One-way | Head haul or backhaul to cut deadhead | Most likely a box truck or your own trailer |
 | Block | A chunk of time you reserve trucks and drivers for | Paid even if Amazon doesn't use the full block |
 | Spot freight | Last-minute loads booked right away on the board | Filter by equipment and trailer status |
 | Contract | Full or partial weeks of loads, booked ahead | Needs a B grade or better for new contracts |
@@ -2366,7 +2366,7 @@ Pay varies by lane, timing and equipment, and Amazon doesn't publish typical rat
 
 ## When does owning a trailer help on Amazon Relay?
 
-A trailer opens one-way loads. Amazon says one-way loads need a box truck or your own trailer, and one-ways are how you book head hauls and backhauls to cut deadhead. Without a trailer, you're working round trips, blocks and the power only loads on the board.
+A trailer opens one-way loads. Amazon says one-way loads will most likely need a box truck or your own trailer, and one-ways are how you book head hauls and backhauls to cut deadhead. Without a trailer, you're working round trips, blocks and the power only loads on the board.
 
 Relay supports 48 ft and 53 ft dry vans. A 53 ft reefer must meet the FDA Sanitary Transportation Rule, and 20, 40 or 45 ft high cube containers need UIIA. Before buying, count how many one-ways near your base you pass on today.
 
@@ -2384,7 +2384,7 @@ It's [$49.99 a month](https://nudoiq.com/#pricing) for every feature, the same p
 ## Frequently asked questions
 
 ### Do I need my own trailer for Amazon Relay?
-Not for most loads. Amazon says the majority of Relay loads are power only and round trips usually need only a tractor. You need your own trailer (or a box truck) for one-way loads.
+Not for most loads. Amazon says the majority of Relay loads are power only and round trips usually need only a tractor. You will most likely need your own trailer (or a box truck) for one-way loads.
 
 ### What insurance do I need to pull Amazon trailers?
 Amazon requires $1,000,000 auto liability per occurrence and $50,000 trailer interchange for semi operators, along with cargo and general liability. The [Relay insurance guide](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements) lists every coverage.
@@ -2716,7 +2716,7 @@ It could. Any extension that changes web pages can interfere with how the board 
 - Turn off your extensions one at a time, reloading the board after each, to see if one is the cause.
 - Try another Chromium browser, such as Microsoft Edge, or a fresh Chrome profile with no extensions.
 
-If you use NudoIQ, include it in that test. NudoIQ is a Chrome extension that runs in your own Chrome, inside your signed-in Relay tab, and never asks for your Amazon password. Its refresher reloads the board on an interval you set and keeps the tab from going idle. Alert, Search and Autobook modes ping you on a match, highlight it, or book it by your rules. It's $49.99 a month after a 7-day free trial, no card needed to start. Compare options in our [best Amazon Relay extensions guide](https://nudoiq.com/best-amazon-relay-extensions/) and our [auto-refresh guide](https://nudoiq.com/amazon-relay-auto-refresh/).
+If you use NudoIQ, include it in that test. NudoIQ is a Chrome extension that runs in your own Chrome, inside your signed-in Relay tab, and never asks for your Amazon password. Its refresher reloads the board on an interval you set. Alert, Search and Autobook modes ping you on a match, highlight it, or book it by your rules. It's $49.99 a month after a 7-day free trial, no card needed to start. Compare options in our [best Amazon Relay extensions guide](https://nudoiq.com/best-amazon-relay-extensions/) and our [auto-refresh guide](https://nudoiq.com/amazon-relay-auto-refresh/).
 
 ## When should I contact Relay support?
 
@@ -3177,7 +3177,7 @@ Amazon's guides describe what goes into an order rather than a screen-by-screen 
 2. **Set your availability.** The days and hours your truck and driver are free, up to two weeks in advance.
 3. **Set where the first pickup can be.** A radius for first pickup and a maximum deadhead.
 4. **Choose destinations.** Include or exclude cities, and add preferred destinations.
-5. **Pick one-way or round trip.** A round trip brings you back. A one-way needs a box truck or your own trailer.
+5. **Pick one-way or round trip.** A round trip brings you back. A one-way will most likely need a box truck or your own trailer.
 6. **Set distance or trip duration limits** so a match fits your driver's day.
 7. **Set maximum stops and stem time.**
 8. **Set your price.** Your minimum rate per mile and a payout amount.
@@ -3258,7 +3258,7 @@ No. Your order only books if a load matches it before your availability window e
 Yes. You can create several orders for different trucks and lanes. Use linked orders when one truck is posted on more than one order, so unfulfilled trips are cancelled once one fills.
 
 ### Does Post A Truck work for power only?
-Yes. Amazon lists power only loads as eligible. Choose round trip if you don't have your own trailer, because one-way loads need a box truck or your own trailer.
+Yes. Amazon lists power only loads as eligible. Choose round trip if you don't have your own trailer, because one-way loads will most likely need a box truck or your own trailer.
 
 ---
 

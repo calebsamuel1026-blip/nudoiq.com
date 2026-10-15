@@ -113,7 +113,7 @@
       "url": "https://nudoiq.com/icons/nudoiq-logo-512.png"
     }
   },
-  "abstract": "Un auto refresh de Amazon Relay recarga el load board por ti con un temporizador, así las cargas nuevas aparecen sin que le des a recargar. Las buenas cargas muchas veces se van en segundos. El auto refresh de NudoIQ te deja poner el intervalo, le agrega hasta 20% de variación al azar y evita que la pestaña del board se quede inactiva."
+  "abstract": "Un auto refresh de Amazon Relay recarga el load board por ti con un temporizador, así las cargas nuevas aparecen sin que le des a recargar. Las buenas cargas muchas veces se van en segundos. El auto refresh de NudoIQ recarga el board de Relay por ti. Tú eliges cada cuánto recarga."
 }
   </script>
   <script type="application/ld+json">
@@ -278,7 +278,7 @@
 
   <div class="container">
     <article class="prose">
-<section class="answer" aria-label="Respuesta corta"><p class="lbl">Respuesta corta</p><p>Un auto refresh de Amazon Relay recarga el load board por ti con un temporizador, así las cargas nuevas aparecen sin que le des a recargar. Las buenas cargas muchas veces se van en segundos. El auto refresh de NudoIQ te deja poner el intervalo, le agrega hasta 20% de variación al azar y evita que la pestaña del board se quede inactiva.</p></section>
+<section class="answer" aria-label="Respuesta corta"><p class="lbl">Respuesta corta</p><p>Un auto refresh de Amazon Relay recarga el load board por ti con un temporizador, así las cargas nuevas aparecen sin que le des a recargar. Las buenas cargas muchas veces se van en segundos. El auto refresh de NudoIQ recarga el board de Relay por ti. Tú eliges cada cuánto recarga.</p></section>
 <h2 id="por-que-importa-refrescar-el-load-board">Por qué importa refrescar el load board</h2>
 <p><a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">Amazon dice</a> que el load board se actualiza automáticamente cada 30 segundos con las cargas spot nuevas. Las buenas cargas se pueden ir en segundos, así que muchos transportistas recargan más seguido para verlas antes. Refrescar a mano es difícil si estás manejando, comiendo o atendiendo tu negocio: te alejas cinco minutos y en ese tiempo una buena carga puede salir y desaparecer.</p>
 <p>Una extensión de refresh hace la recarga por ti con un temporizador. Por eso existen las <a href="/es/mejores-extensiones-amazon-relay/">extensiones de refresh y auto booker</a>: para que sigas compitiendo sin estar mirando la pantalla todo el día.</p>
@@ -287,26 +287,25 @@
 <h2 id="que-hace-una-extension-de-refresh">Qué hace una extensión de refresh</h2>
 <p>Pones un intervalo (cuánto espera entre una recarga y otra) y la extensión recarga por ti. Lo que ganas:</p>
 <ol><li><strong>Ves las cargas antes.</strong> Con un intervalo más corto pasa menos tiempo entre que sale una carga y que tú la ves. En ese tiempo, otro transportista la puede reservar.</li><li><strong>No tienes que estar mirando.</strong> La extensión recarga en segundo plano mientras haces otra cosa.</li><li><strong>Te avisa.</strong> Puede mandarte un aviso cuando sale una carga que cumple tus reglas.</li><li><strong>Puede reservar.</strong> En modo autobook, si una carga cumple tus reglas, la extensión la reserva sola.</li></ol>
-<h2 id="el-intervalo-y-la-variacion-jitter">El intervalo y la variación (jitter)</h2>
+<h2 id="cada-cuanto-recarga">Cada cuánto recarga</h2>
 <p>El <strong>intervalo</strong> es cada cuánto se recarga el board. Más corto significa que ves antes las cargas nuevas, pero también más trabajo para el servidor y más batería gastada en tu computadora. Algunos transportistas lo acortan en rutas con mucha competencia.</p>
-<p>El <strong>jitter</strong> es una variación al azar que se le suma al intervalo. En vez de recargar a un ritmo exacto, la extensión mueve cada recarga un poco antes o un poco después. La variación es pequeña (NudoIQ usa hasta 20% del intervalo), pero alcanza para que muchos transportistas no le peguen al servidor en el mismo instante. Es como el tráfico: si todos salen del trabajo a las 5 en punto, la carretera se congestiona; si unos salen a las 4:50, otros a las 5:00 y otros a las 5:10, el tráfico fluye.</p>
 <h2 id="que-intervalo-poner">Qué intervalo poner</h2>
 <ul><li><strong>Cargas con mucha competencia (tractor o reefer en rutas movidas):</strong> un intervalo más corto. Ves antes las cargas nuevas, pero gastas más batería y tu computadora trabaja más.</li><li><strong>Competencia moderada (box truck, rutas menos movidas):</strong> un intervalo más largo. Igual ves las cargas poco después de que salen, con un buen balance entre rapidez y recursos.</li><li><strong>Si estás lejos del camión o no estás reservando:</strong> un intervalo largo, o apaga el refresh y usa el modo alerta para que te avise cuando salga una carga que cumple tus reglas.</li><li><strong>Si te importa la batería:</strong> los intervalos largos gastan menos.</li></ul>
 <h2 id="alertas-o-reserva-automatica">Alertas o reserva automática</h2>
-<p><strong>Alert:</strong> la extensión refresca y te avisa cuando sale una carga que cumple tus reglas (NudoIQ manda alertas por Telegram). Tú decides, pero tienes que responder rápido.</p>
-<p><strong>Search:</strong> la extensión refresca y marca en el board las cargas que cumplen tus reglas. Tú las revisas y le das a Book.</p>
-<p><strong>Autobook:</strong> la extensión refresca, encuentra las cargas que cumplen tus reglas (ruta, precio, ganancia mínima y tope de reservas) y las reserva sola. Te avisa y tú revisas lo que reservó. Necesita reglas bien pensadas; lo explicamos en la guía del <a href="/es/amazon-relay-auto-booker/">auto booker</a>.</p>
+<p><strong>Alert:</strong> la extensión refresca y suena una alerta en la página cuando sale una carga que cumple tus mínimos (y te manda un mensaje por Telegram si lo conectas). Tú decides, pero tienes que responder rápido.</p>
+<p><strong>Search:</strong> la extensión refresca y te da más filtros para buscar en el board. Tú revisas las cargas y le das a Book.</p>
+<p><strong>Autobook:</strong> la extensión refresca y reserva sola las cargas que cumplen tus mínimos (ganancia neta, $/milla, pago de la carga), hasta tu tope de reservas. Tú revisas lo que reservó. Necesita mínimos bien pensados; lo explicamos en la guía del <a href="/es/amazon-relay-auto-booker/">auto booker</a>.</p>
 <p>Puedes combinarlos: autobook en las rutas que siempre quieres y alerta en las que prefieres decidir caso por caso.</p>
 <h2 id="como-se-instala">Cómo se instala</h2>
 <p>Normalmente:</p>
-<ol><li>Instálala desde la Chrome Web Store.</li><li>Inicia sesión, o usa tu sesión de Relay abierta.</li><li>Pon el intervalo.</li><li>Pon tus reglas: rutas, rangos de precio, distancia, equipo, ganancia mínima y tope de reservas.</li><li>Configura las alertas (NudoIQ usa Telegram).</li><li>Déjala corriendo.</li></ol>
+<ol><li>Instálala desde la Chrome Web Store.</li><li>Inicia sesión, o usa tu sesión de Relay abierta.</li><li>Pon el intervalo.</li><li>Pon tus reglas: rutas, rangos de precio, distancia, equipo, ganancia mínima y tope de reservas.</li><li>Configura las alertas: el sonido en la página y, si quieres, mensajes por Telegram.</li><li>Déjala corriendo.</li></ol>
 <p>La mayoría agrega una barra o un menú en la pestaña del load board, y puedes cambiar reglas e intervalo sin reiniciar. La barra de NudoIQ y sus cuatro pasos están en nuestra <a href="/amazon-relay-chrome-extension/">guía de la extensión de Chrome (en inglés)</a>.</p>
 <h2 id="lo-que-pasa-en-cada-recarga">Lo que pasa en cada recarga</h2>
 <p>La extensión recarga todo el load board: cargas, filtros, todo. Cada recarga te muestra lo nuevo y lo que sigue disponible. Cuando un transportista reserva una carga, desaparece del board, y la extensión no puede reservar una carga que ya no está. Si dos transportistas intentan reservar la misma carga casi al mismo tiempo, gana el primero. Por eso importa el intervalo.</p>
 <h2 id="tu-cuenta-tu-responsabilidad">Tu cuenta, tu responsabilidad</h2>
-<p>Además del jitter, algunas herramientas esperan un tiempo mínimo entre recargas aunque pongas un intervalo más corto. Y el transportista es responsable de su cuenta de Relay y de cumplir los términos de Relay. Léelos antes de correr cualquier extensión.</p>
+<p>Algunas herramientas esperan un tiempo mínimo entre recargas aunque pongas un intervalo más corto. Y el transportista es responsable de su cuenta de Relay y de cumplir los términos de Relay. Léelos antes de correr cualquier extensión.</p>
 <h2 id="como-refresca-nudoiq">Cómo refresca NudoIQ</h2>
-<p>En NudoIQ tú pones el intervalo, con jitter incluido (hasta 20% de variación al azar en cada intervalo). La extensión evita que la pestaña de Relay se quede inactiva y refresca a su ritmo aunque no la estés mirando. Además del refresh, te muestra el historial de tarifas de cada ruta y la ganancia neta de cada carga, y se conecta con el autobook para que pongas tus reglas una vez. Antes de fijar tu ganancia mínima, puedes probar tus números en la <a href="/es/herramientas/calculadora-carga-relay/">calculadora gratis de ganancia</a>.</p>
+<p>En NudoIQ tú eliges cada cuánto recarga con el control SPEED (3 segundos por defecto, y lo puedes cambiar). Recarga mientras esté en START, hasta que le des a STOP. Además del refresh, te muestra el historial de tarifas de cada ruta y la ganancia neta de cada carga, y se conecta con el autobook para que pongas tus reglas una vez. Antes de fijar tu ganancia mínima, puedes probar tus números en la <a href="/es/herramientas/calculadora-carga-relay/">calculadora gratis de ganancia</a>.</p>
 <p>NudoIQ tiene 5.0 en la Chrome Web Store y funciona en Chrome de escritorio en inglés y en español. Cuesta $49.99 al mes con todas las funciones, y lo pruebas 7 días gratis, sin tarjeta para empezar.</p>
     </article>
 
