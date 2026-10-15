@@ -1486,7 +1486,7 @@ NudoIQ is a browser extension that runs inside the Relay load board and includes
 
 **Refresh Control**: Set the interval and press START or STOP on the NudoIQ bar.
 
-**Three Booking Modes**: Alert (sounds an alert when a matching load shows up), Search (advanced filters for searching through loads), Autobook (books matching loads that clear your minimums). Lane and equipment come from your Relay search; in NudoIQ you set Min $/Mile, Min Net Profit and Max books.
+**Three Booking Modes**: A match clears your Min Net Profit and Min $/Mile. ALERT sounds an alert on the page when one appears. SEARCH quietly refreshes the board and floats new and price-up matches. AUTOBOOK books matches, up to your Max books. Lane and equipment come from Relay.
 
 **Lane Intelligence**: For each load, NudoIQ shows the 90-day rate history for that lane, a target rate, an expected range, and a confidence level. Example: "$483 target next to a $407 board price." This is decision support, not a guarantee: Amazon rates change based on season, time of day, volume, and other factors.
 
@@ -1718,6 +1718,7 @@ Also included, in the same NudoIQ subscription.
 - Lane price history
 - Backhaul search
 - Post a Truck
+- Hide promoted loads and truck-posting pop-ups
 
 Sources:
 
@@ -3710,6 +3711,7 @@ Also included, in the same NudoIQ subscription.
 - One-tap booking
 - Post a Truck
 - Works in Spanish
+- Hide promoted loads and truck-posting pop-ups
 
 ### Sources
 
@@ -3826,6 +3828,7 @@ Also included, in the same NudoIQ subscription.
 - Auto-refresh the load board
 - One-tap booking
 - 7-day free trial, no card
+- Hide promoted loads and truck-posting pop-ups
 
 ### Sources
 
@@ -3936,6 +3939,7 @@ Also included, in the same NudoIQ subscription.
 - Auto-refresh the load board
 - Contract offers
 - 7-day free trial, no card
+- Hide promoted loads and truck-posting pop-ups
 
 ### Sources
 
@@ -4050,6 +4054,7 @@ Also included, in the same NudoIQ subscription.
 - Backhaul search
 - Post a Truck
 - Telegram alerts
+- Hide promoted loads and truck-posting pop-ups
 
 ### Sources
 
