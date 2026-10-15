@@ -178,9 +178,21 @@
   </url>
   <url>
     <loc>https://nudoiq.com/partners/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/partners/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/socios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/partners/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/socios/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/partners/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/socios/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/partners/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-loads/</loc>
