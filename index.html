@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>Amazon Relay Load Board Chrome Extension | NudoIQ</title>
-  <meta name="description" content="Chrome extension for the Amazon Relay load board. See the target rate before you book, dispute scorecard hits and track what each truck earned. 7-day free trial.">
+  <meta name="description" content="Chrome extension for the Amazon Relay load board. See each load&#x27;s net and AutoBook loads that clear your minimum. 7 days free, no card.">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="theme-color" content="#FFBB8C">
   <meta name="author" content="NudoIQ">
@@ -667,7 +667,19 @@
     .proof-in{padding:34px 24px 36px}
   }
 
-  </style>
+  
+  /* 2026-10-14 copy cut (Caleb: "users are not going to read everything"): check labels instead of sentences. */
+  .hero-under{margin:14px auto 0;font-size:14.5px;color:rgba(255,255,255,.86);text-align:center}
+  .strip-in .pcard b{position:relative;padding-left:28px;margin-bottom:0}
+  .strip-in .pcard b::before{content:"";position:absolute;left:2px;top:6px;width:14px;height:8px;
+    border-left:2px solid var(--blue);border-bottom:2px solid var(--blue);transform:rotate(-45deg);border-radius:1px}
+  .scopy .ticks{margin-top:22px}
+  .scopy .ticks li{font-size:17px;color:var(--ink-3);font-weight:500}
+  .fnote.fshared{text-align:center;max-width:70ch;margin:22px auto 0}
+  @media (max-width:820px){.strip-in{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .strip-in .pcard{padding:16px 12px 16px 0}.strip-in .pcard+.pcard{padding-left:12px}
+    .strip-in .pcard:nth-child(3){border-left:0;padding-left:0}}
+</style>
   <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
        store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
   <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
@@ -718,7 +730,7 @@
 <body data-clarity-unmask="true">
   <a class="skip" href="#main">Skip to content</a>
 
-  <div class="promo"><span data-t="heroMicro">50% off until end of day · $49.99/month · 7-day free trial · Cancel anytime</span></div>
+  <div class="promo"><span data-t="heroMicro">50% off until end of day. $49.99 a month flat.</span></div>
 
   <header class="top"><div class="wrap topin">
     <a class="brand" href="#" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
@@ -727,7 +739,7 @@
     </nav>
     <div class="navright">
       <div class="lang" aria-label="Language"><a href="/" hreflang="en" aria-current="page">English</a><a href="/es/" hreflang="es">Espa&ntilde;ol</a><a href="/ru/" hreflang="ru">Русский</a></div>
-      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="tryFree" target="_blank" rel="noopener">Try free for 7 days</a>
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="tryFree" target="_blank" rel="noopener">Try it 7 days free</a>
     </div>
   </div></header>
 
@@ -743,9 +755,8 @@
           <path d="M0,820 C300,588 780,716 1440,520 L1440,820 Z" fill="rgba(21,34,82,.34)"/>
         </svg>
         <div class="hero-top">
-          <p class="eyebrow" data-t="heroEyebrow">For Amazon Relay owner-operators and fleets</p>
-          <h1 class="display" data-t="heroTitle">The Relay automation toolkit.</h1>
-          <p class="lede" data-t="heroCopy">A Chrome extension that runs inside Amazon Relay, handling rates, disputes, autobook, backhauls, and profit math. So you don't have to.</p>
+          <h1 class="display" data-t="heroTitle">Relay loads booked at your number.</h1>
+          <p class="lede" data-t="heroCopy">Chrome extension for the Relay load board.</p>
           <!-- Caleb, 2026-09-17: "i think right here in the main heading there should be
                the 5 star review placement too, and then 300 users" / "it has to be the
                first thing users see." So the proof moves ABOVE the buttons - it used to
@@ -763,19 +774,19 @@
               <img class="pb-mark" src="/assets/chrome-mark.svg" alt="" width="26" height="26" decoding="async">
               <span class="pb-stack">
                 <span class="pb-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                <span class="pb-label" data-t="heroRating">5.0 on the Chrome Web Store</span>
+                <span class="pb-label" data-t="heroRating">Rated 5.0 on Chrome</span>
               </span>
             </span>
             <span class="pb-rule" aria-hidden="true"></span>
             <span class="pb-cell">
               <b class="pb-big">300+</b>
-              <span class="pb-label" data-t="heroUsers">carrier users</span>
+              <span class="pb-label" data-t="heroUsers">carriers</span>
             </span>
           </div>
           <div class="acts">
-            <a class="btn btn-dark" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="install" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
-            <a class="btn btn-ghost" href="#features" data-t="seeProduct">See the product</a>
+            <a class="btn btn-dark" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="install" target="_blank" rel="noopener">Try it 7 days free</a>
           </div>
+          <p class="hero-under" data-t="heroUnder">No card needed.</p>
         </div>
       </div>
       <div class="hero-stage">
@@ -785,20 +796,16 @@
         <div class="float f-person">
           <img src="/assets/people/portrait-door.webp" srcset="/assets/people/portrait-door-sm.webp 520w, /assets/people/portrait-door.webp 880w" sizes="156px" alt="" width="880" height="1168" decoding="async" loading="eager">
         </div>
-        <div class="float f-flag">
-          <p data-t="heroValue">One extension handles it all.</p>
-          <small data-t="heroValueNote">Automation, disputes, rates, backhauls, profit math.</small>
-        </div>
       </div>
     </section>
 
 
     <!-- ── PROOF STRIP ──────────────────────────────────────── -->
     <section class="strip"><div class="strip-in">
-      <div class="pcard"><b data-t="builtFor">Every review is five stars</b><span data-t="builtForSub">On the Chrome Web Store</span></div>
-      <div class="pcard"><b data-t="insideRelay">Runs in your Relay tab</b><span data-t="insideRelaySub">Nothing new to log into</span></div>
-      <div class="pcard"><b data-t="bilingual">English + Español</b><span data-t="bilingualSub">One-click switch</span></div>
-      <div class="pcard"><b data-t="clearTrial">7 days free</b><span data-t="clearTrialSub">$49.99/month after. Cancel anytime.</span></div>
+      <div class="pcard"><b data-t="chk1">Runs in your Relay tab</b></div>
+      <div class="pcard"><b data-t="chk2">Never needs your Amazon password</b></div>
+      <div class="pcard"><b data-t="chk3">English and Spanish</b></div>
+      <div class="pcard"><b data-t="chk4">Cancel anytime</b></div>
     </div></section>
 
 
@@ -837,119 +844,105 @@
           <img src="/assets/people/face-b.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
           <img src="/assets/people/face-c.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
         </div>
-        <p class="pill" data-t="featuresEyebrow">Inside NudoIQ</p>
-        <h2 class="display" data-t="featuresTitle">Eleven tools, one extension. Click through to see them.</h2>
-        <p class="flead" data-t="featuresLead">Each tab is a different tool built into NudoIQ. Click one to see exactly what it does.</p>
+        <h2 class="display" data-t="featuresTitle">Eleven tools, one flat price.</h2>
       </div>
       <div class="ftabs" role="tablist" aria-label="NudoIQ features">
           <button class="ftab" id="ft-lane" role="tab" aria-controls="fp-lane" aria-selected="true" tabindex="0" data-t="laneEyebrow">Lane Intelligence</button>
-          <button class="ftab" id="ft-profit" role="tab" aria-controls="fp-profit" aria-selected="false" tabindex="-1" data-t="profitEyebrow">Net Profit</button>
+          <button class="ftab" id="ft-profit" role="tab" aria-controls="fp-profit" aria-selected="false" tabindex="-1" data-t="profitEyebrow">Net profit</button>
           <button class="ftab" id="ft-dispute" role="tab" aria-controls="fp-dispute" aria-selected="false" tabindex="-1" data-t="disputeEyebrow">Scorecard disputes</button>
           <button class="ftab" id="ft-fleet" role="tab" aria-controls="fp-fleet" aria-selected="false" tabindex="-1" ><span data-t="fleetEyebrow">Fleet dashboard</span></button>
-          <button class="ftab" id="ft-pay" role="tab" aria-controls="fp-pay" aria-selected="false" tabindex="-1" ><span data-t="payEyebrow">Driver pay statements</span></button>
-          <button class="ftab" id="ft-refresher" role="tab" aria-controls="fp-refresher" aria-selected="false" tabindex="-1" data-t="refresherTab">Refresher</button>
-          <button class="ftab" id="ft-autobook" role="tab" aria-controls="fp-autobook" aria-selected="false" tabindex="-1" data-t="autobookTab">Autobook</button>
+          <button class="ftab" id="ft-pay" role="tab" aria-controls="fp-pay" aria-selected="false" tabindex="-1" ><span data-t="payEyebrow">Pay statements</span></button>
+          <button class="ftab" id="ft-refresher" role="tab" aria-controls="fp-refresher" aria-selected="false" tabindex="-1" data-t="refresherTab">Auto refresh</button>
+          <button class="ftab" id="ft-autobook" role="tab" aria-controls="fp-autobook" aria-selected="false" tabindex="-1" data-t="autobookTab">AutoBook</button>
           <button class="ftab" id="ft-backhaul" role="tab" aria-controls="fp-backhaul" aria-selected="false" tabindex="-1" data-t="backhaulTab">Backhaul</button>
-          <button class="ftab" id="ft-posttruck" role="tab" aria-controls="fp-posttruck" aria-selected="false" tabindex="-1" data-t="posttruckTab">Post Truck</button>
+          <button class="ftab" id="ft-posttruck" role="tab" aria-controls="fp-posttruck" aria-selected="false" tabindex="-1" data-t="posttruckTab">Post A Truck</button>
           <button class="ftab" id="ft-instantbook" role="tab" aria-controls="fp-instantbook" aria-selected="false" tabindex="-1" data-t="instantbookTab">Instant Book</button>
-          <button class="ftab" id="ft-realmiles" role="tab" aria-controls="fp-realmiles" aria-selected="false" tabindex="-1" data-t="realmilesTab">Real Miles</button>
+          <button class="ftab" id="ft-realmiles" role="tab" aria-controls="fp-realmiles" aria-selected="false" tabindex="-1" data-t="realmilesTab">Google Maps route</button>
       </div>
       <div class="fpanels">
         <div class="fpanel is-on" id="fp-lane" role="tabpanel" aria-labelledby="ft-lane">
         <div class="split">
           <div class="scopy">
-            <h2 class="split-h" data-t="laneTitle">Every lane shows a target rate, a ceiling, and a confidence level.</h2>
-            <p data-t="laneCopy">NudoIQ checks the posted price against that lane's history. It shows your target rate, the expected range, and how much data backs each estimate.</p>
+            <h2 class="split-h" data-t="laneTitle">See what this lane paid before.</h2>
             <ul class="ticks">
-              <li data-t="lanePoint1">Target a number instead of guessing</li>
-              <li data-t="lanePoint2">See how much data supports each estimate</li>
-              <li data-t="lanePoint3">Open the breakdown when the call is close</li>
+              <li data-t="lanePoint1">Lane price history</li>
+              <li data-t="lanePoint2">A target rate</li>
+              <li data-t="lanePoint3">First button under each load</li>
             </ul>
           </div>
           <figure class="plate">
             <img src="assets/shot-lane-intelligence.webp" alt="NudoIQ Lane Intelligence showing a $483 AI target rate at $2.72 per mile against a $407 board price, with a $451 to $488 likely ceiling range" width="526" height="711" decoding="async" loading="lazy">
-            <div class="platecap"><span data-t="realScreen">Real NudoIQ product screen</span></div>
-            <p class="fnote" data-t="laneNote">Lane estimates are decision support, not guaranteed market outcomes.</p>
           </figure>
         </div>
         </div>
         <div class="fpanel" id="fp-profit" role="tabpanel" aria-labelledby="ft-profit" hidden>
         <div class="split">
           <div class="scopy">
-            <h2 class="split-h" data-t="profitTitle">See what a load actually pays before you touch the offer button.</h2>
-            <p data-t="profitCopy">NudoIQ stamps a net profit figure on every card on the load board. It takes the posted rate and subtracts driver pay, fuel, maintenance, and the deadhead miles to the pickup, then shows the dollars and the net rate per mile that are actually left.</p>
+            <h2 class="split-h" data-t="profitTitle">See each load's net before you book.</h2>
             <ul class="ticks">
-              <li data-t="profitPoint1">See the real number, not the posted rate</li>
-              <li data-t="profitPoint2">Set a profit floor and hide loads under it</li>
-              <li data-t="profitPoint3">Stop an alert or autobook from firing on a loser</li>
+              <li data-t="profitPoint1">Net on every load card</li>
+              <li data-t="profitPoint2">Uses costs you enter once</li>
+              <li data-t="profitPoint3">Hide loads under your minimum</li>
             </ul>
           </div>
           <figure class="plate">
             <img src="assets/shot-net-profit.webp" alt="Amazon Relay load board rows with the NudoIQ net profit figure under each posted rate, showing $91.11 net at $1.13 per mile against a $212.53 posting" width="1590" height="444" decoding="async" loading="lazy">
-            <p class="fnote" data-t="profitNote">You enter your own cost numbers once. Estimates support your decision. They do not guarantee a rate, a match, or a booking.</p>
           </figure>
         </div>
         </div>
         <div class="fpanel" id="fp-dispute" role="tabpanel" aria-labelledby="ft-dispute" hidden>
         <div class="split">
           <div class="scopy">
-            <h2 class="split-h" data-t="disputeTitle">Turn an Amazon Relay scorecard hit into a filed dispute.</h2>
-            <p data-t="disputeCopy">NudoIQ reads your scorecard, pulls out the violation behind the score, and drafts a dispute letter citing Amazon policy. You review it, add context, and submit.</p>
+            <h2 class="split-h" data-t="disputeTitle">Your scorecard dispute letter, drafted for you.</h2>
             <ul class="ticks">
-              <li data-t="disputePoint1">Find the violation without hunting for it</li>
-              <li data-t="disputePoint2">File the same day instead of letting it stand</li>
-              <li data-t="disputePoint3">Add what happened in your own words</li>
+              <li data-t="disputePoint1">Drafted from the violation</li>
+              <li data-t="disputePoint2">Add what happened</li>
+              <li data-t="disputePoint3">You review and submit</li>
             </ul>
           </div>
           <figure class="plate">
             <img src="assets/shot-dispute.webp" alt="NudoIQ Dispute Engine on an Amazon Relay scorecard showing an A+ grade with on time, acceptance, app usage and disruption-free all at 100 percent, and nothing to dispute" width="1500" height="920" decoding="async" loading="lazy">
-            <p class="fnote" data-t="disputeNote">Privacy-safe product example. Driver names and load IDs are obscured. Amazon decides every dispute outcome.</p>
           </figure>
         </div>
         </div>
         <div class="fpanel" id="fp-fleet" role="tabpanel" aria-labelledby="ft-fleet" hidden>
         <div class="split">
           <div class="scopy">
-            <h2 class="split-h" data-t="fleetTitle">Know what your fleet earned this week, not next month.</h2>
-            <p data-t="fleetCopy">Revenue, miles, fuel cost, net margin, driver ranking and trip detail land in one view, updated as trips complete.</p>
+            <h2 class="split-h" data-t="fleetTitle">Your fleet's week in one view.</h2>
             <ul class="ticks">
-              <li data-t="fleetPoint1">See net margin without a reconciliation</li>
-              <li data-t="fleetPoint2">Compare drivers and weeks side by side</li>
-              <li data-t="fleetPoint3">Import CSV and pull settlement reports</li>
+              <li data-t="fleetPoint1">Revenue, miles and net margin</li>
+              <li data-t="fleetPoint2">Compare drivers and weeks</li>
+              <li data-t="fleetPoint3">CSV import and settlement reports</li>
             </ul>
           </div>
           <figure class="plate">
             <img src="assets/shot-fleet.webp" alt="NudoIQ fleet dashboard showing $90,510 revenue, 27,250 miles, 154 trips and $68,734 net margin across the fleet" width="1500" height="1000" decoding="async" loading="lazy">
-            <p class="fnote" data-t="privacyNote">Privacy-safe product example. Names, dates, routes, and identifying details are obscured.</p>
           </figure>
         </div>
         </div>
         <div class="fpanel" id="fp-pay" role="tabpanel" aria-labelledby="ft-pay" hidden>
         <div class="split">
           <div class="scopy">
-            <h2 class="split-h" data-t="payTitle">Build a driver pay statement from completed trips.</h2>
-            <p data-t="payCopy">NudoIQ totals the loads, miles and pay for the period and produces a statement you can print, save as PDF, or email to the driver.</p>
+            <h2 class="split-h" data-t="payTitle">Driver pay statements from completed trips.</h2>
             <ul class="ticks">
-              <li data-t="payPoint1">Pay drivers from trip data, not a spreadsheet</li>
-              <li data-t="payPoint2">Give drivers totals they can check line by line</li>
-              <li data-t="payPoint3">Send it without retyping a single trip</li>
+              <li data-t="payPoint1">Totals loads, miles and pay</li>
+              <li data-t="payPoint2">Print, PDF or email</li>
+              <li data-t="payPoint3">No spreadsheet retyping</li>
             </ul>
           </div>
           <figure class="plate">
             <img src="assets/shot-driver-pay.webp" alt="NudoIQ driver pay statement totalling 20 completed trips, 4,221 miles and $4,221.10 of driver pay" width="1500" height="1000" decoding="async" loading="lazy">
-            <p class="fnote" data-t="privacyNote2">Privacy-safe product example. Names, dates, load IDs, and routes are obscured.</p>
           </figure>
         </div>
         </div>
         <div class="fpanel" id="fp-refresher" role="tabpanel" aria-labelledby="ft-refresher" hidden>
         <div class="split">
           <div class="scopy">
-            <h2 class="split-h" data-t="refresherTitle">Set a refresh speed and let NudoIQ keep the board moving.</h2>
-            <p data-t="refresherCopy">Set the refresh interval right on the NudoIQ bar. NudoIQ adds up to 20% random jitter to each interval so requests don't land on the same beat every time, and keeps the load board tab active.</p>
+            <h2 class="split-h" data-t="refresherTitle">Stop hitting refresh on the board.</h2>
             <ul class="ticks">
-              <li data-t="refresherPoint1">Auto refresher you set from the NudoIQ bar</li>
-              <li data-t="refresherPoint2">Random jitter up to 20% on every interval</li>
-              <li data-t="refresherPoint3">Keeps the load board tab from going idle</li>
+              <li data-t="refresherPoint1">You set the speed</li>
+              <li data-t="refresherPoint2">New loads tagged NEW</li>
+              <li data-t="refresherPoint3">Press START, press STOP</li>
             </ul>
           </div>
           <figure class="plate">
@@ -960,46 +953,41 @@
         <div class="fpanel" id="fp-autobook" role="tabpanel" aria-labelledby="ft-autobook" hidden>
         <div class="split">
           <div class="scopy">
-            <h2 class="split-h" data-t="autobookTitle">Set your rules once, then let the control bar act.</h2>
-            <p data-t="autobookCopy">The control bar has three modes: Alert pings you on a match, Search highlights matches, and Autobook books one for you. Set price and lane rules, a profit floor, and a booking cap, then get a Telegram alert when one lands.</p>
+            <h2 class="split-h" data-t="autobookTitle">AutoBook takes loads that clear your minimums.</h2>
             <ul class="ticks">
-              <li data-t="autobookPoint1">Alert, search, or autobook: you pick the mode</li>
-              <li data-t="autobookPoint2">Set a minimum profit floor before it books</li>
-              <li data-t="autobookPoint3">Get a Telegram alert the moment one lands</li>
+              <li data-t="autobookPoint1">Modes: ALERT, SEARCH, AUTOBOOK</li>
+              <li data-t="autobookPoint2">Minimums plus a max-books cap</li>
+              <li data-t="autobookPoint3">Telegram message, if connected</li>
             </ul>
           </div>
           <figure class="plate">
             <img src="assets/shot-autobook.webp" alt="The NudoIQ control bar showing the alert, search and autobook modes on the Amazon Relay load board" width="1832" height="147" decoding="async" loading="lazy">
-            <p class="fnote" data-t="autobookNote">Autobook stops at your max-books cap and profit floor.</p>
           </figure>
         </div>
         </div>
         <div class="fpanel" id="fp-backhaul" role="tabpanel" aria-labelledby="ft-backhaul" hidden>
         <div class="split">
           <div class="scopy">
-            <h2 class="split-h" data-t="backhaulTitle">Rank backhaul loads by pay, by rate, and by miles from home.</h2>
-            <p data-t="backhaulCopy">NudoIQ searches backhaul loads from where your current load ends, aimed back toward home within your mileage radius and day window. Sort by total pay, rate per mile, pickup time, or distance from home. The all-in rate counts the deadhead.</p>
+            <h2 class="split-h" data-t="backhaulTitle">Find a backhaul toward home.</h2>
             <ul class="ticks">
-              <li data-t="backhaulPoint1">See which load is marked BEST OVERALL</li>
-              <li data-t="backhaulPoint2">Sort by pay, rate, pickup time, or distance home</li>
-              <li data-t="backhaulPoint3">Every rate counts the deadhead miles to reach it</li>
+              <li data-t="backhaulPoint1">Starts where your load ends</li>
+              <li data-t="backhaulPoint2">Ranked by pay, rate, distance</li>
+              <li data-t="backhaulPoint3">Rates count the deadhead</li>
             </ul>
           </div>
           <figure class="plate">
             <img src="assets/shot-backhaul.webp" alt="The NudoIQ Backhaul Loads modal with sort buttons for top pay, best dollar per mile, soonest and nearest home, showing each load's all-in rate per mile including deadhead and its distance from home" width="1110" height="712" decoding="async" loading="lazy">
-            <p class="fnote" data-t="backhaulNote">Backhaul rankings reflect the board at the moment you search. The all-in rate is an estimate, not a booking or a guaranteed payout.</p>
           </figure>
         </div>
         </div>
         <div class="fpanel" id="fp-posttruck" role="tabpanel" aria-labelledby="ft-posttruck" hidden>
         <div class="split">
           <div class="scopy">
-            <h2 class="split-h" data-t="posttruckTitle">See origin, destination, and price before you post a truck.</h2>
-            <p data-t="posttruckCopy">A modal over Post A Truck shows origin, destination, distance, and the board price next to your minimum dollars per mile and minimum payout. One button posts the truck, then shows Posting and Posted.</p>
+            <h2 class="split-h" data-t="posttruckTitle">Check the price, then post your truck.</h2>
             <ul class="ticks">
-              <li data-t="posttruckPoint1">See distance and price before you commit</li>
-              <li data-t="posttruckPoint2">Compare the board price to your minimum payout</li>
-              <li data-t="posttruckPoint3">Post the truck with a single button</li>
+              <li data-t="posttruckPoint1">Origin, destination and distance</li>
+              <li data-t="posttruckPoint2">Price beside your minimums</li>
+              <li data-t="posttruckPoint3">One button posts it</li>
             </ul>
           </div>
           <figure class="plate">
@@ -1010,12 +998,11 @@
         <div class="fpanel" id="fp-instantbook" role="tabpanel" aria-labelledby="ft-instantbook" hidden>
         <div class="split">
           <div class="scopy">
-            <h2 class="split-h" data-t="instantbookTitle">Book a load in one action instead of several steps.</h2>
-            <p data-t="instantbookCopy">Instant Book replaces the normal multi-step booking flow with a single action from the control bar. Click it once on a load you want and NudoIQ carries the booking through without the extra confirmation screens.</p>
+            <h2 class="split-h" data-t="instantbookTitle">Book a highlighted load with one tap.</h2>
             <ul class="ticks">
-              <li data-t="instantbookPoint1">One click instead of the normal booking flow</li>
-              <li data-t="instantbookPoint2">Available right from the control bar</li>
-              <li data-t="instantbookPoint3">Skip the extra confirmation screens</li>
+              <li data-t="instantbookPoint1">On highlighted load rows</li>
+              <li data-t="instantbookPoint2">One tap books it</li>
+              <li data-t="instantbookPoint3">No confirmation screen</li>
             </ul>
           </div>
           <figure class="plate">
@@ -1026,12 +1013,11 @@
         <div class="fpanel" id="fp-realmiles" role="tabpanel" aria-labelledby="ft-realmiles" hidden>
         <div class="split">
           <div class="scopy">
-            <h2 class="split-h" data-t="realmilesTitle">Open the actual routed trip before you trust the mileage.</h2>
-            <p data-t="realmilesCopy">An icon on each load card opens the full routed trip in Google Maps, including every stop on a multi-stop run. You see the real driving miles instead of only the number the board states.</p>
+            <h2 class="split-h" data-t="realmilesTitle">See the full route before you book.</h2>
             <ul class="ticks">
-              <li data-t="realmilesPoint1">Open the route in Google Maps, one click</li>
-              <li data-t="realmilesPoint2">See every stop on a multi-stop run</li>
-              <li data-t="realmilesPoint3">Check real miles against the board's number</li>
+              <li data-t="realmilesPoint1">Opens in Google Maps</li>
+              <li data-t="realmilesPoint2">Every stop, in order</li>
+              <li data-t="realmilesPoint3">Compare to the board's miles</li>
             </ul>
           </div>
           <figure class="plate">
@@ -1040,129 +1026,31 @@
         </div>
         </div>
       </div>
+      <p class="fnote fshared" data-t="featNote">Real screens, private details hidden. Prices and net are estimates, not guarantees. Maps routes aren't truck-specific. Amazon decides disputes.</p>
 
       <!-- Store button under the feature tabs. Clarity 2026-10-05: the tabs are the most used element (6 sessions clicked
            ~8 of 11) and none of those sessions reached a store button; the section had none. Existing label/key. -->
-      <div class="fcta"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="installNow" data-cta="after-features" target="_blank" rel="noopener">Add NudoIQ to Chrome</a></div>
+      <div class="fcta"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="installNow" data-cta="after-features" target="_blank" rel="noopener">Try it 7 days free</a></div>
 
-      <!-- The six supporting tools. They do not each deserve a split of their
-           own, but every feature has to stay discoverable, so they sit as a
-           quiet grid under the selector rather than as eleven more tabs. -->
-      <div class="tri tools">
-        <article><h3 data-t="alertsTitle">Smart alerts</h3><p data-t="alertsCopy">Catch a load you would have missed while you were away from the screen.</p></article>
-        <article><h3 data-t="rulesTitle">Booking rules</h3><p data-t="rulesCopy">Decide once what you will take, and let NudoIQ watch for it.</p></article>
-        <article><h3 data-t="mapsTitle">Open trip in Google Maps</h3><p data-t="mapsCopy">One click opens all stops from your trip in Google Maps directions, in order. Standard routing, not truck-specific.</p></article>
-        <article><h3 data-t="dispatchTitle">Driver dispatch</h3><p data-t="dispatchCopy">Your driver gets the load details the moment you assign the trip.</p></article>
-        <article><h3 data-t="hosTitle">HOS overview</h3><p data-t="hosCopy">Know the driver has the hours before you commit to the pickup.</p></article>
-        <article><h3 data-t="languageTitle">Bilingual interface</h3><p data-t="languageCopy">Your Spanish-speaking drivers and dispatchers read the same screens you do.</p></article>
-      </div>
-    </div></section>
-
-
-    <!-- ── STATEMENT BAND ───────────────────────────────────── -->
-    <section class="band">
-      <div class="mosaic">
-        <div class="scatter" aria-hidden="true">
-          <figure class="sc1"><img src="/assets/people/scene-yard.webp" srcset="/assets/people/scene-yard-sm.webp 720w, /assets/people/scene-yard.webp 2200w" sizes="190px" alt="" width="2200" height="1170" decoding="async" loading="lazy"></figure>
-          <figure class="sc2"><img src="/assets/people/scene-walkaround.webp" srcset="/assets/people/scene-walkaround-sm.webp 720w, /assets/people/scene-walkaround.webp 1100w" sizes="150px" alt="" width="1100" height="829" decoding="async" loading="lazy"></figure>
-          <figure class="sc3"><img src="/assets/people/scene-dock.webp" srcset="/assets/people/scene-dock-sm.webp 720w, /assets/people/scene-dock.webp 2200w" sizes="216px" alt="" width="2200" height="1238" decoding="async" loading="lazy"></figure>
-          <figure class="sc4"><img src="/assets/people/scene-cab.webp" srcset="/assets/people/scene-cab-sm.webp 720w, /assets/people/scene-cab.webp 1100w" sizes="158px" alt="" width="1100" height="829" decoding="async" loading="lazy"></figure>
-          <figure class="sc5"><img src="/assets/people/scene-desk.webp" srcset="/assets/people/scene-desk-sm.webp 720w, /assets/people/scene-desk.webp 1200w" sizes="132px" alt="" width="1200" height="671" decoding="async" loading="lazy"></figure>
-          <figure class="sc6"><img src="/assets/people/scene-rear-doors.webp" srcset="/assets/people/scene-rear-doors-sm.webp 520w, /assets/people/scene-rear-doors.webp 900w" sizes="138px" alt="" width="900" height="900" decoding="async" loading="lazy"></figure>
-        </div>
-        <div class="mosaic-in">
-          <p class="pill" data-t="valueEyebrow">How Relay prices loads</p>
-          <h2 class="display" data-t="valueTitle">We figured out how Relay decides what your load is worth.</h2>
-          <p class="intro" data-t="valueCopy">Relay bases your rate on the same things Amazon looks at: season, time of day, origin, equipment, what booked before, and today's volume. NudoIQ tracks all six and ranks your posted rate against that lane's 90-day history.</p>
-          <a class="btn btn-dark" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="installNow" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
-        </div>
-      </div>
-      <div class="sec-in">
-        <!-- Caleb, 2026-09-17: "change this here to a simple visualization that users
-             can easily understand that they will make 40-100 more per load and it only
-             costs 1.6 a day", then on the first attempt "i dont like that design."
-
-             The first attempt was two bars at relative scale. It was a chart, and a chart
-             asks to be studied. He picked this instead: turn the ratio into one sentence
-             with one number in it. The gap on a single load, divided by what a day costs,
-             is about six weeks - and six weeks is a thing a person can feel, where a
-             ratio is a thing they have to work out.
-
-             THE CLAIM IS THE GAP, NOT EARNINGS. "You will make $40-100 more per load" is
-             an outcome promise, an income claim, and banned in this account. The number
-             here is the difference NudoIQ SHOWS between the board price and what the lane
-             has paid - the same thing the real screenshot below demonstrates at $483
-             against $407. The arithmetic is printed so anyone can check it rather than
-             take it: both inputs are on screen next to the answer. -->
-        <div class="payoff">
-          <h3 class="po-hero" data-t="payoffBig">Your investment back on the first load</h3>
-          <dl class="po-ledger">
-            <div><dt data-t="gapFigure">$40 to $100</dt><dd data-t="gapLabel">more per load that carriers make with NudoIQ</dd></div>
-            <div><dt data-t="costFigure">$49.99</dt><dd data-t="costLabel">your monthly subscription to NudoIQ</dd></div>
-          </dl>
-          <p class="po-note" data-t="scaleNote">Lane payouts vary by market, timing, and individual history. These results are not guaranteed.</p>
-        </div>
-        <p class="mech" data-t="valueMechanism">On the Lane Intelligence screen below, you see a $483 target next to a $407 board price. That gap is what NudoIQ catches.</p>
-      </div>
-    </section>
-
-
-    <!-- ── MARQUEE ───────────────────────────────────────────── -->
-    <div class="marq" aria-hidden="true"><div class="marq-track" id="marqTrack">
-      <a class="marq-item" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" tabindex="-1"><span data-t="finalTitle">Know what the next load is worth before you take it.</span><span class="mpill" data-t="installNow">Add NudoIQ to Chrome</span></a>
-    </div></div>
-
-
-    <!-- ── PHOTO BAND: the supporting tools ──────────────────── -->
-    <section class="photo">
-      <img src="/assets/people/scene-hood.webp" srcset="/assets/people/scene-hood-sm.webp 720w, /assets/people/scene-hood.webp 1344w" sizes="100vw" alt="" width="1344" height="752" decoding="async" loading="lazy">
-      <div class="photo-in">
-        <h2 class="display" data-t="trustTitle">Why carriers trust it with their board.</h2>
-        <div class="chips chips-3">
-          <article class="chip"><h3 data-t="trust1Title">Your password stays with you</h3><p data-t="trust1Copy">NudoIQ runs inside your signed-in Relay browser tab. It never asks for your Amazon password or stores it. Your subscription email, driver information, and trip details are stored only for your account.</p></article>
-          <article class="chip"><h3 data-t="trust2Title">A named company, not an anonymous script</h3><p data-t="trust2Copy">Published by Sami Enterprises LLC of Portland, Oregon. The developer named on the Chrome Web Store listing.</p></article>
-          <article class="chip"><h3 data-t="trust3Title">Billing you control</h3><p data-t="trust3Copy">Payments run through Stripe, so card details never touch NudoIQ. Cancel from the Stripe portal any time, or email us and we do it within one business day.</p></article>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ── REVIEWS ───────────────────────────────────────────── -->
-    <section class="sec sec-alt" id="reviews"><div class="sec-in">
-      <div class="sec-intro">
-        <p class="eyebrow" data-t="reviewsEyebrow">From the Chrome Web Store</p>
-        <h2 class="display" data-t="reviewsTitle">What carriers say after they pay for it.</h2>
-        <p class="intro" data-t="reviewsCopy">Every review below is public on the Chrome Web Store listing.</p>
-        <p class="ratebar"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span data-t="ratingSummary">5.0 on the Chrome Web Store</span></p>
-      </div>
-      <div class="quotes">
-        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review1">Their AI features to detect what prices will go to is amazing and have already made me more than $1000 I would not have made without the extension, which makes the 50 bucks feel like nothing. Life saver for relay.</blockquote><figcaption data-t="review1By">sophialaim &middot; Chrome Web Store</figcaption></figure>
-        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review2">Their performance dispute feature is a life saver. Also their load booking features work really well, and they dont slow the load board down, other extensions seem to struggle with that.</blockquote><figcaption data-t="review2By">Futo &middot; Chrome Web Store</figcaption></figure>
-        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review3">Works great, good features, better than the others I have tried. Definitely worth it for the 50 bucks a month.</blockquote><figcaption data-t="review3By">Lalo &middot; Chrome Web Store</figcaption></figure>
-        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review4">Super worth the $50 per month.</blockquote><figcaption data-t="review4By">Miguel &middot; Chrome Web Store</figcaption></figure>
-        <figure class="q"><div class="mark" aria-hidden="true">&ldquo;</div><blockquote data-t="review5">Best extension I have tried for Amazon Relay. Unique features and no problems. I will keep paying the 50 dollars every month.</blockquote><figcaption data-t="review5By">Tristan &middot; Chrome Web Store</figcaption></figure>
-      </div>
-      <p class="qnote"><span data-t="reviewsNote">Reviews are reproduced from the public Chrome Web Store listing. Individual results vary; NudoIQ does not guarantee rates, bookings or earnings.</span> <a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk/reviews" rel="noopener" target="_blank" data-t="reviewsLink">Read them on the Chrome Web Store</a></p>
     </div></section>
 
 
     <!-- ── SETUP ─────────────────────────────────────────────── -->
     <section class="sec" id="setup"><div class="sec-in">
-      <p class="eyebrow" data-t="setupEyebrow">Setup</p>
       <h2 class="display" data-t="setupTitle">Three steps, about five minutes.</h2>
       <!-- 2026-10-10: same story as /welcome/ and /get/ (install; start the free week from the NudoIQ bar on Relay, no card; press START). Words: Martha, research/copy/FUNNEL-FRICTION-SITE-COPY-2026-10-10-v2.json -->
       <div class="steps">
         <article>
           <div class="stepface"><img src="/assets/people/avatar-a.webp" alt="" width="440" height="440" decoding="async" loading="lazy"></div>
-          <h3 data-t="step1Title">Add NudoIQ to your Chrome</h3><p data-t="step1Copy">You get it from the Chrome Web Store in about a minute.</p>
+          <h3 data-t="step1Title">Add NudoIQ to Chrome</h3>
         </article>
         <article>
           <div class="stepface"><img src="/assets/people/avatar-b.webp" alt="" width="440" height="440" decoding="async" loading="lazy"></div>
-          <h3 data-t="step2Title">Start your free week on Relay</h3><p data-t="step2Copy">Open Amazon Relay and start your free week from the NudoIQ bar. No card needed to start, then it's $49.99/month and you can cancel anytime.</p>
+          <h3 data-t="step2Title">Start your free week on Relay</h3><p data-t="step2Copy">No card needed to start.</p>
         </article>
         <article>
           <div class="stepface"><img src="/assets/people/avatar-c.webp" alt="" width="440" height="440" decoding="async" loading="lazy"></div>
-          <h3 data-t="step3Title">Press START on your board</h3><p data-t="step3Copy">Your board refreshes on its own, and new loads get an orange NEW tag.</p>
+          <h3 data-t="step3Title">Press START on your board</h3><p data-t="step3Copy">Your board refreshes on its own.</p>
         </article>
       </div>
     </div></section>
@@ -1171,40 +1059,36 @@
     <!-- ── PRICING ───────────────────────────────────────────── -->
     <section class="sec sec-alt" id="pricing"><div class="sec-in">
       <p class="eyebrow" data-t="pricingEyebrow">Pricing</p>
-      <h2 class="display" data-t="pricingTitle">$49.99 a month. Real automation. Cancel anytime.</h2>
-      <p class="intro" data-t="pricingCopy">The same price whether you run one truck or twenty.</p>
+      <h2 class="display" data-t="pricingTitle">$49.99 a month. Every tool. Cancel anytime.</h2>
+      <p class="intro" data-t="pricingCopy">Same price for one truck or twenty.</p>
       <div class="price">
-        <div class="pricetop"><div><h3>NudoIQ</h3><div data-t="completePlan">Relay automation for carriers</div></div><div class="amount">$49.99 <small data-t="perMonth">/ month</small></div></div>
+        <div class="pricetop"><div><h3>NudoIQ</h3><div data-t="completePlan">Everything in NudoIQ</div></div><div class="amount">$49.99 <small data-t="perMonth">/ month</small></div></div>
         <ul class="plist">
-          <li data-t="price1">Load alerts and price-change notifications</li>
-          <li data-t="price2">Search and booking rules</li>
-          <li data-t="price3">Lane Intelligence and rate support</li>
+          <li data-t="price1">Auto refresh and load alerts</li>
+          <li data-t="price2">AutoBook and Instant Book</li>
+          <li data-t="price3">Lane Intelligence and net profit</li>
           <li data-t="priceDispute">Scorecard dispute letters</li>
-          <li data-t="price4">Fleet and earnings reporting</li>
+          <li data-t="price4">Fleet dashboard and reports</li>
           <li data-t="price5">Driver pay statements</li>
-          <li data-t="price6">English and Spanish interface</li>
+          <li data-t="price6">Backhaul and Post A Truck</li>
         </ul>
-        <div class="pfoot"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="startTrial" target="_blank" rel="noopener">Start the 7-day trial</a><p class="pnote" data-t="priceNote">New accounts start free with no card. $49.99/month after 7 days. Cancel anytime.</p></div>
+        <div class="pfoot"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="startTrial" target="_blank" rel="noopener">Try it 7 days free</a><p class="pnote" data-t="priceNote">Start free with no card. $49.99 a month after 7 days. Cancel anytime.</p></div>
       </div>
     </div></section>
 
 
     <!-- ── FAQ ───────────────────────────────────────────────── -->
     <section class="sec" id="faq"><div class="sec-in">
-      <h2 class="display" data-t="faqTitle">Answers before you install.</h2>
+      <h2 class="display" data-t="faqTitle">Questions before you install</h2>
       <div class="faq">
-        <details><summary data-t="faq1Q">Do I need to leave my computer on?</summary><p data-t="faq1A">Yes. NudoIQ runs in your browser, so the Relay tab and computer need to remain available while it watches the board. Alerts help you step away without staring at the screen.</p></details>
-        <details><summary data-t="faq2Q">Does NudoIQ guarantee a rate or booking?</summary><p data-t="faq2A">No. Rates, availability, and booking outcomes change constantly. NudoIQ provides alerts, historical context, estimates, and workflow tools to support your decision.</p></details>
-        <details><summary data-t="faq3Q">Is NudoIQ affiliated with Amazon?</summary><p data-t="faq3A">No. NudoIQ is an independent browser extension and is not affiliated with or endorsed by Amazon.com, Inc. Carriers remain responsible for their accounts and compliance with applicable terms.</p></details>
-        <details><summary data-t="faq4Q">Which browsers are supported?</summary><p data-t="faq4A">NudoIQ is built for Chrome and other Chromium-based browsers. Feature behavior can vary by browser version.</p></details>
-        <details><summary data-t="faq5Q">How do I cancel?</summary><p data-t="faq5A">Go to nudoiq.com/billing and open your Stripe billing portal (Stripe will send a one-time code to your subscription email). Or email contact@nudoiq.com. Cancel during the 7-day trial with no charge; cancel later and the next renewal is stopped.</p></details>
-        <details><summary data-t="faq6Q">How can I get help?</summary><p><span data-t="faq6A">Email us at</span> <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a> <span data-t="faq6B">or message NudoIQ support on Telegram.</span></p></details>
-        <details><summary data-t="faq7Q">What is the Amazon Relay load board?</summary><p data-t="faq7A">It is the board inside Amazon Relay where Amazon posts freight to contracted carriers. Carriers search it, book loads, and post available trucks against it. NudoIQ does not replace that board. It runs inside it and adds rate context, alerts and reporting to the screens you already use.</p></details>
-        <details><summary data-t="faq8Q">Does NudoIQ see my Amazon Relay password?</summary><p data-t="faq8A">NudoIQ runs inside your signed-in Relay browser tab. It never asks for your Amazon password or stores it. Your subscription email, driver information, and trip details are stored only for your account.</p></details>
-        <details><summary data-t="faq10Q">Will NudoIQ get my account suspended?</summary><p data-t="faq10A">NudoIQ runs only in your own browser on Relay pages you're signed in to. It doesn't log in from another location or ask for your password. You control the refresh speed. Amazon's decisions about accounts are theirs alone, but NudoIQ stays within the Relay interface you already use.</p></details>
-        <details><summary data-t="faq9Q">Does NudoIQ work on load boards other than Amazon Relay?</summary><p data-t="faq9A">No. NudoIQ is built specifically for the Amazon Relay load board and reads only Relay screens. It does not connect to DAT, Truckstop or other load boards.</p></details>
-        <details><summary data-t="faq11Q">What makes NudoIQ different from other Relay extensions?</summary><p><span data-t="faq11A">NudoIQ is the only Relay extension that books loads to your own minimum net profit and drafts scorecard dispute letters (checked October 5, 2026, across 52 other store listings). Every feature is one flat $49.99 a month, the same for one truck or twenty.</span> <a href="/why-nudoiq/" data-t="faq11L">See the side-by-side comparison.</a></p></details>
-        <details><summary data-t="faq12Q">Why does the Chrome Web Store show fewer users than 300+ carriers?</summary><p><span data-t="faq12A">The store only counts installs made from NudoIQ's store listing, which was created on May 21, 2026. Before that, NudoIQ went to carriers directly, without the store, so they are not in that number. In total, NudoIQ is used by 300+ carriers.</span> <a href="/chrome-web-store-user-count/" data-t="faq12L">Read how the store count works.</a></p></details>
+        <details><summary data-t="faq7Q">What is the Amazon Relay load board?</summary><p data-t="faq7A">The board in Amazon Relay where Amazon posts freight for its carriers. NudoIQ runs inside it and adds net profit, alerts and booking tools.</p></details>
+        <details><summary data-t="faq8Q">Does NudoIQ see my Amazon password?</summary><p data-t="faq8A">No. It runs in your signed-in Relay tab and never asks for your Amazon password or stores it.</p></details>
+        <details><summary data-t="faq10Q">Will NudoIQ get my account suspended?</summary><p data-t="faq10A">It runs only in your own signed-in Relay tab. You set the refresh speed. You're responsible for your Relay account and for following Relay's terms.</p></details>
+        <details><summary data-t="faq1Q">Do I need to leave my computer on?</summary><p data-t="faq1A">Yes. NudoIQ runs in your Relay tab, so the computer stays on and the tab stays open while it watches the board.</p></details>
+        <details><summary data-t="faq3Q">Is NudoIQ affiliated with Amazon?</summary><p data-t="faq3A">No. NudoIQ is independent software and is not affiliated with or endorsed by Amazon.</p></details>
+        <details><summary data-t="faq5Q">How do I cancel?</summary><p data-t="faq5A">At nudoiq.com/billing, or email contact@nudoiq.com. Cancel during the free week and you pay nothing.</p></details>
+        <details><summary data-t="faq11Q">What makes NudoIQ different?</summary><p><span data-t="faq11A">It's the only Relay extension that books to your own minimum net and drafts scorecard dispute letters (52 other listings checked Oct 5, 2026). One flat $49.99 a month.</span> <a href="/why-nudoiq/" data-t="faq11L"></a></p></details>
+        <details><summary data-t="faq12Q">Why does the Chrome Web Store show fewer users?</summary><p><span data-t="faq12A">The store counts only installs from our listing, created May 21, 2026. Carriers who got NudoIQ before that aren't in it. In total, 300+ carriers use NudoIQ.</span> <a href="/chrome-web-store-user-count/" data-t="faq12L"></a></p></details>
       </div>
     </div></section>
 
@@ -1213,9 +1097,9 @@
     <section class="closer">
       <div class="closer-in">
       <div class="closer-copy">
-        <h2 class="display" data-t="finalTitle">Know what the next load is worth before you take it.</h2>
-        <p data-t="finalCopy">Seven days free. No card needed. Try it on your own loads.</p>
-        <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="installNow" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+        <h2 class="display" data-t="finalTitle">Set your minimum once. Let NudoIQ watch the board.</h2>
+        <p data-t="finalCopy">7 days free. No card needed. $49.99 a month after.</p>
+        <a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="installNow" target="_blank" rel="noopener">Try it 7 days free</a>
       </div>
       </div>
       <div class="closer-shot">
@@ -1237,7 +1121,7 @@
     <p class="tm" data-t="trademarkNote">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc.</p>
   </div></footer>
 
-  <a class="btn btn-go mcta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="mobileCta" target="_blank" rel="noopener">Start 7 days free</a>
+  <a class="btn btn-go mcta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="mobileCta" target="_blank" rel="noopener">Try it 7 days free</a>
 
   <script>
   (function(){
@@ -1275,7 +1159,8 @@
   })();
   </script>
 
-  <script type="application/ld+json">{
+  <script type="application/ld+json">
+{
  "@context": "https://schema.org",
  "@graph": [
   {
@@ -1414,78 +1299,6 @@
      "@type": "Review",
      "author": {
       "@type": "Person",
-      "name": "sophialaim"
-     },
-     "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "worstRating": "1"
-     },
-     "reviewBody": "Their AI features to detect what prices will go to is amazing and have already made me more than $1000 I would not have made without the extension, which makes the 50 bucks feel like nothing. Life saver for relay.",
-     "datePublished": "2026-08-25",
-     "itemReviewed": {
-      "@id": "https://nudoiq.com/#software"
-     }
-    },
-    {
-     "@type": "Review",
-     "author": {
-      "@type": "Person",
-      "name": "Futo"
-     },
-     "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "worstRating": "1"
-     },
-     "reviewBody": "Their performance dispute feature is a life saver. Also their load booking features work really well, and they dont slow the load board down, other extensions seem to struggle with that.",
-     "datePublished": "2026-06-28",
-     "itemReviewed": {
-      "@id": "https://nudoiq.com/#software"
-     }
-    },
-    {
-     "@type": "Review",
-     "author": {
-      "@type": "Person",
-      "name": "Lalo"
-     },
-     "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "worstRating": "1"
-     },
-     "reviewBody": "Works great, good features, better than the others I have tried. Definitely worth it for the 50 bucks a month.",
-     "datePublished": "2026-06-10",
-     "itemReviewed": {
-      "@id": "https://nudoiq.com/#software"
-     }
-    },
-    {
-     "@type": "Review",
-     "author": {
-      "@type": "Person",
-      "name": "Miguel"
-     },
-     "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "worstRating": "1"
-     },
-     "reviewBody": "Super worth the $50 per month.",
-     "datePublished": "2026-08-28",
-     "itemReviewed": {
-      "@id": "https://nudoiq.com/#software"
-     }
-    },
-    {
-     "@type": "Review",
-     "author": {
-      "@type": "Person",
       "name": "Tristan"
      },
      "datePublished": "2026-08-28",
@@ -1511,74 +1324,18 @@
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "Do I need to leave my computer on?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Yes. NudoIQ runs in your browser, so the Amazon Relay tab and computer need to remain available while it watches the load board. Alerts help you step away without staring at the screen."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Does NudoIQ guarantee a rate or booking?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "No. Rates, availability, and booking outcomes change constantly. NudoIQ provides alerts, historical context, estimates, and workflow tools to support your decision."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Is NudoIQ affiliated with Amazon?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "No. NudoIQ is an independent browser extension and is not affiliated with or endorsed by Amazon.com, Inc. Carriers remain responsible for their accounts and compliance with applicable terms."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Which browsers are supported?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "NudoIQ is built for Chrome and other Chromium-based browsers. Feature behavior can vary by browser version."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "How do I cancel?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Go to nudoiq.com/billing and open your Stripe billing portal (Stripe will send a one-time code to your subscription email). Or email contact@nudoiq.com. Cancel during the 7-day trial with no charge; cancel later and the next renewal is stopped."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "How can I get help?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Email contact@nudoiq.com or message NudoIQ support on Telegram."
-     }
-    },
-    {
-     "@type": "Question",
      "name": "What is the Amazon Relay load board?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "It is the board inside Amazon Relay where Amazon posts freight to contracted carriers. Carriers search it, book loads, and post available trucks against it. NudoIQ does not replace that board. It runs inside it and adds rate context, alerts and reporting to the screens you already use."
+      "text": "The board in Amazon Relay where Amazon posts freight for its carriers. NudoIQ runs inside it and adds net profit, alerts and booking tools."
      }
     },
     {
      "@type": "Question",
-     "name": "Does NudoIQ see my Amazon Relay password?",
+     "name": "Does NudoIQ see my Amazon password?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "NudoIQ runs inside your signed-in Relay browser tab. It never asks for your Amazon password or stores it. Your subscription email, driver information, and trip details are stored only for your account."
-     }
-    },
-    {
-     "@type": "Question",
-     "name": "Does NudoIQ work on load boards other than Amazon Relay?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "No. NudoIQ is built specifically for the Amazon Relay load board and reads only Relay screens. It does not connect to DAT, Truckstop or other load boards."
+      "text": "No. It runs in your signed-in Relay tab and never asks for your Amazon password or stores it."
      }
     },
     {
@@ -1586,29 +1343,54 @@
      "name": "Will NudoIQ get my account suspended?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "NudoIQ runs only in your own browser on Relay pages you're signed in to. It doesn't log in from another location or ask for your password. You control the refresh speed. Amazon's decisions about accounts are theirs alone, but NudoIQ stays within the Relay interface you already use."
+      "text": "It runs only in your own signed-in Relay tab. You set the refresh speed. You're responsible for your Relay account and for following Relay's terms."
      }
     },
     {
      "@type": "Question",
-     "name": "What makes NudoIQ different from other Relay extensions?",
+     "name": "Do I need to leave my computer on?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "NudoIQ is the only Relay extension that books loads to your own minimum net profit and drafts scorecard dispute letters (checked October 5, 2026, across 52 other store listings). Every feature is one flat $49.99 a month, the same for one truck or twenty. See the side-by-side comparison: https://nudoiq.com/why-nudoiq/"
+      "text": "Yes. NudoIQ runs in your Relay tab, so the computer stays on and the tab stays open while it watches the board."
      }
     },
     {
      "@type": "Question",
-     "name": "Why does the Chrome Web Store show fewer users than 300+ carriers?",
+     "name": "Is NudoIQ affiliated with Amazon?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "The store only counts installs made from NudoIQ's store listing, which was created on May 21, 2026. Before that, NudoIQ went to carriers directly, without the store, so they are not in that number. In total, NudoIQ is used by 300+ carriers. Read how the store count works: https://nudoiq.com/chrome-web-store-user-count/"
+      "text": "No. NudoIQ is independent software and is not affiliated with or endorsed by Amazon."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "How do I cancel?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "At nudoiq.com/billing, or email contact@nudoiq.com. Cancel during the free week and you pay nothing."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What makes NudoIQ different?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It's the only Relay extension that books to your own minimum net and drafts scorecard dispute letters (52 other listings checked Oct 5, 2026). One flat $49.99 a month."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why does the Chrome Web Store show fewer users?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "The store counts only installs from our listing, created May 21, 2026. Carriers who got NudoIQ before that aren't in it. In total, 300+ carriers use NudoIQ."
      }
     }
    ]
   }
  ]
-}</script>
+}
+  </script>
   <script src="/assets/mobile-bridge.js?v=b5ebdaf4" defer></script>
   <!-- 2026-10-05: re-align a #hash landing (ChatGPT links to /#pricing) after the web font swaps in. The smooth jump is
        computed with the fallback font; Inter Tight then shortens the hero and features text by ~110-150px, so the visitor
