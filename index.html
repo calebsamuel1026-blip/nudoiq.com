@@ -645,7 +645,13 @@
     body{padding-bottom:82px}
     .mcta{display:inline-flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:80;
       justify-content:center;box-shadow:0 10px 30px -8px rgba(51,102,255,.55)}
+    /* 2026-10-14: the phone sticky button waits until the hero button has scrolled away (two identical buttons
+       on the first screen otherwise). */
+    .mcta{transition:opacity .2s ease,transform .2s ease}
+    .mcta.mhide{opacity:0;pointer-events:none;transform:translateY(16px)}
   }
+  @media (prefers-reduced-motion:reduce){.mcta{transition:none}}
+  .fpanel .split{align-items:start}
   /* ── Proof band, directly under the hero strip ──────────────────────
      Not another row of cards: there are four of those immediately above it,
      and a fifth would read as one more claim rather than as people talking.
@@ -1121,7 +1127,7 @@
     <p class="tm" data-t="trademarkNote">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc.</p>
   </div></footer>
 
-  <a class="btn btn-go mcta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="mobileCta" target="_blank" rel="noopener">Try it 7 days free</a>
+  <a class="btn btn-go mcta mhide" aria-hidden="true" tabindex="-1" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" data-t="mobileCta" target="_blank" rel="noopener">Try it 7 days free</a>
 
   <script>
   (function(){
@@ -1137,6 +1143,10 @@
       document.documentElement.setAttribute('data-motion',off?'off':'on');
       try{localStorage.setItem('nudoiq_motion',off?'off':'on');}catch(e){}
     });
+    var mc=document.querySelector('.mcta'),ha=document.querySelector('.hero .acts');
+    if(mc&&ha&&'IntersectionObserver' in window){new IntersectionObserver(function(es){var show=!es[0].isIntersecting;
+      mc.classList.toggle('mhide',!show);mc.setAttribute('aria-hidden',show?'false':'true');mc.tabIndex=show?0:-1;}).observe(ha);}
+    else if(mc){mc.classList.remove('mhide');mc.removeAttribute('aria-hidden');mc.removeAttribute('tabindex');}
     var tabs=[].slice.call(document.querySelectorAll('.ftab'));
     function show(tab){
       tabs.forEach(function(t){
