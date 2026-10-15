@@ -39,7 +39,7 @@
     })();
   </script>
   <title>Автобукер для Amazon Relay: расширение для Chrome | NudoIQ</title>
-  <meta name="description" content="Расширение для load board Amazon Relay для диспетчеров: чистая прибыль по грузу, Lane Intelligence, AutoBook и backhaul. 7 дней бесплатно, карта не нужна.">
+  <meta name="description" content="Расширение Chrome для load board Amazon Relay: чистая прибыль по грузу, Lane Intelligence, AutoBook от вашего минимума. 7 дней бесплатно, без карты.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#16255A">
   <link rel="canonical" href="https://nudoiq.com/ru/">
@@ -49,7 +49,7 @@
   <link rel="alternate" hreflang="x-default" href="https://nudoiq.com/">
   <meta property="og:site_name" content="NudoIQ">
   <meta property="og:title" content="Автобукер для Amazon Relay: расширение для Chrome | NudoIQ">
-  <meta property="og:description" content="Для диспетчеров Amazon Relay: чистая прибыль по грузу, AutoBook и backhaul. Одна цена за все траки. 7 дней бесплатно.">
+  <meta property="og:description" content="Для диспетчеров Amazon Relay: чистая прибыль по грузу, AutoBook от вашего минимума и backhaul. $49.99 в месяц, без доплаты за пользователей. 7 дней бесплатно.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://nudoiq.com/ru/">
   <meta property="og:locale" content="ru_RU">
@@ -339,6 +339,18 @@
     @media (max-width:560px){.feat-grid.six,.obj-grid.six{grid-template-columns:1fr}
       .topr{gap:8px}.lang a{padding:11px 8px;font-size:12px}.top-cta{padding:10px 12px;font-size:13px}}
     @media (max-width:400px){.top-cta{display:none}}
+  
+    /* 2026-10-14 copy cut: labels instead of sentences. */
+    .checks{list-style:none;margin:0 auto;padding:0;display:grid;gap:12px 28px;grid-template-columns:repeat(2,max-content);justify-content:center}
+    .checks li{position:relative;padding-left:30px;font-size:18px;font-weight:500;color:var(--ink);line-height:1.4}
+    .checks li::before{content:"";position:absolute;left:3px;top:7px;width:15px;height:8px;border-left:2.5px solid var(--blue);
+      border-bottom:2.5px solid var(--blue);transform:rotate(-45deg);border-radius:1px}
+    .steps li .sub{display:block;font-size:14px;color:var(--ink-4)}
+    .qa{max-width:760px;margin:0 auto;border-top:1px solid #E6E9F0}
+    .qa details{border-bottom:1px solid #E6E9F0}
+    .qa summary{cursor:pointer;padding:16px 4px;font-size:16px;font-weight:600;color:var(--ink);min-height:44px}
+    .qa p{padding:0 4px 16px;font-size:14.5px;line-height:1.55;color:var(--ink-4)}
+    @media (max-width:640px){.checks{grid-template-columns:1fr;justify-content:start;max-width:340px}}
   </style>
   <script type="application/ld+json">
 {
@@ -347,7 +359,7 @@
   "@id": "https://nudoiq.com/ru/#webpage",
   "url": "https://nudoiq.com/ru/",
   "name": "Автобукер для Amazon Relay: расширение для Chrome | NudoIQ",
-  "description": "Расширение для load board Amazon Relay для диспетчеров: чистая прибыль по грузу, Lane Intelligence, AutoBook и backhaul. 7 дней бесплатно, карта не нужна.",
+  "description": "Расширение Chrome для load board Amazon Relay: чистая прибыль по грузу, Lane Intelligence, AutoBook от вашего минимума. 7 дней бесплатно, без карты.",
   "inLanguage": "ru",
   "isPartOf": {
     "@id": "https://nudoiq.com/#website"
@@ -374,15 +386,15 @@
       "name": "NudoIQ спрашивает мой пароль от Amazon?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Нет. NudoIQ работает внутри вашей вкладки Relay, где вы уже вошли в аккаунт. Он никогда не спрашивает и не хранит ваш пароль от Amazon."
+        "text": "Нет. NudoIQ работает в вашей вкладке Relay, где вы уже вошли. Он никогда не спрашивает и не хранит пароль от Amazon."
       }
     },
     {
       "@type": "Question",
-      "name": "Сколько стоит, если у меня несколько траков?",
+      "name": "Не заблокируют ли аккаунт из-за NudoIQ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Одна подписка: $49.99 в месяц за все траки, которые вы ведете. Если вы работаете с несколькими перевозчиками, напишите нам на contact@nudoiq.com."
+        "text": "NudoIQ работает только в вашем браузере, на страницах Relay, где вы вошли. Скорость обновления задаете вы. За свой аккаунт Relay и за соблюдение условий Relay отвечаете вы."
       }
     },
     {
@@ -390,15 +402,7 @@
       "name": "Интерфейс NudoIQ на русском?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Пока нет. Кнопки и настройки расширения на английском (есть и испанский). Надписи короткие: START, STOP, AUTOBOOK, Min Net Profit. Эта страница объясняет их на русском."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Не заблокируют ли мой аккаунт из-за NudoIQ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "NudoIQ работает только в вашем браузере, на страницах Relay, где вы вошли в аккаунт. Он не входит в аккаунт из другого места и не спрашивает ваш пароль. Скорость обновления задаете вы."
+        "text": "Пока нет. Кнопки и настройки на английском (есть и испанский). Надписи короткие: START, STOP, AUTOBOOK, Min Net Profit."
       }
     },
     {
@@ -406,7 +410,7 @@
       "name": "NudoIQ связан с Amazon?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Нет. NudoIQ: независимое расширение для браузера. Оно не аффилировано с Amazon.com, Inc. и не одобрено этой компанией."
+        "text": "Нет. NudoIQ является независимым расширением и не аффилирован с Amazon.com, Inc."
       }
     },
     {
@@ -414,7 +418,7 @@
       "name": "Что будет после бесплатной недели?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "NudoIQ стоит $49.99 в месяц, отменить можно в любой момент. Если вы начали без карты и не добавили ее, пробный период просто закончится, и списаний не будет."
+        "text": "$49.99 в месяц, отменить можно в любой момент. Если вы не добавили карту, пробный период просто закончится без списаний."
       }
     }
   ]
@@ -478,27 +482,27 @@
         </svg>
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Для диспетчеров на Amazon Relay</p>
-            <h1 class="display" id="heroH1">Бронируйте подходящие грузы Relay автоматически, по вашим правилам</h1>
-            <p class="lede" id="heroLede">NudoIQ: расширение для Chrome, которое работает в load board Amazon Relay. Оно само обновляет список, считает чистую прибыль груза и бронирует от вашего минимума.</p>
+            <p class="eyebrow">Для диспетчеров Amazon Relay</p>
+            <h1 class="display" id="heroH1">Грузы Relay бронируются сами, если чистыми не ниже вашего минимума</h1>
+            <p class="lede" id="heroLede">Расширение Chrome для load board: сразу видно, сколько чистыми с каждого груза.</p>
 
             <div class="cta" id="d">
               <a class="btn btn-dark" id="cws" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=ru-landing" target="_blank" rel="noopener"><img src="/assets/chrome-mark.svg" alt="" width="22" height="22">Попробовать 7 дней бесплатно</a>
-              <p class="under">Карта для старта не нужна. NudoIQ никогда не спрашивает пароль от Amazon.</p>
+              <p class="under">Карта не нужна.</p>
             </div>
 
             <div class="cta" id="m" hidden>
               <div class="card" id="f-wrap">
-                <p style="margin:0 0 14px;color:var(--ink-4);font-size:14px;line-height:1.5" id="mobileSub">NudoIQ работает в Chrome на компьютере. Мы пришлем на email ссылку для установки. Бесплатную неделю вы начнете в расширении.</p>
+                <p style="margin:0 0 14px;color:var(--ink-4);font-size:14px;line-height:1.5" id="mobileSub">NudoIQ работает в Chrome на компьютере. Пришлем ссылку для установки на email.</p>
                 <form id="f" novalidate>
                   <label for="e">Ваш email</label>
                   <input id="e" type="email" inputmode="email" autocomplete="email" placeholder="name@example.com" required>
                   <button class="btn" id="b" type="submit">Отправить ссылку</button>
-                  <p class="under">Одно письмо со ссылкой и два коротких напоминания, на английском. Отписаться можно в любой момент.</p>
+                  <p class="under">Одно письмо и два напоминания на английском. Отписаться можно всегда.</p>
                 </form>
               </div>
-              <div class="card" id="ok" hidden><h2>Проверьте почту</h2><p>Мы отправили ссылку для установки. Откройте ее на компьютере и нажмите Add to Chrome (или «Установить»).</p></div>
-              <div class="card" id="bad" hidden><p>Если ссылка не пришла, напишите на contact@nudoiq.com, и мы сразу отправим ее снова.</p></div>
+              <div class="card" id="ok" hidden><h2>Проверьте почту</h2><p>Мы отправили ссылку. Откройте ее на компьютере и нажмите Add to Chrome.</p></div>
+              <div class="card" id="bad" hidden><p>Не получилось. Напишите на contact@nudoiq.com, и мы пришлем ссылку.</p></div>
             </div>
 
             <div class="proofbar">
@@ -506,22 +510,22 @@
                 <img src="/assets/chrome-mark.svg" alt="" width="24" height="24" decoding="async">
                 <span class="pb-stack">
                   <span class="pb-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                  <span class="pb-label">5.0 в Chrome Web Store</span>
+                  <span class="pb-label">Оценка 5.0 в Chrome</span>
                 </span>
               </span>
               <span class="pb-rule" aria-hidden="true"></span>
               <span class="pb-cell">
                 <b class="pb-big">300+</b>
-                <span class="pb-label">перевозчиков пользуются NudoIQ</span>
+                <span class="pb-label">перевозчиков</span>
               </span>
             </div>
 
             <!-- D47: one flat price for every truck a dispatcher runs; no strike-through or countdown (dispatcher offer, as /dispatch/). -->
             <div class="price-card" id="pricing">
-              <p class="price-eyebrow">Один план, все траки</p>
+              <p class="price-eyebrow">Фиксированная цена</p>
               <div class="price-row"><span class="price-new">$49.99<span>/мес</span></span></div>
-              <p class="price-line"><b>Одна фиксированная цена за все траки, которые вы ведете.</b></p>
-              <p class="price-line">7 дней бесплатно для новых клиентов, карта для старта не нужна. Если отмените до конца недели, ничего не заплатите.</p>
+              <p class="price-line"><b>Без доплаты за пользователей.</b></p>
+              <p class="price-line">Отмените до конца недели, и ничего не заплатите.</p>
             </div>
           </div>
 
@@ -536,39 +540,37 @@
 
     <div class="wrap">
       <section class="block" id="features" aria-labelledby="featH">
-        <h2 class="sec" id="featH">Что NudoIQ дает диспетчеру на Relay</h2>
-        <div class="feat-grid six">
-          <div class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><b>Одна цена за все траки</b><p>Одна подписка за $49.99 на все траки, которые вы ведете. NudoIQ работает в Chrome, где Relay открыт под логином самого перевозчика.</p></div>
-          <div class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><b>Чистыми с каждого груза</b><p>Рядом с ценой каждого груза: чистая прибыль и $ за милю. Расходы (MPG, дизель, оплата водителя, обслуживание) вы вводите один раз.</p></div>
-          <div class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></span><b>Lane Intelligence</b><p>Первая кнопка под каждым грузом открывает Lane Intelligence: диапазон цен по направлению за 90 дней. Сразу видно, низкая ли цена.</p></div>
-          <div class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></span><b>AutoBook от вашего минимума</b><p>AutoBook бронирует грузы не ниже Min Net Profit, пропускает грузы без полных данных и останавливается на Max books (от 1 до 20).</p></div>
-          <div class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span><b>Backhaul домой</b><p>Кнопка Find backhaul под каждым грузом ищет груз в сторону дома, чтобы трак реже возвращался пустым.</p></div>
-          <div class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg></span><b>Load board обновляется сам</b><p>Нажмите START, и load board обновляется сам. Новые грузы получают значок NEW, а грузы с выросшей ценой: PRICE UP.</p></div>
-        </div>
+        <h2 class="sec" id="featH">Что NudoIQ дает диспетчеру</h2>
+        <ul class="checks">
+          <li>Чистыми с каждого груза</li>
+          <li>Lane Intelligence: история цен</li>
+          <li>AutoBook от вашего минимума</li>
+          <li>Backhaul в сторону дома</li>
+          <li>Load board обновляется сам</li>
+          <li>Черновик спора по scorecard</li>
+        </ul>
         <div class="cta-inline">
           <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=ru-landing" target="_blank" rel="noopener" data-cta="after-features" data-mlabel="Прислать ссылку на email">Попробовать 7 дней бесплатно</a>
-          <span class="note">Посмотрите, как это работает на вашем load board, до оплаты.</span>
         </div>
       </section>
 
       <section class="block" id="start" aria-labelledby="howH">
         <h2 class="sec" id="howH">Готово за несколько минут</h2>
         <ol class="steps">
-          <li><span class="n">1</span><div><b>Добавьте в Chrome</b>Нажмите кнопку. Когда Chrome спросит, нажмите Add extension (или «Установить расширение»).</div></li>
-          <li><span class="n">2</span><div><b>Начните бесплатную неделю</b>Откройте load board в Relay. Над ним появится панель NudoIQ. Нажмите Start your free week и введите email, карта не нужна.</div></li>
-          <li><span class="n">3</span><div><b>Нажмите START</b>Нажмите START на панели NudoIQ, и load board начнет обновляться сам.</div></li>
+          <li><span class="n">1</span><div><b>Добавьте в Chrome</b><span class="sub">Нажмите Add extension, когда Chrome спросит.</span></div></li>
+          <li><span class="n">2</span><div><b>Начните бесплатную неделю</b><span class="sub">Нажмите Start your free week на панели. Без карты.</span></div></li>
+          <li><span class="n">3</span><div><b>Нажмите START</b><span class="sub">Load board начнет обновляться сам.</span></div></li>
         </ol>
       </section>
 
       <section class="block" id="faq" aria-labelledby="faqH">
         <h2 class="sec" id="faqH">Частые вопросы</h2>
-        <div class="obj-grid six">
-          <div class="obj-card"><b>NudoIQ спрашивает мой пароль от Amazon?</b><p>Нет. NudoIQ работает внутри вашей вкладки Relay, где вы уже вошли в аккаунт. Он никогда не спрашивает и не хранит ваш пароль от Amazon.</p></div>
-          <div class="obj-card"><b>Сколько стоит, если у меня несколько траков?</b><p>Одна подписка: $49.99 в месяц за все траки, которые вы ведете. Если вы работаете с несколькими перевозчиками, напишите нам на contact@nudoiq.com.</p></div>
-          <div class="obj-card"><b>Интерфейс NudoIQ на русском?</b><p>Пока нет. Кнопки и настройки расширения на английском (есть и испанский). Надписи короткие: START, STOP, AUTOBOOK, Min Net Profit. Эта страница объясняет их на русском.</p></div>
-          <div class="obj-card"><b>Не заблокируют ли мой аккаунт из-за NudoIQ?</b><p>NudoIQ работает только в вашем браузере, на страницах Relay, где вы вошли в аккаунт. Он не входит в аккаунт из другого места и не спрашивает ваш пароль. Скорость обновления задаете вы.</p></div>
-          <div class="obj-card"><b>NudoIQ связан с Amazon?</b><p>Нет. NudoIQ: независимое расширение для браузера. Оно не аффилировано с Amazon.com, Inc. и не одобрено этой компанией.</p></div>
-          <div class="obj-card"><b>Что будет после бесплатной недели?</b><p>NudoIQ стоит $49.99 в месяц, отменить можно в любой момент. Если вы начали без карты и не добавили ее, пробный период просто закончится, и списаний не будет.</p></div>
+        <div class="qa">
+          <details><summary>NudoIQ спрашивает мой пароль от Amazon?</summary><p>Нет. NudoIQ работает в вашей вкладке Relay, где вы уже вошли. Он никогда не спрашивает и не хранит пароль от Amazon.</p></details>
+          <details><summary>Не заблокируют ли аккаунт из-за NudoIQ?</summary><p>NudoIQ работает только в вашем браузере, на страницах Relay, где вы вошли. Скорость обновления задаете вы. За свой аккаунт Relay и за соблюдение условий Relay отвечаете вы.</p></details>
+          <details><summary>Интерфейс NudoIQ на русском?</summary><p>Пока нет. Кнопки и настройки на английском (есть и испанский). Надписи короткие: START, STOP, AUTOBOOK, Min Net Profit.</p></details>
+          <details><summary>NudoIQ связан с Amazon?</summary><p>Нет. NudoIQ является независимым расширением и не аффилирован с Amazon.com, Inc.</p></details>
+          <details><summary>Что будет после бесплатной недели?</summary><p>$49.99 в месяц, отменить можно в любой момент. Если вы не добавили карту, пробный период просто закончится без списаний.</p></details>
         </div>
       </section>
 
@@ -578,20 +580,19 @@
           <source src="/assets/nudoiq-demo.mp4" type="video/mp4">
           <img src="/assets/email/shot-hero-loadboard.jpg" alt="NudoIQ" width="1180" height="640">
         </video>
-        <p class="vnote">Озвучка в видео на английском.</p>
+        <p class="vnote">Озвучка видео на английском.</p>
         <div class="proof"><span class="s">&#9733;&#9733;&#9733;&#9733;&#9733;</span>Оценка 5.0 в Chrome Web Store. NudoIQ пользуются 300+ перевозчиков.</div>
       </section>
 
       <section class="cta2" id="d2">
         <a class="btn btn-go" id="cws2" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=ru-landing" target="_blank" rel="noopener" data-mlabel="Прислать ссылку на email"><img src="/assets/chrome-mark.svg" alt="" width="22" height="22">Попробовать 7 дней бесплатно</a>
-        <p class="under">7 дней бесплатно. Карта для старта не нужна.</p>
       </section>
     </div>
   </main>
 
   <div class="stickybar" id="stickybar" aria-hidden="true">
     <div class="stickyin">
-      <span class="txt"><b>Попробуйте NudoIQ 7 дней бесплатно.</b> <span>Одна цена за все траки, которые вы ведете.</span></span>
+      <span class="txt"><b>AutoBook от вашего минимума.</b> <span>Карта не нужна.</span></span>
       <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=ru-landing" target="_blank" rel="noopener" data-cta="sticky" data-mlabel="Прислать ссылку на email" tabindex="-1">Попробовать 7 дней бесплатно</a>
     </div>
   </div>
