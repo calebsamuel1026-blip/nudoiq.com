@@ -27,8 +27,8 @@ doc = doc.replace('<a href="/" hreflang="en" aria-current="page">English</a><a h
 // 2026-10-14: the Russian page (/ru/) sits in the switcher and hreflang of index.html, so nothing more to swap here.
 
 const TITLE_ES = 'NudoIQ | Herramientas para el tablero de cargas de Amazon Relay';
-const DESC_ES = 'Refresca el load board de Amazon Relay, reserva cargas con tus reglas y compara cada precio con una predicción de IA. 7 días gratis, sin tarjeta.';
-const SOCIAL_ES = 'NudoIQ refresca tu load board de Relay, reserva cargas con tus reglas, predice el precio con IA y prepara disputas del scorecard. 7 días gratis, sin tarjeta.';
+const DESC_ES = esc(es.metaDescEs);
+const SOCIAL_ES = esc(es.socialEs);
 
 doc = doc.replace(/<title>[^<]*<\/title>/, '<title>' + TITLE_ES + '</title>');
 doc = doc.replace(/<meta name="description" content="[^"]*">/, '<meta name="description" content="' + DESC_ES + '">');
@@ -63,8 +63,8 @@ for (const node of graph['@graph']) {
     node['@id'] = 'https://nudoiq.com/es/#faq';
     node.isPartOf = { '@id': 'https://nudoiq.com/es/#webpage' };
     node.inLanguage = 'es-US';
-    const faqIds = [];
-    for (let i = 1; es['faq' + i + 'Q']; i++) faqIds.push(i);
+    // 2026-10-14: mirror exactly the FAQ keys on the English page, in page order.
+    const faqIds = [...src.matchAll(/data-t="faq(\d+)Q"/g)].map((m) => +m[1]);
     node.mainEntity = faqIds.map((i) => ({
       '@type': 'Question',
       name: es['faq' + i + 'Q'],
@@ -73,10 +73,11 @@ for (const node of graph['@graph']) {
   }
   if (node['@type'] === 'SoftwareApplication') {
     if (Array.isArray(node.review)) {
-      node.review = node.review.map((r, i) => ({ ...r, reviewBody: es['review' + (i + 1)] || r.reviewBody }));
+      const byAuthor = { sophialaim: 'review1', Futo: 'review2', Lalo: 'review3', Miguel: 'review4', Tristan: 'review5' };
+      node.review = node.review.map((r) => ({ ...r, reviewBody: es[byAuthor[r.author && r.author.name]] || r.reviewBody }));
     }
-    node.description = 'Extensión de Chrome para Amazon Relay: refresca el load board automáticamente, reserva cargas con tus reglas (AutoBook), predice con IA el precio según el historial de la ruta y prepara cartas de disputa del scorecard que tú revisas y envías. 7 días gratis sin tarjeta, luego $49.99 al mes.';
-    node.featureList = [es.price1, es.price2, es.price3, es.priceDispute, es.price6];
+    node.description = es.ldDescEs;
+    node.featureList = [es.price1, es.price2, es.price3, es.priceDispute, es.price4, es.price5, es.price6];
   }
 }
 doc = doc.replace(ldRe, () => '<script type="application/ld+json">' + String.fromCharCode(10) + JSON.stringify(graph, null, 2) + String.fromCharCode(10) + '  </script>');
