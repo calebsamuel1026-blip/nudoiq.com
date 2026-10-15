@@ -1438,7 +1438,7 @@ Yes. You can have NudoIQ running on multiple devices and multiple load board tab
 URL: https://nudoiq.com/best-amazon-relay-extensions/
 Published: 2026-09-20. Last updated: 2026-10-14.
 
-Short answer: The main Amazon Relay extensions are LoadFetcher and Rocket Relay, both with free plans, and Rocket's Pro plan auto books for $49 a month. Smaller tools include SwiftRelay, with auto-book from $74.95, and FlashRelay at $149. NudoIQ costs $49.99 a month and adds lane rate history, net profit per load and scorecard dispute letters. Compare refresh control, booking guardrails, rate data and support.
+Short answer: The main Relay extensions are LoadFetcher and Rocket Relay, with SwiftRelay and FlashRelay among the smaller tools. NudoIQ, at $49.99 a month, adds AutoBook at your own net profit floor, net profit per load and scorecard dispute letters.
 
 ## Why You Need a Relay Extension
 
@@ -1448,15 +1448,15 @@ Besides the bigger names, there are a dozen or so smaller refreshers in the cate
 
 ## What to Look For in a Relay Extension
 
-**Refresh Control**: Can you set the interval (how often it reloads), and does it add jitter (a random variation in timing)? A good refresher lets you choose the interval and varies the timing so every refresh doesn't land at the exact same moment.
+**Refresh Control**: Can you set the interval (how often it reloads) yourself, and start or stop it right from the load board?
 
 **Booking Rules**: Can you set rules to book only certain loads? Look for the ability to filter by lane, price range, load type, distance, and equipment. A tool that books only loads matching your rules books fewer loads you didn't want.
 
 **Profit Floor and Max-Books Cap**: Does it let you set a minimum profit and a maximum number of books? These guardrails protect you from booking loads you didn't intend to take. A profit floor means "don't book anything below $X net profit." A max-books cap means "stop booking once I've booked 5 loads."
 
-**Rate Data and Decision Support**: Does it show you lane history, net profit per load, or other rate context? Or does it just notify you when a load posts and let you decide? Tools that surface rate data help you make faster decisions.
+**Rate Data and Decision Support**: Does it show you lane history, net profit per load, or other rate context? Or does it just alert you when a load posts and let you decide? Tools that surface rate data help you make faster decisions.
 
-**Alerts**: Can it notify you when a load matching your rules posts? NudoIQ sends Telegram alerts, which reach your phone.
+**Alerts**: Can it alert you when a load matching your rules posts? NudoIQ sounds an alert on the page and sends a Telegram message to your phone if you connect Telegram.
 
 **Data Handling and Privacy**: Where does your data go? Some tools store booking rules on your computer only. Others upload to a server. Ask yourself: do I want my lane preferences, profit targets, and booking history on someone else's server?
 
@@ -1468,41 +1468,25 @@ Besides the bigger names, there are a dozen or so smaller refreshers in the cate
 
 ### LoadFetcher
 
-[LoadFetcher](https://nudoiq.com/loadfetcher-alternative/) offers a free refresher tier and is focused on refreshing, pricing history and alerts.
+[LoadFetcher](https://nudoiq.com/loadfetcher-alternative/) lists auto refresh, load pricing and history, backhaul search, Post Truck Manager and Telegram alerts. Not listed: automatic booking, net profit per load or scorecard dispute letters (checked October 4, 2026).
 
-What's advertised: auto refresh, load pricing and history, backhaul search, Post Truck Manager, Telegram alerts and trip tracking. What's not listed: automatic booking, net profit per load, or scorecard dispute letters (checked October 4, 2026).
-
-LoadFetcher's pitch is simplicity and cost: a free refresher tier. If that's all you need, the free tier may be enough.
-
-**Best for**: Carriers who want a free refresher with pricing history and alerts, and who book by hand.
+Auto booking, net profit and free trials in one table: [NudoIQ vs LoadFetcher](https://nudoiq.com/loadfetcher-alternative/).
 
 ### Rocket Relay and Rocket Pro
 
-[Rocket Relay](https://nudoiq.com/rocket-relay-alternative/) is a refresher and auto booker from West Wanted. Its Chrome Web Store listing is called Relay Auto Booker Refresher Rocket Pro. It has a Free plan with auto-refresh, alerts and FastBook on matched trips, no card required. Pro is $49 a month after a 7-day trial that needs a card (checked October 9, 2026).
-
-Pro auto books matching trips, best-paying first, and stops at the number of trips you set. Its filters include minimum payout, price per mile, distance, stops, deadhead and time windows, and Pro adds bulk Post A Truck tools. It doesn't list a filter for net profit after your own costs. There is also a separate Rocket Relay Post Truck Manager extension, published by Tasiev LLC per its listing, last updated May 20, 2025 (checked October 9, 2026).
-
-Its listing says your loads, trips, payouts and drivers stay on your computer. It's rated 4.1 from 66 ratings on the Chrome Web Store (checked October 5, 2026).
-
-**Best for**: Carriers who want a free plan, a long list of auto-book filters or bulk Post A Truck, and who want their data kept on their own computer.
+[Rocket Relay](https://nudoiq.com/rocket-relay-alternative/), from West Wanted (listed as Relay Auto Booker Refresher Rocket Pro), advertises auto-refresh, alerts, FastBook, Pro auto-booking by payout and $/mile, and Post A Truck tools. Not listed: a net profit floor after your costs, net profit per load or scorecard dispute letters (checked October 9, 2026).
 
 ### SwiftRelay and FlashRelay
 
-If you want a paid booker, two smaller options are SwiftRelay and FlashRelay, both billed through PayPal.
-
-**[SwiftRelay](https://nudoiq.com/swiftrelay-alternative/)**, from Premier IT Solutions, refreshes the board on every plan. Auto-book starts on Pro at $74.95 a month. Lite, at $49.95, doesn't auto-book. Enterprise, at $349, adds Speed Optimizer, one virtual machine and up to 10 devices. Pro adds filters for max stops, excluded states and stem time. SwiftRelay also lists Competitor Insights, which shows loads booked by competitors on the board. NudoIQ doesn't have that. Its 7-day trial starts on first use. The listing was last updated June 15, 2025 (checked October 9, 2026). It's rated 4.5 from 54 ratings on the Chrome Web Store (checked October 5, 2026).
-
-**FlashRelay** lists auto booking and Telegram alerts for $149 a month per dispatcher. It doesn't state a trial length. Its last release was December 3, 2024, and it's rated 4.8 from 20 ratings on the Chrome Web Store (checked October 5, 2026).
-
-**Best for**: SwiftRelay fits dispatch teams that want competitor booking data or plans sized by device count. FlashRelay fits carriers who want a paid booker with Telegram alerts and don't mind $149 a month.
+[SwiftRelay](https://nudoiq.com/swiftrelay-alternative/), from Premier IT Solutions, refreshes the board, and auto-books on its Pro plan and up. FlashRelay lists auto booking and Telegram alerts. Neither lists a net profit floor, net profit per load or scorecard dispute letters (SwiftRelay checked October 9, 2026, FlashRelay October 5, 2026).
 
 ### NudoIQ
 
 NudoIQ is a browser extension that runs inside the Relay load board and includes every feature in one monthly subscription: $49.99/month after a 7-day free trial, no card needed to start.
 
-**Refresh Control**: Set the interval on the NudoIQ bar, with built-in jitter.
+**Refresh Control**: Set the interval and press START or STOP on the NudoIQ bar.
 
-**Three Booking Modes**: Alert (sounds an alert on a match), Search (highlights matching loads visually), Autobook (books automatically if your rules match). Lane and equipment come from your Relay search; in NudoIQ you set Min $/Mile, Min Net Profit and a max-books cap.
+**Three Booking Modes**: Alert (sounds an alert when a matching load shows up), Search (advanced filters for searching through loads), Autobook (books matching loads that clear your minimums). Lane and equipment come from your Relay search; in NudoIQ you set Min $/Mile, Min Net Profit and Max books.
 
 **Lane Intelligence**: For each load, NudoIQ shows the 90-day rate history for that lane, a target rate, an expected range, and a confidence level. Example: "$483 target next to a $407 board price." This is decision support, not a guarantee: Amazon rates change based on season, time of day, volume, and other factors.
 
@@ -1514,7 +1498,7 @@ NudoIQ is a browser extension that runs inside the Relay load board and includes
 
 **Post A Truck Helper**: When posting availability, NudoIQ shows origin, destination, distance, and board price alongside your minimums, then posts with one click.
 
-**Other Features**: HOS overview, Telegram alerts.
+**Other Features**: HOS overview, and Telegram alerts if you connect Telegram.
 
 **Best for**: Carriers who want a full-featured refresher, rate history, profit calculation, dispute support, and backhaul finding all in one tool.
 
@@ -1522,32 +1506,29 @@ You can see what NudoIQ adds to your Relay board, and how to set it up, on our [
 
 ## Comparison Table
 
-| Feature | LoadFetcher | Rocket Relay | SwiftRelay | FlashRelay | NudoIQ |
-|---------|-------------|-------------|-----------|-----------|---------|
-| **Refreshing and Booking** | Refreshing advertised; auto booking not listed | Advertised (auto booking on Pro) | Advertised (auto booking on Pro and up) | Advertised | Advertised |
-| **Profit Floor & Max Cap** | Not advertised | Trip cap advertised (Pro); minimum payout filter, no profit floor | Not advertised (minimum payout and rate filters) | Not advertised | Advertised |
-| **Lane Rate History** | Advertised (Plus plan) | Not advertised | Not advertised (live load stats listed) | Not advertised | Advertised |
-| **Net Profit Calculation** | Not advertised | Not advertised | Not advertised | Not advertised | Advertised |
-| **Scorecard Dispute Drafting** | Not advertised | Not advertised | Not advertised | Not advertised | Advertised |
-| **Backhaul Finder** | Advertised (Plus plan) | Not advertised | Not advertised | Not advertised | Advertised |
-| **Post A Truck Helper** | Advertised | Advertised (bulk Post A Truck on Pro) | Not advertised | Not advertised | Advertised |
-| **Local-Only Data** | Not emphasized | Advertised | Not stated | Not stated | Not advertised |
-| **Telegram Alerts** | Advertised (Plus plan) | Not advertised (support contact only) | Not advertised (support contact only) | Advertised | Advertised |
-| **Free Tier** | Advertised | Advertised (Free plan, no card) | No (7-day trial) | Not advertised (trial length not stated) | 7-day free trial, no card to start |
-| **Paid Tier** | $24 to $90/mo | Pro $49/mo | Lite $49.95, Pro $74.95 (auto-book), Enterprise $349 | $149/mo per dispatcher | $49.99/mo |
-| **CWS Rating** | 5.0 | 4.1 (66 ratings) | 4.5 (54 ratings) | 4.8 (20 ratings) | 5.0 |
+| Feature | NudoIQ | LoadFetcher | Rocket Relay | SwiftRelay | FlashRelay |
+|---|---|---|---|---|---|
+| **Auto-refresh** | Yes | Yes | Yes | Yes | Yes |
+| **Auto booking** | Yes | Not advertised | Yes (Pro) | Yes (Pro and up) | Yes |
+| **Profit floor, max cap** | Yes | Not advertised | Not advertised (Trip cap only, Pro) | Not advertised | Not advertised |
+| **Lane rate history** | Yes | Yes | Not advertised | Not advertised | Not advertised |
+| **Net profit per load** | Yes | Not advertised | Not advertised | Not advertised | Not advertised |
+| **Scorecard dispute drafting** | Yes | Not advertised | Not advertised | Not advertised | Not advertised |
+| **Backhaul finder** | Yes | Yes (Plus plan) | Not advertised | Not advertised | Not advertised |
+| **Post A Truck helper** | Yes | Yes | Yes (Pro) | Not advertised | Not advertised |
+| **Telegram alerts** | Yes | Yes (Plus plan) | Not advertised | Not advertised | Yes |
+
+Rows show features NudoIQ offers. "Not advertised" means not on that tool's Chrome Web Store listing or website, checked October 4 to 9, 2026.
 
 Checked on: LoadFetcher October 4, 2026. Rocket Relay and SwiftRelay listings and prices October 9, 2026, ratings October 5, 2026. FlashRelay October 5, 2026.
 
 ## How to Choose
 
-**If you just need a refresher and basic booking**: LoadFetcher's or Rocket Relay's free tier may be enough.
+**If you want loads booked for you at your number**: NudoIQ's AutoBook books only loads that clear your Min Net Profit, up to your Max books.
 
 **If you want rate history and profit calculation**: NudoIQ includes both. The 7-day free trial lets you test whether the extra features save you time.
 
 **If you want everything in one place**: NudoIQ is built for carriers who also want to dispute scorecards, find backhauls, and post availability: all from the same extension.
-
-**If you prioritize privacy and local data**: Rocket Relay emphasizes keeping your data on your computer.
 
 All of these tools are independent of Amazon Relay. They're browser extensions published by third parties. The carrier is responsible for its Relay account and for following Relay's terms, so read them before you install any extension.
 
@@ -1705,118 +1686,120 @@ Yes, you can run NudoIQ in English or Spanish.
 URL: https://nudoiq.com/loadfetcher-alternative/
 Published: 2026-09-20. Last updated: 2026-10-14.
 
-Short answer: NudoIQ is a good Load Fetcher alternative if you want loads booked for you. It's a Chrome extension for Amazon Relay carriers that refreshes the load board, AutoBooks only loads that clear your minimum net profit, and drafts scorecard dispute letters. LoadFetcher's public listing shows neither auto booking nor dispute letters. NudoIQ is $49.99 a month flat, every truck.
+Short answer: NudoIQ is a good Load Fetcher alternative if you want loads booked for you. AutoBook books only the loads that clear your minimum net profit.
 
 ## What is a good Load Fetcher alternative?
 
-NudoIQ, if you want loads booked for you while you drive or dispatch. LoadFetcher refreshes the board and helps you post trucks and track trips. NudoIQ refreshes the board and books the loads that clear your number.
+NudoIQ, if you want loads booked for you while you drive or dispatch. It refreshes the board and books the loads that clear your number.
 
 ## How does NudoIQ compare to Load Fetcher?
 
-Here's every feature side by side, with where each LoadFetcher fact came from.
+What NudoIQ does that LoadFetcher doesn't list, with a source for every LoadFetcher fact.
 
-NudoIQ vs LoadFetcher, from each product's public Chrome Web Store listing and website. Checked October 4, 2026. "Not listed" means the feature isn't on LoadFetcher's public listing or plans section that day, not that we tested their product. Spot an error? Tell us on the contact page and we'll fix it.
+From each product's public Chrome Web Store listing and website, checked October 14, 2026. Dash: not on LoadFetcher's listing, plans or FAQ. We did not test their product. Spot an error? [Tell us on the contact page](https://nudoiq.com/support/).
 
 | Feature | NudoIQ | LoadFetcher |
 |---|---|---|
-| What it is | Chrome extension for Amazon Relay carriers and dispatchers | Chrome extension for Amazon Relay carriers, owner-operators and dispatchers |
-| Auto-refresh the load board | Yes | Yes ("Auto-Refresher") |
-| Automatic booking | Yes. AutoBook mode books loads that match your rules and clear your Min Net Profit. It skips a load it can't fully price | Not listed on the store listing or the plans section |
-| One-tap booking | Instant Book on new and price-up loads (one tap, no confirm screen) | Not listed |
-| Net profit on each load | Yes. Net dollars and $/mile next to the price, after the costs you enter | Not listed as a per-load figure. Plus plan lists "Financials & driver earnings" |
-| Lane price history | Lane Intelligence: 90-day price range for the lane, from the first button under each load | Yes ("Load Pricing & History") |
-| Backhaul search | Yes, Find backhaul button under each load | Yes, on the Plus plan ("Load analytics & backhaul") |
-| Post a Truck | One-Click Post A Truck with a recommended bid. The bid needs time to learn your area and improves with use | Yes ("Post Truck Manager"), quick Post a Truck creation on the Free plan |
-| Scorecard dispute letters | Drafts the letter from the violation. You review and submit it. Amazon decides | Not listed |
-| Alerts | ALERT mode and Telegram alerts | Browser and Telegram alerts. Telegram is on the Plus plan |
-| Trip tracking, ETAs, road restriction and facility info | Partly. Trip ETAs, miles left and facility addresses. No trip or road restriction alerts | Yes, all listed |
-| Team workspace | No shared workspace. One price covers every truck | Yes, Team plan (shared workspace, invite members) |
-| Free plan | No. Free preview (refresh, alerts) until you start the free trial | Yes, permanent Free plan |
-| Paid price | $49.99 a month flat, every truck, cancel anytime | Plus $24, Pro $49, Team $90 a month ($45 a seat) |
-| Languages | English and Spanish | Listing language: English (United States) |
-| Chrome Web Store rating | 5.0 | 5.0 |
-| Publisher | Sami Enterprises LLC | Fierce Trade LLC |
+| AutoBook at Min Net Profit | Yes | Not listed |
+| One-tap Instant Book | Yes | Not listed |
+| Net profit per load | Yes | Not listed |
+| Scorecard dispute letters | Yes | Not listed |
+| 7-day free trial, no card | Yes | Not listed |
+| Works in Spanish | Yes | Not listed |
+
+"Not listed" means not on LoadFetcher's Chrome Web Store listing, plans or FAQ, checked October 14, 2026.
+
+### Everything in NudoIQ
+
+Also included, in the same NudoIQ subscription.
+
+- Auto-refresh the load board
+- New-load and price-up alerts
+- Lane price history
+- Backhaul search
+- Post a Truck
 
 Sources:
 
 1. NudoIQ extension and nudoiq.com/get/
-2. LoadFetcher Chrome Web Store listing (chromewebstore.google.com/detail/ihcgicdogclbieclnldfjmlglkolankb), v3.24.2, checked October 4, 2026
-3. loadfetcher.com plans section, checked October 4, 2026
-4. LoadFetcher store screenshots, checked October 1, 2026
-5. Chrome Web Store, checked October 4, 2026
+2. LoadFetcher Chrome Web Store listing (chromewebstore.google.com/detail/ihcgicdogclbieclnldfjmlglkolankb), v3.25.2, updated October 10, 2026, checked October 14, 2026
+3. loadfetcher.com plans and FAQ, checked October 14, 2026
 
 LoadFetcher is a trademark of its owner, used here only to name and compare. NudoIQ is not affiliated with LoadFetcher or with Amazon.
 
+## What is Load Fetcher?
+
+LoadFetcher is a Chrome extension for the Amazon Relay load board, published by Fierce Trade LLC, per its store listing checked October 14, 2026.
+
 ## Does Load Fetcher auto book loads?
 
-Its public listing doesn't say it does. As of October 4, 2026, automatic booking isn't on LoadFetcher's store listing or plans section. NudoIQ's AutoBook books for you, and only loads that clear your Min Net Profit.
+Its public listing doesn't say so. As of October 14, 2026, automatic booking isn't on LoadFetcher's store listing or plans, though its website's title mentions auto booking. NudoIQ's AutoBook books for you, only loads that clear your Min Net Profit.
 
 ## What does NudoIQ do that Load Fetcher doesn't list?
 
-Three things: automatic booking at your own profit floor, net profit on every load card, and scorecard dispute letters.
+Three things, none on LoadFetcher's listing or plans as of October 14, 2026.
 
-- AutoBook: set your minimum net profit and your max-books cap. It books matching loads and skips any load it can't fully price.
-- Net profit on every load: net dollars and $/mile right next to the price, using the costs you enter.
-- Scorecard dispute letters: it drafts the letter from the violation. You read it, send it, and Amazon makes the call.
-- Also: English and Spanish, Instant Book on new and price-up loads, Lane Intelligence (90-day lane price range), backhaul search, One-Click Post A Truck.
+- AutoBook: books loads that clear your Min Net Profit, up to your Max books.
+- Net profit on every load: net dollars and $/mile after the costs you enter.
+- Scorecard dispute letters: drafted for you. You review and send. Amazon decides.
 
-## What does Load Fetcher do that NudoIQ doesn't?
+## Who NudoIQ fits best
 
-As of October 9, 2026, LoadFetcher lists a Free plan at $0 a month, a shared team workspace and yearly billing. Its listing also names alerts for road restrictions, late ETAs and driver check-ins. NudoIQ has none of those.
+- You want loads booked for you, only the ones that clear your minimum net profit.
+- You want to see what each load nets before you take it.
+- You fight scorecard violations and want the dispute letter drafted for you.
 
-## How much does Load Fetcher cost vs NudoIQ?
-
-LoadFetcher: Free, Plus $24, Pro $49, Team $90 a month ($45 a seat), checked October 4, 2026. NudoIQ: $49.99 a month flat for every truck, after a 7-day free trial with no card needed to start. Cancel anytime.
-
-## Should you pick Load Fetcher or NudoIQ?
-
-### Pick LoadFetcher if
-
-- You want a tool that stays free. Its Free plan has a refresher with filters and Post a Truck tools.
-- You book every load by hand and just need to see them first.
-- You want trip alerts for road restrictions, late ETAs and driver check-ins.
-- You run a team that needs a shared workspace and seat management.
-
-### Pick NudoIQ if
-
-- You want loads booked for you, and only the ones that clear your minimum net profit.
-- You want to see what each load nets you before you take it.
-- You fight scorecard hits and want the dispute letter drafted for you.
-- You run several trucks and want one flat price, or you work in Spanish.
-
-Not sure? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back. It costs you a week, not a dime.
+Not sure? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back.
 
 [Try NudoIQ 7 days free](https://nudoiq.com/get/)
 
 ## How do you switch from Load Fetcher to NudoIQ?
 
-Remove or turn off LoadFetcher, add NudoIQ from the Chrome Web Store, open the Relay load board and press START. Your Relay login doesn't change.
+Turn off or remove LoadFetcher, add NudoIQ from the Chrome Web Store, open the Relay load board and press START. Your Relay login doesn't change.
 
 ## Frequently asked questions
 
+### What is Load Fetcher?
+LoadFetcher is a Chrome extension for Amazon Relay, published by Fierce Trade LLC (checked October 14, 2026). NudoIQ is a separate one, with AutoBook at your minimum net profit.
+
+### Is Load Fetcher a Chrome extension?
+Yes, it installs from the Chrome Web Store. NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so they don't clash.
+
+### Is Load Fetcher a load board?
+No. It's a Chrome extension that works on Amazon's Relay load board. NudoIQ is a separate extension for the same board.
+
 ### What is a good Load Fetcher alternative?
-NudoIQ is a good Load Fetcher alternative if you want the extension to book loads for you. It refreshes the Amazon Relay load board, AutoBooks only loads that clear your minimum net profit, shows net profit on every load and drafts scorecard dispute letters, for $49.99 a month flat after a 7-day free trial.
+NudoIQ, if you want loads booked for you. It refreshes the load board and AutoBooks only loads that clear your minimum net profit. $49.99 a month after 7 days free.
 
 ### Is there a free Load Fetcher alternative?
-NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan. LODA Relay and Rocket Pro list free options (checked October 2026).
+NudoIQ isn't free. You can try it 7 days free, no card needed to start. Then it's $49.99 a month, and you can cancel anytime.
+
+### Does Load Fetcher have a free trial?
+No. Its FAQ says it doesn't offer one (checked October 14, 2026). NudoIQ gives you 7 days free, no card needed to start.
 
 ### Does Load Fetcher auto book loads?
-Not according to its public listing. As of October 4, 2026, LoadFetcher's Chrome Web Store listing and plans section don't list automatic booking. NudoIQ's AutoBook mode books matching loads that clear your own minimum net profit.
+As of October 14, 2026, automatic booking isn't on LoadFetcher's store listing or plans, though its website's title mentions auto booking. NudoIQ's AutoBook books only loads that clear your minimum.
 
 ### What is the best Amazon Relay extension?
-The best Amazon Relay extension is the one that does the job you're stuck on. For a free refresher with Post a Truck tools, LoadFetcher's Free plan covers it. For automatic booking at your own profit floor, net profit per load and scorecard dispute letters, NudoIQ is built for that.
-
-### How much does Load Fetcher cost compared to NudoIQ?
-LoadFetcher has a Free plan and paid plans at $24, $49 and $90 a month; NudoIQ is one $49.99 plan. LoadFetcher's Team plan is $45 a seat (checked October 4, 2026). NudoIQ's price is the same for one truck or a whole fleet, with a 7-day free trial and cancel anytime.
+The best Amazon Relay extension is the one that does the job you're stuck on. For booking at your profit floor, net profit per load and scorecard dispute letters: NudoIQ.
 
 ### Does NudoIQ work in Spanish?
-Yes. NudoIQ works in English and Spanish, including the buttons and banners on the load board (Telegram messages are in English). LoadFetcher's store listing shows English (United States) as its language.
+Yes. NudoIQ's buttons and banners on the load board work in English and Spanish. Telegram messages are in English. LoadFetcher's listing language is English (United States).
 
 ### Can I switch from Load Fetcher to NudoIQ?
-Yes, it takes a few minutes. Turn off or remove LoadFetcher on Chrome's extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don't conflict.
+Yes, in a few minutes. Turn off or remove LoadFetcher, add NudoIQ from the Chrome Web Store and start your 7 days free. Your Relay login stays the same.
 
 ### Is NudoIQ or Load Fetcher made by Amazon?
-No. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. LoadFetcher is published by Fierce Trade LLC. Both run inside the Relay load board in your own Chrome.
+No. NudoIQ is an independent product by Sami Enterprises LLC, not affiliated with, endorsed or sponsored by Amazon. LoadFetcher is published by Fierce Trade LLC.
+
+### Is it LoadFetcher or Lotfetcher?
+It's LoadFetcher, sometimes written Load Fetcher. Lotfetcher is a common misspelling of the same Amazon Relay extension.
+
+### Does NudoIQ help with Amazon's Post A Truck?
+Yes. The third button under a load opens One-Click Post A Truck. Its recommended bid isn't accurate at first and improves with use. See how Post A Truck works.
+
+### How does NudoIQ decide which loads to book?
+Only loads that clear your Min Net Profit and it can fully price, up to your Max books. Alert mode just alerts. See what happens if you cancel a load.
 
 ---
 

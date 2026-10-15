@@ -363,6 +363,39 @@
       .cmp-band{padding:20px}
       .cmp-band .btn{width:100%}
     }
+    /* lf-concede-2026-10-14 */
+  /* 2026-10-14 D77: one icon system for comparison cells. NudoIQ = solid green check (#1F7A5C, the product's own
+     PRICE UP green, 5.4:1 on white); a rival that lists the item = muted check; not listed = muted dash. */
+  .ic{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;vertical-align:middle;flex:0 0 22px}
+  .ic svg{width:14px;height:14px;display:block}
+  .ic-y{background:#1F7A5C;color:#fff}
+  .ic-y2{background:#E3E6EC;color:#3F4652}
+  .ic-n{background:#F0F1F4;color:#6B7280}
+  td.c,th.c{text-align:center !important;vertical-align:middle !important}
+  .cq{display:block;font-size:11px;line-height:1.3;color:#5B6270;margin-top:3px;font-weight:500}
+  .nq-all{margin:18px 0 22px;padding:18px 20px;background:#F3F7FF;border:1px solid #D9E4FF;border-radius:16px}
+  .nq-all h3{margin:0 0 10px;font-size:17px}
+  .nq-all .all-intro{margin:0 0 10px;font-size:14.5px;color:#4A5160}
+  .nq-all ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px 18px}
+  .nq-all li{display:flex;align-items:center;gap:10px;margin:0;padding:0;font-weight:500;line-height:1.35}
+  .nq-all li::before{content:none}
+    .nq-all{margin-top:22px}
+    .cmp.cmp-ic th.c,.cmp.cmp-ic td.c{width:150px}
+    .cmp.cmp-ic tbody th{width:auto}
+    .cmp.cmp-ic .ic{width:26px;height:26px;flex-basis:26px}
+    .cmp.cmp-ic .ic svg{width:16px;height:16px}
+    @media (max-width:640px){
+      .cmp.cmp-ic{display:table;width:100%}
+      .cmp.cmp-ic thead{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;display:table-header-group}
+      .cmp.cmp-ic tbody{display:table-row-group}
+      .cmp.cmp-ic tr{display:table-row;border:0;margin:0;background:none}
+      .cmp.cmp-ic th,.cmp.cmp-ic td{display:table-cell;padding:12px 8px;border-bottom:1px solid #E6E9F0}
+      .cmp.cmp-ic thead th{font-size:15px}
+      .cmp.cmp-ic th.c,.cmp.cmp-ic td.c{width:92px}
+      .cmp.cmp-ic td::before{content:none}
+      .cmp.cmp-ic tbody tr:last-child th,.cmp.cmp-ic tbody tr:last-child td{border-bottom:0}
+    }
+
   </style>
   <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
 <script>
@@ -493,11 +526,12 @@
         <ul class="reasons">
           <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><b>See each load&#x27;s net first</b><p>Every load shows its net dollars and net $/mile next to the price, after the costs you enter.</p></li>
           <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span><b>Get your scorecard dispute drafted</b><p>It drafts your letter from the violation. You review it and send it. Amazon decides.</p></li>
-          <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span><b>One price for every truck</b><p>You pay $49.99 a month flat, with no seat count. LoadFetcher&#x27;s Team plan is $45 a seat (checked October 9, 2026).</p></li>
+          <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span><b>One price for every truck</b><p>You pay $49.99 a month flat, with no seat count.</p></li>
           <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><b>English and Spanish</b><p>You can use NudoIQ in English or Spanish. Whoever runs your board picks the one they read best.</p></li>
         </ul>
       </section>
 
+      <!-- 2026-10-14 D77 (Caleb: "in the comparison dont give load fetcher anything"; "a check on every single tile on the left for nudoiq ... reduce the amount of copy"). Words: research/copy/LF-CONCEDE-NOTHING-2026-10-14.json (Martha). Builder: research/seo/lf-concede-2026-10-14/build.py. LoadFetcher facts: store listing v3.25.2 and loadfetcher.com plans + FAQ, accessed 2026-10-14 (research/seo/lf-alt-ctr-2026-10-14/evidence/). -->
       <!-- ── COMPARISON — 6 rows, dated, sourced; "Not listed" scoped to LoadFetcher's public listing and plans that day.
            Reference: ClickUp's "ClickUp vs. Asana compared" (H2, last-checked pill, our column tinted, CTA band under the table,
            source line). No links to LoadFetcher pages (a link to its Web Store listing would also trip the store-click tags);
@@ -505,25 +539,25 @@
       <section class="block" aria-labelledby="cmpH">
         <div class="cmp-head">
           <h2 class="sec" id="cmpH">NudoIQ vs. LoadFetcher, compared</h2>
-          <span class="checked">Last checked October 9, 2026</span>
-          <p class="cmp-cap">When you see &quot;Not listed&quot;, that item wasn&#x27;t on LoadFetcher&#x27;s store listing or plans that day. We did not test their product.</p>
+          <span class="checked">Last checked October 14, 2026</span>
+          <p class="cmp-cap">From each product&#x27;s public Chrome Web Store listing and website, checked October 14, 2026. Dash: not on LoadFetcher&#x27;s listing, plans or FAQ. We did not test their product. Spot an error? <a href="/support/">Tell us on the contact page</a>.</p>
         </div>
-        <table class="cmp">
-          <thead><tr><th scope="col"><span class="vh">Feature</span></th><th scope="col" class="nq">NudoIQ</th><th scope="col" class="lf">LoadFetcher</th></tr></thead>
+        <table class="cmp cmp-ic">
+          <thead><tr><th scope="col"><span class="vh">Feature</span></th><th scope="col" class="nq c">NudoIQ</th><th scope="col" class="lf c">Load&shy;Fetcher</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Auto-refresh the load board</th><td class="nq" data-label="NudoIQ"><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Yes</span></span></td><td class="lf" data-label="LoadFetcher"><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Yes (&quot;Auto-Refresher&quot;)</span></span></td></tr>
-            <tr><th scope="row">Automatic booking</th><td class="nq" data-label="NudoIQ"><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Yes, AutoBook at your minimum net. Skips loads it can&#x27;t fully price.</span></span></td><td class="lf" data-label="LoadFetcher">Not on its store listing or plans</td></tr>
-            <tr><th scope="row">Net dollars and net $/mile per load</th><td class="nq" data-label="NudoIQ"><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Yes, after the costs you enter</span></span></td><td class="lf" data-label="LoadFetcher">Not listed per load. Its Plus plan lists &quot;Financials &amp; driver earnings&quot;</td></tr>
-            <tr><th scope="row">Scorecard dispute letters</th><td class="nq" data-label="NudoIQ"><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Drafts your letter. You review and send it. Amazon decides.</span></span></td><td class="lf" data-label="LoadFetcher">Not listed</td></tr>
-            <tr><th scope="row">Price per month</th><td class="nq" data-label="NudoIQ">$49.99 flat for every truck. 7 days free.</td><td class="lf" data-label="LoadFetcher"><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Free, Plus $24, Pro $49, Team $45 a seat ($90 for 2)</span></span></td></tr>
-            <tr><th scope="row">Trip tracking and ETAs</th><td class="nq" data-label="NudoIQ"><!-- 2026-10-10 fact fix: dist/nudoiq_v2.5.2.zip pro-views.js (inTransitSmart strip: miles left, ETA vs schedule; Pro View facility addresses; trial and paid); no trip alerts. Words research/copy/FACT-FIXES-2026-10-10.json getlf_trip_cell --> Partly. Trip ETAs, miles left and facility addresses. No trip or road restriction alerts</td><td class="lf" data-label="LoadFetcher"><span class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg><span>Yes, plus road restriction and facility info</span></span></td></tr>
+            <tr><th scope="row">AutoBook at Min Net Profit</th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="lf c"><span class="ic ic-n" role="img" aria-label="Not listed"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+            <tr><th scope="row">One-tap Instant Book</th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cq">New and price-up loads</span></td><td class="lf c"><span class="ic ic-n" role="img" aria-label="Not listed"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+            <tr><th scope="row">Net profit per load</th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="lf c"><span class="ic ic-n" role="img" aria-label="Not listed"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+            <tr><th scope="row">Scorecard dispute letters</th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="lf c"><span class="ic ic-n" role="img" aria-label="Not listed"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+            <tr><th scope="row">7-day free trial, no card</th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="lf c"><span class="ic ic-n" role="img" aria-label="Not listed"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
           </tbody>
         </table>
+        <div class="nq-all"><h3 id="everything-in-nudoiq">Everything in NudoIQ</h3><p class="all-intro">Also included, in the same NudoIQ subscription.</p><ul><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Auto-refresh the load board</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>New-load and price-up alerts</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Lane price history</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Backhaul search</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Post a Truck</span></li></ul></div>
         <div class="cmp-band">
           <p class="note">Run AutoBook on your own board for a week before you pay.</p>
           <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=get-loadfetcher" target="_blank" rel="noopener" data-cta="after-steps">Try it 7 days free</a>
         </div>
-        <p class="cmp-src">On October 9, 2026, we checked LoadFetcher&#x27;s Chrome Web Store listing (version 3.25.0, updated October 8) and the plans on loadfetcher.com. NudoIQ facts come from our own extension. <a class="cmp-more" href="/loadfetcher-alternative/#what-does-load-fetcher-do-that-nudoiq-doesn-t">What LoadFetcher has that NudoIQ doesn&#x27;t</a></p>
+        <p class="cmp-src">We checked LoadFetcher&#x27;s Chrome Web Store listing (version 3.25.2) and the plans and FAQ on loadfetcher.com on October 14, 2026. NudoIQ facts come from our own extension. <a class="cmp-more" href="/loadfetcher-alternative/#comparison">Full comparison</a></p>
       </section>
 
       <!-- ── SWITCH — the template's three numbered steps, rewritten for a LoadFetcher user (reference: ClickUp's
