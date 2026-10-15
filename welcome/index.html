@@ -107,6 +107,27 @@
             }).then(function(r){ if (r.ok) localStorage.setItem(K, String(Date.now())); })
               .catch(function(){});
           }
+          // FIRST TOUCH (2026-10-14, research/funnel/FUNNEL-LEAK-AUDIT-2026-10-14.md leak 3): which channel produced this
+          // install. /go/ stored the email recipient id (nudoiq_rid) and mobile-bridge.js the first landing (nudoiq_ft),
+          // both on this origin. One first_touch row per install, written straight to funnel_events (anon INSERT-only,
+          // the same table record-funnel writes), because record-funnel's closed metadata keys would drop rid and utm_*.
+          // Opaque ids and utm values only; nothing personal.
+          var FT = 'nudoiq_funnel_first_touch';
+          if (!localStorage.getItem(FT)) {
+            var rd = function (k) { try { var o = JSON.parse(localStorage.getItem(k) || 'null');
+              return o && o.ts && Date.now() - o.ts < 90 * 864e5 ? o : null; } catch (x) { return null; } };
+            var rr = rd('nudoiq_rid'), ft = rd('nudoiq_ft'), md = { surface: 'welcome' };
+            if (rr) { md.rid = String(rr.rid).slice(0, 32); md.email_campaign = String(rr.c || '').slice(0, 40); md.variant = String(rr.v || '').slice(0, 8); md.rid_ts = new Date(rr.ts).toISOString(); }
+            if (ft) { ['utm_source', 'utm_medium', 'utm_campaign', 'ref', 'lp'].forEach(function (k) { if (ft[k]) md[k] = String(ft[k]).slice(0, 80); });
+              md.ft_ts = new Date(ft.ts).toISOString(); }
+            if (rr || ft) {
+              var AK = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM';
+              fetch('https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/funnel_events', { method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'apikey': AK, 'Authorization': 'Bearer ' + AK, 'Prefer': 'return=minimal' },
+                body: JSON.stringify({ install_id: iid, step: 'first_touch', metadata: md })
+              }).then(function (r) { if (r.ok || r.status === 409) localStorage.setItem(FT, String(Date.now())); }).catch(function () {});
+            }
+          }
         }
       }catch(e){}
     })();

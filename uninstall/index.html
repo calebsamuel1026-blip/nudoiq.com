@@ -72,35 +72,26 @@
       </div>
     </div>
 
-    <!-- PRICE BRANCH — the only objection with a counter-offer attached.
-         Caleb's call, 2026-09-01: first month free, then 50% off the next two.
-         Nothing is redeemed on this page; it opens an email so a human honours it and
-         so we learn who asked. -->
+    <!-- PRICE BRANCH. 2026-10-14 (research/funnel/FUNNEL-LEAK-AUDIT-2026-10-14.md leak 4): the old offer (free month,
+         then 50% off "applied automatically ... sign in") is gone. The discount never applied (the webhook that would add
+         it is disabled), there is no sign-in, and its 30-day Stripe link let anyone bypass D50/D73. A person helps by
+         email instead. Words: Martha, research/copy/LEAK-FIXES-2026-10-14.json. -->
     <div class="panel" id="panel-price">
-      <h2>Then take it at a price that works.</h2>
-      <div class="offer">
-        <ul>
-          <li><b>Your next month: free.</b></li>
-          <li><b>The two months after that: half price</b> — $24.99 instead of $49.99.</li>
-          <li>Cancel any time, same one click from Settings.</li>
-        </ul>
-        <a class="btn btn-go" id="claim" href="#">Claim it</a>
-      </div>
-      <p style="margin-top:20px;color:var(--text-mid)">No catch. The discount is applied automatically —
-      reinstall from the Chrome Web Store and sign in with the same email.</p>
+      <h2>Price a problem? Talk to a person.</h2>
+      <p style="color:var(--text-mid)">Write to us about it. A real person reads every email and will help where we can.</p>
+      <a class="btn btn-go" id="claim" href="mailto:contact@nudoiq.com?subject=NudoIQ%20price%20question">Email us</a>
     </div>
 
     <div class="panel" id="panel-note">
       <h2>Tell me what happened.</h2>
-      <p style="color:var(--text-mid)">Optional, and it goes to a real person — not a support queue.</p>
+      <p style="color:var(--text-mid)">Optional. The person who builds NudoIQ reads every note.</p>
       <textarea id="note" placeholder="What went wrong?"></textarea>
       <button class="btn btn-go" id="send">Send it</button>
     </div>
 
     <div class="thanks" id="thanks">
       <h2>Got it. Thank you.</h2>
-      <p class="lede">That's genuinely useful. If you ever want to come back, everything is where you
-      left it — <a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk">the extension is here</a>.</p>
+      <p class="lede">Thank you, that really helps. If you ever want NudoIQ back, <a href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=uninstall">the extension is here</a>.</p>
     </div>
 
   </div></main>
@@ -112,16 +103,37 @@
 
   <script>
     (function(){
-      // The uninstall reason is the only thing a leaving user will ever tell us, and churn is
-      // otherwise unmeasurable — so record it the moment it is clicked, before anything else can
-      // go wrong. Pixel and Clarity both get it; there is no backend on this site.
+      // The uninstall reason is the only thing a leaving user will ever tell us. 2026-10-14
+      // (research/funnel/FUNNEL-LEAK-AUDIT-2026-10-14.md leak 4): it now goes to OUR database, funnel_events (anon
+      // INSERT-only; the same table record-funnel writes, written directly because record-funnel only takes a closed
+      // list of steps and needs an install UUID). Steps: uninstall_reason (reason code) and uninstall_note (the free text,
+      // capped). Meta gets the reason CODE only, never the note (it can hold a name or email). Clarity keeps its tag.
+      // The extension's uninstall URL carries ?v= today; when it adds &i=<installId> (2.5.9) the rows join the install,
+      // until then each visit gets its own random id (metadata.joined = false).
       var q = new URLSearchParams(location.search);
-      var version = q.get('v') || 'unknown';
+      var version = (q.get('v') || 'unknown').slice(0, 16);
+      var UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+      var iid = q.get('i'), joined = !!(iid && UUID.test(iid));
+      if (!joined) {
+        try { iid = crypto.randomUUID(); } catch (e) {
+          iid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0; return (c === 'x' ? r : (r & 3 | 8)).toString(16); });
+        }
+      }
+      var AK = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM';
+      function store(step, md){
+        try {
+          if (['localhost','127.0.0.1','[::1]'].indexOf(location.hostname) > -1 && q.get('nqtags') !== '1') return;
+          md.version = version; md.surface = 'uninstall'; md.joined = joined;
+          fetch('https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/funnel_events', { method: 'POST', keepalive: true,
+            headers: { 'Content-Type': 'application/json', 'apikey': AK, 'Authorization': 'Bearer ' + AK, 'Prefer': 'return=minimal' },
+            body: JSON.stringify({ install_id: iid, step: step, metadata: md }) }).catch(function(){});
+        } catch(e){}
+      }
 
-      function record(reason, note){
-        // 2026-09-14: no extension_version to Meta (Limited Use); reason is typed on this page.
-        try { fbq('trackCustom', 'ExtensionUninstalled', {
-          reason: reason, note: note || undefined }); } catch(e){}
+      function record(reason){
+        store('uninstall_reason', { reason: reason });
+        try { fbq('trackCustom', 'ExtensionUninstalled', { reason: reason }); } catch(e){}
         try { if (window.clarity) { clarity('set','uninstall_reason',reason); } } catch(e){}
       }
 
@@ -129,57 +141,19 @@
       var thanks = document.getElementById('thanks');
       var chosen = null;
 
-      // ── The reinstall offer link ────────────────────────────────────────
-      // Caleb's offer: next month free, then 50% off two months ($24.99).
-      // Built 2026-09-03. It takes two mechanisms, not one, because Stripe
-      // cannot express the offer on a Payment Link alone:
-      //   • The free month is the link's own 30-day trial.
-      //   • The two half-price months are coupon `winback-50off-2mo`, applied
-      //     to the subscription by stripe-webhook the moment it is created
-      //     (a link carrying a trial refuses to also allow promotion codes,
-      //     and one coupon cannot be 100% off then 50% off).
-      // So the customer pays $0, $24.99, $24.99, then $49.99 — honoured
-      // automatically instead of by hand.
-      var OFFER_STRIPE_URL = 'https://buy.stripe.com/00w4gAgtZ8OV43maubao801';
-
       document.querySelectorAll('.reason').forEach(function(btn){
         btn.addEventListener('click', function(){
           chosen = btn.getAttribute('data-reason');
           record(chosen);
           ask.style.display = 'none';
-
-          if (chosen === 'price') {
-            document.getElementById('panel-price').classList.add('on');
-            var claim = document.getElementById('claim');
-
-            // The Stripe link is the real path — the customer redeems the
-            // offer themselves instead of waiting on a human to honour an
-            // email. The mailto stays as the fallback for the moment the
-            // link is ever emptied, so the button is never dead.
-            if (OFFER_STRIPE_URL) {
-              claim.setAttribute('href', OFFER_STRIPE_URL);
-              claim.setAttribute('rel', 'noopener');
-            } else {
-              var subject = encodeURIComponent('Claiming the reinstall offer');
-              var body = encodeURIComponent(
-                'I removed NudoIQ because of the price and I want the offer: one month free, then 50% off for two months.\n\n' +
-                'My account email: \n');
-              claim.setAttribute('href', 'mailto:contact@nudoiq.com?subject=' + subject + '&body=' + body);
-            }
-
-            claim.addEventListener('click', function(){
-              try { fbq('trackCustom','UninstallOfferClaimed',{}); } catch(e){}
-            });
-          } else {
-            document.getElementById('panel-note').classList.add('on');
-          }
+          document.getElementById(chosen === 'price' ? 'panel-price' : 'panel-note').classList.add('on');
         });
       });
 
       var send = document.getElementById('send');
       if (send) send.addEventListener('click', function(){
         var note = document.getElementById('note').value.trim();
-        record(chosen, note.slice(0, 500));
+        if (note) store('uninstall_note', { reason: chosen, note: note.slice(0, 500) });
         document.getElementById('panel-note').classList.remove('on');
         thanks.classList.add('on');
       });

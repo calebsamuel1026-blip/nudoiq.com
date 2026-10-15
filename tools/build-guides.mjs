@@ -10,6 +10,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stampHtml } from './stamp-store-utm.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SRC = path.resolve(ROOT, '../research/seo-pages');
@@ -291,6 +292,8 @@ const FOOT = `
     <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc. Amazon Relay requirements change; confirm current rules at relay.amazon.com.</p>
 
   </div>
+  <!-- Phone bar + send-me-the-link sheet (2026-10-14, FUNNEL-LEAK-AUDIT leak 7 and Martha's guide audit): phones only. -->
+  <script src="/assets/mobile-bridge.js?v=d9c38b3a" data-bar="1" defer></script>
 </body>
 </html>
 `;
@@ -425,7 +428,7 @@ ${FOOT}`;
   // 2026-10-04). Keep it in the hub, sitemap and llms files, but never overwrite its HTML from Markdown.
   const out = path.join(ROOT, p.slug, 'index.html');
   if (fs.existsSync(out) && /data-layout="custom"/.test(fs.readFileSync(out, 'utf8'))) { p.custom = true; continue; }
-  fs.writeFileSync(out, html);
+  fs.writeFileSync(out, stampHtml(html, p.slug));   // store-link UTMs (tools/stamp-store-utm.mjs)
 }
 if (pages.some((p) => p.slug === DATA_SLUG)) writeCsv();
 
@@ -452,7 +455,7 @@ ${pages.map((p) => `        <a href="/${p.slug}/">${inline(p.h1)}<span>${esc(p.d
     </section>
 ${FOOT}`;
   fs.mkdirSync(path.join(ROOT, 'guides'), { recursive: true });
-  fs.writeFileSync(path.join(ROOT, 'guides', 'index.html'), html);
+  fs.writeFileSync(path.join(ROOT, 'guides', 'index.html'), stampHtml(html, 'guides'));
 }
 
 // ── sitemap ──────────────────────────────────────────────────────

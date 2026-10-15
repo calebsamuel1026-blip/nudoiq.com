@@ -21,6 +21,10 @@
     dest = "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=outreach&utm_medium=email&utm_campaign="
       + encodeURIComponent(c + "-direct") + "&utm_content=variant-" + encodeURIComponent(v);
   }
+  // 2026-10-14 (research/funnel/FUNNEL-LEAK-AUDIT-2026-10-14.md leak 3): keep the opaque recipient id on this origin for
+  // 90 days, so /welcome/ (same origin, opened by the extension after the store install) can send it with the install's
+  // first_touch row. Before this the rid died here and an email click could never be joined to an install.
+  try { if (rid.length >= 6) localStorage.setItem("nudoiq_rid", JSON.stringify({ rid: rid, c: c.slice(0, 40), v: v, ts: Date.now() })); } catch (e) {}
   var done = false, go = function () { if (!done) { done = true; location.replace(dest); } };
   setTimeout(go, 1200);
   if (rid.length < 6) { go(); return; }

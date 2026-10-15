@@ -14,7 +14,6 @@
 - **Backhaul finder:** searches loads from where the current load ends, pointed back toward home within a set radius and day window. Sorts by total pay, rate per mile, pickup time or distance home; the all-in rate counts the deadhead.
 - **Post A Truck helper:** shows origin, destination, distance and board price next to the carrier's minimum rate per mile and minimum payout, then posts with one button.
 - **Route check:** opens the routed trip, with every stop, in Google Maps (standard routing, not truck-specific).
-- **HOS overview** and **driver dispatch** by text or email on assignment.
 - English and Spanish interface.
 
 ## Pricing
@@ -2497,7 +2496,6 @@ What a dispatcher gets:
 - Connect Telegram and NudoIQ messages your phone on new loads and bookings.
 - **Lane Intelligence:** the posted price next to that lane's 90-day history. It's decision support, not a guarantee.
 - **Net profit on every load card:** the rate minus driver pay, fuel, maintenance and deadhead to pickup.
-- **Driver dispatch by text or email** when you assign a load, plus an HOS overview.
 
 It's [$49.99 a month](https://nudoiq.com/#pricing) for every feature, the same price for one truck or twenty. Start with a 7-day free trial, no card needed to start, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
 

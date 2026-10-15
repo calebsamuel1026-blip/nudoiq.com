@@ -1,0 +1,9 @@
+# GitHub Pages (Jekyll) build settings. Added 2026-10-14 (research/funnel/FUNNEL-LEAK-AUDIT-2026-10-14.md, leak 13):
+# the site's build scripts and their data under tools/ were served publicly (/tools/ rendered the README).
+# Only the build files are excluded; the real tool pages (tools/relay-load-calculator/, tools/relay-dispute-letter/)
+# are still published. Paths are relative to the repo root.
+exclude:
+  - tools/README.md
+  - tools/*.mjs
+  - tools/*.json
+  - tools/*.bak*

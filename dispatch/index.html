@@ -5,6 +5,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
+  <!-- Store-link UTM pass-through (2026-10-14, research/funnel/FUNNEL-LEAK-AUDIT-2026-10-14.md leak 3): an email arrival
+       (utm_source=outreach via /go/) keeps its own UTMs on the Chrome Web Store link instead of the page's static
+       nudoiq.com/site default, so the store dashboard can split email installs. Links a click-id script set to google /
+       bing are left alone. -->
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search);
+        if (!q.get("utm_source")) return;
+        var pass = function () {
+          Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+            var u = new URL(a.href), cur = u.searchParams.get("utm_source");
+            if (cur && cur !== "nudoiq.com") return;
+            ["utm_source", "utm_medium", "utm_campaign", "utm_content"].forEach(function (k) {
+              if (q.get(k)) u.searchParams.set(k, q.get(k).slice(0, 80));
+            });
+            a.href = u.toString();
+          });
+        };
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", pass); else pass();
+      } catch (e) {}
+    })();
+  </script>
   <title>NudoIQ for Dispatchers</title>
   <!-- /dispatch/ = the DISPATCHER landing page (cold-dispatch email clicks via /go/). Every customer-facing line is the
        approved D2 letter (research/copy/DISPATCHER-COPY-2026-10-01.json) or existing approved /get/ copy; nothing new.
@@ -212,7 +235,7 @@
   </style>
 </head>
 <body data-clarity-unmask="true">
-  <header class="top"><div class="topin"><a class="wm" href="/"><span>N</span>udoIQ</a><span class="topright"><a class="site" href="/">nudoiq.com</a><a class="top-cta js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" data-cta="header">Try it free</a></span></div></header>
+  <header class="top"><div class="topin"><a class="wm" href="/"><span>N</span>udoIQ</a><span class="topright"><a class="site" href="/">nudoiq.com</a><a class="top-cta js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=dispatch" target="_blank" rel="noopener" data-cta="header">Try it free</a></span></div></header>
 
   <main id="main">
     <!-- ── HERO — what it is and what it does, FIRST. Same shape as the homepage
@@ -259,7 +282,7 @@
 
           <!-- desktop path: Add to Chrome directly (this is what the Google ads traffic hits) -->
           <div class="cta" id="d" hidden>
-            <a class="btn btn-dark" id="cws" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+            <a class="btn btn-dark" id="cws" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=dispatch" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
             <!-- research/copy/google-sitelinks-and-get-lines-2026-09-21.json get_page_lines (copywriter). Do not edit words here. -->
             <p class="under">Never asks for your Amazon password. No card needed to start.</p>
             <!-- URGENCY: decision-pending, see research/GET-PAGE-V2-2026-09-24.md Part 2 -->
@@ -296,7 +319,7 @@
     </ul>
 
     <div class="cta-inline">
-      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" data-cta="after-steps">Try it now</a>
+      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=dispatch" target="_blank" rel="noopener" data-cta="after-steps">Try it now</a>
     </div>
 
     <!-- ── DEMO VIDEO — same block, same events, unchanged. ── -->
@@ -314,14 +337,14 @@
     </section>
 
     <div class="cta-inline">
-      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" data-cta="after-video">Try it free for 7 days</a>
+      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=dispatch" target="_blank" rel="noopener" data-cta="after-video">Try it free for 7 days</a>
       <span class="note">See it work on your own board before you pay.</span>
     </div>
 
     <!-- ── URGENCY: D2 body[3] verbatim. ── -->
     <section class="urgent">
       <p>Every hour your team spends refreshing is a load another dispatcher books first. Put it on your trucks this week.</p>
-      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" data-cta="urgency" data-mlabel="Email me the link">Try it free</a>
+      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=dispatch" target="_blank" rel="noopener" data-cta="urgency" data-mlabel="Email me the link">Try it free</a>
     </section>
 
     <!-- ── OBJECTION BLOCK — the most common worry in the Relay FB groups: does this
@@ -342,7 +365,7 @@
          repeated further down the page per brief item 3. Desktop only (mobile
          never had a store button — it has the email-capture card above). ── -->
     <section class="cta2" id="d2" hidden>
-      <a class="btn btn-go" id="cws2" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+      <a class="btn btn-go" id="cws2" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=dispatch" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
       <p class="under" style="color:var(--ink-4);text-align:center">Runs in your own Chrome. No card needed.</p>
     </section>
   </main>
@@ -350,7 +373,7 @@
   <div class="stickybar" id="stickybar" aria-hidden="true">
     <div class="stickyin">
       <span class="txt"><b>Try it free for 7 days.</b> <span>One plan covers every truck you dispatch.</span></span>
-      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" data-cta="sticky" data-mlabel="Email me the link" tabindex="-1">Try it free</a>
+      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=dispatch" target="_blank" rel="noopener" data-cta="sticky" data-mlabel="Email me the link" tabindex="-1">Try it free</a>
     </div>
   </div>
 

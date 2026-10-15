@@ -38,6 +38,29 @@
       } catch (e) {}
     })();
   </script>
+  <!-- Store-link UTM pass-through (2026-10-14, research/funnel/FUNNEL-LEAK-AUDIT-2026-10-14.md leak 3): an email arrival
+       (utm_source=outreach via /go/) keeps its own UTMs on the Chrome Web Store link instead of the page's static
+       nudoiq.com/site default, so the store dashboard can split email installs. Links a click-id script set to google /
+       bing are left alone. -->
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search);
+        if (!q.get("utm_source")) return;
+        var pass = function () {
+          Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+            var u = new URL(a.href), cur = u.searchParams.get("utm_source");
+            if (cur && cur !== "nudoiq.com") return;
+            ["utm_source", "utm_medium", "utm_campaign", "utm_content"].forEach(function (k) {
+              if (q.get(k)) u.searchParams.set(k, q.get(k).slice(0, 80));
+            });
+            a.href = u.toString();
+          });
+        };
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", pass); else pass();
+      } catch (e) {}
+    })();
+  </script>
   <title>Get NudoIQ | NudoIQ</title>
   <!-- /m/ = the EMAIL landing page (cold-email clicks via /go/). Works on both devices: phone -> email-me-the-install-link
        form is the primary CTA; computer -> Chrome Web Store CTAs. /get/ is the ads page, /dispatch/ the dispatcher page. -->
@@ -302,7 +325,7 @@
 </script>
 </head>
 <body data-clarity-unmask="true">
-  <header class="top"><div class="topin"><a class="wm" href="/"><span>N</span>udoIQ</a><span class="topright"><a class="site" href="/">nudoiq.com</a><a class="top-cta js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" data-cta="header">Try it free</a></span></div></header>
+  <header class="top"><div class="topin"><a class="wm" href="/"><span>N</span>udoIQ</a><span class="topright"><a class="site" href="/">nudoiq.com</a><a class="top-cta js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=m" target="_blank" rel="noopener" data-cta="header">Try it free</a></span></div></header>
 
   <main id="main">
     <!-- ── HERO — what it is and what it does, FIRST. Same shape as the homepage
@@ -344,7 +367,7 @@
 
           <!-- desktop path: Add to Chrome directly (this is what the Google ads traffic hits) -->
           <div class="cta" id="d" hidden>
-            <a class="btn btn-dark" id="cws" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+            <a class="btn btn-dark" id="cws" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=m" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
             <!-- research/copy/google-sitelinks-and-get-lines-2026-09-21.json get_page_lines (copywriter). Do not edit words here. -->
             <p class="under">Never asks for your Amazon password. No card needed to start.</p>
             <!-- URGENCY: decision-pending, see research/GET-PAGE-V2-2026-09-24.md Part 2 -->
@@ -412,7 +435,7 @@
     </ul>
 
     <div class="cta-inline">
-      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" data-cta="after-steps">Try it now</a>
+      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=m" target="_blank" rel="noopener" data-cta="after-steps">Try it now</a>
       <span class="note"><b>7-day free trial.</b> No card needed.</span>
     </div>
 
@@ -431,7 +454,7 @@
     </section>
 
     <div class="cta-inline">
-      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" data-cta="after-video">Try it free for 7 days</a>
+      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=m" target="_blank" rel="noopener" data-cta="after-video">Try it free for 7 days</a>
       <span class="note">See it work on your own board before you pay.</span>
     </div>
 
@@ -472,7 +495,7 @@
          repeated further down the page per brief item 3. Desktop only (mobile
          never had a store button — it has the email-capture card above). ── -->
     <section class="cta2" id="d2" hidden>
-      <a class="btn btn-go" id="cws2" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
+      <a class="btn btn-go" id="cws2" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=m" target="_blank" rel="noopener">Add NudoIQ to Chrome</a>
       <p class="under" style="color:var(--ink-4);text-align:center">7 days free. No card needed to start.</p>
     </section>
   </main>
@@ -480,7 +503,7 @@
   <div class="stickybar" id="stickybar" aria-hidden="true">
     <div class="stickyin">
       <span class="txt"><b>Get one week free to test it against the board.</b> <span>No card needed.</span></span>
-      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk" target="_blank" rel="noopener" data-cta="sticky" data-mlabel="Email me the link" tabindex="-1">Try it free</a>
+      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=m" target="_blank" rel="noopener" data-cta="sticky" data-mlabel="Email me the link" tabindex="-1">Try it free</a>
     </div>
   </div>
 

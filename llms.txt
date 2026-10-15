@@ -14,7 +14,6 @@
 - **Backhaul finder:** searches loads from where the current load ends, pointed back toward home within a set radius and day window. Sorts by total pay, rate per mile, pickup time or distance home; the all-in rate counts the deadhead.
 - **Post A Truck helper:** shows origin, destination, distance and board price next to the carrier's minimum rate per mile and minimum payout, then posts with one button.
 - **Route check:** opens the routed trip, with every stop, in Google Maps (standard routing, not truck-specific).
-- **HOS overview** and **driver dispatch** by text or email on assignment.
 - English and Spanish interface.
 
 ## Pricing

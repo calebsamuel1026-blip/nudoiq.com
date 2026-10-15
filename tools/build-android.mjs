@@ -8,6 +8,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stampHtml } from './stamp-store-utm.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const site = path.resolve(here, '..');
@@ -134,5 +135,5 @@ ${faq}
 `;
 
 fs.mkdirSync(path.join(site, 'android'), { recursive: true });
-fs.writeFileSync(path.join(site, 'android', 'index.html'), html, 'utf8');
+fs.writeFileSync(path.join(site, 'android', 'index.html'), stampHtml(html, 'android'), 'utf8');   // store-link UTMs
 console.log(`android/index.html  ${(copy.steps || []).length} steps  ${html.length} bytes`);

@@ -43,7 +43,11 @@
       // back to "Copy the link" twice, 5 days apart.
       placeholder: "name@example.com",
       sentTitle: "Check Your Email",
-      sentBody: "We sent you the install link. Open it on your computer and click Add to Chrome."
+      sentBody: "We sent you the install link. Open it on your computer and click Add to Chrome.",
+      note: "Independent software. Not affiliated with Amazon.",
+      // Phone bar on guide pages (data-bar="1"), Martha 2026-10-14: research/copy/LEAK-FIXES-2026-10-14.json
+      barLabel: "Reading on your phone?",
+      barBtn: "Email me the link"
     },
     es: {
       title: "Instala NudoIQ en tu computadora",
@@ -54,9 +58,39 @@
       desktop: "Lo abro en desktop",
       close: "Cerrar",
       subject: "Tu enlace de instalación de NudoIQ",
-      mailBody: "Instala NudoIQ en tu computadora:\n\n{url}\n\nGratis 7 días, luego $49.99/mes. Cancela en cualquier momento.\nSoftware independiente. No afiliado con Amazon."
+      mailBody: "Instala NudoIQ en tu computadora:\n\n{url}\n\nGratis 7 días, luego $49.99/mes. Cancela en cualquier momento.\nSoftware independiente. No afiliado con Amazon.",
+      // 2026-10-14 (Martha, research/copy/LEAK-FIXES-2026-10-14.json): capture form words, so Spanish phones get the
+      // email form instead of the blank mailto (FUNNEL-LEAK-AUDIT-2026-10-14 leak 7).
+      placeholder: "nombre@ejemplo.com",
+      sentTitle: "Revisa tu correo",
+      sentBody: "Te enviamos el enlace de instalación. Ábrelo en tu computadora y haz clic en Agregar a Chrome.",
+      note: "Software independiente. No afiliado con Amazon.",
+      barLabel: "¿Lees desde el celular?",
+      barBtn: "Enviarme el enlace"
+    },
+    // 2026-10-14 (Martha + native review, research/copy/LEAK-FIXES-2026-10-14.json).
+    ru: {
+      title: "Установите NudoIQ на компьютер",
+      body: "NudoIQ устанавливается в Chrome на любом компьютере. Отправьте ссылку себе на почту, скопируйте ее или откройте сайт с компьютера. 7 дней бесплатно.",
+      email: "Прислать ссылку на почту",
+      copy: "Скопировать ссылку",
+      copied: "Ссылка скопирована",
+      desktop: "Открою на компьютере",
+      close: "Закрыть",
+      subject: "Ссылка для установки NudoIQ",
+      mailBody: "Установите NudoIQ на компьютер:\n\n{url}\n\n7 дней бесплатно, затем $49.99 в месяц. Отменить можно в любой момент.\nНезависимый продукт. Не аффилирован с Amazon.",
+      placeholder: "name@example.com",
+      sentTitle: "Проверьте почту",
+      sentBody: "Мы отправили ссылку для установки. Откройте ее на компьютере и нажмите «Установить» (Add to Chrome).",
+      note: "Независимый продукт. Не аффилирован с Amazon.",
+      barLabel: "Читаете с телефона?",
+      barBtn: "Прислать ссылку на почту"
     }
   };
+
+  // Read at parse time: a deferred classic script still has document.currentScript while it runs.
+  var SELF = document.currentScript;
+  var BAR = !!(SELF && SELF.getAttribute('data-bar') === '1');
 
   var STORE_HOST = 'chromewebstore.google.com';
 
@@ -84,7 +118,15 @@
   }
 
   function lang() {
-    return document.documentElement.lang === 'es' || location.pathname.indexOf('/es') === 0 ? 'es' : 'en';
+    var l = (document.documentElement.lang || '').slice(0, 2), p = location.pathname;
+    if (l === 'ru' || p.indexOf('/ru/') === 0) return 'ru';
+    return l === 'es' || p.indexOf('/es') === 0 ? 'es' : 'en';
+  }
+
+  // Page slug for store-link UTMs, same rule as tools/stamp-store-utm.mjs: /es/amazon-relay-pagos/ -> es-amazon-relay-pagos.
+  function slug() {
+    var p = location.pathname.replace(/(^|\/)index\.html$/, '').replace(/\.html$/, '').replace(/^\/+|\/+$/g, '');
+    return (p || 'home').replace(/\//g, '-').replace(/[^a-z0-9.-]/gi, '').slice(0, 80) || 'home';
   }
 
   function track(name, params) {
@@ -124,7 +166,7 @@
     document.head.appendChild(s);
   }
 
-  function openSheet(storeUrl) {
+  function openSheet(storeUrl, via) {
     var t = COPY[lang()];
     var backdrop = document.createElement('div');
     backdrop.className = 'nq-sheet-backdrop';
@@ -150,7 +192,7 @@
       emailBlock +
       '<button class="nq-secondary" data-nq="copy">' + t.copy + '</button>' +
       '<button class="nq-tertiary" data-nq="desktop">' + t.desktop + '</button>' +
-      '<p class="nq-note">Independent software. Not affiliated with Amazon.</p>';
+      '<p class="nq-note">' + (t.note || COPY.en.note) + '</p>';
 
     function close() {
       sheet.classList.remove('is-open');
@@ -240,7 +282,7 @@
       sheet.classList.add('is-open');
     });
 
-    track('MobileBridgeOpened', { url: storeUrl });
+    track('MobileBridgeOpened', via ? { url: storeUrl, via: via } : { url: storeUrl });
   }
 
   // StoreClick is the Meta ad-optimisation event: a visitor who CAN install
@@ -260,9 +302,15 @@
   function withStoreUtm(href) {
     try {
       var u = new URL(href), page = new URLSearchParams(location.search);
-      var d = { utm_source: 'nudoiq.com', utm_medium: 'website', utm_campaign: 'site' };
+      // 2026-10-14 (FUNNEL-LEAK-AUDIT leak 3): the site default is nudoiq.com / site / <page slug>, the same scheme
+      // tools/stamp-store-utm.mjs writes into the static hrefs. A landing URL's own UTMs (email, social) replace that
+      // static default; a link a click-id script already set to google / bing is left alone.
+      var d = { utm_source: 'nudoiq.com', utm_medium: 'site', utm_campaign: slug() };
+      var cur = u.searchParams.get('utm_source');
+      var pass = !!page.get('utm_source') && (!cur || cur === 'nudoiq.com');
       ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) {
-        if (!u.searchParams.get(k)) u.searchParams.set(k, page.get(k) || d[k]);
+        if (pass && page.get(k)) u.searchParams.set(k, page.get(k));
+        else if (!u.searchParams.get(k)) u.searchParams.set(k, d[k]);
       });
       // utm_content (the ad id from {{ad.id}}) and utm_term are carried too when the
       // landing URL has them. Google documents only source/medium/campaign for the
@@ -308,9 +356,57 @@
     });
   }
 
+  // First-touch record (FUNNEL-LEAK-AUDIT leak 3): where this browser first came from, kept 90 days on this origin,
+  // so /welcome/ can send it with the install's first_touch row. No personal data: utm values, the referrer host and
+  // the landing path. /go/ keeps the email recipient id separately (nudoiq_rid).
+  function saveFirstTouch() {
+    try {
+      var old = JSON.parse(localStorage.getItem('nudoiq_ft') || 'null');
+      if (old && old.ts && Date.now() - old.ts < 90 * 864e5) return;
+      var q = new URLSearchParams(location.search), ref = '';
+      try { ref = document.referrer ? new URL(document.referrer).hostname : ''; } catch (x) {}
+      if (ref === location.hostname) return;              // an internal hop is not a first touch
+      var r = { ts: Date.now(), lp: location.pathname.slice(0, 80), ref: ref.slice(0, 60) };
+      ['utm_source', 'utm_medium', 'utm_campaign'].forEach(function (k) { if (q.get(k)) r[k] = q.get(k).slice(0, 60); });
+      localStorage.setItem('nudoiq_ft', JSON.stringify(r));
+    } catch (e) {}
+  }
+
+  // Phone bar (guides, data-bar="1"; Martha's guide audit 2026-10-14: the header CTA is hidden under 660px, so a phone
+  // reader saw no CTA until ~90% down). Fixed to the bottom, so nothing above it moves (no layout shift); the body gets
+  // matching bottom padding so the bar never covers the footer. Its button opens the same sheet a store link does.
+  function injectBar() {
+    var t = COPY[lang()];
+    var css = '.nq-bar{position:fixed;left:0;right:0;bottom:0;z-index:9990;display:flex;align-items:center;gap:12px;' +
+      'padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#FFFFFF;border-top:1px solid #E6E8EE;' +
+      'box-shadow:0 -6px 20px rgba(22,22,22,.08);font-family:"Inter Tight",Inter,system-ui,sans-serif}' +
+      '.nq-bar span{flex:1 1 auto;min-width:0;font-size:14px;line-height:1.25;color:#161616;font-weight:500}' +
+      '.nq-bar button{flex:0 0 auto;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:#3366FF;color:#FFFFFF;' +
+      'font:600 15px/1.1 "Inter Tight",Inter,system-ui,sans-serif;cursor:pointer;max-width:62%}' +
+      '.nq-bar button:focus-visible{outline:3px solid #1E306E;outline-offset:2px}' +
+      'body.nq-has-bar{padding-bottom:calc(64px + env(safe-area-inset-bottom))}';
+    var s = document.createElement('style');
+    s.textContent = css;
+    document.head.appendChild(s);
+    var bar = document.createElement('div');
+    bar.className = 'nq-bar';
+    bar.setAttribute('role', 'region');
+    bar.setAttribute('aria-label', t.barBtn);
+    bar.innerHTML = (t.barLabel ? '<span>' + t.barLabel + '</span>' : '') + '<button type="button">' + t.barBtn + '</button>';
+    bar.querySelector('button').addEventListener('click', function () {
+      var a = document.querySelector('a[href^="https://chromewebstore.google.com/"]');
+      var url = withStoreUtm(a ? a.href : 'https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk');
+      openSheet(url, 'bar');
+    });
+    document.body.appendChild(bar);
+    document.body.classList.add('nq-has-bar');
+  }
+
   function init() {
+    saveFirstTouch();
     if (!isMobile()) { initDesktopStoreClick(); return; }
     injectStyles();
+    if (BAR) injectBar();
     document.addEventListener('click', function (e) {
       var a = e.target.closest('a[href]');
       if (!isStoreLink(a)) return;

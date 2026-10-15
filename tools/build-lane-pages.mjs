@@ -19,6 +19,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { stampHtml, slugFor } from './stamp-store-utm.mjs';
+// Store-link UTMs (2026-10-14): the template guide's links carry its own utm_campaign, so swap in this page's slug.
+const utm = (html, rel) => stampHtml(html.replace(/utm_campaign=how-much-does-amazon-relay-pay/g, `utm_campaign=${slugFor(rel)}`), slugFor(rel));
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = path.resolve(ROOT, '../research/seo/lane-data-2026-10-05');
@@ -351,7 +354,7 @@ for (const l of LANES) {
   const html = page({ title, description, url, slug: `${HUB}/${l.slug}`, ld, trail, h1, intro, byline: byline(a.first_date, a.last_date), body, faq,
     extraRelated: [[`/${HUB}/`, 'Amazon Relay rates by lane (all lanes)'], ...others.slice(0, 3)] });
   fs.mkdirSync(path.join(ROOT, HUB, l.slug), { recursive: true });
-  fs.writeFileSync(path.join(ROOT, HUB, l.slug, 'index.html'), html);
+  fs.writeFileSync(path.join(ROOT, HUB, l.slug, 'index.html'), utm(html, `${HUB}/${l.slug}/index.html`));
   l._title = h1; l._desc = description;
 }
 
@@ -453,7 +456,7 @@ for (const l of LANES) {
   const html = page({ title, description, url, slug: HUB, ld, trail, h1, intro, byline: byline(first, last), body, faq,
     extraRelated: LANES.slice(0, 3).map((l) => [laneUrl(l), l._title]) });
   fs.mkdirSync(path.join(ROOT, HUB), { recursive: true });
-  fs.writeFileSync(path.join(ROOT, HUB, 'index.html'), html);
+  fs.writeFileSync(path.join(ROOT, HUB, 'index.html'), utm(html, `${HUB}/index.html`));
   N._title = h1; N._desc = description; N._answer = answer;
 }
 
