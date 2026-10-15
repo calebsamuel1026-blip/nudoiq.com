@@ -4,8 +4,8 @@
 
 ## What it does
 
-- **Refresher:** reloads the Amazon Relay load board at an interval the carrier sets, adds up to 20% random jitter per interval, and keeps the board tab from going idle.
-- **Control bar with three modes:** Alert (pings you when a load matches your rules), Search (highlights matches) and Autobook (books a matching load for you). Rules cover price and lanes, a profit floor and a max-books cap. Autobook stops at the cap and the profit floor.
+- **Refresher:** reloads the Amazon Relay load board at an interval the carrier sets and keeps the board tab from going idle.
+- **Control bar with three modes:** Alert (pings you when a load matches your rules), Search (highlights matches) and Autobook (books a matching load for you). Rules: Min Net Profit, Min $/Mile, a load-pay minimum and a max-books cap per START; lanes come from Relay search. Autobook stops at the cap and the profit floor.
 - **Telegram alerts** when a load lands.
 - **Instant Book:** books a load in one action from the control bar instead of the multi-step flow.
 - **Lane Intelligence:** compares the posted price with 90 days of that lane's history and shows a target rate, an expected range and a confidence level. Decision support, not a guarantee.
