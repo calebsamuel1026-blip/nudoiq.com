@@ -3603,7 +3603,7 @@ NudoIQ is rated 5.0 on the Chrome Web Store. You can see the rating and the user
 URL: https://nudoiq.com/why-nudoiq/
 Published: 2026-10-08. Last updated: 2026-10-08.
 
-Short answer: NudoIQ is the only Amazon Relay extension that books loads to your own minimum net profit and drafts scorecard dispute letters (checked October 5, 2026, across 52 other Relay listings on the Chrome Web Store). It is also the only extension in our side-by-side that lists all six core features, from auto-book to Telegram alerts. Every feature costs one flat $49.99 a month, the same for one truck or twenty.
+Short answer: NudoIQ is the only Amazon Relay extension that books to your minimum net profit and drafts scorecard dispute letters (52 other listings checked October 5, 2026). It's the only one in our table with all six. $49.99 a month flat.
 
 ## Why carriers choose NudoIQ
 
@@ -3618,7 +3618,7 @@ Short answer: NudoIQ is the only Amazon Relay extension that books loads to your
 
 NudoIQ also includes Instant Book, Telegram alerts, a backhaul finder and one-click Post A Truck with a recommended bid. The recommended bid improves with use, so it is not accurate right after install.
 
-A free preview starts on install: refresh, alerts, the NudoIQ bar and Lane Intelligence on the first 5 priced loads a day. AutoBook, Instant Book and dispute letters come with the 7-day free trial.
+Try NudoIQ 7 days free, no card needed to start. Then it's $49.99 a month. Cancel anytime.
 
 NudoIQ is rated 5.0 on the Chrome Web Store and used by 300+ carriers.
 
@@ -3626,19 +3626,16 @@ NudoIQ is rated 5.0 on the Chrome Web Store and used by 300+ carriers.
 
 | Feature | NudoIQ | LoadFetcher | Rocket Pro | Cardamon | RGD | SwiftRelay | EasyRelay |
 |---|---|---|---|---|---|---|---|
-| Auto-book | Yes, to your minimum net profit | Advertised on its website, not on its store listing | Yes | Yes, with payout and $/mile floors | Yes | Yes | Not listed (fast book) |
-| Books against net profit after your own costs | Yes | Not listed | Not listed | Not listed | Not listed | Not listed | Not listed |
-| Net profit per load shown | Yes, after driver pay, fuel, maintenance and deadhead | Partial (financials and driver earnings, Plus plan) | Not listed | Not listed | Not listed | Not listed | Partial (tolls and deadhead shown) |
-| Scorecard dispute letters | Yes | Not listed | Not listed | Not listed | Not listed | Not listed | Not listed |
-| Lane price history | Yes, 90 days with target rate | Yes (load pricing and history) | Not listed | Comparison baseline only | Not listed | Live load stats | Per-trip gross per mile |
-| Telegram alerts | Yes | Yes (Plus plan) | Sounds only | Sounds and alarms | Via sister app LODA | Not verified | Yes |
-| Free trial | 7 days, no card | Free plan | 7 days | 7 days | 7 days, no card | 7 days | 7 days |
-| Free tier | No. Free preview (refresh, alerts) until you start the free trial | Yes | Yes | Yes (refresher) | No | Not listed | Yes |
-| Monthly price | $49.99 flat, every truck | $24, $49 or $90 (Team) | $49 | $49.99 ($499 a year) | $79 or $249 | $49.95 to $349 | Free, $14.99 or $44.99 (Team) |
+| **Auto booking** | Yes | Not listed (Website only) | Yes | Yes | Yes | Yes | Not listed |
+| **Booking at Min Net Profit** | Yes | Not listed | Not listed | Not listed | Not listed | Not listed | Not listed |
+| **Net profit per load** | Yes | Not listed | Not listed | Not listed | Not listed | Not listed | Not listed |
+| **Scorecard dispute letters** | Yes | Not listed | Not listed | Not listed | Not listed | Not listed | Not listed |
+| **Lane price history** | Yes | Yes | Not listed | Not listed | Not listed | Not listed | Not listed |
+| **Telegram alerts** | Yes | Yes (Plus plan) | Not listed | Not listed | Not listed | Not listed (Not verified) | Yes |
 
-This table reflects what each vendor lists publicly, checked October 5, 2026. "Not listed" means the vendor does not list it. "Not verified" means the listing is unclear.
+Rows show what NudoIQ offers. Check: listed by the vendor. Dash: not listed. Checked October 5, 2026. We did not test them.
 
-Read the first six rows. NudoIQ is the only extension of the seven with a Yes on every one: auto-book, booking to net profit, net profit per load, scorecard dispute letters, lane price history and Telegram alerts.
+NudoIQ is the only extension of the seven with a check on all six rows.
 
 ## What only NudoIQ does
 
@@ -3647,18 +3644,9 @@ On October 5, 2026, we checked 52 other Amazon Relay listings on the Chrome Web 
 1. **Scorecard dispute letters.** No other Relay listing offers them. NudoIQ drafts the letter from the violation, you submit it, and Amazon makes the call.
 2. **AutoBook gated by net profit after your own costs.** Other extensions filter by payout, $/mile, stops or deadhead. None of them books to a net number. NudoIQ books a load only when what you keep, after driver pay, fuel, maintenance and deadhead, clears the floor you set.
 
-## What other extensions list that NudoIQ doesn't
+## Who NudoIQ fits best
 
-- **Booking on a free plan.** Rocket Pro's free tier lists FastBook on matches. NudoIQ's free preview covers refresh, alerts and lane prices until you start the 7-day free trial, which adds booking. After the trial, it's $49.99 a month.
-- **Multi-load search and trip series.** RGD lists searching for several loads at once, picking how many to book from that one search, and booking a series of identical trips. NudoIQ's START books matching loads one at a time, up to your max-books cap of 1 to 20, but has no multi-load search or trip series.
-- **Trip alerts and driver check-ins.** LoadFetcher and EasyRelay list trip alerts for road restrictions, late ETAs and driver check-ins. NudoIQ covers trips only partly: it shows ETAs, miles left and facility addresses, but sends no trip alerts.
-- **Annual plan.** NudoIQ has no annual plan. It is month to month.
-
-## Who NudoIQ fits, and who it doesn't
-
-**NudoIQ fits you if** you want AutoBook to take only loads that clear your own net number, you want to see what a load nets before you take it, you deal with scorecard violations, or you run more than one truck and want one flat price.
-
-**Another tool fits you better if** you want to book loads on a free plan, you want to search for several loads at once or book a series of identical trips, or you need trip alerts and driver check-ins in the same tool.
+NudoIQ fits if you want loads booked only when they clear your net profit floor, want to see what a load nets first, fight scorecard violations, or run several trucks.
 
 For what to look for in any Relay extension, read the [guide to Amazon Relay extensions](https://nudoiq.com/best-amazon-relay-extensions/). Coming from LoadFetcher? See the [LoadFetcher alternative](https://nudoiq.com/loadfetcher-alternative/) page. To start the 7-day free trial, see [pricing](https://nudoiq.com/#pricing).
 
@@ -3667,7 +3655,7 @@ NudoIQ is independent and not affiliated with Amazon.
 ## Frequently asked questions
 
 ### Is NudoIQ the best Amazon Relay extension?
-Judge it on the facts. NudoIQ is the only Amazon Relay extension that books to your own minimum net profit and drafts scorecard dispute letters, and the only one in our side-by-side that lists all six core features (checked October 5, 2026). If booking on a free plan or searching for several loads at once matters most, Rocket Pro lists FastBook on its free tier, and RGD lists multi-load search and series of identical trips.
+Judge it on the facts. NudoIQ is the only Amazon Relay extension that books to your own minimum net profit and drafts scorecard dispute letters, and the only one in our side-by-side that lists all six core features (checked October 5, 2026).
 
 ### Does NudoIQ have a free version?
 Not a free plan, but there is a free preview. It starts on install: refresh, alerts, the NudoIQ bar and Lane Intelligence on the first 5 priced loads a day. It runs until you start the 7-day free trial, which adds AutoBook, Instant Book and dispute letters and starts in the extension with just your email. After the trial, it's $49.99 a month to keep using NudoIQ.
@@ -3688,49 +3676,46 @@ No. NudoIQ is an independent extension and is not affiliated with or endorsed by
 URL: https://nudoiq.com/rocket-relay-alternative/
 Published: 2026-10-10. Last updated: 2026-10-10.
 
-Short answer: If you want loads booked by net profit, after your own costs, NudoIQ is a good Rocket Relay alternative. Its AutoBook takes a load only if it clears your minimum net profit. Rocket Relay lists many filters, but no place to enter fuel or driver pay. 7 days free with no card, then $49.99 a month flat, every truck.
+Short answer: NudoIQ is a good Rocket Relay alternative if you want loads booked by net profit. AutoBook books only loads that clear your minimum net profit.
 
 ## What is a good Rocket Relay alternative?
 
-NudoIQ, if you want loads booked by net profit, after your own costs. Rocket Relay's pages say its Pro plan auto books by payout, price per mile and more filters. NudoIQ [refreshes the board and books the loads that clear your number](https://nudoiq.com/amazon-relay-auto-refresh/).
+NudoIQ, if you want loads booked by net profit, after your own costs. It [refreshes the board and books the loads that clear your number](https://nudoiq.com/amazon-relay-auto-refresh/).
 
 ## How does NudoIQ compare to Rocket Relay?
 
-Here's how they line up on the Relay load board, with where every Rocket Relay fact came from.
+Side by side, with the source for every Rocket Relay fact.
 
-NudoIQ vs Rocket Relay for the Amazon Relay load board, from each product's store listing and website, checked October 9, 2026. "Not listed" means that item wasn't on Rocket Relay's store listing or the site pages in Sources that day. We did not test their product. Spot an error? Tell us on the [contact page](https://nudoiq.com/support/) and we'll fix it.
+Updated October 2026
 
-| Item | NudoIQ | Rocket Relay |
+From each Chrome Web Store listing and website, checked October 9, 2026. Dash: not on Rocket Relay's listing or website. We did not test their product. Spot an error? [Tell us on the contact page](https://nudoiq.com/support/).
+
+| Feature | NudoIQ | Rocket Relay |
 |---|---|---|
-| What it is | Chrome extension for Amazon Relay carriers and dispatchers | Browser extension for Amazon Relay carriers, owner-operators, dispatchers and fleets |
-| Auto-refresh the load board | Yes | Yes, on the Free plan |
-| New loads and price rises flagged | Yes. A NEW or PRICE UP badge on the load | Yes. Alert mode plays a sound and shows a pop-up, plus price-change alerts past your threshold |
-| Automatic booking | Yes. AutoBook books loads that clear your minimum net profit, and your minimum $/mile if you set one | Yes, on Pro. Books matching trips best-paying first, up to the number you set |
-| Booking filters | Minimum net profit and minimum $/mile. Loads that miss them can be faded or hidden | On Pro: payout, price per mile, distance, stops, deadhead, stem time, time windows, location and several lanes at once |
-| Net profit on each load | Yes. Net dollars and $/mile next to the price, after the costs you enter | Not listed. Filters cover payout and price per mile, with no fuel or driver pay inputs listed |
-| One-tap booking | Instant Book on new and price-up loads (one tap, no confirm screen) | FastBook: one click on matched trips (Free), or on every trip (Pro) |
-| Lane price history | Lane Intelligence: 90-day price range for the lane, from the first button under each load | Not listed |
-| Backhaul search | Yes, Find backhaul button under each load | Not listed |
-| Post a Truck | One-Click Post A Truck with a recommended bid. The bid needs time to learn your area and improves with use | On Pro: one click from a load, pre-filled, plus bulk modify, clone or delete and assign drivers |
-| Scorecard dispute letters | Drafts the letter from the violation. You review and submit it. Amazon decides | Not listed |
-| Telegram alerts | Yes, to your phone: new matching loads, price rises and AutoBook bookings, with quiet hours | Not listed. Telegram appears only as a support contact |
-| Contracts | Yes. Refreshes short-term contract offers and can alert you or AutoBook the ones that meet your minimums | Not listed |
-| Where your load data stays | Lane prices pooled anonymously. Your driver list (trial or paid) and Fleet Dashboard trips are kept on its servers | Its listing says your loads, trips, payouts and drivers stay on your computer |
-| Free plan | No. Free preview (refresh, alerts) until you start the free trial | Yes. Auto-refresh, alerts and FastBook on matched trips, no card required |
-| Free trial | Yes. 7 days, no card needed to start | Yes, 7 days of Pro. A card is needed to start, and its FAQ says you aren't charged during it |
-| Paid price | $49.99 a month flat, every truck, cancel anytime | Pro $49 a month, plus any sales tax, cancel anytime |
-| Languages | English and Spanish | 10 listing languages, including English and Spanish |
-| Android and iPhone | Android in browsers that support extensions, such as Lemur. No iPhone | Android in Lemur or Quetta. No iPhone version |
-| Publisher | Sami Enterprises LLC | West Wanted |
+| AutoBook at Min Net Profit | Yes | Not listed |
+| Net profit per load | Yes | Not listed |
+| Lane price history | Yes | Not listed |
+| Backhaul search | Yes | Not listed |
+| Scorecard dispute letters | Yes | Not listed |
+| Telegram load alerts | Yes | Not listed |
+| Contract offers | Yes | Not listed |
+| 7-day free trial, no card | Yes | Not listed |
 
-Sources:
+### Everything in NudoIQ
 
-1. NudoIQ extension for Amazon Relay, and nudoiq.com/get/
-2. Rocket Relay Chrome Web Store listing (chromewebstore.google.com/detail/kcnegnbacaohnhpmeckfakhlnahliklf), v9.0.2, updated July 30, 2026, checked October 9, 2026
-3. Rocket Relay website, rocketrelaybooker.com (home, pricing, tools and FAQ pages), checked October 9, 2026
-4. Rocket Relay Post Truck Manager Chrome Web Store listing (chromewebstore.google.com/detail/pmlcbfihajkjdoaaocpphopbahfldcai), v3.0.2, updated May 20, 2025, checked October 9, 2026
-5. Chrome Web Store (NudoIQ listing for Amazon Relay), checked October 9, 2026
-6. nudoiq.com privacy policy on load prices, fleet trip data and driver contact details, checked October 9, 2026
+Also included, in the same NudoIQ subscription.
+
+- Auto-refresh the load board
+- New-load and price-up alerts
+- One-tap booking
+- Post a Truck
+- Works in Spanish
+
+### Sources
+
+1. NudoIQ extension for Amazon Relay, and [nudoiq.com/get/](https://nudoiq.com/get/)
+2. Rocket Relay Chrome Web Store listing ([chromewebstore.google.com/detail/kcnegnbacaohnhpmeckfakhlnahliklf](https://chrome.google.com/webstore/detail/kcnegnbacaohnhpmeckfakhlnahliklf)), v9.0.2, updated July 30, 2026, checked October 9, 2026
+3. Rocket Relay website, [rocketrelaybooker.com](https://rocketrelaybooker.com/) (home, pricing, tools and FAQ pages), checked October 9, 2026
 
 Rocket Relay is a trademark of its owner, used here only to name and compare two Amazon Relay extensions. NudoIQ is not affiliated with Rocket Relay or with Amazon.
 
@@ -3738,103 +3723,68 @@ To see how NudoIQ compares with Rocket Relay and five other Relay extensions on 
 
 ## What is Rocket Relay?
 
-Rocket Relay is a browser extension for the Amazon Relay load board, from West Wanted. Its store listing is called Relay Auto Booker Refresher Rocket Pro. As of October 9, 2026, its listing and site name Alert, Search and Auto-book modes and one-click FastBook. They also name filters, bulk Post-a-Truck, price-change alerts and custom sounds. It runs in Chrome, Edge and Brave, and on Android in Lemur or Quetta.
+Rocket Relay is a browser extension for the Amazon Relay load board, published by West Wanted, per its store listing checked October 9, 2026.
 
 ## Does Rocket Relay auto book loads?
 
-Yes, Rocket Relay auto books loads on its Pro plan. As of October 9, 2026, its listing says Auto-book takes matching loads by your filters, best-paying first. It stops at the number you set and runs only after you press Start. [NudoIQ's AutoBook books for you](https://nudoiq.com/amazon-relay-auto-booker/) too, but only loads that clear your minimum net profit, after the costs you enter.
+Yes, on its Pro plan, by your filters such as payout and price per mile (checked October 9, 2026). [NudoIQ's AutoBook](https://nudoiq.com/amazon-relay-auto-booker/) books only loads that clear your minimum net profit, after your own costs.
 
 ## What does NudoIQ do that Rocket Relay doesn't list?
 
-Rocket Relay's listing and checked site pages didn't name these three: an AutoBook net profit floor, net profit per load and scorecard dispute letters.
+Three things, none on Rocket Relay's listing or website as of October 9, 2026.
 
-- Net profit floor for AutoBook: it books only loads that clear your minimum. It skips any load it can't fully price and stops at your max-books cap.
-- Net profit on every load: net dollars and $/mile next to the price. It uses the costs you enter, like fuel, MPG, driver pay and maintenance.
-- [Scorecard dispute letters](https://nudoiq.com/amazon-relay-scorecard/): it drafts the letter from the violation. You read it, send it, and Amazon makes the call.
-- Also: Lane Intelligence (90-day lane price range), backhaul search, alerts or AutoBook on short-term contract offers, and Telegram alerts to your phone.
+- **Net profit floor:** AutoBook books only loads that clear your Min Net Profit.
+- **Net profit on every load:** net dollars and $/mile after the costs you enter.
+- **[Scorecard dispute letters](https://nudoiq.com/amazon-relay-scorecard/):** drafted for you. You review and send. Amazon decides.
 
-## What does Rocket Relay do that NudoIQ doesn't?
+## Who NudoIQ fits best
 
-As of October 9, 2026, Rocket Relay's own pages list these, and NudoIQ doesn't have them.
+- You want loads booked for you, only the ones that clear your minimum net profit.
+- You want to see what each load nets before you take it.
+- You fight scorecard violations and want the dispute letter drafted for you.
 
-- A Free plan you can stay on, with FastBook on matched trips and no card required. NudoIQ's free preview also refreshes and alerts, but it has no booking and ends when you start the trial.
-- More booking rules (Pro): location by state, ZIP or facility, distance, stops, deadhead, stem time and time windows. It can watch several lanes at once.
-- Bulk Post-a-Truck (Pro): modify, clone or delete many orders at once and assign drivers. Pro also puts FastBook on every trip.
-- More languages for your board: its listing names 10, from German to Ukrainian.
-- Local data: its listing says your loads, trips, payouts and drivers stay on your computer. NudoIQ keeps your driver list on a trial or paid plan, and any Fleet Dashboard trips, on its servers ([privacy policy](https://nudoiq.com/privacy.html)).
-- Also listed: a ~ key to start and stop and your own alert sounds (Free). Pro adds auto-expanded trip stops, trailer-status badges and a filter for loads at Amazon locations only.
-
-## How much does Rocket Relay cost vs NudoIQ?
-
-On Rocket Relay, you pick a Free plan or Pro at $49 a month (checked October 9, 2026). Its 7-day Pro trial takes a card, but you aren't charged during it. NudoIQ starts with a free preview on install, then a 7-day free trial with no card needed. After that it's $49.99 a month flat for every truck. Cancel anytime.
-
-## Should you pick Rocket Relay or NudoIQ?
-
-### Pick Rocket Relay if
-
-- You want to stay on a free plan. Its Free plan has auto-refresh, alerts and FastBook on matched trips.
-- You want auto booking by location, distance, stops or time windows, or on several lanes at once.
-- You post many trucks and want to change Post-a-Truck orders in bulk.
-- You want your load data kept on your own computer, or need a language beyond English and Spanish.
-
-### Pick NudoIQ if
-
-- You want loads booked only when they clear your minimum net profit, after your own costs.
-- You want to see what each load nets you, and what its lane has paid, before you take it.
-- You fight scorecard hits and want the dispute letter drafted for you.
-- You want 7 days of auto booking with no card, or Telegram load alerts on your phone.
-
-Not sure which is right for your board? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back. It costs you a week, not a dime.
+Not sure? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back.
 
 [Try NudoIQ 7 days free](https://nudoiq.com/get/)
 
 ## How do you switch from Rocket Relay to NudoIQ?
 
-Turn off or remove Rocket Relay in your Chrome extensions. Add NudoIQ from the Chrome Web Store, [open the Relay load board](https://nudoiq.com/amazon-relay-load-board/) and press START. Your Relay login doesn't change. Paying for Rocket Pro? Its site says you cancel in the Stripe customer portal.
+Turn off Rocket Relay, add NudoIQ from the Chrome Web Store, [open the Relay load board](https://nudoiq.com/amazon-relay-load-board/) and press START. Your Relay login doesn't change.
 
-## Frequently asked questions
+## Rocket Relay alternative FAQ
 
 ### What is Rocket Relay?
-Rocket Relay is a browser extension for the Amazon Relay load board, published by West Wanted. Its listing and site name Alert, Search and Auto-book modes, one-click FastBook, filters and bulk Post-a-Truck (checked October 9, 2026). It has a Free plan and a $49 Pro plan. NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit.
+Rocket Relay is a browser extension for Amazon Relay, published by West Wanted (checked October 9, 2026). NudoIQ is a separate one, with AutoBook at your minimum net profit.
 
 ### Is Rocket Relay a Chrome extension?
-Yes, Rocket Relay is a browser extension you add from the Chrome Web Store. Its listing names Chrome, Edge and Brave on desktop, plus Android browsers such as Lemur and Quetta (checked October 9, 2026). NudoIQ is a separate Chrome extension that also works on Android in browsers such as Lemur. Run one load board extension at a time so the two don't conflict.
-
-### Is Rocket Relay free?
-Yes, Rocket Relay has a Free plan with auto-refresh, new-trip alerts and FastBook on matched trips. No card is required. Search, Auto-book, the filters and Post-a-Truck are on Pro, at $49 a month (checked October 9, 2026). NudoIQ has no free plan. It has a free preview with refresh and alerts, then a 7-day free trial with no card needed.
+Yes, it installs from the Chrome Web Store. NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so they don't clash.
 
 ### Does Rocket Relay have a free trial?
-Yes, Rocket Relay's Pro plan starts with a 7-day free trial. Its FAQ says you add a card to begin but aren't charged during the trial (checked October 9, 2026). Its Free plan needs no card. NudoIQ's 7-day free trial needs only an email, no card. AutoBook, Instant Book and dispute letters come with it.
-
-### How much does Rocket Relay cost compared to NudoIQ?
-Rocket Relay Pro costs $49 a month plus any sales tax. Its Free plan costs nothing (checked October 9, 2026). NudoIQ is one $49.99 plan, the same price for one truck or a whole fleet, with a 7-day free trial and cancel anytime.
+Yes, a 7-day Pro trial. Its FAQ says you add a card to start (checked October 9, 2026). NudoIQ gives you 7 days free, no card needed to start.
 
 ### Does Rocket Relay auto book loads?
-Yes, Rocket Relay auto books loads on its Pro plan. Its listing says Auto-book takes matching loads by your filters, best-paying first, up to the number you set (checked October 9, 2026). It books only after you press Start. NudoIQ's AutoBook books only loads that clear your own minimum net profit, after the costs you enter.
+Yes, on its Pro plan, by your filters such as payout and price per mile (checked October 9, 2026). NudoIQ's AutoBook books only loads that clear your minimum net profit.
 
 ### Is Rocket Relay a refresher or an auto booker?
-Rocket Relay is both a load board refresher and an auto booker. Auto-refresh and new-trip alerts are in its Free plan, and Auto-book is on Pro, $49 a month (checked October 9, 2026). NudoIQ refreshes the board too, and its AutoBook books by your minimum net profit, after the costs you enter.
+Both. Its listing names auto-refresh and Auto-book, with Auto-book on Pro (checked October 9, 2026). NudoIQ does both too, and AutoBook books only loads that clear your minimum net profit.
 
 ### Is Rocket Pro the same as Rocket Relay?
-Yes, Rocket Pro is the Rocket Relay extension for the Amazon Relay load board. Its Chrome Web Store listing is named Relay Auto Booker Refresher Rocket Pro for Amazon Relay. The listing shows version 9.0.2, updated July 30, 2026. Pro is also the name of its paid plan, $49 a month (checked October 9, 2026).
+Yes, Rocket Pro is the Rocket Relay extension. Its store listing is named Relay Auto Booker Refresher Rocket Pro. Pro is also its paid plan's name (checked October 9, 2026).
 
 ### What is Rocket Relay Post Truck Manager?
-Rocket Relay Post Truck Manager is a separate Chrome Web Store listing for Post a Truck orders. Its developer is Tasiev LLC, not West Wanted. It lists bulk delete, move and duplicate, at $39.99 a month after a 7-day trial (checked October 9, 2026). NudoIQ has no bulk order tools. It has [One-Click Post A Truck](https://nudoiq.com/amazon-relay-post-a-truck/) from a load, with a recommended bid that improves with use.
-
-### Is there a free Rocket Relay alternative?
-NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan. If you want to stay on a free plan, Rocket Relay's own Free plan has auto-refresh and alerts. [EasyRelay](https://nudoiq.com/easyrelay-alternative/) lists a $0 Free plan, with its refresher on paid plans (checked October 9, 2026).
+A separate Chrome Web Store listing for Post a Truck orders, from Tasiev LLC, not West Wanted (checked October 9, 2026). NudoIQ has One-Click Post A Truck under each load.
 
 ### Can I switch from Rocket Relay to NudoIQ?
-Yes, you can switch in a few minutes. Turn off or remove Rocket Relay on Chrome's extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don't conflict.
+Yes, in a few minutes. Turn off or remove Rocket Relay, add NudoIQ from the Chrome Web Store and start your 7 days free. Your Relay login stays the same.
 
 ### Is NudoIQ or Rocket Relay made by Amazon?
-No, neither is made by Amazon, and both run inside the Relay load board in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. Rocket Relay is published by West Wanted.
+No. NudoIQ is an independent product by Sami Enterprises LLC, not affiliated with, endorsed or sponsored by Amazon. Rocket Relay is published by West Wanted.
 
 ### Does NudoIQ work in Spanish?
-Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. Rocket Relay's listing names Spanish too, among 10 languages (checked October 9, 2026).
+Yes. NudoIQ's buttons and banners on the load board work in English and Spanish. Telegram messages are in English.
 
 ### How does NudoIQ decide which loads to book?
-In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can't fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because [cancelling a booked load counts against you](https://nudoiq.com/amazon-relay-cancel-load/).
+Only loads that clear your Min Net Profit and it can fully price, up to your Max books. Alert mode just alerts. See [what happens if you cancel a load](https://nudoiq.com/amazon-relay-cancel-load/).
 
 ---
 
@@ -3843,47 +3793,46 @@ In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If
 URL: https://nudoiq.com/swiftrelay-alternative/
 Published: 2026-10-10. Last updated: 2026-10-10.
 
-Short answer: If you want loads auto booked by net profit, after your own costs, NudoIQ is a good SwiftRelay alternative. NudoIQ's AutoBook comes in one $49.99 plan and takes a load only if it clears your minimum net profit. SwiftRelay lists auto-book on its Pro plan, $74.95 a month, and on Enterprise. Both offer a 7-day trial.
+Short answer: NudoIQ is a good SwiftRelay alternative if you want loads booked by net profit. AutoBook books only loads that clear your minimum net profit.
 
 ## What is a good Swift Relay alternative?
 
-NudoIQ, if you want loads booked by net profit, after your own costs. SwiftRelay's site lists refresh and highlights on every plan, and auto-book from its Pro plan up. NudoIQ [refreshes the board and books the loads that clear your number](https://nudoiq.com/amazon-relay-auto-refresh/).
+NudoIQ, if you want loads booked by net profit, after your own costs. It [refreshes the board and books the loads that clear your number](https://nudoiq.com/amazon-relay-auto-refresh/).
 
 ## How does NudoIQ compare to Swift Relay?
 
-Here's how they line up on the Relay load board, with where every SwiftRelay fact came from.
+Side by side, with the source for every SwiftRelay fact.
 
-NudoIQ vs SwiftRelay for the Amazon Relay load board, from each product's store listing and website, checked October 9, 2026. "Not listed" means that item wasn't on SwiftRelay's store listing or the site pages in Sources that day. We did not test their product. Spot an error? Tell us on the [contact page](https://nudoiq.com/support/) and we'll fix it.
+Updated October 2026
 
-| Item | NudoIQ | SwiftRelay |
+From each Chrome Web Store listing and website, checked October 9, 2026. Dash: not on SwiftRelay's listing or website. We did not test their product. Spot an error? [Tell us on the contact page](https://nudoiq.com/support/).
+
+| Feature | NudoIQ | SwiftRelay |
 |---|---|---|
-| What it is | Chrome extension for Amazon Relay carriers and dispatchers | Chrome extension for Amazon Relay carriers and dispatch teams, per its site. Its listing says dispatchers |
-| Auto-refresh the load board | Yes | Yes, on every plan |
-| Automatic booking | Yes. AutoBook books loads that clear your minimum net profit, and your minimum $/mile if you set one | Yes, on Pro ($74.95) and Enterprise ($349). Not on Lite |
-| Booking filters | Minimum net profit and minimum $/mile. Loads that miss them can be faded or hidden | Min payout and rate, mileage per its listing, plus max stops, excluded states and stem time on Pro and up |
-| Net profit on each load | Yes. Net dollars and $/mile next to the price, after the costs you enter | Not listed. Filters cover payout and rate per mile, with no fuel or driver pay inputs listed |
-| One-tap booking | Instant Book on new and price-up loads (one tap, no confirm screen) | One-click load booking. Fast-book highlights on Lite |
-| Loads booked by competitors | No | Yes. Competitor Insights shows loads booked by competitors on the board |
-| Lane price history | Lane Intelligence: 90-day price range for the lane, from the first button under each load | Not listed. Its listing names live stats on rates, trends and new loads |
-| Backhaul search | Yes, Find backhaul button under each load | Not listed |
-| Post a Truck | One-Click Post A Truck with a recommended bid. The bid needs time to learn your area and improves with use | Not listed |
-| Scorecard dispute letters | Drafts the letter from the violation. You review and submit it. Amazon decides | Not listed |
-| Telegram alerts | Yes, to your phone: new matching loads, price rises and AutoBook bookings, with quiet hours | Not listed. Telegram is listed as a support contact |
-| Contracts | Yes. Refreshes short-term contract offers and can alert you or AutoBook the ones that meet your minimums | Not listed |
-| Enterprise plan extras | No. One plan for every truck | Speed Optimizer, one virtual machine and up to 10 devices, for $349 a month |
-| Free plan | No. Free preview (refresh, alerts) until you start the free trial | Not listed. Its plans are Lite, Pro and Enterprise |
-| Free trial | Yes. 7 days, no card needed to start | Yes. 7 days, starts on first use with no checkout |
-| Paid price | $49.99 a month flat, every truck, cancel anytime | Lite $49.95, Pro $74.95, Enterprise $349, billed monthly through PayPal, cancel anytime |
-| Languages | English and Spanish | Listing language: English. Spanish not listed |
-| Publisher | Sami Enterprises LLC | Premier IT Solutions |
+| AutoBook at Min Net Profit | Yes | Not listed |
+| Net profit per load | Yes | Not listed |
+| Lane price history | Yes | Not listed |
+| Backhaul search | Yes | Not listed |
+| Post a Truck | Yes | Not listed |
+| Scorecard dispute letters | Yes | Not listed |
+| Telegram load alerts | Yes | Not listed |
+| Contract offers | Yes | Not listed |
+| Works in Spanish | Yes | Not listed |
 
-Sources:
+### Everything in NudoIQ
 
-1. NudoIQ extension for Amazon Relay, and nudoiq.com/get/
-2. SwiftRelay Chrome Web Store listing for Amazon Relay (chromewebstore.google.com/detail/oognmcankfkicedjeafnkffonabmbaaj), v4.4.12, updated June 15, 2025, checked October 9, 2026
-3. swiftrelay.io home page (plans and FAQ) and Amazon Relay auto booker page, checked October 9, 2026
-4. swiftrelay.io, SwiftRelay vs Other Amazon Relay Auto Bookers page, checked October 9, 2026
-5. Chrome Web Store (NudoIQ listing for Amazon Relay), checked October 9, 2026
+Also included, in the same NudoIQ subscription.
+
+- Auto-refresh the load board
+- One-tap booking
+- 7-day free trial, no card
+
+### Sources
+
+1. NudoIQ extension for Amazon Relay, and [nudoiq.com/get/](https://nudoiq.com/get/)
+2. SwiftRelay Chrome Web Store listing for Amazon Relay ([chromewebstore.google.com/detail/oognmcankfkicedjeafnkffonabmbaaj](https://chrome.google.com/webstore/detail/oognmcankfkicedjeafnkffonabmbaaj)), v4.4.12, updated June 15, 2025, checked October 9, 2026
+3. [swiftrelay.io](https://swiftrelay.io/) home page (plans and FAQ) and Amazon Relay auto booker page, checked October 9, 2026
+4. [swiftrelay.io](https://swiftrelay.io/swiftrelay-vs-alternatives), SwiftRelay vs Other Amazon Relay Auto Bookers page, checked October 9, 2026
 
 SwiftRelay is a trademark of its owner, used here only to name and compare two Amazon Relay extensions. NudoIQ is not affiliated with SwiftRelay or with Amazon.
 
@@ -3891,91 +3840,62 @@ To see how NudoIQ compares with SwiftRelay and five other Relay extensions on au
 
 ## What is SwiftRelay?
 
-SwiftRelay is a Chrome extension for the Amazon Relay load board, published by Premier IT Solutions. Its site names carriers and dispatch teams, and its listing names dispatchers. As of October 9, 2026, its site and listing name refresh, search, load highlights, one-click booking and filters. Pro and Enterprise add auto-book. The listing also names Competitor Insights, live load stats, Google Maps routes and multi-tab support.
+SwiftRelay is a Chrome extension for the Amazon Relay load board, published by Premier IT Solutions, per its store listing checked October 9, 2026.
 
 ## Does Swift Relay auto book loads?
 
-Yes, SwiftRelay auto books loads on its Pro and Enterprise plans. As of October 9, 2026, its FAQ says the Lite plan does not auto-book. Lite refreshes, searches and highlights loads. Pro is $74.95 a month and Enterprise is $349. [NudoIQ's AutoBook books for you](https://nudoiq.com/amazon-relay-auto-booker/) in one $49.99 plan, and only loads that clear your minimum net profit, after the costs you enter.
+Yes, on its Pro and Enterprise plans, not on Lite, per its FAQ (checked October 9, 2026). [NudoIQ's AutoBook](https://nudoiq.com/amazon-relay-auto-booker/) books only loads that clear your minimum net profit, after your own costs.
 
 ## What does NudoIQ do that Swift Relay doesn't list?
 
-SwiftRelay's listing and checked site pages didn't name these three: an AutoBook net profit floor, net profit per load and scorecard dispute letters.
+Three things, none on SwiftRelay's listing or website as of October 9, 2026.
 
-- Net profit floor for AutoBook: it books only loads that clear your minimum. It skips any load it can't fully price and stops at your max-books cap.
-- Net profit on every load: net dollars and $/mile next to the price. It uses the costs you enter, like fuel, MPG, driver pay and maintenance.
-- [Scorecard dispute letters](https://nudoiq.com/amazon-relay-scorecard/): it drafts the letter from the violation. You read it, send it, and Amazon makes the call.
-- Also: Spanish, Lane Intelligence (90-day lane price range), backhaul search and One-Click Post A Truck. Plus alerts or AutoBook on short-term contracts, and Telegram alerts to your phone.
+- **Net profit floor:** AutoBook books only loads that clear your Min Net Profit.
+- **Net profit on every load:** net dollars and $/mile after the costs you enter.
+- **[Scorecard dispute letters](https://nudoiq.com/amazon-relay-scorecard/):** drafted for you. You review and send. Amazon decides.
 
-## What does Swift Relay do that NudoIQ doesn't?
+## Who NudoIQ fits best
 
-As of October 9, 2026, SwiftRelay lists Competitor Insights, which shows loads booked by competitors on the load board. Its Pro plan adds auto-book filters for max stops, excluded states and stem time. Its Enterprise plan adds Speed Optimizer and one virtual machine. NudoIQ has none of those. SwiftRelay also sells plans by device count, from 2 to 10 at once, and lists multi-tab and multi-window support.
+- You want loads booked for you, only the ones that clear your minimum net profit.
+- You want to see what each load nets before you take it.
+- You fight scorecard violations and want the dispute letter drafted for you.
 
-
-## How much does Swift Relay cost vs NudoIQ?
-
-On SwiftRelay, your choice is Lite at $49.95 a month, Pro at $74.95 or Enterprise at $349. Auto-book starts on Pro (checked October 9, 2026). NudoIQ starts with a free preview on install, then a 7-day free trial with no card needed. After that it's $49.99 a month flat for every truck. Cancel anytime.
-
-## Should you pick Swift Relay or NudoIQ?
-
-### Pick SwiftRelay if
-
-- You want to see loads booked by competitors on your load board.
-- You want auto-book filters for max stops, excluded states and stem time.
-- You run a dispatch team and want plans sized by device count, up to 10 devices.
-- You want the Enterprise plan, which adds one virtual machine.
-
-### Pick NudoIQ if
-
-- You want loads booked only when they clear your minimum net profit, after your own costs.
-- You want auto booking in one $49.99 plan for every truck.
-- You want lane prices, backhaul search and scorecard dispute letters in one extension.
-- You work in Spanish, or want Telegram load alerts on your phone.
-
-Not sure which is right for your board? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back. It costs you a week, not a dime.
+Not sure? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back.
 
 [Try NudoIQ 7 days free](https://nudoiq.com/get/)
 
 ## How do you switch from Swift Relay to NudoIQ?
 
-Turn off or remove SwiftRelay in your Chrome extensions. Add NudoIQ from the Chrome Web Store, [open the Relay load board](https://nudoiq.com/amazon-relay-load-board/) and press START. Your Relay login doesn't change. Run one load board extension at a time.
+Turn off or remove SwiftRelay, add NudoIQ from the Chrome Web Store, [open the Relay load board](https://nudoiq.com/amazon-relay-load-board/) and press START. Your Relay login doesn't change.
 
-## Frequently asked questions
+## Swift Relay alternative FAQ
 
 ### What is SwiftRelay?
-SwiftRelay is a Chrome extension for the Amazon Relay load board, published by Premier IT Solutions. Its site says it automates refresh, search and booking on the board. It says it is for carriers and dispatch teams, and its listing says it was designed for dispatchers (checked October 9, 2026). NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit.
+SwiftRelay is a Chrome extension for Amazon Relay, published by Premier IT Solutions (checked October 9, 2026). NudoIQ is a separate one, with AutoBook at your minimum net profit.
 
 ### Is Swift Relay a Chrome extension?
-Yes, SwiftRelay is a Chrome extension for the Amazon Relay load board. You add it from the Chrome Web Store. Its listing shows version 4.4.12, updated June 15, 2025 (checked October 9, 2026). NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so the two don't conflict.
-
-### Is Swift Relay free?
-No, SwiftRelay lists only paid plans for your board (checked October 9, 2026). Lite is $49.95 a month, Pro $74.95 and Enterprise $349. Its 7-day trial starts on first use. NudoIQ has a free preview with refresh and alerts, then a 7-day free trial with no card needed. After that it's $49.99 a month.
+Yes, it installs from the Chrome Web Store. NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so they don't clash.
 
 ### Does SwiftRelay have a free trial?
-Yes, SwiftRelay has a 7-day trial that starts the first time you use it, with no checkout. Its site says it's one trial per carrier (checked October 9, 2026). NudoIQ's 7-day free trial needs only an email and no card, and AutoBook comes with it. It's also one free week per Relay account and per install.
-
-### How much does Swift Relay cost compared to NudoIQ?
-SwiftRelay costs you $49.95 a month for Lite, $74.95 for Pro and $349 for Enterprise (checked October 9, 2026). Auto-book starts on Pro. NudoIQ is one $49.99 plan with AutoBook included. It's the same price for one truck or a whole fleet, with a 7-day free trial and cancel anytime.
+Yes, a 7-day trial that starts on first use, with no checkout (checked October 9, 2026). NudoIQ gives you 7 days free with AutoBook, no card needed to start.
 
 ### Does Swift Relay auto book loads?
-Yes, SwiftRelay auto books loads on its Pro and Enterprise plans. Its FAQ says the Lite plan does not auto-book. Lite refreshes, searches and highlights loads (checked October 9, 2026). NudoIQ's AutoBook comes in one $49.99 plan. It books only loads that clear your own minimum net profit, after the costs you enter.
+Yes, on its Pro and Enterprise plans. Its FAQ says Lite does not (checked October 9, 2026). NudoIQ's AutoBook books only loads that clear your minimum net profit.
 
 ### Is it SwiftRelay or Swift Relay?
-It's SwiftRelay, one word, a Chrome extension for the Amazon Relay load board. People also search for it as Swift Relay. Its Chrome Web Store listing is published by Premier IT Solutions (checked October 9, 2026). This page compares it with NudoIQ, a separate extension for the same board.
-
-### Is there a free Swift Relay alternative?
-NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan. SwiftRelay lists no free plan either. [Rocket Relay](https://nudoiq.com/rocket-relay-alternative/) lists a free plan with auto-refresh. [EasyRelay](https://nudoiq.com/easyrelay-alternative/) lists a $0 one, with its refresher on paid plans (checked October 9, 2026).
+It's SwiftRelay, one word, often searched as Swift Relay. Its Chrome Web Store listing is published by Premier IT Solutions (checked October 9, 2026).
 
 ### Can I switch from Swift Relay to NudoIQ?
-Yes, you can switch in a few minutes. Turn off or remove SwiftRelay on Chrome's extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don't conflict.
+Yes, in a few minutes. Turn off or remove SwiftRelay, add NudoIQ from the Chrome Web Store and start your 7 days free. Your Relay login stays the same.
 
 ### Is NudoIQ or SwiftRelay made by Amazon?
-No, neither is made by Amazon, and both run inside the Relay load board in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. SwiftRelay is published by Premier IT Solutions.
+No. NudoIQ is an independent product by Sami Enterprises LLC, not affiliated with, endorsed or sponsored by Amazon. SwiftRelay is published by Premier IT Solutions.
 
 ### Does NudoIQ work in Spanish?
-Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. SwiftRelay's store listing shows English as its language, and Spanish isn't listed on the pages we checked (checked October 9, 2026).
+Yes. NudoIQ's buttons and banners on the load board work in English and Spanish. Telegram messages are in English. SwiftRelay's listing language is English (checked October 9, 2026).
 
 ### How does NudoIQ decide which loads to book?
-In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can't fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because [cancelling a booked load counts against you](https://nudoiq.com/amazon-relay-cancel-load/).
+Only loads that clear your Min Net Profit and it can fully price, up to your Max books. Alert mode just alerts. See [what happens if you cancel a load](https://nudoiq.com/amazon-relay-cancel-load/).
 
 ---
 
@@ -3984,47 +3904,45 @@ In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If
 URL: https://nudoiq.com/rgd-alternative/
 Published: 2026-10-10. Last updated: 2026-10-10.
 
-Short answer: Pick NudoIQ if you want loads booked only when they clear your own net profit, after the costs you enter. NudoIQ also drafts scorecard dispute letters. RGD's listing and checked site pages show neither, but RGD can book several trips in one click. NudoIQ is $49.99 a month flat for every truck. RGD's plans are $79 and $249 a month.
+Short answer: NudoIQ is a good RGD alternative if you want loads booked by net profit. AutoBook books only loads that clear your minimum net profit.
 
 ## What is a good RGD alternative for Amazon Relay?
 
-NudoIQ, if you want each booking to clear your own net profit. RGD auto books from filters such as custom locations and time ranges. NudoIQ [refreshes the board and books the loads that clear your number](https://nudoiq.com/amazon-relay-auto-refresh/), after the costs you enter.
+NudoIQ, if you want each booking to clear your own net profit. It [refreshes the board and books the loads that clear your number](https://nudoiq.com/amazon-relay-auto-refresh/).
 
 ## How does NudoIQ compare to RGD for Amazon Relay?
 
-Here's how they line up on the Relay load board, with where every RGD fact came from.
+Side by side, with the source for every RGD fact.
 
-NudoIQ vs RGD for the Amazon Relay load board, from each product's store listing and website, checked October 9, 2026. "Not listed" means that item wasn't on RGD's store listing or the site pages in Sources that day. We did not test their product. Spot an error? Tell us on the [contact page](https://nudoiq.com/support/) and we'll fix it.
+Updated October 2026
 
-| Item | NudoIQ | RGD |
+From each Chrome Web Store listing and website, checked October 9, 2026. Dash: not on RGD's listing or website. We did not test their product. Spot an error? [Tell us on the contact page](https://nudoiq.com/support/).
+
+| Feature | NudoIQ | RGD |
 |---|---|---|
-| What it is | Chrome extension for Amazon Relay carriers and dispatchers | Chrome extension for Amazon Relay carriers, dispatchers and fleet owners |
-| Auto-refresh the load board | Yes | Yes, on both plans (Refresh Rate Console) |
-| Automatic booking | Yes. AutoBook books loads that clear your minimum net profit, and your minimum $/mile if you set one | Yes, on both plans ("Unlimited Auto Booking"), based on the filters you select |
-| Several loads in one click | Not in one click. One START books matching loads one at a time, up to a 1 to 20 cap | Yes. Multi Booking books 2, 3, 5 or even 10 trips with a single click in one search session |
-| Stop at the confirm step | ALERT mode tells you about a match without booking it | Yes. It can stop at the confirmation stage so you can check the load first |
-| Extra filters | Minimum net profit and minimum $/mile. Loads that miss them can be faded or hidden | Listing: custom locations, time ranges, load types. Plans: Time Frame and Exclude Locations on Business ($249) only |
-| Net profit on each load | Yes. Net dollars and $/mile next to the price, after the costs you enter | Not listed |
-| Lane price history | Lane Intelligence: 90-day price range for the lane, from the first button under each load | Not listed |
-| Backhaul search | Yes, Find backhaul button under each load | Not listed |
-| Post a Truck | One-Click Post A Truck with a recommended bid. The bid needs time to learn your area and improves with use | Not listed |
-| Scorecard dispute letters | Drafts the letter from the violation. You review and submit it. Amazon decides | Not listed |
-| Desktop notifications | No. Alert sounds and a flashing tab title instead | Yes, single or multiple, on both plans |
-| Telegram alerts | Yes, to your phone: new matching loads, price rises and AutoBook bookings, with quiet hours | Not listed |
-| Contracts | Yes. Refreshes short-term contract offers and can alert you or AutoBook the ones that meet your minimums | Yes, an AutoBooker for contracts on the Business plan |
-| Free plan | No. Free preview (refresh, alerts) until you start the free trial | Not listed. Its plans are Essential and Business |
-| Free trial | Yes. 7 days, no card needed to start | Yes. 7 days, no card required and no account needed |
-| Paid price | $49.99 a month flat, every truck, cancel anytime | Essential $79 or Business $249 a month, billed monthly, cancel anytime |
-| Languages | English and Spanish | Listing language: English |
-| Publisher | Sami Enterprises LLC | Rolling Global Digital |
+| AutoBook at Min Net Profit | Yes | Not listed |
+| Net profit per load | Yes | Not listed |
+| Lane price history | Yes | Not listed |
+| Backhaul search | Yes | Not listed |
+| Post a Truck | Yes | Not listed |
+| Scorecard dispute letters | Yes | Not listed |
+| Telegram load alerts | Yes | Not listed |
+| Works in Spanish | Yes | Not listed |
 
-Sources:
+### Everything in NudoIQ
 
-1. NudoIQ extension for Amazon Relay, and nudoiq.com/get/
-2. RGD Chrome Web Store listing for Amazon Relay (chromewebstore.google.com/detail/ehdmhmgjjjjjainokogkdokkadmboknm), v1.2.0, updated October 5, 2026, checked October 9, 2026
-3. RGD website for Amazon Relay, rolling-global.com (home page and Compare Plans), checked October 9, 2026
-4. RGD website for Amazon Relay, rolling-global.com/faq, checked October 9, 2026
-5. Chrome Web Store (NudoIQ listing for Amazon Relay), checked October 9, 2026
+Also included, in the same NudoIQ subscription.
+
+- Auto-refresh the load board
+- Contract offers
+- 7-day free trial, no card
+
+### Sources
+
+1. NudoIQ extension for Amazon Relay, and [nudoiq.com/get/](https://nudoiq.com/get/)
+2. RGD Chrome Web Store listing for Amazon Relay ([chromewebstore.google.com/detail/ehdmhmgjjjjjainokogkdokkadmboknm](https://chrome.google.com/webstore/detail/ehdmhmgjjjjjainokogkdokkadmboknm)), v1.2.0, updated October 5, 2026, checked October 9, 2026
+3. RGD website for Amazon Relay, [rolling-global.com](https://rolling-global.com/) (home page and Compare Plans), checked October 9, 2026
+4. RGD website for Amazon Relay, [rolling-global.com/faq](https://rolling-global.com/faq/), checked October 9, 2026
 
 RGD is a trademark of its owner, used here only to name and compare two Amazon Relay extensions. NudoIQ is not affiliated with Rolling Global Digital or with Amazon.
 
@@ -4032,102 +3950,65 @@ To see how NudoIQ compares with RGD and five other Relay extensions on auto-book
 
 ## What is RGD?
 
-RGD is a Chrome extension for Amazon Relay carriers, dispatchers and fleet owners, from Rolling Global Digital. Its store listing names Multi Booking, advanced filters, a Board Intelligence Mode and a Related Loads block (checked October 9, 2026). Its website lists desktop notifications on both plans, and contracts on the Business plan. The listing also names nine Relay regions, including the US, Canada and the UK.
+RGD is a Chrome extension for the Amazon Relay load board, from Rolling Global Digital, per its website checked October 9, 2026.
 
 ## Does RGD auto book loads?
 
-Yes, RGD auto books loads based on the filters you select. Its Multi Booking can take 2, 3, 5 or even 10 trips in one click. RGD can stop at the confirmation step so you can check the load. On October 9, 2026, its listing and checked site pages named no net profit or cost setting. [NudoIQ's AutoBook books for you](https://nudoiq.com/amazon-relay-auto-booker/), and only loads that clear your minimum net profit.
+Yes, on both its plans, by the filters you select (checked October 9, 2026). Its listing and site pages name no net profit setting. [NudoIQ's AutoBook](https://nudoiq.com/amazon-relay-auto-booker/) books only loads that clear your minimum net profit.
 
 ## What does NudoIQ do for your loads that RGD doesn't list?
 
-Three things RGD's listing and checked site pages don't name: a net profit floor for AutoBook, net profit per load, and scorecard dispute letters.
+Three things, none on RGD's listing or website as of October 9, 2026.
 
-- Net profit floor for AutoBook: it books only loads that clear your minimum. It skips any load it can't fully price and stops at your max-books cap.
-- Net profit on every load: net dollars and $/mile next to the price. It uses the costs you enter, like fuel, MPG, driver pay and maintenance.
-- [Scorecard dispute letters](https://nudoiq.com/amazon-relay-scorecard/): it drafts the letter from the violation. You read it, send it, and Amazon makes the call.
-- Also: Telegram alerts to your phone, Spanish, Lane Intelligence (90-day lane price range), backhaul search and One-Click Post A Truck.
+- **Net profit floor:** AutoBook books only loads that clear your Min Net Profit.
+- **Net profit on every load:** net dollars and $/mile after the costs you enter.
+- **[Scorecard dispute letters](https://nudoiq.com/amazon-relay-scorecard/):** drafted for you. You review and send. Amazon decides.
 
-## What does RGD do for your loads that NudoIQ doesn't?
+## Who NudoIQ fits best
 
-As of October 9, 2026, RGD lists five things for your board that NudoIQ doesn't have. One smaller difference: RGD's free trial starts with no account, while NudoIQ's asks for an email.
+- You want loads booked for you, only the ones that clear your minimum net profit.
+- You want to see what each load nets before you take it.
+- You fight scorecard violations and want the dispute letter drafted for you.
 
-- Several loads in one click: its Multi Booking books 2, 3, 5 or even 10 trips with a single click. It also lists multi-load search and identical-trip series.
-- Desktop notifications on your computer: both RGD plans list them, single or multiple.
-- A stop at the confirm step: RGD can pause at the confirmation stage so you can check the chosen load first.
-- More filters: its listing names custom locations, time ranges and load types. Its plan table puts Time Frame and Exclude Locations on Business ($249) only, and no filters on Essential.
-- Board extras: a Related Loads block shows more trips while your main search is loading. It also alerts you when selected trips become unavailable.
-
-## How much does RGD cost you vs NudoIQ?
-
-On RGD, you choose Essential at $79 a month or Business at $249 a month. Business adds contracts and more filters. Both are billed monthly (checked October 9, 2026). NudoIQ starts with a free preview on install, then a 7-day free trial with no card needed. After that it's $49.99 a month flat for every truck. Cancel anytime.
-
-## Should you pick RGD or NudoIQ?
-
-### Pick RGD if
-
-- You want to book 2 to 10 trips with one click, or run identical trips for drivers on similar loads.
-- You want desktop notifications on your computer.
-- You want it to stop at the confirmation step so you can check each load first.
-- You filter by custom locations, time ranges or load types, or want Business ($249) for Time Frame and Exclude Locations.
-
-### Pick NudoIQ if
-
-- You want loads booked only when they clear your minimum net profit, after your own costs.
-- You want to see what each load nets you before you take it.
-- You fight scorecard hits and want the dispute letter drafted for you.
-- You want auto booking for $49.99 a month, or you work in Spanish.
-
-Not sure which is right for your board? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back. It costs you a week, not a dime.
+Not sure? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back.
 
 [Try NudoIQ 7 days free](https://nudoiq.com/get/)
 
 ## How do you switch from RGD to NudoIQ?
 
-Turn off or remove RGD in your Chrome extensions. Add NudoIQ from the Chrome Web Store, [open the Relay load board](https://nudoiq.com/amazon-relay-load-board/) and press START. Your Relay login doesn't change. Run one load board extension at a time.
+Turn off or remove RGD, add NudoIQ from the Chrome Web Store, [open the Relay load board](https://nudoiq.com/amazon-relay-load-board/) and press START. Your Relay login doesn't change.
 
-## Frequently asked questions
+## RGD alternative FAQ
 
 ### What is the RGD auto booker for Amazon Relay?
-RGD is a Chrome extension that refreshes the Amazon Relay load board and auto books loads. Rolling Global Digital makes it. Its store listing names Multi Booking, advanced filters and a Board Intelligence Mode (checked October 9, 2026). NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit.
+RGD is an auto booker and refresher for Amazon Relay, from Rolling Global Digital (checked October 9, 2026). NudoIQ is a separate one, with AutoBook at your minimum net profit.
 
 ### What is Rolling Global Digital?
-Rolling Global Digital is the company behind RGD, an auto booker and refresher for the Amazon Relay load board. Its website, rolling-global.com, carries both names (checked October 9, 2026). NudoIQ comes from a different company, Sami Enterprises LLC, and is not affiliated with Rolling Global Digital.
+The company behind RGD, going by its website, rolling-global.com (checked October 9, 2026). NudoIQ comes from a different company, Sami Enterprises LLC, not affiliated with Rolling Global Digital.
 
 ### Is RGD AutoBooker a Chrome extension?
-Yes, RGD AutoBooker is a Chrome extension that runs on the Amazon Relay load board. You add it from its Chrome Web Store listing and start the trial inside the extension (checked October 9, 2026). NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so the two don't conflict.
+Yes, it installs from the Chrome Web Store. NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so they don't clash.
 
 ### Does RGD auto book loads?
-Yes, RGD auto books loads on both plans, based on the filters you select. Its Multi Booking can take 2, 3, 5 or even 10 trips in one click. On October 9, 2026, its listing and the site pages we checked named no net profit or cost setting. NudoIQ's AutoBook mode books matching loads that clear your own minimum net profit.
-
-### Can RGD book several loads in one click?
-Yes, with RGD's Multi Booking you can book 2, 3, 5 or even 10 trips with a single click in one search session. Its site also lists searching for several loads at once, and its FAQ describes series of identical trips (checked October 9, 2026). NudoIQ books several loads per session too, one at a time. One START books matching loads up to your max-books cap of 1 to 20.
-
-### Is RGD free?
-No free plan is listed, but you can try RGD free for 7 days with no card required. After the trial, Essential is $79 a month and Business is $249 (checked October 9, 2026). NudoIQ has a free preview until you start its 7-day free trial. After that it's $49.99 a month.
+Yes, on both its plans, by the filters you select (checked October 9, 2026). NudoIQ's AutoBook books only loads that clear your minimum net profit.
 
 ### Does RGD have a free trial?
-Yes, you can try RGD free for 7 days, with no card required and no account needed. You start the trial inside the extension, per its store listing (checked October 9, 2026). NudoIQ also has a 7-day free trial with no card needed to start, and a free preview before it.
-
-### How much does RGD cost compared to NudoIQ?
-RGD costs you $79 a month on Essential or $249 a month on Business (checked October 9, 2026). Both are billed monthly, and Business adds contracts and more filters. NudoIQ is one $49.99 plan, the same for one truck or a whole fleet, with a 7-day free trial and cancel anytime.
-
-### Is there a free RGD alternative?
-NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan. RGD lists no free plan either. Rocket Relay lists a free plan with auto-refresh. EasyRelay lists a $0 one, with its refresher on paid plans (checked October 9, 2026).
+Yes, 7 days with no card required, per its store listing (checked October 9, 2026). NudoIQ gives you 7 days free with AutoBook, no card needed to start.
 
 ### Does RGD auto book Amazon Relay contracts?
-Yes, RGD's Business plan, at $249 a month, lists an AutoBooker for Amazon Relay contracts (checked October 9, 2026). NudoIQ also works on Relay's contracts page, in its one $49.99 plan. It refreshes short-term contract offers and can alert you or AutoBook the ones that meet your minimums.
+Yes, its Business plan lists a contracts AutoBooker (checked October 9, 2026). NudoIQ refreshes short-term contract offers too, and can alert you or AutoBook the ones that meet your minimums.
 
 ### How does NudoIQ decide which loads to book?
-In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can't fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because [cancelling a booked load counts against you](https://nudoiq.com/amazon-relay-cancel-load/).
+Only loads that clear your Min Net Profit and it can fully price, up to your Max books. Alert mode just alerts. See [what happens if you cancel a load](https://nudoiq.com/amazon-relay-cancel-load/).
 
 ### Does NudoIQ work in Spanish?
-Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. RGD's store listing shows English as its language (checked October 9, 2026).
+Yes. NudoIQ's buttons and banners on the load board work in English and Spanish. Telegram messages are in English. RGD's listing language is English (checked October 9, 2026).
 
 ### Can I switch from RGD to NudoIQ?
-Yes, you can switch in a few minutes. Turn off or remove RGD on Chrome's extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don't conflict.
+Yes, in a few minutes. Turn off or remove RGD, add NudoIQ from the Chrome Web Store and start your 7 days free. Your Relay login stays the same.
 
 ### Is NudoIQ or RGD made by Amazon?
-No, neither is made by Amazon, and both run inside the Relay load board in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. RGD comes from Rolling Global Digital, going by its website.
+No. NudoIQ is an independent product by Sami Enterprises LLC, not affiliated with, endorsed or sponsored by Amazon. RGD comes from Rolling Global Digital, per its website.
 
 ---
 
@@ -4136,48 +4017,46 @@ No, neither is made by Amazon, and both run inside the Relay load board in your 
 URL: https://nudoiq.com/easyrelay-alternative/
 Published: 2026-10-10. Last updated: 2026-10-10.
 
-Short answer: Pick NudoIQ if you want loads booked for you, and only the ones that clear your own net profit. EasyRelay's listing and plans show no automatic booking. NudoIQ also drafts scorecard dispute letters. It's $49.99 a month flat for every truck, after a 7-day free trial with no card needed.
+Short answer: NudoIQ is a good EasyRelay alternative if you want loads booked for you. AutoBook books only the loads that clear your minimum net profit.
 
 ## What is a good Easy Relay alternative?
 
-NudoIQ, if you want loads booked for you while you drive or dispatch. EasyRelay refreshes and sorts the board, helps you post trucks and tracks your trips. NudoIQ [refreshes the board and books the loads that clear your number](https://nudoiq.com/amazon-relay-auto-refresh/).
+NudoIQ, if you want loads booked for you while you drive or dispatch. It [refreshes the board and books the loads that clear your number](https://nudoiq.com/amazon-relay-auto-refresh/).
 
 ## How does NudoIQ compare to Easy Relay?
 
-Here's how they line up on the Relay load board, with where every EasyRelay fact came from.
+Side by side, with the source for every EasyRelay fact.
 
-NudoIQ vs EasyRelay for the Amazon Relay load board, from each product's store listing and website, checked October 9, 2026. "Not listed" means that item wasn't on EasyRelay's store listing or the site pages in Sources that day. We did not test their product. Spot an error? Tell us on the [contact page](https://nudoiq.com/support/) and we'll fix it.
+Updated October 2026
 
-| Item | NudoIQ | EasyRelay |
+From each Chrome Web Store listing and website, checked October 9, 2026. Dash: not on EasyRelay's listing or website. We did not test their product. Spot an error? [Tell us on the contact page](https://nudoiq.com/support/).
+
+| Feature | NudoIQ | EasyRelay |
 |---|---|---|
-| What it is | Chrome extension for Amazon Relay carriers and dispatchers | Chrome extension for Amazon Relay dispatchers and carrier owners |
-| Auto-refresh the load board | Yes, and it's part of the free preview | Yes, on Pro Solo and Pro Team. Not on the Free plan's list |
-| Automatic booking | Yes. AutoBook books loads that clear your minimum net profit, and your minimum $/mile if you set one | Not on its store listing or plans. Its website description says "Auto-book loads" |
-| Quick booking | Instant Book on new and price-up loads (one tap, no confirm screen) | Fast Book: quick booking with a double-click |
-| New loads and price rises flagged | Yes. A NEW or PRICE UP badge on the load | Yes. Newest to Top, and a rate-change alert with a minimum change you set |
-| Net profit on each load | Yes. Net dollars and $/mile next to the price, after the costs you enter | Not listed as a net figure. Shows tolls and deadhead to pickup on loads, gross per mile on trips |
-| Lane price history | Lane Intelligence: 90-day price range for the lane, from the first button under each load | Not listed |
-| Backhaul search | Yes, Find backhaul button under each load | Yes. Return loads from the delivery city |
-| Post a Truck | One-Click Post A Truck with a recommended bid. The bid needs time to learn your area and improves with use | Yes. Fills out truck posting details for you |
-| Scorecard dispute letters | Drafts the letter from the violation. You review and submit it. Amazon decides | Not listed |
-| Contracts | Yes. Refreshes short-term contract offers and can alert you or AutoBook the ones that meet your minimums | Not listed |
-| Trip tracking | Partly. Where the truck is, ETA (on time, early or late) and miles left. No trip alerts | Yes. Current location, ETA early or late, app usage and trailer ID |
-| Telegram alerts | Yes, to your phone: new matching loads, price rises and AutoBook bookings, with quiet hours | Yes, for trips: yard checking, new trip, road restriction, completed trip, driver check-in and more |
-| Load board extras | Hides promoted loads, Amazon's truck-posting pop-ups and Relay's Similar matches, all by default | Hides promoted loads too, plus tolls, latest pickup time, highlighted trip warnings and an A+ Board |
-| Free plan | No. Free preview (refresh, alerts) until you start the free trial | Yes, a $0 Free plan |
-| Free trial | Yes. 7 days, no card needed to start | Home page lists 7 days. Its FAQ says the Free plan is the way to try it. Card not stated |
-| Paid price | $49.99 a month flat, every truck, cancel anytime | Pro Solo $14.99 or Pro Team $44.99 a month, cancel anytime |
-| 6-month billing | No. Month to month | Yes. Monthly, or every 6 months ("Save up to 42%") |
-| Languages | English and Spanish | Listing language: English. Website: English and Russian |
-| Publisher | Sami Enterprises LLC | Easy Relay LLC |
+| AutoBook at Min Net Profit | Yes | Not listed |
+| Net profit per load | Yes | Not listed |
+| Lane price history | Yes | Not listed |
+| Scorecard dispute letters | Yes | Not listed |
+| Contract offers | Yes | Not listed |
+| Works in Spanish | Yes | Not listed |
 
-Sources:
+### Everything in NudoIQ
 
-1. NudoIQ extension for Amazon Relay, and nudoiq.com/get/
-2. EasyRelay Chrome Web Store listing for Amazon Relay (chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag), v1.24.138, updated September 24, 2026, checked October 9, 2026
-3. Easy Relay website, easyrelay.us (home page, plans and FAQ), checked October 9, 2026
-4. Easy Relay website, easyrelay.us (full tool overview page), checked October 9, 2026
-5. Chrome Web Store (NudoIQ listing for Amazon Relay), checked October 9, 2026
+Also included, in the same NudoIQ subscription.
+
+- Auto-refresh the load board
+- Quick booking
+- New-load and price-up alerts
+- Backhaul search
+- Post a Truck
+- Telegram alerts
+
+### Sources
+
+1. NudoIQ extension for Amazon Relay, and [nudoiq.com/get/](https://nudoiq.com/get/)
+2. EasyRelay Chrome Web Store listing for Amazon Relay ([chromewebstore.google.com/detail/obmcimindeajfoacnmfbiifcoomomhag](https://chrome.google.com/webstore/detail/obmcimindeajfoacnmfbiifcoomomhag)), v1.24.138, updated September 24, 2026, checked October 9, 2026
+3. Easy Relay website, [easyrelay.us](https://www.easyrelay.us/en) (home page, plans and FAQ), checked October 9, 2026
+4. Easy Relay website, [easyrelay.us](https://www.easyrelay.us/en/all-features) (full tool overview page), checked October 9, 2026
 
 EasyRelay is a trademark of its owner, used here only to name and compare two Amazon Relay extensions. NudoIQ is not affiliated with Easy Relay LLC or with Amazon.
 
@@ -4185,100 +4064,62 @@ To see how NudoIQ compares with EasyRelay and five other Relay extensions on aut
 
 ## What is Easy Relay?
 
-EasyRelay is a Chrome extension for Amazon Relay dispatchers and carrier owners, published by Easy Relay LLC. Its store listing names load board tools such as an auto refresher, Newest to Top, Fast Book, tolls, load weight and Post a Truck. For trips, it lists current location, early or late ETAs and Telegram alerts. Its website adds an A+ Board and an Early Acceptance Check.
+EasyRelay is a Chrome extension for the Amazon Relay load board, published by Easy Relay LLC, per its store listing checked October 9, 2026.
 
 ## Does Easy Relay auto book loads?
 
-Its store listing doesn't say it auto books your loads. As of October 9, 2026, automatic booking isn't on EasyRelay's listing or in any of its plans. Its website's description does mention auto-booking. The listing names Fast Book, for quick booking with a double-click. [NudoIQ's AutoBook books for you](https://nudoiq.com/amazon-relay-auto-booker/), and only loads that clear your minimum net profit.
+Its store listing and plans don't say so (checked October 9, 2026), though its website's description mentions auto-booking. [NudoIQ's AutoBook books for you](https://nudoiq.com/amazon-relay-auto-booker/), only loads that clear your minimum net profit.
 
 ## What does NudoIQ do that Easy Relay doesn't list?
 
-Three things EasyRelay's listing and plans don't name: automatic booking at your net profit, net profit per load, and scorecard dispute letters.
+Three things, none on EasyRelay's listing or plans as of October 9, 2026.
 
-- AutoBook: set your minimum net profit (and $/mile, if you like). It books matching loads, skips any it can't fully price, and stops at your max-books cap.
-- Net profit on every load: net dollars and $/mile next to the price. It uses the costs you enter, like fuel, MPG, driver pay and maintenance.
-- [Scorecard dispute letters](https://nudoiq.com/amazon-relay-scorecard/): it drafts the letter from the violation. You read it, send it, and Amazon makes the call.
-- Also: Spanish, alerts or AutoBook on short-term contract offers, and Lane Intelligence, a 90-day price range for the lane.
+- **AutoBook:** books loads that clear your Min Net Profit, up to your Max books.
+- **Net profit on every load:** net dollars and $/mile after the costs you enter.
+- **[Scorecard dispute letters](https://nudoiq.com/amazon-relay-scorecard/):** drafted for you. You review and send. Amazon decides.
 
-## What does Easy Relay do that NudoIQ doesn't?
+## Who NudoIQ fits best
 
-As of October 9, 2026, EasyRelay costs less, has a free plan, and lists trip and board tools NudoIQ doesn't have.
+- You want loads booked for you, only the ones that clear your minimum net profit.
+- You want to see what each load nets before you take it.
+- You fight scorecard violations and want the dispute letter drafted for you.
 
-- What you pay: a $0 Free plan, or Pro Solo at $14.99 a month and Pro Team at $44.99. A 6-month option, it says, saves up to 42%.
-- Trip alerts on Telegram: yard checks, new and completed trips, road restrictions, driver check-ins and check-outs, new notes and ready trailers.
-- Trip details: driver app usage and trailer ID, plus a one-click copy of trip details.
-- Load board tools: tolls, latest pickup time, a Google Maps deadhead check and state exclusions (Pro, per its FAQ). Plus Auto Expand, Screenshot and Keyboard Shortcut.
-- Board highlights: bobtail, team and long-trip loads stand out right on the board, where NudoIQ shows only Team or Solo, in Pro View. EasyRelay Pro also marks loads where it expects price negotiation.
-- A+ Board and early check-in: its website says the A+ Board shows higher-score loads ahead of time. Its Early Acceptance Check shows if early check-in is possible.
-
-## How much does Easy Relay cost vs NudoIQ?
-
-On EasyRelay, you can use a $0 Free plan. Its refresher comes with Pro Solo at $14.99 a month or Pro Team at $44.99 (checked October 9, 2026). NudoIQ costs more. It starts with a free preview on install, then a 7-day free trial with no card needed. After that it's $49.99 a month flat for every truck. Cancel anytime.
-
-## Should you pick Easy Relay or NudoIQ?
-
-### Pick EasyRelay if
-
-- You want a $0 Free plan, or Pro plans with the refresher from $14.99 a month.
-- You book each load by hand and want board tools like tolls, latest pickup time and deadhead checks.
-- You want trip alerts on Telegram for yard checks, road restrictions and driver check-ins.
-- You want the A+ Board or the Early Acceptance Check.
-
-### Pick NudoIQ if
-
-- You want loads booked for you, and only the ones that clear your minimum net profit.
-- You want to see what each load nets you before you take it.
-- You fight scorecard hits and want the dispute letter drafted for you.
-- You book Relay's short-term contracts, or you work in Spanish.
-
-Not sure which is right for your board? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back. It costs you a week, not a dime.
+Not sure? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back.
 
 [Try NudoIQ 7 days free](https://nudoiq.com/get/)
 
 ## How do you switch from Easy Relay to NudoIQ?
 
-Turn off or remove EasyRelay in your Chrome extensions. Add NudoIQ from the Chrome Web Store, [open the Relay load board](https://nudoiq.com/amazon-relay-load-board/) and press START. Your Relay login doesn't change. Run one load board extension at a time.
+Turn off or remove EasyRelay, add NudoIQ from the Chrome Web Store, [open the Relay load board](https://nudoiq.com/amazon-relay-load-board/) and press START. Your Relay login doesn't change.
 
-## Frequently asked questions
+## Easy Relay alternative FAQ
 
 ### What is Easy Relay?
-Easy Relay, or EasyRelay, is a Chrome extension for Amazon Relay dispatchers and carrier owners, published by Easy Relay LLC. Its store listing names tools such as an auto refresher, Fast Book, tolls, backhaul and Telegram trip alerts (checked October 9, 2026). NudoIQ is a separate extension for the same board, with AutoBook at your minimum net profit.
+Easy Relay is a Chrome extension for Amazon Relay, published by Easy Relay LLC (checked October 9, 2026). NudoIQ is a separate one, with AutoBook at your minimum net profit.
 
 ### Is Easy Relay a Chrome extension?
-Yes, Easy Relay is a Chrome extension for the Amazon Relay load board. You add it from its Chrome Web Store listing, where it's named EasyRelay (checked October 9, 2026). NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so the two don't conflict.
+Yes, it installs from the Chrome Web Store. NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so they don't clash.
 
 ### Is it EasyRelay or Easy Relay?
-Both, for the same Amazon Relay extension. Its Chrome Web Store listing uses EasyRelay, and its website and company name use Easy Relay (Easy Relay LLC). This page compares it with NudoIQ, a separate extension for the same board.
+Both, for the same extension. Its Chrome Web Store listing says EasyRelay, and its website and company, Easy Relay LLC, say Easy Relay.
 
 ### Does Easy Relay auto book loads?
-Not according to its store listing, which lists Fast Book for booking a load with a double-click. As of October 9, 2026, automatic booking isn't on EasyRelay's listing or plans. Its website's description does mention auto-booking. NudoIQ's AutoBook mode books matching loads that clear your own minimum net profit.
-
-### Is Easy Relay free?
-Yes, you can use EasyRelay on a $0 Free plan. Its plans list the auto refresher only on Pro Solo, at $14.99 a month, and Pro Team, at $44.99 (checked October 9, 2026). NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan.
+Its store listing and plans don't say so (checked October 9, 2026), though its website's description mentions auto-booking. NudoIQ's AutoBook books only loads that clear your minimum net profit.
 
 ### Does Easy Relay have a free trial?
-Yes, its pages give you two ways to try it. Its home page lists a 7-day free trial, and its FAQ says the $0 Free plan lets you try the extension before Pro. Neither page says whether you need a card (checked October 9, 2026). NudoIQ has a 7-day free trial with no card needed to start, and a free preview before it.
-
-### How much does Easy Relay cost compared to NudoIQ?
-EasyRelay costs you less. You can use its $0 Free plan, or get the refresher with Pro Solo at $14.99 a month or Pro Team at $44.99. A 6-month option, it says, saves up to 42% (checked October 9, 2026). NudoIQ is one $49.99 plan, the same for one truck or a whole fleet, with a 7-day free trial and cancel anytime.
-
-### Is there a free Easy Relay alternative?
-NudoIQ's free preview, with refresh and alerts, runs until you start the 7-day free trial, which needs no card. After the trial, it's $49.99 a month to keep using it, so it isn't a free plan. If you want to stay free, EasyRelay's own Free plan is $0, but it doesn't list the refresher. Rocket Relay lists a free plan with auto-refresh and new-trip alerts (checked October 9, 2026).
-
-### Does Easy Relay track trips?
-Yes, EasyRelay's trip tools show your truck's current location, early or late ETAs, app usage and trailer ID. Its Telegram bot sends trip alerts such as yard checking, road restriction and driver check-in (checked October 9, 2026). NudoIQ partly covers trips. Its in-transit strip shows where the truck is, whether it's on time, early or late, and miles left, with no trip alerts.
+Its home page lists a 7-day free trial (checked October 9, 2026). NudoIQ gives you 7 days free with AutoBook, no card needed to start.
 
 ### How does NudoIQ decide which loads to book?
-In AutoBook mode, NudoIQ books only loads that clear your minimum net profit. If you set a minimum $/mile, they must clear that too. It never books a load it can't fully price, such as one missing a pickup time, miles or pay. It stops at your max-books cap. ALERT mode tells you about a match without booking it. That matters, because [cancelling a booked load counts against you](https://nudoiq.com/amazon-relay-cancel-load/).
+Only loads that clear your Min Net Profit and it can fully price, up to your Max books. Alert mode just alerts. See [what happens if you cancel a load](https://nudoiq.com/amazon-relay-cancel-load/).
 
 ### Does NudoIQ work in Spanish?
-Yes, NudoIQ works in English and Spanish, including the load board buttons and alerts. It runs on Amazon Relay in Spain too, plus the US, Canada and seven other countries. EasyRelay's store listing shows English as its language, and its website offers English and Russian (checked October 9, 2026).
+Yes. NudoIQ's buttons and banners on the load board work in English and Spanish. Telegram messages are in English. EasyRelay's listing language is English (checked October 9, 2026).
 
 ### Can I switch from Easy Relay to NudoIQ?
-Yes, you can switch in a few minutes. Turn off or remove EasyRelay on Chrome's extensions page, add NudoIQ from the Chrome Web Store, and start the 7-day free trial. Your Relay login and load board stay the same. Run one load board extension at a time so the two don't conflict.
+Yes, in a few minutes. Turn off or remove EasyRelay, add NudoIQ from the Chrome Web Store and start your 7 days free. Your Relay login stays the same.
 
 ### Is NudoIQ or Easy Relay made by Amazon?
-No, neither is made by Amazon, and both run inside Amazon Relay in your own Chrome. NudoIQ is independent software from Sami Enterprises LLC and is not affiliated with, endorsed by or sponsored by Amazon. EasyRelay is published by Easy Relay LLC.
+No. NudoIQ is an independent product by Sami Enterprises LLC, not affiliated with, endorsed or sponsored by Amazon. EasyRelay is published by Easy Relay LLC.
 
 ---
 
