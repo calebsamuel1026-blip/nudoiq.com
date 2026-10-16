@@ -211,6 +211,8 @@
     .shot img{width:100%;height:auto;border-radius:12px;border:1px solid rgba(30,48,110,.18);
       box-shadow:0 16px 36px rgba(30,48,110,.22);background:#fff}
     .rf{font-size:15.5px;margin-top:12px;color:var(--ink)}
+    .pin{font-size:15.5px;line-height:1.5;margin-top:12px;color:var(--ink)}
+    .hero [hidden]{display:none!important}
     .rg{margin-top:2px;font-size:15.5px;color:var(--ink-4)}
     .rg summary{display:inline-flex;align-items:center;min-height:44px;cursor:pointer;color:var(--ink);font-weight:500;
       text-decoration:underline;text-underline-offset:3px;list-style:none}
@@ -276,6 +278,9 @@
              content.js treats any /loadboard path as the board (board_opened). New tab, so this page and its tags stay. -->
         <a class="btn go" href="https://relay.amazon.com/loadboard/search" target="_blank" rel="noopener" data-cta="welcome-open-relay" data-relay aria-label="Open Amazon Relay load board (opens in a new tab)" data-t-aria="cta_aria"><span data-t="cta">Open Amazon Relay load board</span><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M7 4h9v9M16 4 5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         <p class="rf" data-t="refresh_line">Relay already open? Refresh that tab so the bar loads.</p>
+        <!-- 2026-10-16 came-back state (RELEASE-2.5.9-SPEC section 7.2): shown in place of the refresh line when he returns
+             to this tab 20 s or more after an Open-Relay click. Words: Martha, research/copy/WELCOME-CAMEBACK-2026-10-16.json. -->
+        <p class="pin" id="nq-pin" data-t="pin_line" hidden>Pin NudoIQ so you&#x27;re one click away. Puzzle piece at Chrome&#x27;s top right, then the pin.</p>
         <p class="fw" data-t="freeweek_line">Start your free week from the NudoIQ bar on Relay. It&#x27;s 7 days free with no card, then $49.99/month, and you can cancel anytime.</p>
         <p class="nc"><span data-t="notcarrier_lead">No Relay account yet?</span> <a href="/amazon-relay-requirements/" target="_blank" rel="noopener" data-href-es="/es/amazon-relay-requisitos/" data-cta="welcome-not-carrier" data-t="notcarrier_link">See what you need</a></p>
         <!-- Region: the button defaults to the US board; the script below picks another Relay board only when the computer's
@@ -411,7 +416,7 @@
   <script>
     // Spanish: the extension always opens /welcome/, so Spanish-language browsers get the same page with Martha's
     // Spanish strings swapped in (no redirect: every tag above fires once). ?lang=es / ?lang=en force a language.
-    var NQ_WELCOME_ES = {"title": "Abre tu tablero de Relay ahora | NudoIQ", "meta_description": "Tu NudoIQ ya está instalado. Abre tu tablero de cargas de Amazon Relay y empieza tu semana gratis desde la barra de NudoIQ.", "badge": "Tu NudoIQ está instalado", "h1": "Abre ahora tu tablero de Relay.", "lede": "Tu NudoIQ aparece dentro de Relay, no aquí. Inicia sesión como siempre y mira arriba del panel de búsqueda.", "cta": "Abre tu tablero de Amazon Relay", "cta_aria": "Abre tu tablero de Amazon Relay (se abre en una pestaña nueva)", "freeweek_line": "Empieza tu semana gratis desde la barra de NudoIQ en Relay. Son 7 días gratis sin tarjeta, después $49.99 al mes, y puedes cancelar cuando quieras.", "notcarrier_lead": "¿Aún no tienes cuenta de Relay?", "notcarrier_link": "Mira lo que necesitas", "steps_heading": "Tus próximos tres pasos", "step1": "Abre tu tablero de Relay con el botón.", "step2": "Tu barra de NudoIQ aparece sobre los filtros.", "step3": "Presiona \"Empieza tu semana gratis\" en la barra.", "profile_line": "Abre Relay en el mismo perfil de Chrome donde instalaste NudoIQ. Solo ahí aparece tu barra de NudoIQ.", "help_title": "¿No ves tu barra de NudoIQ?", "help_body": "¿Llegaste a la página de inicio o de viajes de Relay? Usa otra vez el botón de arriba para abrir tu tablero. ¿Sigue sin aparecer? Actualiza la pestaña de Relay. Casi siempre se arregla así. Si todo sigue igual, escribe a contact@nudoiq.com y dinos en qué página estás. Te responde una persona.", "video_caption": "Cada herramienta, una por una, cuando estés listo.", "video_meta": "Menos de 4 minutos · en inglés · con sonido · puedes volver a verlo cuando quieras", "video_aria": "Recorrido de NudoIQ en inglés por cada herramienta, una por una", "image_alt": "La barra de control de NudoIQ dentro del tablero de cargas de Amazon Relay, con los modos de alerta, búsqueda y autobook sobre 358 resultados desde Maryville, Tennessee", "partner_tpl": "Pega {code} al pagar para obtener {offer}.", "footer_independent": "Software independiente para transportistas", "footer_privacy": "Privacidad", "footer_refund": "Reembolsos", "footer_contact": "Contacto", "footer_trademark": "Amazon y Amazon Relay son marcas registradas de Amazon.com, Inc. o sus afiliadas. NudoIQ es un producto independiente y no está afiliado, respaldado ni patrocinado por Amazon.com, Inc.", "refresh_line": "¿Ya tienes Relay abierto? Actualiza esa pestaña para ver la barra.", "region_toggle": "¿No estás en Estados Unidos?", "region_note": "El botón usa la zona horaria de tu computadora. Elige tu país aquí.", "region_us": "Estados Unidos", "region_ca": "Canadá", "region_uk": "Reino Unido", "region_de": "Alemania", "region_es": "España", "region_fr": "Francia", "region_it": "Italia", "region_pl": "Polonia", "region_cz": "República Checa", "region_in": "India", "region_jp": "Japón", "bar_image_alt": "La barra de NudoIQ con START, STOP en rojo, un engranaje de ajustes, los modos ALERT, SEARCH y AUTOBOOK, un indicador IDLE y el botón azul \"Start your free week\"", "hf_q": "¿Cómo te enteraste de NudoIQ?", "hf_note": "Opcional, un clic.", "opt_cws": "Chrome Web Store", "opt_youtube": "YouTube", "opt_google": "Google", "opt_social": "Facebook o Instagram", "opt_email": "Un correo nuestro", "opt_friend": "Me lo recomendaron", "opt_other": "Otro", "hf_thanks": "Gracias, nos ayuda mucho.", "hf_aria": "¿Cómo te enteraste de NudoIQ? Opcional"};
+    var NQ_WELCOME_ES = {"title": "Abre tu tablero de Relay ahora | NudoIQ", "meta_description": "Tu NudoIQ ya está instalado. Abre tu tablero de cargas de Amazon Relay y empieza tu semana gratis desde la barra de NudoIQ.", "badge": "Tu NudoIQ está instalado", "h1": "Abre ahora tu tablero de Relay.", "lede": "Tu NudoIQ aparece dentro de Relay, no aquí. Inicia sesión como siempre y mira arriba del panel de búsqueda.", "cta": "Abre tu tablero de Amazon Relay", "cta_aria": "Abre tu tablero de Amazon Relay (se abre en una pestaña nueva)", "freeweek_line": "Empieza tu semana gratis desde la barra de NudoIQ en Relay. Son 7 días gratis sin tarjeta, después $49.99 al mes, y puedes cancelar cuando quieras.", "notcarrier_lead": "¿Aún no tienes cuenta de Relay?", "notcarrier_link": "Mira lo que necesitas", "steps_heading": "Tus próximos tres pasos", "step1": "Abre tu tablero de Relay con el botón.", "step2": "Tu barra de NudoIQ aparece sobre los filtros.", "step3": "Presiona \"Empieza tu semana gratis\" en la barra.", "profile_line": "Abre Relay en el mismo perfil de Chrome donde instalaste NudoIQ. Solo ahí aparece tu barra de NudoIQ.", "help_title": "¿No ves tu barra de NudoIQ?", "help_body": "¿Llegaste a la página de inicio o de viajes de Relay? Usa otra vez el botón de arriba para abrir tu tablero. ¿Sigue sin aparecer? Actualiza la pestaña de Relay. Casi siempre se arregla así. Si todo sigue igual, escribe a contact@nudoiq.com y dinos en qué página estás. Te responde una persona.", "video_caption": "Cada herramienta, una por una, cuando estés listo.", "video_meta": "Menos de 4 minutos · en inglés · con sonido · puedes volver a verlo cuando quieras", "video_aria": "Recorrido de NudoIQ en inglés por cada herramienta, una por una", "image_alt": "La barra de control de NudoIQ dentro del tablero de cargas de Amazon Relay, con los modos de alerta, búsqueda y autobook sobre 358 resultados desde Maryville, Tennessee", "partner_tpl": "Pega {code} al pagar para obtener {offer}.", "footer_independent": "Software independiente para transportistas", "footer_privacy": "Privacidad", "footer_refund": "Reembolsos", "footer_contact": "Contacto", "footer_trademark": "Amazon y Amazon Relay son marcas registradas de Amazon.com, Inc. o sus afiliadas. NudoIQ es un producto independiente y no está afiliado, respaldado ni patrocinado por Amazon.com, Inc.", "refresh_line": "¿Ya tienes Relay abierto? Actualiza esa pestaña para ver la barra.", "region_toggle": "¿No estás en Estados Unidos?", "region_note": "El botón usa la zona horaria de tu computadora. Elige tu país aquí.", "region_us": "Estados Unidos", "region_ca": "Canadá", "region_uk": "Reino Unido", "region_de": "Alemania", "region_es": "España", "region_fr": "Francia", "region_it": "Italia", "region_pl": "Polonia", "region_cz": "República Checa", "region_in": "India", "region_jp": "Japón", "bar_image_alt": "La barra de NudoIQ con START, STOP en rojo, un engranaje de ajustes, los modos ALERT, SEARCH y AUTOBOOK, un indicador IDLE y el botón azul \"Start your free week\"", "hf_q": "¿Cómo te enteraste de NudoIQ?", "hf_note": "Opcional, un clic.", "opt_cws": "Chrome Web Store", "opt_youtube": "YouTube", "opt_google": "Google", "opt_social": "Facebook o Instagram", "opt_email": "Un correo nuestro", "opt_friend": "Me lo recomendaron", "opt_other": "Otro", "hf_thanks": "Gracias, nos ayuda mucho.", "hf_aria": "¿Cómo te enteraste de NudoIQ? Opcional", "stuck_title": "¿No ves NudoIQ en tu tablero?", "stuck_lede": "En este perfil de Chrome, inicia sesión y abre tu tablero, no inicio ni viajes. Actualiza esa pestaña.", "pin_line": "Fija NudoIQ para abrirlo en un clic. Pieza de rompecabezas arriba a la derecha, luego el pin."};
     var NQ_PARTNER_TPL = "Paste {code} at checkout to get {offer}.";
     (function () {
       try {
@@ -515,6 +520,45 @@
         o.src = (q.get('src') || 'direct').slice(0, 20); o.v = (q.get('v') || '').slice(0, 12); } catch (x) {}
       return o;
     };
+
+    // CAME BACK (2026-10-16, RELEASE-2.5.9-SPEC section 7.2). When this tab becomes visible again 20 s or more after an
+    // Open-Relay click (button, region link or step 1), he most likely did not see the NudoIQ bar: the hero becomes the
+    // stuck-point step in place (title, lede, pin line instead of the refresh line). The button does not move: the title
+    // and lede keep their heights. One welcome_returned row per install (reason after_click, ms since the last click).
+    // Kept for this tab's session, so a reload shows the same step. Kill rule (spec 7.3): after 30 human installs, if
+    // welcome_cta_clicked -> relay_landing is not higher among welcome_returned installs, set NQ_CAMEBACK_ON = false.
+    var NQ_CAMEBACK_ON = true;
+    var NQ_CAMEBACK_EN = { stuck_title: "No NudoIQ bar on your board?", stuck_lede: "In this same Chrome profile, sign in and open your load board, not home or trips. Refresh that tab." };
+    window.nqCameBack = (function () {
+      var WAIT = 20000, KS = 'nudoiq_welcome_returned', t = 0, surface = '', shown = false;
+      var show = function (live) {
+        if (shown || !NQ_CAMEBACK_ON) return;
+        try {
+          var S = document.documentElement.lang === 'es' ? NQ_WELCOME_ES : NQ_CAMEBACK_EN;
+          var h1 = document.querySelector('.hero h1'), le = document.querySelector('.hero .lede');
+          var rf = document.querySelector('.hero .rf'), pin = document.getElementById('nq-pin');
+          if (!h1 || !le || !S.stuck_title || !S.stuck_lede) return;
+          shown = true;
+          if (live) { h1.style.minHeight = h1.offsetHeight + 'px'; le.style.minHeight = le.offsetHeight + 'px'; }   // in place: nothing moves up
+          h1.textContent = S.stuck_title; le.textContent = S.stuck_lede;
+          if (pin) { pin.hidden = false; if (rf) rf.hidden = true; }
+          document.documentElement.setAttribute('data-welcome', 'returned');
+          if (window.clarity) clarity('set', 'welcome_state', 'returned');
+        } catch (x) {}
+      };
+      document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState !== 'visible' || !t || shown || !NQ_CAMEBACK_ON) return;
+        var ms = Date.now() - t;
+        if (ms < WAIT) return;
+        show(true);
+        if (!shown) return;
+        try { sessionStorage.setItem(KS, '1'); } catch (x) {}
+        try { if (window.clarity) clarity('event', 'welcome_returned'); } catch (x) {}
+        NQ_FUNNEL.send('welcome_returned', NQ_META({ reason: 'after_click', surface: surface, ms: Math.min(ms, 864e5) }));
+      });
+      try { if (sessionStorage.getItem(KS)) show(); } catch (x) {}
+      return { clicked: function (s) { t = Date.now(); surface = s; } };
+    })();
 
     function nqRelayClick(e) {
       if (e.type === 'auxclick' && e.button !== 1) return;
