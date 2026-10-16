@@ -93,7 +93,7 @@
   "url": "https://nudoiq.com/amazon-relay-auto-booker/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
   "datePublished": "2026-09-20",
-  "dateModified": "2026-10-14",
+  "dateModified": "2026-10-16",
   "inLanguage": "en-US",
   "author": {
     "@type": "Organization",
@@ -112,7 +112,7 @@
       "url": "https://nudoiq.com/icons/nudoiq-logo-512.png"
     }
   },
-  "abstract": "An Amazon Relay auto booker is a browser extension that refreshes the load board and books loads that meet minimums you set, such as net profit or pay per mile. Every booking is the carrier's commitment, so guardrails matter: a profit floor, a max-books cap and testing rules in alert mode first. Cancelling booked loads hurts the acceptance score."
+  "abstract": "An Amazon Relay auto booker is a browser extension that refreshes the load board and books loads that meet minimums you set, such as net profit or pay per mile. Cancelling a booked load hurts your acceptance score."
 }
   </script>
   <script type="application/ld+json">
@@ -281,7 +281,7 @@
   })();
 </script>
 </head>
-<body>
+<body data-clarity-unmask="true">
 
   <div class="promo">7 days free, no card needed &middot; Runs in your own Chrome &middot; English and Spanish</div>
 
@@ -299,15 +299,15 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a> &nbsp;&rsaquo;&nbsp; <a href="/guides/">Guides</a> &nbsp;&rsaquo;&nbsp; <span aria-current="page">Amazon Relay Auto Booker: How Automatic Booking Works</span></nav>
     <h1 class="page-title">Amazon Relay Auto Booker: How Automatic Booking Works</h1>
     <p class="page-subtitle">An auto-booker extension can book loads for you automatically when they match your rules. But automatic booking only works when you set it up carefully. Here's how to set it up so it books only what you want.</p>
-    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-14">October 14, 2026</time></p>
+    <p class="byline">NudoIQ &middot; Published <time datetime="2026-09-20">September 20, 2026</time> &middot; Last updated <time datetime="2026-10-16">October 16, 2026</time></p>
   </div></div>
 
   <div class="container">
     <article class="prose">
-<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>An Amazon Relay auto booker is a browser extension that refreshes the load board and books loads that meet minimums you set, such as net profit or pay per mile. Every booking is the carrier's commitment, so guardrails matter: a profit floor, a max-books cap and testing rules in alert mode first. Cancelling booked loads hurts the acceptance score.</p></section>
+<section class="answer" aria-label="Short answer"><p class="lbl">Short answer</p><p>An Amazon Relay auto booker is a browser extension that refreshes the load board and books loads that meet minimums you set, such as net profit or pay per mile. Cancelling a booked load hurts your acceptance score.</p></section>
 <h2 id="what-an-auto-booker-does">What an Auto-Booker Does</h2>
 <p>An auto-booker extension (also called an autobooker or auto-book tool) refreshes the Relay load board constantly and books loads that match the rules you set. You don't have to click Book. The extension does it automatically.</p>
-<p>Example: You set rules that say "book any load from Portland to Eugene for $400 or more, if the profit is at least $150 after costs." When a load matching those criteria posts, the extension sees it and books it for you. Then you review what you got (NudoIQ can send each AutoBook to Telegram, if you connect it).</p>
+<p>Example: You set rules that say &quot;book any load from Portland to Eugene for $400 or more, if the profit is at least $150 after costs.&quot; When a load matching those criteria posts, the extension sees it and books it for you. Then you review what you got (NudoIQ can send each AutoBook to Telegram, if you connect it).</p>
 <p>The advantage is obvious: you can act on loads faster, and you're not glued to the screen. The risk is equally obvious: without good guardrails, you can book loads that don't work for your operation.</p>
 <h2 id="the-risk-of-unintended-bookings">The Risk of Unintended Bookings</h2>
 <p>Your biggest risk with an auto-booker is rules that are too loose. A made-up example: a rule that says &quot;book any load paying $400 or more&quot; will also book a 400-mile run at $400, which is $1 a mile and may not cover your costs. A rule that says &quot;book anything from Oregon&quot; can book a load that ends hundreds of miles from where you planned to be.</p>
@@ -320,7 +320,7 @@
 <p>Booking rules narrow the field. They say &quot;of all the loads on the board, only consider these ones.&quot;</p>
 <p><strong>Profit Floor</strong>: Set a minimum profit the extension must see before it books. Example: &quot;Don't book anything that nets less than $150 after subtracting driver pay, fuel, maintenance, and deadhead.&quot;</p>
 <p>A profit floor is your second line of defense. Even if a load is in your Relay search and clears your $/mile and load-pay minimums, the extension checks the net profit. If it doesn't clear the floor, no book.</p>
-<p><strong>Max-Books Cap</strong>: Set a maximum number of loads the extension will book. Depending on the tool, the cap counts per day, per week or per run (in NudoIQ, Max books is 1 to 20 per START). Example: "Stop booking after you've booked 5 loads."</p>
+<p><strong>Max-Books Cap</strong>: Set a maximum number of loads the extension will book. Depending on the tool, the cap counts per day, per week or per run (in NudoIQ, Max books is 1 to 20 per START). Example: &quot;Stop booking after you've booked 5 loads.&quot;</p>
 <p>The max-books cap is your third line of defense. It prevents you from overbooking and running out of drivers. Once you hit the cap, the extension stops booking for that period, even if perfect loads post.</p>
 <p>Together, these three guardrails protect you from booking loads you didn't intend.</p>
 <h2 id="the-three-modes-alert-search-autobook">The Three Modes: Alert, Search, Autobook</h2>
@@ -358,7 +358,7 @@
 <p><strong>Mistake 2: No Profit Floor</strong> A $500 rate sounds good until you realize it nets $50 after paying your driver and fuel. Always set a profit floor.</p>
 <p><strong>Mistake 3: No Max-Books Cap</strong> Without a cap, the extension books loads all day, and you run out of drivers or time. Set a cap to match your actual capacity.</p>
 <p><strong>Mistake 4: Not Testing in Alert Mode First</strong> Jumping straight to Autobook without testing your rules is asking for trouble. Use Alert mode first. See what it suggests. Verify it's the right stuff. Then automate.</p>
-<p><strong>Mistake 5: Setting a Cap Too High</strong> "I'll book 20 loads at once" sounds ambitious until you realize you only have 5 drivers. Be realistic about your capacity and set your cap accordingly.</p>
+<p><strong>Mistake 5: Setting a Cap Too High</strong> &quot;I'll book 20 loads at once&quot; sounds ambitious until you realize you only have 5 drivers. Be realistic about your capacity and set your cap accordingly.</p>
 <h2 id="how-nudoiq-s-autobook-works">How NudoIQ's Autobook Works</h2>
 <p>NudoIQ's control bar includes three modes: Alert (sounds an alert), Search (more ways to filter the board), and Autobook (books automatically). Lane, equipment and dates come from your Relay search, because NudoIQ works on the loads your board shows. In NudoIQ you set Min $/Mile, Min Net Profit and Max books (1 to 20 per START).</p>
 <p>The extension uses <a href="/#features">Net Profit calculation</a> to check whether a load clears your profit floor. So you're not just setting a dollar target: you're setting a profit target after costs.</p>

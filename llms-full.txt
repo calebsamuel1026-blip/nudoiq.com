@@ -6,7 +6,7 @@
 
 - **Refresher:** reloads the Amazon Relay load board at an interval the carrier sets.
 - **Control bar with three modes:** Alert (pings you when a load matches your rules), Search (more ways to filter the board) and Autobook (books a matching load for you). Rules: Min Net Profit, Min $/Mile, a load-pay minimum and a max-books cap per START; lanes come from Relay search. Autobook stops at the cap and the profit floor.
-- **Telegram alerts** when a load lands.
+- **Telegram alerts** when a load lands, if you connect Telegram.
 - **Instant Book:** books a load in one action from the control bar instead of the multi-step flow.
 - **Lane Intelligence:** compares the posted price with 90 days of that lane's history and shows a target rate, an expected range and a confidence level. Decision support, not a guarantee.
 - **Net Profit on every load card:** posted rate minus driver pay, fuel, maintenance and deadhead to pickup, in dollars and net rate per mile. Loads below a set profit floor can be hidden.
@@ -52,6 +52,8 @@ The Chrome Web Store only counts installs made from NudoIQ's store listing, whic
 
 NudoIQ analyzed public FMCSA roadside inspection records that list Amazon as the shipper. From 2023-09-24 to 2026-09-22, 101,444 inspections listed Amazon as the shipper, across 22,866 distinct carriers (USDOT numbers); about 530 carriers per month appear for the first time, and about 70% of carriers with an Amazon-shipper inspection since 2025 run 1-5 power units. Counts are a floor (most loads are never inspected) and cover Amazon freight in general, not only Amazon Relay loads. Full method, charts and caveats: https://nudoiq.com/amazon-relay-carrier-data/
 
+NudoIQ also publishes Amazon Relay lane rates from loads its users saw on the Amazon Relay board: 4,066 distinct loads first seen July 7 to October 5, 2026, mostly starting in Tennessee. One-way loads had a median final board price of $2.90 per mile and round trips $2.36 per mile; 57% of loads were raised in price while posted. These are observed board prices, not carrier earnings, and Amazon did not provide the data. Lanes, method and caveats: https://nudoiq.com/amazon-relay-rates/
+
 ## Contact
 
 - Email: contact@nudoiq.com
@@ -62,9 +64,9 @@ NudoIQ analyzed public FMCSA roadside inspection records that list Amazon as the
 # How the Amazon Relay Load Board Works
 
 URL: https://nudoiq.com/amazon-relay-load-board/
-Published: 2026-09-20. Last updated: 2026-10-14.
+Published: 2026-09-20. Last updated: 2026-10-16.
 
-Short answer: The Amazon Relay load board is where approved carriers find and book Amazon freight, at relay.amazon.com. It's open 24/7 and free to search and book, with filters for equipment, load type, radius, trip length and time windows. Amazon tenders its loads only through Relay, and good loads often book within seconds.
+Short answer: The Amazon Relay load board, at relay.amazon.com, is where approved carriers find and book Amazon freight. It's open 24/7 and free to search and book, with filters for equipment, load type, radius, trip length and time windows.
 
 ## What the Load Board Is
 
@@ -135,6 +137,8 @@ It also shows [Lane Intelligence](https://nudoiq.com/amazon-relay-auto-refresh/)
 
 You can also use it to find backhaul loads from where your current load ends, headed back toward home, and to draft dispute letters when your scorecard gets dinged. It's a refresher, booker, rate calculator, and dispute tool all in one extension.
 
+Choosing an extension for your board? Here's [LoadFetcher and NudoIQ, compared point by point](https://nudoiq.com/loadfetcher-alternative/).
+
 ## Getting Started
 
 To use the load board, you need a carrier account with Amazon Relay. That requires a DOT number with interstate authority, active for at least 180 days; a valid MC number; an FMCSA safety rating of Satisfactory, None or Not Rated; BASIC scores under Amazon's limits; insurance minimums (GL $1M per occurrence, auto liability $1M, cargo at least $100K); and the right equipment.
@@ -169,14 +173,20 @@ Box truck loads are for 26 ft and 16 ft trucks with tuck-under liftgates. Tracto
 ### How often should I refresh the load board?
 [Amazon says](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) the board auto-refreshes new spot freight matches every 30 seconds. A [refresh extension](https://nudoiq.com/amazon-relay-auto-refresh/) reloads more often, on an interval you set. This keeps you in the hunt for loads without you staring at the screen. Set the refresh interval based on your tolerance for alert noise and your internet connection.
 
+### Is there an Amazon Relay load board for cargo vans?
+No. Amazon says cargo vans cannot be used for loads on Amazon Relay, so there are no van loads on the board. The smallest supported truck is a 16 ft dock-height box truck with a working tuck-under liftgate. Our guide to [using a cargo van for Amazon Relay](https://nudoiq.com/amazon-relay-cargo-van/) covers what to run instead.
+
+### How do I find power only loads on the Amazon Relay load board?
+Use the equipment type and trailer status filters so you only see loads your tractor can pull. Amazon says most Relay loads are power only: you bring the tractor and Relay supplies the trailer. If you want weeks of work booked ahead instead of one load at a time, read how [Amazon Relay contracts](https://nudoiq.com/amazon-relay-contracts/) work; new contracts need a B grade or better.
+
 ---
 
 # What Is Amazon Relay?
 
 URL: https://nudoiq.com/what-is-amazon-relay/
-Published: 2026-09-20. Last updated: 2026-10-14.
+Published: 2026-09-20. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay is Amazon's platform for carriers to find and book Amazon freight. Approved carriers with a DOT number active at least 180 days and a valid MC number book spot loads, round trips, blocks and short-term contracts, or post availability with Post A Truck. Amazon pays weekly and grades carriers on a performance score.
+Short answer: Amazon Relay is Amazon's platform for carriers to find and book Amazon freight. Approved carriers book spot loads, blocks and short-term contracts, or post availability with Post A Truck. Amazon pays weekly and grades carriers on a performance score.
 
 ## Overview
 
@@ -250,7 +260,7 @@ Many carriers use [Amazon Relay auto-refresh](https://nudoiq.com/amazon-relay-au
 
 NudoIQ costs **$49.99 per month** for every feature: the same price whether you run one truck or twenty. Start with a **7-day free trial**, no card needed to start. Cancel anytime from the Stripe portal. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
 
-Our [Amazon Relay Chrome extension guide](/amazon-relay-chrome-extension/) shows what NudoIQ adds to your Relay tab and how to set it up.
+Our [Amazon Relay Chrome extension guide](https://nudoiq.com/amazon-relay-chrome-extension/) shows what NudoIQ adds to your Relay tab and how to set it up.
 
 ## Frequently asked questions
 
@@ -277,9 +287,9 @@ No. Amazon Relay does not accept cargo vans. Only box trucks 16 ft and 26 ft wit
 # Amazon Relay Requirements
 
 URL: https://nudoiq.com/amazon-relay-requirements/
-Published: 2026-09-20. Last updated: 2026-10-02.
+Published: 2026-09-20. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay requires a DOT number with interstate authority active for at least 180 days, a valid MC number, and an FMCSA safety rating of Satisfactory, None or Not Rated. BASIC scores must stay under Amazon's limits, insurance must meet its minimums, equipment must be supported, and every owner above 25% is verified.
+Short answer: Amazon Relay requires a DOT number with interstate authority active for at least 180 days, a valid MC number, and an FMCSA safety rating of Satisfactory, None or Not Rated. Insurance must meet its minimums and equipment must be supported.
 
 ## Authority and Operational Requirements
 
@@ -396,7 +406,7 @@ NudoIQ costs **$49.99 per month** for all features. Start with a **7-day free tr
 ## Frequently asked questions
 
 ### How long does Amazon Relay approval take?
-Amazon's Relay FAQ says a completed application is typically approved or rejected within 1 to 3 weeks. Our approval time guide (https://nudoiq.com/amazon-relay-approval-time/) covers what slows it down and what to do if you hear nothing.
+Amazon's Relay FAQ says a completed application is typically approved or rejected within 1 to 3 weeks. Our [approval time guide](https://nudoiq.com/amazon-relay-approval-time/) covers what slows it down and what to do if you hear nothing.
 
 ### What if my BASIC score is just slightly over the limit?
 Amazon publishes these limits as requirements. If you're over the limit on any category, your application will be delayed or rejected. Work on improving that score and reapply once you're in range.
@@ -418,9 +428,9 @@ Relay typically requires your DOT number to be at least 180 days old to complete
 # Amazon Relay Insurance Requirements
 
 URL: https://nudoiq.com/amazon-relay-insurance-requirements/
-Published: 2026-09-20. Last updated: 2026-10-02.
+Published: 2026-09-20. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay requires $1,000,000 auto liability per occurrence, $100,000 cargo, and general liability of $1,000,000 per occurrence and $2,000,000 aggregate. Semi operators need $50,000 trailer interchange. Carriers with W-2 employees need workers' compensation in each state and $100,000 employer's liability. A lapse blocks booking until coverage is reinstated.
+Short answer: Amazon Relay requires $1,000,000 auto liability per occurrence, $100,000 cargo, and general liability of $1,000,000 per occurrence and $2,000,000 aggregate. Semi operators need $50,000 trailer interchange. A lapse blocks booking until coverage is reinstated.
 
 ## Insurance is Non-Negotiable
 
@@ -551,9 +561,9 @@ Yes. If you frequently haul high-value freight, ask your broker to increase your
 # Amazon Relay for Box Trucks
 
 URL: https://nudoiq.com/amazon-relay-box-truck/
-Published: 2026-09-20. Last updated: 2026-10-14.
+Published: 2026-09-20. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay accepts 16 ft and 26 ft dock-height box trucks with a working tuck-under liftgate. Cargo vans are not supported. Box truck carriers still need a DOT number active at least 180 days, a valid MC number and Relay's insurance minimums, and can book one-way loads, spot loads and box truck contracts.
+Short answer: Amazon Relay accepts 16 ft and 26 ft dock-height box trucks with a working tuck-under liftgate, but not cargo vans. Box truck carriers need a DOT number active at least 180 days, a valid MC number and Relay's insurance minimums.
 
 ## Box Truck Equipment Specs
 
@@ -687,9 +697,9 @@ Depends on your location. If you're near a major Amazon distribution center, loa
 # How Much Does Amazon Relay Pay?
 
 URL: https://nudoiq.com/how-much-does-amazon-relay-pay/
-Published: 2026-09-20. Last updated: 2026-10-14.
+Published: 2026-09-20. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay pay varies by load, and Amazon does not publish typical rates. Each rate includes a base rate, a fuel surcharge and tolls, and moves with distance, deadhead, trip direction, equipment, live loads, season and region. Amazon pays weekly: loads finished by 11:59 pm Saturday are paid the following Friday.
+Short answer: Amazon Relay pay varies by load, and Amazon does not publish typical rates. Each rate includes a base rate, a fuel surcharge and tolls. Amazon pays weekly, and loads finished by 11:59 pm Saturday are paid the following Friday.
 
 ## What Sets Amazon Relay Rates
 
@@ -739,7 +749,7 @@ Amazon Relay pays weekly, regardless of rate:
 
 Weekly pay on a set schedule is one of Amazon Relay's consistent advantages.
 
-Our Amazon Relay payments guide (https://nudoiq.com/amazon-relay-payments/) covers the weekly schedule, invoices and what to do when pay looks wrong.
+Our [Amazon Relay payments guide](https://nudoiq.com/amazon-relay-payments/) covers the weekly schedule, invoices and what to do when pay looks wrong.
 
 ## How to Judge Whether a Rate Is Good
 
@@ -757,7 +767,7 @@ A posted rate is gross revenue, not profit. To know if a load is worth your time
 
 The formula is straightforward: Posted rate minus your fuel, maintenance and deadhead costs equals your net profit. The same distance can yield different profits depending on your costs and positioning.
 
-To check one load before you book, try our free Relay load calculator (https://nudoiq.com/tools/relay-load-calculator/), which shows the net, net per loaded mile and break-even rate.
+To check one load before you book, try our [free Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/), which shows the net, net per loaded mile and break-even rate.
 
 **Set a Personal Profit Floor**
 
@@ -794,7 +804,7 @@ Spot loads book at the listed price. The ways to set your own price are Post A T
 
 If a payment looks wrong, [Amazon's Relay FAQ](https://relay.amazon.com/faq) says you can submit a payment dispute "directly through Amazon Relay portal within 30 days of reviewing your weekly invoice." Amazon doesn't publish what proof it wants or how long a review takes, so check each invoice against the pay breakdown you saw at booking and file soon if something's off.
 
-Pay disputes and scorecard disputes are separate. A pay dispute is about money owed, and you file it in the Relay portal. On your scorecard, Amazon publishes dispute language only for on-time impacts, and no dispute route for rejected loads. More in our Amazon Relay disputes guide (https://nudoiq.com/amazon-relay-disputes/).
+Pay disputes and scorecard disputes are separate. A pay dispute is about money owed, and you file it in the Relay portal. On your scorecard, Amazon publishes dispute language only for on-time impacts, and no dispute route for rejected loads. More in our [Amazon Relay disputes guide](https://nudoiq.com/amazon-relay-disputes/).
 
 ## Understanding Rate Variability
 
@@ -827,9 +837,9 @@ Amazon's Relay FAQ says you can submit a payment dispute through the Amazon Rela
 # Is Amazon Relay Worth It?
 
 URL: https://nudoiq.com/is-amazon-relay-worth-it/
-Published: 2026-09-20. Last updated: 2026-10-02.
+Published: 2026-09-20. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay can be worth it for carriers who want weekly pay, a steady supply of loads and listed spot prices with no haggling. The trade-offs are speed competition for good loads, rates that change by lane and hour, and a performance score that controls access to contracts and early loads. Whether it works depends on your costs.
+Short answer: Amazon Relay can be worth it if you want weekly pay, steady loads and listed spot prices with no haggling. The trade-offs are speed competition and rates that change by lane and hour. It depends on your costs.
 
 ## The Case For Amazon Relay
 
@@ -849,6 +859,8 @@ Carriers hauling Amazon freight are spread across the country. In our [FMCSA ins
 Your grade gives you clear feedback on what Amazon measures: on-time, acceptance, app usage and disruption-free. Your score is the lowest of the four, and Amazon gives you a daily prediction of your upcoming score. You know exactly what hurts you and what helps you. Some carriers prefer this clarity over the mystery of traditional brokers.
 
 ## The Case Against Amazon Relay
+
+The trade-offs are speed competition for good loads, rates that change by lane and hour, and a performance score that controls access to contracts and early loads.
 
 **Speed Competition**
 Good loads book within seconds. If you're manually refreshing the board every few minutes, you'll almost never catch premium freight. You need either hyper-responsiveness or an [auto-refresh tool](https://nudoiq.com/amazon-relay-auto-refresh/) to stay competitive. This is not passive income; it's active speed competition.
@@ -971,7 +983,7 @@ Check the [equipment requirements](https://nudoiq.com/amazon-relay-requirements/
 URL: https://nudoiq.com/amazon-relay-scorecard/
 Published: 2026-09-20. Last updated: 2026-10-04.
 
-Short answer: The Amazon Relay scorecard gives each carrier a performance score from 0% to 100%, shown as a letter grade from F to A+. It covers the last six weeks of hauls and four metrics: on-time, acceptance, app usage and disruption-free. The overall score equals the lowest of the four, and higher grades open auctions, contracts and early spot loads.
+Short answer: The Amazon Relay scorecard gives each carrier a performance score from 0% to 100%, shown as a letter grade from F to A+. It covers the last six weeks and four metrics (on-time, acceptance, app usage and disruption-free).
 
 ## What is the Amazon Relay scorecard?
 
@@ -1060,11 +1072,11 @@ Before you file, pull together evidence that shows what actually happened on tha
 
 Then write it up plainly: the load, the impact you're disputing, what happened, and the evidence that shows it. Keep it short and factual.
 
-Our free Relay dispute letter tool (https://nudoiq.com/tools/relay-dispute-letter/) turns the facts you tick into a short letter you can edit and paste into your dispute.
+Our [free Relay dispute letter tool](https://nudoiq.com/tools/relay-dispute-letter/) turns the facts you tick into a short letter you can edit and paste into your dispute.
 
 One thing that trips carriers up: the 30-day dispute window Amazon lists applies to pay disputes, not scorecard impacts. Don't assume you have 30 days on a score dispute.
 
-Our Amazon Relay disputes guide (https://nudoiq.com/amazon-relay-disputes/) lists each dispute type and what Amazon publishes about it.
+Our [Amazon Relay disputes guide](https://nudoiq.com/amazon-relay-disputes/) lists each dispute type and what Amazon publishes about it.
 
 ## What does Amazon not publish about the scorecard?
 
@@ -1107,7 +1119,7 @@ Amazon does not publish one. The 30-day window it lists is for pay disputes. Fil
 # Amazon Relay Auto Refresh: Why It Matters and How It Works
 
 URL: https://nudoiq.com/amazon-relay-auto-refresh/
-Published: 2026-09-20. Last updated: 2026-10-14.
+Published: 2026-09-20. Last updated: 2026-10-16.
 
 Short answer: An Amazon Relay auto refresh tool reloads the load board for you on a timer, so new loads show up without you clicking reload. Good loads often book within seconds. NudoIQ's auto refresher lets you set the interval.
 
@@ -1185,7 +1197,7 @@ To use a refresher extension, you typically:
 
 Most refreshers add a control bar or popup to the Relay load board tab. You can adjust your rules and interval anytime without restarting.
 
-For NudoIQ's own bar and its four setup steps, see our [Amazon Relay Chrome extension setup guide](/amazon-relay-chrome-extension/).
+For NudoIQ's own bar and its four setup steps, see our [Amazon Relay Chrome extension setup guide](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## What Gets Refreshed
 
@@ -1202,7 +1214,7 @@ Two things to know before you run any refresher:
 
 ## The Role of Refreshing in Your Strategy
 
-Refreshing is the foundation. [Booking rules](https://nudoiq.com/amazon-relay-auto-booker/), [profit calculation](https://nudoiq.com/amazon-relay-auto-booker/), and [rate history](https://nudoiq.com/amazon-relay-auto-refresh/) add layers on top, but refreshing (fast, steady, consistent) is what gets you first look at loads.
+Refreshing is the foundation. [Booking rules](https://nudoiq.com/amazon-relay-auto-booker/), [profit calculation](https://nudoiq.com/amazon-relay-auto-booker/), and [rate history](https://nudoiq.com/amazon-relay-load-board/) add layers on top, but refreshing (fast, steady, consistent) is what gets you first look at loads.
 
 If your refresher runs on a short interval and your competitor reloads slowly (or not at all), you'll see new loads before they do. That's the advantage.
 
@@ -1210,9 +1222,11 @@ If your refresher runs on a short interval and your competitor reloads slowly (o
 
 NudoIQ's refresher lets you set the interval yourself, right on the NudoIQ bar. The extension refreshes on schedule, even if you're not looking at it.
 
-It doesn't just refresh: it runs alongside [Lane Intelligence](https://nudoiq.com/amazon-relay-auto-refresh/) (showing rate history) and [Net Profit calculation](https://nudoiq.com/amazon-relay-auto-booker/) (showing what you keep), and it integrates with [Autobook](https://nudoiq.com/amazon-relay-auto-booker/) so you can set rules once and let it book automatically.
+It doesn't just refresh: it runs alongside [Lane Intelligence](https://nudoiq.com/#features) (showing rate history) and [Net Profit calculation](https://nudoiq.com/amazon-relay-auto-booker/) (showing what you keep), and it integrates with [Autobook](https://nudoiq.com/amazon-relay-auto-booker/) so you can set rules once and let it book automatically.
 
 The extension is 5.0 rated on the Chrome Web Store and runs on desktop Chrome in English and Spanish. It costs $49.99 a month for every feature, with a 7-day free trial (no card needed to start) so you can test the refresh and see what the rate history and profit tools do.
+
+LoadFetcher refreshes the board too, so here's [how LoadFetcher's refresher compares](https://nudoiq.com/loadfetcher-alternative/) with NudoIQ, from its own listing and plans.
 
 ## Frequently asked questions
 
@@ -1237,14 +1251,20 @@ No. The refresher runs inside your browser in real-time. If your internet drops,
 ### Do I need to respond to an alert to book a load?
 Not if you're using Autobook. It books loads that clear your minimums, up to your max-books cap, and NudoIQ sends each booking to Telegram if you connect it. In Alert mode you book when you hear the sound; in Search mode, when you spot the highlighted load.
 
+### Is Post A Truck better than refreshing the Amazon Relay load board?
+They do different jobs. With Post A Truck you post your availability and minimum rate per mile up to two weeks ahead, and matched carriers get first access to freight before it reaches the board. A refresher keeps the board itself current so you see new spot loads as they post. Here's [how to post a truck on Amazon Relay](https://nudoiq.com/amazon-relay-post-a-truck/).
+
+### What if I book a load off the refreshed board and then can't run it?
+Cancelling a load you booked counts against your acceptance metric, and Amazon says the closer to pickup you reject, the higher the penalty. Letting it expire counts too. If you know it won't work, release it early. More in [what happens if you cancel a load on Amazon Relay](https://nudoiq.com/amazon-relay-cancel-load/).
+
 ---
 
 # Amazon Relay Auto Booker: How Automatic Booking Works
 
 URL: https://nudoiq.com/amazon-relay-auto-booker/
-Published: 2026-09-20. Last updated: 2026-10-14.
+Published: 2026-09-20. Last updated: 2026-10-16.
 
-Short answer: An Amazon Relay auto booker is a browser extension that refreshes the load board and books loads that meet minimums you set, such as net profit or pay per mile. Every booking is the carrier's commitment, so guardrails matter: a profit floor, a max-books cap and testing rules in alert mode first. Cancelling booked loads hurts the acceptance score.
+Short answer: An Amazon Relay auto booker is a browser extension that refreshes the load board and books loads that meet minimums you set, such as net profit or pay per mile. Cancelling a booked load hurts your acceptance score.
 
 ## What an Auto-Booker Does
 
@@ -1301,7 +1321,7 @@ Search mode is good when you want to make the final decision but want the extens
 
 Autobook mode is the most hands-off but requires the most confidence in your settings. You need to trust that your minimums (net profit, $/mile, load pay) and your max-books cap will produce bookings you want.
 
-## Setting Your Booking Rules Carefully
+## Setting Your Booking Rules Carefully {#setting-your-booking-rules-safely}
 
 To make sure Autobook books only what you want, follow this process:
 
@@ -1375,13 +1395,15 @@ Jumping straight to Autobook without testing your rules is asking for trouble. U
 
 NudoIQ's control bar includes three modes: Alert (sounds an alert), Search (more ways to filter the board), and Autobook (books automatically). Lane, equipment and dates come from your Relay search, because NudoIQ works on the loads your board shows. In NudoIQ you set Min $/Mile, Min Net Profit and Max books (1 to 20 per START).
 
-The extension uses [Net Profit calculation](https://nudoiq.com/amazon-relay-auto-booker/) to check whether a load clears your profit floor. So you're not just setting a dollar target: you're setting a profit target after costs.
+The extension uses [Net Profit calculation](https://nudoiq.com/#features) to check whether a load clears your profit floor. So you're not just setting a dollar target: you're setting a profit target after costs.
 
-[Instant Book](https://nudoiq.com/amazon-relay-auto-booker/) is one click on the load card. If you connect Telegram alerts, they tell you when the extension books something, so you know immediately what was booked.
+[Instant Book](https://nudoiq.com/amazon-relay-load-board/) is one click on the load card. If you connect Telegram alerts, they tell you when the extension books something, so you know immediately what was booked.
 
 If you're unsure about your rules, start in Alert mode and let NudoIQ suggest loads for a day. See if the suggestions are good. Then switch to Autobook.
 
-To get AutoBook on your own Relay board, follow the four steps in our [Amazon Relay Chrome extension guide](/amazon-relay-chrome-extension/).
+To get AutoBook on your own Relay board, follow the four steps in our [Amazon Relay Chrome extension guide](https://nudoiq.com/amazon-relay-chrome-extension/).
+
+If you're weighing tools, here's [how Load Fetcher and NudoIQ differ on auto booking](https://nudoiq.com/loadfetcher-alternative/), going by LoadFetcher's own listing and plans.
 
 ## Setting a Profit Floor in NudoIQ
 
@@ -1431,6 +1453,12 @@ The extension books through the same board you use. Any booking it makes is your
 ### Can I use Autobook on multiple trucks at the same time?
 Yes. You can have NudoIQ running on multiple devices and multiple load board tabs. Just remember: if two devices/tabs are both running Autobook with the same rules, they might both try to book the same load, which could cause issues. Consider running Autobook on one device and Alert/Search mode on others.
 
+### Is an auto booker the same as Amazon's Post A Truck?
+No. Post A Truck is Amazon's own tool: you post your truck's availability and a minimum rate per mile, and Relay books loads that match. An auto booker like NudoIQ's Autobook works on the spot board in your browser and books loads that match your rules and clear your Min Net Profit, stopping at your max-books cap. See [how to post a truck on Amazon Relay](https://nudoiq.com/amazon-relay-post-a-truck/).
+
+### Does Amazon charge a fee if I cancel an auto-booked load?
+Amazon doesn't publish a cancellation fee, and the Relay FAQ says nothing about one. The cost Amazon does describe is to your acceptance metric, and it rises the closer to pickup you cancel. Our guide on [cancelling a load on Amazon Relay](https://nudoiq.com/amazon-relay-cancel-load/) covers what Amazon does and doesn't publish.
+
 ---
 
 # Best Amazon Relay Extensions: Refresher and Auto-Booker Tools
@@ -1438,7 +1466,7 @@ Yes. You can have NudoIQ running on multiple devices and multiple load board tab
 URL: https://nudoiq.com/best-amazon-relay-extensions/
 Published: 2026-09-20. Last updated: 2026-10-14.
 
-Short answer: The main Relay extensions are LoadFetcher and Rocket Relay, with SwiftRelay and FlashRelay among the smaller tools. NudoIQ, at $49.99 a month, adds AutoBook at your own net profit floor, net profit per load and scorecard dispute letters.
+Short answer: For booking at your own net profit floor, the Amazon Relay extension to use is NudoIQ, which adds net profit per load and scorecard dispute letters for $49.99 a month. The other main extensions are LoadFetcher and Rocket Relay.
 
 ## Why You Need a Relay Extension
 
@@ -1582,9 +1610,9 @@ The 90-day range in NudoIQ comes from the Relay load board's posted rates. The t
 # An Amazon Relay Chrome extension for your load board
 
 URL: https://nudoiq.com/amazon-relay-chrome-extension/
-Published: 2026-10-12. Last updated: 2026-10-12.
+Published: 2026-10-12. Last updated: 2026-10-16.
 
-Short answer: An Amazon Relay Chrome extension is an add-on that works inside the Relay load board in your own browser. NudoIQ refreshes the board on a timer you set and tags new loads. It tells you about matches and can book loads that clear your Min Net Profit. It never asks for your Amazon password. Try it 7 days free.
+Short answer: An Amazon Relay Chrome extension is an add-on that works inside the Relay load board in your own browser. NudoIQ refreshes the board and can book loads that clear your Min Net Profit. It never asks for your Amazon password.
 
 ## What does an Amazon Relay Chrome extension do?
 
@@ -1654,6 +1682,8 @@ NudoIQ is rated 5.0 on the Chrome Web Store and used by 300+ carriers.
 
 ## Want to compare extensions first?
 
+If you're also looking at LoadFetcher, here's the [Load Fetcher extension vs NudoIQ](https://nudoiq.com/loadfetcher-alternative/), row by row, from its own listing and plans.
+
 If you're still deciding, our guide to the [best Amazon Relay extensions](https://nudoiq.com/best-amazon-relay-extensions/) compares the options side by side. When you're ready, add NudoIQ to Chrome and try it on your own board for 7 days.
 
 ## Frequently asked questions
@@ -1686,7 +1716,7 @@ Yes, you can run NudoIQ in English or Spanish.
 URL: https://nudoiq.com/loadfetcher-alternative/
 Published: 2026-09-20. Last updated: 2026-10-14.
 
-Short answer: NudoIQ is a good Load Fetcher alternative if you want loads booked for you. AutoBook books only the loads that clear your minimum net profit.
+Short answer: For loads booked for you while you drive or dispatch, NudoIQ is the Load Fetcher alternative. AutoBook books only the loads that clear your minimum net profit. Try it 7 days free, no card needed to start.
 
 ## What is a good Load Fetcher alternative?
 
@@ -1807,9 +1837,9 @@ Only loads that clear your Min Net Profit and it can fully price, up to your Max
 # Amazon Relay loads: load types, equipment and how to book them
 
 URL: https://nudoiq.com/amazon-relay-loads/
-Published: 2026-10-02. Last updated: 2026-10-14.
+Published: 2026-10-02. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay loads are posted only on the Amazon Relay load board, which is open 24/7 and free to search and book. Carriers book spot loads (one-way or round trip), reserve blocks, take short-term contracts, bid in auctions or use Post A Truck. Most Relay loads are power only, and higher-graded carriers get first access to new loads.
+Short answer: Amazon Relay loads are posted only on the Relay load board, open 24/7 and free to search and book. Carriers book spot loads (one-way or round trip), reserve blocks, take short-term contracts, bid in auctions or use Post A Truck.
 
 ## Where do Amazon Relay loads come from?
 
@@ -1915,9 +1945,9 @@ The board is open 24/7 with thousands of loads listed at any time. New spot load
 # Amazon Relay carrier data 2026: what FMCSA inspection records show
 
 URL: https://nudoiq.com/amazon-relay-carrier-data/
-Published: 2026-10-02. Last updated: 2026-10-02.
+Published: 2026-10-02. Last updated: 2026-10-16.
 
-Short answer: A NudoIQ analysis of the FMCSA Vehicle Inspection File found 101,444 roadside inspections listing Amazon as the shipper, across 22,866 distinct carriers (USDOT numbers), from 2023-09-24 to 2026-09-22. About 530 new carriers appear each month, and about 70% of carriers hauling Amazon freight run 1-5 power units. Inspections count Amazon freight, not only Amazon Relay loads.
+Short answer: A NudoIQ analysis of FMCSA inspection records found 101,444 roadside inspections listing Amazon as the shipper, across 22,866 distinct carriers, from 2023-09-24 to 2026-09-22. About 70% run 1-5 power units. These count Amazon freight, not only Relay loads.
 
 ## What are the key findings on Amazon carriers?
 
@@ -2128,9 +2158,9 @@ The FMCSA Vehicle Inspection File is updated daily and covers a rolling three-ye
 # Amazon Relay box truck loads: how to find and book them
 
 URL: https://nudoiq.com/amazon-relay-box-truck-loads/
-Published: 2026-10-02. Last updated: 2026-10-14.
+Published: 2026-10-02. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay has box truck loads for 16 ft and 26 ft dock-height box trucks with a working tuck-under liftgate. Carriers find them by filtering the Relay load board by equipment type, posting the truck with Post A Truck, or booking box truck contracts, including 8-hour and 13-hour solo contracts with round trips.
+Short answer: Find Amazon Relay box truck loads by filtering the load board by equipment, posting your truck with Post A Truck, or booking box truck contracts. They're for 16 ft and 26 ft dock-height box trucks with a working tuck-under liftgate.
 
 ## What box truck loads does Amazon Relay have?
 
@@ -2257,9 +2287,9 @@ Amazon pays weekly on a Sunday to Saturday cycle. Loads finished before 11:59 pm
 # Amazon Relay power only: how it works and how to book it
 
 URL: https://nudoiq.com/amazon-relay-power-only/
-Published: 2026-10-02. Last updated: 2026-10-14.
+Published: 2026-10-02. Last updated: 2026-10-16.
 
-Short answer: Power only on Amazon Relay means the carrier brings the tractor and Amazon provides the trailer. Amazon says the majority of Relay loads are power only, and round trips usually need only a tractor. Day cab and sleeper tractors both qualify. One-way loads will most likely need your own trailer or a box truck.
+Short answer: Power only on Amazon Relay means the carrier brings the tractor and Amazon provides the trailer. Amazon says the majority of Relay loads are power only, and day cab and sleeper tractors both qualify.
 
 ## What does power only mean on Amazon Relay?
 
@@ -2383,9 +2413,9 @@ No. Amazon tenders its loads only through the Relay load board, not on third-par
 # Amazon Relay dispatcher: what the job is and how to do it well
 
 URL: https://nudoiq.com/amazon-relay-dispatcher/
-Published: 2026-10-02. Last updated: 2026-10-14.
+Published: 2026-10-02. Last updated: 2026-10-16.
 
-Short answer: An Amazon Relay dispatcher searches and books loads on the carrier's Relay account, assigns them to invited drivers, watches live load tracking and handles problems in transit. The carrier stays responsible for its account and performance score. Carriers can dispatch in-house, hire a dispatch service, or use tools that alert and book by rules.
+Short answer: An Amazon Relay dispatcher searches and books loads on the carrier's Relay account, assigns them to invited drivers, watches live load tracking and handles problems in transit. The carrier stays responsible for its account and performance score.
 
 ## What does an Amazon Relay dispatcher do?
 
@@ -2505,9 +2535,9 @@ The carrier. Amazon says carriers stay responsible for Hours of Service, drug an
 # Amazon Relay account suspended or can't book loads? What to check
 
 URL: https://nudoiq.com/amazon-relay-account-suspended/
-Published: 2026-09-20. Last updated: 2026-10-02.
+Published: 2026-09-20. Last updated: 2026-10-16.
 
-Short answer: Amazon doesn't publish suspension rules, appeal steps or reinstatement timelines. What it does publish: an insurance lapse blocks booking and hauling until coverage is reinstated, and Amazon monitors carrier compliance through internal teams and a third-party service. Check your Insurance tab and authority first, then contact the Support Center from your Relay account.
+Short answer: Check your Insurance tab and authority first, then contact the Support Center from your Relay account. Amazon doesn't publish suspension rules, appeal steps or reinstatement timelines, but it says an insurance lapse blocks booking and hauling until coverage is reinstated.
 
 ## Why can't I book loads on Amazon Relay?
 
@@ -2608,7 +2638,7 @@ NudoIQ runs inside your own signed-in Relay tab and never asks for your Amazon p
 ## Frequently asked questions
 
 ### Is there a phone number for Amazon Relay support?
-No, Amazon Relay has no support phone line. Amazon's Relay FAQ says Amazon Relay doesn't have an official contact phone number. Our guide to contacting Amazon Relay (https://nudoiq.com/amazon-relay-contact/) lists where Amazon sends each problem instead.
+No, Amazon Relay has no support phone line. Amazon's Relay FAQ says Amazon Relay doesn't have an official contact phone number. Our [guide to contacting Amazon Relay](https://nudoiq.com/amazon-relay-contact/) lists where Amazon sends each problem instead.
 
 ### How long does it take to get reinstated on Amazon Relay?
 Amazon doesn't publish a reinstatement timeline. For an insurance lapse, booking stays blocked until coverage is reinstated, so update the Insurance tab as soon as you renew.
@@ -2630,9 +2660,9 @@ No. Amazon says every grade keeps load board access. Lower grades lose new contr
 # Amazon Relay load board not showing loads: what to check
 
 URL: https://nudoiq.com/amazon-relay-load-board-not-showing-loads/
-Published: 2026-09-20. Last updated: 2026-10-14.
+Published: 2026-09-20. Last updated: 2026-10-16.
 
-Short answer: Usually a filter or saved search is set too narrow: equipment type, trailer status, radius, trip length, rate range or time windows. Next, check your account, since lapsed insurance stops booking. Lower grades see new spot loads later. Then test your browser and extensions, and contact the Relay Operations Center if it's still empty.
+Short answer: Usually your filter or saved search is set too narrow, such as equipment type, trailer status, radius, trip length, rate range or time windows. Next, check your account, since lapsed insurance stops booking. Lower grades see new spot loads later.
 
 ## Why is my Amazon Relay load board empty?
 
@@ -2740,9 +2770,9 @@ Use the Relay Operations Center through the Relay portal or Relay mobile. It's a
 # How to book multiple loads on Amazon Relay
 
 URL: https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/
-Published: 2026-09-20. Last updated: 2026-10-14.
+Published: 2026-09-20. Last updated: 2026-10-16.
 
-Short answer: To book multiple loads on Amazon Relay, book the first load, then use the load board's reload and return-trip suggestions, or post your truck with Post A Truck up to two weeks ahead. Blocks and contracts reserve more work at once. Before each extra load, check the pickup window, deadhead and your remaining Hours of Service.
+Short answer: Book the first load, then use the load board's reload and return-trip suggestions, or post your truck with Post A Truck up to two weeks ahead. Blocks and contracts reserve more work at once.
 
 ## How do you book back-to-back loads on Amazon Relay?
 
@@ -2871,9 +2901,9 @@ No. Amazon tenders its loads only through Relay. See our [Amazon Relay loads gui
 # How do Amazon Relay contracts and blocks work?
 
 URL: https://nudoiq.com/amazon-relay-contracts/
-Published: 2026-10-08. Last updated: 2026-10-08.
+Published: 2026-10-08. Last updated: 2026-10-16.
 
-Short answer: An Amazon Relay contract is pre-planned work you book weeks ahead, at a fixed rate, for up to 6 months. Amazon offers full-week, partial-week, reservation and standby contracts, with lengths from 8-hour box truck contracts to 119-hour team blocks. You need a B grade or better to book new contracts, and Amazon pays weekly for the previous week's completed work.
+Short answer: An Amazon Relay contract is pre-planned work you book weeks ahead, at a fixed rate, for up to 6 months. Amazon offers full-week, partial-week, reservation and standby contracts, and you need a B grade or better to book new ones.
 
 ## What is an Amazon Relay contract?
 
@@ -2978,6 +3008,8 @@ It also helps with the open days around a contract. A partial-week contract, or 
 
 NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It's an independent tool, not made by or affiliated with Amazon. It auto refreshes the board and alerts you when a load matches the lanes and price you set for those open days. In Autobook mode it books only loads that clear your own Min Net Profit and stops at your max-books cap. Every load card shows net profit after driver pay, fuel, maintenance and deadhead, so a filler load is judged on what it nets.
 
+Filling your open days with another extension? See [NudoIQ vs LoadFetcher on the spot board](https://nudoiq.com/loadfetcher-alternative/).
+
 It's used by 300+ carriers. Try it with a 7-day free trial, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
 
 ## Frequently asked questions
@@ -3005,11 +3037,13 @@ One driver works three pre-planned 37-hour blocks. Amazon describes it as two da
 # How do Amazon Relay freight auctions work?
 
 URL: https://nudoiq.com/amazon-relay-auctions/
-Published: 2026-10-08. Last updated: 2026-10-08.
+Published: 2026-10-08. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay freight auctions let carriers bid on 3 to 6 month contracts for one-way lanes. To bid you complete Amazon's 15-minute auctions course and hold a C+ grade or better (B for reefer, B+ for some box truck loads). The leading bid at close wins, performance score breaks ties, and the winning rate is locked for the whole contract.
+Short answer: Amazon Relay freight auctions let carriers bid on 3 to 6 month contracts for one-way lanes. The leading bid at close wins, and the winning rate is locked for the whole contract. Bidding takes a C+ grade or better.
 
 ## What do you win in an Amazon Relay auction?
+
+To bid you complete Amazon's 15-minute auctions course and hold a C+ grade or better (B for reefer, B+ for some box truck loads).
 
 A lane, for months. [Amazon's auctions guide](https://relay.amazon.com/blog/freight-bidding-on-amazon-relays-auctions) says winning gives you 3 to 6 months of one-way contracts on dedicated lanes. Amazon's [rate-setting guide](https://relay.amazon.com/blog/booking-options/3-ways-to-set-your-own-freight-rates-on-amazon-relay) adds the key line: "if you win, that rate is locked in for the entire contract."
 
@@ -3106,6 +3140,8 @@ Where it can help is the homework before you bid. A bid is a base rate locked fo
 
 Two cautions. Spot prices are all-in (base rate, fuel surcharge and tolls), while an auction bid is base rate only, so don't copy a spot number straight into a bid. And Lane Intelligence is decision support for judging a price, not a guarantee and not a bid recommendation. Your bid comes from your own costs.
 
+Already checking lane prices in another extension? See [Load Fetcher's price history vs Lane Intelligence](https://nudoiq.com/loadfetcher-alternative/).
+
 Try it with a 7-day free trial, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
 
 ## Frequently asked questions
@@ -3133,9 +3169,9 @@ Amazon emails you to accept or reject the contract. Once you accept, weekly load
 # How do you post a truck on Amazon Relay?
 
 URL: https://nudoiq.com/amazon-relay-post-a-truck/
-Published: 2026-10-08. Last updated: 2026-10-08.
+Published: 2026-10-08. Last updated: 2026-10-16.
 
-Short answer: To post a truck on Amazon Relay, create a Post A Truck order with your availability (up to two weeks ahead), a pickup radius and maximum deadhead, cities to include or exclude, one-way or round trip, distance or trip length limits, maximum stops, stem time and your minimum rate per mile. Relay matches loads to the order and books them for you. The order stays open until it matches or your availability window ends.
+Short answer: Create a Post A Truck order with your availability (up to two weeks ahead), a pickup radius and maximum deadhead, and your minimum rate per mile. Relay matches loads to the order and books them for you.
 
 ## What is Post A Truck on Amazon Relay?
 
@@ -3220,6 +3256,8 @@ Be clear on one thing: the recommended bid is not accurate right after install. 
 
 When the price is right, click Post Truck Now and an order is created for that load automatically. You skip building the order from a blank form.
 
+If you use LoadFetcher, see [how its Post Truck Manager compares](https://nudoiq.com/loadfetcher-alternative/) with One-Click Post A Truck.
+
 NudoIQ is used by 300+ carriers. Try it with a 7-day free trial, and cancel anytime. It's rated 5.0 on the Chrome Web Store.
 
 ## Frequently asked questions
@@ -3247,9 +3285,9 @@ Yes. Amazon lists power only loads as eligible. Choose round trip if you don't h
 # What happens if you cancel a load on Amazon Relay?
 
 URL: https://nudoiq.com/amazon-relay-cancel-load/
-Published: 2026-10-08. Last updated: 2026-10-08.
+Published: 2026-10-08. Last updated: 2026-10-16.
 
-Short answer: Cancelling (rejecting) a load you booked on Amazon Relay counts against your acceptance metric, and so does letting a booked load expire. Amazon says the closer to pickup you reject, the higher the penalty. Your overall score equals your lowest metric, so a weak acceptance score can lower your grade. Loads that Amazon cancels don't count against you.
+Short answer: Cancelling (rejecting) a load you booked counts against your acceptance metric, and Amazon says the closer to pickup you reject, the higher the penalty. Your overall score equals your lowest metric, so it can lower your grade.
 
 ## What counts as a cancellation on Amazon Relay?
 
@@ -3317,7 +3355,7 @@ More than most carriers expect. Amazon doesn't publish:
 
 If someone quotes you exact numbers for any of these, ask where they got them.
 
-Our Amazon Relay disputes guide (https://nudoiq.com/amazon-relay-disputes/) covers each dispute type and what Amazon publishes about it.
+Our [Amazon Relay disputes guide](https://nudoiq.com/amazon-relay-disputes/) covers each dispute type and what Amazon publishes about it.
 
 ## Where does NudoIQ fit?
 
@@ -3330,6 +3368,8 @@ In Autobook mode it's set to book only loads that clear rules you set:
 - **Max-books cap.** It stops after the number of bookings you set.
 
 If you'd rather decide every load yourself, Alert mode tells you about a match without booking it. More in our [auto-booker guide](https://nudoiq.com/amazon-relay-auto-booker/).
+
+Comparing auto bookers for your trucks? Here's [whether Load Fetcher auto books loads](https://nudoiq.com/loadfetcher-alternative/), going by its own listing and plans.
 
 Try it with a 7-day free trial, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
 
@@ -3358,9 +3398,9 @@ Amazon doesn't say how long a single cancellation stays. It says your score refl
 # Can you use a cargo van for Amazon Relay?
 
 URL: https://nudoiq.com/amazon-relay-cargo-van/
-Published: 2026-10-08. Last updated: 2026-10-08.
+Published: 2026-10-08. Last updated: 2026-10-16.
 
-Short answer: No. Amazon's truck requirements page says "Cargo vans cannot be used for loads on Amazon Relay." The smallest equipment Amazon supports is a 16 ft dock-height box truck with a working tuck-under liftgate. Sprinter vans, pickup trucks and hotshot rigs aren't on Amazon's supported equipment list either.
+Short answer: No, you can't. Amazon's truck requirements page says "Cargo vans cannot be used for loads on Amazon Relay." The smallest equipment Amazon supports is a 16 ft dock-height box truck with a working tuck-under liftgate.
 
 ## What does Amazon say about cargo vans on Relay?
 
@@ -3435,6 +3475,8 @@ Straight answer: NudoIQ can't help a cargo van get on Relay. There are no Relay 
 
 Once you run supported equipment and have an approved Relay account, it's useful on the board. NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It auto refreshes the board, alerts you on box truck or power only loads that match your rules, and shows net profit on every load card after driver pay, fuel, maintenance and deadhead. It's an independent tool, not made by or affiliated with Amazon.
 
+Weighing board tools for later? Here's [what Load Fetcher does and costs](https://nudoiq.com/loadfetcher-alternative/), next to NudoIQ.
+
 When you're ready, try it with a 7-day free trial, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
 
 ## Frequently asked questions
@@ -3464,7 +3506,7 @@ Amazon says discounts are available for renting box trucks and tractors for a lo
 URL: https://nudoiq.com/amazon-relay-rates/
 Published: 2026-10-05. Last updated: 2026-10-05.
 
-Short answer: NudoIQ users saw 4,066 distinct Amazon Relay loads first seen from July 7 to October 5, 2026. One-way loads had a median final board price of $420 and a median of $2.90 per mile (median trip 161 miles; middle half $2.35 to $3.38 per mile). Round trips had a median of $2.36 per mile, because their miles include the drive back. 57% of loads were raised in price at least once while posted. Most loads started in Tennessee, where NudoIQ users search most.
+Short answer: One-way loads on Amazon Relay had a median final board price of $420 ($2.90 per mile, 161-mile median trip). NudoIQ users saw 4,066 loads from July 7 to October 5, 2026. 57% of loads were raised in price while posted.
 
 Rates by trip type (4,066 distinct loads first seen July 7 to October 5, 2026, from loads seen by NudoIQ users on the Amazon Relay board):
 
@@ -3480,7 +3522,7 @@ Rates by trip type (4,066 distinct loads first seen July 7 to October 5, 2026, f
 
 URL: https://nudoiq.com/amazon-relay-rates/tn-to-tn/
 
-NudoIQ users saw 1,984 distinct Amazon Relay loads from Tennessee to Tennessee first seen from July 7 to October 5, 2026. One-way loads had a median final board price of $386 and a median of $3.23 per mile (median trip 121 miles; middle half of loads: $2.68 to $3.62 per mile). Round trips had a median of $572 and $2.37 per mile (median 246 miles, counting the drive back). 62% of loads were raised in price at least once while posted.
+One-way loads from Tennessee to Tennessee had a median final board price of $386 ($3.23 per mile). NudoIQ users saw 1,984 loads from July 7 to October 5, 2026. 62% of loads were raised in price while posted.
 
 | Trip type | Loads | Median final price | Median per mile | Median miles | Middle 50% price | Middle 50% per mile |
 |---|---|---|---|---|---|---|
@@ -3492,7 +3534,7 @@ NudoIQ users saw 1,984 distinct Amazon Relay loads from Tennessee to Tennessee f
 
 URL: https://nudoiq.com/amazon-relay-rates/tn-to-ky/
 
-NudoIQ users saw 662 distinct Amazon Relay loads from Tennessee to Kentucky first seen from July 7 to October 5, 2026. One-way loads had a median final board price of $552 and a median of $2.81 per mile (median trip 202 miles; middle half of loads: $2.47 to $3.12 per mile). Round trips had a median of $619 and $2.32 per mile (median 285 miles, counting the drive back). 74% of loads were raised in price at least once while posted.
+One-way loads from Tennessee to Kentucky had a median final board price of $552 ($2.81 per mile). NudoIQ users saw 662 loads from July 7 to October 5, 2026. 74% of loads were raised in price while posted.
 
 | Trip type | Loads | Median final price | Median per mile | Median miles | Middle 50% price | Middle 50% per mile |
 |---|---|---|---|---|---|---|
@@ -3504,7 +3546,7 @@ NudoIQ users saw 662 distinct Amazon Relay loads from Tennessee to Kentucky firs
 
 URL: https://nudoiq.com/amazon-relay-rates/tn-to-ga/
 
-NudoIQ users saw 356 distinct Amazon Relay loads from Tennessee to Georgia first seen from July 7 to October 5, 2026. One-way loads had a median final board price of $400 and a median of $2.80 per mile (median trip 146 miles; middle half of loads: $2.00 to $3.43 per mile). 59% of loads were raised in price at least once while posted.
+One-way loads from Tennessee to Georgia had a median final board price of $400 ($2.80 per mile). NudoIQ users saw 356 loads from July 7 to October 5, 2026. 59% of loads were raised in price while posted.
 
 | Trip type | Loads | Median final price | Median per mile | Median miles | Middle 50% price | Middle 50% per mile |
 |---|---|---|---|---|---|---|
@@ -3516,7 +3558,7 @@ NudoIQ users saw 356 distinct Amazon Relay loads from Tennessee to Georgia first
 
 URL: https://nudoiq.com/amazon-relay-rates/tn-to-va/
 
-NudoIQ users saw 181 distinct Amazon Relay loads from Tennessee to Virginia first seen from July 25 to October 4, 2026. One-way loads had a median final board price of $537 and a median of $2.94 per mile (median trip 189 miles; middle half of loads: $2.68 to $3.08 per mile). 78% of loads were raised in price at least once while posted.
+One-way loads from Tennessee to Virginia had a median final board price of $537 ($2.94 per mile). NudoIQ users saw 181 loads from July 25 to October 4, 2026. 78% of loads were raised in price while posted.
 
 | Trip type | Loads | Median final price | Median per mile | Median miles | Middle 50% price | Middle 50% per mile |
 |---|---|---|---|---|---|---|
@@ -3528,7 +3570,7 @@ NudoIQ users saw 181 distinct Amazon Relay loads from Tennessee to Virginia firs
 
 URL: https://nudoiq.com/amazon-relay-rates/tn-to-al/
 
-NudoIQ users saw 136 distinct Amazon Relay loads from Tennessee to Alabama first seen from July 25 to October 5, 2026. One-way loads had a median final board price of $465 and a median of $3.01 per mile (median trip 161 miles; middle half of loads: $2.36 to $3.29 per mile). 49% of loads were raised in price at least once while posted.
+One-way loads from Tennessee to Alabama had a median final board price of $465 ($3.01 per mile). NudoIQ users saw 136 loads from July 25 to October 5, 2026. 49% of loads were raised in price while posted.
 
 | Trip type | Loads | Median final price | Median per mile | Median miles | Middle 50% price | Middle 50% per mile |
 |---|---|---|---|---|---|---|
@@ -3540,7 +3582,7 @@ NudoIQ users saw 136 distinct Amazon Relay loads from Tennessee to Alabama first
 
 URL: https://nudoiq.com/amazon-relay-rates/tn-to-nc/
 
-NudoIQ users saw 74 distinct Amazon Relay loads from Tennessee to North Carolina first seen from July 7 to October 5, 2026. One-way loads had a median final board price of $407 and a median of $1.98 per mile (median trip 231 miles; middle half of loads: $1.80 to $2.50 per mile). 66% of loads were raised in price at least once while posted.
+One-way loads from Tennessee to North Carolina had a median final board price of $407 ($1.98 per mile). NudoIQ users saw 74 loads from July 7 to October 5, 2026. 66% of loads were raised in price while posted.
 
 | Trip type | Loads | Median final price | Median per mile | Median miles | Middle 50% price | Middle 50% per mile |
 |---|---|---|---|---|---|---|
@@ -3555,9 +3597,9 @@ Method: each load counted once by load ID; final price = last price seen on the 
 # Why does the Chrome Web Store show fewer users for NudoIQ than 300+ carriers?
 
 URL: https://nudoiq.com/chrome-web-store-user-count/
-Published: 2026-10-08. Last updated: 2026-10-08.
+Published: 2026-10-08. Last updated: 2026-10-16.
 
-Short answer: The Chrome Web Store only counts people who installed NudoIQ from its store listing, which was created on May 21, 2026. Before that, NudoIQ was distributed directly to carriers, without the store, so those carriers are not in the store's number. In total, NudoIQ is used by 300+ carriers.
+Short answer: The Chrome Web Store only counts installs from NudoIQ's store listing, created on May 21, 2026. Before that, carriers got NudoIQ directly, so they aren't in the store's number. In total, NudoIQ is used by 300+ carriers.
 
 ## How carriers got NudoIQ before the store
 
@@ -3602,9 +3644,9 @@ NudoIQ is rated 5.0 on the Chrome Web Store. You can see the rating and the user
 # Why do carriers choose NudoIQ over other Amazon Relay extensions?
 
 URL: https://nudoiq.com/why-nudoiq/
-Published: 2026-10-08. Last updated: 2026-10-08.
+Published: 2026-10-08. Last updated: 2026-10-14.
 
-Short answer: NudoIQ is the only Amazon Relay extension that books to your minimum net profit and drafts scorecard dispute letters (52 other listings checked October 5, 2026). It's the only one in our table with all six. $49.99 a month flat.
+Short answer: Carriers choose NudoIQ because it's the only Amazon Relay extension that books to your minimum net profit and drafts scorecard dispute letters (52 other listings checked October 5, 2026). $49.99 a month flat.
 
 ## Why carriers choose NudoIQ
 
@@ -3675,9 +3717,9 @@ No. NudoIQ is an independent extension and is not affiliated with or endorsed by
 # Rocket Relay alternative: NudoIQ vs Rocket Pro for the Amazon Relay load board
 
 URL: https://nudoiq.com/rocket-relay-alternative/
-Published: 2026-10-10. Last updated: 2026-10-10.
+Published: 2026-10-10. Last updated: 2026-10-14.
 
-Short answer: NudoIQ is a good Rocket Relay alternative if you want loads booked by net profit. AutoBook books only loads that clear your minimum net profit.
+Short answer: For loads booked only when they clear your minimum net profit after your own costs, NudoIQ is the Rocket Relay alternative. It also drafts scorecard dispute letters. Try it 7 days free, no card needed to start.
 
 ## What is a good Rocket Relay alternative?
 
@@ -3788,14 +3830,16 @@ Yes. NudoIQ's buttons and banners on the load board work in English and Spanish.
 ### How does NudoIQ decide which loads to book?
 Only loads that clear your Min Net Profit and it can fully price, up to your Max books. Alert mode just alerts. See [what happens if you cancel a load](https://nudoiq.com/amazon-relay-cancel-load/).
 
+
+
 ---
 
 # Swift Relay alternative: NudoIQ vs SwiftRelay for the Amazon Relay load board
 
 URL: https://nudoiq.com/swiftrelay-alternative/
-Published: 2026-10-10. Last updated: 2026-10-10.
+Published: 2026-10-10. Last updated: 2026-10-14.
 
-Short answer: NudoIQ is a good SwiftRelay alternative if you want loads booked by net profit. AutoBook books only loads that clear your minimum net profit.
+Short answer: For loads booked only when they clear your minimum net profit after your own costs, NudoIQ is the SwiftRelay alternative. It also drafts scorecard dispute letters. Try it 7 days free, no card needed to start.
 
 ## What is a good Swift Relay alternative?
 
@@ -3900,14 +3944,16 @@ Yes. NudoIQ's buttons and banners on the load board work in English and Spanish.
 ### How does NudoIQ decide which loads to book?
 Only loads that clear your Min Net Profit and it can fully price, up to your Max books. Alert mode just alerts. See [what happens if you cancel a load](https://nudoiq.com/amazon-relay-cancel-load/).
 
+
+
 ---
 
 # RGD Auto Booker alternative: NudoIQ vs RGD for the Amazon Relay load board
 
 URL: https://nudoiq.com/rgd-alternative/
-Published: 2026-10-10. Last updated: 2026-10-10.
+Published: 2026-10-10. Last updated: 2026-10-14.
 
-Short answer: NudoIQ is a good RGD alternative if you want loads booked by net profit. AutoBook books only loads that clear your minimum net profit.
+Short answer: For loads booked only when they clear your minimum net profit after your own costs, NudoIQ is the RGD alternative. It also drafts scorecard dispute letters. Try it 7 days free, no card needed to start.
 
 ## What is a good RGD alternative for Amazon Relay?
 
@@ -4014,14 +4060,16 @@ Yes, in a few minutes. Turn off or remove RGD, add NudoIQ from the Chrome Web St
 ### Is NudoIQ or RGD made by Amazon?
 No. NudoIQ is an independent product by Sami Enterprises LLC, not affiliated with, endorsed or sponsored by Amazon. RGD comes from Rolling Global Digital, per its website.
 
+
+
 ---
 
 # Easy Relay alternative: NudoIQ vs EasyRelay for the Amazon Relay load board
 
 URL: https://nudoiq.com/easyrelay-alternative/
-Published: 2026-10-10. Last updated: 2026-10-10.
+Published: 2026-10-10. Last updated: 2026-10-14.
 
-Short answer: NudoIQ is a good EasyRelay alternative if you want loads booked for you. AutoBook books only the loads that clear your minimum net profit.
+Short answer: For loads booked for you while you drive or dispatch, NudoIQ is the EasyRelay alternative. AutoBook books only the loads that clear your minimum net profit. Try it 7 days free, no card needed to start.
 
 ## What is a good Easy Relay alternative?
 
@@ -4125,6 +4173,8 @@ Yes, in a few minutes. Turn off or remove EasyRelay, add NudoIQ from the Chrome 
 
 ### Is NudoIQ or Easy Relay made by Amazon?
 No. NudoIQ is an independent product by Sami Enterprises LLC, not affiliated with, endorsed or sponsored by Amazon. EasyRelay is published by Easy Relay LLC.
+
+
 
 ---
 
@@ -4235,9 +4285,9 @@ Put in everything you pay per mile besides fuel: driver pay, maintenance, tires 
 # Amazon Relay payment schedule: when do carriers get paid?
 
 URL: https://nudoiq.com/amazon-relay-payments/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay pays weekly. Its FAQ says the cycle runs Sunday to Saturday, and everything completed before 23:59 Saturday is paid the following Friday. Invoices are generated automatically in the Relay portal, and payment disputes are submitted there within 30 days of reviewing your weekly invoice. Amazon publishes no detention, TONU or layover policy for Relay.
+Short answer: Amazon Relay pays weekly. Its FAQ says the cycle runs Sunday to Saturday, and everything completed before 23:59 Saturday is paid the following Friday. Invoices are generated automatically in the Relay portal.
 
 ## When does Amazon Relay pay carriers?
 
@@ -4338,9 +4388,9 @@ Amazon's public Relay pages don't describe a quick pay or early pay option today
 # How do you file a dispute on Amazon Relay?
 
 URL: https://nudoiq.com/amazon-relay-disputes/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon publishes two dispute routes for Relay: payment disputes, submitted in the Relay portal within 30 days of reviewing your weekly invoice, and on-time performance disputes, where carriers can let Relay know and dispute score impacts. Amazon publishes no route for rejected loads, trip completion or driver verification, and says it won't offer an appeal for roadside inspection violation limits. There's no official phone number.
+Short answer: Amazon publishes two dispute routes for Relay. Submit payment disputes in the Relay portal within 30 days of reviewing your weekly invoice, and let Relay know to dispute on-time score impacts. There's no published route for rejected loads.
 
 ## What can you dispute on Amazon Relay?
 
@@ -4431,9 +4481,9 @@ Amazon says carriers must report loss prevention issues in the Relay support cen
 # Amazon Relay phone number: how do you contact Amazon Relay?
 
 URL: https://nudoiq.com/amazon-relay-contact/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon's Relay FAQ says Amazon Relay doesn't have an official contact phone number. For a load in progress, the 24/7 Relay Operations Center (ROC) is reached through the Relay portal or Relay mobile. Account and security problems go to the Support Center when you're logged in, and applicants use Contact Us on the top right of the application page.
+Short answer: Amazon's Relay FAQ says there's no official Amazon Relay phone number. For a load in progress, reach the 24/7 Relay Operations Center (ROC) through the Relay portal or app. Account problems go to the Support Center when you're logged in.
 
 ## Does Amazon Relay have a phone number?
 
@@ -4547,9 +4597,9 @@ Click Contact Us on the top right of your application page, as Amazon's FAQ says
 # How long does it take to get approved for Amazon Relay?
 
 URL: https://nudoiq.com/amazon-relay-approval-time/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon's Relay FAQ says a completed application is typically approved or rejected within 1 to 3 weeks, and that any delay is due to validating insurance information. Amazon's blog posts give slightly different ranges: within three weeks, and 2 to 3 weeks. If you hear nothing after two weeks, check that your FMCSA contact information matches your Relay application exactly.
+Short answer: Amazon's Relay FAQ says a completed application is typically approved or rejected within 1 to 3 weeks, and delays come from validating insurance. If you hear nothing after two weeks, check that your FMCSA contact information matches your application exactly.
 
 ## How long does Amazon Relay approval take?
 
@@ -4657,9 +4707,9 @@ The relay.amazon.ca page says Canadian applications are approved or rejected wit
 # Amazon Relay background check: what drivers and carriers should know
 
 URL: https://nudoiq.com/amazon-relay-background-check/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Every driver onboarding to Amazon Relay must meet standardized background check requirements before hauling Relay loads. The check starts in the driver's Relay app and is run by Amazon's approved provider, which looks for past criminal or motor vehicle record violations, and checks from other providers aren't accepted. The separate ID check (driver's license front and back plus a selfie) is typically reviewed within 48 hours. Amazon doesn't publish how far back the check goes or which offenses disqualify a driver.
+Short answer: Every driver onboarding to Amazon Relay must meet standardized background check requirements before hauling Relay loads. Amazon's approved provider runs the check from the driver's Relay app and looks for past criminal or motor vehicle record violations.
 
 ## How does a driver get onboarded to Amazon Relay?
 
@@ -4771,9 +4821,9 @@ Amazon doesn't explain driver background check statuses on any public page, and 
 # Amazon Relay app: what it does and how drivers use it
 
 URL: https://nudoiq.com/amazon-relay-app/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: The Amazon Relay app is Amazon's mobile app for iOS and Android. Drivers who work for approved, onboarded Relay carriers use it to see their schedule, check in and out at facilities, follow truck-friendly routes, get load instructions and report issues. Amazon says the app must be open, with location services on, while a driver runs Relay loads.
+Short answer: The Amazon Relay app is Amazon's mobile app for iOS and Android. Drivers for approved, onboarded Relay carriers use it to see their schedule, check in and out at facilities, follow truck-friendly routes, get load instructions and report issues.
 
 ## What is the Amazon Relay app?
 
@@ -4883,9 +4933,9 @@ No, a driver needs a carrier. Amazon says only drivers who work for approved and
 # Amazon Relay Canada: requirements, insurance and how to sign up
 
 URL: https://nudoiq.com/amazon-relay-canada/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay Canada runs on relay.amazon.ca. To haul within Canada you need an active NSC number, and for cross-border work you also need a DOT number with interstate authority and a valid MC number. Insurance minimums are in CAD, with cargo coverage of at least $150,000, and Quebec operators also need CNESST registration. Amazon says Canadian applications are approved or rejected within 2 to 4 business days.
+Short answer: To haul on Amazon Relay Canada you need an active NSC number, plus a DOT number with interstate authority and a valid MC number for cross-border work. Amazon says applications are approved or rejected within 2 to 4 business days.
 
 ## Is Amazon Relay available in Canada?
 
@@ -5008,9 +5058,9 @@ Yes, your cargo limit is higher in Canada. The Canada page asks for cargo covera
 # Amazon Relay peak season 2026: dates, load volume and how to prepare
 
 URL: https://nudoiq.com/amazon-relay-peak-season/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon says Relay load volume spikes between October and January, and its peak season post says that in 2026 it expects over 4 million loads, with 300,000 a week by December. The season runs from Prime Big Deal Days (October 6 and 7, 2026) through Black Friday, Cyber Monday, Super Saturday and Christmas. Those are Amazon's freight volume numbers, not a forecast of carrier pay, and Amazon publishes no peak rates.
+Short answer: Amazon says Relay load volume spikes between October and January, and that in 2026 it expects over 4 million loads, with 300,000 a week by December. Those are Amazon's freight volume numbers, not a forecast of carrier pay.
 
 ## When is Amazon Relay peak season?
 
@@ -5116,9 +5166,9 @@ Amazon names the load board, Post A Truck, short-term contracts, contract auctio
 # Amazon Relay login: how to fix sign-in problems
 
 URL: https://nudoiq.com/amazon-relay-login/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon's Relay FAQ gives three fixes for login trouble. Reset your password on Amazon's account recovery page using the email you sign into Relay with, and make sure it's the email you first registered with. If the page keeps spinning or redirecting, try a private window, clear your cookies or switch browsers, and for unauthorized access use the Support Center while logged in.
+Short answer: Reset your password on Amazon's account recovery page, using the email you first registered with for Relay. If the page keeps spinning or redirecting, try a private window, clear your cookies or switch browsers.
 
 ## How do you log into Amazon Relay?
 
@@ -5216,9 +5266,9 @@ Amazon doesn't publish a list of reasons a Relay login gets blocked. If you can 
 # Amazon Relay hours of service: HOS, ELDs and team driving
 
 URL: https://nudoiq.com/amazon-relay-hours-of-service/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon publishes no separate hours of service rules for Relay, so the federal rules apply. A property-carrying driver may drive 11 hours within 14 hours of coming on duty after 10 consecutive hours off, with a 30-minute break after 8 driving hours. Amazon says Relay includes time for HOS breaks in your scheduled trip duration, but it's on the carrier to plan. Amazon publishes no ELD rule of its own; federal law requires most carriers to use one.
+Short answer: Amazon publishes no separate HOS rules for Relay, so federal rules apply. A property-carrying driver may drive 11 hours within 14 hours of coming on duty after 10 consecutive hours off, with a 30-minute break after 8 driving hours.
 
 ## Who sets hours of service on Amazon Relay loads?
 
@@ -5323,9 +5373,9 @@ Amazon doesn't define stem time on any public Relay page. Check a load's times a
 # Amazon Relay Rewards program: tiers, benefits and discounts
 
 URL: https://nudoiq.com/amazon-relay-rewards/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Relay Rewards is Amazon's rewards program for approved Relay carriers; its Rewards post says it's US only. Everyone starts in the Basic tier, and your tier is updated on the 5th of each month using your company's lowest performance score from the previous month, miles driven against your number of verified drivers, and tenure. Benefits include promotional bonuses, deals and discounts, booking offers for the highest tiers, dedicated office hours and Amazon swag.
+Short answer: Relay Rewards is Amazon's rewards program for approved Relay carriers, and its Rewards post says it's US only. Everyone starts in the Basic tier, and tiers update on the 5th of each month. Benefits include promotional bonuses and discounts.
 
 ## What is Amazon Relay Rewards?
 
@@ -5436,9 +5486,9 @@ Amazon Relay's pages point two ways. The Relay Rewards post says the program is 
 # Amazon Relay 101 training and the Relay Learning Center
 
 URL: https://nudoiq.com/amazon-relay-learning-center/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Relay 101 is a short course in Relay's Learning Center, and Amazon's FAQ lists it as the first step after approval, at about 10 minutes. The Learning Center is a free library of self-paced courses inside your Relay account, with collections for carrier onboarding, drivers, high volume events, the performance score and road safety. We don't publish course answers: the courses are short, and they teach how Relay works.
+Short answer: Relay 101 is a short course in Relay's Learning Center, about 10 minutes, and Amazon's FAQ lists it as the first step after approval. The Learning Center is a free library of self-paced courses inside your Relay account.
 
 ## What is the Amazon Relay Learning Center?
 
@@ -5528,9 +5578,9 @@ Amazon Relay's home page says you complete a few digital courses in the Learning
 # Amazon Relay shuttle and hostler loads: how they work
 
 URL: https://nudoiq.com/amazon-relay-hostler-shuttle-loads/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Hostling on Amazon Relay means moving trailers within one Amazon location, and shuttle runs move trailers between nearby Amazon sites, usually within 50 miles. You book both by blocks of time instead of individual loads, and Amazon says you're paid for the full block you commit to. You need your own day cab or hostler truck, a CDL, a C+ performance grade and two Learning Center courses.
+Short answer: Hostling on Amazon Relay means moving trailers within one Amazon location, and shuttle runs move trailers between nearby Amazon sites, usually within 50 miles. You book both by blocks of time, and Amazon says you're paid for the full block.
 
 ## What are hostler and shuttle loads on Amazon Relay?
 
@@ -5620,9 +5670,9 @@ Amazon says to filter by power-only loads and pick times and locations that work
 # Amazon Relay intermodal: how drayage loads work
 
 URL: https://nudoiq.com/amazon-relay-intermodal/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay's intermodal loads are power-only drayage runs between Amazon sites and rail ramps, typically under 3 hours of driving one way. You need a Class 8 truck, UIIA certification with the railroad addenda you want, and Amazon's online intermodal safety courses. Amazon partners with railroads to provide the chassis, so carriers don't pay chassis rental charges at rail ramps.
+Short answer: Amazon Relay intermodal loads are power-only drayage runs between Amazon sites and rail ramps, typically under 3 hours of driving one way. You need a Class 8 truck, UIIA certification and Amazon's online intermodal safety courses.
 
 ## What is intermodal drayage on Amazon Relay?
 
@@ -5712,9 +5762,9 @@ Relay mentions ports only in passing. Amazon's Prime Day post tells UIIA-certifi
 # Amazon Relay for owner-operators: what you need to haul
 
 URL: https://nudoiq.com/amazon-relay-owner-operator/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Yes, owner-operators can haul on Amazon Relay, and Amazon has no fleet size minimum. You need your own DOT number with interstate authority, active for at least 180 days, plus a valid MC number and a truck type Amazon accepts (cargo vans are out). Relay isn't a job: approved carriers are independent contractors who book Amazon loads for their own business, not Amazon employees.
+Short answer: Yes, owner-operators can haul on Amazon Relay, and Amazon has no fleet size minimum. You need your own DOT number with interstate authority, active for at least 180 days, plus a valid MC number and a truck type Amazon accepts.
 
 ## What is an owner-operator on Amazon Relay?
 
@@ -5839,9 +5889,9 @@ Amazon says owner-operators can access Relay's trucking discounts on fuel, vehic
 # Amazon Relay safety score: the Safety Scorecard and CSA limits
 
 URL: https://nudoiq.com/amazon-relay-safety-score/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay's safety score lives in a Safety Scorecard in your Relay account, separate from your performance score. It shows your FMCSA BASIC percentiles, your safety rating and a Yes/No on whether you meet Relay's requirements. Amazon also checks violation rates from the last 12 months of FMCSA inspections: the driver rate must be at or below 35% and the vehicle rate at or below 50%, and Amazon offers no appeal on these limits.
+Short answer: Amazon Relay's safety score lives in a Safety Scorecard in your Relay account, separate from your performance score. It shows your FMCSA BASIC percentiles, your safety rating and a Yes/No on whether you meet Relay's requirements.
 
 ## What is the Amazon Relay safety score?
 
@@ -5963,9 +6013,9 @@ You have to update it every two years, but Amazon's CSA post recommends every si
 # Amazon Relay fraud: double brokering, geospoofing and cargo theft
 
 URL: https://nudoiq.com/amazon-relay-fraud/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon doesn't allow double brokering, and it tenders loads only to approved carriers on the Relay portal or app, never through third-party load boards, so an "Amazon load" offered anywhere else wasn't tendered by Amazon. Report suspicious activity to relay-network-reports@amazon.com with a detailed description and DOT numbers if you know them, or contact the Relay Operations Center, which Amazon says takes reports 24/7 through the Relay portal or app. In an emergency such as an active theft, call 911; Amazon doesn't publish a fraud phone number.
+Short answer: Amazon tenders loads only to approved carriers on the Relay portal or app, never through third-party load boards, so an "Amazon load" offered anywhere else wasn't tendered by Amazon. Report suspicious activity to relay-network-reports@amazon.com. In an emergency, call 911.
 
 ## What kinds of fraud hit Amazon Relay carriers?
 
@@ -6103,9 +6153,9 @@ The driver calls 911 first, then requests a callback from Amazon support as soon
 # Amazon Relay CARB compliance: Clean Truck Check for California loads
 
 URL: https://nudoiq.com/amazon-relay-california-carb/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: To haul Amazon Relay loads that travel through California, your diesel and alternative fuel trucks over 14,000 pounds need CARB Clean Truck Check (CTC) certification, even if they're registered in another state. Register in CARB's CTC-VIS portal, then upload your certificates to your Relay account (verification typically takes 2 business days) or attest that you won't operate in California. Trucks without valid certificates are rejected at check-in, and Amazon doesn't pay for loads that aren't hauled.
+Short answer: To haul Amazon Relay loads through California, diesel and alternative fuel trucks over 14,000 pounds need CARB Clean Truck Check (CTC) certification, even if they're registered in another state. Trucks without valid certificates are rejected at check-in.
 
 ## What does CARB compliance mean on Amazon Relay?
 
@@ -6216,9 +6266,9 @@ Yes. Amazon says to register reefers in CARB's ARBER system and meet CARB's Airb
 # Amazon Relay Assistant: rate negotiation and trip support
 
 URL: https://nudoiq.com/amazon-relay-assistant/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Relay Assistant is Amazon Relay's AI-powered chat. Top-performing carriers with strong Relay performance scores can use it to negotiate rates and pickup times on urgent spot loads, and Amazon either approves the request so you can book right away or may send a counteroffer. Drivers also use it during trips for issues like trailer availability and site closures, and it connects you to a human operator when it can't solve the problem.
+Short answer: Relay Assistant is Amazon Relay's AI-powered chat. Top-performing carriers can use it to negotiate rates and pickup times on urgent spot loads, and Amazon either approves the request or may send a counteroffer. Drivers also use it for trip issues.
 
 ## What is Amazon Relay Assistant?
 
@@ -6332,9 +6382,9 @@ Amazon doesn't describe Relay Assistant booking loads on its own today. It says 
 # Amazon Relay vs DAT load board: how they compare
 
 URL: https://nudoiq.com/amazon-relay-vs-dat/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay is Amazon's own load board: access is free once you're approved, Amazon tenders its own loads directly to carriers, and pay runs on a weekly cycle. DAT is a paid subscription board where brokers and shippers post freight, with carrier plans from $59 a month per dat.com, checked October 14, 2026. Amazon doesn't tender loads through DAT or any other third-party board, so which one fits depends on whether you qualify for Relay and what freight you want.
+Short answer: Amazon Relay is Amazon's own load board, free once you're approved, where Amazon tenders its loads directly to carriers. DAT is a paid subscription board where brokers and shippers post freight. Amazon doesn't tender loads through DAT.
 
 ## What's the main difference between Amazon Relay and DAT?
 
@@ -6446,9 +6496,9 @@ Per dat.com on October 14, 2026, carrier plans were $59, $149, $169, $259 and $3
 # Amazon Relay reefer loads: what Amazon requires
 
 URL: https://nudoiq.com/amazon-relay-reefer/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Yes, Amazon Relay has reefer loads, including grocery shipments, and Amazon says they're available to all carriers based on performance score. Chilled loads run at 33°F and frozen loads at -10°F, units must be pre-cooled at least 1.5 hours before pickup, trucks must be food grade, and cargo insurance must be at least $100,000 including reefer breakdown coverage. You can book spot reefer loads with Relay's 53', 48' and 26' reefer filters, and reefer auctions need at least a B grade.
+Short answer: Yes, Amazon Relay has reefer loads, including grocery shipments, available to all carriers based on performance score. Trucks must be food grade, units pre-cooled at least 1.5 hours before pickup, and cargo insurance at least $100,000 including reefer breakdown coverage.
 
 ## Does Amazon Relay have reefer loads?
 
@@ -6573,9 +6623,9 @@ Amazon doesn't publish Relay reefer rates, so we don't compare them. Each load s
 # Amazon Relay trailer rental: renting your trailers to Amazon
 
 URL: https://nudoiq.com/amazon-relay-trailer-rental/
-Published: 2026-10-14. Last updated: 2026-10-14.
+Published: 2026-10-14. Last updated: 2026-10-16.
 
-Short answer: Amazon Relay trailer rental runs through Relay's equipment marketplace, where approved carriers bid in live auctions to rent their 53' dry van trailers to Amazon, entering a rate per trailer per week. Trailers must be CARB compliant or SmartWay designated, have skirts and a valid DOT inspection, and Amazon picks them up and drops them off. If you want to rent equipment to run Relay instead, Amazon says most Relay loads are power-only, and Relay's discounts include truck rentals.
+Short answer: Amazon Relay trailer rental runs through Relay's equipment marketplace, where approved carriers bid in live auctions to rent their 53' dry van trailers to Amazon, at a rate per trailer per week. Amazon picks them up and drops them off.
 
 ## What is Amazon Relay trailer rental?
 

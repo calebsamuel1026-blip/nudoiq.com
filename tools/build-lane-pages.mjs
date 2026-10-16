@@ -58,7 +58,9 @@ const SRC_PHRASE = 'from loads seen by NudoIQ users on the Amazon Relay board';
 // ── template pieces copied from a current guide ──────────────────
 const T = fs.readFileSync(path.join(ROOT, TEMPLATE, 'index.html'), 'utf8').replace(/\r\n/g, '\n');
 const cut = (re, what) => { const m = T.match(re); if (!m) throw new Error(`template: ${what} not found in /${TEMPLATE}/`); return m[0]; };
-const HEAD_TPL = cut(/^<!DOCTYPE html>[\s\S]*?<link rel="stylesheet" href="\/assets\/guide\.css">\n/, 'head block');
+// The template guide has a Spanish twin, so its head carries hreflang links that belong to it only (2026-10-16).
+const HEAD_TPL = cut(/^<!DOCTYPE html>[\s\S]*?<link rel="stylesheet" href="\/assets\/guide\.css">\n/, 'head block')
+  .replace(/^ *<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n/gm, '');
 // Anything else the guide carries after its JSON-LD and before </head> (e.g. the Microsoft UET tag) is tracking too: keep it.
 const HEAD_TAIL = cut(/<link rel="stylesheet" href="\/assets\/guide\.css">\n[\s\S]*?<\/head>/, 'head tail')
   .replace(/^<link[^\n]*\n/, '').replace(/<\/head>$/, '')
@@ -259,13 +261,11 @@ const byline = (first, last) => `<p class="byline">NudoIQ data &middot; Loads fi
 
 // ── facts used in sentences and placeholders ─────────────────────
 const best = (l) => (l.OW && l.OW.pay_med != null ? ['OW', l.OW] : ['all', l.all]);
+// Short answer: Martha's 40-word template (research/copy/ANSWER-BOXES-2026-10-16.json lane_template, 2026-10-16).
+// The middle half, round trips and trip length stay in the tables and FAQ below the box.
 function laneAnswer(l) {
   const a = l.all, [k, b] = best(l);
-  let s = `NudoIQ users saw ${int(a.n)} distinct Amazon Relay loads from ${l.o_name} to ${l.d_name} first seen from ${range(a.first_date, a.last_date)}. `;
-  s += `${k === 'OW' ? 'One-way loads' : 'All loads'} had a median final board price of ${usd0(b.pay_med)} and a median of ${usd2(b.rpm_med)} per mile (median trip ${int(b.miles_med)} miles; middle half of loads: ${usd2(b.rpm_p25)} to ${usd2(b.rpm_p75)} per mile).`;
-  if (l.RT && l.RT.pay_med != null) s += ` Round trips had a median of ${usd0(l.RT.pay_med)} and ${usd2(l.RT.rpm_med)} per mile (median ${int(l.RT.miles_med)} miles, counting the drive back).`;
-  s += ` ${pct(a.share_raised)} of loads were raised in price at least once while posted.`;
-  return s;
+  return `${k === 'OW' ? 'One-way loads' : 'All loads'} from ${l.o_name} to ${l.d_name} had a median final board price of ${usd0(b.pay_med)} (${usd2(b.rpm_med)} per mile). NudoIQ users saw ${int(a.n)} loads from ${range(a.first_date, a.last_date)}. ${pct(a.share_raised)} of loads were raised in price while posted.`;
 }
 function laneFacts(l) {
   const a = l.all, ow = l.OW, rt = l.RT;
@@ -365,7 +365,8 @@ for (const l of LANES) {
   const tnShare = (N.origin_states.find((s) => s.state === 'TN') || { n: 0 }).n / a.n;
   const topCity = N.origin_cities[0];
   const ratio = N.rt_ow_rpm_ratio_city_pairs;
-  const answer = `NudoIQ users saw ${int(a.n)} distinct Amazon Relay loads first seen from ${range(first, last)}. One-way loads had a median final board price of ${usd0(ow.pay_med)} and a median of ${usd2(ow.rpm_med)} per mile (median trip ${int(ow.miles_med)} miles; middle half ${usd2(ow.rpm_p25)} to ${usd2(ow.rpm_p75)} per mile). Round trips had a median of ${usd2(rt.rpm_med)} per mile, because their miles include the drive back. ${pct(a.share_raised)} of loads were raised in price at least once while posted. Most loads started in Tennessee, where NudoIQ users search most.`;
+  // Martha's 40-word template (research/copy/ANSWER-BOXES-2026-10-16.json lane_hub_template, 2026-10-16).
+  const answer = `One-way loads on Amazon Relay had a median final board price of ${usd0(ow.pay_med)} (${usd2(ow.rpm_med)} per mile, ${int(ow.miles_med)}-mile median trip). NudoIQ users saw ${int(a.n)} loads from ${range(first, last)}. ${pct(a.share_raised)} of loads were raised in price while posted.`;
   const facts = [
     `${int(a.n)} distinct loads first seen ${range(first, last)} (${a.days} days with data in the 90-day window), ${SRC_PHRASE}; ${int(N.n_all_time)} loads since ${dLong(N.all_time_first)}.`,
     `One way (${int(ow.n)}): median ${usd0(ow.pay_med)}, ${usd2(ow.rpm_med)}/mile (middle half ${usd2(ow.rpm_p25)}–${usd2(ow.rpm_p75)}), ${int(ow.miles_med)} miles.`,
@@ -531,8 +532,15 @@ for (const l of LANES) {
   const ff = path.join(ROOT, 'llms-full.txt');
   let f = fs.readFileSync(ff, 'utf8').replace(/\r\n/g, '\n');
   const MARK = '# Amazon Relay rates by lane (NudoIQ board data)';
+  // Replace only this script's own section (2026-10-16): build-guides.mjs now merges, so guide and tool sections
+  // can follow it, and slicing to the end of the file would delete them.
   const at = f.indexOf(`\n---\n\n${MARK}`);
-  if (at >= 0) f = f.slice(0, at) + '\n';
+  let after = '';
+  if (at >= 0) {
+    const end = f.indexOf('\n\n---\n\n', at + 6);
+    after = end >= 0 ? f.slice(end) : '';
+    f = f.slice(0, at) + '\n';
+  }
   const mdT = (cols, rows) => [`| ${cols.join(' | ')} |`, `|${cols.map(() => '---').join('|')}|`, ...rows.map((r) => `| ${r.join(' | ')} |`)].join('\n');
   const strip = (s) => String(s).replace(/<[^>]+>/g, '');
   const rr = (label, b) => rateRow(label, b).map(strip);
@@ -542,7 +550,7 @@ for (const l of LANES) {
     ...LANES.flatMap((l) => [`## ${l._title}`, '', `URL: ${SITE}${laneUrl(l)}`, '', laneAnswer(l), '',
       mdT(RATE_COLS, [rr('One way', l.OW), rr('Round trip', l.RT), rr('All loads', l.all)]), '']),
     'Method: each load counted once by load ID; final price = last price seen on the board; one-way and round trips split (round-trip miles include the drive back); medians with the middle 50%. Board prices, not carrier earnings. NudoIQ is not affiliated with Amazon, and Amazon did not provide or review this data.'];
-  f = f.replace(/\n+$/, '\n') + `\n---\n\n${sec.join('\n')}\n`;
+  f = f.replace(/\n+$/, '\n') + `\n---\n\n${sec.join('\n')}` + (after ? after.replace(/\n*$/, '\n') : '\n');
   fs.writeFileSync(ff, f);
 }
 

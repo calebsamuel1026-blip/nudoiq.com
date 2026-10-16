@@ -97,10 +97,16 @@ function md(src, { h2Ids = false } = {}) {
     if (!l.trim()) { i++; continue; }
     const ph = l.trim().match(/^\[\[(chart:[a-z-]+|csv)\]\]$/);
     if (ph) { out.push(placeholder(ph[1])); i++; continue; }
+    // A line that starts with an HTML tag or comment is kept as written (screenshots, dated source comments,
+    // hand-built tables). Added 2026-10-16 so hand edits made on live pages can live in the source.
+    if (/^<[a-z!]/i.test(l)) { out.push(l); i++; continue; }
     let h;
     if ((h = l.match(/^(#{2,4})\s+(.*)$/))) {
-      const n = h[1].length; const t = inline(h[2].trim());
-      out.push(n === 2 && h2Ids ? `<h2 id="${slugify(h[2])}">${t}</h2>` : `<h${n}>${t}</h${n}>`);
+      // "## Heading {#anchor}" keeps an existing anchor id after the heading text changes.
+      const idm = h[2].match(/^(.*?)\s*\{#([a-z0-9-]+)\}\s*$/);
+      const text = idm ? idm[1] : h[2];
+      const n = h[1].length; const t = inline(text.trim());
+      out.push(n === 2 && h2Ids ? `<h2 id="${idm ? idm[2] : slugify(text)}">${t}</h2>` : `<h${n}>${t}</h${n}>`);
       i++; continue;
     }
     if (/^\s*\|/.test(l)) {
@@ -141,7 +147,7 @@ const ES_TWIN = { 'amazon-relay-load-board': 'amazon-relay-en-espanol', 'amazon-
 // Russian twins (ru/<slug>/, hand-built 2026-10-14, research/seo/ru-2026-10-14/): reciprocal hreflang ru.
 const RU_TWIN = { 'amazon-relay-auto-booker': 'ru/amazon-relay-auto-booker', 'best-amazon-relay-extensions': 'ru/best-amazon-relay-extensions' };
 
-function head({ title, description, url, extraLd, slug }) {
+function head({ title, description, url, extraLd, slug, headStyle = '' }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -227,7 +233,7 @@ ${RU_TWIN[slug] ? `  <link rel="alternate" hreflang="ru" href="${SITE}/${RU_TWIN
   <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
   <link rel="stylesheet" href="/assets/doc.css">
   <link rel="stylesheet" href="/assets/guide.css">
-${extraLd.map((o) => `  <script type="application/ld+json">\n${JSON.stringify(o, null, 2)}\n  </script>`).join('\n')}
+${headStyle ? `  ${headStyle}\n` : ''}${extraLd.map((o) => `  <script type="application/ld+json">\n${JSON.stringify(o, null, 2)}\n  </script>`).join('\n')}
   <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
 <script>
   window.uetq = window.uetq || [];
@@ -386,14 +392,29 @@ for (const p of pages) {
       distribution: [{ '@type': 'DataDownload', encodingFormat: 'text/csv', contentUrl: `${url}${CSV_NAME}` }] });
   }
 
-  const related = pages.filter((o) => o.slug !== p.slug);
+  let related = pages.filter((o) => o.slug !== p.slug);
   // Prefer neighbours in ORDER so every page links to a different set.
   const L = ORDER.length;
   const idx = ORDER.indexOf(p.slug);
   related.sort((a, b) => ((ORDER.indexOf(a.slug) - idx + L) % L) - ((ORDER.indexOf(b.slug) - idx + L) % L));
+  // Frontmatter `related: slug-a, slug-b, ...` fixes the card list (2026-10-16): live pages carry hand-picked
+  // sibling cards, and the computed list would shift every time a guide is added.
+  if (p.related) {
+    related = p.related.split(',').map((s) => s.trim()).filter(Boolean).map((s) => {
+      const o = pages.find((x) => x.slug === s);
+      if (!o) throw new Error(`${p.slug}: related slug "${s}" has no source`);
+      return o;
+    });
+  }
+  const relatedCount = p.related ? related.length : 6;
+  // Optional bottom-CTA words per page (Martha's strings; cta_p may carry <br>), plus a data-cta name.
+  const ctaH2 = p.cta_h2 || 'Know what the next load is worth before you take it.';
+  const ctaP = p.cta_p || '7 days free, no card needed &middot; 5.0 on the Chrome Web Store';
+  const ctaBtn = p.cta_btn || 'Start the 7-day trial';
+  const ctaData = p.cta_data ? ` data-cta="${esc(p.cta_data)}"` : '';
   const byline = `<p class="byline">${isData ? 'By Caleb, NudoIQ' : 'NudoIQ'} &middot; Published <time datetime="${p.published}">${fmtDate(p.published)}</time> &middot; Last updated <time datetime="${p.updated}">${fmtDate(p.updated)}</time></p>`;
 
-  const html = head({ title: p.title, description: p.description, url, extraLd: ld, slug: p.slug }) + `
+  const html = head({ title: p.title, description: p.description, url, extraLd: ld, slug: p.slug, headStyle: p.head_style || '' }) + `
   <div class="doc-hero"><div class="doc-hero-in">
     <nav class="crumbs" aria-label="Breadcrumb">${crumbs(trail.map(([nm, u], i) => [nm, i === trail.length - 1 ? null : u]))}</nav>
     <h1 class="page-title">${inline(p.h1)}</h1>
@@ -412,14 +433,14 @@ ${p.faq.map((f) => `      <details><summary>${inline(f.q)}</summary><div class="
     </section>` : ''}
 
     <aside class="cta">
-      <div><h2>Know what the next load is worth before you take it.</h2><p>7 days free, no card needed &middot; 5.0 on the Chrome Web Store</p></div>
-      <a class="btn btn-go" href="${CWS}" target="_blank" rel="noopener">Start the 7-day trial</a>
+      <div><h2>${ctaH2}</h2><p>${ctaP}</p></div>
+      <a class="btn btn-go" href="${CWS}"${ctaData} target="_blank" rel="noopener">${ctaBtn}</a>
     </aside>
 
     <nav class="related" aria-label="More Amazon Relay guides">
       <h2>More Amazon Relay guides</h2>
       <div class="cards">
-${related.slice(0, 6).map((o) => `        <a href="/${o.slug}/">${inline(o.h1)}</a>`).join('\n')}
+${related.slice(0, relatedCount).map((o) => `        <a href="/${o.slug}/">${inline(o.h1)}</a>`).join('\n')}
       </div>
     </nav>
 ${FOOT}`;
@@ -438,8 +459,38 @@ if (pages.some((p) => p.slug === DATA_SLUG)) writeCsv();
   // Hub words also come from the copywriter: research/seo-pages/_hub.md (frontmatter only).
   const hub = parse(path.join(SRC, '_hub.md'));
   const { title, description } = hub;
+  // Merge, don't replace (2026-10-16): the live hub also lists cards other generators own (lane rates, free tools)
+  // and keeps batch order. Guide cards are refreshed in place, new guides go after the last guide card, every other
+  // card stays where it is, and the ItemList follows the final card order.
+  const cardOf = (p) => `        <a href="/${p.slug}/">${inline(p.h1)}<span>${esc(p.description)}</span></a>`;
+  const hrefOf = (l) => l.match(/<a href="([^"]+)"/)[1];
+  const bySlug = new Map(pages.map((p) => [`/${p.slug}/`, p]));
+  let cards = pages.map(cardOf);
+  let listItems = pages.map((p) => ({ url: `${SITE}/${p.slug}/`, name: stripMd(p.h1) }));
+  const hubFile = path.join(ROOT, 'guides', 'index.html');
+  if (fs.existsSync(hubFile)) {
+    const old = fs.readFileSync(hubFile, 'utf8').replace(/\r\n/g, '\n');
+    const oldCards = old.split('\n').filter((l) => /^ {8}<a href="\/[^"]*">.*<span>.*<\/span><\/a>$/.test(l));
+    if (oldCards.length) {
+      const seen = new Set();
+      const merged = [];
+      let lastGuide = -1;
+      for (const l of oldCards) {
+        const p = bySlug.get(hrefOf(l));
+        if (p) { merged.push(cardOf(p)); seen.add(`/${p.slug}/`); lastGuide = merged.length - 1; } else merged.push(l);
+      }
+      merged.splice(lastGuide + 1, 0, ...pages.filter((p) => !seen.has(`/${p.slug}/`)).map(cardOf));
+      cards = merged;
+      const oldNames = new Map();
+      for (const m of old.matchAll(/"url": "([^"]+)",\s*"name": ("(?:[^"\\]|\\.)*")/g)) oldNames.set(m[1], JSON.parse(m[2]));
+      listItems = cards.map((l) => {
+        const h = hrefOf(l); const p = bySlug.get(h); const url = SITE + h;
+        return { url, name: p ? stripMd(p.h1) : (oldNames.get(url) || l.replace(/<span>.*$/, '').replace(/<[^>]+>/g, '').trim()) };
+      });
+    }
+  }
   const ld = [crumbLd([['Home', '/'], ['Guides', '/guides/']]),
-    { '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: pages.map((p, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE}/${p.slug}/`, name: stripMd(p.h1) })) }];
+    { '@context': 'https://schema.org', '@type': 'ItemList', itemListElement: listItems.map((o, i) => ({ '@type': 'ListItem', position: i + 1, url: o.url, name: o.name })) }];
   const html = head({ title, description, url: `${SITE}/guides/`, extraLd: ld, slug: 'guides' }) + `
   <div class="doc-hero"><div class="doc-hero-in">
     <nav class="crumbs" aria-label="Breadcrumb">${crumbs(trail)}</nav>
@@ -450,7 +501,7 @@ if (pages.some((p) => p.slug === DATA_SLUG)) writeCsv();
   <div class="container" style="max-width:calc(var(--max) + 48px)">
     <section class="hub">
       <div class="cards">
-${pages.map((p) => `        <a href="/${p.slug}/">${inline(p.h1)}<span>${esc(p.description)}</span></a>`).join('\n')}
+${cards.join('\n')}
       </div>
     </section>
 ${FOOT}`;
@@ -468,7 +519,10 @@ ${FOOT}`;
     const loc = `${SITE}/${s}/`;
     const entry = `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${lastmod(s)}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${s === 'guides' ? '0.8' : '0.7'}</priority>\n  </url>\n`;
     const re = new RegExp(`  <url>\\n    <loc>${loc.replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')}</loc>[\\s\\S]*?</url>\\n`);
-    xml = re.test(xml) ? xml.replace(re, entry) : xml.replace('</urlset>', entry + '</urlset>');
+    // An existing entry only gets its lastmod refreshed, so hreflang links and other children added by the
+    // Spanish/Russian twin builders survive a rebuild (2026-10-16).
+    xml = re.test(xml) ? xml.replace(re, (m) => m.replace(/<lastmod>[^<]*<\/lastmod>/, `<lastmod>${lastmod(s)}</lastmod>`))
+      : xml.replace('</urlset>', entry + '</urlset>');
   }
   fs.writeFileSync(file, xml);
 }
@@ -507,14 +561,54 @@ ${FOOT}`;
       `- [Full text of every guide](${SITE}/llms-full.txt)`,
     ].join('\n');
     const newest = pages.reduce((m, p) => (p.updated > m ? p.updated : m), FIRST_PUBLISHED);
-    fs.writeFileSync(path.join(ROOT, 'llms.txt'), `${prose}\n\nLast updated: ${newest}.\n\n${index}\n`);
-    const full = pages.map((p) => [
+    // Merge, don't replace (2026-10-16): llms.txt and llms-full.txt also carry lines and sections written by the
+    // lane-rate, tool, Spanish and Russian builders. The prose comes from the newest _llms source; guide lines and
+    // guide sections are refreshed by URL; new guides go after the last guide entry; everything else is kept.
+    const guideLine = (p) => `- [${stripMd(p.h1)}](${SITE}/${p.slug}/): ${p.llms || p.description}`;
+    const llmsFile = path.join(ROOT, 'llms.txt');
+    const oldLlms = fs.existsSync(llmsFile) ? fs.readFileSync(llmsFile, 'utf8').replace(/\r\n/g, '\n') : '';
+    const pi = oldLlms.indexOf('\n## Pages\n');
+    if (pi >= 0) {
+      const rest = oldLlms.slice(pi + 1).replace(/\n+$/, '').split('\n');
+      let lastGuide = -1;
+      const fresh = [];
+      for (const p of pages) {
+        const i = rest.findIndex((l) => l.startsWith('- [') && l.includes(`](${SITE}/${p.slug}/)`));
+        if (i >= 0) { rest[i] = guideLine(p); lastGuide = Math.max(lastGuide, i); } else fresh.push(guideLine(p));
+      }
+      if (fresh.length) {
+        const at = lastGuide >= 0 ? lastGuide + 1 : rest.findIndex((l) => l === '## Data') - 1;
+        rest.splice(at, 0, ...fresh);
+      }
+      fs.writeFileSync(llmsFile, `${prose}\n\nLast updated: ${newest}.\n\n${rest.join('\n')}\n`);
+    } else {
+      fs.writeFileSync(llmsFile, `${prose}\n\nLast updated: ${newest}.\n\n${index}\n`);
+    }
+    const section = (p) => [
       `# ${stripMd(p.h1)}`, '', `URL: ${SITE}/${p.slug}/`, `Published: ${p.published}. Last updated: ${p.updated}.`, '',
       p.answer ? `Short answer: ${p.answer}\n` : '',
-      abs(p.body.replace(/^\s*\[\[(chart:[a-z-]+|csv)\]\]\s*$/gm, (_, k) => mdChart(k))), '',
+      // raw HTML blocks (screenshots, source comments) stay out of the plain-text file
+      abs(p.body.split('\n\n').filter((b) => !/^<[a-z!]/i.test(b)).join('\n\n')
+        .replace(/^\s*\[\[(chart:[a-z-]+|csv)\]\]\s*$/gm, (_, k) => mdChart(k))), '',
       p.faq.length ? '## Frequently asked questions\n\n' + p.faq.map((f) => `### ${f.q}\n${abs(f.a)}`).join('\n\n') : '',
-    ].join('\n')).join('\n\n---\n\n');
-    fs.writeFileSync(path.join(ROOT, 'llms-full.txt'), `${prose}\n\n---\n\n${full}\n`);
+    ].join('\n');
+    const fullFile = path.join(ROOT, 'llms-full.txt');
+    const oldFull = fs.existsSync(fullFile) ? fs.readFileSync(fullFile, 'utf8').replace(/\r\n/g, '\n') : '';
+    if (oldFull) {
+      const parts = oldFull.replace(/\n$/, '').split('\n\n---\n\n');
+      parts[0] = prose;
+      let lastGuide = 0;
+      const fresh = [];
+      for (const p of pages) {
+        const re = new RegExp(`^URL: ${(SITE + '/' + p.slug + '/').replace(/[.*+?^${}()|[\]\\/]/g, '\\$&')}$`, 'm');
+        const i = parts.findIndex((x, j) => j > 0 && re.test(x.slice(0, 800)));
+        if (i > 0) { parts[i] = section(p); lastGuide = Math.max(lastGuide, i); } else fresh.push(section(p));
+      }
+      parts.splice(lastGuide + 1, 0, ...fresh);
+      fs.writeFileSync(fullFile, parts.join('\n\n---\n\n') + '\n');
+    } else {
+      fs.writeFileSync(fullFile, `${prose}\n\n---\n\n${pages.map(section).join('\n\n---\n\n')}\n`);
+    }
   } else {
     console.warn('No research/seo-pages/_llms-YYYY-MM-DD.md found; llms.txt left unchanged.');
   }
