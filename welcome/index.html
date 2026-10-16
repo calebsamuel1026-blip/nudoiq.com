@@ -470,11 +470,52 @@
       }catch(e){}
     })();
 
-    // welcome_open_relay_click (2026-10-14). Site analytics only: record-funnel takes a closed list of steps
-    // (supabase/functions/record-funnel STEPS), so a new funnel step needs a server deploy. The funnel read uses the
-    // extension's own board_opened row instead. No Google Ads event (no matching conversion action). click covers mouse
+    // welcome_open_relay_click (2026-10-14). Site analytics for every click; since 2026-10-16 the first click also writes
+    // a welcome_cta_clicked funnel row (REST path above, not record-funnel). No Google Ads event (no matching conversion action). click covers mouse
     // and keyboard; auxclick covers a middle-click (new tab), which fires no click. The queues exist before the tags
     // load (NQ_LATER), so an early click is queued; nothing loads on localhost. New tab, so this page stays to send them.
+    // FUNNEL rows from this page (2026-10-16, research/funnel/RELEASE-2.5.9-SPEC.md section 7): welcome_cta_clicked (and
+    // welcome_returned below), written straight to funnel_events through the same anon INSERT-only path as first_touch and
+    // heard_from. record-funnel's closed STEPS rejects both names (checked live 2026-10-16: 400 "unknown step"); the REST
+    // insert accepts them (checked live the same day with a rolled-back insert). One row per install per step (unique
+    // index; 409 = already stored). A row stays pending in localStorage until it is stored, and is re-sent on the next
+    // open. Only with a valid ?i= install id. Opaque id and labels only; nothing personal.
+    var NQ_FUNNEL = (function () {
+      var iid = '', ok = false, sent = {}, KP = 'nudoiq_welcome_rows_pending';
+      var AK = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM';
+      try { iid = new URLSearchParams(location.search).get('i') || ''; ok = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(iid); } catch (x) {}
+      var done = function (step) { try { return localStorage.getItem('nudoiq_funnel_' + step) === iid; } catch (x) { return false; } };
+      var pending = function () { try { return (JSON.parse(localStorage.getItem(KP) || '[]') || []).filter(function (r) { return r && r.install_id === iid; }); } catch (x) { return []; } };
+      var keep = function (rows) { try { if (rows.length) localStorage.setItem(KP, JSON.stringify(rows)); else localStorage.removeItem(KP); } catch (x) {} };
+      var post = function (row) {
+        try {
+          fetch('https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/funnel_events', { method: 'POST', keepalive: true,
+            headers: { 'Content-Type': 'application/json', 'apikey': AK, 'Authorization': 'Bearer ' + AK, 'Prefer': 'return=minimal' },
+            body: JSON.stringify(row)
+          }).then(function (r) {
+            if (!(r.ok || r.status === 409)) return;
+            try { localStorage.setItem('nudoiq_funnel_' + row.step, iid); } catch (x) {}
+            keep(pending().filter(function (p) { return p.step !== row.step; }));
+          }).catch(function () {});
+        } catch (x) {}
+      };
+      var send = function (step, md) {
+        if (!ok || sent[step] || done(step)) return;
+        sent[step] = 1;
+        var row = { install_id: iid, step: step, metadata: md };
+        keep(pending().filter(function (p) { return p.step !== step; }).concat([row]));
+        post(row);
+      };
+      if (ok) pending().forEach(function (r) { if (!sent[r.step] && !done(r.step)) { sent[r.step] = 1; post(r); } });
+      return { send: send, on: ok };
+    })();
+    var NQ_SURFACE = function (cta) { return cta === 'welcome-open-relay' ? 'cta' : cta === 'welcome-step1' ? 'step1' : /^welcome-region-/.test(cta) ? 'region' : ''; };
+    var NQ_META = function (o) {
+      try { var q = new URLSearchParams(location.search); o.lang = document.documentElement.lang === 'es' ? 'es' : 'en';
+        o.src = (q.get('src') || 'direct').slice(0, 20); o.v = (q.get('v') || '').slice(0, 12); } catch (x) {}
+      return o;
+    };
+
     function nqRelayClick(e) {
       if (e.type === 'auxclick' && e.button !== 1) return;
       var a = e.target.closest && e.target.closest('a[href*="relay.amazon."]');
@@ -483,6 +524,13 @@
       try { if (window.clarity) { clarity('event', 'welcome_open_relay_click'); clarity('set', 'open_relay', where); } } catch (x) {}
       try { window.uetq = window.uetq || []; window.uetq.push('event', 'welcome_open_relay_click', { event_category: 'activation', event_label: where }); } catch (x) {}
       try { if (window.fbq) fbq('trackCustom', 'WelcomeOpenRelay', { cta: where }); } catch (x) {}
+      // The first click on the button, a region link or step 1 (spec section 7.1); the "came back" state keys off any of them.
+      var surface = NQ_SURFACE(where);
+      if (!surface) return;
+      var md = { surface: surface };
+      if (surface === 'region') md.region = where.slice(15, 17);
+      NQ_FUNNEL.send('welcome_cta_clicked', NQ_META(md));
+      try { window.nqCameBack && window.nqCameBack.clicked(surface); } catch (x) {}
     }
     document.addEventListener('click', nqRelayClick, true);
     document.addEventListener('auxclick', nqRelayClick, true);
