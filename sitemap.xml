@@ -822,6 +822,9 @@
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-para-conductores/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-drivers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-drivers/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-factoring/</loc>
@@ -840,11 +843,44 @@
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-vs-amazon-flex/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-vs-amazon-flex/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-vs-amazon-flex/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/how-to-sign-up-for-amazon-relay/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/como-aplicar-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/how-to-sign-up-for-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/how-to-sign-up-for-amazon-relay/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/como-aplicar-amazon-relay/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/como-aplicar-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/how-to-sign-up-for-amazon-relay/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/how-to-sign-up-for-amazon-relay/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-para-conductores/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-para-conductores/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-drivers/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-drivers/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-vs-amazon-flex/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-vs-amazon-flex/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-vs-amazon-flex/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-vs-amazon-flex/"/>
   </url>
 </urlset>
