@@ -5,7 +5,7 @@
 ## What it does
 
 - **Refresher:** reloads the Amazon Relay load board at an interval the carrier sets.
-- **Control bar with three modes:** Alert (pings you when a load matches your rules), Search (more ways to filter the board) and Autobook (books a matching load for you). Rules: Min Net Profit, Min $/Mile, a load-pay minimum and a max-books cap per START; lanes come from Relay search. Autobook stops at the cap and the profit floor.
+- **Control bar with three modes:** Alert (pings you when a load matches your rules), Search (refreshes quietly and floats new and price-up loads that clear your minimums to the top) and Autobook (books a matching load for you). Rules: Min Net Profit, Min $/Mile, a load-pay minimum and a max-books cap per START; lanes come from Relay search. Autobook stops at the cap and the profit floor.
 - **Telegram alerts** when a load lands, if you connect Telegram.
 - **Instant Book:** books a load in one action from the control bar instead of the multi-step flow.
 - **Lane Intelligence:** compares the posted price with 90 days of that lane's history and shows a target rate, an expected range and a confidence level. Decision support, not a guarantee.
@@ -131,7 +131,7 @@ If you accept a load and then cancel it, that counts against you, and the closer
 
 ## Where NudoIQ Fits
 
-NudoIQ runs inside the Relay load board in your browser. It adds a control bar with three modes: Alert (pings you on a match), Search (more ways to filter the board) and Autobook (books automatically). You set up rules once and stop watching manually.
+NudoIQ runs inside the Relay load board in your browser. It adds a control bar with three modes: Alert (pings you on a match), Search (refreshes quietly and floats new and price-up loads that clear your minimums to the top) and Autobook (books automatically). You set up rules once and stop watching manually.
 
 It also shows [Lane Intelligence](https://nudoiq.com/amazon-relay-auto-refresh/) next to each rate, so you can see what that lane normally pays and whether today's rate is high or low. A [Net Profit calculator](https://nudoiq.com/amazon-relay-auto-booker/) shows you the dollars left after driver pay, fuel, maintenance, and deadhead to pickup, so you can set a profit floor and only book loads that clear it.
 
@@ -306,7 +306,7 @@ You need a DOT number with interstate authority, and Relay typically requires th
 You must have a valid MC number. This number, issued by the FMCSA, shows that you're registered as an interstate carrier. When you get your DOT number, the MC application is usually filed at the same time.
 
 **Authority Age**
-For a new carrier, the 180-day rule is the biggest barrier. Relay typically requires your DOT number to be at least 180 days old to complete onboarding. You don't have to wait to apply, though. Amazon's Relay FAQ says "we encourage you to apply early," so you're ready to move forward as soon as you meet the requirement.
+Relay typically requires your DOT number to be at least 180 days old to complete onboarding, and Amazon encourages you to apply early. Amazon words the rule four ways; our [new authority guide](https://nudoiq.com/amazon-relay-new-authority/) puts them side by side.
 
 ## Safety Rating and BASIC Score Requirements
 
@@ -334,7 +334,7 @@ These thresholds reflect Amazon's risk tolerance. If you're close to any limit, 
 - **Commercial General Liability**: $1,000,000 per occurrence / $2,000,000 aggregate
 - **Auto Liability**: $1,000,000 per occurrence, including $50,000 trailer replacement (trailer interchange) coverage
 - **Cargo Insurance**: at least $100,000
-- **Workers' Compensation**: required in every jurisdiction where you operate with employees; $100,000 per occurrence for Employer's Liability
+- **Workers' Compensation**: the FAQ says "in all jurisdictions where your company operates"; $100,000 per occurrence for Employer's Liability. See our [workers' comp guide](https://nudoiq.com/amazon-relay-workers-comp/)
 
 You'll need to upload proof of insurance to your Relay account. Amazon verifies these minimums before approving you.
 
@@ -372,17 +372,14 @@ Amazon's application has five steps, in this order: DOT number, company details,
 
 ## What Happens If You Don't Meet Requirements
 
-If your DOT authority is too new, your BASIC scores are out of range, or your safety rating is below Satisfactory, Amazon will reject your application.
+Amazon may reject the application, and in many cases you can reapply. The [Relay FAQ](https://relay.amazon.com/faq) splits rejection reasons in two:
 
-If it's the authority age, you don't have to sit out. Amazon's Relay FAQ encourages you to apply early, so it can start reviewing your information before your authority reaches 180 days. And if an application is turned down over authority status, Amazon says "you're welcome to reapply once it's been addressed."
+- **Fixable:** issues "like insurance coverage, authority status, or missing documentation." Amazon says "you're welcome to reapply once it's been addressed."
+- **Serious:** some reasons, "such as serious compliance issues," may disqualify you from applying again.
 
-If it's a BASIC score or safety rating, work with your fleet manager or compliance officer to improve. Common issues:
-- **Unsafe Driving**: Driver training or speed-governor limits.
-- **HOS Compliance**: Better logging practices or dispatch timing.
-- **Vehicle Maintenance**: Proactive vehicle inspections and repairs.
-- **Controlled Substances/Alcohol**: Drug-screening programs.
+Authority too new? Amazon says "we encourage you to apply early," so it can start reviewing your information before you reach 180 days.
 
-Once you fix the issue, you can reapply. The FMCSA updates these records regularly, so improvements show up over time.
+What to check before you apply again is in [Amazon Relay application denied](https://nudoiq.com/amazon-relay-application-denied/). Safety limits are in our [safety score guide](https://nudoiq.com/amazon-relay-safety-score/).
 
 ## After You're Approved
 
@@ -396,19 +393,19 @@ NudoIQ costs **$49.99 per month** for all features. Start with a **7-day free tr
 Amazon's Relay FAQ says a completed application is typically approved or rejected within 1 to 3 weeks. Our [approval time guide](https://nudoiq.com/amazon-relay-approval-time/) covers what slows it down and what to do if you hear nothing.
 
 ### What if my BASIC score is just slightly over the limit?
-Amazon publishes these limits as requirements. If you're over the limit on any category, your application will be delayed or rejected. Work on improving that score and reapply once you're in range.
+Amazon publishes these limits as requirements and doesn't describe any tolerance. For violation limits it says "we won't offer an appeal process." Get under the limit before you apply. See our [safety score guide](https://nudoiq.com/amazon-relay-safety-score/).
 
 ### Can I appeal if my application is rejected?
-You can contact Amazon Relay support to understand why you were rejected. If the reason is temporary (authority age, BASIC score), you can reapply. If it's a persistent issue (unsatisfactory safety rating), you'll need to address it with the FMCSA first.
+Amazon doesn't publish an appeal process for applications. Its FAQ says to review the reason for your rejection first, and that you're welcome to reapply once a fixable issue like insurance, authority status or missing documentation is addressed. See [Amazon Relay application denied](https://nudoiq.com/amazon-relay-application-denied/).
 
 ### Do I need a business license?
-You need your DOT and MC numbers, which require business registration with your state and the FMCSA. A formal business license (LLC or S-Corp) is recommended but not always required; Sole Proprietor carriers can apply if they have DOT authority.
+Amazon doesn't list a business license. Its FAQ asks for a DOT number with interstate authority, a valid MC number and a "Carrier" entity type that is "Authorized for Property and for Hire." Check your state for its own registration rules. Amazon does verify your business entity and every owner over 25%.
 
 ### Can I use my personal auto insurance?
 No. Amazon requires commercial insurance: General Liability, Auto Liability, Cargo and Workers' Compensation. Personal policies don't cover commercial freight work and won't meet Amazon's minimums.
 
 ### What if I have a newer authority but all my other metrics are strong?
-Relay typically requires your DOT number to be at least 180 days old to complete onboarding, and strong BASIC scores don't replace that. You can still apply now. Amazon's Relay FAQ says "we encourage you to apply early," so you're ready to move forward as soon as you meet the requirement.
+Relay typically requires your DOT number to be at least 180 days old to complete onboarding, and strong BASIC scores don't replace that (our [new authority guide](https://nudoiq.com/amazon-relay-new-authority/) has Amazon's exact wording). You can still apply now. Amazon's Relay FAQ says "we encourage you to apply early," so you're ready to move forward as soon as you meet the requirement.
 
 ---
 
@@ -432,7 +429,7 @@ Insurance costs vary widely based on your carrier's safety record, years in busi
 | Commercial General Liability | $1,000,000 per occurrence / $2,000,000 aggregate | Covers bodily injury, property damage, personal injury from your operations. The "aggregate" is your total liability across all incidents in a policy year. |
 | Auto Liability | $1,000,000 per occurrence | Covers vehicle accidents, third-party injury and property damage. Includes $50,000 trailer replacement (trailer interchange) coverage. |
 | Cargo Insurance | At least $100,000 | Covers loss or damage to freight in your trailer or truck while in your care. This protects Amazon's goods during transport. |
-| Workers' Compensation | Required in every state where you have employees | Covers employee injury or illness from work. Each state sets its own minimum; Amazon requires compliance with your state(s). |
+| Workers' Compensation | In "all jurisdictions where your company operates" (Relay FAQ) | Covers employee injury or illness from work. Amazon's pages word this two ways; see our [workers' comp guide](https://nudoiq.com/amazon-relay-workers-comp/). |
 | Employer's Liability | $100,000 per occurrence | Part of Workers' Compensation coverage; covers third-party claims related to employee injury. |
 
 ## Commercial General Liability: $1,000,000 / $2,000,000
@@ -469,15 +466,9 @@ Without cargo coverage, you pay the shipper (Amazon, in most Relay cases) out of
 
 ## Workers' Compensation and Employer's Liability
 
-If you have employees (drivers, dispatchers, mechanics) you are required by law to carry Workers' Compensation insurance in every state where they work.
+Amazon's [Relay FAQ](https://relay.amazon.com/faq) asks for workers' compensation "in all jurisdictions where your company operates" and employer's liability of at least $100,000 per occurrence. Its insurance post says "Companies with W-2 employees" need it. Amazon doesn't say how it treats a company with no W-2 employees.
 
-**Workers' Compensation** covers medical costs, lost wages and disability benefits if an employee is injured or becomes ill from work. The employee receives benefits without having to sue you; in exchange, they give up the right to sue for negligence.
-
-**Employer's Liability** ($100,000 minimum per Amazon) covers third-party claims related to employee injury: for example, if an employee is injured on the job and sues a vendor or property owner, and that third party tries to recover damages from you as the employer.
-
-Workers' compensation rules are set by each state. Amazon requires coverage in every state where you have employees, plus $100,000 employer's liability. Costs vary by state and industry classification.
-
-If you're a sole proprietor with no employees, you don't need Workers' Compensation. But many states allow you to purchase it voluntarily if you want personal coverage. Check with your broker.
+State rules differ too. What Amazon and two states say, and how to ask Amazon, is in our [Amazon Relay workers' comp guide](https://nudoiq.com/amazon-relay-workers-comp/).
 
 ## What Goes on Your Certificate
 
@@ -532,7 +523,7 @@ It varies widely based on your safety record, years in business, equipment and l
 No. Personal auto policies exclude commercial freight work. You must use commercial auto insurance and commercial liability coverage.
 
 ### What if I fall short on one limit?
-Contact your broker and upgrade that coverage before applying. Amazon requires each coverage that applies to you at the stated minimums (workers' compensation and employer's liability apply if you have W-2 employees).
+Contact your broker and upgrade that coverage before applying. Amazon requires each coverage that applies to you at the stated minimums (for workers' comp, Amazon's pages word the rule two ways; see our [workers' comp guide](https://nudoiq.com/amazon-relay-workers-comp/)).
 
 ### Do I need cargo insurance for every load?
 If you carry Amazon Relay loads, yes. Your cargo policy should cover all freight you haul on Relay. The $100,000 minimum is usually sufficient; check your policy to confirm.
@@ -1109,115 +1100,67 @@ Amazon does not publish one. The 30-day window it lists is for pay disputes. Fil
 
 ---
 
-# Amazon Relay Auto Refresh: Why It Matters and How It Works
+# Amazon Relay refresher: how an auto refresh extension works
 
 URL: https://nudoiq.com/amazon-relay-auto-refresh/
 Published: 2026-09-20. Last updated: 2026-10-16.
 
-Short answer: An Amazon Relay auto refresh tool reloads the load board for you on a timer, so new loads show up without you clicking reload. Good loads often book within seconds. NudoIQ's auto refresher lets you set the interval.
+Short answer: An Amazon Relay refresher is an extension that reloads the load board on a timer you set, so new loads show up without you clicking reload. Amazon says its board refreshes every 30 seconds. NudoIQ lets you set the speed.
 
-## Why Refreshing the Load Board Matters
+## What does an Amazon Relay refresher do? {#why-refreshing-the-load-board-matters}
 
-[Amazon says](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) the load board auto-refreshes new spot freight matches every 30 seconds. Good loads can book within seconds, so many carriers reload faster than that to see new loads sooner. Manually refreshing every 30 seconds is impractical if you're driving, eating, or managing your business. You step away for five minutes and miss dozens of refreshes. In those five minutes, good loads can post and disappear.
+[Amazon says](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) the load board auto-refreshes new spot freight matches every 30 seconds. Refresh by hand and you only see what's there the moment you click. A load that posts and books between clicks, you never see.
 
-Carriers who want to stay competitive refresh constantly. The faster you refresh, the faster you see loads before other carriers do. A refresher extension automates this, reloading the board on a timer without you lifting a finger. This is why [refresher and auto-booker extensions](https://nudoiq.com/best-amazon-relay-extensions/) exist: to keep you in the competition without requiring constant attention.
+A refresher reloads the board for you, on a timer you set. You stop hitting reload, and you don't have to sit at the screen. Here's how the [refresher and auto-booker extensions](https://nudoiq.com/best-amazon-relay-extensions/) compare.
 
-## Manual Refreshing: The Old Way
+## How fast should an Amazon Relay auto refresher run?
 
-Before refresher extensions became standard, carriers had two choices: sit at the computer and hit reload repeatedly, or miss loads. Some carriers sat at their desk hitting F5 or Ctrl+R for hours, watching for loads.
+You pick. The trade is simple:
 
-Refreshing by hand means you only see what's on the board at the moment you reload. A load that posts and books between your clicks, you never see. And you're tied to your computer for as long as you want to watch the board.
+- **Shorter interval:** you see new loads sooner, and your computer works harder.
+- **Longer interval:** easier on your laptop and battery, a bit later to see new loads.
+- **Not watching the screen:** use ALERT mode, so a sound plays on the page when a load clears your minimums.
 
-It also means you're one of many carriers refreshing at roughly the same time.
+Amazon doesn't publish a refresh limit for Relay. In NudoIQ you set it with the SPEED control on the bar and change it any time.
 
-## What a Refresher Extension Does
+## Alert, Search or AutoBook: which refresher mode? {#alerts-vs-auto-booking}
 
-A refresher extension automates the reload. You set an interval (how long it waits between refreshes) and the extension reloads for you, so you stop clicking reload by hand.
+NudoIQ's refresher has three modes. All three use your minimums: Min Net Profit, Min $/Mile and a New load minimum. Lane, equipment and dates come from your own Relay search.
 
-The benefits are obvious:
+| Mode | What it does | What you do |
+|---|---|---|
+| ALERT | Refreshes and sounds an alert on the page when a load clears your minimums | Decide and book |
+| SEARCH | Refreshes quietly and floats new and price-up loads that clear your minimums to the top | Watch and book |
+| AUTOBOOK | Refreshes and books loads that clear your Min Net Profit, up to your Max books | Review what it booked |
 
-1. **You see loads faster.** A shorter interval means less time between a load posting and you seeing it. In that gap, another carrier can book the load.
+AutoBook skips a load it can't fully price, and Max books runs from 1 to 20. Not sure yet? Start in ALERT and switch later.
 
-2. **You don't have to watch.** The extension reloads in the background while you do other things. You're not glued to the screen.
+## How do you set up an Amazon Relay refresher? {#setting-up-your-refresher}
 
-3. **Alerts do the watching.** The refresher sounds an alert on the page when a load that meets your minimums posts, and sends a Telegram message if you connect Telegram, so you don't have to scan the board manually.
+1. Add the extension from the Chrome Web Store.
+2. Open Relay in the same Chrome profile and sign in as usual. The extension uses that session.
+3. Run your normal Relay search for the lane and equipment you want.
+4. Set your minimums and, for AutoBook, your Max books.
+5. Pick a mode and a speed, then press START.
 
-4. **Autobook handles it.** If you set it to Autobook and your rules match, the extension books for you automatically. You don't even have to be at your computer.
+NudoIQ's own four setup steps are in our [Amazon Relay Chrome extension guide](https://nudoiq.com/amazon-relay-chrome-extension/).
 
-## Choosing Your Refresh Interval
+## Does Amazon detect a refresher? {#server-load-and-your-account}
 
-The **interval** is how often the board reloads. A shorter interval means the board reloads more often, so you see new loads sooner, but it also means more server load and more battery drain on your device.
+We can't speak for Amazon. It doesn't publish what it detects, a refresh limit or any rule that names refreshers or extensions.
 
-Pick the interval that fits how hard you're competing. Some carriers go shorter on busy, premium lanes. The tradeoff: shorter intervals show new loads sooner but hit the server harder and drain your battery quicker.
+Here's what is on record:
 
+- **Relay's terms.** Amazon's [Conditions of Use](https://relay.amazon.com/terms) (last updated January 1, 2023) say the license doesn't include "any use of data mining, robots, or similar data gathering and extraction tools." Read them yourself.
+- **Program Policies.** Amazon says you can view its complete performance and safety expectations in the Relay Program Policies when you onboard.
 
+You're responsible for your Relay account and for following Relay's terms. Nobody can promise how Amazon treats any tool, and we won't.
 
+How NudoIQ works, as a plain fact and not a reading of Amazon's terms: it runs on the front end, inside your own signed-in Relay tab, and only does what you could do by hand. It has no backend access and never asks for your Amazon password.
 
-## What Interval Should You Set?
+## Where does NudoIQ fit? {#nudoiq-s-refresh-approach}
 
-It depends on your goals and your hardware:
-
-**For catching competitive loads (tractor/reefer on busy lanes)**: Use a shorter interval. You'll see new loads sooner after they post, but your battery will drain faster and your device will work harder.
-
-**For moderate competition (box truck, less busy lanes)**: Use a longer interval. You'll see new loads soon after they post. It's a good balance between speed and resource use.
-
-**If you're away from the truck**: Use a longer interval if you're not actively booking, or turn off refreshing entirely and set it to Alert mode: it sounds an alert on the page when a load posts that matches your rules, and you'll decide whether to book.
-
-**If battery life matters**: Longer intervals use less battery. Shorter intervals use more because your processor is reloading constantly.
-
-## Alerts vs. Auto-Booking
-
-A refresher can work in different modes:
-
-**Alert Mode**: The extension refreshes the board and pings you when a load matching your rules posts. In NudoIQ that's a sound on the page, plus a Telegram message with the load details if you connect Telegram. Then you decide whether to book. This is low-friction, you're in control, but it requires you to respond quickly.
-
-**Search Mode**: The extension refreshes the board and gives you more ways to filter it. You narrow the loads, look over what's left, and click Book if you want. This is also low-friction but requires you to be looking at the board.
-
-**Autobook Mode**: The extension refreshes the board, finds loads matching your rules, and books them automatically. Lane and equipment come from your Relay search; you set minimums (net profit, $/mile) and a max-books cap, and the extension books. NudoIQ sends each booking to Telegram if you connect it, and you review what it booked. This is hands-off but requires careful rule-setting to avoid booking loads you didn't want.
-
-You can mix these. Some carriers have Autobook running on certain lanes they always want, and Alert mode on others where they want to decide case-by-case.
-
-## Setting Up Your Refresher
-
-To use a refresher extension, you typically:
-
-1. Install it from the Chrome Web Store.
-2. Sign in (or it uses your existing Relay login).
-3. Set your refresh interval (shorter or longer, depending on how hard you compete).
-4. Set your booking rules: lanes, price ranges, distance, equipment type, profit floor, and max-books cap.
-5. Set up alerts (in NudoIQ, a sound on the page, plus Telegram if you connect it).
-6. Leave it running.
-
-Most refreshers add a control bar or popup to the Relay load board tab. You can adjust your rules and interval anytime without restarting.
-
-For NudoIQ's own bar and its four setup steps, see our [Amazon Relay Chrome extension setup guide](https://nudoiq.com/amazon-relay-chrome-extension/).
-
-## What Gets Refreshed
-
-The refresher reloads the entire load board: all available loads, all filters, everything. Every refresh shows you what's newly posted and what's still available from earlier refreshes.
-
-Once a load books (gets taken by any carrier), it disappears from the board. The refresher can't book a load that's already gone. If two carriers see the same load and both try to book it at nearly the same moment, the first one wins. This is why interval matters: a faster refresher sees loads sooner and books before slower refreshers do.
-
-## Server Load and Your Account
-
-Two things to know before you run any refresher:
-
-- **Rate limiting**: Some tools wait a minimum time between refreshes even if you set a faster interval, to prevent abuse.
-- **Your account, your responsibility**: The carrier is responsible for its Relay account and for following Relay's terms. Read them before you run any extension.
-
-## The Role of Refreshing in Your Strategy
-
-Refreshing is the foundation. [Booking rules](https://nudoiq.com/amazon-relay-auto-booker/), [profit calculation](https://nudoiq.com/amazon-relay-auto-booker/), and [rate history](https://nudoiq.com/amazon-relay-load-board/) add layers on top, but refreshing (fast, steady, consistent) is what gets you first look at loads.
-
-If your refresher runs on a short interval and your competitor reloads slowly (or not at all), you'll see new loads before they do. That's the advantage.
-
-## NudoIQ's Refresh Approach
-
-NudoIQ's refresher lets you set the interval yourself, right on the NudoIQ bar. The extension refreshes on schedule, even if you're not looking at it.
-
-It doesn't just refresh: it runs alongside [Lane Intelligence](https://nudoiq.com/#features) (showing rate history) and [Net Profit calculation](https://nudoiq.com/amazon-relay-auto-booker/) (showing what you keep), and it integrates with [Autobook](https://nudoiq.com/amazon-relay-auto-booker/) so you can set rules once and let it book automatically.
-
-The extension is 5.0 rated on the Chrome Web Store and runs on desktop Chrome in English and Spanish. It costs $49.99 a month for every feature, with a 7-day free trial (no card needed to start) so you can test the refresh and see what the rate history and profit tools do.
+NudoIQ is a Chrome extension with a refresher built in. You set the speed on the NudoIQ bar, and it refreshes while the Relay tab is open. Each load card gets a net profit badge from costs you set once, and Lane Intelligence shows what that lane paid before. It's independent, not affiliated with Amazon, and it runs in English and Spanish. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 LoadFetcher refreshes the board too, so here's [how LoadFetcher's refresher compares](https://nudoiq.com/loadfetcher-alternative/) with NudoIQ, from its own listing and plans.
 
@@ -1230,19 +1173,16 @@ The shortest interval NudoIQ offers uses the most battery. If you're competing f
 Nobody can promise that, and we won't. The carrier is responsible for its Relay account and for following Relay's terms, so read them before you run any extension.
 
 ### Do I need to leave my browser window open for the refresher to work?
-Yes, your browser window (or at least the tab with the Relay load board) needs to stay open. The refresher runs inside that tab. If you close the browser or the tab, the refresher stops.
+Yes, the tab with the Relay load board needs to stay open. The refresher runs inside that tab. Close the browser or the tab and it stops.
 
 ### Can I set different refresh intervals for different times of day?
-You'd change it by hand. NudoIQ has no time-of-day schedule for refreshing, so if you want one interval early in the morning and another in the afternoon, move the speed control on the NudoIQ bar yourself.
-
-### What if I set the interval too fast and it drains my battery?
-Stop the refresher, set a longer interval, or plug in your device. The shortest intervals use noticeable power on a laptop. A longer interval is more balanced.
+You'd change it by hand. NudoIQ has no time-of-day schedule for refreshing, so move the speed control on the NudoIQ bar yourself.
 
 ### Can a refresher book loads when I'm offline?
-No. The refresher runs inside your browser in real-time. If your internet drops, the refresher stops and can't reload the board. Once you're back online, it resumes.
+No. The refresher runs inside your browser. If your internet drops, it can't reload the board until you're back online.
 
 ### Do I need to respond to an alert to book a load?
-Not if you're using Autobook. It books loads that clear your minimums, up to your max-books cap, and NudoIQ sends each booking to Telegram if you connect it. In Alert mode you book when you hear the sound; in Search mode, when you spot the highlighted load.
+Not with AutoBook. It books loads that clear your Min Net Profit, up to your Max books, and you review what it booked. In ALERT mode you book when you hear the sound, and in SEARCH mode when you spot the floated load.
 
 ### Is Post A Truck better than refreshing the Amazon Relay load board?
 They do different jobs. With Post A Truck you post your availability and minimum rate per mile up to two weeks ahead, and matched carriers get first access to freight before it reaches the board. A refresher keeps the board itself current so you see new spot loads as they post. Here's [how to post a truck on Amazon Relay](https://nudoiq.com/amazon-relay-post-a-truck/).
@@ -1386,7 +1326,7 @@ Jumping straight to Autobook without testing your rules is asking for trouble. U
 
 ## How NudoIQ's Autobook Works
 
-NudoIQ's control bar includes three modes: Alert (sounds an alert), Search (more ways to filter the board), and Autobook (books automatically). Lane, equipment and dates come from your Relay search, because NudoIQ works on the loads your board shows. In NudoIQ you set Min $/Mile, Min Net Profit and Max books (1 to 20 per START).
+NudoIQ's control bar includes three modes: Alert (sounds an alert), Search (refreshes quietly and floats new and price-up loads that clear your minimums to the top), and Autobook (books automatically). Lane, equipment and dates come from your Relay search, because NudoIQ works on the loads your board shows. In NudoIQ you set Min $/Mile, Min Net Profit and Max books (1 to 20 per START).
 
 The extension uses [Net Profit calculation](https://nudoiq.com/#features) to check whether a load clears your profit floor. So you're not just setting a dollar target: you're setting a profit target after costs.
 
@@ -1604,7 +1544,7 @@ The 90-day range in NudoIQ comes from the Relay load board's posted rates. The t
 
 ---
 
-# An Amazon Relay Chrome extension for your load board
+# Amazon Relay Chrome extension: features and setup
 
 URL: https://nudoiq.com/amazon-relay-chrome-extension/
 Published: 2026-10-12. Last updated: 2026-10-16.
@@ -1619,13 +1559,13 @@ Good loads on Relay go fast, and nobody can sit and hit reload all day. An exten
 
 NudoIQ puts a bar above Relay's search. On it you get START and STOP and a SPEED setting you choose. A badge says IDLE or ACTIVE, so you can tell at a glance if it's running.
 
-## What NudoIQ adds to your Relay load board
+## Amazon Relay Chrome extension features {#what-nudoiq-adds-to-your-relay-load-board}
 
 Here is what you get on the board between the free preview and your free week. AutoBook, Instant Book, dispute letters, Pro View and trip ETAs start with the free week.
 
 - **Auto refresh.** The board reloads on a timer you set, so you stop hitting reload by hand. More in our [Amazon Relay auto refresh guide](https://nudoiq.com/amazon-relay-auto-refresh/).
 - **NEW and PRICE UP tags.** New loads get an orange NEW tag, and a load whose price went up gets a green PRICE UP tag.
-- **Three modes.** ALERT tells you when a matching load shows up, SEARCH gives you more ways to filter, and AUTOBOOK takes loads that match your rules.
+- **Three modes.** ALERT sounds an alert on the page when a load clears your minimums, SEARCH refreshes quietly and floats those loads to the top, and AUTOBOOK books loads that clear your Min Net Profit.
 - **Limits you set on AutoBook.** It books only loads that clear your Min Net Profit and skips a load it can't fully price. It stops at your Max books, from 1 to 20. See [how the auto booker works](https://nudoiq.com/amazon-relay-auto-booker/).
 - **Instant Book.** On a NEW or PRICE UP row, Instant Book books the load in one tap, with no confirmation screen.
 - **Net profit on every load card.** You see the net and the $/mile before you book.
@@ -1650,17 +1590,30 @@ Before you turn on AUTOBOOK, set your Min Net Profit and your Max books. If you'
 
 If the bar doesn't show up, refresh the Relay tab first. That fixes it nearly every time. If it still doesn't show, check that Relay is open in the same Chrome profile where you added NudoIQ.
 
-## Is an extension or a web app better for Relay?
+## Amazon Relay web app vs Chrome extension {#is-an-extension-or-a-web-app-better-for-relay}
 
-A web app is a separate site. You open it in its own tab and log in there. An extension works inside a page you already have open.
+A web app is a separate site. You open it in its own tab and log in there. A Chrome extension works inside a page you already have open.
 
-NudoIQ is an extension, so it runs inside the Relay tab you are already signed in to, in your own Chrome. Here is what that means for you.
+| | Web app | Chrome extension (NudoIQ) |
+|---|---|---|
+| Where it runs | On its own site | Inside your Relay tab |
+| Login | A second login | The Relay session you already have |
+| What you see | Its own screens | The Relay board, plus the NudoIQ bar and tags |
 
-- **No second login.** You use the Relay session you already have.
-- **No Amazon password.** NudoIQ never asks for your Amazon password and never stores it.
-- **The same board you know.** You still see the Relay board itself, with the NudoIQ bar and tags added.
+NudoIQ never asks for your Amazon password and never stores it.
 
 You are responsible for your Relay account and for following Relay's terms, so read them before you run any extension. NudoIQ is independent software and isn't affiliated with Amazon.
+
+## How does the NudoIQ Chrome extension work?
+
+It works on the front end, in the Relay page you already have open.
+
+- **Your own session.** It runs only on Relay pages, inside your signed-in Relay tab.
+- **Only what you could do by hand.** Refresh the board, look over loads, book one.
+- **No backend access.** It works in the page, not in Amazon's systems behind it.
+- **No password.** There's no Amazon password field anywhere in it.
+
+That's how it works, not a promise about how Amazon treats extensions. Amazon doesn't publish one.
 
 ## What do you need to run it?
 
@@ -2494,6 +2447,20 @@ Per [Amazon's grade guide](https://relay.amazon.com/blog/intro-to-amazon-relay/r
 
 The score covers your last six weeks of hauls, and Amazon gives a daily prediction of your upcoming score in the account. Check it every morning. Our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) goes deeper on grades and disputes.
 
+## What tools do Amazon Relay dispatchers use?
+
+Start with Relay's own tools:
+
+| Tool | What a dispatcher does with it |
+|---|---|
+| [Load board](https://nudoiq.com/amazon-relay-load-board/) | Search, filter, save searches and book spot loads |
+| [Post A Truck](https://nudoiq.com/amazon-relay-post-a-truck/) | Post a truck's availability ahead, with a minimum rate per mile |
+| [Load tracking](https://relay.amazon.com/blog/load-tracking-with-amazon-relay) | Watch each trip live and catch disruptions |
+| [Relay app](https://nudoiq.com/amazon-relay-app/) | Drivers' schedules, check-in, load instructions and selfies |
+| [Scorecard](https://nudoiq.com/amazon-relay-scorecard/) | Check the daily score prediction and dispute impacts |
+
+Where an extension fits: on top of the load board, not in place of any of these. A [refresher](https://nudoiq.com/amazon-relay-auto-refresh/) reloads the board on a timer you set, and an [auto booker](https://nudoiq.com/amazon-relay-auto-booker/) can book loads that clear your minimums. Read Relay's terms before you add any tool. The carrier answers for every booking.
+
 ## What load boards do Relay dispatchers use?
 
 For Amazon freight, the only board is the Relay load board. Amazon tenders its loads only through Relay, not on third-party boards. [Amazon says](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) it's open 24/7 and free to search and book, with filters, saved searches, email alerts and mobile push notifications for a dispatcher working several trucks.
@@ -2505,22 +2472,23 @@ Useful board features for dispatchers:
 - **Reload and return-trip suggestions** to keep a driver moving after the first load.
 - **Post A Truck** to post availability up to two weeks ahead with a minimum rate per mile.
 
-Good loads still get booked within seconds, which is why many dispatchers add a [refresher](https://nudoiq.com/amazon-relay-auto-refresh/) or an [auto-booker](https://nudoiq.com/amazon-relay-auto-booker/).
+To check the board more often without clicking reload, you can add a [refresher](https://nudoiq.com/amazon-relay-auto-refresh/) or an [auto-booker](https://nudoiq.com/amazon-relay-auto-booker/).
 
 Wondering where brokers fit? See [can brokers use Amazon Relay](https://nudoiq.com/amazon-relay-brokers/).
 
 ## Where does NudoIQ help a Relay dispatcher?
 
-NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It watches the board for you, alerts you on loads that match your rules, and can book them with a cap and a profit floor. It's an independent tool, not made by or affiliated with Amazon.
+NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It's independent, not made by or affiliated with Amazon, and it never asks for the Amazon password.
 
 What a dispatcher gets:
 
-- **Alert, Search and Autobook modes** with your Min Net Profit and Min $/Mile; lane and equipment come from your Relay search. Autobook stops at your max-books cap (set it to the trucks you can cover) and won't book under your profit floor.
-- Connect Telegram and NudoIQ messages your phone on new loads and bookings.
-- **Lane Intelligence:** the posted price next to that lane's 90-day history. It's decision support, not a guarantee.
-- **Net profit on every load card:** the rate minus driver pay, fuel, maintenance and deadhead to pickup.
+- **ALERT, SEARCH and AUTOBOOK modes** that use your minimums: Min Net Profit, Min $/Mile and a New load minimum. Lane and equipment come from your Relay search.
+- **AutoBook with a stop.** It books only loads that clear your Min Net Profit and stops at your Max books, from 1 to 20.
+- **Net profit on every load card:** the rate minus driver pay, fuel and maintenance, counting deadhead to pickup and the empty drive back.
+- **Lane Intelligence:** what that lane paid before. It's decision support, not a promise.
+- **English and Spanish,** for dispatchers who work in either.
 
-It's [$49.99 a month](https://nudoiq.com/#pricing) for every feature, the same price for one truck or twenty. Start with a 7-day free trial, no card needed to start, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
+Try it 7 days free, no card needed to start, then [$49.99 a month](https://nudoiq.com/#pricing). Cancel anytime. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -2630,13 +2598,24 @@ Amazon doesn't say. It publishes no reinstatement timeline. For insurance, booki
 
 ## Can I reapply to Amazon Relay after being rejected or deactivated?
 
-For rejected applications, yes in some cases. The FAQ says you may be eligible to reapply once a fixable issue like insurance coverage, authority status or missing documentation is resolved, and that serious compliance issues may disqualify you.
+For a rejected application, often yes, once a fixable issue like insurance, authority status or missing documents is addressed. Serious compliance issues may disqualify you. See [Amazon Relay application denied](https://nudoiq.com/amazon-relay-application-denied/).
 
-Amazon doesn't publish a waiting period, and it says nothing about reapplying after an active account is deactivated. Ask the Support Center for your case.
+Amazon says nothing about reapplying after an active account is deactivated. Ask the Support Center for your case.
 
 ## Can a low scorecard get my Relay account suspended?
 
 Amazon doesn't list the scorecard as a suspension reason. It does tie your grade to what you can book. Your overall score equals your lowest of four metrics (on-time, acceptance, app usage and disruption-free) over the last six weeks. A drop can cost you contracts, auctions and early access to spot loads. You can dispute score impacts from your Relay account, and Amazon decides each one.
+
+## Can a driver's Relay access be suspended?
+
+Amazon doesn't describe a driver suspension process. It does name what can cut a driver off:
+
+- **Failed selfies.** "Multiple failed selfie checks can impact a driver's and carrier's access to Relay."
+- **Skipped selfies.** Drivers can decline, but "this will prevent them from hauling Relay loads."
+- **Shared logins.** "Drivers can't share their accounts."
+- **Fake GPS.** Amazon says geospoofing can bring "immediate account termination, a permanent ban from Amazon Relay, referral to law enforcement." See our [fraud guide](https://nudoiq.com/amazon-relay-fraud/).
+
+Amazon publishes no reasons list, length or appeal for drivers. Raise it in the Support Center from the carrier's Relay account. Driver checks are in our [background check guide](https://nudoiq.com/amazon-relay-background-check/).
 
 ## Can a load board extension or dispatcher get my account suspended?
 
@@ -4789,7 +4768,7 @@ Our [insurance requirements guide](https://nudoiq.com/amazon-relay-insurance-req
 
 Yes. The FAQ says Relay "typically requires your DOT number to be at least 180 days old to complete onboarding," but "we encourage you to apply early."
 
-Amazon's reason: starting now lets it begin reviewing your information, so you're ready to move forward as soon as you meet the requirement.
+Amazon words the 180-day rule four ways. Our [new authority guide](https://nudoiq.com/amazon-relay-new-authority/) puts them side by side.
 
 ## Haven't heard back after two weeks?
 
@@ -4803,12 +4782,9 @@ You can watch progress from your phone. Amazon's carrier post says to "download 
 
 ## Can you reapply if Amazon Relay rejects your application?
 
-Often, yes. The FAQ says: "In many cases, you may be eligible to reapply." Amazon recommends first reviewing the reason for your rejection.
+Often, yes. The FAQ says: "In many cases, you may be eligible to reapply." Fixable reasons like insurance, authority status or missing documents can be addressed first, while serious compliance issues may disqualify you.
 
-* **Fixable reasons.** For issues "like insurance coverage, authority status, or missing documentation, you're welcome to reapply once it's been addressed."
-* **Serious reasons.** Amazon says some rejection reasons, such as serious compliance issues, may disqualify you from applying again.
-
-Amazon doesn't publish a waiting period before you reapply. Fix the cause first. If it was insurance, have your provider submit it to FMCSA before you send a new application.
+What to check before you apply again is in [Amazon Relay application denied](https://nudoiq.com/amazon-relay-application-denied/).
 
 ## What happens after you're approved?
 
@@ -4843,13 +4819,13 @@ Amazon's Relay FAQ says a completed application is typically approved or rejecte
 Amazon says you can track your application's progress in the Relay app on iOS or Android. It doesn't publish what each status means. If you hear nothing in two weeks, check your FMCSA contact details, then click Contact Us on your application page.
 
 ### Why was my Amazon Relay application rejected?
-Amazon tells you to start with the rejection reason it gives you. Its FAQ names insurance coverage, authority status and missing documentation as fixable reasons, and says serious compliance issues may disqualify you from applying again. It doesn't publish a full list.
+Amazon tells you to start with the rejection reason it gives you. Its FAQ names insurance coverage, authority status and missing documentation as fixable reasons, and says serious compliance issues may disqualify you from applying again. Amazon doesn't publish a full list. See [Amazon Relay application denied](https://nudoiq.com/amazon-relay-application-denied/).
 
 ### Can I reapply to Amazon Relay after a rejection?
 In many cases, you can. Amazon's FAQ says you're welcome to reapply once a fixable issue like insurance coverage, authority status or missing documentation is addressed. It publishes no waiting period.
 
 ### Does Amazon Relay accept new authority?
-Relay typically requires your DOT number to be at least 180 days old to complete onboarding. Amazon's FAQ still encourages you to apply early, so it can start reviewing your information before you meet the requirement.
+Relay typically requires your DOT number to be at least 180 days old to complete onboarding. Amazon's FAQ still encourages you to apply early, so it can start reviewing your information before you meet the requirement, and our [new authority guide](https://nudoiq.com/amazon-relay-new-authority/) has its exact wording.
 
 ### How long does Amazon Relay approval take in Canada?
 The relay.amazon.ca page says Canadian applications are approved or rejected within 2 to 4 business days, with any delay due to insurance validation.
@@ -4920,6 +4896,16 @@ Amazon's [secure freight page](https://relay.amazon.com/pages/secure-freight-how
 Amazon publishes no dispute route for either. Manual review of failed selfie checks is the only step it describes. Our [Amazon Relay disputes guide](https://nudoiq.com/amazon-relay-disputes/) lists the routes Amazon does publish.
 
 If a hold-up at the gate turns into a late arrival hit on your scorecard, that's an on-time issue, and Amazon does let carriers dispute on-time impacts. Our [free Relay dispute letter tool](https://nudoiq.com/tools/relay-dispute-letter/) lets you tick what's true and copy a letter to submit. Amazon decides.
+
+## What if a driver's license photo keeps getting rejected?
+
+Amazon doesn't publish its photo rules or why a photo fails. Here's what it does say:
+
+- Drivers submit "a selfie and a photo of their driver's license," and Amazon checks the license front and back.
+- "Amazon typically reviews the information within 48 hours."
+- Amazon's FAQ points account security issues to the Support Center "when logged into your Relay account," and it's Relay's support route for onboarded carriers. There's no phone line.
+
+So stop resubmitting the same photo. Open a Support Center ticket from the carrier's Relay account, attach a screenshot of each rejection and ask Amazon to name what fails. Amazon doesn't publish how many retries a driver gets.
 
 ## What is the carrier responsible for?
 
@@ -5084,6 +5070,9 @@ There's no Relay phone line. Amazon's FAQ says Amazon Relay doesn't have an offi
 ### Can I use the Amazon Relay app without a carrier?
 No, a driver needs a carrier. Amazon says only drivers who work for approved and onboarded Relay carriers can use the app. Carriers invite their drivers to create a profile.
 
+### Is there an auto booker for the Relay app on iPhone?
+Not NudoIQ. Its AutoBook runs as a browser extension, and iOS doesn't support Chrome extensions, so it can't run on an iPhone. On Android you can add it with Lemur Browser, and on a computer it runs in Chrome or Edge.
+
 ---
 
 # Amazon Relay Canada: requirements, insurance and how to sign up
@@ -5217,6 +5206,29 @@ URL: https://nudoiq.com/amazon-relay-peak-season/
 Published: 2026-10-14. Last updated: 2026-10-16.
 
 Short answer: Amazon says Relay load volume spikes between October and January, and that in 2026 it expects over 4 million loads, with 300,000 a week by December. Those are Amazon's freight volume numbers, not a forecast of carrier pay.
+
+## Peak season 2026 at a glance
+
+Updated October 16, 2026.
+
+| 2026 date | Day |
+|---|---|
+| Thursday, November 26 | Thanksgiving |
+| Friday, November 27 | Black Friday |
+| Monday, November 30 | Cyber Monday |
+| Saturday, December 19 | Super Saturday |
+| Friday, December 25 | Christmas |
+
+These are calendar dates, worked out from the [federal holiday schedule](https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/). **Amazon hasn't announced its 2026 Black Friday or Cyber Monday sale window.** For context, its [2025 Black Friday Week](https://www.aboutamazon.com/news/retail/when-is-black-friday-2025) started November 20 and its deals ran through December 1.
+
+Amazon's 2026 volume line: "over 4 million loads," and "300 thousand per week by December." That's freight volume, not pay.
+
+**Do this before Thanksgiving:**
+
+- **Scorecard.** Check the daily prediction of your upcoming score. Amazon says your score decides how much you can book.
+- **Insurance.** Renew at least two to three weeks before it expires. A lapse stops booking and hauling.
+- **Equipment.** Do preventive maintenance and run pre- and post-trip inspections now.
+- **Alerts.** Turn on Relay's load alerts and keep your primary administrator's contact info current.
 
 ## When is Amazon Relay peak season?
 
@@ -5944,13 +5956,15 @@ Amazon doesn't publish whether one-truck carriers see fewer loads than bigger fl
 
 To apply, follow [how to sign up for Amazon Relay](https://nudoiq.com/how-to-sign-up-for-amazon-relay/).
 
+Hiring your first driver? Read [Amazon Relay workers' comp](https://nudoiq.com/amazon-relay-workers-comp/) for what Amazon asks and how state rules differ.
+
 ## Do you need your own DOT and MC number?
 
 Yes, both. The [Relay FAQ](https://relay.amazon.com/faq) asks for a DOT number with interstate authority that has been active for at least 180 days, and a valid MC number. Your entity type has to be "Carrier," and it has to be "Authorized for Property and for Hire."
 
 A DOT number alone isn't enough. Amazon lists the MC number too.
 
-What about leasing on to another carrier? Amazon doesn't describe a lease-on route for Relay. The FAQ asks for your own DOT and MC. If you drive under someone else's authority, you can drive for their Relay account instead. The FAQ says: "A carrier needs to invite their drivers to create a profile in the Relay app." Every driver goes through Amazon's driver check, including an owner who drives. Our [background check guide](https://nudoiq.com/amazon-relay-background-check/) covers it.
+Leasing on to another carrier? Amazon doesn't describe a lease-on route for Relay. What FMCSA says about leases, and the driver invite Amazon does describe, are in our [new authority guide](https://nudoiq.com/amazon-relay-new-authority/). Every driver goes through Amazon's driver check, including an owner who drives. Our [background check guide](https://nudoiq.com/amazon-relay-background-check/) covers it.
 
 The full list, including safety scores, is in our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/). Insurance minimums are in the [insurance requirements guide](https://nudoiq.com/amazon-relay-insurance-requirements/), and timing is in [how long Relay approval takes](https://nudoiq.com/amazon-relay-approval-time/).
 
@@ -6038,7 +6052,7 @@ Yes. Amazon says there are no fleet size requirements as long as you have the ri
 You need both. The Relay FAQ asks for a DOT number with interstate authority, active for at least 180 days, and a valid MC number.
 
 ### Can I lease on to another carrier and use Amazon Relay?
-Amazon doesn't describe a lease-on route for Relay carriers. You can drive for a Relay carrier if that carrier invites you to create a driver profile in the Relay app.
+Amazon doesn't describe a lease-on route for Relay carriers. You can drive for a Relay carrier if that carrier invites you to create a driver profile in the Relay app, as our [new authority guide](https://nudoiq.com/amazon-relay-new-authority/) explains.
 
 ### Are there Amazon Relay owner-operator jobs?
 No. Amazon says Relay carriers are independent contractors, not Amazon employees. You book loads for your own business.
@@ -6113,6 +6127,8 @@ You can lose access. Amazon says: "Carriers with three or more inspections that 
 Amazon doesn't explain what "three or more inspections that exceed" means in practice. It also doesn't publish a grace period or a path back after losing access.
 
 If your account is already blocked, our [account suspended guide](https://nudoiq.com/amazon-relay-account-suspended/) covers what Amazon checks to keep a carrier active.
+
+Turned down at application? Our guide to an [Amazon Relay application denied](https://nudoiq.com/amazon-relay-application-denied/) covers what Amazon checks and when you can reapply.
 
 ## Can you appeal an Amazon Relay safety score?
 
@@ -7049,6 +7065,8 @@ Relay needs a DOT number with interstate authority, active for at least 180 days
 
 This isn't legal or tax advice. Confirm with Amazon and FMCSA before you sign.
 
+Amazon's four wordings of the 180-day rule are side by side in our [new authority guide](https://nudoiq.com/amazon-relay-new-authority/).
+
 ## Can Amazon help pay for a business or trucks?
 
 Two Amazon programs touch this:
@@ -7089,7 +7107,7 @@ Amazon doesn't describe routes as something a carrier can sell. Amazon tenders t
 At least 30 days. Amazon says to email relay-ownership-transfers@amazon.com if you're buying, selling or closing your business.
 
 ### Does buying a company get around the 180-day DOT rule?
-Amazon doesn't address it. FMCSA has its own rules for transferring operating authority, so confirm with FMCSA and Amazon before you buy.
+Amazon doesn't address it. FMCSA has its own rules for transferring operating authority, so confirm with FMCSA and Amazon before you buy, and see our [new authority guide](https://nudoiq.com/amazon-relay-new-authority/) for Amazon's 180-day wordings.
 
 ---
 
@@ -7270,6 +7288,8 @@ Loads without a driver hurt your score. Amazon's [performance score page](https:
 You can also train drivers. Amazon's [Learning Center post](https://relay.amazon.com/blog/intro-to-amazon-relay/amazon-relays-learning-center) says: "You have the option to assign specific courses or collections to drivers on your roster." Our [Learning Center guide](https://nudoiq.com/amazon-relay-learning-center/) shows how.
 
 If a driver check goes wrong, our [disputes guide](https://nudoiq.com/amazon-relay-disputes/) covers what can and can't be disputed.
+
+Your drivers work for you, so check what Amazon asks for in [Amazon Relay workers' comp](https://nudoiq.com/amazon-relay-workers-comp/).
 
 ## What doesn't Amazon publish for drivers?
 
@@ -7672,6 +7692,8 @@ Amazon's get started page names Persona under its identity verification process 
 - **No word after 2 weeks?** The FAQ says to check that your FMCSA contact information matches your Relay application details, "down to the dash or comma." To ask about your application, click Contact Us on the top right of your application page. Our [Relay contact guide](https://nudoiq.com/amazon-relay-contact/) lists every route.
 - **Approval.** "After you're approved, you'll receive an email with instructions to access your Relay account."
 
+Got a rejection? See [Amazon Relay application denied](https://nudoiq.com/amazon-relay-application-denied/) for what to fix before you reapply.
+
 ## What do you do first after approval?
 
 The FAQ lists three first steps:
@@ -7729,3 +7751,331 @@ Amazon doesn't publish one for carriers. The only invites Amazon describes are t
 
 ### Can a driver sign up for Amazon Relay alone?
 No. Drivers can only create Relay profiles through an invite from a Relay-approved carrier. See our guide to [Amazon Relay for drivers](https://nudoiq.com/amazon-relay-drivers/).
+
+---
+
+# Amazon Relay application denied: what to do next
+
+URL: https://nudoiq.com/amazon-relay-application-denied/
+Published: 2026-10-16. Last updated: 2026-10-16.
+
+Short answer: Amazon says that in many cases you may be eligible to reapply. Start with the reason for your rejection. Fixable issues like insurance, authority status or missing documents can be addressed first. Serious compliance issues may disqualify you.
+
+## Can you reapply after Amazon Relay rejects you?
+
+Often, yes. The [Relay FAQ](https://relay.amazon.com/faq) says: "In many cases, you may be eligible to reapply." It adds: "We recommend first reviewing the reason for your rejection."
+
+Amazon splits the reasons in two:
+
+| Kind | Amazon's words | What happens |
+|---|---|---|
+| Fixable | "like insurance coverage, authority status, or missing documentation" | "you're welcome to reapply once it's been addressed" |
+| Possibly final | "serious compliance issues" | They "may disqualify you from submitting a new application" |
+
+Amazon doesn't publish a waiting period, a full list of reasons or which ones count as serious.
+
+Seen "rejection policy" or "rejection penalty"? That's about turning down loads you booked, not your application. See [cancelling a load on Relay](https://nudoiq.com/amazon-relay-cancel-load/).
+
+## Can you appeal an Amazon Relay rejection?
+
+Amazon doesn't describe an appeal for applications.
+
+The one "no appeal" line we found on Amazon's public Relay pages is about safety. For its violation-rate limits, Amazon says "we won't offer an appeal process." Our [safety score guide](https://nudoiq.com/amazon-relay-safety-score/) has those limits.
+
+So the path is: find the reason, fix it, then reapply.
+
+## What does Amazon check on an application?
+
+Each of these is something you can check yourself before you apply again:
+
+- **Your FMCSA record.** "Make sure to match your application details to the FMCSA database, down to the last dash." Amazon says it confirms this "instantly."
+- **Authority.** A DOT number with interstate authority active at least 180 days, and a valid MC number. See our [new authority guide](https://nudoiq.com/amazon-relay-new-authority/).
+- **Entity type.** A "Carrier" entity "Authorized for Property and for Hire."
+- **Safety rating.** "Satisfactory," "None," or "Not Rated."
+- **Insurance.** Amazon's minimums. Its vendor gets your certificate from your agent, and a flagged policy goes back through your provider "directly to FMCSA." See [insurance requirements](https://nudoiq.com/amazon-relay-insurance-requirements/) and [workers' comp](https://nudoiq.com/amazon-relay-workers-comp/).
+- **Owners.** Amazon verifies "the identity of all beneficial owners (anyone with more than 25% ownership)."
+- **California.** At onboarding Amazon asks you to upload your CARB documents or attest that you don't plan to operate in California. See our [CARB guide](https://nudoiq.com/amazon-relay-california-carb/).
+
+Amazon also screens beyond FMCSA. Its [secure freight page](https://relay.amazon.com/pages/secure-freight-how-amazon-prevents-trucking-fraud-theft) says it validates each carrier's "operating authority, ownership, affiliations, and other business credentials." It doesn't say what "affiliations" means.
+
+## How do you find out why you were rejected?
+
+- **Start with the reason.** The FAQ tells you to review "the reason for your rejection" first.
+- **Use Contact Us.** It's on the top right of your application page. That's where Amazon's FAQ points applicants.
+- **Skip phone numbers you find online.** The FAQ says "Amazon Relay doesn't have an official contact phone number."
+
+Our [Relay contact guide](https://nudoiq.com/amazon-relay-contact/) lists every route Amazon publishes.
+
+## What should you fix before you reapply?
+
+1. **Match FMCSA to your application.** Your FMCSA contact info should match "down to the dash or comma." Amazon says its onboarding team uses it to reach you.
+2. **Check your authority date.** Under 180 days? Amazon says "we encourage you to apply early."
+3. **Fix insurance at the source.** Get coverage up to Amazon's minimums, then have your provider submit it "directly to FMCSA."
+4. **Line up every owner.** Anyone over 25% goes through identity verification.
+5. **Settle California.** Upload your CARB documents or attest. Amazon says "You can always update your attestation later."
+
+## What if a driver's profile was rejected?
+
+That's the driver check, not your company's application. Amazon says: "Only drivers who successfully complete an identification check can haul Relay loads." Our [background check guide](https://nudoiq.com/amazon-relay-background-check/) covers the license photo, the selfie and the review time.
+
+## Should you buy or rent an approved Relay account?
+
+Amazon's [email scams post](https://relay.amazon.com/blog/email-scams-how-to-spot-a-fake) says: "Never transfer or sell your account to someone you don't know." It lists "Unsolicited offers to buy your business or manage your loads" as a scam sign. Our [fraud guide](https://nudoiq.com/amazon-relay-fraud/) covers account sales.
+
+## What doesn't Amazon publish about rejections?
+
+- An appeal process for applications
+- A full list of rejection reasons
+- Which reasons count as "serious compliance issues"
+- A waiting period before you reapply
+- Which documents prove a business address or ownership
+- What "affiliations" means in its screening
+
+## Where does NudoIQ fit?
+
+Once you're approved, NudoIQ is a Chrome extension for the Relay load board. It refreshes the board, sounds an alert on the page when a load clears your minimums, and shows net profit on each load from costs you set once. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+
+## Frequently asked questions
+
+### Why was my Amazon Relay application rejected?
+Amazon says to start with the reason for your rejection. Its FAQ names insurance coverage, authority status and missing documentation as fixable reasons. It doesn't publish a full list.
+
+### How long do I have to wait to reapply to Amazon Relay?
+Amazon doesn't publish a waiting period. It says you're welcome to reapply once a fixable issue has been addressed.
+
+### Can I appeal an Amazon Relay application rejection?
+Amazon doesn't describe an appeal process for applications. Fix the cause, ask through Contact Us on your application page, then reapply.
+
+### Is there a phone number for Amazon Relay applications?
+No. Amazon's FAQ says Relay doesn't have an official contact phone number. It points applicants to Contact Us on the top right of the application page.
+
+### Can I reapply under a new DOT number?
+Amazon doesn't say. It verifies every beneficial owner with more than 25% ownership and screens ownership and affiliations, so ask Amazon before you try.
+
+### What does profile rejected mean on Amazon Relay?
+If it's a driver's profile, it's the driver identity check, not your company application. Only drivers who pass that check can haul Relay loads. See our [background check guide](https://nudoiq.com/amazon-relay-background-check/).
+
+---
+
+# Does Amazon Relay accept new authority?
+
+URL: https://nudoiq.com/amazon-relay-new-authority/
+Published: 2026-10-16. Last updated: 2026-10-16.
+
+Short answer: You can apply, but onboarding usually waits. Amazon says Relay typically requires your DOT number to be at least 180 days old to complete onboarding, and you need a valid MC number. It still encourages you to apply early.
+
+## Does Amazon Relay accept new authority?
+
+You can apply. Onboarding usually waits for 180 days. The [Relay FAQ](https://relay.amazon.com/faq) says: "While Relay typically requires your DOT number to be at least 180 days old to complete onboarding, we encourage you to apply early."
+
+Amazon's reason: "Starting your application now allows us to begin reviewing your information so you're ready to move forward as soon as you meet the requirement."
+
+"Typically" is Amazon's word. It publishes no exception or new-authority program.
+
+## How does Amazon word the 180-day rule?
+
+Four ways, on different pages:
+
+| Amazon page | What it says |
+|---|---|
+| [Relay FAQ](https://relay.amazon.com/faq), requirements | "A DOT number, with interstate authority and that has been active for minimum of 180 days" |
+| Relay FAQ, new carriers | "your DOT number to be at least 180 days old to complete onboarding" |
+| [Insurance post](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements) | "your MC must be active for at least 180 days before you haul with Relay" |
+| [Box truck loads post](https://relay.amazon.com/blog/how-to-find-box-truck-loads) | "you'll need a DOT authority for at least 6 months" |
+
+Three name the DOT number or DOT authority, one names the MC, and one says 6 months instead of 180 days. Amazon doesn't say which date it counts from: your USDOT registration, your authority grant or the day it went active.
+
+Check your dates on [FMCSA's company lookup](https://safer.fmcsa.dot.gov/), and ask Amazon if they differ.
+
+## Do you need an MC number, or is DOT enough?
+
+Both. Amazon lists a DOT number with interstate authority and "a valid MC number." Your entity also has to be a "Carrier" that is "Authorized for Property and for Hire."
+
+More in our [owner-operator guide](https://nudoiq.com/amazon-relay-owner-operator/) and the full [requirements list](https://nudoiq.com/amazon-relay-requirements/).
+
+## Can you lease on to another carrier first?
+
+Leasing on is an FMCSA arrangement. Amazon says nothing about it for Relay.
+
+What FMCSA's rules say:
+
+- A lease is a contract where the owner "grants the use of equipment, with or without driver, for a specified period to an authorized carrier" ([49 CFR 376.2](https://www.ecfr.gov/current/title-49/section-376.2)).
+- "There shall be a written lease granting the use of the equipment" ([49 CFR 376.11](https://www.ecfr.gov/current/title-49/section-376.11)).
+- The carrier you lease to "shall assume complete responsibility for the operation of the equipment for the duration of the lease" ([49 CFR 376.12](https://www.ecfr.gov/current/title-49/section-376.12)).
+
+So a leased-on truck runs under the other carrier's authority.
+
+On Relay, the only route Amazon describes under another carrier is the driver invite: "A carrier needs to invite their drivers to create a profile in the Relay app." See [Amazon Relay for drivers](https://nudoiq.com/amazon-relay-drivers/).
+
+Amazon doesn't say whether time leased on counts toward your own 180 days. Don't assume it does. Confirm the lease itself with FMCSA.
+
+## Should you rent or buy an aged MC?
+
+We won't advise it. Amazon says:
+
+- "Never transfer or sell your account to someone you don't know." ([email scams post](https://relay.amazon.com/blog/email-scams-how-to-spot-a-fake))
+- It lists "Unsolicited offers to buy your business or manage your loads" as a scam sign.
+- Ownership changes go through Amazon: "email relay-ownership-transfers@amazon.com at least 30 days ahead."
+- Amazon verifies every owner with more than 25% ownership, and it screens "operating authority, ownership, affiliations, and other business credentials."
+
+Amazon publishes nothing about renting an MC. Buying a company? See [Amazon Relay business for sale](https://nudoiq.com/amazon-relay-business-for-sale/). Account offers are covered in our [fraud guide](https://nudoiq.com/amazon-relay-fraud/).
+
+## What can you do while your authority ages?
+
+1. **Apply now.** Amazon says it will "keep you updated on key program news while you wait."
+2. **Match FMCSA exactly.** Your application details should match the FMCSA database "down to the last dash."
+3. **Line up insurance.** The minimums are in our [insurance guide](https://nudoiq.com/amazon-relay-insurance-requirements/).
+4. **Plan your drivers.** Each one joins by your invite.
+5. **Price the work.** Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net, net per loaded mile and break-even rate from its pay, miles and your costs.
+
+Turned down already? See [Amazon Relay application denied](https://nudoiq.com/amazon-relay-application-denied/).
+
+## What doesn't Amazon publish about new authority?
+
+- How it counts the 180 days
+- Why its pages say DOT in one place, MC in another and 6 months in a third
+- Whether time leased on to another carrier counts
+- Whether a reinstated authority restarts the clock
+- Any new-authority program or exception
+- Anything about renting an MC
+
+## Where does NudoIQ fit?
+
+When your authority clears and you're booking, NudoIQ is a Chrome extension for the Relay load board. It refreshes the board, sounds an alert on the page when a load clears your minimums, and shows net profit on each load from costs you set once. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+
+## Frequently asked questions
+
+### Does Amazon Relay accept new authority?
+Amazon says Relay typically requires your DOT number to be at least 180 days old to complete onboarding. It still encourages you to apply early, so it can start reviewing your information.
+
+### Can I use Amazon Relay with just a DOT number?
+No. Amazon lists a DOT number with interstate authority and a valid MC number. Your entity type also has to be a carrier authorized for property and for hire.
+
+### Does leasing on count toward Amazon Relay's 180 days?
+Amazon doesn't say. It describes no lease-on route for Relay. The only path it describes under another carrier is that carrier inviting you as a driver.
+
+### Is the 180 days counted from my DOT or my MC?
+Amazon doesn't say. Its FAQ names the DOT number, its insurance post names the MC, and its box truck post says 6 months. Check your dates with FMCSA and ask Amazon if they differ.
+
+### What is an Amazon Relay lease agreement?
+Amazon publishes no lease-on agreement for Relay. If you mean renting your trailers to Amazon, that's a different program. See our [trailer rental guide](https://nudoiq.com/amazon-relay-trailer-rental/).
+
+### Can I buy a company to get around the 180 days?
+Amazon doesn't address it. Ownership changes go through Amazon at least 30 days ahead, and FMCSA has its own transfer rules. See our [business for sale guide](https://nudoiq.com/amazon-relay-business-for-sale/).
+
+---
+
+# Does Amazon Relay require workers' comp?
+
+URL: https://nudoiq.com/amazon-relay-workers-comp/
+Published: 2026-10-16. Last updated: 2026-10-16.
+
+Short answer: Yes, Amazon Relay lists it. The FAQ asks for workers' compensation "in all jurisdictions where your company operates" and employer's liability of at least $100,000 per occurrence. Amazon's insurance post says companies with W-2 employees need it.
+
+## Does Amazon Relay require workers' comp?
+
+Yes, it's on Amazon's list. The [Relay FAQ](https://relay.amazon.com/faq) asks for:
+
+- "Workers' compensation insurance in all jurisdictions where your company operates"
+- "Employer liability not less than $100,000 per occurrence"
+
+Amazon's [insurance requirements post](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements) says it another way: "Companies with W-2 employees need Workers' Compensation meeting state guidelines and $100,000 in Employers Liability per occurrence."
+
+## Why do Amazon's two wordings matter?
+
+They aren't the same rule.
+
+| Amazon page | Who it covers |
+|---|---|
+| Relay FAQ | "all jurisdictions where your company operates" |
+| Insurance post | "Companies with W-2 employees" |
+
+The FAQ names no exception for a company with no employees. The post ties the rule to W-2 employees. Amazon doesn't say which one wins.
+
+Amazon also says "Carriers employ their own drivers." They work for you, not Amazon.
+
+## Do owner-operators with no employees need workers' comp?
+
+Amazon doesn't say. Neither Relay page covers a one-truck company with no employees. That leaves two questions:
+
+1. **Your state.** Does state law make you carry it? See below.
+2. **Amazon.** What will Relay accept from your company? Ask Amazon before you apply.
+
+## What do state rules say?
+
+Each state sets its own. Two examples:
+
+**Florida** ([Division of Workers' Compensation](https://www.myfloridacfo.com/division/wc/employer/coverage-requirements)):
+
+- Outside construction, "Employers with four (4) or more employees, including business owners who are corporate officers or Limited Liability Company (LLC) members, must have workers' compensation coverage."
+- Sole proprietors and partners outside construction "are not employees" unless they choose to be covered.
+- "Out-of-state employers must notify their insurance carrier that they are working in Florida."
+
+Not sure which class you're in? Florida points you to the National Council on Compensation Insurance at (800) 622-4123.
+
+**Texas** ([Texas Department of Insurance](https://www.tdi.texas.gov/wc/employer/index.html)): "private employers can choose to carry workers' compensation insurance coverage, but it is not required in most cases."
+
+Another state? Ask your state's workers' comp agency. State law tells you what the law asks, not what Relay accepts.
+
+## Does a Florida workers' comp exemption count for Relay?
+
+Amazon doesn't publish whether it accepts any state exemption.
+
+Here's what Florida says an [exemption](https://www.myfloridacfo.com/division/wc/employer/exemptions) is. It lets corporate officers and LLC members "exclude themselves as employees." Exemptions go to those officers and members, "not to the business."
+
+So an exemption applies to you, the officer, and takes you out of coverage. Florida says an exempt officer "may not recover workers' compensation benefits." It doesn't apply to the drivers you hire. Ask Amazon what it accepts before you count on one.
+
+## How does Amazon check your coverage?
+
+Through your certificate of insurance. Amazon's insurance post says: "You submit your current insurance details when you apply to Relay. Then our third-party vendor gets the COI from your company's agent, broker, or insurance company on file."
+
+- **At application.** The FAQ says delays "will be due to validation of insurance information."
+- **Flagged policy.** Work with your provider until it meets Amazon's minimums, then "ensure your provider submits the information directly to FMCSA."
+- **Renewals.** Amazon says to renew "at least two to three weeks before your expiration date." A lapse stops booking. See [how to fix an insurance lapse](https://nudoiq.com/amazon-relay-account-suspended/).
+
+## How do you ask Amazon about workers' comp?
+
+- **Applying?** Amazon's FAQ points applicants to Contact Us on the top right of the application page.
+- **No phone.** The FAQ says "Amazon Relay doesn't have an official contact phone number."
+- **Other routes.** Our [Relay contact guide](https://nudoiq.com/amazon-relay-contact/) lists where Amazon sends each kind of question.
+
+Ask one plain question: what does Relay accept for workers' comp from your company, in your state? Keep the answer in writing.
+
+Once you're onboarded, Amazon's insurance post says it offers onboarded Relay carriers competitive quotes through McGriff Insurance on coverage that meets Amazon's requirements. See our [rewards guide](https://nudoiq.com/amazon-relay-rewards/).
+
+Other minimums: [insurance requirements](https://nudoiq.com/amazon-relay-insurance-requirements/).
+
+## What doesn't Amazon publish about workers' comp?
+
+- Whether it accepts a state exemption certificate
+- Whether a company with no W-2 employees, or only 1099 drivers, must show workers' comp
+- How it treats Texas employers that don't carry it
+- Whether occupational accident insurance can stand in for it
+- Which states "where your company operates" covers
+- The certificate wording it wants
+
+This isn't legal or insurance advice. Confirm with Amazon, your state agency and your agent.
+
+## Where does NudoIQ fit?
+
+Once your coverage clears and you're booking, NudoIQ is a Chrome extension for the Relay load board. It shows net profit on each load from costs you set once, driver pay included. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+
+## Frequently asked questions
+
+### Does Amazon Relay require workers' comp for owner-operators?
+Amazon doesn't say how it treats a company with no employees. Its FAQ asks for workers' comp in all jurisdictions where your company operates, while its insurance post ties the rule to companies with W-2 employees. Ask Amazon before you apply.
+
+### How much employer's liability does Amazon Relay require?
+$100,000 per occurrence. Both the Relay FAQ and Amazon's insurance post give that figure.
+
+### Does Amazon Relay accept a Florida workers' comp exemption?
+Amazon doesn't publish whether it accepts any state exemption. Florida says exemptions are issued to corporate officers and LLC members, not to the business, so ask Amazon what it accepts.
+
+### Is workers' comp required in Texas?
+The Texas Department of Insurance says private employers can choose to carry it and that it is not required in most cases. Amazon doesn't say how it treats Texas companies that don't carry it.
+
+### Can occupational accident insurance replace workers' comp for Relay?
+Amazon doesn't say. Its pages name workers' compensation and employer's liability only, so ask Amazon before you buy a substitute.
+
+### Is there a phone number to ask Amazon Relay about insurance?
+No. Amazon's FAQ says Relay doesn't have an official contact phone number. It points applicants to Contact Us on the top right of the application page.
