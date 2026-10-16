@@ -532,6 +532,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/best-amazon-relay-extensions/"/>
   </url>
   <url>
+    <loc>https://nudoiq.com/es/alternativa-cardamon/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/cardamon-alternative/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/alternativa-cardamon/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://nudoiq.com/ru/cardamon-alternative/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/cardamon-alternative/"/>
+  </url>
+  <url>
     <loc>https://nudoiq.com/amazon-relay-login/</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -778,6 +788,16 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/mejores-extensiones-amazon-relay/"/>
     <xhtml:link rel="alternate" hreflang="ru" href="https://nudoiq.com/ru/best-amazon-relay-extensions/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/best-amazon-relay-extensions/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/ru/cardamon-alternative/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/cardamon-alternative/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/alternativa-cardamon/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://nudoiq.com/ru/cardamon-alternative/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/cardamon-alternative/"/>
   </url>
   <url>
     <loc>https://nudoiq.com/ru/amazon-relay-auto-booker/</loc>
