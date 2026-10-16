@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <!-- Google Ads click id capture (2026-10-05, copied from /swiftrelay-alternative/ 2026-10-16 for /cardamon-alternative/; research/google-ads/RESTRUCTURE-2026-10-05.md). The Web Store hop loses the
+       ad click, so the gclid (or gbraid/wbraid on iOS/app traffic) is kept in localStorage on nudoiq.com, and /welcome/
+       (same origin, opened by the extension after install) sends it with the welcome_opened funnel row. That row is what
+       the "Trial started" / "Paid subscriber" offline conversions are matched back to. Kept 90 days (Google's upload
+       window); the newest click wins. Store links get utm_source/medium/campaign only: the Chrome Web Store dashboard
+       reports those three and passes nothing to the extension, so a per-click id in the store URL would carry nothing. -->
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search), keys = ["gclid", "gbraid", "wbraid"], i, v;
+        for (i = 0; i < keys.length; i++) {
+          v = q.get(keys[i]);
+          if (v && /^[\w.\-]{10,300}$/.test(v)) {
+            localStorage.setItem("nudoiq_gclid", JSON.stringify({ type: keys[i], id: v, ts: Date.now(), lp: location.pathname }));
+            break;
+          }
+        }
+        var s = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+        if (!s || !s.ts || Date.now() - s.ts > 90 * 864e5) return;
+        var camp = (q.get("utm_campaign") || "google_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "google_ads";
+        var tag = function () {
+          Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+            var u = new URL(a.href);
+            u.searchParams.set("utm_source", "google");
+            u.searchParams.set("utm_medium", "cpc");
+            u.searchParams.set("utm_campaign", camp);
+            a.href = u.toString();
+          });
+        };
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+      } catch (e) {}
+    })();
+  </script>
+  <title>Alternativa a Cardamon Relay: NudoIQ vs Cardamon AutoBooker</title>
+  <meta name="description" content="Alternativa a Cardamon Relay para el load board de Amazon Relay: NudoIQ reserva solo cargas que alcanzan tu ganancia neta mínima. Pruébalo 7 días gratis.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="theme-color" content="#FFBB8C">
+  <link rel="canonical" href="https://nudoiq.com/es/alternativa-cardamon/">
+  <link rel="alternate" hreflang="en" href="https://nudoiq.com/cardamon-alternative/">
+  <link rel="alternate" hreflang="es" href="https://nudoiq.com/es/alternativa-cardamon/">
+  <link rel="alternate" hreflang="ru" href="https://nudoiq.com/ru/cardamon-alternative/">
+  <link rel="alternate" hreflang="x-default" href="https://nudoiq.com/cardamon-alternative/">
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:site_name" content="NudoIQ">
+  <meta property="og:locale" content="es_US">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Alternativa a Cardamon Relay: NudoIQ vs Cardamon (2026)">
+  <meta property="og:description" content="Alternativa a Cardamon Relay para el load board de Amazon Relay: NudoIQ reserva solo cargas que alcanzan tu ganancia neta mínima. Pruébalo 7 días gratis.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://nudoiq.com/es/alternativa-cardamon/">
+  <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="article:published_time" content="2026-10-16">
+  <meta property="article:modified_time" content="2026-10-16">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alternativa a Cardamon Relay: NudoIQ vs Cardamon (2026)">
+  <meta name="twitter:description" content="Alternativa a Cardamon Relay para el load board de Amazon Relay: NudoIQ reserva solo cargas que alcanzan tu ganancia neta mínima. Pruébalo 7 días gratis.">
+  <meta name="twitter:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});
+    })(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Meta Pixel: same ID as the home page, so guide readers join the site audience that ads retarget
+       and seed lookalikes from. ViewContent tags which guide; InstallClick marks a Web Store click.
+       Caleb approved 2026-09-19. -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)})}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_category: 'guide', content_name: "es-alternativa-cardamon"});
+    document.addEventListener('click', function(e){
+      var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) fbq('trackCustom', 'InstallClick', {content_name: "es-alternativa-cardamon"});
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1601820741955520&ev=PageView&noscript=1" alt=""></noscript>
+  <!-- Carry fbclid through the Chrome Web Store install gap (same as the home page). -->
+  <script>
+    (function(){
+      try{
+        var p=new URLSearchParams(location.search),c=p.get('fbclid');
+        if(c){localStorage.setItem('nudoiq_fbc','fb.1.'+Date.now()+'.'+c);
+              localStorage.setItem('nudoiq_fbc_ts',String(Date.now()));}
+      }catch(e){}
+    })();
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190): counts a Chrome Web Store click from any CTA on this page as the
+       store-click conversion, so ad sitelinks that land here are measured the same way as /get/. No customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');
+    document.addEventListener('click', function (e) { var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+      if (a) { try { gtag('event', 'conversion', { send_to: 'AW-18464861190/qNEZCOvXy_8cEIbY3eRE' }); } catch (x) {} } }, true);</script>
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM summary">
+  <link rel="stylesheet" href="/assets/doc.css">
+  <link rel="stylesheet" href="/assets/guide.css">
+  <style>
+  /* Page-specific additions on top of doc.css + guide.css (hand-built page, data-layout="custom"). */
+  /* Contrast: the shared title-panel blues (#2551B8 on #B1CBFF = 4.36:1) and grey #888 (3.54:1) miss WCAG AA, so this page
+     uses navy in the panel and the scorecard page's darker grey. */
+  :root{--g3:#6F6F6F}
+  .lf .doc-hero .crumbs,.lf .doc-hero .crumbs a,.lf .page-subtitle,.lf .hero-cta .micro,.lf .byline,.cta p,.cta .micro{color:var(--navy)}
+  .lf .byline{opacity:1}
+  .lf caption a{color:var(--blue-deep)}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:999;border-radius:0 0 var(--ri) 0}
+  .skip:focus{left:0}
+  .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:0 8px}
+  .crumbs li+li::before{content:"\203A";margin-right:8px;color:var(--blue-deep)}
+  .lf .page-title{max-width:24ch;font-size:clamp(32px,4.4vw,52px)}
+  .lf .doc-hero .answer{background:#fff;border-color:rgba(22,22,22,.06);border-left-color:var(--blue);margin:22px 0 18px;max-width:var(--col)}
+  .hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:22px}
+  .hero-cta .micro{color:var(--blue-deep);font-size:14px;font-weight:500}
+  .prose section{scroll-margin-top:88px}
+  .prose section > p{color:var(--ink-4);font-size:17px;line-height:1.68;margin:0 0 18px}
+  .prose section:first-child h2{margin-top:8px}
+  .lf .tbl{margin:10px 0 18px;background:#fff}
+  .lf .tbl:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+  .lf table{min-width:680px;font-size:14.5px}
+  .lf caption{caption-side:top;text-align:left;padding:14px 16px;font-size:13.5px;line-height:1.55;color:var(--ink-4);
+    background:var(--paper-2);border-bottom:1px solid rgba(22,22,22,.08)}
+  .lf caption span{display:block;position:sticky;left:16px;max-width:calc(100vw - 66px)}
+  .lf thead th{white-space:nowrap}
+  .lf thead th:nth-child(2){color:var(--blue-deep)}
+  .lf tbody th[scope=row]{background:#fff;color:var(--ink);font-weight:600;width:24%;position:sticky;left:0;z-index:1;
+    box-shadow:1px 0 0 rgba(22,22,22,.08)}
+  .lf thead th:first-child{position:sticky;left:0;z-index:2}
+  .lf tbody tr:last-child th{border-bottom:0}
+  .fn{font-size:11px;line-height:0;margin-left:3px;white-space:nowrap}
+  .fn a{text-decoration:none;font-weight:600;padding:0 2px}
+  .prose h3#sources{font-size:15px;margin:18px 0 8px}
+  .sources{font-size:14px;color:var(--ink-4)}
+  .prose .sources li{font-size:14px;line-height:1.55;margin:0 0 6px}
+  .sources a{word-break:break-all}
+  .sources li{scroll-margin-top:88px} /* footnote jumps land below the sticky header */
+  .prose section > p.tmnote{font-size:13px;color:var(--g3);line-height:1.55;margin:4px 0 0}
+  .pick{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:6px 0 20px}
+  .pick-col{background:var(--paper-2);border:1px solid rgba(22,22,22,.07);border-radius:var(--ri);padding:20px 22px 6px}
+  .pick-nq{border-color:var(--peri-2);background:#F3F7FF}
+  .prose .pick h3{margin:0 0 10px;font-size:17px}
+  .prose .pick li{font-size:15.5px;line-height:1.55}
+  .midlink a{font-weight:600}
+  .prose .faq{margin:48px 0 0;max-width:none}
+  .prose .faq h2{margin:0 0 14px}
+  .faq .a p{font-size:16px;line-height:1.62}
+  .cta .micro{color:var(--navy);font-size:13.5px;margin-top:8px;text-align:center}
+  /* Freshness pill above the table: same component as /loadfetcher-alternative/ and /get/loadfetcher/ .checked. */
+  .prose section > p.upd{margin:0 0 2px}
+  .upd .checked{display:inline-flex;align-items:center;gap:6px;background:var(--paper-2);border:1px solid #E1E7F5;border-radius:var(--rp);padding:5px 14px;font-size:12.5px;font-weight:500;color:var(--ink-4)}
+  @media (max-width:660px){
+    .pick{grid-template-columns:1fr}
+    .prose section > p{font-size:16px}
+    .lf .doc-hero .answer{padding:16px 18px}
+    .hero-cta .btn{width:100%}
+    .hero-cta .micro{width:100%;text-align:center}
+    .cta-act{width:100%}
+  }
+  /* competitor-concede-2026-10-14 */
+  /* 2026-10-14 D77: one icon system for comparison cells. NudoIQ = solid green check (#1F7A5C, the product's own
+     PRICE UP green, 5.4:1 on white); a rival that lists the item = muted check; not listed = muted dash. */
+  .ic{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;vertical-align:middle;flex:0 0 22px}
+  .ic svg{width:14px;height:14px;display:block}
+  .ic-y{background:#1F7A5C;color:#fff}
+  .ic-y2{background:#E3E6EC;color:#3F4652}
+  .ic-n{background:#F0F1F4;color:#6B7280}
+  td.c,th.c{text-align:center !important;vertical-align:middle !important}
+  .cq{display:block;font-size:11px;line-height:1.3;color:#5B6270;margin-top:3px;font-weight:500}
+  .nq-all{margin:18px 0 22px;padding:18px 20px;background:#F3F7FF;border:1px solid #D9E4FF;border-radius:16px}
+  .nq-all h3{margin:0 0 10px;font-size:17px}
+  .nq-all .all-intro{margin:0 0 10px;font-size:14.5px;color:#4A5160}
+  .nq-all ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px 18px}
+  .nq-all li{display:flex;align-items:center;gap:10px;margin:0;padding:0;font-weight:500;line-height:1.35}
+  .nq-all li::before{content:none}
+  .lf #comparison{min-width:0;table-layout:fixed}
+  .lf #comparison thead th:first-child{width:auto}
+  .lf #comparison th.c,.lf #comparison td.c{width:120px}
+  .lf #comparison tbody th{font-weight:600}
+  .lf #comparison tbody th .fn{margin-left:4px}
+  .prose ul.pick-one{margin:6px 0 16px}
+  @media (max-width:640px){ .lf #comparison th.c,.lf #comparison td.c{width:96px;padding-left:3px;padding-right:3px} }
+
+  /* 2026-10-16 /cardamon-alternative/: dated store facts as scannable tiles inside the template's .pick cards. */
+  .tiles .pick-col{padding:20px 22px 18px}
+  .prose ul.st{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+  .prose ul.st li{margin:0;padding:0;display:grid;grid-template-columns:minmax(92px,auto) 1fr;gap:2px 14px;align-items:baseline;font-size:15px;line-height:1.45}
+  .prose ul.st li::before{content:none}
+  .st .big{font-size:24px;font-weight:600;letter-spacing:-0.02em;color:var(--ink);line-height:1.15;white-space:nowrap}
+  .st .lbl{color:var(--ink-4)}
+  .st q{quotes:"\201C" "\201D"}
+  @media (max-width:420px){ .prose ul.st li{grid-template-columns:1fr} .st .big{font-size:22px} }
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://nudoiq.com/es/alternativa-cardamon/#article",
+      "headline": "Alternativa a Cardamon Relay: NudoIQ vs Cardamon para el load board de Amazon Relay",
+      "description": "Alternativa a Cardamon Relay para el load board de Amazon Relay: NudoIQ reserva solo cargas que alcanzan tu ganancia neta mínima. Pruébalo 7 días gratis.",
+      "abstract": "Si quieres que se reserven solo las cargas que alcanzan tu ganancia neta mínima después de tus propios costos, NudoIQ es la alternativa a Cardamon. También redacta cartas de disputa del scorecard. Pruébalo 7 días gratis, sin tarjeta para empezar.",
+      "url": "https://nudoiq.com/es/alternativa-cardamon/",
+      "mainEntityOfPage": "https://nudoiq.com/es/alternativa-cardamon/",
+      "image": "https://nudoiq.com/assets/og-image-1200x630.png",
+      "datePublished": "2026-10-16",
+      "dateModified": "2026-10-16",
+      "inLanguage": "es",
+      "author": {
+        "@id": "https://nudoiq.com/#organization"
+      },
+      "publisher": {
+        "@id": "https://nudoiq.com/#organization"
+      },
+      "isPartOf": {
+        "@id": "https://nudoiq.com/#website"
+      },
+      "mainEntity": {
+        "@id": "https://nudoiq.com/#software"
+      },
+      "about": [
+        {
+          "@id": "https://nudoiq.com/#software"
+        },
+        {
+          "@type": "Thing",
+          "name": "Cardamon Relay AutoBooker",
+          "url": "https://www.cardamon.org/products/relay-autobooker/",
+          "sameAs": [
+            "https://chromewebstore.google.com/detail/relay-autobooker-refreshe/ikbhbonbdgohhiilbpbffcjgnpbpmfah"
+          ]
+        }
+      ],
+      "keywords": [
+        "Cardamon alternative",
+        "Cardamon Relay",
+        "Cardamon Amazon Relay",
+        "Relay AutoBooker Cardamon",
+        "Amazon Relay auto booker"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://nudoiq.com/es/alternativa-cardamon/#faq",
+      "url": "https://nudoiq.com/es/alternativa-cardamon/",
+      "name": "Preguntas frecuentes sobre la alternativa a Cardamon Relay",
+      "inLanguage": "es",
+      "isPartOf": {
+        "@id": "https://nudoiq.com/#website"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué es Cardamon Relay?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cardamon es una extensión de Chrome para Amazon Relay, de Cardamon Inc. (revisado el 16 de octubre de 2026). NudoIQ es otra extensión, con AutoBook según tu ganancia neta mínima."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cardamon funciona?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Su reseña escrita más reciente en la tienda, del 11 de septiembre de 2026, es de 1 estrella: \"Not proper work\" (no funciona como debe). Su ficha se actualizó por última vez el 4 de octubre de 2026 (revisado el 16 de octubre de 2026). No probamos su producto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cardamon reserva cargas automáticamente?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, en su plan Pro, según su ficha en la tienda (revisada el 16 de octubre de 2026). El AutoBook de NudoIQ reserva solo las cargas que alcanzan tu ganancia neta mínima y se salta cualquier carga que no pueda calcular por completo."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cardamon muestra la ganancia neta por carga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No aparece en su ficha ni en su sitio web (revisado el 16 de octubre de 2026). NudoIQ muestra en cada carga la ganancia neta en dólares y por milla, después de los costos que pones."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cardamon es una extensión de Chrome?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, se instala desde la Chrome Web Store. NudoIQ es otra extensión de Chrome. Si pruebas las dos, usa solo una extensión del load board a la vez para que no choquen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo cambiarme de Cardamon a NudoIQ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, en unos minutos. Apaga o quita Cardamon, agrega NudoIQ desde la Chrome Web Store y empieza tus 7 días gratis. Tu inicio de sesión en Relay sigue igual."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿NudoIQ o Cardamon son de Amazon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. NudoIQ es un producto independiente de Sami Enterprises LLC y no está afiliado, respaldado ni patrocinado por Amazon. Cardamon es de Cardamon Inc., según su sitio web."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿NudoIQ funciona en español?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Los botones y avisos de NudoIQ en el load board funcionan en español y en inglés. Los mensajes de Telegram llegan en inglés. La ficha de Cardamon está en inglés (revisado el 16 de octubre de 2026)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo decide NudoIQ qué cargas reservar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Solo las cargas que alcanzan tu Min Net Profit y que puede calcular por completo, hasta tu tope de reservas (Max books). El modo ALERT solo te avisa. Mira qué pasa si cancelas una carga en Amazon Relay (en inglés)."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://nudoiq.com/es/alternativa-cardamon/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://nudoiq.com/es/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guías",
+          "item": "https://nudoiq.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Alternativa a Cardamon",
+          "item": "https://nudoiq.com/es/alternativa-cardamon/"
+        }
+      ]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://nudoiq.com/#organization",
+      "name": "NudoIQ",
+      "url": "https://nudoiq.com/",
+      "logo": "https://nudoiq.com/icons/nudoiq-logo-512.png",
+      "email": "contact@nudoiq.com",
+      "sameAs": [
+        "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk",
+        "https://t.me/nudoiqsupport"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="chromewebstore.google.com"]');
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+</head>
+<!-- es/alternativa-cardamon: ES twin of /cardamon-alternative/ built by research/seo/cardamon-alt-2026-10-16/twin.py from ES-TWIN-cardamon-alternative-2026-10-16.json (Martha). Head tags, tracking, ids and source comments are the English page's. -->
+<body data-layout="custom" data-clarity-unmask="true">
+  <a class="skip" href="#main">Saltar al contenido</a>
+
+  <div class="promo">7 días gratis, sin tarjeta para empezar · Funciona en tu propio Chrome · En español y en inglés</div>
+
+  <header class="top"><div class="wrap topin">
+    <a class="brand" href="/es/" aria-label="Inicio de NudoIQ"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <nav class="navpills" aria-label="Navegación principal">
+      <a href="/es/#features">Funciones</a><a href="/es/#pricing">Precio</a><a href="/guides/">Guías (en inglés)</a><a href="/es/#faq">FAQ</a>
+    </nav>
+    <div class="navright">
+      <div class="lang" aria-label="Language"><a href="/cardamon-alternative/" hreflang="en">English</a><a href="/es/alternativa-cardamon/" hreflang="es" aria-current="page">Espa&ntilde;ol</a><a href="/ru/cardamon-alternative/" hreflang="ru">Русский</a></div>
+      <a class="btn btn-go btn-sm" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=es-alternativa-cardamon" target="_blank" rel="noopener">Agregar NudoIQ a Chrome</a>
+    </div>
+  </div></header>
+
+  <main id="main">
+  <article class="lf">
+    <header class="doc-hero"><div class="doc-hero-in">
+      <nav class="crumbs" aria-label="Ruta de navegación"><ol><li><a href="/es/">Inicio</a></li><li><a href="/guides/">Guías</a></li><li><span aria-current="page">Alternativa a Cardamon</span></li></ol></nav>
+      <h1 class="page-title">Alternativa a Cardamon Relay: NudoIQ vs Cardamon para el load board de Amazon Relay</h1>
+      <div class="answer" id="short-answer"><p class="lbl">Respuesta corta</p><p>Si quieres que se reserven solo las cargas que alcanzan tu ganancia neta mínima después de tus propios costos, NudoIQ es la alternativa a Cardamon. También redacta cartas de disputa del scorecard. Pruébalo 7 días gratis, sin tarjeta para empezar.</p></div>
+      <div class="hero-cta"><a class="btn btn-go" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=es-alternativa-cardamon" target="_blank" rel="noopener">Pruébalo 7 días gratis</a><span class="micro">Sin tarjeta para empezar.</span></div>
+      <p class="byline">NudoIQ · Publicado <time datetime="2026-10-16">16 de octubre de 2026</time></p>
+    </div></header>
+
+    <div class="container">
+      <div class="prose">
+<!-- 2026-10-16 /cardamon-alternative/ (COMPETITOR-SCAN-2026-10-16 action 1; D77 concede nothing). 1:1 copy of /swiftrelay-alternative/. Words: research/copy/CARDAMON-ALT-2026-10-16.json + research/copy/CARDAMON-ALT-FIX-2026-10-16.json (Martha); reused strings from research/copy/COMPETITOR-CONCEDE-NOTHING-2026-10-14.json. Builder: research/seo/cardamon-alt-2026-10-16/build_cd.py. -->
+<section id="what-is-a-good-cardamon-alternative" aria-labelledby="what-is-a-good-cardamon-alternative-h">
+<h2 id="what-is-a-good-cardamon-alternative-h">¿Cuál es una buena alternativa a Cardamon Relay?</h2>
+<!-- NudoIQ source: research/PRODUCT-FACTS.md sections 6 (Post A Truck), 10 (AutoBook gate, disputes), 12 (no password), 13 (Telegram only if connected), Lane Intelligence and backhaul buttons (section 3 table); shipped 2.5.7, checked 2026-10-16 -->
+<p>NudoIQ, si quieres que se reserven cargas por ganancia neta, después de tus propios costos. <a href="/es/amazon-relay-auto-refresh/">Refresca el load board y reserva las cargas que alcanzan tu mínimo</a>.</p>
+</section>
+<section id="how-does-nudoiq-compare-to-cardamon" aria-labelledby="how-does-nudoiq-compare-to-cardamon-h">
+<h2 id="how-does-nudoiq-compare-to-cardamon-h">¿Cómo se compara NudoIQ con Cardamon?</h2>
+<p>Punto por punto, con la fuente de cada dato sobre Cardamon.</p>
+<!-- Freshness line reused from /loadfetcher-alternative/ (Martha 2026-10-09, research/copy/LOADFETCHER-ALT-SEO-2026-10-09.json A2). -->
+<p class="upd"><span class="checked"><time datetime="2026-10-16">Actualizado en octubre de 2026</time></span></p>
+<div class="tbl" role="region" aria-labelledby="cmp-cap" tabindex="0">
+<table id="comparison" class="cmp-ic">
+<caption id="cmp-cap"><span>Según la ficha de cada una en la Chrome Web Store y su sitio web, revisados el 16 de octubre de 2026. Guion: no aparece en la ficha ni en el sitio web de Cardamon. No probamos su producto. ¿Ves un error? <a href="/support/">Avísanos en la página de contacto (en inglés)</a>.</span></caption>
+<thead><tr><th scope="col">Función</th><th scope="col" class="c">NudoIQ<sup class="fn"><a href="#src-1" aria-label="Fuente 1">1</a></sup></th><th scope="col" class="c">Cardamon</th></tr></thead>
+<tbody>
+<tr><th scope="row">AutoBook con Min Net Profit<sup class="fn"><a href="#src-2" aria-label="Fuente 2">2</a>,<a href="#src-3" aria-label="Fuente 3">3</a></sup></th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="c"><!-- Cardamon source: https://chromewebstore.google.com/detail/relay-autobooker-refreshe/ikbhbonbdgohhiilbpbffcjgnpbpmfah (store listing v12.18, updated October 4, 2026: overview, filters, FREE AND PRO ACCESS; none listed); https://www.cardamon.org/products/relay-autobooker/ (product page and pricing block: none listed), accessed 2026-10-16. Captures: research/competitors/raw/reviews_2026-10-16/cardamon.html, research/seo/cardamon-alt-2026-10-16/evidence/www_cardamon_org_products_relay-autobooker_.html --><span class="ic ic-n" role="img" aria-label="No aparece"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+<tr><th scope="row">Ganancia neta por carga<sup class="fn"><a href="#src-2" aria-label="Fuente 2">2</a>,<a href="#src-3" aria-label="Fuente 3">3</a></sup></th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="c"><span class="ic ic-n" role="img" aria-label="No aparece"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+<tr><th scope="row">Historial de tarifas por ruta<sup class="fn"><a href="#src-2" aria-label="Fuente 2">2</a>,<a href="#src-3" aria-label="Fuente 3">3</a></sup></th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="c"><span class="ic ic-n" role="img" aria-label="No aparece"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+<tr><th scope="row">Búsqueda de backhaul<sup class="fn"><a href="#src-2" aria-label="Fuente 2">2</a>,<a href="#src-3" aria-label="Fuente 3">3</a></sup></th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="c"><span class="ic ic-n" role="img" aria-label="No aparece"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+<tr><th scope="row">Post a Truck<sup class="fn"><a href="#src-2" aria-label="Fuente 2">2</a>,<a href="#src-3" aria-label="Fuente 3">3</a></sup></th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="c"><span class="ic ic-n" role="img" aria-label="No aparece"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+<tr><th scope="row">Cartas de disputa del scorecard<sup class="fn"><a href="#src-2" aria-label="Fuente 2">2</a>,<a href="#src-3" aria-label="Fuente 3">3</a></sup></th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="c"><span class="ic ic-n" role="img" aria-label="No aparece"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+<tr><th scope="row">Alertas de cargas por Telegram<sup class="fn"><a href="#src-2" aria-label="Fuente 2">2</a>,<a href="#src-3" aria-label="Fuente 3">3</a></sup></th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="c"><span class="ic ic-n" role="img" aria-label="No aparece"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+<tr><th scope="row">Ofertas de contrato<sup class="fn"><a href="#src-2" aria-label="Fuente 2">2</a>,<a href="#src-3" aria-label="Fuente 3">3</a></sup></th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="c"><span class="ic ic-n" role="img" aria-label="No aparece"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+<tr><th scope="row">Botones y avisos en español<sup class="fn"><a href="#src-2" aria-label="Fuente 2">2</a>,<a href="#src-3" aria-label="Fuente 3">3</a></sup></th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="c"><span class="ic ic-n" role="img" aria-label="No aparece"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="nq-all"><h3 id="everything-in-nudoiq">Todo lo que trae NudoIQ</h3><p class="all-intro">También incluido, en la misma suscripción de NudoIQ.</p><ul><li><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Auto refresh del load board</span></li><li><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Reserva con un clic</span></li><li><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>7 días gratis, sin tarjeta</span></li><li><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Oculta las cargas promocionadas y las ventanas para publicar tu camión</span></li><li><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Un solo precio para todos los camiones de tu flota</span></li><li><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Nunca te pide tu contraseña de Amazon</span></li><li><span class="ic ic-y" role="img" aria-label="Sí"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Cancelas tú mismo cuando quieras desde tu página de facturación</span></li></ul></div>
+<h3 id="sources">Fuentes</h3>
+<ol class="sources">
+<li id="src-1">Extensión NudoIQ para Amazon Relay, y <a href="/get/">nudoiq.com/get/</a></li>
+<li id="src-2">Ficha de Cardamon para Amazon Relay en la Chrome Web Store, v12.18, actualizada el 4 de octubre de 2026, revisada el 16 de octubre de 2026 (<a href="https://chrome.google.com/webstore/detail/ikbhbonbdgohhiilbpbffcjgnpbpmfah" target="_blank" rel="nofollow noopener">chromewebstore.google.com/detail/ikbhbonbdgohhiilbpbffcjgnpbpmfah</a>)</li>
+<li id="src-3">Página del producto Relay Autobooker en cardamon.org, revisada el 16 de octubre de 2026 (<a href="https://www.cardamon.org/products/relay-autobooker/" target="_blank" rel="nofollow noopener">cardamon.org/products/relay-autobooker</a>)</li>
+<li id="src-4">Reseñas de Cardamon en la Chrome Web Store (calificación y reseñas escritas), revisadas el 16 de octubre de 2026 (<a href="https://chrome.google.com/webstore/detail/ikbhbonbdgohhiilbpbffcjgnpbpmfah/reviews" target="_blank" rel="nofollow noopener">chromewebstore.google.com/detail/ikbhbonbdgohhiilbpbffcjgnpbpmfah</a>)</li>
+<li id="src-5"><!-- NudoIQ rating: our store listing captured 2026-10-16 (research/competitors/raw/reviews_2026-10-16/nudoiq.html; cws-history.csv 2026-10-16 row). D4: rating shown without its count, and no rival count either (coordinator 10-16). Update-count comparison removed (fact-check: Cardamon shipped v12.7 to v12.18 since Sep 11). -->Ficha de NudoIQ en la Chrome Web Store (calificación), revisada el 16 de octubre de 2026</li>
+</ol>
+<p class="tmnote">Cardamon es una marca de su propietario y aquí se usa solo para nombrar y comparar dos extensiones de Amazon Relay. NudoIQ no está afiliado a Cardamon ni a Amazon.</p>
+<p>Para ver cómo se compara NudoIQ con Cardamon y otras cinco extensiones de Relay en reserva automática, alertas y precio, lee <a href="/why-nudoiq/">la comparación completa (en inglés)</a>.</p>
+</section>
+<section id="cardamon-reviews" aria-labelledby="cardamon-reviews-h">
+<h2 id="cardamon-reviews-h">¿Qué calificación tienen NudoIQ y Cardamon en la Chrome Web Store?</h2>
+<!-- Cardamon rating and reviews: store listing and its written-review feed, captured 2026-10-16 (research/competitors/raw/reviews_2026-10-16/cardamon.html, cardamon_reviews.html, reviews_all.json "Cardamon": 1 star 2026-09-11 v12.7; 1 star 2026-06-28 v11.14). Reviewer names left out on purpose. NudoIQ rating: our listing, checked 2026-10-16 (D4: no denominator). -->
+<p>La calificación de cada una en la Chrome Web Store y la reseña escrita más reciente de Cardamon, revisadas el 16 de octubre de 2026.</p>
+<div class="pick tiles">
+<div class="pick-col pick-nq"><h3>NudoIQ</h3><ul class="st"><li><strong class="big">5.0</strong><span class="lbl">Calificación en la Chrome Web Store, revisada el 16 de octubre de 2026<sup class="fn"><a href="#src-5" aria-label="Fuente 5">5</a></sup></span></li></ul></div>
+<div class="pick-col"><h3>Cardamon</h3><ul class="st"><li><strong class="big">3.8</strong><span class="lbl">Calificación en la Chrome Web Store, revisada el 16 de octubre de 2026<sup class="fn"><a href="#src-2" aria-label="Fuente 2">2</a></sup></span></li><li><strong class="big">11 de septiembre de 2026</strong><span class="lbl">Reseña escrita más reciente, 1 estrella: "Not proper work" (no funciona como debe)<sup class="fn"><a href="#src-4" aria-label="Fuente 4">4</a></sup></span></li><!-- The 2026-06-28 one-star review is not quoted: its author shares our founder's name (coordinator 10-16). --></ul></div>
+</div>
+</section>
+<section id="what-is-cardamon" aria-labelledby="what-is-cardamon-h">
+<h2 id="what-is-cardamon-h">¿Qué es Cardamon?</h2>
+<!-- Cardamon source: https://chromewebstore.google.com/detail/relay-autobooker-refreshe/ikbhbonbdgohhiilbpbffcjgnpbpmfah (store listing v12.18, updated October 4, 2026: overview, filters, FREE AND PRO ACCESS; none listed); https://www.cardamon.org/products/relay-autobooker/ (product page and pricing block: none listed), accessed 2026-10-16. Captures: research/competitors/raw/reviews_2026-10-16/cardamon.html, research/seo/cardamon-alt-2026-10-16/evidence/www_cardamon_org_products_relay-autobooker_.html -->
+<p>Cardamon (Relay AutoBooker &amp; Refresher Cardamon) es una extensión de Chrome para el load board de Amazon Relay, de Cardamon Inc., según su ficha en la tienda y su sitio web, revisados el 16 de octubre de 2026.</p>
+</section>
+<section id="does-cardamon-auto-book-loads" aria-labelledby="does-cardamon-auto-book-loads-h">
+<h2 id="does-cardamon-auto-book-loads-h">¿Cardamon reserva cargas automáticamente?</h2>
+<!-- Cardamon source: https://chromewebstore.google.com/detail/relay-autobooker-refreshe/ikbhbonbdgohhiilbpbffcjgnpbpmfah (store listing v12.18, overview: 'Auto-booking, every filter rule, Differential Mode and the Relay Assistant request need a Pro plan after the trial'; FREE AND PRO ACCESS: 'Pro: auto-booking'), accessed 2026-10-16 --><!-- NudoIQ source: dist/nudoiq_v2.5.7.zip content.js match gate: passesProfit (minProfitFilter), passesData (complete data), maxBooksPerSession 1 to 20 (PRODUCT-FACTS sections 10 and 13), checked 2026-10-16 -->
+<p>Sí, en su plan Pro, según su ficha en la tienda (revisada el 16 de octubre de 2026). <a href="/es/amazon-relay-auto-booker/">El AutoBook de NudoIQ</a> reserva solo las cargas que alcanzan tu ganancia neta mínima, después de tus propios costos.</p>
+</section>
+<section id="what-does-nudoiq-do-that-cardamon-doesnt-list" aria-labelledby="what-does-nudoiq-do-that-cardamon-doesnt-list-h">
+<h2 id="what-does-nudoiq-do-that-cardamon-doesnt-list-h">¿Qué hace NudoIQ que Cardamon no anuncia?</h2>
+<p>Tres cosas que no aparecen en la ficha ni en el sitio web de Cardamon al 16 de octubre de 2026.</p>
+<!-- Cardamon source: https://chromewebstore.google.com/detail/relay-autobooker-refreshe/ikbhbonbdgohhiilbpbffcjgnpbpmfah (store listing v12.18: no net profit floor, no net profit per load, no dispute letters listed; its payout trigger is gross payout); https://www.cardamon.org/products/relay-autobooker/ (product page: none listed), accessed 2026-10-16 --><!-- NudoIQ source: dist/nudoiq_v2.5.7.zip content.js match gate (minProfitFilter), net per load after driver pay, fuel, maintenance and deadhead (PRODUCT-FACTS-ADDENDUM-2026-10-14), NudoIQ Dispute Engine (PRODUCT-FACTS section 10), checked 2026-10-16 -->
+<ul><li><strong>Ganancia neta mínima:</strong> AutoBook reserva solo las cargas que alcanzan tu Min Net Profit.</li><li><strong>Ganancia neta en cada carga:</strong> en dólares y por milla, después de los costos que pones.</li><li><strong><a href="/es/amazon-relay-scorecard/">Cartas de disputa del scorecard</a>:</strong> te redacta la carta. Tú la revisas y la envías. Amazon decide.</li></ul>
+</section>
+<section id="should-you-pick-cardamon-or-nudoiq" aria-labelledby="should-you-pick-cardamon-or-nudoiq-h">
+<h2 id="should-you-pick-cardamon-or-nudoiq-h">Para quién es NudoIQ</h2>
+<ul class="pick-one"><li>Quieres que se reserven cargas por ti, solo las que alcanzan tu ganancia neta mínima.</li><li>Quieres ver cuánto te deja cada carga antes de tomarla.</li><li>Peleas infracciones del scorecard y quieres la carta de disputa ya redactada.</li></ul>
+<p>¿No estás seguro? Prueba NudoIQ 7 días gratis. Si no se ajusta a tu forma de reservar, vuelve a lo que usabas.</p>
+<p class="midlink"><a href="/es/">Prueba NudoIQ 7 días gratis</a></p>
+</section>
+<section id="how-do-you-switch-from-cardamon-to-nudoiq" aria-labelledby="how-do-you-switch-from-cardamon-to-nudoiq-h">
+<h2 id="how-do-you-switch-from-cardamon-to-nudoiq-h">¿Cómo te cambias de Cardamon a NudoIQ?</h2>
+<p>Apaga o quita Cardamon, agrega NudoIQ desde la Chrome Web Store, <a href="/amazon-relay-load-board/">abre el load board de Relay (guía en inglés)</a> y presiona START. Tu inicio de sesión en Relay no cambia.</p>
+</section>
+<section id="faq" class="faq" aria-labelledby="faq-h">
+<h2 id="faq-h">Preguntas frecuentes sobre la alternativa a Cardamon Relay</h2>
+<!-- Rival facts in these answers: as dated in each answer; sources in the comparison section. -->
+<details><summary>¿Qué es Cardamon Relay?</summary><div class="a"><p>Cardamon es una extensión de Chrome para Amazon Relay, de Cardamon Inc. (revisado el 16 de octubre de 2026). NudoIQ es otra extensión, con AutoBook según tu ganancia neta mínima.</p></div></details>
+<details><summary>¿Cardamon funciona?</summary><div class="a"><p>Su reseña escrita más reciente en la tienda, del 11 de septiembre de 2026, es de 1 estrella: "Not proper work" (no funciona como debe). Su ficha se actualizó por última vez el 4 de octubre de 2026 (revisado el 16 de octubre de 2026). No probamos su producto.</p></div></details>
+<details><summary>¿Cardamon reserva cargas automáticamente?</summary><div class="a"><p>Sí, en su plan Pro, según su ficha en la tienda (revisada el 16 de octubre de 2026). El AutoBook de NudoIQ reserva solo las cargas que alcanzan tu ganancia neta mínima y se salta cualquier carga que no pueda calcular por completo.</p></div></details>
+<details><summary>¿Cardamon muestra la ganancia neta por carga?</summary><div class="a"><p>No aparece en su ficha ni en su sitio web (revisado el 16 de octubre de 2026). NudoIQ muestra en cada carga la ganancia neta en dólares y por milla, después de los costos que pones.</p></div></details>
+<details><summary>¿Cardamon es una extensión de Chrome?</summary><div class="a"><p>Sí, se instala desde la Chrome Web Store. NudoIQ es otra extensión de Chrome. Si pruebas las dos, usa solo una extensión del load board a la vez para que no choquen.</p></div></details>
+<details><summary>¿Puedo cambiarme de Cardamon a NudoIQ?</summary><div class="a"><p>Sí, en unos minutos. Apaga o quita Cardamon, agrega NudoIQ desde la Chrome Web Store y empieza tus 7 días gratis. Tu inicio de sesión en Relay sigue igual.</p></div></details>
+<details><summary>¿NudoIQ o Cardamon son de Amazon?</summary><div class="a"><p>No. NudoIQ es un producto independiente de Sami Enterprises LLC y no está afiliado, respaldado ni patrocinado por Amazon. Cardamon es de Cardamon Inc., según su sitio web.</p></div></details>
+<details><summary>¿NudoIQ funciona en español?</summary><div class="a"><p>Sí. Los botones y avisos de NudoIQ en el load board funcionan en español y en inglés. Los mensajes de Telegram llegan en inglés. La ficha de Cardamon está en inglés (revisado el 16 de octubre de 2026).</p></div></details>
+<details><summary>¿Cómo decide NudoIQ qué cargas reservar?</summary><div class="a"><p>Solo las cargas que alcanzan tu Min Net Profit y que puede calcular por completo, hasta tu tope de reservas (Max books). El modo ALERT solo te avisa. Mira <a href="/amazon-relay-cancel-load/">qué pasa si cancelas una carga en Amazon Relay (en inglés)</a>.</p></div></details>
+</section>
+      </div>
+
+      <aside class="cta" aria-labelledby="cta-h">
+        <div><h2 id="cta-h">Deja que NudoIQ reserve por ti las cargas que alcanzan tu mínimo.</h2><p>7 días gratis, luego $49.99 al mes para todos tus camiones. Cancela cuando quieras.</p></div>
+        <div class="cta-act"><a class="btn btn-go" style="width:100%" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=es-alternativa-cardamon" target="_blank" rel="noopener">Pruébalo 7 días gratis</a><p class="micro">Sin tarjeta para empezar.</p></div>
+      </aside>
+    </div>
+  </article>
+
+  <div class="container" style="padding-top:0">
+    <nav class="related" aria-label="Más guías de Amazon Relay">
+      <h2>Más guías de Amazon Relay</h2>
+      <div class="cards">
+        <a href="/es/amazon-relay-auto-booker/">Auto booker de Amazon Relay: cómo funciona la reserva automática</a> <a href="/es/amazon-relay-auto-refresh/">Auto refresh en Amazon Relay: para qué sirve y cómo funciona</a> <a href="/es/mejores-extensiones-amazon-relay/">Mejores extensiones para Amazon Relay: refresh y auto booker</a> <a href="/es/amazon-relay-scorecard/">Scorecard de Amazon Relay: cómo funciona el puntaje y cómo disputarlo</a> <a href="/amazon-relay-load-board/">Cómo funciona el load board de Amazon Relay (en inglés)</a>
+      </div>
+    </nav>
+  </div>
+  </main>
+
+  <footer class="container" style="padding-top:0">
+    <div class="footer" style="margin-top:0">
+      © 2026 NudoIQ  ·  <a href="/es/">nudoiq.com</a>  ·  <a href="/guides/">Guías (en inglés)</a>  ·  <a href="/privacy.html">Privacidad</a>  ·  <a href="/refund-policy.html">Reembolsos</a>  ·  <a href="/terms.html">Términos</a>  ·  <a href="/es/socios/">Socios</a>  ·  <a href="mailto:contact@nudoiq.com">Contacto</a>
+    </div>
+    <p class="tm">Amazon y Amazon Relay son marcas registradas de Amazon.com, Inc. o sus afiliadas. NudoIQ es un producto independiente y no está afiliado, respaldado ni patrocinado por Amazon.com, Inc. Los requisitos de Amazon Relay pueden cambiar, así que confirma las reglas vigentes en relay.amazon.com.</p>
+  </footer>
+  <!-- Phone bar + send-me-the-link sheet (2026-10-14, FUNNEL-LEAK-AUDIT leak 7 and Martha's guide audit): phones only. -->
+  <script src="/assets/mobile-bridge.js?v=d9c38b3a" data-bar="1" defer></script>
+</body>
+</html>
