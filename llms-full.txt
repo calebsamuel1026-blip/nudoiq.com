@@ -1383,9 +1383,6 @@ No. The extension runs inside your browser. If your device is off or your intern
 ### Is booking via extension as reliable as booking manually?
 The extension books through the same board you use. Any booking it makes is yours, so set your rules carefully.
 
-### Can I use Autobook on multiple trucks at the same time?
-Yes. You can have NudoIQ running on multiple devices and multiple load board tabs. Just remember: if two devices/tabs are both running Autobook with the same rules, they might both try to book the same load, which could cause issues. Consider running Autobook on one device and Alert/Search mode on others.
-
 ### Is an auto booker the same as Amazon's Post A Truck?
 No. Post A Truck is Amazon's own tool: you post your truck's availability and a minimum rate per mile, and Relay books loads that match. An auto booker like NudoIQ's Autobook works on the spot board in your browser and books loads that match your rules and clear your Min Net Profit, stopping at your max-books cap. See [how to post a truck on Amazon Relay](https://nudoiq.com/amazon-relay-post-a-truck/).
 
