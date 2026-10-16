@@ -9,7 +9,10 @@
   // ?view=desktop|mobile is passed through so the device override can be tested end to end.
   var q = new URLSearchParams(location.search), rid = (q.get("rid") || "").slice(0, 32), v = (q.get("v") || "").slice(0, 8);
   var c = q.get("c") || "census", view = q.get("view");
-  var dest = (c === "cold-dispatch" ? "/dispatch/" : "/m/") + "?utm_source=outreach&utm_medium=email&utm_campaign=" + encodeURIComponent(c) + "&utm_content=variant-" + encodeURIComponent(v)
+  // 2026-10-16 cold test (research/outreach/COLD-REVIEW-2026-10-16.md): c=cold-tool -> the free load calculator (letter M1,
+  // no install ask). It never takes the store-direct split below.
+  var tool = c === "cold-tool";
+  var dest = (tool ? "/tools/relay-load-calculator/" : c === "cold-dispatch" ? "/dispatch/" : "/m/") + "?utm_source=outreach&utm_medium=email&utm_campaign=" + encodeURIComponent(c) + "&utm_content=variant-" + encodeURIComponent(v)
     + (view === "desktop" || view === "mobile" ? "&view=" + view : "");
   // A/B 2026-10-06 (Caleb: find reach that converts): /m/ got 21 sessions in 3 days at ~32% scroll, so half of the DESKTOP
   // carrier clicks skip the landing page and open the Chrome Web Store listing directly. Arm = parity of a hash of rid (stable per
@@ -17,7 +20,7 @@
   // send-to-my-computer bridge). Dispatch keeps /dispatch/. Store installs are split by utm_campaign "<c>-direct" in the CWS dashboard.
   var mobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || view === "mobile";
   var h = 0; for (var i = 0; i < rid.length; i++) { h = (h * 31 + rid.charCodeAt(i)) >>> 0; }
-  if (c !== "cold-dispatch" && !mobile && view !== "desktop-m" && rid.length >= 6 && h % 2 === 1) {
+  if (c !== "cold-dispatch" && !tool && !mobile && view !== "desktop-m" && rid.length >= 6 && h % 2 === 1) {
     dest = "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=outreach&utm_medium=email&utm_campaign="
       + encodeURIComponent(c + "-direct") + "&utm_content=variant-" + encodeURIComponent(v);
   }
