@@ -268,7 +268,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/es/amazon-relay-en-espanol/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-en-espanol/"/>
@@ -277,7 +277,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/es/amazon-relay-requisitos/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-requisitos/"/>
@@ -504,7 +504,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/es/amazon-relay-auto-booker/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-auto-booker/"/>
@@ -514,7 +514,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/es/amazon-relay-auto-refresh/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-auto-refresh/"/>
@@ -597,7 +597,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/es/amazon-relay-contacto/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-contacto/"/>
@@ -633,7 +633,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/es/amazon-relay-tiempo-de-aprobacion/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-tiempo-de-aprobacion/"/>
@@ -669,7 +669,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/es/amazon-relay-temporada-alta/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-temporada-alta/"/>
@@ -912,5 +912,14 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-vs-amazon-flex/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-vs-amazon-flex/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-vs-amazon-flex/"/>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/es/amazon-relay-workers-comp/</loc>
+    <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-workers-comp/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/amazon-relay-workers-comp/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nudoiq.com/amazon-relay-workers-comp/"/>
   </url>
 </urlset>
