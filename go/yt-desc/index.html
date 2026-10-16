@@ -21,7 +21,7 @@
   // Email links (any other c=) are untouched below.
   var CH = { "yt-about": ["youtube", "profile"], "yt-desc": ["youtube", "video"], "yt-short": ["youtube", "short"],
     "yt-pin": ["youtube", "comment"], "yt-reply": ["youtube", "comment"], "fb": ["facebook", "comment"], "fb-post": ["facebook", "social"],
-    "fb-page": ["facebook", "profile"], "ig": ["instagram", "profile"], "ig-post": ["instagram", "social"], "tiktok": ["tiktok", "profile"],
+    "fb-page": ["facebook", "profile"], "ig": ["instagram", "profile"], "ig-post": ["instagram", "social"], "tiktok": ["tiktok", "profile"], "li": ["linkedin", "profile"],
     "tg": ["telegram", "community"], "dir": ["directory", "listing"] };
   var lc = String(c).toLowerCase(), ch = CH[lc] || (/^partner-[a-z0-9-]{2,30}$/.test(lc) ? ["partner", "referral"] : null);
   if (ch) {
