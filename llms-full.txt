@@ -7415,7 +7415,7 @@ The Flex FAQ says: "Amazon provides delivery partners in all states other than N
 
 Flex lists an onboarding support line, 888.281.6906. Relay has no official contact phone number.
 
-No CDL, but a box truck? Read [Amazon Relay non-CDL](https://nudoiq.com/amazon-relay-non-cdl/).
+No CDL? Read [Amazon Relay non-CDL](https://nudoiq.com/amazon-relay-non-cdl/).
 
 ## What is an Amazon Delivery Service Partner (DSP)?
 
@@ -7505,7 +7505,7 @@ Amazon says you can submit everything "in as little as 20 minutes" on the site o
 
 Check the address first. Amazon's [email scams post](https://relay.amazon.com/blog/email-scams-how-to-spot-a-fake) says Relay's own sites have "relay.amazon.com" at the beginning of the URL. Our [Relay login guide](https://nudoiq.com/amazon-relay-login/) shows how to spot a fake page.
 
-Applying from Canada? Amazon points you to relay.amazon.ca. See our [Amazon Relay Canada guide](https://nudoiq.com/amazon-relay-canada/).
+Canada? Amazon points you to relay.amazon.ca. See our [Amazon Relay Canada guide](https://nudoiq.com/amazon-relay-canada/).
 
 ## Who can apply for Amazon Relay?
 
@@ -7527,7 +7527,7 @@ Amazon lists them in this order:
 4. **Equipment inventory.** The trucks and trailers you run. You can update it after approval.
 5. **Payment information.** How Relay pays you. Amazon doesn't publish the field list.
 
-If your FMCSA record is out of date, fix it there before you start. Amazon doesn't describe a separate application for box trucks, and it mentions no application fee.
+Amazon doesn't describe a separate application for box trucks, and it mentions no application fee.
 
 ## How does the owner identity check work?
 
@@ -7551,7 +7551,7 @@ The FAQ lists three first steps:
 
 Amazon says your company "may also get access to more types of booking as your company's performance score and tenure grows."
 
-Before your first booking, know your numbers. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net, net per loaded mile and break-even rate from its pay, miles and your costs.
+Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net, net per loaded mile and break-even rate from its pay, miles and your costs.
 
 ## Is there an Amazon Relay invite code or onboarding phone number?
 
