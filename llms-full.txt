@@ -1499,7 +1499,11 @@ Auto booking, net profit and free trials in one table: [NudoIQ vs LoadFetcher](h
 
 ### SwiftRelay and FlashRelay
 
-[SwiftRelay](https://nudoiq.com/swiftrelay-alternative/), from Premier IT Solutions, refreshes the board, and auto-books on its Pro plan and up. FlashRelay lists auto booking and Telegram alerts. Neither lists a net profit floor, net profit per load or scorecard dispute letters (SwiftRelay checked October 9, 2026, FlashRelay October 5, 2026).
+[SwiftRelay](https://nudoiq.com/swiftrelay-alternative/), from Premier IT Solutions, refreshes the board, and auto-books on its Pro plan and up. FlashRelay lists auto booking and Telegram alerts. Its most-used Chrome Web Store listing was last updated December 3, 2024 (version 2024.5.9, checked October 16, 2026). Neither lists a net profit floor, net profit per load or scorecard dispute letters (SwiftRelay checked October 9, 2026, FlashRelay October 5, 2026).
+
+### Cardamon
+
+[Cardamon](https://nudoiq.com/cardamon-alternative/), from Cardamon Inc., lists auto-refresh, load filters, payout-change alerts and Pro auto-booking. Not listed: a net profit floor after your costs, net profit per load or scorecard dispute letters (checked October 16, 2026).
 
 ### NudoIQ
 
@@ -4187,6 +4191,133 @@ Yes, in a few minutes. Turn off or remove EasyRelay, add NudoIQ from the Chrome 
 ### Is NudoIQ or Easy Relay made by Amazon?
 No. NudoIQ is an independent product by Sami Enterprises LLC, not affiliated with, endorsed or sponsored by Amazon. EasyRelay is published by Easy Relay LLC.
 
+
+
+
+---
+
+# Cardamon Relay alternative: NudoIQ vs Cardamon for the Amazon Relay load board
+
+URL: https://nudoiq.com/cardamon-alternative/
+Published: 2026-10-16. Last updated: 2026-10-16.
+
+Short answer: For loads booked only when they clear your minimum net profit after your own costs, NudoIQ is the Cardamon alternative. It also drafts scorecard dispute letters. Try it 7 days free, no card needed to start.
+
+## What is a good Cardamon Relay alternative?
+
+NudoIQ, if you want loads booked by net profit, after your own costs. It [refreshes the board and books the loads that clear your number](https://nudoiq.com/amazon-relay-auto-refresh/).
+
+## How does NudoIQ compare to Cardamon?
+
+Side by side, with the source for every Cardamon fact.
+
+| Feature | NudoIQ | Cardamon |
+|---|---|---|
+| AutoBook at Min Net Profit | Yes | Not listed |
+| Net profit per load | Yes | Not listed |
+| Lane price history | Yes | Not listed |
+| Backhaul search | Yes | Not listed |
+| Post a Truck | Yes | Not listed |
+| Scorecard dispute letters | Yes | Not listed |
+| Telegram load alerts | Yes | Not listed |
+| Contract offers | Yes | Not listed |
+| Spanish buttons and banners | Yes | Not listed |
+
+From each Chrome Web Store listing and website, checked October 16, 2026. Dash: not on Cardamon's listing or website. We did not test their product. Spot an error? [Tell us on the contact page](https://nudoiq.com/support/).
+
+Everything in NudoIQ: Auto-refresh the load board, One-tap booking, 7-day free trial, no card, Hide promoted loads and truck-posting pop-ups, One price for every truck in your fleet, Never asks for your Amazon password, Cancel yourself anytime from your billing page.
+
+Sources:
+1. NudoIQ extension for Amazon Relay, and [nudoiq.com/get/](https://nudoiq.com/get/)
+2. Cardamon Chrome Web Store listing for Amazon Relay, v12.18, updated October 4, 2026, checked October 16, 2026 ([chromewebstore.google.com/detail/ikbhbonbdgohhiilbpbffcjgnpbpmfah](https://chrome.google.com/webstore/detail/ikbhbonbdgohhiilbpbffcjgnpbpmfah))
+3. cardamon.org Relay Autobooker product page, checked October 16, 2026 ([cardamon.org/products/relay-autobooker](https://www.cardamon.org/products/relay-autobooker/))
+4. Cardamon Chrome Web Store reviews (rating and written reviews), checked October 16, 2026 ([chromewebstore.google.com/detail/ikbhbonbdgohhiilbpbffcjgnpbpmfah](https://chrome.google.com/webstore/detail/ikbhbonbdgohhiilbpbffcjgnpbpmfah/reviews))
+5. NudoIQ Chrome Web Store listing (rating), checked October 16, 2026
+
+Cardamon is a trademark of its owner, used here only to name and compare two Amazon Relay extensions. NudoIQ is not affiliated with Cardamon or with Amazon.
+
+To see how NudoIQ compares with Cardamon and five other Relay extensions on auto-booking, alerts and price, read [the full comparison](https://nudoiq.com/why-nudoiq/).
+
+## How do NudoIQ and Cardamon rate on the Chrome Web Store?
+
+Each Chrome Web Store rating, plus Cardamon's newest written review, checked October 16, 2026.
+
+**NudoIQ**
+- 5.0: Rating on the Chrome Web Store, checked Oct 16, 2026
+
+**Cardamon**
+- 3.8: Rating on the Chrome Web Store, checked Oct 16, 2026
+- Sep 11, 2026: Newest written review, 1 star: "Not proper work"
+
+## What is Cardamon?
+
+Cardamon (Relay AutoBooker & Refresher Cardamon) is a Chrome extension for the Amazon Relay load board, from Cardamon Inc., per its store listing and website checked October 16, 2026.
+
+## Does Cardamon auto book loads?
+
+Yes, on its Pro plan, per its store listing (checked October 16, 2026). [NudoIQ's AutoBook](https://nudoiq.com/amazon-relay-auto-booker/) books only loads that clear your minimum net profit, after your own costs.
+
+## What does NudoIQ do that Cardamon doesn't list?
+
+Three things, none on Cardamon's listing or website as of October 16, 2026.
+
+- **Net profit floor:** AutoBook books only loads that clear your Min Net Profit.
+- **Net profit on every load:** net dollars and $/mile after the costs you enter.
+- **[Scorecard dispute letters](https://nudoiq.com/amazon-relay-scorecard/):** drafted for you. You review and send. Amazon decides.
+
+## Who NudoIQ fits best
+
+- You want loads booked for you, only the ones that clear your minimum net profit.
+- You want to see what each load nets before you take it.
+- You fight scorecard violations and want the dispute letter drafted for you.
+
+Not sure? Try NudoIQ 7 days free. If it doesn't fit how you book, switch back.
+
+[Try NudoIQ 7 days free](https://nudoiq.com/get/)
+
+## How do you switch from Cardamon to NudoIQ?
+
+Turn off or remove Cardamon, add NudoIQ from the Chrome Web Store, [open the Relay load board](https://nudoiq.com/amazon-relay-load-board/) and press START. Your Relay login doesn't change.
+
+## Cardamon Relay alternative FAQ
+
+### What is Cardamon Relay?
+
+Cardamon is a Chrome extension for Amazon Relay, from Cardamon Inc. (checked October 16, 2026). NudoIQ is a separate one, with AutoBook at your minimum net profit.
+
+### Is Cardamon working?
+
+Its newest written store review, from September 11, 2026, is 1 star: "Not proper work." Its listing was last updated October 4, 2026 (checked October 16, 2026). We did not test their product.
+
+### Does Cardamon auto book loads?
+
+Yes, on its Pro plan, per its store listing (checked October 16, 2026). NudoIQ's AutoBook books only loads that clear your minimum net profit, and skips any load it can't fully price.
+
+### Does Cardamon show net profit per load?
+
+Not on its listing or website (checked October 16, 2026). NudoIQ shows net dollars and $/mile on every load, after the costs you enter.
+
+### Is Cardamon a Chrome extension?
+
+Yes, it installs from the Chrome Web Store. NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so they don't clash.
+
+### Can I switch from Cardamon to NudoIQ?
+
+Yes, in a few minutes. Turn off or remove Cardamon, add NudoIQ from the Chrome Web Store and start your 7 days free. Your Relay login stays the same.
+
+### Is NudoIQ or Cardamon made by Amazon?
+
+No. NudoIQ is an independent product by Sami Enterprises LLC, not affiliated with, endorsed or sponsored by Amazon. Cardamon comes from Cardamon Inc., per its website.
+
+### Does NudoIQ work in Spanish?
+
+Yes. NudoIQ's buttons and banners on the load board work in English and Spanish. Telegram messages are in English. Cardamon's listing language is English (checked October 16, 2026).
+
+### How does NudoIQ decide which loads to book?
+
+Only loads that clear your Min Net Profit and it can fully price, up to your Max books. Alert mode just alerts. See [what happens if you cancel a load](https://nudoiq.com/amazon-relay-cancel-load/).
+
+Let the board book itself, at your number. 7 days free, then $49.99 a month for every truck. Cancel anytime.
 
 
 ---
