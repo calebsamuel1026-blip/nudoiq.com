@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>NudoIQ</title>
+<script>
+(function () {
+  // Email links land here: record the opaque recipient id (no personal data), then continue to the email landing page.
+  // Route by campaign (2026-10-02): c=cold-dispatch -> /dispatch/ (dispatcher page); every other email campaign -> /m/
+  // (carrier email page; it handles both phone and computer itself). /get/ is the ads page only.
+  // ?view=desktop|mobile is passed through so the device override can be tested end to end.
+  var q = new URLSearchParams(location.search), rid = (q.get("rid") || "").slice(0, 32), v = (q.get("v") || "").slice(0, 8);
+  // 2026-10-16 short links: /go/<slug>/ is a byte-identical copy of this page (research/funnel/go-slugs-2026-10-16/build_go_slugs.py;
+  // re-run it after any edit here), and the folder name is the channel when the link has no c=.
+  var slug = (location.pathname.match(/^\/go\/([a-z0-9-]{2,40})\/?$/) || [])[1] || "";
+  var c = q.get("c") || slug || "census", view = q.get("view");
+  // 2026-10-16 owned NON-email links (research/data/INSTRUMENTATION-GAPS.md item 1): YouTube, Facebook, Instagram, TikTok,
+  // Telegram, directories and partners route through here instead of straight to the Chrome Web Store, so the install
+  // carries its source. utm_source/medium per channel (YouTube keeps the house youtube/video form); utm_campaign = c;
+  // utm_content = v. The first touch is kept on this origin (nudoiq_ft, same record mobile-bridge.js writes, 90 days,
+  // an older one wins) so /welcome/ sends it with the install's first_touch row. No rid, no outreach_clicks row.
+  // ?to= picks the page (default /m/, which serves phones too); to=store goes straight to the listing on a computer.
+  // Email links (any other c=) are untouched below.
+  var CH = { "yt-about": ["youtube", "profile"], "yt-desc": ["youtube", "video"], "yt-short": ["youtube", "short"],
+    "yt-pin": ["youtube", "comment"], "yt-reply": ["youtube", "comment"], "fb": ["facebook", "comment"], "fb-post": ["facebook", "social"],
+    "fb-page": ["facebook", "profile"], "ig": ["instagram", "profile"], "ig-post": ["instagram", "social"], "tiktok": ["tiktok", "profile"], "li": ["linkedin", "profile"],
+    "tg": ["telegram", "community"], "dir": ["directory", "listing"] };
+  var lc = String(c).toLowerCase(), ch = CH[lc] || (/^partner-[a-z0-9-]{2,30}$/.test(lc) ? ["partner", "referral"] : null);
+  if (ch) {
+    var STORE = "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk";
+    var TO = { m: "/m/", home: "/", calc: "/tools/relay-load-calculator/", letter: "/tools/relay-dispute-letter/", es: "/es/", ru: "/ru/", store: STORE };
+    var phone = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || view === "mobile";
+    var to = TO[q.get("to")] || TO.m;
+    if (to === STORE && phone) to = TO.m;           // an extension can't install on a phone; /m/ emails the link
+    var sv = (q.get("v") || "").replace(/[^\w.\-]/g, "").slice(0, 40);
+    var utm = "utm_source=" + ch[0] + "&utm_medium=" + ch[1] + "&utm_campaign=" + encodeURIComponent(lc) + (sv ? "&utm_content=" + encodeURIComponent(sv) : "");
+    try {
+      var old = JSON.parse(localStorage.getItem("nudoiq_ft") || "null"), ref = "";
+      try { ref = document.referrer ? new URL(document.referrer).hostname : ""; } catch (x) {}
+      if (!(old && old.ts && Date.now() - old.ts < 90 * 864e5))
+        localStorage.setItem("nudoiq_ft", JSON.stringify({ ts: Date.now(), lp: ("/go/" + lc).slice(0, 80), ref: ref.slice(0, 60),
+          utm_source: ch[0], utm_medium: ch[1], utm_campaign: lc.slice(0, 60) }));
+    } catch (e) {}
+    location.replace(to + "?" + utm + (to !== STORE && (view === "desktop" || view === "mobile") ? "&view=" + view : ""));
+    return;
+  }
+  // 2026-10-16 cold test (research/outreach/COLD-REVIEW-2026-10-16.md): c=cold-tool -> the free load calculator (letter M1,
+  // no install ask). It never takes the store-direct split below.
+  var tool = c === "cold-tool";
+  var dest = (tool ? "/tools/relay-load-calculator/" : c === "cold-dispatch" ? "/dispatch/" : "/m/") + "?utm_source=outreach&utm_medium=email&utm_campaign=" + encodeURIComponent(c) + "&utm_content=variant-" + encodeURIComponent(v)
+    + (view === "desktop" || view === "mobile" ? "&view=" + view : "");
+  // A/B 2026-10-06 (Caleb: find reach that converts): /m/ got 21 sessions in 3 days at ~32% scroll, so half of the DESKTOP
+  // carrier clicks skip the landing page and open the Chrome Web Store listing directly. Arm = parity of a hash of rid (stable per
+  // recipient; recomputable offline from outreach_clicks). Phones always keep /m/ (an extension can't install on a phone; /m/ has the
+  // send-to-my-computer bridge). Dispatch keeps /dispatch/. Store installs are split by utm_campaign "<c>-direct" in the CWS dashboard.
+  var mobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || view === "mobile";
+  var h = 0; for (var i = 0; i < rid.length; i++) { h = (h * 31 + rid.charCodeAt(i)) >>> 0; }
+  if (c !== "cold-dispatch" && !tool && !mobile && view !== "desktop-m" && rid.length >= 6 && h % 2 === 1) {
+    dest = "https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=outreach&utm_medium=email&utm_campaign="
+      + encodeURIComponent(c + "-direct") + "&utm_content=variant-" + encodeURIComponent(v);
+  }
+  // 2026-10-14 (research/funnel/FUNNEL-LEAK-AUDIT-2026-10-14.md leak 3): keep the opaque recipient id on this origin for
+  // 90 days, so /welcome/ (same origin, opened by the extension after the store install) can send it with the install's
+  // first_touch row. Before this the rid died here and an email click could never be joined to an install.
+  try { if (rid.length >= 6) localStorage.setItem("nudoiq_rid", JSON.stringify({ rid: rid, c: c.slice(0, 40), v: v, ts: Date.now() })); } catch (e) {}
+  var done = false, go = function () { if (!done) { done = true; location.replace(dest); } };
+  setTimeout(go, 1200);
+  if (rid.length < 6) { go(); return; }
+  var KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM";
+  fetch("https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/outreach_clicks", { method: "POST", keepalive: true,
+    headers: { "Content-Type": "application/json", "apikey": KEY, "Authorization": "Bearer " + KEY, "Prefer": "return=minimal" },
+    body: JSON.stringify({ rid: rid, variant: v }) }).then(go, go);
+})();
+</script><noscript><meta http-equiv="refresh" content="0;url=/"></noscript></head><body></body></html>
