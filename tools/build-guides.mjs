@@ -59,7 +59,7 @@ function parse(file) {
   const meta = {};
   for (const line of m[1].split('\n')) {
     const i = line.indexOf(':');
-    if (i > 0) meta[line.slice(0, i).trim()] = line.slice(i + 1).trim().replace(/^["']|["']$/g, '');
+    if (i > 0) meta[line.slice(0, i).trim()] = line.slice(i + 1).trim().replace(/^(["'])(.*)$/, '$2');   // strip only a matching pair (2026-10-16: a value may end in a quote)
   }
   for (const k of ['slug', 'title', 'description', 'h1']) if (!meta[k]) throw new Error(`${file}: no ${k}`);
   let body = m[2];

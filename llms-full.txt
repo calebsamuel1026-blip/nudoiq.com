@@ -192,7 +192,9 @@ Short answer: Amazon Relay is Amazon's platform for carriers to find and book Am
 
 Amazon Relay is an on-demand load board built directly into Amazon's fulfillment network. Unlike traditional freight boards where shippers post lanes and carriers bid, Amazon Relay is where Amazon posts its own work: one-way loads, round trips, blocks and short-term contracts. Loads are booked first-come, first-served through the load board, meaning that fast refreshing and split-second booking decisions determine who gets the best freight.
 
-Amazon says there's no fleet size requirement, so owner-operators and small fleets can use it. You sign in with your business credentials, and Amazon tenders its loads only through Relay. Spot loads show an all-in price you can book as listed. You can also post your truck with the **Post A Truck** feature, set a minimum rate per mile, and get matched to work.
+Amazon says there's no fleet size requirement, so owner-operators and small fleets can use it. You sign in with an Amazon account, and Amazon tenders its loads only through Relay. Spot loads show an all-in price you can book as listed. You can also post your truck with the **Post A Truck** feature, set a minimum rate per mile, and get matched to work.
+
+If you have a car rather than a truck, see [Amazon Relay vs Amazon Flex](https://nudoiq.com/amazon-relay-vs-amazon-flex/).
 
 ## Who Can Join Amazon Relay
 
@@ -205,6 +207,8 @@ Amazon has specific eligibility requirements to protect load security and ensure
 - Amazon verifies your business entity and every beneficial owner, meaning anyone with more than 25% ownership in your carrier.
 
 The 180-day authority rule is the main gate for new carriers. Amazon's FAQ says rejected applicants may be able to reapply once a fixable issue (such as authority status) is resolved.
+
+Ready to apply? Our guide to [how to sign up for Amazon Relay](https://nudoiq.com/how-to-sign-up-for-amazon-relay/) walks through Amazon's five application steps.
 
 ## What Equipment Works on Relay
 
@@ -265,7 +269,7 @@ Our [Amazon Relay Chrome extension guide](https://nudoiq.com/amazon-relay-chrome
 ## Frequently asked questions
 
 ### How do I sign in to Amazon Relay?
-Visit relay.amazon.com and sign in with your business credentials. You'll complete Amazon's approval process, which includes verifying your DOT number, MC number, insurance, safety rating and beneficial ownership. Amazon's Relay FAQ says a completed application is typically approved or rejected within 1 to 3 weeks.
+Visit relay.amazon.com and sign in with your existing Amazon shopping account, or create a new one. You'll complete Amazon's approval process, which includes verifying your DOT number, MC number, insurance, safety rating and beneficial ownership. Amazon's Relay FAQ says a completed application is typically approved or rejected within 1 to 3 weeks.
 
 ### Can I run Amazon Relay part-time?
 Yes. You set your own availability with Post A Truck, and you choose which loads to book on the board. Amazon says there's no fleet size requirement. Just remember that cancelling loads you booked hurts your acceptance score.
@@ -342,12 +346,14 @@ Amazon accepts only specific types of equipment. Your [equipment choices](https:
 - Sleeper tractors (with sleeping compartment)
 - 26 ft and 16 ft box trucks with a working tuck-under liftgate (the liftgate is required)
 - 48 ft and 53 ft dry van trailers
-- Reefer trailers (temperature-controlled 48 ft and 53 ft)
+- 53 ft reefer trailers (temperature-controlled)
 - 20, 40 and 45 ft high-cube containers (UIIA compliant)
 
 **Cargo vans are not supported.** Do not apply with a cargo van: Amazon will not approve it, even if you think it meets the load specs.
 
 Amazon says the majority of Relay loads are power only (you bring the tractor, Amazon provides the trailer), and one-way loads will most likely need a box truck or your own trailer.
+
+Running a box truck without a CDL? See [Amazon Relay non-CDL](https://nudoiq.com/amazon-relay-non-cdl/).
 
 ## Beneficial Owner Verification
 
@@ -358,30 +364,11 @@ Amazon verifies the ownership of your carrier. This means:
 
 During the sign-up process, you'll be asked to provide ownership information. Have your business formation documents, tax ID and ownership structure ready.
 
+If owners are changing because of a sale, see [Amazon Relay business for sale](https://nudoiq.com/amazon-relay-business-for-sale/).
+
 ## Steps to Sign Up for Amazon Relay
 
-Once you confirm you meet the requirements, the process is straightforward:
-
-**1. Visit relay.amazon.com**
-Go to the Amazon Relay homepage and select "Sign up" or "Apply now."
-
-**2. Enter Your Business Information**
-Provide your legal business name, entity type (LLC, S-Corp, etc.), your DOT and MC numbers, and the date your authority was granted. If your authority is under 180 days old, you can still apply. Amazon's Relay FAQ encourages you to apply early so it can begin reviewing your information.
-
-**3. Submit Safety and Compliance Records**
-Amazon will pull your FMCSA records automatically once you provide your DOT number. If your BASIC scores are in range and your safety rating is acceptable, you'll move to the next step. If you're out of range on any metric, your application may be delayed or rejected.
-
-**4. Upload Insurance Documentation**
-Provide proof of [insurance](https://nudoiq.com/amazon-relay-insurance-requirements/) for each coverage type (General Liability, Auto Liability, Cargo, Workers' Comp). Your insurance broker or agent can issue a certificate of insurance (ACORD form) that lists all required coverages and limits.
-
-**5. Verify Beneficial Ownership**
-Provide documentation of your business structure and beneficial owners. If you're a sole proprietor, this is simple. If you're an LLC or corporation, you'll need operating agreements or articles of incorporation showing ownership percentages.
-
-**6. Review and Confirm**
-Once approved, you can log in to your Relay account and start browsing loads.
-
-**7. Set Up Your Profile**
-Complete your carrier profile: invite your drivers (each needs their own Relay profile, verified with a CDL and a selfie) and add your equipment details.
+Amazon's application has five steps, in this order: DOT number, company details, one-time password verification, equipment inventory and payment information. You sign in with an existing Amazon shopping account or create a new one, and your details should match your FMCSA record. Our guide to [how to sign up for Amazon Relay](https://nudoiq.com/how-to-sign-up-for-amazon-relay/) covers each step.
 
 ## What Happens If You Don't Meet Requirements
 
@@ -654,7 +641,9 @@ On every load, calculate the posted rate minus your estimated fuel, maintenance 
 4. **Set Up Your Account**: Invite your drivers (each needs their own Relay profile) and add your equipment.
 5. **Start Browsing the Load Board**: Log in, filter by your equipment type, and refresh to see available loads.
 6. **Consider an [Auto-Refresh Tool](https://nudoiq.com/amazon-relay-auto-refresh/)**: To keep up with competition, many carriers use an extension to refresh the board automatically and get alerts when new loads post.
-7. **Set Your Profit Floor and Rules**: If using an [auto-booking extension](https://nudoiq.com/amazon-relay-auto-booker/), configure your minimum profit, lane preferences and max-books cap.
+7. **Set Your Profit Floor and Rules**: If using an [auto-booking extension](https://nudoiq.com/amazon-relay-auto-booker/), configure your minimum net profit and max-books cap.
+
+Driving without a CDL? Read [Amazon Relay non-CDL](https://nudoiq.com/amazon-relay-non-cdl/) for the weight rule and the DOT medical card Amazon still requires.
 
 ## Using NudoIQ with Your Box Truck
 
@@ -750,6 +739,8 @@ Amazon Relay pays weekly, regardless of rate:
 Weekly pay on a set schedule is one of Amazon Relay's consistent advantages.
 
 Our [Amazon Relay payments guide](https://nudoiq.com/amazon-relay-payments/) covers the weekly schedule, invoices and what to do when pay looks wrong.
+
+Thinking about factoring? See [Amazon Relay factoring and quick pay](https://nudoiq.com/amazon-relay-factoring/).
 
 ## How to Judge Whether a Rate Is Good
 
@@ -889,7 +880,7 @@ Amazon Relay works best for carriers who:
 
 - **Want predictability**. Weekly pay and a busy board matter more to you than hunting for the single best load.
 - **Are disciplined about on-time delivery**. If you consistently pick up and drop on schedule, your scorecard stays strong and you keep load access.
-- **Can use automation**. [Auto-refresh tools](https://nudoiq.com/best-amazon-relay-extensions/) and [auto-booking extensions](https://nudoiq.com/amazon-relay-auto-booker/) remove the speed disadvantage and help you set rules (profit floor, lane preferences) instead of manually deciding every load.
+- **Can use automation**. [Auto-refresh tools](https://nudoiq.com/best-amazon-relay-extensions/) and [auto-booking extensions](https://nudoiq.com/amazon-relay-auto-booker/) remove the speed disadvantage and help you set minimums (like a profit floor) instead of manually deciding every load.
 - **Are positioned near Amazon facilities**. If you're close to a major distribution center, deadhead is reasonable and loads are plentiful.
 - **Have the right equipment**. Amazon says the majority of Relay loads are [power only](https://nudoiq.com/amazon-relay-power-only/), so a tractor alone covers most work. Box trucks (16 or 26 ft with a liftgate) can also take one-way loads.
 - **Want simple operations**. No customer relations, no multi-week disputes, no contract negotiations. Book, haul, deliver, get paid.
@@ -905,6 +896,8 @@ Amazon Relay is a poor fit if you:
 - **Need specialized freight**. Relay supports tractors, 16 and 26 ft box trucks, dry vans, reefers and high-cube containers, so freight that needs other equipment isn't a fit.
 - **Want a consistent per-mile rate**. If rate variability stresses you or makes forecasting impossible, Relay's dynamic pricing is a bad fit.
 
+If you don't run trucks, compare Amazon's other programs in [Amazon Relay vs Amazon Flex](https://nudoiq.com/amazon-relay-vs-amazon-flex/).
+
 ## The Honest Trade-Off
 
 Amazon Relay rewards **consistency** more than **rate hunting**. You trade a set rate for weekly pay and a busy board. You trade flexibility for clear metrics. You trade personal relationships for a metric-based grade.
@@ -916,7 +909,7 @@ If you're a carrier who wants to show up, book loads, deliver on time, and get p
 [Auto-refresh tools](https://nudoiq.com/amazon-relay-auto-refresh/) and [auto-booking extensions](https://nudoiq.com/amazon-relay-auto-booker/) change how Relay feels day to day. With automation:
 
 - You see new loads sooner instead of reloading by hand.
-- You set rules (profit floor, lane preferences) and let the tool do the repetitive work.
+- You set your minimums (like a profit floor) and let the tool do the repetitive work.
 - You reduce manual decision fatigue and focus on exceptions.
 
 Without automation, Relay feels like a constant speed race and you'll miss good freight. With it, Relay becomes a manageable, repeatable system.
@@ -948,7 +941,7 @@ Start with the [7-day free trial](https://nudoiq.com/best-amazon-relay-extension
 If you decide Relay is worth your time, NudoIQ adds intelligence and automation:
 
 - **Auto-Refresh**: Reload the board automatically so you see new postings sooner.
-- **Auto-Book with Rules**: Book loads that meet your profit floor and lane preferences without manual intervention.
+- **Auto-Book with Rules**: Book loads that clear your minimum net profit, up to a max-books cap you set.
 - **Net Profit Calculation**: Know your actual profit before you book, not after.
 - **[Lane Rate History](https://nudoiq.com/amazon-relay-load-board/)**: See what a lane typically pays so you know if a posted rate is a deal.
 - **[Scorecard Dispute Assistance](https://nudoiq.com/amazon-relay-scorecard/)**: If Amazon dings you, draft a dispute letter that cites policy.
@@ -1847,6 +1840,8 @@ Amazon tenders its Relay loads only through the Amazon Relay load board. It does
 
 Amazon describes the board in its [load board guide](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board). Each listing shows stop locations, arrival and departure times, the payment breakdown and the load requirements. For how the board itself works, see our [Amazon Relay load board guide](https://nudoiq.com/amazon-relay-load-board/). You need an approved carrier account first, covered in [Amazon Relay requirements](https://nudoiq.com/amazon-relay-requirements/).
 
+Amazon says loads from shippers that aren't Amazon now flow through Relay too. See [can brokers use Amazon Relay](https://nudoiq.com/amazon-relay-brokers/).
+
 ## What types of loads are on Amazon Relay?
 
 Amazon Relay offers one-way loads, round trips, blocks, spot freight, short-term contracts and auctions. Round trips start and end at the same domicile and usually need only a tractor. One-way loads will most likely need a box truck or your own trailer. Blocks reserve your truck and driver for a set time, and contracts book weeks of loads in advance.
@@ -1865,6 +1860,8 @@ Amazon breaks these down in its overview of [trucking work on Relay](https://rel
 Amazon also lists three driver setups: a 13-hour solo (one day of loads, including 11 hours of drive time), a 37-hour solo (two days, with the 10-hour rest break taken outside base cities), and team (two drivers trading off).
 
 If you want several loads in a row, [how to book multiple loads on Amazon Relay](https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/) walks through the options.
+
+For what Amazon means by domicile, see [what is a domicile in Amazon Relay](https://nudoiq.com/amazon-relay-domicile/).
 
 ## What equipment do you need for Amazon Relay loads?
 
@@ -2175,6 +2172,8 @@ That's from [Amazon's truck requirements page](https://relay.amazon.com/blog/ama
 
 If you're looking for a 26 ft box truck load board for Amazon freight, the Relay board is it. Amazon tenders its loads only through Relay, not on third-party boards.
 
+Amazon also offers box truck contracts to non-CDL carriers. See [Amazon Relay non-CDL](https://nudoiq.com/amazon-relay-non-cdl/).
+
 ## How do you filter the Relay load board for box truck loads?
 
 Open the Relay load board and set the equipment type filter to the box truck size you run. Then narrow by origin or radius, load type, driver type, trip length and pickup window, and save the search. [Amazon says](https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board) the board is open 24/7 and free to search and book.
@@ -2317,6 +2316,8 @@ How the main work types line up for a tractor with no trailer:
 
 On the [Relay load board](https://nudoiq.com/amazon-relay-load-board/), use the equipment type and trailer status filters so you only see loads your tractor can take.
 
+New to the term? See [what is a domicile in Amazon Relay](https://nudoiq.com/amazon-relay-domicile/).
+
 ## Should you run a day cab or a sleeper on Relay power only?
 
 Both qualify. Relay supports day cab and sleeper tractors, and the right one depends on how long your driver stays out. Amazon describes three setups: 13-hour solo (one day of loads, 11 hours of drive time), 37-hour solo (two days, with the 10-hour break taken outside base cities) and team.
@@ -2444,6 +2445,8 @@ What a dispatcher needs to stay on top of:
 
 That last one matters more than most dispatchers think. App usage is one of the four metrics in the [Amazon Relay performance score](https://relay.amazon.com/blog/amazon-relay-performance-score), and a driver who closes the app can pull the whole score down.
 
+Drivers asking how to get on Relay can read [Amazon Relay for drivers](https://nudoiq.com/amazon-relay-drivers/).
+
 ## What can a dispatcher see in Relay load tracking?
 
 Relay's load tracking shows owner-operators, fleet managers and dispatchers each trip in real time, updated about every 30 seconds. It includes disruption signals, a route view, weather, trip playback, and the driver's contact details and status. It only works while the driver keeps the app open with location services on.
@@ -2499,6 +2502,8 @@ Useful board features for dispatchers:
 - **Post A Truck** to post availability up to two weeks ahead with a minimum rate per mile.
 
 Good loads still get booked within seconds, which is why many dispatchers add a [refresher](https://nudoiq.com/amazon-relay-auto-refresh/) or an [auto-booker](https://nudoiq.com/amazon-relay-auto-booker/).
+
+Wondering where brokers fit? See [can brokers use Amazon Relay](https://nudoiq.com/amazon-relay-brokers/).
 
 ## Where does NudoIQ help a Relay dispatcher?
 
@@ -2922,6 +2927,8 @@ Two places spell this out:
 
 For the other contract types, Amazon's guide doesn't say how unused time is paid. Read the contract details before you click Book.
 
+What a domicile is, and how it shapes round trips, is in [what is a domicile in Amazon Relay](https://nudoiq.com/amazon-relay-domicile/).
+
 ## What types of Amazon Relay contracts are there?
 
 Amazon lists four types:
@@ -3053,6 +3060,8 @@ There are two kinds:
 - **Domicile-based auctions** tender lanes between a starting domicile and an ending domicile, each a greater city area. If a lane is cancelled, Amazon says it "may be able to swap it" with other lanes between those domiciles.
 
 Most auction lanes are one-way, which is the big difference from round-trip contracts.
+
+More on domiciles in [what is a domicile in Amazon Relay](https://nudoiq.com/amazon-relay-domicile/).
 
 ## What equipment can bid in Relay auctions?
 
@@ -3425,6 +3434,8 @@ Not on the list. Amazon's page doesn't name sprinter vans, pickup trucks or hots
 
 So if you run a hotshot or a pickup today, that rig isn't on the list Amazon supports. Plan around equipment that is.
 
+No CDL? See what Amazon says about non-CDL box trucks in [Amazon Relay non-CDL](https://nudoiq.com/amazon-relay-non-cdl/).
+
 ## What does FMCSA data show about trucks hauling Amazon freight?
 
 In roadside inspections, big trucks carry almost all of it. We counted public FMCSA roadside inspections that list Amazon as the shipper, from 2023-09-24 to 2026-09-22. Of the 100,499 inspection rows with a vehicle weight class:
@@ -3457,6 +3468,8 @@ Amazon says "Discounts are available for renting box trucks and tractors for a l
 ### Go power only with a tractor
 
 Most Relay loads are power only. A day cab or sleeper tractor hooks to an Amazon trailer, so you don't need to own a trailer for most of the work. Read [how Amazon Relay power only works](https://nudoiq.com/amazon-relay-power-only/).
+
+Amazon Flex, a separate Amazon program, accepts vans for package delivery. See [Amazon Relay vs Amazon Flex](https://nudoiq.com/amazon-relay-vs-amazon-flex/).
 
 ## What else do you need besides the right truck?
 
@@ -4301,6 +4314,8 @@ Amazon calls it 7-day pay. Its [RelayCon 2026 experts post](https://relay.amazon
 
 The rule that actually sets your payday is the FAQ one above. Look at which Sunday to Saturday week the load was completed in, then find the Friday after that week. A load completed after 23:59 Saturday isn't in that week's batch.
 
+What Amazon does and doesn't say about factoring is in [Amazon Relay factoring and quick pay](https://nudoiq.com/amazon-relay-factoring/).
+
 ## What are Amazon Relay's payment terms?
 
 Here's what Amazon publishes:
@@ -4312,6 +4327,8 @@ Here's what Amazon publishes:
 - **Bank details at signup.** The [application steps](https://relay.amazon.com/blog/how-to-become-a-carrier-for-amazon-relay) end with "Payment information."
 
 Amazon doesn't publish the payment terms in its carrier agreement, the payment method (ACH or check), what time money lands on Friday, or holiday changes to the Friday payout. For what loads pay per mile, see our guide to [how much Amazon Relay pays](https://nudoiq.com/how-much-does-amazon-relay-pay/).
+
+Thinking about factoring anyway? Read [Amazon Relay factoring and quick pay](https://nudoiq.com/amazon-relay-factoring/) first.
 
 ## Where do you see Relay invoices and payment status?
 
@@ -4546,6 +4563,8 @@ Check the address bar too. Amazon's [email scams post](https://relay.amazon.com/
 * **Ownership changes.** The email scams post says to "email relay-ownership-transfers@amazon.com at least 30 days ahead."
 * **Privacy and data requests.** The FAQ says to contact transportation-privacy@amazon.com.
 
+What Amazon says about buying or selling a Relay carrier is in [Amazon Relay business for sale](https://nudoiq.com/amazon-relay-business-for-sale/).
+
 ## Who do you contact about pay or a scorecard hit?
 
 Pay problems go through the portal. The FAQ says you can submit payment disputes "directly through Amazon Relay portal within 30 days of reviewing your weekly invoice." Our [Amazon Relay disputes guide](https://nudoiq.com/amazon-relay-disputes/) lists each dispute type and where Amazon says to file it.
@@ -4619,6 +4638,8 @@ So plan on up to three weeks. And note the word "completed." The clock starts wh
 Filling out the form is the quick part. Amazon's carrier post says you can submit everything "in as little as 20 minutes." You'll give your DOT number and company details, verify a one-time password, list your equipment and add payment information. What you need to qualify is in our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/).
 
 In Canada it's faster on paper. The relay.amazon.ca page says applications are approved or rejected within 2 to 4 business days.
+
+For each application step in Amazon's order, see [how to sign up for Amazon Relay](https://nudoiq.com/how-to-sign-up-for-amazon-relay/).
 
 ## What slows a Relay application down?
 
@@ -4716,6 +4737,8 @@ Short answer: Every driver onboarding to Amazon Relay must meet standardized bac
 By invitation. [Amazon's Relay FAQ](https://relay.amazon.com/faq) says: "A carrier needs to invite their drivers to create a profile in the Relay app." Amazon's [driver eligibility post](https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads) adds that drivers can't share their accounts.
 
 The driver downloads the Relay app on iOS or Android and logs in to an Amazon account, or creates one. Then they enter their commercial driver's license and contact details. Two checks follow: an identity check and a background check. Our [dispatcher guide](https://nudoiq.com/amazon-relay-dispatcher/) covers the invite steps from the dispatch side.
+
+If you're a driver looking for a way in, start with [Amazon Relay for drivers](https://nudoiq.com/amazon-relay-drivers/).
 
 ## What does the identity check involve?
 
@@ -4848,6 +4871,8 @@ From Amazon's app post and the [Relay home page](https://relay.amazon.com/), dri
 * **Add stops** for fuel, food and parking while planning a trip
 * **Review load history**
 * **Chat with Relay Assistant** and report issues
+
+Who can use the app, and how drivers get added, is in [Amazon Relay for drivers](https://nudoiq.com/amazon-relay-drivers/).
 
 ## How does check-in work with the Relay app?
 
@@ -5129,6 +5154,8 @@ Not necessarily, but approval takes time. [Amazon's Relay FAQ](https://relay.ama
 
 Two more things take time. Each driver has to clear an identity check, which Amazon typically reviews within 48 hours, plus a background check. And if you're an existing carrier changing insurance, Amazon recommends allowing 2 weeks for it to process.
 
+Amazon's five application steps are in our guide to [how to sign up for Amazon Relay](https://nudoiq.com/how-to-sign-up-for-amazon-relay/).
+
 ## What doesn't Amazon publish about peak season?
 
 * Peak rates or rate changes
@@ -5227,6 +5254,8 @@ The same post lists a separate, harsher penalty for GPS spoofing. "Anyone caught
 Amazon also uses face data from owners' photos and ID for identification. The FAQ says that includes using Facial Recognition Information "to make sure that your log-in credentials are not misused by a third party."
 
 If you can log in but can't book, that's usually not a password problem. Our [account suspended guide](https://nudoiq.com/amazon-relay-account-suspended/) walks through what to check.
+
+Selling your account has its own rules. See [Amazon Relay business for sale](https://nudoiq.com/amazon-relay-business-for-sale/).
 
 ## What doesn't Amazon publish about Relay login?
 
@@ -5330,6 +5359,8 @@ Amazon's [trucking work post](https://relay.amazon.com/blog/trucking-work-amazon
 
 Contracts use longer blocks. Amazon's [contracts post](https://relay.amazon.com/blog/amazon-trucking-contracts) lists a 119-hour team round trip and a 109-hour solo round trip over five days. Team drivers get home every five days. A sleeper cab is needed for nights on the road, except on the 13-hour solo contract. Our [contracts guide](https://nudoiq.com/amazon-relay-contracts/) covers each type.
 
+Home time by driver type is also in [Amazon Relay for drivers](https://nudoiq.com/amazon-relay-drivers/).
+
 ## What happens if a driver breaks HOS rules?
 
 Amazon's HOS post lists the costs: "Fines for driver and carrier (anywhere from $300-$13,000)," plus out-of-service orders, CDL suspension, a hit to CSA scores and higher insurance.
@@ -5414,6 +5445,8 @@ Amazon's [discounts page](https://relay.amazon.com/discounts) groups them into f
 Who qualifies: "Discounts and preferred pricing are only available to active Amazon Relay carriers and are subject to program policies." Each partner sets its own terms, so read them before you sign up.
 
 Discounts change your cost per mile, so rerun your numbers after you enroll. Our [free Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net and net per loaded mile from its pay and miles.
+
+Amazon's Lendistry loan referral is covered in [Amazon Relay factoring and quick pay](https://nudoiq.com/amazon-relay-factoring/).
 
 ## Is there an Amazon Relay fuel card?
 
@@ -5778,6 +5811,8 @@ Yes. Amazon's [truck requirements post](https://relay.amazon.com/blog/amazon-rel
 
 Amazon doesn't publish whether one-truck carriers see fewer loads than bigger fleets.
 
+To apply, follow [how to sign up for Amazon Relay](https://nudoiq.com/how-to-sign-up-for-amazon-relay/).
+
 ## Do you need your own DOT and MC number?
 
 Yes, both. The [Relay FAQ](https://relay.amazon.com/faq) asks for a DOT number with interstate authority that has been active for at least 180 days, and a valid MC number. Your entity type has to be "Carrier," and it has to be "Authorized for Property and for Hire."
@@ -5808,6 +5843,8 @@ Amazon doesn't publish a truck age or model year rule.
 No. People search for "Amazon Relay owner operator jobs," but Relay isn't a job listing. Amazon's [driver eligibility post](https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads) says: "Relay-approved carriers are independent contractors, not Amazon employees. Carriers are responsible for their own drivers."
 
 You run your own business and choose which loads and contracts to take.
+
+If you want to drive rather than run a carrier, see [Amazon Relay for drivers](https://nudoiq.com/amazon-relay-drivers/).
 
 ## How do owner-operators find and book loads?
 
@@ -6033,6 +6070,8 @@ Here's the risk for the carrier who hauls a double-brokered load: "the fraudster
 
 Amazon doesn't publish its list of authorized brokers.
 
+Where brokers fit with Relay overall is in [can brokers use Amazon Relay](https://nudoiq.com/amazon-relay-brokers/).
+
 ## Are Amazon loads on other load boards real?
 
 Not as Amazon tenders. The [Relay FAQ](https://relay.amazon.com/faq) says: "Amazon does not tender loads through any third-party load boards." The double brokering post adds: "We directly tender all of our loads to Relay carriers on the Relay portal only."
@@ -6069,6 +6108,8 @@ Warning signs and rules from Amazon:
 * **Keep your login to yourself.** "Don't share your login information with anyone. Amazon Relay will never request that you share this information."
 
 Our [Relay login guide](https://nudoiq.com/amazon-relay-login/) covers fake login pages, email security and what to check in your account. Amazon also says carrier identity verification "helps protect carriers from account fraud and unauthorized access." Driver checks are in our [background check guide](https://nudoiq.com/amazon-relay-background-check/).
+
+Buying or selling a carrier? See [Amazon Relay business for sale](https://nudoiq.com/amazon-relay-business-for-sale/).
 
 ## How do you protect a Relay load from cargo theft?
 
@@ -6434,11 +6475,15 @@ On DAT, you deal with brokers and shippers. Here's where DAT does well. Per [DAT
 
 Amazon doesn't publish a load count that matches DAT's "posted every business day" number, so the two can't be compared directly. Amazon's [peak season post](https://relay.amazon.com/blog/amazons-peak-season-for-carriers) forecasts 300 thousand loads per week by December 2026.
 
+Amazon Freight, Amazon's own licensed broker, is covered in [can brokers use Amazon Relay](https://nudoiq.com/amazon-relay-brokers/).
+
 ## How does pay work on Relay and DAT?
 
 Relay pays on a set schedule. The FAQ says: "Payment cycle runs weekly from Sunday-Saturday. Everything completed before 23:59 Saturday will be paid out the following week on Friday." Amazon also contrasts this with "30-60 day waits for payouts from logistics brokers," which is Amazon's claim about brokers in general. Our [payments guide](https://nudoiq.com/amazon-relay-payments/) covers invoices and disputes.
 
 DAT doesn't set one schedule; each broker pays on its own terms. Per dat.com on October 14, 2026, its plans show each broker's average days to pay and credit score, and DAT said: "On average, our brokers pay within 28 days." DAT also sells factoring (DAT Outgo) for faster payment, at a cost. Its Pro, Select and Office plans include DAT Assurance, where "Our team helps carriers with past-due freight payments," with credits of $250, $500 and $1,000 by plan.
+
+For what Amazon says about factoring Relay loads, see [Amazon Relay factoring](https://nudoiq.com/amazon-relay-factoring/).
 
 ## How do Relay and DAT handle fraud?
 
@@ -6457,6 +6502,8 @@ It depends on your situation, not on which board is "better."
 * **If you want broker freight from many shippers,** that's DAT's market.
 
 Whichever board a load comes from, run the numbers the same way. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows net, net per loaded mile and break-even rate from the pay, miles and your costs. For how Relay prices loads, see [how much Amazon Relay pays](https://nudoiq.com/how-much-does-amazon-relay-pay/) and our [Relay rates pages](https://nudoiq.com/amazon-relay-rates/). Our [Relay load board guide](https://nudoiq.com/amazon-relay-load-board/) covers the board itself.
+
+Weighing Amazon's own programs instead? See [Amazon Relay vs Amazon Flex](https://nudoiq.com/amazon-relay-vs-amazon-flex/).
 
 ## What doesn't either side publish?
 
@@ -6733,3 +6780,821 @@ Amazon publishes no program to rent its trailers to you. Most Relay loads are po
 
 ### Does Amazon Relay offer truck rental discounts?
 Yes. Relay's discounts page lists truck rentals up to 40% off, including vans, 16ft and 26ft box trucks and day cabs. See our [rewards guide](https://nudoiq.com/amazon-relay-rewards/).
+
+---
+
+# Can brokers use Amazon Relay?
+
+URL: https://nudoiq.com/amazon-relay-brokers/
+Published: 2026-10-16. Last updated: 2026-10-16.
+
+Short answer: No, Amazon Relay is for carriers, not brokers. Relay asks for a "Carrier" entity authorized for property and for hire, and Amazon says only businesses with express, written authorization from Amazon may broker its loads.
+
+## Can a freight broker sign up for Amazon Relay?
+
+Not as a broker. The [Relay FAQ](https://relay.amazon.com/faq) asks for a "Carrier" entity type that is "Authorized for Property and for Hire," plus a DOT number with interstate authority and a valid MC number. The full list is in our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/).
+
+Relay is built for direct booking. Amazon's [get started page](https://relay.amazon.com/get-started) says: "Relay connects carriers directly to Amazon freight." It adds that carriers can do it all without a broker.
+
+Amazon doesn't publish whether a company holding both carrier and broker authority can join as a carrier. The FAQ only asks for the Carrier entity type.
+
+## What's the difference between a broker and a carrier?
+
+FMCSA draws the line in [49 CFR 371.2](https://www.ecfr.gov/current/title-49/section-371.2): "Broker means a person who, for compensation, arranges, or offers to arrange, the transportation of property by an authorized motor carrier."
+
+A carrier booking its own loads isn't a broker. The same rule says carriers aren't brokers "when they arrange or offer to arrange the transportation of shipments which they are authorized to transport and which they have accepted and legally bound themselves to transport."
+
+Amazon's [brokers post](https://relay.amazon.com/blog/intro-to-amazon-relay/freight-brokers-vs-direct-booking-why-choose-amazon-relay) says "a transportation broker is the go-between for carriers and shippers." It claims brokers "take a finder's fee for each load (usually 13-15%)." That's Amazon's claim about brokers in general. It also says: "Many load brokers provide valuable services, like handling paperwork."
+
+Brokers need their own authority. Amazon's [double brokering post](https://relay.amazon.com/blog/whats-the-deal-with-double-brokering) says brokers need FMCSA property broker authority and a bond that protects payment to the carrier.
+
+## Who is allowed to broker Amazon loads?
+
+Very few. Amazon's double brokering post says: "Only businesses with express, written authorization directly from Amazon are allowed to broker Amazon loads, and there are only a select few companies that have it."
+
+Amazon says it uses one channel: "We directly tender all of our loads to Relay carriers on the Relay portal only." The FAQ adds: "Amazon does not tender loads through any third-party load boards."
+
+Amazon doesn't publish how a broker applies for that authorization or which companies have it.
+
+## Can a Relay carrier pass a load to another carrier?
+
+Not through unauthorized subcontracting. Amazon's [secure freight page](https://relay.amazon.com/pages/secure-freight-how-amazon-prevents-trucking-fraud-theft) says: "Carriers can't re-tender loads through unauthorized subcontracting." And Amazon says it "doesn't allow double brokering because it can lead to payment and safety issues."
+
+How double brokering works, and whether Amazon loads on other boards are real, is in our [fraud guide](https://nudoiq.com/amazon-relay-fraud/).
+
+## Is Amazon itself a freight broker?
+
+Yes, through Amazon Freight. Its [site](https://freight.amazon.com/) says: "Amazon Freight is an asset-backed freight broker licensed under MC-826094 (US DOT: 2881058)." It's the shipper side, "a connection point for businesses to move freight via the Amazon transportation network."
+
+Amazon Freight's "Join Carrier Network" link goes to relay.amazon.com. And Amazon's [2026 booking post](https://relay.amazon.com/blog/booking-options/new-ways-to-scale-your-trucking-business-with-amazon-relay) says: "Amazon Freight is hauling for external shippers now. That means loads from companies that aren't Amazon are flowing through Relay's load board and auctions."
+
+Amazon's other programs are compared in [Amazon Relay vs Amazon Flex](https://nudoiq.com/amazon-relay-vs-amazon-flex/).
+
+## Is there an Amazon Relay brokerage phone number?
+
+No. The FAQ says: "Amazon Relay doesn't have an official contact phone number." To report suspected unauthorized brokering, email relay-network-reports@amazon.com. Treat any "Amazon Relay brokerage" number you find elsewhere with caution. Our [Relay contact guide](https://nudoiq.com/amazon-relay-contact/) lists every route Amazon publishes.
+
+## Why do carriers book Relay direct instead of through brokers?
+
+Here's Amazon's pitch. Its comparison table says traditional boards and brokers "Requires building relationships with multiple brokers," while Relay offers "Performance-based access to loads."
+
+On pay, Amazon claims: "Say goodbye to 30-60 day waits for payouts from logistics brokers. With Relay, you typically get paid within 7 days." Pay details are in our [payments guide](https://nudoiq.com/amazon-relay-payments/), and the boards are compared in [Amazon Relay vs DAT](https://nudoiq.com/amazon-relay-vs-dat/).
+
+## What doesn't Amazon publish about brokers?
+
+- How a broker applies for written authorization
+- The list of authorized brokers
+- Whether a company with both carrier and broker authority can be a Relay carrier
+- An Amazon Relay brokerage phone number
+- Whether dispatch services count as brokers
+
+## Where does NudoIQ fit?
+
+NudoIQ is for carriers who book their own Relay loads and the dispatchers who book for them. It's a Chrome extension for the load board. It refreshes the board, sounds an alert on the page when a load clears your minimums, and shows net profit on each load. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+
+## Frequently asked questions
+
+### Can a freight broker use Amazon Relay?
+Not as a broker. Relay asks for a Carrier entity type authorized for property and for hire, with a DOT number and a valid MC number.
+
+### Does Amazon let brokers move its loads?
+Only a few. Amazon says only businesses with express, written authorization directly from Amazon may broker Amazon loads, and only a select few companies have it.
+
+### Is Amazon Freight a broker?
+Yes. Amazon Freight says it's an asset-backed freight broker licensed under MC-826094. Its carrier link goes to Amazon Relay.
+
+### Can I re-broker an Amazon Relay load?
+No. Amazon says carriers can't re-tender loads through unauthorized subcontracting, and it doesn't allow double brokering.
+
+### Are there non-Amazon loads on Relay?
+Yes. Amazon says Amazon Freight now hauls for external shippers, so loads from companies that aren't Amazon flow through Relay's load board and auctions.
+
+---
+
+# Amazon Relay business for sale: what to know before you buy
+
+URL: https://nudoiq.com/amazon-relay-business-for-sale/
+Published: 2026-10-16. Last updated: 2026-10-16.
+
+Short answer: Amazon Relay businesses for sale are listed by sellers, not by Amazon. Amazon doesn't say a Relay account, grade or contracts carry over to a buyer, and it asks you to email relay-ownership-transfers@amazon.com at least 30 days ahead.
+
+## Can you buy an Amazon Relay business?
+
+You can buy a trucking company. What Amazon doesn't promise is that its Relay standing comes with it. "Amazon Relay business for sale" listings are offers from sellers, not from Amazon.
+
+Amazon's rule for ownership changes is in its [email scams post](https://relay.amazon.com/blog/email-scams-how-to-spot-a-fake): "Changing ownership? If you're buying, selling, or closing your business, email relay-ownership-transfers@amazon.com at least 30 days ahead."
+
+It warns that informal transfers "put your company at risk for taxes and claims until a transfer is formally approved."
+
+Amazon doesn't publish what the ownership review checks or how long it takes.
+
+## Can you sell your Relay account?
+
+Not to a stranger. Amazon's rule: "Never transfer or sell your account to someone you don't know."
+
+Amazon lists "Unsolicited offers to buy your business or manage your loads" as a scam sign. Scammers who get into an account "add unauthorized drivers, and book loads they intend to steal."
+
+Logins stay personal too. Amazon's [geospoofing post](https://relay.amazon.com/blog/trucking-safety/geospoofing-how-amazon-relay-combats-fake-gps-technology) says: "Don't share your login information with anyone. Amazon Relay will never request that you share this information." More in our [fraud guide](https://nudoiq.com/amazon-relay-fraud/) and [login guide](https://nudoiq.com/amazon-relay-login/).
+
+## Can you buy Amazon Relay routes or contracts?
+
+Amazon doesn't describe routes or contracts as something a carrier owns or can sell. Amazon tenders the loads, and contracts go to carriers that qualify.
+
+The [contracts post](https://relay.amazon.com/blog/amazon-trucking-contracts) says: "Our hauling contracts are only available to Relay carriers in good standing." Amazon's [2026 booking post](https://relay.amazon.com/blog/booking-options/new-ways-to-scale-your-trucking-business-with-amazon-relay) says carriers need "a B+ performance grade or above to view and book contracts (C+ for auctions)."
+
+So a seller who promises routes is promising something Amazon doesn't publish. Check with Amazon before you pay for it. Our [contracts guide](https://nudoiq.com/amazon-relay-contracts/) and [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/) explain how contract access works.
+
+## What does Amazon check on owners?
+
+Amazon verifies the people who own a carrier. The [Relay FAQ](https://relay.amazon.com/faq) says carrier identity verification confirms "your business entity and the identity of all beneficial owners (anyone with more than 25% ownership)." Our [requirements guide](https://nudoiq.com/amazon-relay-requirements/) covers it.
+
+Amazon also tells carriers to report unauthorized changes to an account's setup, password, email, users, phone number or bank account. A sale shouldn't look like any of those. Use the ownership-transfers email instead. Our [contact guide](https://nudoiq.com/amazon-relay-contact/) lists it with Amazon's other routes.
+
+## Does DOT authority transfer with a sale?
+
+That's an FMCSA question. FMCSA's rules on "Transfers of Operating Authority" are in [49 CFR Part 365, Subpart D](https://www.ecfr.gov/current/title-49/part-365/subpart-D). They cover approval "to merge, transfer, or lease their operating rights." Some sections there are temporary or suspended, so read the current text or ask FMCSA.
+
+Relay needs a DOT number with interstate authority, active for at least 180 days, and a valid MC number. Amazon doesn't say whether DOT tenure counts from the original grant date after a sale.
+
+This isn't legal or tax advice. Confirm with Amazon and FMCSA before you sign.
+
+## Can Amazon help pay for a business or trucks?
+
+Two Amazon programs touch this:
+
+- **Business loans.** Amazon's [Lendistry post](https://relay.amazon.com/blog/trucking-business-loans-amazon-lendistrys-new-offer) says its referral can go to "debt consolidation, working capital, or the purchase of an existing business." It's for Relay carriers active at least a year with a C+ grade or above, among other rules. Our [factoring guide](https://nudoiq.com/amazon-relay-factoring/) has the terms.
+- **Used trucks.** Amazon's [discounts page](https://relay.amazon.com/discounts) lists "Up to $10,000 discounts on commercial vehicles, managed by one previous owner (Ryder)."
+
+More in our [Relay rewards guide](https://nudoiq.com/amazon-relay-rewards/).
+
+## How do you start an Amazon Relay business from scratch?
+
+Apply as a carrier under your own DOT and MC authority. Amazon says there are no fleet size requirements. The steps are in [how to sign up for Amazon Relay](https://nudoiq.com/how-to-sign-up-for-amazon-relay/).
+
+## What doesn't Amazon publish about selling a Relay business?
+
+- Whether a Relay account, grade, Rewards tier, contracts or lanes carry over to a buyer
+- What the ownership-transfer review checks, or how long it takes
+- Whether DOT tenure counts from the original grant date after a sale
+- Whether Relay "routes" can be sold
+- Any transfer fees
+
+## Where does NudoIQ fit?
+
+Whoever owns the carrier, NudoIQ works on the Relay load board. It's a Chrome extension that shows net profit and lane price history on each load, so you can judge a load before you book it. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+
+## Frequently asked questions
+
+### Can I buy an Amazon Relay account?
+Amazon says never transfer or sell your account to someone you don't know, and it lists unsolicited offers to buy a business as a scam sign. Ownership changes go to relay-ownership-transfers@amazon.com at least 30 days ahead.
+
+### Do Amazon Relay contracts transfer to a new owner?
+Amazon doesn't say. It says contracts are only for Relay carriers in good standing, and booking them needs a B+ grade or above.
+
+### Can you buy Amazon Relay routes?
+Amazon doesn't describe routes as something a carrier can sell. Amazon tenders the loads, so check with Amazon before you pay for any "routes for sale" offer.
+
+### How far ahead do I tell Amazon about a sale?
+At least 30 days. Amazon says to email relay-ownership-transfers@amazon.com if you're buying, selling or closing your business.
+
+### Does buying a company get around the 180-day DOT rule?
+Amazon doesn't address it. FMCSA has its own rules for transferring operating authority, so confirm with FMCSA and Amazon before you buy.
+
+---
+
+# What is a domicile in Amazon Relay?
+
+URL: https://nudoiq.com/amazon-relay-domicile/
+Published: 2026-10-16. Last updated: 2026-10-16.
+
+Short answer: A domicile in Amazon Relay is a greater city area. Amazon says a round trip "begins and ends in the same domicile," so drivers get back home. Contracts start and end at a domicile, and some auctions run between two.
+
+## What does domicile mean on Amazon Relay?
+
+It's Amazon's word for a city area. Amazon's [trucking work post](https://relay.amazon.com/blog/booking-options/what-trucking-work-is-on-amazon-relay) says: "A roundtrip load begins and ends in the same domicile (Amazon speak for greater city areas)."
+
+Amazon doesn't publish a list of domiciles or where each one's boundary sits.
+
+## Why do round trips start and end at a domicile?
+
+To get drivers home. Amazon says: "That return leg lets your drivers get back home."
+
+The driver setups Amazon lists show how long a driver is out:
+
+- **13-hour solo:** one day of loads, including 11 hours of drive time.
+- **37-hour solo:** "Two days of loads. A single truck driver spends their 10-hour rest break outside their base cities."
+
+On contracts, Amazon's [contracts post](https://relay.amazon.com/blog/amazon-trucking-contracts) says: "Individual drivers have the option to come home every day or every other day, and team drivers can return every five days." Our [hours of service guide](https://nudoiq.com/amazon-relay-hours-of-service/) covers the rules behind those times.
+
+Amazon says this type of haul "usually only requires a tractor (aka power-only)." See [Amazon Relay power only](https://nudoiq.com/amazon-relay-power-only/).
+
+## How do blocks relate to a domicile?
+
+A block is time, not one load. Amazon says: "A block is a chunk of time that a carrier reserves their trucks and drivers for Relay. Amazon plans tours that start and end within the duration of the block and pays carriers even if Amazon doesn't use the full block of time."
+
+Our [contracts guide](https://nudoiq.com/amazon-relay-contracts/) covers blocks and each contract type.
+
+## How is domicile used in contracts and auctions?
+
+Amazon's contracts post compares the two:
+
+| | Contracts | Auctions |
+|---|---|---|
+| Start and end location | Domicile (city or area) | Domicile, or lane (a specific warehouse) |
+| Trip type | Round trip | One-way |
+| Grade needed | B+ or above | C+ or above |
+
+The grade row comes from Amazon's [2026 booking post](https://relay.amazon.com/blog/booking-options/new-ways-to-scale-your-trucking-business-with-amazon-relay).
+
+For domicile-based auctions, Amazon's [auctions post](https://relay.amazon.com/blog/freight-bidding-on-amazon-relays-auctions) says "you'll be tendered lanes between a starting and ending domicile (greater city area)." If a lane is cancelled, Amazon "may be able to swap it with other lanes that are between the two domiciles."
+
+New in 2026: "Auctions now offer multi-carrier awards, domicile-to-domicile auctions, and bulk bidding." Our [auctions guide](https://nudoiq.com/amazon-relay-auctions/) explains bidding.
+
+## How do you search loads by domicile?
+
+Start from where your truck is. Amazon says "every truck load search starts with the origin and radius you're trying to book." Its [box truck loads post](https://relay.amazon.com/blog/how-to-find-box-truck-loads) adds: "You can look at a domicile and see everything available to your equipment."
+
+Want several loads in a row from one area? See [how to book multiple loads on Amazon Relay](https://nudoiq.com/how-to-book-multiple-loads-on-amazon-relay/). Board basics are in our [load board guide](https://nudoiq.com/amazon-relay-load-board/).
+
+Before you book a round trip, check what it leaves you. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net, net per loaded mile and break-even rate from its pay, miles and your costs.
+
+## Does your scorecard show performance by domicile?
+
+Yes. Amazon's [performance score page](https://relay.amazon.com/blog/amazon-relay-performance-score) says: "Carriers can also see performance at the domicile level to understand regional patterns, and even the single-load-level so they can coach drivers."
+
+Amazon doesn't publish how domicile-level scores feed your overall grade. See our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/).
+
+## How do you change your domicile on Amazon Relay?
+
+Amazon doesn't publish a "change your domicile" setting. It describes a domicile as where a load or contract starts and ends. It doesn't say whether a carrier has a home domicile on its account.
+
+What you can change is your search. Every load search starts from the origin and radius you pick, so set them for the area you want to work.
+
+## What doesn't Amazon publish about domiciles?
+
+- A list of domiciles or their boundaries
+- Whether a carrier has a home domicile stored on its account
+- Any way to change your domicile
+- How many domiciles one carrier can book from
+- How domicile-level scores feed the overall grade
+
+## Where does NudoIQ fit?
+
+If you book round trips out of one area, NudoIQ works on the Relay search you've already set. It's a Chrome extension that refreshes the board, shows net profit on each load from your costs, and can book loads that clear your minimum net profit, up to a max-books number you set. During the trial and on the paid plan, its Pro View shows every stop's facility address and the driver type. It's independent, not affiliated with Amazon. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+
+## Frequently asked questions
+
+### What does domicile mean in Amazon Relay?
+It's Amazon's term for a greater city area. A round trip begins and ends in the same domicile, so the driver gets back home.
+
+### How do I change my domicile on Amazon Relay?
+Amazon doesn't publish a way to change a domicile. It describes a domicile as where loads and contracts start and end, and every load search starts with the origin and radius you choose.
+
+### What is a domicile-based auction on Amazon Relay?
+It's an auction where Amazon tenders lanes between a starting domicile and an ending domicile. If a lane is cancelled, Amazon says it may be able to swap it for another lane between the same two domiciles.
+
+### Do Amazon Relay contracts start at a domicile?
+Yes. Amazon's contracts post lists a domicile (city or area) as the start and end location for contracts, which are round trips. Booking contracts needs a B+ grade or above.
+
+### Can I see my Relay scorecard by domicile?
+Yes. Amazon says carriers can see performance at the domicile level to understand regional patterns.
+
+---
+
+# Amazon Relay for drivers: how you get added
+
+URL: https://nudoiq.com/amazon-relay-drivers/
+Published: 2026-10-16. Last updated: 2026-10-16.
+
+Short answer: Drivers can't sign up for Amazon Relay on their own. A Relay-approved carrier invites you, and you drive for that carrier, not Amazon. Amazon says Relay carriers are independent contractors who employ their own drivers.
+
+## Can you drive for Amazon Relay?
+
+Yes, but only through a carrier. Amazon's [driver eligibility post](https://relay.amazon.com/blog/intro-to-amazon-relay/driver-eligibility-requirements-to-haul-amazon-loads) says: "Relay-approved carriers are independent contractors, not Amazon employees. Carriers are responsible for their own drivers."
+
+Amazon's [trucking work post](https://relay.amazon.com/blog/booking-options/what-trucking-work-is-on-amazon-relay) says the same thing another way: "Carriers employ their own drivers."
+
+So an "Amazon Relay driver" is a driver for a trucking company that hauls Amazon loads through Relay. That company hires you and adds you to its Relay account.
+
+## How does a driver get added to Relay?
+
+By invite. Amazon says: "Drivers can only create Relay profiles through invitations from Relay-approved carriers." It says this "helps protect carrier businesses from unauthorized access and potential fraud."
+
+The short version:
+
+1. Your carrier sends you the invite.
+2. You download the Relay app (iOS or Android) and log in to an existing Amazon account, or create one.
+3. You enter your commercial driver's license and contact details.
+4. You complete the identity check and background check.
+
+"Only drivers who successfully complete an identification check can haul Relay loads." And "Drivers can't share their accounts," so every driver has their own login.
+
+What each check looks at is in our [background check guide](https://nudoiq.com/amazon-relay-background-check/). The carrier's side of the invite is in our [dispatcher guide](https://nudoiq.com/amazon-relay-dispatcher/).
+
+## What are the Amazon Relay driver requirements?
+
+Amazon leaves driver qualification to the carrier. Its driver post says: "Carriers manage their drivers, including drug and alcohol screening, hours of service (HOS) compliance, medical certification, regular license verification, and ongoing driver qualification."
+
+Federal rules still apply. For interstate commercial driving, FMCSA rules generally require a driver who:
+
+- "Is at least 21 years old" ([49 CFR 391.11](https://www.ecfr.gov/current/title-49/section-391.11))
+- "Can read and speak the English language sufficiently to converse with the general public" (same rule)
+- Is "medically certified as physically qualified" to drive ([49 CFR 391.41](https://www.ecfr.gov/current/title-49/section-391.41))
+
+Amazon adds its own line in its [box truck loads post](https://relay.amazon.com/blog/how-to-find-box-truck-loads): "At Amazon Relay, we do still require a DOT medical card to drive anything commercial."
+
+Driving a box truck without a CDL? See [Amazon Relay non-CDL](https://nudoiq.com/amazon-relay-non-cdl/).
+
+## What does a Relay driver do in the app?
+
+The Relay app is where the work happens. Drivers see their schedule, do asset inspections, follow step-by-step load instructions and truck-friendly routes, check load history and report issues. Our [Relay app guide](https://nudoiq.com/amazon-relay-app/) goes through the app.
+
+For help on the road, Amazon says the app "lets drivers request support from Relay Assistant throughout their trip." There's no driver phone line. The FAQ says: "Amazon Relay doesn't have an official contact phone number." Our [contact guide](https://nudoiq.com/amazon-relay-contact/) shows where drivers get help.
+
+## What schedules and home time do Relay drivers get?
+
+It depends on the work your carrier books. Amazon's trucking work post lists:
+
+- **13-hour solo:** "One day of truck loads for a single driver, including 11 hours of drive time."
+- **37-hour solo:** two days of loads, with the 10-hour rest break taken outside the driver's base cities.
+- **Team:** "Team truckers can drive for 6 days straight."
+
+On contracts, Amazon's [contracts post](https://relay.amazon.com/blog/amazon-trucking-contracts) says: "Individual drivers have the option to come home every day or every other day, and team drivers can return every five days." The rules behind those hours are in our [hours of service guide](https://nudoiq.com/amazon-relay-hours-of-service/).
+
+## How much do Amazon Relay drivers make?
+
+Amazon doesn't publish driver pay or a pay scale. You're employed by the carrier you drive for, so ask that carrier. We won't guess a number.
+
+## Where can you find an Amazon driving job?
+
+Relay has no job listings and no driver application. Amazon points to two other paths:
+
+- **Drive for an Amazon Freight Partner.** Amazon's [Freight Partner site](https://freightpartner.amazon.com/marketing/home) says: "Are you a commercial driver? Work for an Amazon Freight Partner." It links to [afpjobs.amazon.com](https://afpjobs.amazon.com/). Amazon says Freight Partners hire "full-time W-2 commercial drivers."
+- **Start your own carrier.** Get your own authority and apply. See [how to sign up for Amazon Relay](https://nudoiq.com/how-to-sign-up-for-amazon-relay/) and our [owner-operator guide](https://nudoiq.com/amazon-relay-owner-operator/).
+
+## What should carriers know about their drivers?
+
+Loads without a driver hurt your score. Amazon's [performance score page](https://relay.amazon.com/blog/amazon-relay-performance-score) says: "The disruptions Relay tracks are stationary trailers and loads without assigned drivers." See our [scorecard guide](https://nudoiq.com/amazon-relay-scorecard/).
+
+You can also train drivers. Amazon's [Learning Center post](https://relay.amazon.com/blog/intro-to-amazon-relay/amazon-relays-learning-center) says: "You have the option to assign specific courses or collections to drivers on your roster." Our [Learning Center guide](https://nudoiq.com/amazon-relay-learning-center/) shows how.
+
+If a driver check goes wrong, our [disputes guide](https://nudoiq.com/amazon-relay-disputes/) covers what can and can't be disputed.
+
+## What doesn't Amazon publish for drivers?
+
+- Driver pay or a pay scale
+- A driver application or job listings on relay.amazon.com
+- Whether one driver can be on two carriers' rosters
+- A minimum age or experience rule of Amazon's own
+- How a carrier removes a driver
+- A driver support phone number
+
+## Where does NudoIQ fit?
+
+NudoIQ is for whoever books the loads: the carrier owner or the dispatcher. It's a Chrome extension for the Relay load board. It shows net profit on each load and can book loads that clear your minimum net profit, up to a max-books number you set. During the trial and on the paid plan, its Pro View shows each load's driver type (Team or Solo) and every stop's facility address. It's independent, not affiliated with Amazon. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+
+## Frequently asked questions
+
+### Can I apply to Amazon Relay as a driver?
+No. Amazon says drivers can only create Relay profiles through invitations from Relay-approved carriers. You need a carrier to invite you.
+
+### Does Amazon hire Relay drivers?
+No. Amazon says Relay carriers are independent contractors, not Amazon employees, and that carriers employ their own drivers.
+
+### Do Amazon Relay drivers need a CDL?
+Amazon's driver post says onboarding asks for inputs such as a commercial driver's license. Amazon also welcomes non-CDL box trucks but doesn't spell out how a driver without a CDL completes that step. Ask Relay support from the carrier's account.
+
+### Is there an Amazon Relay driver support phone number?
+No. Amazon's FAQ says Relay doesn't have an official contact phone number. During a trip, drivers can request support from Relay Assistant in the app.
+
+### How much do Amazon Relay drivers get paid?
+Amazon doesn't publish driver pay. Carriers employ their own drivers, so ask the carrier you'd drive for.
+
+### Where do I find Amazon driving jobs?
+Relay has no job listings. Amazon's Freight Partner site points commercial drivers to afpjobs.amazon.com to find jobs with Amazon Freight Partners.
+
+---
+
+# Amazon Relay factoring and quick pay: what Amazon says
+
+URL: https://nudoiq.com/amazon-relay-factoring/
+Published: 2026-10-16. Last updated: 2026-10-16.
+
+Short answer: Amazon doesn't publish any rules on factoring Relay invoices. Relay pays weekly on its own: loads completed before 23:59 Saturday are paid the following Friday, and Amazon calls this "7-day payment with no factoring fees."
+
+## Do you need factoring on Amazon Relay?
+
+That's your call, but know how Relay pays first. The [Relay FAQ](https://relay.amazon.com/faq) says: "Payment cycle runs weekly from Sunday-Saturday. Everything completed before 23:59 Saturday will be paid out the following week on Friday."
+
+Two more lines from the FAQ:
+
+- "Amazon Relay will generate invoices automatically."
+- You can dispute pay "within 30 days of reviewing your weekly invoice."
+
+Amazon's [free freight search post](https://relay.amazon.com/blog/intro-to-amazon-relay/how-to-find-truck-loads-faster-with-amazon-relays-free-freight-search) adds that on Relay you "don't have to waste time verifying the legitimacy of loads on Relay or talking to factoring companies to ensure credit worthiness."
+
+Our [payments guide](https://nudoiq.com/amazon-relay-payments/) covers payday, invoices and pending payments. Disputes are in our [disputes guide](https://nudoiq.com/amazon-relay-disputes/).
+
+## What does Amazon say about factoring?
+
+Amazon uses it as a selling point. Its [email scams post](https://relay.amazon.com/blog/email-scams-how-to-spot-a-fake) lists "7-day payment with no factoring fees." Its [RelayCon 2026 post](https://relay.amazon.com/blog/industry-trends/freight-industry-insights-from-experts-at-amazons-relaycon-2026) says: "And with 7-day payment terms and no factoring fees, cash flow stays steady too."
+
+Its [brokers comparison](https://relay.amazon.com/blog/intro-to-amazon-relay/freight-brokers-vs-direct-booking-why-choose-amazon-relay) says: "Say goodbye to 30-60 day waits for payouts from logistics brokers. With Relay, you typically get paid within 7 days." That's Amazon's claim about brokers in general.
+
+Carriers on Amazon's blog say similar things. [One told Amazon](https://relay.amazon.com/blog/amazon-carrier-spotlights/carrier-spotlight-a-a-logistics-group-inc): "Relay pays carriers every week, which eliminates the need for us to sign up with a factoring company." That's one carrier's experience, not a rule.
+
+## Can you factor Amazon Relay invoices?
+
+Amazon doesn't say. It publishes nothing on:
+
+- Whether you may factor Relay invoices
+- How to send a Notice of Assignment
+- How to name a factoring company as payee
+- The payment method (ACH or check)
+
+If you already work with a factor, ask Relay support from your account before you change anything.
+
+## Is there an Amazon Relay quick pay option?
+
+Not that Amazon describes. The only quick pay wording we found on Amazon's public Relay pages is in its [spot work post](https://relay.amazon.com/blog/amazon-relay-spot-work-to-keep-fleets-moving): "Upon completion of hauls, carriers receive quick payment."
+
+Amazon doesn't describe a separate quick pay product. The only pay schedule it publishes is the weekly cycle in the FAQ. It publishes no same-day pay and no early-pay fee.
+
+## Why do bank detail changes matter?
+
+Payment details come early. The last application step is "Payment information," most likely where you tell Amazon how to pay you. After that, treat any bank change with care.
+
+Amazon lists a "bank account change" among signs of unauthorized access, to report "through the Support Center when logged into your Relay account." Its scams post tells carriers to check: "Bank account details: Has it changed without your approval?"
+
+Our [Relay login guide](https://nudoiq.com/amazon-relay-login/) covers what to do if someone else got into your account.
+
+## What about Amazon's business loan?
+
+Amazon refers some carriers to Lendistry for revenue-based financing. It's a loan, not factoring. From Amazon's [loan post](https://relay.amazon.com/blog/trucking-business-loans-amazon-lendistrys-new-offer):
+
+- **Who:** "small- or medium-sized Relay carriers that consistently book Amazon freight and have a performance grade of C+ and above," active on Relay "for at least a year."
+- **Size:** "amounts up to $150,000, with flexible payment terms up to two years."
+- **Repayment:** Amazon says the monthly payment depends on how much the carrier brings in.
+
+There's a revenue rule too, and Lendistry makes the credit decision. Onboarded carriers can check eligibility "in the Rewards tab of the Relay portal." Our [Relay rewards guide](https://nudoiq.com/amazon-relay-rewards/) lists Amazon's other carrier programs.
+
+## How does Relay compare with broker boards?
+
+Amazon's comparison table says traditional load boards and brokers have "Payment delays common" and a "Need to verify broker creditworthiness." That's Amazon's view. On DAT, for one, factoring is a product: DAT sells it as DAT Outgo, per DAT's own site. Our [Amazon Relay vs DAT guide](https://nudoiq.com/amazon-relay-vs-dat/) compares pay on both.
+
+Whatever you decide, know each load's net before you book. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net, net per loaded mile and break-even rate from its pay, miles and your costs.
+
+## What doesn't Amazon publish about factoring?
+
+- Whether a carrier may factor Relay invoices
+- How to send a Notice of Assignment or name a factor as payee
+- A quick pay, same-day pay or early-pay fee
+- The payment method (ACH or check)
+- Whether Lendistry repayments come out of Relay payouts
+
+## Where does NudoIQ fit?
+
+NudoIQ is a Chrome extension for the Relay load board. It shows net profit and $/mile on each load from costs you set once, so you see what a load leaves you before you book it. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+
+## Frequently asked questions
+
+### Does Amazon Relay use factoring?
+Amazon publishes no factoring rules for Relay. It pays weekly: loads completed before 23:59 Saturday are paid the following Friday, and Amazon describes this as 7-day payment with no factoring fees.
+
+### Is there Amazon Relay quick pay?
+Amazon doesn't describe a separate quick pay option. Its spot work post says carriers "receive quick payment" when hauls are done, and the only pay schedule Amazon publishes is the weekly cycle. It publishes no same-day pay or early-pay fee.
+
+### Can I factor my Amazon Relay invoices?
+Amazon doesn't publish whether you can, or how to send a Notice of Assignment. Ask Relay support from your account before you set anything up.
+
+### When does Amazon Relay pay?
+Weekly. The FAQ says everything completed before 23:59 Saturday is paid out the following Friday. Our [payments guide](https://nudoiq.com/amazon-relay-payments/) has the details.
+
+### Does Amazon offer Relay carriers loans?
+Amazon refers eligible carriers to Lendistry for revenue-based financing of up to $150,000. You need a C+ grade or better and at least a year on Relay, among other rules. Lendistry makes the credit decision.
+
+---
+
+# Amazon Relay non-CDL: what you can run without a CDL
+
+URL: https://nudoiq.com/amazon-relay-non-cdl/
+Published: 2026-10-16. Last updated: 2026-10-16.
+
+Short answer: Non-CDL box truck carriers can use Amazon Relay. Amazon offers box truck contracts to carriers who are "local, independent, or non-CDL," but it still requires a DOT medical card, your own DOT authority and a box truck it accepts.
+
+## Can you do Amazon Relay without a CDL?
+
+With a box truck, Amazon says yes. Its [box truck loads post](https://relay.amazon.com/blog/how-to-find-box-truck-loads) says: "Whether you're local, independent, or non-CDL, Amazon offers 16' and 26' contracts for box trucks to help carriers book consistent lanes."
+
+The same post explains: "Depending on the weight of your truck, you may not need a CDL to drive a box truck."
+
+Two catches:
+
+- **Contracts take a track record.** Amazon says "in order to qualify, you'll have to prove yourself as a high-performing carrier." Its [2026 booking post](https://relay.amazon.com/blog/booking-options/new-ways-to-scale-your-trucking-business-with-amazon-relay) says contracts need a B+ grade or above.
+- **Relay isn't a job.** It's for carrier companies with their own authority, so there are no "non-CDL jobs" on Relay itself. See [Amazon Relay for drivers](https://nudoiq.com/amazon-relay-drivers/).
+
+## When do you need a CDL?
+
+The federal rule goes by weight rating or weight, whichever is greater. From [49 CFR 383.5](https://www.ecfr.gov/current/title-49/section-383.5):
+
+| Group | What it covers |
+|---|---|
+| Group A | A combination rated or weighing 26,001 pounds or more, towing a unit rated or weighing more than 10,000 pounds |
+| Group B | A single heavy truck rated or weighing 26,001 pounds or more |
+
+Amazon's post puts it as "a vehicle that weighs less than 26,000 pounds." The federal rule also counts the weight rating, so check your truck's GVWR and your state's rules before you count on no CDL.
+
+Most Relay loads need a tractor. Amazon's [truck requirements post](https://relay.amazon.com/blog/amazon-relay-truck-requirements) says: "The majority of Amazon Relay loads are power-only." A tractor pulling a trailer usually falls under Group A. Yard work needs a CDL too. See our [hostler and shuttle guide](https://nudoiq.com/amazon-relay-hostler-shuttle-loads/).
+
+## Do you still need a DOT medical card?
+
+Yes. Amazon says: "At Amazon Relay, we do still require a DOT medical card to drive anything commercial, but owner-operators don't have to go through the time and expense of getting a CDL if their box trucks are under the weight limit."
+
+That matches federal rules. FMCSA's safety rules start at 10,001 pounds by rating or weight ([49 CFR 390.5](https://www.ecfr.gov/current/title-49/section-390.5)), well under the CDL line. A driver covered by them "must not operate a commercial motor vehicle unless he or she is medically certified as physically qualified to do so" ([49 CFR 391.41](https://www.ecfr.gov/current/title-49/section-391.41)).
+
+You also need your own authority. Amazon says "you'll need a DOT authority for at least 6 months to become a carrier with Amazon Relay." The full list is in our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/).
+
+## What box truck rules does Amazon list?
+
+Amazon books 16' and 26' box trucks and says "we have more loads for 26'." From the box truck loads post:
+
+- A functional tuck-under lift gate
+- Your DOT number "clearly displayed on the truck's exterior, even if you're using a rented truck"
+- "Drivers must arrive on site with a pallet jack and load straps."
+- "Drivers must not use on-site equipment."
+- "Drivers will be responsible for loading and unloading all freight."
+- A smartphone with the Relay app
+
+For post office runs, "your box truck must be able to load at least 12 pallets." More in our [box truck guide](https://nudoiq.com/amazon-relay-box-truck/) and [box truck loads guide](https://nudoiq.com/amazon-relay-box-truck-loads/).
+
+## Can you use a car, pickup, sprinter or hotshot?
+
+They're not on Amazon's list. The [Relay FAQ](https://relay.amazon.com/faq) lists day cabs, sleeper cabs, 16' and 26' box trucks with a tuck-under lift gate, a 48' trailer, a 53' dry van, a 53' reefer and containers. Amazon also says: "Cargo vans cannot be used for loads on Amazon Relay." Our [cargo van guide](https://nudoiq.com/amazon-relay-cargo-van/) covers the options for van owners.
+
+Have a car, SUV or pickup with a covered bed? That fits Amazon Flex, a different Amazon program. Its [requirements page](https://flex.amazon.com/get-started/requirements) accepts "4-door sedans, SUVs, vans, or trucks with covered beds. Smaller cars and open-bed trucks are ineligible." Compare the two in [Amazon Relay vs Amazon Flex](https://nudoiq.com/amazon-relay-vs-amazon-flex/).
+
+## Can you rent a bigger truck?
+
+Amazon's [discounts page](https://relay.amazon.com/discounts) lists truck rentals at "Up to 40% off, including high roof gas and diesel vans, 16ft box trucks, 26ft box trucks, and daycabs." Only the box trucks and day cabs on that list are Relay equipment. A rented box truck still needs your DOT number on the outside.
+
+Before you rent, price the work. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net, net per loaded mile and break-even rate from its pay, miles and your costs.
+
+## What doesn't Amazon publish about non-CDL work?
+
+- A list of non-CDL loads
+- A weight rating rule for 16' or 26' box trucks
+- How a driver without a CDL completes the "commercial driver's license" step in driver onboarding (ask Relay support from your account)
+- Any hotshot, pickup, car, SUV or sprinter program on Relay
+- How CDL rules differ by state
+
+## Where does NudoIQ fit?
+
+If you run a box truck on Relay, NudoIQ is a Chrome extension for the load board. It refreshes the board, sounds an alert on the page when a load clears your minimums (net profit, $/mile or load pay), and shows net profit on each load from your own costs. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+
+## Frequently asked questions
+
+### Do you need a CDL for Amazon Relay?
+Not always. Amazon says you may not need a CDL to drive a box truck, depending on its weight. Under federal rules a single truck needs a CDL at 26,001 pounds or more by weight rating or weight, so check your truck's GVWR and your state.
+
+### Does Amazon Relay require a DOT medical card without a CDL?
+Yes. Amazon says it still requires a DOT medical card to drive anything commercial, even when a box truck is under the CDL weight limit.
+
+### Are there non-CDL jobs on Amazon Relay?
+No. Relay isn't a job board. It's for carrier companies with their own DOT authority, and Amazon says Relay carriers employ their own drivers.
+
+### Can I do Amazon Relay with a car or pickup truck?
+No car or pickup is on Amazon's Relay equipment list. Amazon Flex, a separate program, accepts 4-door sedans, SUVs, vans and trucks with covered beds.
+
+### Can I use a sprinter van on Amazon Relay?
+Sprinter vans aren't on Amazon's Relay equipment list, and Amazon says cargo vans cannot be used for Relay loads. See our [cargo van guide](https://nudoiq.com/amazon-relay-cargo-van/).
+
+### Can a non-CDL box truck get Relay contracts?
+Amazon says it offers 16' and 26' box truck contracts, including to non-CDL carriers. You have to qualify as a high-performing carrier, and Amazon's 2026 post says contracts need a B+ grade or above.
+
+---
+
+# Amazon Relay vs Amazon Flex: which Amazon program fits you
+
+URL: https://nudoiq.com/amazon-relay-vs-amazon-flex/
+Published: 2026-10-16. Last updated: 2026-10-16.
+
+Short answer: Amazon Relay is a load board for trucking companies with their own DOT and MC authority and their own trucks. Amazon Flex is for individuals who deliver Amazon packages in their own 4-door sedan, SUV, van or covered-bed truck.
+
+## What's the difference between Amazon Relay and Amazon Flex?
+
+| | Amazon Relay | Amazon Flex |
+|---|---|---|
+| Who it's for | Trucking companies (carriers) | Individuals with a qualifying vehicle |
+| What you move | Amazon freight, by truck | Amazon packages, to customers |
+| Vehicle | Tractors, box trucks, trailers, containers | Sedans, SUVs, vans, covered-bed trucks |
+| What you need | Your own DOT and MC numbers | A valid U.S. driver's license and a Social Security number |
+| Your status | Independent contractor carrier | Independent contractor |
+
+Relay "connects carriers directly to Amazon freight," per Amazon's [get started page](https://relay.amazon.com/get-started). Amazon's [trade show post](https://relay.amazon.com/blog/intro-to-amazon-relay/amazon-carrier-interview-at-mid-america-trucking-show) adds that on Relay "you bring your own equipment."
+
+On [Flex](https://flex.amazon.com/), you use your own vehicle to deliver Amazon packages on your own schedule.
+
+## Who is Amazon Relay for?
+
+Existing trucking companies. Amazon's words: "Amazon Relay helps existing carriers grow their trucking business, while Amazon Freight Partner helps entrepreneurs launch one."
+
+You need your own authority and equipment Amazon accepts. Amazon says: "Relay carriers are independent contractors and are not Amazon employees." The list is in our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/), and the steps are in [how to sign up for Amazon Relay](https://nudoiq.com/how-to-sign-up-for-amazon-relay/).
+
+## Who is Amazon Flex for?
+
+People with a qualifying vehicle who pick their own hours. From Flex's [home page](https://flex.amazon.com/), [requirements](https://flex.amazon.com/get-started/requirements) and [FAQ](https://flex.amazon.com/support/faq):
+
+- "Be 21 or older"
+- "You must have a valid U.S. driver's license and a Social Security number."
+- Vehicle: "Smaller cars and open-bed trucks are ineligible."
+- "Pass a background check that includes, but is not limited to, a review of motor vehicle records."
+- "Choose delivery blocks up to a week in advance that fit your schedule."
+- "As an independent contractor, you are responsible for your own expenses."
+
+The Flex FAQ says: "Amazon provides delivery partners in all states other than NY with commercial auto insurance at no cost."
+
+Flex lists an onboarding support line, 888.281.6906. Relay has no official contact phone number.
+
+No CDL, but a box truck? Read [Amazon Relay non-CDL](https://nudoiq.com/amazon-relay-non-cdl/).
+
+## What is an Amazon Delivery Service Partner (DSP)?
+
+A local package delivery business. Amazon's [Freight Partner FAQ](https://freightpartner.amazon.com/marketing/faq) says DSPs "start, operate, and grow a package delivery business in their local communities. They operate out of an Amazon delivery station and manage a fleet of 20-40 vans on average."
+
+DSPs recruit "a team of 40-100 high-performing employees" to deliver from the station to the customer's door.
+
+## What is an Amazon Freight Partner (AFP)?
+
+A trucking company you start with Amazon's trucks. Amazon says no trucks or trucking experience are needed. From the [AFP FAQ](https://freightpartner.amazon.com/marketing/faq):
+
+- AFPs "move Amazon freight between sites, such as warehouses and delivery stations, within the Amazon network."
+- "Amazon provides Amazon-branded trucks to you with no up-front down payment and covers tolls, truck insurance, and fuel costs."
+- "No, you do not need a commercial driver's license (CDL) to become an Amazon Freight Partner."
+- "Candidates must have $40K in cash assets."
+- Only one person may apply per application. Amazon doesn't accept applications from companies or groups.
+- "An individual may not own and operate both a DSP and an AFP."
+
+AFPs hire "full-time W-2 commercial drivers," and Amazon says applicants go through "a rigorous selection process."
+
+## Can you run Relay and Freight Partner together?
+
+Yes, as separate companies. The AFP FAQ says: "Amazon Freight Partners can operate in the Amazon Relay program, but they must do so as a Relay carrier under a separate business entity and DOT authority."
+
+Amazon doesn't publish whether a Flex driver can also be a Relay carrier.
+
+## How is Amazon Relay different from Amazon Freight?
+
+They're two sides of one network. [Amazon Freight](https://freight.amazon.com/) is for shippers: "a connection point for businesses to move freight via the Amazon transportation network." It says: "Amazon Freight is an asset-backed freight broker licensed under MC-826094 (US DOT: 2881058)."
+
+Relay is the carrier side. Amazon Freight's "Join Carrier Network" link goes to relay.amazon.com, and Amazon's [2026 booking post](https://relay.amazon.com/blog/booking-options/new-ways-to-scale-your-trucking-business-with-amazon-relay) says loads "from companies that aren't Amazon are flowing through Relay's load board and auctions." More in [can brokers use Amazon Relay](https://nudoiq.com/amazon-relay-brokers/).
+
+## Which Amazon program fits you?
+
+- **You run trucks under your own authority:** Relay. Compare it with other boards in [Amazon Relay vs DAT](https://nudoiq.com/amazon-relay-vs-dat/).
+- **You own one truck and drive it under your own authority:** Relay, as an owner-operator. See our [owner-operator guide](https://nudoiq.com/amazon-relay-owner-operator/).
+- **You have a car, SUV, van or covered-bed truck:** Flex.
+- **You want to build a package delivery business:** DSP.
+- **You want to start a trucking company without owning trucks:** Amazon Freight Partner.
+- **You ship freight:** Amazon Freight.
+
+## What doesn't Amazon publish?
+
+- A side-by-side comparison of these programs
+- DSP startup costs and requirements on a page we could read
+- Whether a Flex driver can also be a Relay carrier
+- Where Freight Partner is open (Amazon matches applicants by zip code)
+
+## Where does NudoIQ fit?
+
+NudoIQ is for Relay carriers, not Flex drivers. It's a Chrome extension for the Relay load board. It refreshes the board, shows net profit and lane price history on each load, and can book loads that clear your minimum net profit. It's independent, not affiliated with Amazon. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+
+## Frequently asked questions
+
+### Is Amazon Relay the same as Amazon Flex?
+No. Relay is a load board for trucking companies with their own DOT and MC authority. Flex is an app for individuals who deliver Amazon packages in their own sedan, SUV, van or covered-bed truck.
+
+### Can I use my car for Amazon Relay?
+No car is on Amazon's Relay equipment list. Amazon Flex accepts 4-door sedans, SUVs, vans and trucks with covered beds.
+
+### Do you need a CDL for Amazon Flex or Amazon Freight Partner?
+Flex asks for a valid U.S. driver's license. Amazon says you don't need a CDL to become an Amazon Freight Partner, though the drivers a Freight Partner hires are commercial drivers.
+
+### What's the difference between Amazon Relay and Amazon Freight?
+Amazon Freight is the shipper side, a licensed freight broker for businesses that move freight. Relay is where carriers book loads, and Amazon says loads from non-Amazon shippers now flow through Relay too.
+
+### Can an Amazon Freight Partner also use Relay?
+Yes, under a separate business entity and DOT authority. Amazon's Freight Partner FAQ says it must be done as a separate Relay carrier.
+
+### Does Relay or Flex pay more?
+Amazon doesn't publish a comparison, and we won't make one. Each Relay load shows its own price before you book.
+
+---
+
+# How to sign up for Amazon Relay, step by step
+
+URL: https://nudoiq.com/how-to-sign-up-for-amazon-relay/
+Published: 2026-10-16. Last updated: 2026-10-16.
+
+Short answer: You sign up for Amazon Relay at relay.amazon.com or in the Relay app, using an Amazon account. Amazon's application has five steps: DOT number, company details, one-time password verification, equipment inventory and payment information.
+
+## Where do you apply for Amazon Relay?
+
+On relay.amazon.com or in the Relay app. Amazon's [get started page](https://relay.amazon.com/get-started) says: "Start your application by signing in with your existing Amazon shopping account or creating a new one." Its [how to become a carrier post](https://relay.amazon.com/blog/how-to-become-a-carrier-for-amazon-relay) says you can also "create a new account with a different email address."
+
+Amazon says you can submit everything "in as little as 20 minutes" on the site or the app, and the app lets you "track your application's progress on the go."
+
+Check the address first. Amazon's [email scams post](https://relay.amazon.com/blog/email-scams-how-to-spot-a-fake) says Relay's own sites have "relay.amazon.com" at the beginning of the URL. Our [Relay login guide](https://nudoiq.com/amazon-relay-login/) shows how to spot a fake page.
+
+Applying from Canada? Amazon points you to relay.amazon.ca. See our [Amazon Relay Canada guide](https://nudoiq.com/amazon-relay-canada/).
+
+## Who can apply for Amazon Relay?
+
+Trucking companies. Amazon says: "Trucking businesses of any size are eligible to sign up with Relay if they meet our safety, insurance, and other qualifications."
+
+There's no fleet size minimum. Amazon adds that "you can always update your equipment inventory after approval."
+
+New authority? The [Relay FAQ](https://relay.amazon.com/faq) says to apply even if your DOT authority hasn't been active for 180 days, and "we'll keep you updated on key program news while you wait to join our network."
+
+The full list is in our [Amazon Relay requirements guide](https://nudoiq.com/amazon-relay-requirements/). Insurance minimums are in the [insurance requirements guide](https://nudoiq.com/amazon-relay-insurance-requirements/).
+
+## What are Amazon's 5 application steps?
+
+Amazon lists them in this order:
+
+1. **DOT number.** "Make sure to match your application details to the FMCSA database, down to the last dash." Amazon says: "We'll confirm your information instantly so you can continue with the rest of your application."
+2. **Company details.**
+3. **One-time password verification.**
+4. **Equipment inventory.** The trucks and trailers you run. You can update it after approval.
+5. **Payment information.** How Relay pays you. Amazon doesn't publish the field list.
+
+If your FMCSA record is out of date, fix it there before you start. Amazon doesn't describe a separate application for box trucks, and it mentions no application fee.
+
+## How does the owner identity check work?
+
+Amazon checks your company and the people who own it. The FAQ says carrier identity verification confirms "your business entity and the identity of all beneficial owners (anyone with more than 25% ownership)."
+
+Amazon's get started page names Persona under its identity verification process and links Persona's privacy policy. The FAQ adds: "We will seek your consent before collecting your Facial Recognition Information."
+
+## What happens after you apply?
+
+- **Review.** The FAQ says an application "will typically be approved or rejected within 1-3 weeks." Our [approval time guide](https://nudoiq.com/amazon-relay-approval-time/) covers delays and reapplying.
+- **No word after 2 weeks?** The FAQ says to check that your FMCSA contact information matches your Relay application details, "down to the dash or comma." To ask about your application, click Contact Us on the top right of your application page. Our [Relay contact guide](https://nudoiq.com/amazon-relay-contact/) lists every route.
+- **Approval.** "After you're approved, you'll receive an email with instructions to access your Relay account."
+
+## What do you do first after approval?
+
+The FAQ lists three first steps:
+
+1. Take Relay 101 "(about 10 minutes)". Our [Learning Center guide](https://nudoiq.com/amazon-relay-learning-center/) shows where it is.
+2. "Add your drivers and equipment to your Relay profile." You invite each driver. See [Amazon Relay for drivers](https://nudoiq.com/amazon-relay-drivers/) and our [background check guide](https://nudoiq.com/amazon-relay-background-check/).
+3. Start booking loads on the Relay load board.
+
+Amazon says your company "may also get access to more types of booking as your company's performance score and tenure grows."
+
+Before your first booking, know your numbers. Our free [Relay load calculator](https://nudoiq.com/tools/relay-load-calculator/) shows a load's net, net per loaded mile and break-even rate from its pay, miles and your costs.
+
+## Is there an Amazon Relay invite code or onboarding phone number?
+
+Not that Amazon publishes.
+
+- **Invite code.** Amazon doesn't publish one. No public relay.amazon.com page we checked mentions a carrier invite or referral code. The only invites Amazon describes go from carriers to their drivers: "Drivers can only create Relay profiles through invitations from Relay-approved carriers."
+- **Phone number.** The FAQ says: "Amazon Relay doesn't have an official contact phone number." Use Contact Us on your application page.
+- **Load board sign-up.** There isn't a separate one. The FAQ says: "If you are interested in hauling loads for Amazon, sign up and book directly on relay.amazon.com."
+- **Badge.** Amazon publishes no Relay badge process.
+
+## What if you don't have trucks yet?
+
+Relay is for carriers with their own equipment. For people starting from zero, Amazon points to Amazon Freight Partner, with "no trucks or trucking experience needed." Our [Amazon Relay vs Amazon Flex guide](https://nudoiq.com/amazon-relay-vs-amazon-flex/) compares Amazon's programs.
+
+## What doesn't Amazon publish about signing up?
+
+- A carrier invite or referral code
+- An onboarding phone number
+- The full field list for "company details"
+- What happens if the instant FMCSA check fails
+- Whether you can save an application and finish later
+- A Relay badge process
+
+## Where does NudoIQ fit?
+
+Once you're booking, NudoIQ is a Chrome extension for the Relay load board. It refreshes the board, sounds an alert on the page when a load clears your minimums, and shows net profit on each load from costs you set once. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+
+## Frequently asked questions
+
+### How long does the Amazon Relay application take?
+Amazon says you can submit all application materials in as little as 20 minutes on relay.amazon.com or the Relay app. The review takes longer. The FAQ says applications are typically approved or rejected within 1-3 weeks.
+
+### Do I need a new Amazon account for Relay?
+No. Amazon says you can start with your existing Amazon shopping account, or create a new account with a different email address.
+
+### Can I apply before my DOT number is 180 days old?
+Yes. Amazon's FAQ says to apply even if your DOT authority hasn't been active for 180 days. Amazon will keep you updated on program news while you wait to join.
+
+### Is there an Amazon Relay onboarding phone number?
+No. Amazon's FAQ says Relay doesn't have an official contact phone number. For application questions, click Contact Us on the top right of your application page.
+
+### Is there an Amazon Relay invite code?
+Amazon doesn't publish one for carriers. The only invites Amazon describes are the ones a Relay-approved carrier sends to its own drivers.
+
+### Can a driver sign up for Amazon Relay alone?
+No. Drivers can only create Relay profiles through an invite from a Relay-approved carrier. See our guide to [Amazon Relay for drivers](https://nudoiq.com/amazon-relay-drivers/).
