@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light">
-  <title>Amazon Relay Dispatcher: Dispatching Relay Loads | NudoIQ</title>
-  <meta name="description" content="What an Amazon Relay dispatcher does: booking loads, setting up drivers, tracking trips and protecting the score. Plus dispatch service vs DIY.">
+  <title>Amazon Relay Dispatcher: The Job and the Tools | NudoIQ</title>
+  <meta name="description" content="What an Amazon Relay dispatcher does and the tools they use: the load board, Post A Truck, load tracking and the Relay app. Plus dispatch service vs DIY.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#FFBB8C">
   <link rel="canonical" href="https://nudoiq.com/amazon-relay-dispatcher/">
@@ -18,8 +18,8 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="/site.webmanifest">
   <meta property="og:site_name" content="NudoIQ">
-  <meta property="og:title" content="Amazon Relay Dispatcher: Dispatching Relay Loads | NudoIQ">
-  <meta property="og:description" content="What an Amazon Relay dispatcher does: booking loads, setting up drivers, tracking trips and protecting the score. Plus dispatch service vs DIY.">
+  <meta property="og:title" content="Amazon Relay Dispatcher: The Job and the Tools | NudoIQ">
+  <meta property="og:description" content="What an Amazon Relay dispatcher does and the tools they use: the load board, Post A Truck, load tracking and the Relay app. Plus dispatch service vs DIY.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://nudoiq.com/amazon-relay-dispatcher/">
   <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
@@ -84,7 +84,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Amazon Relay dispatcher: what the job is and how to do it well",
-  "description": "What an Amazon Relay dispatcher does: booking loads, setting up drivers, tracking trips and protecting the score. Plus dispatch service vs DIY.",
+  "description": "What an Amazon Relay dispatcher does and the tools they use: the load board, Post A Truck, load tracking and the Relay app. Plus dispatch service vs DIY.",
   "mainEntityOfPage": "https://nudoiq.com/amazon-relay-dispatcher/",
   "url": "https://nudoiq.com/amazon-relay-dispatcher/",
   "image": "https://nudoiq.com/assets/og-image-1200x630.png",
@@ -294,17 +294,21 @@
 <p>Per <a href="https://relay.amazon.com/blog/intro-to-amazon-relay/relay-performance-grades-how-to-unlock-hauling-opportunities" target="_blank" rel="noopener">Amazon's grade guide</a> and the score page:</p>
 <ul><li><strong>Acceptance.</strong> Cancelling a booked load counts against you, including loads that expire. The closer to pickup you cancel, the bigger the penalty. Decide early.</li><li><strong>On-time.</strong> Loads have to arrive by the planned time at origin and destination, measured from the check-in timestamp. Build slack for traffic and Hours of Service.</li><li><strong>App usage.</strong> Drivers keep the Relay app running with location on for the whole trip.</li><li><strong>Disruption-free.</strong> Stationary trailers and loads with no assigned driver count against you. Assign every load to a driver.</li></ul>
 <p>The score covers your last six weeks of hauls, and Amazon gives a daily prediction of your upcoming score in the account. Check it every morning. Our <a href="/amazon-relay-scorecard/">scorecard guide</a> goes deeper on grades and disputes.</p>
+<h2 id="what-tools-do-amazon-relay-dispatchers-use">What tools do Amazon Relay dispatchers use?</h2>
+<p>Start with Relay's own tools:</p>
+<div class="tbl"><table><thead><tr><th>Tool</th><th>What a dispatcher does with it</th></tr></thead><tbody><tr><td><a href="/amazon-relay-load-board/">Load board</a></td><td>Search, filter, save searches and book spot loads</td></tr><tr><td><a href="/amazon-relay-post-a-truck/">Post A Truck</a></td><td>Post a truck's availability ahead, with a minimum rate per mile</td></tr><tr><td><a href="https://relay.amazon.com/blog/load-tracking-with-amazon-relay" target="_blank" rel="noopener">Load tracking</a></td><td>Watch each trip live and catch disruptions</td></tr><tr><td><a href="/amazon-relay-app/">Relay app</a></td><td>Drivers' schedules, check-in, load instructions and selfies</td></tr><tr><td><a href="/amazon-relay-scorecard/">Scorecard</a></td><td>Check the daily score prediction and dispute impacts</td></tr></tbody></table></div>
+<p>Where an extension fits: on top of the load board, not in place of any of these. A <a href="/amazon-relay-auto-refresh/">refresher</a> reloads the board on a timer you set, and an <a href="/amazon-relay-auto-booker/">auto booker</a> can book loads that clear your minimums. Read Relay's terms before you add any tool. The carrier answers for every booking.</p>
 <h2 id="what-load-boards-do-relay-dispatchers-use">What load boards do Relay dispatchers use?</h2>
 <p>For Amazon freight, the only board is the Relay load board. Amazon tenders its loads only through Relay, not on third-party boards. <a href="https://relay.amazon.com/blog/how-to-use-amazon-relays-load-board" target="_blank" rel="noopener">Amazon says</a> it's open 24/7 and free to search and book, with filters, saved searches, email alerts and mobile push notifications for a dispatcher working several trucks.</p>
 <p>Useful board features for dispatchers:</p>
 <ul><li><strong>Filters</strong> for origin, destination or radius, equipment type, trailer status, load type, driver type, max stops, trip length, rate range and pickup and delivery windows.</li><li><strong>Saved searches</strong>, one per truck or lane.</li><li><strong>Reload and return-trip suggestions</strong> to keep a driver moving after the first load.</li><li><strong>Post A Truck</strong> to post availability up to two weeks ahead with a minimum rate per mile.</li></ul>
-<p>Good loads still get booked within seconds, which is why many dispatchers add a <a href="/amazon-relay-auto-refresh/">refresher</a> or an <a href="/amazon-relay-auto-booker/">auto-booker</a>.</p>
+<p>To check the board more often without clicking reload, you can add a <a href="/amazon-relay-auto-refresh/">refresher</a> or an <a href="/amazon-relay-auto-booker/">auto-booker</a>.</p>
 <p>Wondering where brokers fit? See <a href="/amazon-relay-brokers/">can brokers use Amazon Relay</a>.</p>
 <h2 id="where-does-nudoiq-help-a-relay-dispatcher">Where does NudoIQ help a Relay dispatcher?</h2>
-<p>NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It watches the board for you, alerts you on loads that match your rules, and can book them with a cap and a profit floor. It's an independent tool, not made by or affiliated with Amazon.</p>
+<p>NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It's independent, not made by or affiliated with Amazon, and it never asks for the Amazon password.</p>
 <p>What a dispatcher gets:</p>
-<ul><li><strong>Alert, Search and Autobook modes</strong> with your Min Net Profit and Min $/Mile; lane and equipment come from your Relay search. Autobook stops at your max-books cap (set it to the trucks you can cover) and won't book under your profit floor.</li><li>Connect Telegram and NudoIQ messages your phone on new loads and bookings.</li><li><strong>Lane Intelligence:</strong> the posted price next to that lane's 90-day history. It's decision support, not a guarantee.</li><li><strong>Net profit on every load card:</strong> the rate minus driver pay, fuel, maintenance and deadhead to pickup.</li></ul>
-<p>It's <a href="/#pricing">$49.99 a month</a> for every feature, the same price for one truck or twenty. Start with a 7-day free trial, no card needed to start, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.</p>
+<ul><li><strong>ALERT, SEARCH and AUTOBOOK modes</strong> that use your minimums: Min Net Profit, Min $/Mile and a New load minimum. Lane and equipment come from your Relay search.</li><li><strong>AutoBook with a stop.</strong> It books only loads that clear your Min Net Profit and stops at your Max books, from 1 to 20.</li><li><strong>Net profit on every load card:</strong> the rate minus driver pay, fuel and maintenance, counting deadhead to pickup and the empty drive back.</li><li><strong>Lane Intelligence:</strong> what that lane paid before. It's decision support, not a promise.</li><li><strong>English and Spanish,</strong> for dispatchers who work in either.</li></ul>
+<p>Try it 7 days free, no card needed to start, then <a href="/#pricing">$49.99 a month</a>. Cancel anytime. <a href="/amazon-relay-chrome-extension/">See how the NudoIQ extension works</a>.</p>
     </article>
 
     <section class="faq" aria-labelledby="faq-h">
