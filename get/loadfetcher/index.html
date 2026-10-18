@@ -452,6 +452,30 @@
       .cmp.cmp-ic tbody tr:last-child th,.cmp.cmp-ic tbody tr:last-child td{border-bottom:0}
     }
 
+    .proofbar.pb-one{padding:10px 18px;gap:10px}
+    .pb-one .pb-cell{gap:8px;flex-wrap:wrap}
+    .pb-one .pb-label{font-size:13.5px;color:#fff}
+    .wrap > section.block:first-child{padding-top:72px}
+    /* 2026-10-18 iteration 2: the daily offer on ONE row (same ids and countdown JS; spec LANDING-AUDIT s4.1). */
+    .price-card.pc-1{padding:10px 12px;max-width:none;display:inline-block}
+    .pc-1 .price-one{display:flex;align-items:center;flex-wrap:wrap;gap:4px 6px;margin:0;line-height:1.3}
+    .pc-1 .price-eyebrow{margin:0;font-size:10.5px;letter-spacing:.03em;white-space:nowrap}
+    .pc-1 .price-old span{display:none}
+    .pc-1 .price-row{display:inline-flex;gap:6px;align-items:baseline;white-space:nowrap}
+    .pc-1 .price-old{font-size:13px}
+    .pc-1 .price-new{font-size:17px}
+    .pc-1 .price-line{font-size:12px;white-space:nowrap}
+    .pc-1 .countdown{padding:2px 7px;gap:3px;white-space:nowrap}
+    .pc-1 .cd-label{font-size:11.5px}
+    .pc-1 .cd-num{font-size:13px}
+    /* iteration 2: one button in the first screen; the header button shows only once the hero button is out of view */
+    .has-sticky .top-cta{visibility:hidden}
+    .has-sticky.past-hero .top-cta{visibility:visible}
+    /* iteration 2: three reasons, three steps */
+    .reasons.r3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .steps.s3{grid-template-columns:repeat(3,1fr)}
+    @media (max-width:900px){ .reasons.r3,.steps.s3{grid-template-columns:1fr} }
+
   </style>
   <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
 <script>
@@ -515,49 +539,25 @@
                  never says what LoadFetcher can't do (that lives in the dated, sourced table). -->
             <h1 class="display" id="heroH1">Loads booked for you, at your minimum net.</h1>
             <!-- Subhead brief: what NudoIQ is (Chrome extension for the Relay load board) and how AutoBook works at your number. -->
-            <p class="lede" id="heroLede">NudoIQ's AutoBook books Relay loads for you, only the ones that clear your minimum net.</p>
 
             <!-- desktop path: Add to Chrome directly (this is what the Google ads traffic hits) -->
             <div class="cta" id="d">
               <a class="btn btn-dark" id="cws" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=get-loadfetcher" target="_blank" rel="noopener"><img src="/assets/chrome-mark.svg" alt="" width="22" height="22">Try it 7 days free</a>
               <!-- research/copy/google-sitelinks-and-get-lines-2026-09-21.json get_page_lines (copywriter). Do not edit words here. -->
-              <p class="under">Never asks for your Amazon password. No card needed to start.</p>
+              <p class="under">Email only, no card.</p>
             </div>
 
-            <div class="proofbar">
-              <span class="pb-cell">
-                <img src="/assets/chrome-mark.svg" alt="" width="24" height="24" decoding="async">
-                <span class="pb-stack">
-                  <span class="pb-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-                  <span class="pb-label">5.0 on the Chrome Web Store</span>
-                </span>
-              </span>
-              <span class="pb-rule" aria-hidden="true"></span>
-              <span class="pb-cell">
-                <!-- No user counts on LoadFetcher pages (Caleb, research/copy/LOADFETCHER-ALT-PAGE-2026-10-05.json). -->
-                <span class="pb-label pb-solo">Built by a Relay carrier</span>
-              </span>
+            <div class="proofbar pb-one">
+              <span class="pb-cell"><img src="/assets/chrome-mark.svg" alt="" width="24" height="24" decoding="async"><span class="pb-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="pb-label">5.0 Chrome Web Store &middot; By a Relay carrier</span></span>
             </div>
 
             <!-- ── PRICE BLOCK — same ids, same copy, same LAUNCH_END logic as before; only restyled compact.
                  LAUNCH_END is 2026-10-04 23:59:59 ET (TONIGHT). After that the card shows the priceExpired
                  line only. Rolling or removing the offer is Caleb's call (see teardown doc). ── -->
-            <div class="price-card" id="priceBlock">
-              <p class="price-eyebrow" id="priceEyebrow">50% off until end of day</p>
-              <div class="price-top">
-                <div class="price-row" id="priceRow">
-                  <span class="price-old" id="priceOld">$99.98<span>/mo</span></span>
-                  <span class="price-new" id="priceNew">$49.99<span>/mo</span></span>
-                </div>
-                <div class="countdown" id="countdown">
-                  <span class="cd-label">Offer ends in</span>
-                  <span class="cd-num" id="cdHours">--</span><span class="cd-label">h</span>
-                  <span class="cd-num" id="cdMins">--</span><span class="cd-label">m</span>
-                </div>
-              </div>
-              <!-- 2026-10-18 D96 claim fix, words: research/copy/ADS-LANDING-2026-10-18.json (Martha). --><p class="price-line" id="priceLine1">$0 today. Free week first, no card. $49.99 only if you add a card.</p>
-              <p class="price-line" id="priceLine2">Keep that discount for as long as you stay subscribed.</p>
-              <p class="price-expired" id="priceExpired" hidden>This week's discount has ended. NudoIQ is $49.99 a month.</p>
+            <div class="price-card pc-1" id="priceBlock"><!-- 2026-10-18 iteration 2, words: research/copy/ADS-LANDING-ITER2-2026-10-18.json (Martha). -->
+              <p class="price-one"><span class="price-eyebrow" id="priceEyebrow">50% off today</span> <span class="price-row" id="priceRow"><span class="price-old" id="priceOld">$99.98<span>/mo</span></span> <span class="price-new" id="priceNew">$49.99<span>/mo</span></span></span> <span class="price-line" id="priceLine1">first week $0</span> <span class="countdown" id="countdown"><span class="cd-label">Ends in</span> <span class="cd-num" id="cdHours">--</span><span class="cd-label">h</span> <span class="cd-num" id="cdMins">--</span><span class="cd-label">m</span></span></p>
+              <span id="priceLine2" hidden></span>
+              <p class="price-expired" id="priceExpired" hidden>The discount has ended. NudoIQ is $49.99 a month.</p>
             </div>
           </div>
 
@@ -578,13 +578,8 @@
            (clickup.com/compare/asana-vs-clickup), drawn with this page's .feat card style. Words: Martha
            (research/copy/GET-LOADFETCHER-2026-10-09.json). Facts: PRODUCT-FACTS.md s4, s9, s10; D47; LoadFetcher plans 2026-10-09. ── -->
       <section class="block" aria-labelledby="whyH">
-        <h2 class="sec" id="whyH">Four more reasons to pick NudoIQ</h2>
-        <ul class="reasons">
-          <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><b>See each load&#x27;s net first</b><p>Every load shows its net dollars and net $/mile next to the price, after the costs you enter.</p></li>
-          <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span><b>Get your scorecard dispute drafted</b><p>It drafts your letter from the violation. You review it and send it. Amazon decides.</p></li>
-          <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span><b>One price for every truck</b><p>You pay $49.99 a month flat, with no seat count.</p></li>
-          <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><b>English and Spanish</b><p>You can use NudoIQ in English or Spanish. Whoever runs your board picks the one they read best.</p></li>
-        </ul>
+        <h2 class="sec" id="whyH">Three more reasons to pick NudoIQ</h2>
+        <ul class="reasons r3"><li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><b>See each load's net first</b><p>Net $ and $/mile on every load, after your costs.</p></li><li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span><b>Get your scorecard dispute drafted</b><p>NudoIQ drafts the letter. You review and send. Amazon decides.</p></li><li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span><b>One flat price, every truck</b><p>$49.99 a month flat. No seat count.</p></li></ul>
       </section>
 
       <!-- 2026-10-14 D77 (Caleb: "in the comparison dont give load fetcher anything"; "a check on every single tile on the left for nudoiq ... reduce the amount of copy"). Words: research/copy/LF-CONCEDE-NOTHING-2026-10-14.json (Martha). Builder: research/seo/lf-concede-2026-10-14/build.py. LoadFetcher facts: store listing v3.25.2 and loadfetcher.com plans + FAQ, accessed 2026-10-14 (research/seo/lf-alt-ctr-2026-10-14/evidence/). -->
@@ -596,7 +591,7 @@
         <div class="cmp-head">
           <h2 class="sec" id="cmpH">NudoIQ vs. LoadFetcher, compared</h2>
           <span class="checked">Last checked October 14, 2026</span>
-          <p class="cmp-cap">From each product&#x27;s public Chrome Web Store listing and website, checked October 14, 2026. Dash: not on LoadFetcher&#x27;s listing, plans or FAQ. We did not test their product.</p><!-- 2026-10-18: contact-page link removed (exit); /loadfetcher-alternative/ keeps it. -->
+          <p class="cmp-cap">Checked October 14, 2026: LoadFetcher's Chrome Web Store listing v3.25.2, loadfetcher.com plans and FAQ. Dash: not listed. We didn't test their product.</p><!-- 2026-10-18: contact-page link removed (exit); /loadfetcher-alternative/ keeps it. -->
         </div>
         <table class="cmp cmp-ic">
           <thead><tr><th scope="col"><span class="vh">Feature</span></th><th scope="col" class="nq c">NudoIQ</th><th scope="col" class="lf c">Load&shy;Fetcher</th></tr></thead>
@@ -608,12 +603,12 @@
             <tr><th scope="row">7-day free trial, no card</th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="lf c"><span class="ic ic-n" role="img" aria-label="Not listed"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
           </tbody>
         </table>
-        <div class="nq-all"><h3 id="everything-in-nudoiq">Everything in NudoIQ</h3><p class="all-intro">Also included, in the same NudoIQ subscription.</p><ul><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Auto-refresh the load board</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>New-load and price-up alerts</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Lane price history</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Backhaul search</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Post a Truck</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Hide promoted loads and truck-posting pop-ups</span></li></ul></div>
+        <div class="nq-all"><h3 id="everything-in-nudoiq">Everything in NudoIQ</h3><ul><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Auto-refresh the load board</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>New-load and price-up alerts</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Lane price history</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Backhaul search</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Post a Truck</span></li><li><span class="ic ic-y" role="img" aria-label="Yes"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Hide promoted loads and truck-posting pop-ups</span></li></ul></div>
         <div class="cmp-band">
-          <p class="note">Run AutoBook on your own board for a week before you pay.</p>
+          <p class="note">Run AutoBook on your own board for a week first.</p>
           <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=get-loadfetcher" target="_blank" rel="noopener" data-cta="after-steps">Try it 7 days free</a>
         </div>
-        <p class="cmp-src">We checked LoadFetcher&#x27;s Chrome Web Store listing (version 3.25.2) and the plans and FAQ on loadfetcher.com on October 14, 2026. NudoIQ facts come from our own extension.</p><!-- 2026-10-18: 'Full comparison' exit link removed; the table above is the comparison. -->
+        <!-- 2026-10-18: 'Full comparison' exit link removed; the table above is the comparison. -->
       </section>
 
       <!-- ── SWITCH — the template's three numbered steps, rewritten for a LoadFetcher user (reference: ClickUp's
@@ -625,13 +620,12 @@
           <img src="/assets/people/face-c.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
         </div>
         <h2 class="sec" id="howH">Switching takes a few minutes</h2>
-        <ol class="steps">
-          <li><span class="n">1</span><div><b>Add NudoIQ to Chrome</b>When you reach the Chrome Web Store, click Add to Chrome, then Add extension.</div></li>
-          <!-- 2026-10-18 D96 claim fix, words: research/copy/ADS-LANDING-2026-10-18.json (Martha). --><li><span class="n">2</span><div><b>Start free week, no card</b>Open the Relay load board. NudoIQ asks only for your email to start it.</div></li>
-          <li><span class="n">3</span><div><b>Turn LoadFetcher off</b>On your Chrome extensions page, switch LoadFetcher off. It stays installed, ready to turn back on.</div></li>
-          <li><span class="n">4</span><div><b>Press START</b>Open the Relay load board, set your minimum net, pick AUTOBOOK, then press START.</div></li>
+        <ol class="steps s3">
+          <li><span class="n">1</span><div><b>Add NudoIQ to Chrome</b>Click Add to Chrome, then Add extension.</div></li>
+          <li><span class="n">2</span><div><b>Turn LoadFetcher off</b>Switch it off in Chrome extensions. You can turn it back on.</div></li>
+          <li><span class="n">3</span><div><b>Press START on your board</b>Your email starts the free week. Set your minimum net, pick AUTOBOOK.</div></li>
         </ol>
-        <p class="switch-note">Your Relay login and load board stay the same. Run one load board extension at a time so they don&#x27;t conflict. If it doesn&#x27;t fit how you book, switch back.</p>
+        <p class="switch-note">Run one load board extension at a time so they don't conflict.</p>
       </section>
 
       <!-- ── OBJECTIONS — three cards verbatim from the live page (homepage FAQ trust1/faq3/faq10) plus
@@ -639,10 +633,10 @@
       <section class="block" aria-labelledby="objH">
         <h2 class="sec" id="objH">Does it ask for my password?</h2>
         <div class="obj-grid">
-          <div class="obj-card"><b>Your password stays with you</b><p>NudoIQ runs inside your signed-in Relay browser tab. It never asks for your Amazon password or stores it.</p></div>
-          <div class="obj-card"><b>You stay in control</b><p>Press STOP on the NudoIQ bar anytime to turn it off.</p></div>
-          <div class="obj-card"><b>Is NudoIQ affiliated with Amazon?</b><p>No. NudoIQ is an independent browser extension and is not affiliated with or endorsed by Amazon.com, Inc.</p></div>
-          <div class="obj-card"><b>Will it get my account suspended?</b><p>NudoIQ runs only in your own browser on Relay pages you're signed in to. It doesn't log in from another location or ask for your password. You control the refresh speed. You're responsible for your Relay account and for following Relay's terms.</p></div>
+          <div class="obj-card"><b>Your password stays with you</b><p>NudoIQ runs in your signed-in Relay tab. It never asks for or stores your Amazon password.</p></div>
+          <div class="obj-card"><b>Will it get my account suspended?</b><p>It runs only in your browser and never logs in elsewhere. You set the refresh speed. Press STOP anytime. You're responsible for your Relay account and Relay's terms.</p></div>
+          <div class="obj-card"><b>Is NudoIQ affiliated with Amazon?</b><p>No. NudoIQ is an independent extension, not affiliated with or endorsed by Amazon.</p></div>
+          <div class="obj-card"><b>Is it in English?</b><p>Yes. English or Spanish, your pick. Buttons read START, STOP and AUTOBOOK.</p></div>
         </div>
       </section>
 
@@ -661,15 +655,14 @@
       <!-- ── FINAL CTA — same id/handler as before. ── -->
       <section class="cta2" id="d2">
         <a class="btn btn-go" id="cws2" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=get-loadfetcher" target="_blank" rel="noopener"><img src="/assets/chrome-mark.svg" alt="" width="22" height="22">Try it 7 days free</a>
-        <p class="under">7 days free. No card needed to start.</p>
+        <p class="under">7 days free. No card needed.</p>
       </section>
     </div>
   </main>
 
   <div class="stickybar" id="stickybar" aria-hidden="true">
     <div class="stickyin">
-      <span class="txt"><b>Try NudoIQ free for 7 days.</b> <span>No card needed.</span></span>
-      <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=get-loadfetcher" target="_blank" rel="noopener" data-cta="sticky" tabindex="-1">Try it 7 days free</a>
+      <span class="txt"><b>Try NudoIQ 7 days free. No card.</b></span> <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=get-loadfetcher" target="_blank" rel="noopener" data-cta="sticky" tabindex="-1">Try it 7 days free</a>
     </div>
   </div>
 
@@ -693,7 +686,7 @@
       document.body.classList.add("has-sticky");
       new IntersectionObserver(function (es) {
         var show = !es[0].isIntersecting && es[0].boundingClientRect.top < 0;
-        bar.classList.toggle("on", show);
+        bar.classList.toggle("on", show); document.body.classList.toggle("past-hero", show);
         bar.setAttribute("aria-hidden", show ? "false" : "true");
         bar.querySelector("a").tabIndex = show ? 0 : -1;
       }).observe(heroCta);

@@ -348,6 +348,26 @@
     .lemur-teaser{margin:4px 0 0;text-align:center;font-size:13.5px}
     .lemur-teaser a{display:inline-block;padding:13px 8px;line-height:18px}
     .lemur-teaser a{color:#fff;text-decoration:underline;text-underline-offset:3px;opacity:.9}
+    /* 2026-10-18 iteration 2: the daily offer on ONE row (same ids and countdown JS; spec LANDING-AUDIT s4.1). */
+    .price-card.pc-1{padding:10px 12px;max-width:none;display:inline-block}
+    .pc-1 .price-one{display:flex;align-items:center;flex-wrap:wrap;gap:4px 6px;margin:0;line-height:1.3}
+    .pc-1 .price-eyebrow{margin:0;font-size:10.5px;letter-spacing:.03em;white-space:nowrap}
+    .pc-1 .price-old span{display:none}
+    .pc-1 .price-row{display:inline-flex;gap:6px;align-items:baseline;white-space:nowrap}
+    .pc-1 .price-old{font-size:13px}
+    .pc-1 .price-new{font-size:17px}
+    .pc-1 .price-line{font-size:12px;white-space:nowrap}
+    .pc-1 .countdown{padding:2px 7px;gap:3px;white-space:nowrap}
+    .pc-1 .cd-label{font-size:11.5px}
+    .pc-1 .cd-num{font-size:13px}
+    /* iteration 2: one button in the first screen; the header button shows only once the hero button is out of view */
+    .has-sticky .top-cta{visibility:hidden}
+    .has-sticky.past-hero .top-cta{visibility:visible}
+    .hero-top .proofbar{margin-top:18px}
+    .hero-top .cta{margin-top:22px}
+    .m-after{text-align:center;margin:8px 0 0}
+    .m-after .lemur-teaser a{color:var(--blue-deep)}
+
   </style>
   <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
 <script>
@@ -405,14 +425,14 @@
           <path d="M0,260 C430,190 910,260 1440,170 L1440,300 L0,300 Z" fill="rgba(21,34,82,.30)"/>
         </svg>
         <div class="hero-top">
-          <p class="eyebrow" id="heroEyebrow">For Amazon Relay owner-operators and fleets</p>
+          <p class="eyebrow" id="heroEyebrow">For Amazon Relay carriers and dispatchers</p>
           <!-- Hero H1/lede reused verbatim from nudoiq-website/index.html lines 698-699 (the live,
                copywriter-approved homepage hero) — not new copy. See research/GET-PAGE-V2-2026-09-24.md
                Part 0/Part 3: a prior pass here cited a copywriter JSON that was never created. -->
-          <h1 class="display" id="heroH1">Books Relay loads. Writes your scorecard disputes too.</h1>
+          <h1 class="display" id="heroH1">Auto-book Relay loads that clear your minimum net.</h1>
           <!-- Lede = C4 body[0] verbatim (research/copy/EMAIL-FLOW-COPY-2026-09-21.json), the line the cold letters
                open with, so the page matches what the email promised. Signoff "Caleb" is the letters' own signoff. -->
-          <p class="lede" id="heroLede">Loads that meet your minimum profit, booked while you drive. Unfair hit? A dispute letter drafted from your trip data.</p>
+          <p class="lede" id="heroLede">A Chrome extension inside your Relay board. Scorecard disputes drafted too.</p>
           <!-- 2026-10-18 ads-landing: phones forwarded from an ad page carry lp=get|lb|lf; show that page's own headline so
                the phone visitor sees what the ad and the desktop page promise. Strings verbatim from the live pages:
                /get/ (research/copy/COPY-CUT-2026-10-14.json), /get/load-board/ (research/copy/GET-LOAD-BOARD-2026-10-06.json,
@@ -420,17 +440,41 @@
           <script>
           (function () {
             var lp = new URLSearchParams(location.search).get("lp"), M = {
-              get: [null, "Auto-book Relay loads that clear your minimum net.", "See each load\u2019s net before you book."],
-              lb: [null, "Your Amazon Relay load board, refreshed and watched for you.", "Alerts when loads fit. AutoBook at your minimum."],
-              lf: ["LoadFetcher vs. NudoIQ", "Loads booked for you, at your minimum net.", "A LoadFetcher alternative with AutoBook, which books only loads that clear your minimum net."]
+              get: [null, "Auto-book Relay loads that clear your minimum net.", null],
+              lb: [null, "Relay load board, refreshed and watched for you.", null],
+              lf: ["Looking for a LoadFetcher alternative?", "Loads booked for you, at your minimum net.", null]
             }[lp];
             if (!M) return;
             if (M[0]) document.getElementById("heroEyebrow").textContent = M[0];
             document.getElementById("heroH1").textContent = M[1];
-            document.getElementById("heroLede").textContent = M[2];
+            var L = document.getElementById("heroLede"); L.textContent = M[2] || ""; L.hidden = !M[2];
             if (lp === "lf") document.documentElement.classList.add("lp-lf");
           })();
           </script>
+          <div class="cta" id="d" hidden>
+            <a class="btn btn-dark" id="cws" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=m" target="_blank" rel="noopener">Try it 7 days free</a>
+            <!-- research/copy/google-sitelinks-and-get-lines-2026-09-21.json get_page_lines (copywriter). Do not edit words here. -->
+            <p class="under">Never asks for your Amazon password. No card needed to start.</p>
+            <!-- URGENCY: decision-pending, see research/GET-PAGE-V2-2026-09-24.md Part 2 -->
+          </div>
+
+          <!-- mobile path: NudoIQ only installs in Chrome on a computer, so a phone visitor
+               gets the link emailed instead. Organic traffic is mostly phones, so this branch
+               matters even though the paid ads are desktop-only. -->
+          <div class="cta" id="m" hidden>
+            <div class="card" id="f-wrap">
+              <!-- research/copy/GET-PAGE-HERO-2026-09-24.json mobile_sub (copywriter, haiku). Do not edit words here. -->
+              <p style="margin:0 0 14px;color:var(--ink-4);font-size:14px;line-height:1.5" id="mobileSub">NudoIQ runs in Chrome on a computer. We'll email you the install link.</p>
+              <form id="f" novalidate data-clarity-mask="true">
+                <label for="e">Email Address</label>
+                <input id="e" type="email" inputmode="email" autocomplete="email" placeholder="name@example.com" required>
+                <button class="btn" id="b" type="submit">Email me the link</button>
+                <p class="under">One email with the install link. Two friendly reminders. Unsubscribe anytime.</p>
+              </form>
+            </div>
+            <div class="card" id="ok" hidden><h2>Check Your Email</h2><p>We sent you the install link. Open it on your computer and click Add to Chrome.</p></div>
+            <div class="card" id="bad" hidden><p>Email contact@nudoiq.com if the install link did not arrive and we will send it right away.</p></div>
+          </div>
 
           <div class="proofbar">
             <span class="pb-cell">
@@ -450,31 +494,6 @@
 
 
           <!-- desktop path: Add to Chrome directly (this is what the Google ads traffic hits) -->
-          <div class="cta" id="d" hidden>
-            <a class="btn btn-dark" id="cws" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=m" target="_blank" rel="noopener">Try it 7 days free</a>
-            <!-- research/copy/google-sitelinks-and-get-lines-2026-09-21.json get_page_lines (copywriter). Do not edit words here. -->
-            <p class="under">Never asks for your Amazon password. No card needed to start.</p>
-            <!-- URGENCY: decision-pending, see research/GET-PAGE-V2-2026-09-24.md Part 2 -->
-          </div>
-
-          <!-- mobile path: NudoIQ only installs in Chrome on a computer, so a phone visitor
-               gets the link emailed instead. Organic traffic is mostly phones, so this branch
-               matters even though the paid ads are desktop-only. -->
-          <div class="cta" id="m" hidden>
-            <div class="card" id="f-wrap">
-              <!-- research/copy/GET-PAGE-HERO-2026-09-24.json mobile_sub (copywriter, haiku). Do not edit words here. -->
-              <p style="margin:0 0 14px;color:var(--ink-4);font-size:14px;line-height:1.5" id="mobileSub">NudoIQ runs on a computer. We'll email you the install link and your 7-day free trial.</p>
-              <form id="f" novalidate data-clarity-mask="true">
-                <label for="e">Email Address</label>
-                <input id="e" type="email" inputmode="email" autocomplete="email" placeholder="name@example.com" required>
-                <button class="btn" id="b" type="submit">Send the Link</button>
-                <p class="under">One email with the install link. Two friendly reminders. Unsubscribe anytime.</p>
-              </form>
-            </div>
-            <div class="card" id="ok" hidden><h2>Check Your Email</h2><p>We sent you the install link. Open it on your computer and click Add to Chrome.</p></div>
-            <div class="card" id="bad" hidden><p>Email contact@nudoiq.com if the install link did not arrive and we will send it right away.</p></div>
-            <p class="lemur-teaser"><a href="#lemur">No computer nearby? Android option below</a></p>
-          </div>
           <!-- 2026-10-05 (research/seo/SITE-OPTIMIZATION-2026-10-05.md): price card moved BELOW the CTA. Clarity, 3 days:
                22 of 23 /m/ sessions were desktop email clicks with ~1 s median engagement, and at 1440x900 the hero button
                sat at y792 under the price card (below the fold on a 768px laptop). Same order as /get/ (CTA first, offer card
@@ -489,20 +508,10 @@
                card" claim. PREREQUISITE: this is only true if $99/mo becomes the real
                Stripe list price tomorrow — see research/GET-PAGE-V2-2026-09-24.md. ── -->
           <section class="price">
-            <div class="price-card" id="priceBlock">
-              <p class="price-eyebrow" id="priceEyebrow">50% off until end of day</p>
-              <div class="price-row" id="priceRow">
-                <span class="price-old" id="priceOld">$99.98<span>/mo</span></span>
-                <span class="price-new" id="priceNew">$49.99<span>/mo</span></span>
-              </div>
-              <!-- 2026-10-18 D96 claim fix, words: research/copy/ADS-LANDING-2026-10-18.json (Martha). --><p class="price-line" id="priceLine1">$0 today. Free week first, no card. $49.99 only if you add a card.</p>
-              <p class="price-line" id="priceLine2">Keep that discount for as long as you stay subscribed.</p>
-              <div class="countdown" id="countdown">
-                <span class="cd-label">Offer ends in</span>
-                <span class="cd-num" id="cdHours">--</span><span class="cd-label">h</span>
-                <span class="cd-num" id="cdMins">--</span><span class="cd-label">m</span>
-              </div>
-              <p class="price-expired" id="priceExpired" hidden>This week's discount has ended. NudoIQ is $49.99 a month.</p>
+            <div class="price-card pc-1" id="priceBlock"><!-- 2026-10-18 iteration 2, words: research/copy/ADS-LANDING-ITER2-2026-10-18.json (Martha). -->
+              <p class="price-one"><span class="price-eyebrow" id="priceEyebrow">50% off today</span> <span class="price-row" id="priceRow"><span class="price-old" id="priceOld">$99.98<span>/mo</span></span> <span class="price-new" id="priceNew">$49.99<span>/mo</span></span></span> <span class="price-line" id="priceLine1">first week $0</span> <span class="countdown" id="countdown"><span class="cd-label">Ends in</span> <span class="cd-num" id="cdHours">--</span><span class="cd-label">h</span> <span class="cd-num" id="cdMins">--</span><span class="cd-label">m</span></span></p>
+              <span id="priceLine2" hidden></span>
+              <p class="price-expired" id="priceExpired" hidden>The discount has ended. NudoIQ is $49.99 a month.</p>
             </div>
           </section>
         </div>
@@ -512,6 +521,7 @@
     
 
     <!-- ── THREE NUMBERED POINTS — unchanged copy, moved above the video: what it does, in three steps. ── -->
+    <div class="m-after" id="mAfter" hidden><p class="lemur-teaser"><a href="#lemur">No computer nearby? Android option below</a></p></div>
     <ul class="steps">
       <li><span class="n">1</span><div><b>Auto Refresh Loads</b>Stop hitting refresh. New loads appear on your screen automatically.</div></li>
       <li><span class="n">2</span><div><b>Book Before They Go</b>Find and book the best loads in seconds instead of minutes.</div></li>
@@ -630,7 +640,7 @@
       document.body.classList.add("has-sticky");
       new IntersectionObserver(function (es) {
         var show = !es[0].isIntersecting && es[0].boundingClientRect.top < 0;
-        bar.classList.toggle("on", show);
+        bar.classList.toggle("on", show); document.body.classList.toggle("past-hero", show);
         bar.setAttribute("aria-hidden", show ? "false" : "true");
         bar.querySelector("a").tabIndex = show ? 0 : -1;
       }).observe(heroCta);
@@ -699,7 +709,7 @@
   // Lemur section: copy the store link (Clipboard API, textarea fallback). Separate from the store-button handlers.
   (function () {
     var sec = document.getElementById("lemur"), m = document.getElementById("m");
-    if (sec && m) sec.hidden = m.hidden;
+    if (sec && m) sec.hidden = m.hidden; var ma = document.getElementById("mAfter"); if (ma && m) ma.hidden = m.hidden;
     var b = document.getElementById("lemurCopy"); if (!b) return;
     b.addEventListener("click", function () {
       var url = b.getAttribute("data-link"), label = b.textContent;

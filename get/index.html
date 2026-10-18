@@ -363,6 +363,22 @@
     .android-line{text-align:center;margin:30px 0 0;font-size:14.5px;color:var(--ink-4)}
     .android-line a{color:var(--blue-deep);font-weight:600;text-decoration:underline;text-underline-offset:3px;display:inline-block;padding:12px 4px}
     @media (max-width:640px){.checks{grid-template-columns:1fr;justify-content:start;max-width:340px}}
+    /* 2026-10-18 iteration 2: the daily offer on ONE row (same ids and countdown JS; spec LANDING-AUDIT s4.1). */
+    .price-card.pc-1{padding:10px 12px;max-width:none;display:inline-block}
+    .pc-1 .price-one{display:flex;align-items:center;flex-wrap:wrap;gap:4px 6px;margin:0;line-height:1.3}
+    .pc-1 .price-eyebrow{margin:0;font-size:10.5px;letter-spacing:.03em;white-space:nowrap}
+    .pc-1 .price-old span{display:none}
+    .pc-1 .price-row{display:inline-flex;gap:6px;align-items:baseline;white-space:nowrap}
+    .pc-1 .price-old{font-size:13px}
+    .pc-1 .price-new{font-size:17px}
+    .pc-1 .price-line{font-size:12px;white-space:nowrap}
+    .pc-1 .countdown{padding:2px 7px;gap:3px;white-space:nowrap}
+    .pc-1 .cd-label{font-size:11.5px}
+    .pc-1 .cd-num{font-size:13px}
+    /* iteration 2: one button in the first screen; the header button shows only once the hero button is out of view */
+    .has-sticky .top-cta{visibility:hidden}
+    .has-sticky.past-hero .top-cta{visibility:visible}
+
   </style>
   <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
 <script>
@@ -419,7 +435,6 @@
         <div class="hero-grid">
           <div class="hero-copy">
             <h1 class="display" id="heroH1">Auto-book Relay loads that clear your minimum net.</h1>
-            <p class="lede" id="heroLede">See each load's net before you book.</p>
 
             <!-- desktop path: Add to Chrome directly (this is what the Google ads traffic hits) -->
             <div class="cta" id="d">
@@ -446,20 +461,8 @@
             <!-- ── PRICE BLOCK — same ids, same copy, same LAUNCH_END logic as before; only restyled compact.
                  LAUNCH_END is 2026-10-04 23:59:59 ET (TONIGHT). After that the card shows the priceExpired
                  line only. Rolling or removing the offer is Caleb's call (see teardown doc). ── -->
-            <div class="price-card" id="priceBlock">
-              <p class="price-eyebrow" id="priceEyebrow">50% off until end of day</p>
-              <div class="price-top">
-                <div class="price-row" id="priceRow">
-                  <span class="price-old" id="priceOld">$99.98<span>/mo</span></span>
-                  <span class="price-new" id="priceNew">$49.99<span>/mo</span></span>
-                </div>
-                <div class="countdown" id="countdown">
-                  <span class="cd-label">Offer ends in</span>
-                  <span class="cd-num" id="cdHours">--</span><span class="cd-label">h</span>
-                  <span class="cd-num" id="cdMins">--</span><span class="cd-label">m</span>
-                </div>
-              </div>
-              <!-- 2026-10-18 D96 claim fix, words: research/copy/ADS-LANDING-2026-10-18.json (Martha). --><p class="price-line" id="priceLine1">$0 today. Free week first, no card. $49.99 only if you add a card.</p>
+            <div class="price-card pc-1" id="priceBlock"><!-- 2026-10-18 iteration 2, words: research/copy/ADS-LANDING-ITER2-2026-10-18.json (Martha). -->
+              <p class="price-one"><span class="price-eyebrow" id="priceEyebrow">50% off today</span> <span class="price-row" id="priceRow"><span class="price-old" id="priceOld">$99.98<span>/mo</span></span> <span class="price-new" id="priceNew">$49.99<span>/mo</span></span></span> <span class="price-line" id="priceLine1">first week $0</span> <span class="countdown" id="countdown"><span class="cd-label">Ends in</span> <span class="cd-num" id="cdHours">--</span><span class="cd-label">h</span> <span class="cd-num" id="cdMins">--</span><span class="cd-label">m</span></span></p>
               <p class="price-expired" id="priceExpired" hidden>The discount has ended. NudoIQ is $49.99 a month.</p>
             </div>
           </div>
@@ -483,7 +486,6 @@
         <ul class="checks">
           <li>Board refreshes itself</li>
           <li>Net $ on every load</li>
-          <li>AutoBook at your minimum net</li>
           <li>Scorecard dispute letters drafted</li>
         </ul>
         <div class="cta-inline">
@@ -566,7 +568,7 @@
       document.body.classList.add("has-sticky");
       new IntersectionObserver(function (es) {
         var show = !es[0].isIntersecting && es[0].boundingClientRect.top < 0;
-        bar.classList.toggle("on", show);
+        bar.classList.toggle("on", show); document.body.classList.toggle("past-hero", show);
         bar.setAttribute("aria-hidden", show ? "false" : "true");
         bar.querySelector("a").tabIndex = show ? 0 : -1;
       }).observe(heroCta);
