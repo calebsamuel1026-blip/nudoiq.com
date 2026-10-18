@@ -30,7 +30,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/assets/page.css">
   <style>
-    .hero .btn{margin-top:22px}
+    .top .brand{cursor:default}
+    .hero .btn{margin-top:26px}
     .hero p.small{font-size:15px;color:var(--g3);margin-top:22px;max-width:62ch}
     @media (max-width:640px){.hero .btn{width:100%}}
   </style>
@@ -38,15 +39,14 @@
 <body>
 
   <header class="top"><div class="wrap topin">
-    <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
+    <span class="brand"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></span>
   </div></header>
 
   <main>
     <section class="hero"><div class="wrap">
       <h1>Your free week is on.</h1>
-      <p class="lede">Refresh your Relay tab. All tools are on.</p>
-      <p class="lede">No card yet. Nothing is charged without one.</p>
-      <a class="btn btn-go" href="https://relay.amazon.com/loadboard" target="_blank" rel="noopener">Open your load board</a>
+      <!-- 2026-10-18: one job, open the load board (research/funnel/welcome-trial-2026-10-18/). Region by time zone below. -->
+      <a class="btn btn-go" href="https://relay.amazon.com/loadboard/search" target="_blank" rel="noopener" data-relay data-cta="free-week-on-open-relay">Open your load board</a>
       
     </div></section>
   </main>
@@ -56,6 +56,26 @@
     <div><a href="/privacy.html">Privacy</a><a href="/refund-policy.html">Refund policy</a><a href="mailto:contact@nudoiq.com">Contact</a></div>
     <p class="tm">Amazon and Amazon Relay are trademarks of Amazon.com, Inc. or its affiliates. NudoIQ is an independent product and is not affiliated with, endorsed by, or sponsored by Amazon.com, Inc.</p>
   </div></footer>
+
+  <script>
+    // Relay board by time zone (default US), same map as /welcome/ (2026-10-14). Only zones that clearly mean one country.
+    (function () {
+      try {
+        var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '');
+        var map = { 'Europe/London': 'co.uk', 'Europe/Belfast': 'co.uk', 'Europe/Berlin': 'de', 'Europe/Madrid': 'es',
+          'Europe/Paris': 'fr', 'Europe/Rome': 'it', 'Europe/Warsaw': 'pl', 'Europe/Prague': 'cz', 'Asia/Kolkata': 'in',
+          'Asia/Calcutta': 'in', 'Asia/Tokyo': 'co.jp' };
+        var ca = /^America\/(Toronto|Vancouver|Edmonton|Winnipeg|Halifax|Regina|St_Johns|Moncton|Montreal)$/.test(tz) &&
+          /-CA$/i.test(String(navigator.language || ''));
+        var tld = ca ? 'ca' : map[tz];
+        if (tld) [].forEach.call(document.querySelectorAll('a[data-relay]'), function (a) { a.href = 'https://relay.amazon.' + tld + '/loadboard/search'; });
+      } catch (e) {}
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[data-relay]');
+        if (a && window.clarity) { try { clarity('event', 'free_week_on_open_relay'); } catch (x) {} }
+      }, true);
+    })();
+  </script>
 
 </body>
 </html>
