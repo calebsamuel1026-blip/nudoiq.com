@@ -49,7 +49,7 @@
   <main>
     <section class="hero"><div class="wrap">
       <h1 data-t="paidOnTitle">You're in. Go back to your Relay tab.</h1>
-      <p class="lede" data-t="paidOnBody">Your NudoIQ turns on there by itself in a few seconds, with nothing for you to type. If the NudoIQ bar still says your preview ended, refresh your Relay tab.</p>
+      <p class="lede" data-t="paidOnBody">Your NudoIQ turns on there by itself in a few seconds, with nothing for you to type. If NudoIQ still asks you to start or pay, refresh your Relay tab.</p>
       <a class="btn btn-go" data-t="btn" href="https://relay.amazon.com/loadboard" target="_blank" rel="noopener">Open your load board</a>
       <p class="small" data-t="paidOnSmall">If it still doesn't turn on, open NudoIQ Settings and activate with the email you just used at checkout.</p>
     </div></section>
@@ -68,7 +68,7 @@
         if (new URLSearchParams(location.search).get('lang') !== 'es') return;
         var ES = {
           paidOnTitle: 'Listo. Vuelve a tu pestaña de Relay.',
-          paidOnBody: 'Tu NudoIQ se activa ahí solo en unos segundos, sin que escribas nada. Si la barra de NudoIQ todavía dice que tu vista previa terminó, recarga tu pestaña de Relay.',
+          paidOnBody: 'Tu NudoIQ se activa ahí solo en unos segundos, sin que escribas nada. Si NudoIQ todavía te pide empezar o pagar, recarga tu pestaña de Relay.',
           btn: 'Abre tu tablero de Amazon Relay',
           paidOnSmall: 'Si aún no se activa, abre Configuración de NudoIQ y actívalo con el correo que acabas de usar en el checkout de Stripe.',
           tag: '© 2026 NudoIQ · Software independiente para transportistas',
