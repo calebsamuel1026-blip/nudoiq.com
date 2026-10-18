@@ -368,6 +368,18 @@
     .m-after{text-align:center;margin:8px 0 0}
     .m-after .lemur-teaser a{color:var(--blue-deep)}
 
+    /* iteration 2b: one-row price fit at 1280 and phones */
+    .pc-1 .price-row,.pc-1 .countdown{margin:0}
+    .pc-1 .price-one{justify-content:flex-start}
+    @media (max-width:1365px){
+      .pc-1 .price-eyebrow{font-size:10px;letter-spacing:.02em}
+      .pc-1 .price-new{font-size:16px}
+      .pc-1 .price-line{font-size:11.5px}
+      .pc-1 .cd-label{font-size:11px}
+      .price-card.pc-1{padding:9px 10px}
+    }
+    @media (max-width:560px){ .pc-1 .price-one{justify-content:center} }
+
   </style>
   <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
 <script>

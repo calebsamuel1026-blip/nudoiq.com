@@ -379,6 +379,19 @@
     .has-sticky .top-cta{visibility:hidden}
     .has-sticky.past-hero .top-cta{visibility:visible}
 
+    /* iteration 2b: one-row price fit at 1280 and phones */
+    .pc-1 .price-row,.pc-1 .countdown{margin:0}
+    .pc-1 .price-one{justify-content:flex-start}
+    @media (max-width:1365px){
+      .pc-1 .price-eyebrow{font-size:10px;letter-spacing:.02em}
+      .pc-1 .price-new{font-size:16px}
+      .pc-1 .price-line{font-size:11.5px}
+      .pc-1 .cd-label{font-size:11px}
+      .price-card.pc-1{padding:9px 10px}
+    }
+    @media (max-width:560px){ .pc-1 .price-one{justify-content:center} }
+
+    @media (min-width:900px){ .checks{grid-template-columns:repeat(3,max-content)} }
   </style>
   <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
 <script>
@@ -488,9 +501,6 @@
           <li>Net $ on every load</li>
           <li>Scorecard dispute letters drafted</li>
         </ul>
-        <div class="cta-inline">
-          <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=get" target="_blank" rel="noopener" data-cta="after-steps">Try it 7 days free</a>
-        </div>
       </section>
 
       <!-- ── HOW TO START — install-flow friction removal (Honey/Grammarly "install and start in seconds").
@@ -509,6 +519,9 @@
           <li><span class="n">2</span><div><b>Start free week, no card</b></div></li>
           <li><span class="n">3</span><div><b>Press START on your board</b></div></li>
         </ol>
+        <div class="cta-inline">
+          <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=get" target="_blank" rel="noopener" data-cta="after-steps">Try it 7 days free</a>
+        </div>
       </section>
 
       <!-- ── OBJECTIONS — three cards verbatim from the live page (homepage FAQ trust1/faq3/faq10) plus
