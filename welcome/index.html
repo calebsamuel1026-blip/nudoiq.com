@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
-  <title>Open your Relay load board next | NudoIQ</title>
-  <meta name="description" content="Your NudoIQ is installed. Open your Amazon Relay load board and start your free week from the NudoIQ bar.">
+  <title>Start your free week on Relay | NudoIQ</title>
+  <meta name="description" content="Your NudoIQ is installed. Open your Amazon Relay load board and start your free week there. No card.">
   <meta name="robots" content="noindex, follow">
   <meta name="theme-color" content="#FFFFFF">
   <meta property="og:image" content="https://nudoiq.com/assets/og-image-1200x630.png">
@@ -211,8 +211,11 @@
     .shot img{width:100%;height:auto;border-radius:12px;border:1px solid rgba(30,48,110,.18);
       box-shadow:0 16px 36px rgba(30,48,110,.22);background:#fff}
     .rf{font-size:15.5px;margin-top:12px;color:var(--ink)}
+    .nx{font-size:15.5px;margin-top:12px;color:var(--ink);font-weight:500}
+    .fw.fw-a{color:var(--ink);font-weight:500;margin-top:12px}
     .pin{font-size:15.5px;line-height:1.5;margin-top:12px;color:var(--ink)}
-    .hero [hidden]{display:none!important}
+    .hero [hidden],.hero details.rg[hidden]{display:none!important}
+    .hfs:has(.hf[hidden]){display:none}
     .rg{margin-top:2px;font-size:15.5px;color:var(--ink-4)}
     .rg summary{display:inline-flex;align-items:center;min-height:44px;cursor:pointer;color:var(--ink);font-weight:500;
       text-decoration:underline;text-underline-offset:3px;list-style:none}
@@ -271,18 +274,23 @@
         <!-- 2026-10-14 (research/funnel/WELCOME-FIX-2026-10-14.md): ONE job, get the installer onto the Relay load board now.
              14 of 27 human installs never opened the board (MRR audit 10-14); both 2.5.7 board-openers started the free week.
              Caleb's flow 2026-10-10: installed, open Amazon Relay, start the free week from the NudoIQ bar.
-             Words: Martha, research/copy/WELCOME-OPEN-RELAY-2026-10-14.json (Spanish swap at the bottom of this page). -->
+             Words: Martha, research/copy/WELCOME-OPEN-RELAY-2026-10-14.json (Spanish swap at the bottom of this page).
+             2026-10-18 trial-first (Caleb: the no-card free week is required before any feature): hero, steps and help
+             words from Martha, research/copy/WELCOME-TRIAL-FIRST-2026-10-18.json. The one job is now the free week;
+             Mode A sends him to Relay, where the extension starts it; Mode B (tf=1) starts it here. Record:
+             research/funnel/welcome-trial-2026-10-18/. -->
         <p class="done"><span class="tick" aria-hidden="true">&#10003;</span> <span data-t="badge">Your NudoIQ is installed</span></p>
-        <h1 data-t="h1">Open your Relay load board now.</h1>
-        <p class="lede" data-t="lede">Your NudoIQ shows inside Relay, not here. Sign in as usual and check the top of the search panel.</p>
+        <h1 data-t="h1">Your free week starts on your load board.</h1>
+        <p class="lede" data-t="lede">Open your load board and sign in as usual. NudoIQ asks you to start it there.</p>
         <!-- Same path the extension's own "Open the load board" uses (nudoiq-src-2.5.8 content.js: origin + "/loadboard/search");
              content.js treats any /loadboard path as the board (board_opened). New tab, so this page and its tags stay. -->
-        <a class="btn go" href="https://relay.amazon.com/loadboard/search" target="_blank" rel="noopener" data-cta="welcome-open-relay" data-relay aria-label="Open Amazon Relay load board (opens in a new tab)" data-t-aria="cta_aria"><span data-t="cta">Open Amazon Relay load board</span><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M7 4h9v9M16 4 5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <p class="rf" data-t="refresh_line">Relay already open? Refresh that tab so the bar loads.</p>
+        <a class="btn go" href="https://relay.amazon.com/loadboard/search" target="_blank" rel="noopener" data-cta="welcome-open-relay" data-relay aria-label="Open Relay for your free week (opens Amazon Relay in a new tab)" data-t-aria="cta_aria"><span data-t="cta">Open Relay for your free week</span><svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M7 4h9v9M16 4 5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <p class="fw fw-a" data-t="freeweek_line">No card. 7 days free. $49.99/month only if you add a card. Cancel anytime.</p>
+        <p class="nx" id="nq-next" hidden></p>
+        <p class="rf" data-t="refresh_line">Relay already open? Refresh that tab so NudoIQ loads.</p>
         <!-- 2026-10-16 came-back state (RELEASE-2.5.9-SPEC section 7.2): shown in place of the refresh line when he returns
              to this tab 20 s or more after an Open-Relay click. Words: Martha, research/copy/WELCOME-CAMEBACK-2026-10-16.json. -->
         <p class="pin" id="nq-pin" data-t="pin_line" hidden>Pin NudoIQ so you&#x27;re one click away. Puzzle piece at Chrome&#x27;s top right, then the pin.</p>
-        <p class="fw" data-t="freeweek_line">Start your free week from the NudoIQ bar on Relay. It&#x27;s 7 days free with no card, then $49.99/month, and you can cancel anytime.</p>
         <p class="nc"><span data-t="notcarrier_lead">No Relay account yet?</span> <a href="/amazon-relay-requirements/" target="_blank" rel="noopener" data-href-es="/es/amazon-relay-requisitos/" data-cta="welcome-not-carrier" data-t="notcarrier_link">See what you need</a></p>
         <!-- Region: the button defaults to the US board; the script below picks another Relay board only when the computer's
              time zone is clearly in one of the countries the extension supports (manifest content_scripts matches). -->
@@ -309,7 +317,9 @@
       </div>
       <div class="side">
       <div class="shot">
-        <!-- The real NudoIQ bar in its free-preview state, rendered from the 2.5.7 extension's own markup (content.js createInlineUI)
+        <!-- 2026-10-18: true for live 2.5.8 (preview bar with the free-week button); the 2.5.9 trial-first gate shows a pop-up
+             instead, so replace this with a render of that pop-up when 2.5.9 ships (research/funnel/welcome-trial-2026-10-18/).
+             The real NudoIQ bar in its free-preview state, rendered from the 2.5.7 extension's own markup (content.js createInlineUI)
              and stylesheet (nudoiq-ui.css), idle, with the "Start your free week" button nqFreeWeekCta adds. Rendered 560px wide,
              so the row wraps as it does in a narrow Relay panel. Source: research/funnel/welcome-fix-2026-10-14/barrender/. -->
         <img src="/assets/welcome-bar-free-week.webp" alt="The NudoIQ bar with START, STOP in red, a settings gear, ALERT, SEARCH and AUTOBOOK modes, an IDLE chip and a blue &quot;Start your free week&quot; button" data-t-alt="bar_image_alt" width="1120" height="266" decoding="async" fetchpriority="high">
@@ -321,8 +331,8 @@
       <h2 data-t="steps_heading">Your next three steps</h2>
       <ol>
         <li><span class="n" aria-hidden="true">1</span><a href="https://relay.amazon.com/loadboard/search" target="_blank" rel="noopener" data-relay data-cta="welcome-step1" data-t="step1">Open your Relay load board with the button above.</a></li>
-        <li><span class="n" aria-hidden="true">2</span><span data-t="step2">Your NudoIQ bar appears above Origin and Radius.</span></li>
-        <li><span class="n" aria-hidden="true">3</span><span data-t="step3">Press &quot;Start your free week&quot; on the bar.</span></li>
+        <li><span class="n" aria-hidden="true">2</span><span data-t="step2">NudoIQ asks you to start your free week.</span></li>
+        <li><span class="n" aria-hidden="true">3</span><span data-t="step3">Press &quot;Start your free week&quot;. No card needed.</span></li>
       </ol>
       <p class="prof" data-t="profile_line">Open Relay in the same Chrome profile you installed NudoIQ in. That&#x27;s the only place your NudoIQ bar shows.</p>
     </div></section>
@@ -390,8 +400,8 @@
     </div></section>
 
     <section class="help"><div class="help-wrap">
-      <h3 data-t="help_title">Don&#x27;t see your NudoIQ bar?</h3>
-      <p data-t-html="help_body">Landed on Relay&#x27;s home or trips page? Use the button above again to open your load board. Still nothing? Refresh the Relay tab. That fixes it nearly every time. If it still looks the same, email <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a> and say which page you are on. A person answers.</p>
+      <h3 data-t="help_title">Don&#x27;t see NudoIQ on Relay?</h3>
+      <p data-t-html="help_body">Landed on Relay&#x27;s home or trips page? Use the Relay button here to open your load board. Nothing yet? Refresh the Relay tab. That fixes it nearly every time. Still stuck? Email <a href="mailto:contact@nudoiq.com">contact@nudoiq.com</a> and say which page you&#x27;re on. A person answers.</p>
     </div></section>
 
     <section class="tut"><div class="wrap">
@@ -420,7 +430,7 @@
   <script>
     // Spanish: the extension always opens /welcome/, so Spanish-language browsers get the same page with Martha's
     // Spanish strings swapped in (no redirect: every tag above fires once). ?lang=es / ?lang=en force a language.
-    var NQ_WELCOME_ES = {"title": "Abre tu tablero de Relay ahora | NudoIQ", "meta_description": "Tu NudoIQ ya está instalado. Abre tu tablero de cargas de Amazon Relay y empieza tu semana gratis desde la barra de NudoIQ.", "badge": "Tu NudoIQ está instalado", "h1": "Abre ahora tu tablero de Relay.", "lede": "Tu NudoIQ aparece dentro de Relay, no aquí. Inicia sesión como siempre y mira arriba del panel de búsqueda.", "cta": "Abre tu tablero de Amazon Relay", "cta_aria": "Abre tu tablero de Amazon Relay (se abre en una pestaña nueva)", "freeweek_line": "Empieza tu semana gratis desde la barra de NudoIQ en Relay. Son 7 días gratis sin tarjeta, después $49.99 al mes, y puedes cancelar cuando quieras.", "notcarrier_lead": "¿Aún no tienes cuenta de Relay?", "notcarrier_link": "Mira lo que necesitas", "steps_heading": "Tus próximos tres pasos", "step1": "Abre tu tablero de Relay con el botón.", "step2": "Tu barra de NudoIQ aparece sobre los filtros.", "step3": "Presiona \"Empieza tu semana gratis\" en la barra.", "profile_line": "Abre Relay en el mismo perfil de Chrome donde instalaste NudoIQ. Solo ahí aparece tu barra de NudoIQ.", "help_title": "¿No ves tu barra de NudoIQ?", "help_body": "¿Llegaste a la página de inicio o de viajes de Relay? Usa otra vez el botón de arriba para abrir tu tablero. ¿Sigue sin aparecer? Actualiza la pestaña de Relay. Casi siempre se arregla así. Si todo sigue igual, escribe a contact@nudoiq.com y dinos en qué página estás. Te responde una persona.", "video_caption": "Cada herramienta, una por una, cuando estés listo.", "video_meta": "Menos de 4 minutos · en inglés · con sonido · puedes volver a verlo cuando quieras", "video_aria": "Recorrido de NudoIQ en inglés por cada herramienta, una por una", "image_alt": "La barra de control de NudoIQ dentro del tablero de cargas de Amazon Relay, con los modos de alerta, búsqueda y autobook sobre 358 resultados desde Maryville, Tennessee", "partner_tpl": "Pega {code} al pagar para obtener {offer}.", "footer_independent": "Software independiente para transportistas", "footer_privacy": "Privacidad", "footer_refund": "Reembolsos", "footer_contact": "Contacto", "footer_trademark": "Amazon y Amazon Relay son marcas registradas de Amazon.com, Inc. o sus afiliadas. NudoIQ es un producto independiente y no está afiliado, respaldado ni patrocinado por Amazon.com, Inc.", "refresh_line": "¿Ya tienes Relay abierto? Actualiza esa pestaña para ver la barra.", "region_toggle": "¿No estás en Estados Unidos?", "region_note": "El botón usa la zona horaria de tu computadora. Elige tu país aquí.", "region_us": "Estados Unidos", "region_ca": "Canadá", "region_uk": "Reino Unido", "region_de": "Alemania", "region_es": "España", "region_fr": "Francia", "region_it": "Italia", "region_pl": "Polonia", "region_cz": "República Checa", "region_in": "India", "region_jp": "Japón", "bar_image_alt": "La barra de NudoIQ con START, STOP en rojo, un engranaje de ajustes, los modos ALERT, SEARCH y AUTOBOOK, un indicador IDLE y el botón azul \"Start your free week\"", "hf_q": "¿Cómo te enteraste de NudoIQ?", "hf_note": "Opcional, un clic.", "opt_cws": "Chrome Web Store", "opt_youtube": "YouTube", "opt_google": "Google", "opt_social": "Facebook o Instagram", "opt_email": "Un correo nuestro", "opt_friend": "Me lo recomendaron", "opt_other": "Otro", "hf_thanks": "Gracias, nos ayuda mucho.", "hf_aria": "¿Cómo te enteraste de NudoIQ? Opcional", "stuck_title": "¿No ves NudoIQ en tu tablero?", "stuck_lede": "En este perfil de Chrome, inicia sesión y abre tu tablero, no inicio ni viajes. Actualiza esa pestaña.", "pin_line": "Fija NudoIQ para abrirlo en un clic. Pieza de rompecabezas arriba a la derecha, luego el pin."};
+    var NQ_WELCOME_ES = {"title": "Empieza tu semana gratis en Relay | NudoIQ", "meta_description": "Tu NudoIQ ya está instalado. Abre tu tablero de cargas de Amazon Relay y empieza ahí tu semana gratis. Sin tarjeta.", "badge": "Tu NudoIQ está instalado", "h1": "Tu semana gratis empieza en tu tablero.", "lede": "Abre tu tablero e inicia sesión como siempre. Ahí NudoIQ te pide empezar tu semana gratis.", "cta": "Abre Relay para tu semana gratis", "cta_aria": "Abre Relay para tu semana gratis (abre Amazon Relay en una pestaña nueva)", "freeweek_line": "Sin tarjeta. 7 días gratis. $49.99 al mes solo si agregas tarjeta. Cancela cuando quieras.", "notcarrier_lead": "¿Aún no tienes cuenta de Relay?", "notcarrier_link": "Mira lo que necesitas", "steps_heading": "Tus próximos tres pasos", "step1": "Abre tu tablero de Relay con el botón de arriba.", "step2": "NudoIQ te pide empezar tu semana gratis.", "step3": "Presiona \"Empieza tu semana gratis\". Sin tarjeta.", "profile_line": "Abre Relay en el mismo perfil de Chrome donde instalaste NudoIQ. Solo ahí aparece tu barra de NudoIQ.", "help_title": "¿No ves NudoIQ en Relay?", "help_body": "¿Llegaste a la página de inicio o de viajes de Relay? Usa el botón de Relay de esta página para abrir tu tablero. ¿Nada todavía? Actualiza la pestaña de Relay. Casi siempre se arregla así. ¿Sigue igual? Escribe a contact@nudoiq.com y dinos en qué página estás. Te responde una persona.", "video_caption": "Cada herramienta, una por una, cuando estés listo.", "video_meta": "Menos de 4 minutos · en inglés · con sonido · puedes volver a verlo cuando quieras", "video_aria": "Recorrido de NudoIQ en inglés por cada herramienta, una por una", "image_alt": "La barra de control de NudoIQ dentro del tablero de cargas de Amazon Relay, con los modos de alerta, búsqueda y autobook sobre 358 resultados desde Maryville, Tennessee", "partner_tpl": "Pega {code} al pagar para obtener {offer}.", "footer_independent": "Software independiente para transportistas", "footer_privacy": "Privacidad", "footer_refund": "Reembolsos", "footer_contact": "Contacto", "footer_trademark": "Amazon y Amazon Relay son marcas registradas de Amazon.com, Inc. o sus afiliadas. NudoIQ es un producto independiente y no está afiliado, respaldado ni patrocinado por Amazon.com, Inc.", "refresh_line": "¿Ya tienes Relay abierto? Actualiza esa pestaña para que cargue NudoIQ.", "region_toggle": "¿No estás en Estados Unidos?", "region_note": "El botón usa la zona horaria de tu computadora. Elige tu país aquí.", "region_us": "Estados Unidos", "region_ca": "Canadá", "region_uk": "Reino Unido", "region_de": "Alemania", "region_es": "España", "region_fr": "Francia", "region_it": "Italia", "region_pl": "Polonia", "region_cz": "República Checa", "region_in": "India", "region_jp": "Japón", "bar_image_alt": "La barra de NudoIQ con START, STOP en rojo, un engranaje de ajustes, los modos ALERT, SEARCH y AUTOBOOK, un indicador IDLE y el botón azul \"Start your free week\"", "hf_q": "¿Cómo te enteraste de NudoIQ?", "hf_note": "Opcional, un clic.", "opt_cws": "Chrome Web Store", "opt_youtube": "YouTube", "opt_google": "Google", "opt_social": "Facebook o Instagram", "opt_email": "Un correo nuestro", "opt_friend": "Me lo recomendaron", "opt_other": "Otro", "hf_thanks": "Gracias, nos ayuda mucho.", "hf_aria": "¿Cómo te enteraste de NudoIQ? Opcional", "stuck_title": "¿No ves NudoIQ en tu tablero?", "stuck_lede": "Usa este mismo perfil de Chrome. Inicia sesión, abre tu tablero de cargas y actualiza esa pestaña.", "pin_line": "Fija NudoIQ para abrirlo en un clic. Pieza de rompecabezas arriba a la derecha, luego el pin.", "b_h1": "Empieza tu semana gratis aquí mismo.", "b_lede": "Stripe solo te pide tu correo. Después abres tu tablero de Relay.", "b_cta": "Empieza tu semana gratis, sin tarjeta", "b_cta_aria": "Empieza tu semana gratis, sin tarjeta (abre la página de Stripe en una pestaña nueva)", "b_next": "Siguiente paso: abre tu tablero de Relay.", "b2_h1": "Ahora abre tu tablero de Relay.", "b2_lede": "Si terminaste en Stripe, tu semana gratis ya está activa. Ahora abre tu tablero.", "b2_note": "Si no terminaste, NudoIQ te pide empezar tu semana gratis en tu tablero.", "b_step1": "Empieza tu semana gratis aquí. Sin tarjeta, solo tu correo.", "b_step2": "Abre tu tablero de Relay e inicia sesión.", "b_step3": "NudoIQ se activa dentro de tu tablero."};
     var NQ_PARTNER_TPL = "Paste {code} at checkout to get {offer}.";
     (function () {
       try {
@@ -449,6 +459,58 @@
       } catch (e) {}
     })();
 
+    // MODE B (2026-10-18, research/funnel/welcome-trial-2026-10-18/SPEC-EXTENSION-AND-SERVER.md). Only when the extension
+    // opened this page with tf=1 (it then picks up a free week started on the web by install id) and a valid install id.
+    // Step 1: the one button opens create-checkout's no-card free week (Stripe asks only for the email) in a new tab; the
+    // server sends a used free week to the paid checkout. Step 2, when he comes back to this tab: the same button opens his
+    // Relay load board. Words: Martha, research/copy/WELCOME-TRIAL-FIRST-2026-10-18.json. Without tf=1 nothing here runs.
+    var NQ_WELCOME_B_EN = {"b_h1": "Start your free week right here.", "b_lede": "Stripe asks only for your email. Then you open your Relay load board.", "b_cta": "Start your free week, no card", "b_cta_aria": "Start your free week, no card (opens Stripe's free week page in a new tab)", "b_next": "Next step, open your Relay load board.", "b2_h1": "Now open your Relay load board.", "b2_lede": "If you finished on Stripe, your free week is on. Now open your board.", "b2_note": "If you didn't finish, NudoIQ asks you to start it on your board.", "b_step1": "Start your free week here. No card, just your email.", "b_step2": "Open your Relay load board and sign in.", "b_step3": "NudoIQ turns on inside your load board.", "cta": "Open Relay for your free week", "cta_aria": "Open Relay for your free week (opens Amazon Relay in a new tab)"};
+    window.NQ_RELAY_BOARD = 'https://relay.amazon.com/loadboard/search';
+    window.nqModeB = (function () {
+      try {
+        var q = new URLSearchParams(location.search), iid = q.get('i') || '';
+        if (q.get('tf') !== '1' || !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(iid)) return null;
+        var es = document.documentElement.lang === 'es', S = es ? NQ_WELCOME_ES : NQ_WELCOME_B_EN;
+        var url = 'https://rxyuzshudfqgtmqenipi.supabase.co/functions/v1/create-checkout?intent=trial&iid=' + encodeURIComponent(iid) + (es ? '&lang=es' : '');
+        var $ = function (sel) { return document.querySelector(sel); };
+        var go = $('.hero a.go'), st1 = $('[data-cta="welcome-step1"]'), nx = document.getElementById('nq-next');
+        var h1 = $('.hero h1'), le = $('.hero .lede'), rf = $('.hero .rf'), help = $('section.help');
+        var label = go.querySelector('[data-t="cta"]'), rg = $('.hero details.rg');
+        var stepEls = [st1, $('[data-t="step2"]'), $('[data-t="step3"]')], stepA = stepEls.map(function (e) { return e.textContent; });
+        var toTrial = function (a, cta) { a.removeAttribute('data-relay'); a.href = url; a.setAttribute('data-trial', '1'); a.setAttribute('data-cta', cta); };
+        document.documentElement.setAttribute('data-welcome', 'trial');
+        h1.textContent = S.b_h1; le.textContent = S.b_lede; label.textContent = S.b_cta; go.setAttribute('aria-label', S.b_cta_aria);
+        toTrial(go, 'welcome-start-trial'); toTrial(st1, 'welcome-step1-trial');
+        st1.textContent = S.b_step1; $('[data-t="step2"]').textContent = S.b_step2; $('[data-t="step3"]').textContent = S.b_step3;
+        nx.textContent = S.b_next; nx.hidden = false; if (rf) rf.hidden = true; if (help) help.hidden = true; if (rg) rg.hidden = true;
+        document.title = S.b_h1.replace(/\.$/, '') + ' | NudoIQ';
+        if (window.clarity) clarity('set', 'welcome_mode', 'trial');
+        var KS = 'nudoiq_welcome_trial_step2', t = 0, done = false;
+        var step2 = function (live) {
+          if (done) return; done = true;
+          if (live) { h1.style.minHeight = h1.offsetHeight + 'px'; le.style.minHeight = le.offsetHeight + 'px'; nx.style.minHeight = nx.offsetHeight + 'px'; }
+          stepEls.forEach(function (e, i) { e.textContent = stepA[i]; });
+          h1.textContent = S.b2_h1; le.textContent = S.b2_lede; nx.textContent = S.b2_note;
+          [go, st1].forEach(function (a) { a.removeAttribute('data-trial'); a.setAttribute('data-relay', '');
+            a.href = window.NQ_RELAY_BOARD; });
+          go.setAttribute('data-cta', 'welcome-open-relay'); st1.setAttribute('data-cta', 'welcome-step1');
+          label.textContent = S.cta; go.setAttribute('aria-label', S.cta_aria);
+          var pin = document.getElementById('nq-pin');
+          if (rf) rf.hidden = !!(pin && !pin.hidden); if (help) help.hidden = false; if (rg) rg.hidden = false;
+          document.title = S.b2_h1.replace(/\.$/, '') + ' | NudoIQ';
+          document.documentElement.setAttribute('data-welcome', 'trial-step2');
+          if (window.clarity) clarity('set', 'welcome_mode', 'trial_step2');
+        };
+        document.addEventListener('visibilitychange', function () {
+          if (document.visibilityState !== 'visible' || !t || done || Date.now() - t < 3000) return;
+          try { sessionStorage.setItem(KS, '1'); } catch (x) {}
+          step2(true);
+        });
+        try { if (sessionStorage.getItem(KS)) step2(false); } catch (x) {}
+        return { clicked: function () { t = Date.now(); } };
+      } catch (e) { return null; }
+    })();
+
     // Relay board by time zone (default US). Only zones that clearly mean one supported country.
     (function () {
       try {
@@ -461,6 +523,7 @@
         var tld = ca ? 'ca' : map[tz];
         if (!tld) return;
         var host = 'relay.amazon.' + tld;
+        window.NQ_RELAY_BOARD = 'https://' + host + '/loadboard/search';
         [].forEach.call(document.querySelectorAll('a[data-relay]'), function (a) { a.href = 'https://' + host + '/loadboard/search'; });
         window.clarity && clarity('set', 'relay_region', host);
       } catch (e) {}
@@ -525,18 +588,19 @@
       return o;
     };
 
-    // CAME BACK (2026-10-16, RELEASE-2.5.9-SPEC section 7.2). When this tab becomes visible again 20 s or more after an
+    // CAME BACK (2026-10-16, RELEASE-2.5.9-SPEC section 7.2). Since 2026-10-18 it never runs while the hero is Mode B step 1
+    // (first click goes to Stripe, not Relay); after Mode B step 2 it works as in Mode A. When this tab becomes visible again 20 s or more after an
     // Open-Relay click (button, region link or step 1), he most likely did not see the NudoIQ bar: the hero becomes the
     // stuck-point step in place (title, lede, pin line instead of the refresh line). The button does not move: the title
     // and lede keep their heights. One welcome_returned row per install (reason after_click, ms since the last click).
     // Kept for this tab's session, so a reload shows the same step. Kill rule (spec 7.3): after 30 human installs, if
     // welcome_cta_clicked -> relay_landing is not higher among welcome_returned installs, set NQ_CAMEBACK_ON = false.
     var NQ_CAMEBACK_ON = true;
-    var NQ_CAMEBACK_EN = { stuck_title: "No NudoIQ bar on your board?", stuck_lede: "In this same Chrome profile, sign in and open your load board, not home or trips. Refresh that tab." };
+    var NQ_CAMEBACK_EN = { stuck_title: "No NudoIQ on your board?", stuck_lede: "In this same Chrome profile, sign in and open your load board, not home or trips. Refresh that tab." };
     window.nqCameBack = (function () {
       var WAIT = 20000, KS = 'nudoiq_welcome_returned', t = 0, surface = '', shown = false;
       var show = function (live) {
-        if (shown || !NQ_CAMEBACK_ON) return;
+        if (shown || !NQ_CAMEBACK_ON || document.documentElement.getAttribute('data-welcome') === 'trial') return;
         try {
           var S = document.documentElement.lang === 'es' ? NQ_WELCOME_ES : NQ_CAMEBACK_EN;
           var h1 = document.querySelector('.hero h1'), le = document.querySelector('.hero .lede');
@@ -582,6 +646,22 @@
     }
     document.addEventListener('click', nqRelayClick, true);
     document.addEventListener('auxclick', nqRelayClick, true);
+
+    // welcome_trial_click (2026-10-18, Mode B only): Clarity / UET / Meta events, plus one welcome_trial_clicked funnel row
+    // per install (REST path above). trial_started then comes from Stripe through quick-handler (nq_install on the session).
+    function nqTrialClick(e) {
+      if (e.type === 'auxclick' && e.button !== 1) return;
+      var a = e.target.closest && e.target.closest('a[data-trial]');
+      if (!a) return;
+      var where = a.getAttribute('data-cta') || 'link';
+      try { if (window.clarity) { clarity('event', 'welcome_trial_click'); clarity('set', 'start_trial', where); } } catch (x) {}
+      try { window.uetq = window.uetq || []; window.uetq.push('event', 'welcome_trial_click', { event_category: 'activation', event_label: where }); } catch (x) {}
+      try { if (window.fbq) fbq('trackCustom', 'WelcomeStartTrial', { cta: where }); } catch (x) {}
+      NQ_FUNNEL.send('welcome_trial_clicked', NQ_META({ surface: where === 'welcome-step1-trial' ? 'step1' : 'cta' }));
+      try { window.nqModeB && window.nqModeB.clicked(); } catch (x) {}
+    }
+    document.addEventListener('click', nqTrialClick, true);
+    document.addEventListener('auxclick', nqTrialClick, true);
   </script>
 
 </body>
