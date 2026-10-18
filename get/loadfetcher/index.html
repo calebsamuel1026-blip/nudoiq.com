@@ -253,7 +253,7 @@
     .cta-inline .note b{color:var(--ink)}
 
     /* How to start — three numbered steps (install-flow friction removal). */
-    .steps{list-style:none;margin:0;padding:0;display:grid;gap:16px;grid-template-columns:repeat(3,1fr);counter-reset:s}
+    .steps{list-style:none;margin:0;padding:0;display:grid;gap:16px;grid-template-columns:repeat(4,1fr);counter-reset:s}
     .steps li{display:flex;gap:14px;font-size:15px;line-height:1.5;color:var(--ink-4)}
     .steps li b{color:var(--ink);font-size:17px;font-weight:600;display:block;margin-bottom:2px}
     .steps .n{flex:0 0 32px;height:32px;border-radius:16px;background:var(--blue);
@@ -499,7 +499,7 @@
                   <span class="cd-num" id="cdMins">--</span><span class="cd-label">m</span>
                 </div>
               </div>
-              <p class="price-line" id="priceLine1">50% off until <b>end of day today</b>. You pay $49.99 a month.</p>
+              <!-- 2026-10-18 D96 claim fix, words: research/copy/ADS-LANDING-2026-10-18.json (Martha). --><p class="price-line" id="priceLine1">$0 today. Free week first, no card. $49.99 only if you add a card.</p>
               <p class="price-line" id="priceLine2">Keep that discount for as long as you stay subscribed.</p>
               <p class="price-expired" id="priceExpired" hidden>This week's discount has ended. NudoIQ is $49.99 a month.</p>
             </div>
@@ -571,8 +571,9 @@
         <h2 class="sec" id="howH">Switching takes a few minutes</h2>
         <ol class="steps">
           <li><span class="n">1</span><div><b>Add NudoIQ to Chrome</b>When you reach the Chrome Web Store, click Add to Chrome, then Add extension.</div></li>
-          <li><span class="n">2</span><div><b>Turn LoadFetcher off</b>On your Chrome extensions page, switch LoadFetcher off. It stays installed, ready to turn back on.</div></li>
-          <li><span class="n">3</span><div><b>Press START</b>Open the Relay load board, set your minimum net, pick AUTOBOOK, then press START.</div></li>
+          <!-- 2026-10-18 D96 claim fix, words: research/copy/ADS-LANDING-2026-10-18.json (Martha). --><li><span class="n">2</span><div><b>Start free week, no card</b>Open the Relay load board. NudoIQ asks only for your email to start it.</div></li>
+          <li><span class="n">3</span><div><b>Turn LoadFetcher off</b>On your Chrome extensions page, switch LoadFetcher off. It stays installed, ready to turn back on.</div></li>
+          <li><span class="n">4</span><div><b>Press START</b>Open the Relay load board, set your minimum net, pick AUTOBOOK, then press START.</div></li>
         </ol>
         <p class="switch-note">Your Relay login and load board stay the same. Run one load board extension at a time so they don&#x27;t conflict. If it doesn&#x27;t fit how you book, switch back.</p>
       </section>
