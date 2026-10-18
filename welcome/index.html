@@ -236,11 +236,12 @@
     @media (max-width:1104px){.help{margin:40px 24px 56px}}
     .tut{padding-top:8px}
     .tut .wrap,.help-wrap{max-width:820px}
-    /* 2026-10-16 "where did you find NudoIQ" (research/data/INSTRUMENTATION-GAPS.md item 1). Lives in the right column
-       under the bar image, bottom-aligned, so it sits below the button and the hero row keeps its height: the button,
-       the steps and every fold position stay where they were. Neutral outline chips, never a filled button. */
-    .side{min-width:0;align-self:end}
-    .hf{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:15px;color:var(--ink-4)}
+    /* 2026-10-16 "where did you find NudoIQ" (research/data/INSTRUMENTATION-GAPS.md item 1). Since 2026-10-18 in its own
+       row below the steps (research/funnel/welcome-trial-2026-10-18/): in the hero it put 7 chips beside the one button.
+       Neutral outline chips, never a filled button. */
+    .side{min-width:0;align-self:center}
+    .hfs{padding:28px 0 0}.hfs .wrap{max-width:1104px}.hfs .hf{margin-top:0;padding-top:0;border-top:0}
+    .hf{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:15px;color:var(--ink-4)}
     .hf[hidden],.hf [hidden]{display:none!important}
     .hf .q{margin:0 0 8px;color:var(--ink-4);font-weight:500}
     .hf .q .n{font-weight:400;color:var(--ink-4)}
@@ -313,7 +314,21 @@
              so the row wraps as it does in a narrow Relay panel. Source: research/funnel/welcome-fix-2026-10-14/barrender/. -->
         <img src="/assets/welcome-bar-free-week.webp" alt="The NudoIQ bar with START, STOP in red, a settings gear, ALERT, SEARCH and AUTOBOOK modes, an IDLE chip and a blue &quot;Start your free week&quot; button" data-t-alt="bar_image_alt" width="1120" height="266" decoding="async" fetchpriority="high">
       </div>
-      <!-- 2026-10-16: one-tap install source (research/data/INSTRUMENTATION-GAPS.md item 1; D32 names the welcome page as the
+      </div>
+    </div></div></section>
+
+    <section class="flow"><div class="wrap">
+      <h2 data-t="steps_heading">Your next three steps</h2>
+      <ol>
+        <li><span class="n" aria-hidden="true">1</span><a href="https://relay.amazon.com/loadboard/search" target="_blank" rel="noopener" data-relay data-cta="welcome-step1" data-t="step1">Open your Relay load board with the button above.</a></li>
+        <li><span class="n" aria-hidden="true">2</span><span data-t="step2">Your NudoIQ bar appears above Origin and Radius.</span></li>
+        <li><span class="n" aria-hidden="true">3</span><span data-t="step3">Press &quot;Start your free week&quot; on the bar.</span></li>
+      </ol>
+      <p class="prof" data-t="profile_line">Open Relay in the same Chrome profile you installed NudoIQ in. That&#x27;s the only place your NudoIQ bar shows.</p>
+    </div></section>
+
+    <section class="hfs"><div class="wrap">
+      <!-- 2026-10-16: one-tap install source (moved below the steps 2026-10-18, so the first screen keeps one action) (research/data/INSTRUMENTATION-GAPS.md item 1; D32 names the welcome page as the
            attribution route). Words: Martha, research/copy/WELCOME-HEARD-FROM-2026-10-16.json. Shown only when the extension
            passed the install id (?i=) and the question is not answered yet; one funnel_events row per install (step heard_from). -->
       <div class="hf" id="nq-hf" role="group" aria-label="Where did you find NudoIQ? Optional" data-t-aria="hf_aria" hidden>
@@ -372,17 +387,6 @@
           } catch (e) {}
         })();
       </script>
-      </div>
-    </div></div></section>
-
-    <section class="flow"><div class="wrap">
-      <h2 data-t="steps_heading">Your next three steps</h2>
-      <ol>
-        <li><span class="n" aria-hidden="true">1</span><a href="https://relay.amazon.com/loadboard/search" target="_blank" rel="noopener" data-relay data-cta="welcome-step1" data-t="step1">Open your Relay load board with the button above.</a></li>
-        <li><span class="n" aria-hidden="true">2</span><span data-t="step2">Your NudoIQ bar appears above Origin and Radius.</span></li>
-        <li><span class="n" aria-hidden="true">3</span><span data-t="step3">Press &quot;Start your free week&quot; on the bar.</span></li>
-      </ol>
-      <p class="prof" data-t="profile_line">Open Relay in the same Chrome profile you installed NudoIQ in. That&#x27;s the only place your NudoIQ bar shows.</p>
     </div></section>
 
     <section class="help"><div class="help-wrap">
