@@ -50,6 +50,21 @@
       
     </div></section>
   </main>
+  <!-- 2026-10-18: Spanish and Russian by browser language or ?lang=es|ru. research/copy/ADS-LANDING-RU-AND-CANCEL-2026-10-18.json (Martha) -->
+  <script>
+  (function () {
+    try {
+      var D = {"es": {"title": "Tu semana gratis está activa | NudoIQ", "meta_description": "Tu semana gratis de NudoIQ está activa. Vuelve a tu pestaña de Relay.", "h1": "Tu semana gratis está activa.", "cta": "Abre tu tablero de cargas"}, "ru": {"title": "Бесплатная неделя началась | NudoIQ", "meta_description": "Бесплатная неделя NudoIQ началась. Вернитесь во вкладку Relay.", "h1": "Бесплатная неделя началась.", "cta": "Открыть load board"}};
+      var q = new URLSearchParams(location.search).get("lang"), l0 = String((navigator.languages || [navigator.language || ""])[0] || "");
+      var k = q === "es" || q === "ru" ? q : (q ? null : (/^es\b/i.test(l0) ? "es" : (/^(ru|uz|kk|ky|tg)\b/i.test(l0) ? "ru" : null)));
+      if (!k) return; var S = D[k];
+      document.documentElement.lang = k; document.title = S.title;
+      var md = document.querySelector('meta[name="description"]'); if (md) md.setAttribute("content", S.meta_description);
+      document.querySelector("main h1").textContent = S.h1;
+      document.querySelector("a[data-relay]").textContent = S.cta;
+    } catch (e) {}
+  })();
+  </script>
 
   <footer><div class="wrap">
     <div>© 2026 NudoIQ · Independent software for carriers</div>

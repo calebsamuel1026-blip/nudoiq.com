@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <!-- /get/loadfetcher/ (2026-10-09): Google Ads landing page for LoadFetcher searches ("loadfetcher", "load fetcher",
+       "load fetcher extension": ~80% of paid search terms). 1:1 copy of /get/load-board/ (same head, tracking, routing,
+       price card, objections, Lemur, video, sticky bar and scripts). Changed: title, meta, canonical, first-screen
+       eyebrow/H1/lede, proof-bar second cell (no user counts on LoadFetcher pages, Caleb), and three middle sections
+       (four reasons, comparison table + CTA band, switch steps) modeled on clickup.com/compare/asana-vs-clickup.
+       Words: research/copy/GET-LOADFETCHER-2026-10-09.json (Martha). Design map and evidence:
+       research/landing/loadfetcher-2026-10-09/REFERENCE-MAP-get-loadfetcher.md. LoadFetcher facts checked 2026-10-09. -->
+  <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <!-- 2026-10-18 ad-landing beacon + NQ_NOW (research/funnel/ads-landing-2026-10-18/RECORD.md; Ads Committee F2/F6).
+       Paid landings write one funnel_events row at page start (step ad_landing) and one per NudoIQ store click
+       (ad_store_click): opaque visit id, click id, utm values, path, browser language and time zone. Nothing personal.
+       NQ_NOW() runs the deferred tags at once on a store click, so the queued conversion is sent on fast bounces. -->
+  <script>
+  (function () {
+    try {
+      var local = ["localhost", "127.0.0.1", "[::1]"].indexOf(location.hostname) > -1 && location.search.indexOf("nqtags=1") < 0;
+      var L = window.NQ_LATER, q = [], ran = false;
+      function run() { if (ran || local) return; ran = true; q.splice(0).forEach(function (f) { try { f(); } catch (e) {} }); }
+      window.NQ_LATER = function (f) { if (ran) { try { f(); } catch (e) {} return; } q.push(f); L(run); };
+      window.NQ_NOW = run;
+      var u = new URLSearchParams(location.search), ck = null, cid = null;
+      ["gclid", "gbraid", "wbraid", "msclkid"].some(function (k) { var v = u.get(k); if (v) { ck = k; cid = v.slice(0, 300); return true; } return false; });
+      var bot = /bot|crawl|spider|slurp|AdsBot|Mediapartners|Google-InspectionTool|HeadlessChrome|Lighthouse|PageSpeed/i.test(navigator.userAgent);
+      var paid = !!ck || u.get("utm_medium") === "cpc";
+      var vid = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : "xxxxxxxx-xxxx-4xxx-8xxx-xxxxxxxxxxxx".replace(/x/g, function () { return (Math.random() * 16 | 0).toString(16); });
+      var AK = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM", t0 = Date.now();
+      window.NQ_BEACON = function (step, extra) {
+        if (local || bot || !paid) return;
+        var md = { path: location.pathname, click_type: ck, click_id: cid, ms: Date.now() - t0,
+          lang: String(navigator.language || "").slice(0, 16), tz: (Intl.DateTimeFormat().resolvedOptions().timeZone || "").slice(0, 40),
+          w: innerWidth, ref: (document.referrer || "").split("/")[2] || "" };
+        ["utm_source", "utm_medium", "utm_campaign", "utm_content", "lp"].forEach(function (k) { var v = u.get(k); if (v) md[k] = v.slice(0, 80); });
+        for (var k in (extra || {})) md[k] = extra[k];
+        try {
+          fetch("https://rxyuzshudfqgtmqenipi.supabase.co/rest/v1/funnel_events", { method: "POST", keepalive: true,
+            headers: { "Content-Type": "application/json", "apikey": AK, "Authorization": "Bearer " + AK, "Prefer": "return=minimal" },
+            body: JSON.stringify({ install_id: vid, step: step, metadata: md }) }).catch(function () {});
+        } catch (e) {}
+      };
+      window.NQ_BEACON("ad_landing");
+      var sent = 0;
+      document.addEventListener("click", function (e) {
+        var a = e.target.closest && e.target.closest('a[href*="bjilnjgfdndecmamphkkcpplfmniocgk"]');
+        if (!a) return;
+        run();
+        if (sent++ < 3) window.NQ_BEACON("ad_store_click", { cta: (a.getAttribute("data-cta") || a.id || "link").slice(0, 24) });
+      }, true);
+    } catch (e) {}
+  })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
+  <!-- Google Ads click id capture (2026-10-05, research/google-ads/RESTRUCTURE-2026-10-05.md). The Web Store hop loses the
+       ad click, so the gclid (or gbraid/wbraid on iOS/app traffic) is kept in localStorage on nudoiq.com, and /welcome/
+       (same origin, opened by the extension after install) sends it with the welcome_opened funnel row. That row is what
+       the "Trial started" / "Paid subscriber" offline conversions are matched back to. Kept 90 days (Google's upload
+       window); the newest click wins. Store links get utm_source/medium/campaign only: the Chrome Web Store dashboard
+       reports those three and passes nothing to the extension, so a per-click id in the store URL would carry nothing. -->
+  <script>
+    (function () {
+      try {
+        var q = new URLSearchParams(location.search), keys = ["gclid", "gbraid", "wbraid"], i, v;
+        for (i = 0; i < keys.length; i++) {
+          v = q.get(keys[i]);
+          if (v && /^[\w.\-]{10,300}$/.test(v)) {
+            localStorage.setItem("nudoiq_gclid", JSON.stringify({ type: keys[i], id: v, ts: Date.now(), lp: location.pathname }));
+            break;
+          }
+        }
+        var s = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+        if (!s || !s.ts || Date.now() - s.ts > 90 * 864e5) return;
+        var camp = (q.get("utm_campaign") || "google_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "google_ads";
+        var tag = function () {
+          Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+            var u = new URL(a.href);
+            u.searchParams.set("utm_source", "google");
+            u.searchParams.set("utm_medium", "cpc");
+            u.searchParams.set("utm_campaign", camp);
+            a.href = u.toString();
+          });
+        };
+        if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+      } catch (e) {}
+    })();
+  </script>
+  <!-- 2026-10-05: title carries the searched words (100% of ad clicks came from load-board queries; ADS-AUDIT item 0.4).
+       Built only from Martha's approved RSA headlines "Amazon Relay load board tool" and "Amazon Relay auto booker"
+       (research/copy/GOOGLE-ADS-RSA-2026-10-05.json). Page is noindex, so this is for landing-page relevance only. -->
+  <title>Альтернатива LoadFetcher: грузы Relay бронируются за вас | NudoIQ</title>
+  <!-- 2026-10-04 rebuild: description trimmed only ("and shows real profit per load" removed, no "profit" on this page). -->
+  <meta name="description" content="Грузы в Relay бронируются за вас, только если чистая прибыль не ниже вашего минимума. Сравните NudoIQ и LoadFetcher и попробуйте 7 дней бесплатно.">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#16255A">
+  <link rel="canonical" href="https://nudoiq.com/ru/get/loadfetcher/">
+  <link rel="alternate" hreflang="en" href="https://nudoiq.com/get/loadfetcher/">
+  <link rel="alternate" hreflang="x-default" href="https://nudoiq.com/get/loadfetcher/">
+  <!-- /get/ = the ADS page (Google Ads are desktop-only). A phone cannot install a Chrome extension, so a phone that
+       lands here goes to /m/ (the email-me-the-install-link page), query string kept. ?view=desktop / ?view=mobile
+       override for testing; same detection as before. Runs before the analytics tags so a forwarded visit is not
+       counted twice. -->
+  <script>
+    (function () {
+      // 2026-10-05 (research/seo/SITE-OPTIMIZATION-2026-10-05.md): (1) Google's crawlers are not forwarded. AdsBot-Google-Mobile
+      // has a phone UA, so it was being sent to /m/ and Ads graded /m/ as the landing page ("below average" landing page
+      // experience on every keyword, ADS-AUDIT-2026-10-04 item 0.3). (2) A phone in "desktop site" mode (desktop UA, ~980px
+      // wide, touch only) slipped past the old test: Clarity has a Mobile ad click that stayed 14 s on /get/ (2026-10-02).
+      // A touch-only device with no fine pointer is a phone or tablet, neither of which can install a Chrome extension.
+      var ua = navigator.userAgent, force = new URLSearchParams(location.search).get("view");
+      var bot = /AdsBot-Google|Googlebot|Google-InspectionTool|Mediapartners-Google/i.test(ua);
+      var touchOnly = !!(window.matchMedia && matchMedia("(pointer: coarse)").matches && !matchMedia("(any-pointer: fine)").matches);
+      var mobile = force ? force === "mobile" : (!bot && (/Android|iPhone|iPad|iPod|Mobile/i.test(ua) || (navigator.maxTouchPoints > 1 && (innerWidth < 900 || touchOnly))));
+      if (mobile) location.replace("/m/" + (location.search ? location.search + "&" : "?") + "lp=lf" + location.hash);
+    })();
+  </script>
+  <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="/icons/favicon-48.png" type="image/png" sizes="48x48">
+  <link rel="icon" href="/icons/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="icon" href="/icons/favicon-144.png" type="image/png" sizes="144x144">
+  <link rel="icon" href="/icons/favicon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap">
+  <!-- Hero product shot (same file and preload pattern as the homepage hero). -->
+  <link rel="preload" as="image" href="/assets/shot-hero-loadboard.webp" type="image/webp" fetchpriority="high">
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;NQ_LATER(function(){y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);});})(window, document, "clarity", "script", "y9n5ejt2k9");
+  </script>
+  <!-- Google tag (Google Ads AW-18464861190). Measures the Add to Chrome click from Google ads; no customer data sent. -->
+  <script>NQ_LATER(function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=AW-18464861190';document.head.appendChild(s);});</script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-18464861190');</script>
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;NQ_LATER(function(){s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)})}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1601820741955520'); fbq('track', 'PageView');
+  </script>
+  <style>
+    /* ═══ AURA-SYSTEM TOKENS — copied verbatim from nudoiq-website/index.html so this
+       page renders as the same site, not a second design. ═══ */
+    :root{
+      --ink:#161616; --ink-2:#2A2A2A; --ink-3:#333232; --ink-4:#4D4D4D;
+      --paper:#FFFFFF; --paper-2:#F9F9FA;
+      --peri:#B1CBFF; --peri-2:#7CA8FF; --blue:#3366FF;
+      --blue-deep:#2551B8; --navy:#1E306E; --peach:#FFBB8C;
+      --rc:24px; --ri:16px; --rp:999px;
+      --gut:16px; --max:1104px;
+      --ff:"Inter Tight","Basel Grotesk",Inter,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+      --sh-2:0 14px 34px -14px rgba(22,22,22,.28);
+      --sh-3:0 40px 90px -40px rgba(12,20,52,.62);
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ff);
+      font-size:16px;line-height:1.55;font-weight:400;-webkit-font-smoothing:antialiased;
+      letter-spacing:-0.01em; overflow-x:hidden}
+    img{max-width:100%;height:auto;display:block}
+    a{color:inherit}
+    h1,h2,h3{margin:0;font-weight:500;letter-spacing:-.02em;line-height:1.06}
+    p{margin:0}
+    [hidden]{display:none!important}
+
+    /* Visible Martha placeholders: impossible to miss in review, never ship as-is. */
+    .martha{background:#FFF3B0;color:#5A4500;outline:2px dashed #C99A00;outline-offset:2px;border-radius:4px;
+      font-size:.62em;line-height:1.35;font-weight:600;letter-spacing:0;display:inline-block;padding:4px 8px}
+
+    /* ═══ HEADER — logo + one CTA. The old "nudoiq.com" text link (an exit) is gone:
+       install-first pages (Honey) carry the logo and at most one other link. ═══ */
+    .top{background:#fff;border-bottom:1px solid rgba(22,22,22,.08)}
+    .topin{max-width:1272px;margin:0 auto;padding:16px 16px;display:flex;justify-content:space-between;align-items:center}
+    .wm{font-size:24px;font-weight:600;letter-spacing:-0.03em;color:var(--ink);text-decoration:none}
+    .wm span{color:var(--blue)}
+    .top-cta{display:inline-flex;align-items:center;padding:10px 18px;border-radius:var(--rp);background:var(--blue);
+      color:#fff;font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap}
+    .top-cta:hover{background:var(--blue-deep)}
+    .topin .lang-en{margin-left:auto;margin-right:18px;font-size:14px;color:var(--ink-4);text-decoration:none;padding:12px 4px}
+    .topin .lang-en:hover{color:var(--ink)}
+    html[lang=ru] h1.display{font-size:clamp(30px,3.3vw,44px)}
+    html[lang=ru] .lede{font-size:clamp(16px,1.3vw,18px)}
+
+    /* ═══ BUTTONS — identical to homepage .btn/.btn-dark/.btn-go ═══ */
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      border-radius:var(--rp);font-family:var(--ff);font-size:17px;font-weight:600;
+      letter-spacing:-.01em;text-decoration:none;padding:17px 32px;border:1px solid transparent;
+      cursor:pointer;transition:background .18s ease,color .18s ease,border-color .18s ease;
+      white-space:nowrap;min-height:56px}
+    .btn img{width:22px;height:22px}
+    .btn-dark{background:#fff;color:var(--ink)}
+    .btn-dark:hover{background:#E9EEFB}
+    .btn-go{background:var(--blue);color:#fff}
+    .btn-go:hover{background:var(--blue-deep)}
+
+    /* ═══ HERO — homepage panel + gradient, split like monday / Grammarly-for-Chrome / Honey:
+       promise, ask and offer on the left, the real product on the right, all inside 900px. ═══ */
+    .hero{padding:16px var(--gut) 0}
+    .hero-panel{position:relative;border-radius:var(--rc);overflow:hidden;
+      padding:clamp(32px,4.4vw,56px) clamp(20px,3.4vw,48px);
+      background:linear-gradient(158deg,#16255A 0%,#22459E 44%,#2C57CC 76%,#3563E8 100%)}
+    .curves{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
+    .hero-grid{position:relative;z-index:2;max-width:1320px;margin:0 auto;display:grid;gap:36px;
+      grid-template-columns:minmax(0,1fr)}
+    @media (min-width:980px){
+      .hero-grid{grid-template-columns:minmax(0,.74fr) minmax(0,1.26fr);gap:40px;align-items:center}
+    }
+    .hero-copy{max-width:560px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:500;
+      letter-spacing:.09em;text-transform:uppercase;color:#C9D9FF;margin-bottom:14px}
+    h1.display{color:#fff;font-weight:600;letter-spacing:-.035em;line-height:1.04;
+      font-size:clamp(32px,4.2vw,54px);margin:0 0 16px;text-wrap:balance}
+    .lede{color:rgba(255,255,255,.96);font-size:clamp(16px,1.5vw,19px);line-height:1.5;max-width:46ch}
+    .cta{margin:26px 0 0}
+    .cta .btn{min-width:300px}
+    .cta .under{font-size:13.5px;color:rgba(255,255,255,.82);margin:12px 2px 0;line-height:1.5}
+
+    /* Proof bar — same component as the homepage hero, left-aligned here. */
+    .proofbar{display:inline-flex;align-items:center;gap:20px;margin:22px 0 0;
+      padding:12px 22px;border-radius:16px;
+      background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 10px 26px rgba(10,20,60,.22);
+      -webkit-backdrop-filter:saturate(140%) blur(6px);backdrop-filter:saturate(140%) blur(6px)}
+    .pb-cell{display:inline-flex;align-items:center;gap:10px}
+    .pb-stack{display:flex;flex-direction:column;gap:1px;text-align:left}
+    .pb-stars{color:#FFC53D;font-size:13px;letter-spacing:2.5px;line-height:1}
+    .pb-label{color:rgba(255,255,255,.90);font-size:13px;font-weight:500;line-height:1.3}
+    .pb-big{color:#fff;font-size:24px;font-weight:700;letter-spacing:-.02em;line-height:1}
+    .pb-rule{width:1px;height:30px;background:rgba(255,255,255,.22)}
+    .pb-solo{font-size:15px;font-weight:600;color:#fff}
+
+    /* Offer + urgency (D39: offer and urgency stay on top). Same ids/JS as before, compact card. */
+    .price-card{margin-top:18px;background:#fff;border-radius:var(--ri);padding:14px 18px;
+      max-width:520px;
+      box-shadow:0 10px 26px rgba(10,20,60,.22)}
+    .price-eyebrow{margin-bottom:4px;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-deep)}
+    .price-top{display:flex;align-items:center;justify-content:space-between;gap:10px 16px;flex-wrap:wrap;margin-bottom:6px}
+    .price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+    .price-old{font-size:16px;font-weight:600;color:var(--ink-4);text-decoration:line-through;
+      text-decoration-color:#B3392E;text-decoration-thickness:2px}
+    .price-old span{font-size:12px;font-weight:500}
+    .price-new{font-size:26px;font-weight:700;color:var(--ink);letter-spacing:-.02em}
+    .price-new span{font-size:13px;font-weight:500;color:var(--ink-4)}
+    .price-line{font-size:13px;line-height:1.45;color:var(--ink-4)}
+    .price-line b{color:var(--ink);font-weight:600}
+    .countdown{display:inline-flex;align-items:baseline;gap:6px;
+      background:var(--paper-2);border:1px solid #E1E7F5;border-radius:var(--rp);padding:5px 14px}
+    .cd-label{font-size:12px;color:var(--ink-4);font-weight:500}
+    .cd-num{font-size:14px;font-weight:700;color:var(--blue-deep)}
+    .price-expired{font-size:14px;color:var(--ink-4)}
+
+    /* Product shot — the real NudoIQ bar on the real Relay load board. */
+    .hero-shot{margin:0;position:relative}
+    /* Same treatment as the homepage .stage-main (Caleb 2026-10-04): the whole board, uncropped, with the
+       dark "Dashboard / Load Board" header, rounded 18px, homepage shadow and navy backing. */
+    .hero-shot .frame{border-radius:18px;overflow:hidden;box-shadow:var(--sh-3);
+      border:1px solid rgba(255,255,255,.5);background:#0E2036}
+    .hero-shot .crop{overflow:visible}
+    .hero-shot img{width:100%;display:block}
+    @media (max-width:560px){ .hero-shot .frame{border-radius:12px} }
+
+    /* People, copied from the homepage hero (.f-person) and feature header (.facepile). Caleb 2026-10-05: "we are
+       missing a couple human faces like the ones on our page on our ads landing page". AI portraits, decorative only:
+       no name, quote or claim beside them (research/SITE-BACKGROUND-PEOPLE-2026-09-15.md), so the facepile stays
+       away from the "300+ carrier users" line. Portrait sized to the homepage ratio (156px on a ~1015px board there,
+       ~124px on this 792px one) and dropped below the two-column breakpoint, as the homepage drops its floats. */
+    .f-person{position:absolute;z-index:4;width:min(15.5%,124px);right:-8px;bottom:-46px;border-radius:14px;
+      overflow:hidden;box-shadow:var(--sh-3);border:3px solid #fff;background:#DCE6FB;aspect-ratio:3/4}
+    .f-person img{width:100%;height:100%;object-fit:cover;object-position:52% 24%}
+    @media (max-width:979px){ .f-person{display:none} }
+    .facepile{display:flex;justify-content:center;margin:0 0 14px}
+    .facepile img{width:52px;height:52px;border-radius:50%;border:3px solid #fff;background:var(--peri);
+      object-fit:cover;object-position:center 26%;box-shadow:0 2px 6px rgba(22,22,22,.06)}
+    .facepile img+img{margin-left:-17px}
+
+    @media (max-width:560px){
+      .proofbar{flex-direction:column;gap:12px;padding:14px 20px;display:flex}
+      .pb-rule{width:40px;height:1px}
+      .pb-stack{text-align:center;align-items:center}
+      .cta .btn{width:100%;min-width:0}
+    }
+
+    /* ═══ SECTIONS ═══ */
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;width:100%}
+    section.block{padding:56px 0 0}
+    h2.sec{font-size:clamp(22px,2.6vw,30px);font-weight:600;color:var(--ink);text-align:center;margin:0 0 26px}
+
+    /* What it does — three cards, unchanged copy. */
+    .feat-grid{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+    .feat{background:var(--paper-2);border:1px solid #E6E9F0;border-radius:var(--ri);padding:22px 22px 24px}
+    .feat b{display:block;font-size:18px;font-weight:600;color:var(--ink);margin-bottom:6px}
+    .feat p{font-size:15px;line-height:1.5;color:var(--ink-4)}
+    .feat .ico{width:36px;height:36px;border-radius:18px;background:var(--peri);color:var(--blue-deep);
+      display:grid;place-items:center;margin-bottom:14px}
+    .feat .ico svg{width:18px;height:18px}
+
+    /* Inline CTA */
+    .cta-inline{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 18px;padding-top:28px}
+    .cta-inline .note{font-size:14px;color:var(--ink-4);line-height:1.45}
+    .cta-inline .note b{color:var(--ink)}
+
+    /* How to start — three numbered steps (install-flow friction removal). */
+    .steps{list-style:none;margin:0;padding:0;display:grid;gap:16px;grid-template-columns:repeat(4,1fr);counter-reset:s}
+    .steps li{display:flex;gap:14px;font-size:15px;line-height:1.5;color:var(--ink-4)}
+    .steps li b{color:var(--ink);font-size:17px;font-weight:600;display:block;margin-bottom:2px}
+    .steps .n{flex:0 0 32px;height:32px;border-radius:16px;background:var(--blue);
+      color:#fff;font-weight:600;font-size:14px;display:grid;place-items:center}
+
+    /* Objections / risk — approved homepage FAQ text + Martha's control line. */
+    .obj-grid{display:grid;gap:14px;grid-template-columns:repeat(4,1fr)}
+    .obj-card{background:var(--paper-2);border:1px solid #E6E9F0;border-radius:var(--ri);padding:18px 20px}
+    .obj-card b{display:block;font-size:15px;color:var(--ink);margin-bottom:6px}
+    .obj-card p{font-size:13.5px;line-height:1.5;color:var(--ink-4)}
+
+    @media (max-width:900px){
+      .feat-grid,.steps{grid-template-columns:1fr}
+      .obj-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:560px){ .obj-grid{grid-template-columns:1fr} }
+
+    /* Video stays at the bottom (D39). */
+    .shot video{width:100%;height:auto;display:block;border-radius:18px;border:1px solid #D5DEF0;
+      box-shadow:var(--sh-2);background:#0B0B12}
+    .proof{margin-top:16px;background:var(--ink);color:#fff;border-radius:18px;padding:18px 20px;
+      font-size:16px;font-weight:500}
+    .proof .s{color:var(--peach);letter-spacing:3px;font-size:18px;display:block;margin-bottom:4px}
+
+    section.cta2{text-align:center;padding:40px 0 0}
+    section.cta2 .under{color:var(--ink-4);margin-top:12px;font-size:14px}
+
+    footer{max-width:var(--max);margin:0 auto;padding:48px 24px 40px;font-size:12px;color:var(--ink-4)}
+    footer a{color:var(--ink-4)}
+
+    /* Sticky bar — unchanged behaviour. */
+    .stickybar{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#fff;border-top:1px solid rgba(22,22,22,.10);
+      box-shadow:0 -6px 20px rgba(22,22,22,.08);transform:translateY(110%);transition:transform .25s ease}
+    .stickybar.on{transform:translateY(0)}
+    .stickyin{max-width:var(--max);margin:0 auto;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px}
+    .stickyin .txt{font-size:14px;color:var(--ink-4);line-height:1.35}
+    .stickyin .txt b{color:var(--ink);font-size:15px}
+    .stickyin .btn{min-height:44px;padding:12px 24px;font-size:16px}
+    body.has-sticky{padding-bottom:72px}
+    @media (max-width:520px){.stickyin .txt span{display:none}}
+
+    /* ═══ LEMUR / ANDROID (2026-10-07, Caleb: "how to get the extension on lemur browser"). Quiet card below the
+       objections; words: research/copy/LEMUR-ANDROID-SECTION-2026-10-07.json (Martha). ═══ */
+    .lemur{max-width:760px;margin:44px auto 0;background:var(--paper-2);border:1px solid #E6E9F0;border-radius:var(--ri);padding:22px 24px;scroll-margin-top:84px}
+    .lemur h2{font-size:clamp(18px,2.2vw,22px);font-weight:600;color:var(--ink);margin:0 0 6px;letter-spacing:-.01em;text-align:left}
+    .lemur .l-intro{font-size:14.5px;line-height:1.5;color:var(--ink-4);margin:0 0 16px}
+    .lemur ol{list-style:none;margin:0;padding:0;display:grid;gap:12px 20px;grid-template-columns:1fr 1fr}
+    .lemur li{display:flex;gap:10px;font-size:14px;line-height:1.45;color:var(--ink-4)}
+    .lemur li b{display:block;color:var(--ink);font-size:15px;font-weight:600;margin-bottom:1px}
+    .lemur .l-n{flex:0 0 24px;height:24px;border-radius:12px;background:#fff;border:1px solid #D5DDF0;color:var(--blue-deep);
+      font-size:12.5px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
+    .lemur .l-acts{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 14px}
+    .lemur .l-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:var(--rp);
+      font:inherit;font-size:14.5px;font-weight:600;text-decoration:none;cursor:pointer;background:#fff;color:var(--ink);border:1px solid #CBD3E6}
+    .lemur .l-btn:hover{border-color:var(--blue);color:var(--blue-deep)}
+    .lemur .l-btn:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+    .lemur .l-note{font-size:13px;line-height:1.5;color:var(--ink-4);margin:0 0 4px}
+    .lemur .l-note a{color:var(--blue-deep);font-weight:600}
+    @media (max-width:640px){.lemur{padding:18px 18px}.lemur ol{grid-template-columns:1fr}.lemur .l-btn{flex:1 1 100%}}
+    .lemur-teaser{margin:4px 0 0;text-align:center;font-size:13.5px}
+    .lemur-teaser a{display:inline-block;padding:13px 8px;line-height:18px}
+    .lemur-teaser a{color:#fff;text-decoration:underline;text-underline-offset:3px;opacity:.9}
+    /* ═══ LOADFETCHER PAGE COMPONENTS (2026-10-09). Reference for the three middle sections:
+       clickup.com/compare/asana-vs-clickup (four reasons list, dated comparison table with our column tinted,
+       CTA band under the table, migration steps). Built with this page's own tokens and card style. ═══ */
+    .reasons{list-style:none;margin:0;padding:0;display:grid;gap:16px;grid-template-columns:repeat(2,minmax(0,1fr))}
+
+    .cmp-head{text-align:center}
+    .cmp-head h2.sec{margin-bottom:12px}
+    .checked{display:inline-flex;align-items:center;gap:6px;background:var(--paper-2);border:1px solid #E1E7F5;border-radius:var(--rp);
+      padding:5px 14px;font-size:12.5px;font-weight:500;color:var(--ink-4)}
+    .cmp-cap{max-width:640px;margin:12px auto 22px;font-size:14px;line-height:1.5;color:var(--ink-4);text-align:center;text-wrap:balance}
+    .cmp{width:100%;border-collapse:separate;border-spacing:0;font-size:15px;line-height:1.45}
+    .cmp th,.cmp td{padding:16px 18px;border-bottom:1px solid #E6E9F0;vertical-align:middle;text-align:left}
+    .cmp thead th{font-size:20px;font-weight:600;color:var(--ink);padding-top:20px;padding-bottom:14px}
+    .cmp thead th:first-child{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-4)}
+    .cmp tbody th{width:28%;font-weight:600;color:var(--ink)}
+    .cmp .nq{background:#F3F7FF;color:var(--ink);width:36%}
+    .cmp thead .nq{border-radius:var(--ri) var(--ri) 0 0;color:var(--blue-deep)}
+    .cmp tbody tr:last-child .nq{border-radius:0 0 var(--ri) var(--ri)}
+    .cmp tbody tr:last-child th,.cmp tbody tr:last-child td{border-bottom:0}
+    .cmp .lf{color:var(--ink-4)}
+    .cmp .yes{display:inline-flex;gap:8px;align-items:flex-start}
+    .cmp .yes svg{flex:0 0 16px;width:16px;height:16px;margin-top:3px;color:var(--blue)}
+    .cmp-src{margin:14px 2px 0;font-size:12.5px;line-height:1.55;color:var(--ink-4)}
+    .cmp-src a{color:var(--blue-deep);font-weight:600}
+    .cmp-src .cmp-more{display:inline-block;padding:12px 2px;margin:-6px 0 -12px;line-height:20px}
+    .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+    .cmp-band{display:flex;align-items:center;justify-content:space-between;gap:16px 24px;flex-wrap:wrap;margin-top:26px;
+      background:var(--paper-2);border:1px solid #E6E9F0;border-radius:var(--rc);padding:22px 28px}
+    .cmp-band .note{font-size:17px;line-height:1.45;color:var(--ink);max-width:560px}
+    .switch-note{max-width:720px;margin:22px auto 0;text-align:center;font-size:14.5px;line-height:1.55;color:var(--ink-4);text-wrap:balance}
+    .tm-lf{display:block;margin-top:6px}
+    @media (max-width:900px){ .reasons{grid-template-columns:1fr} }
+    @media (min-width:980px) and (max-width:1320px){ .proofbar{gap:14px;padding:12px 16px} .proofbar .pb-label{font-size:12.5px} .proofbar .pb-solo{font-size:13.5px} }
+    /* Phones and narrow windows: each row becomes a small card (label, then NudoIQ, then LoadFetcher). */
+    @media (max-width:640px){
+      .cmp thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+      .cmp,.cmp tbody,.cmp tr,.cmp th,.cmp td{display:block;width:auto}
+      .cmp tr{border:1px solid #E6E9F0;border-radius:var(--ri);margin:0 0 12px;overflow:hidden;background:#fff}
+      .cmp tbody th{width:auto;border-bottom:1px solid #E6E9F0;padding:12px 16px}
+      .cmp td{padding:10px 16px;border-bottom:0}
+      .cmp .nq,.cmp tbody tr:last-child .nq{width:auto;border-radius:0}
+      .cmp td::before{content:attr(data-label);display:block;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+        color:var(--ink-4);margin-bottom:2px}
+      .cmp td.nq::before{color:var(--blue-deep)}
+      .cmp-band{padding:20px}
+      .cmp-band .btn{width:100%}
+    }
+    /* lf-concede-2026-10-14 */
+  /* 2026-10-14 D77: one icon system for comparison cells. NudoIQ = solid green check (#1F7A5C, the product's own
+     PRICE UP green, 5.4:1 on white); a rival that lists the item = muted check; not listed = muted dash. */
+  .ic{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;vertical-align:middle;flex:0 0 22px}
+  .ic svg{width:14px;height:14px;display:block}
+  .ic-y{background:#1F7A5C;color:#fff}
+  .ic-y2{background:#E3E6EC;color:#3F4652}
+  .ic-n{background:#F0F1F4;color:#6B7280}
+  td.c,th.c{text-align:center !important;vertical-align:middle !important}
+  .cq{display:block;font-size:11px;line-height:1.3;color:#5B6270;margin-top:3px;font-weight:500}
+  .nq-all{margin:18px 0 22px;padding:18px 20px;background:#F3F7FF;border:1px solid #D9E4FF;border-radius:16px}
+  .nq-all h3{margin:0 0 10px;font-size:17px}
+  .nq-all .all-intro{margin:0 0 10px;font-size:14.5px;color:#4A5160}
+  .nq-all ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px 18px}
+  .nq-all li{display:flex;align-items:center;gap:10px;margin:0;padding:0;font-weight:500;line-height:1.35}
+  .nq-all li::before{content:none}
+    .nq-all{margin-top:22px}
+    .cmp.cmp-ic th.c,.cmp.cmp-ic td.c{width:150px}
+    .cmp.cmp-ic tbody th{width:auto}
+    .cmp.cmp-ic .ic{width:26px;height:26px;flex-basis:26px}
+    .cmp.cmp-ic .ic svg{width:16px;height:16px}
+    @media (max-width:640px){
+      .cmp.cmp-ic{display:table;width:100%}
+      .cmp.cmp-ic thead{position:static;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal;display:table-header-group}
+      .cmp.cmp-ic tbody{display:table-row-group}
+      .cmp.cmp-ic tr{display:table-row;border:0;margin:0;background:none}
+      .cmp.cmp-ic th,.cmp.cmp-ic td{display:table-cell;padding:12px 8px;border-bottom:1px solid #E6E9F0}
+      .cmp.cmp-ic thead th{font-size:15px}
+      .cmp.cmp-ic th.c,.cmp.cmp-ic td.c{width:92px}
+      .cmp.cmp-ic td::before{content:none}
+      .cmp.cmp-ic tbody tr:last-child th,.cmp.cmp-ic tbody tr:last-child td{border-bottom:0}
+    }
+
+  </style>
+  <!-- Microsoft Advertising UET (tag 187278889). Measures the Add to Chrome click from Microsoft ads; no customer data sent. -->
+<script>
+  window.uetq = window.uetq || [];
+  NQ_LATER(function () {
+    (function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"187278889", enableAutoSpaTracking: true};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");
+  });
+  // Store click -> custom event goal "Store click (MS)": Action equals store_click.
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="bjilnjgfdndecmamphkkcpplfmniocgk"]'); // 2026-10-18: NudoIQ's own listing only (F2)
+    if (!a) return;
+    try {
+      window.uetq = window.uetq || [];
+      window.uetq.push("event", "store_click", { event_category: "cta", event_label: location.pathname + "|" + (a.getAttribute("data-cta") || a.id || "link") });
+    } catch (x) {}
+  }, true);
+  // msclkid capture (Microsoft click ID, auto-tagged on every ad click) + store-link UTMs for Bing clicks.
+  (function () {
+    try {
+      var q = new URLSearchParams(location.search), v = q.get("msclkid");
+      if (v && /^[\w\-]{10,100}$/.test(v)) {
+        localStorage.setItem("nudoiq_msclkid", JSON.stringify({ id: v, ts: Date.now(), lp: location.pathname }));
+      }
+      var m = JSON.parse(localStorage.getItem("nudoiq_msclkid") || "null");
+      if (!m || !m.ts || Date.now() - m.ts > 90 * 864e5) return;
+      var g = JSON.parse(localStorage.getItem("nudoiq_gclid") || "null");
+      if (g && g.ts && g.ts > m.ts) return;              // a newer Google click owns the attribution
+      var camp = (q.get("utm_campaign") || "bing_ads").replace(/[^\w.\-|]/g, "").slice(0, 60) || "bing_ads";
+      var tag = function () {
+        Array.prototype.forEach.call(document.querySelectorAll('a[href^="https://chromewebstore.google.com/"]'), function (a) {
+          var u = new URL(a.href);
+          u.searchParams.set("utm_source", "bing");
+          u.searchParams.set("utm_medium", "cpc");
+          u.searchParams.set("utm_campaign", camp);
+          a.href = u.toString();
+        });
+      };
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", tag); else tag();
+    } catch (e) {}
+  })();
+</script>
+</head>
+<!-- ru/get/loadfetcher: RU twin of /get/loadfetcher/ built by research/seo/cardamon-alt-2026-10-16/twin.py from lf-ru-copy.json (Martha). Head tags, tracking, ids and source comments are the English page's. -->
+<body data-clarity-unmask="true">
+  <header class="top"><div class="topin"><!-- 2026-10-18 ads-landing leak fix: logo is not a link (exit), as on /free-week-on/. --><span class="wm"><span>N</span>udoIQ</span><a class="lang-en" href="/get/loadfetcher/?lang=en" hreflang="en" lang="en">English</a><a class="top-cta js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=loadfetcher" target="_blank" rel="noopener" data-cta="header">Попробовать 7 дней бесплатно</a></div></header>
+
+  <main id="main">
+    <!-- ── HERO (2026-10-04 rebuild, research/landing/LANDING-TEARDOWN-2026-10-04.md).
+         Left: one promise, one ask, offer + urgency (D39), proof. Right: the real product.
+         Words: approved copy reused verbatim, plus Martha's 2026-10-09 strings (research/copy/GET-LOADFETCHER-2026-10-09.json). ── -->
+    <section class="hero">
+      <div class="hero-panel">
+        <svg class="curves" viewBox="0 0 1440 300" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M0,60 C330,20 700,110 1440,44 L1440,0 L0,0 Z" fill="rgba(177,203,255,.09)"/>
+          <path d="M0,260 C430,190 910,260 1440,170 L1440,300 L0,300 Z" fill="rgba(21,34,82,.30)"/>
+        </svg>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Ищете альтернативу LoadFetcher?</p>
+            <!-- H1 brief (2026-10-09): max 8 words, the ONE reason a LoadFetcher user switches, echoing the live ad
+                 ("Relay loads booked for you" / "AutoBook at your minimum net"); names LoadFetcher only to confirm relevance,
+                 never says what LoadFetcher can't do (that lives in the dated, sourced table). -->
+            <h1 class="display" id="heroH1">Грузы бронируются за вас, только с чистой прибылью не ниже вашего минимума.</h1>
+            <!-- Subhead brief: what NudoIQ is (Chrome extension for the Relay load board) and how AutoBook works at your number. -->
+            <p class="lede" id="heroLede">AutoBook в NudoIQ бронирует грузы в Relay за вас, и только те, где чистая прибыль не ниже вашего минимума.</p>
+
+            <!-- desktop path: Add to Chrome directly (this is what the Google ads traffic hits) -->
+            <div class="cta" id="d">
+              <a class="btn btn-dark" id="cws" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=loadfetcher" target="_blank" rel="noopener"><img src="/assets/chrome-mark.svg" alt="" width="22" height="22">Попробовать 7 дней бесплатно</a>
+              <!-- research/copy/google-sitelinks-and-get-lines-2026-09-21.json get_page_lines (copywriter). Do not edit words here. -->
+              <p class="under">Работает в аккаунте Relay вашего перевозчика, в вашем браузере. Никогда не просит пароль от Amazon. Карта для старта не нужна.</p>
+            </div>
+
+            <div class="proofbar">
+              <span class="pb-cell"> <img src="/assets/chrome-mark.svg" alt="" width="24" height="24" decoding="async"> <span class="pb-stack"> <span class="pb-stars" aria-hidden="true">★★★★★</span> <span class="pb-label">5.0 в Chrome Web Store</span> </span> </span> <span class="pb-rule" aria-hidden="true"></span> <span class="pb-cell"> <!-- No user counts on LoadFetcher pages (Caleb, research/copy/LOADFETCHER-ALT-PAGE-2026-10-05.json). --> <span class="pb-label pb-solo">Создан перевозчиком, который работает в Relay</span> </span>
+            </div>
+
+            <!-- ── PRICE BLOCK — same ids, same copy, same LAUNCH_END logic as before; only restyled compact.
+                 LAUNCH_END is 2026-10-04 23:59:59 ET (TONIGHT). After that the card shows the priceExpired
+                 line only. Rolling or removing the offer is Caleb's call (see teardown doc). ── -->
+            <div class="price-card" id="priceBlock">
+              <p class="price-eyebrow" id="priceEyebrow">Скидка 50% до конца дня</p>
+              <div class="price-top">
+                <div class="price-row" id="priceRow">
+                  <span class="price-old" id="priceOld">$99.98<span>/мес</span></span> <span class="price-new" id="priceNew">$49.99<span>/мес</span></span>
+                </div>
+                <div class="countdown" id="countdown">
+                  <span class="cd-label">Предложение закончится через</span> <span class="cd-num" id="cdHours">--</span><span class="cd-label">ч</span> <span class="cd-num" id="cdMins">--</span><span class="cd-label">мин</span>
+                </div>
+              </div>
+              <!-- 2026-10-18 D96 claim fix, words: research/copy/ADS-LANDING-2026-10-18.json (Martha). --><p class="price-line" id="priceLine1">$0 сегодня. Сначала бесплатная неделя, карта не нужна. $49.99, только если вы добавите карту.</p>
+              <p class="price-line" id="priceLine2">Цена со скидкой сохраняется, пока действует ваша подписка.</p>
+              <p class="price-expired" id="priceExpired" hidden>Скидка этой недели закончилась. NudoIQ стоит $49.99 в месяц.</p>
+            </div>
+          </div>
+
+          <!-- Real product, not an illustration: same screenshot and alt text as the homepage hero. -->
+          <figure class="hero-shot">
+            <div class="frame"><div class="crop">
+              <img src="/assets/shot-hero-loadboard.webp" alt="Панель управления NudoIQ внутри load board в Amazon Relay, с режимами alert, search и autobook над 358 результатами из Мэривилла, штат Теннесси" width="1892" height="1021" decoding="async" loading="eager" fetchpriority="high">
+            </div></div>
+            <!-- Hero AI portrait (.f-person) removed on this page: it sat in the same row as "Built by a Relay carrier", a claim
+                 about a real person (rule: AI people never beside a name, quote, count or claim). The facepile below stays. -->
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <!-- ── FOUR REASONS — replaces the template's three feature cards. Reference: ClickUp's "The four reasons" list
+           (clickup.com/compare/asana-vs-clickup), drawn with this page's .feat card style. Words: Martha
+           (research/copy/GET-LOADFETCHER-2026-10-09.json). Facts: PRODUCT-FACTS.md s4, s9, s10; D47; LoadFetcher plans 2026-10-09. ── -->
+      <section class="block" aria-labelledby="whyH">
+        <h2 class="sec" id="whyH">Еще три причины выбрать NudoIQ</h2>
+        <ul class="reasons">
+          <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span><b>Сразу видно, сколько груз даст чистыми</b><p>У каждого груза рядом с ценой видна чистая сумма в долларах и чистые $ за милю, за вычетом расходов, которые вы указали.</p></li>
+          <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></svg></span><b>Письмо для диспута по scorecard составляется за вас</b><p>NudoIQ составляет черновик письма по нарушению. Вы проверяете и отправляете. Решение за Amazon.</p></li>
+          <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg></span><b>Одна цена за все траки компании</b><p>Фиксированные $49.99 в месяц, без доплаты за пользователей.</p></li>
+          <li class="feat"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span></li>
+        </ul>
+      </section>
+
+      <!-- 2026-10-14 D77 (Caleb: "in the comparison dont give load fetcher anything"; "a check on every single tile on the left for nudoiq ... reduce the amount of copy"). Words: research/copy/LF-CONCEDE-NOTHING-2026-10-14.json (Martha). Builder: research/seo/lf-concede-2026-10-14/build.py. LoadFetcher facts: store listing v3.25.2 and loadfetcher.com plans + FAQ, accessed 2026-10-14 (research/seo/lf-alt-ctr-2026-10-14/evidence/). -->
+      <!-- ── COMPARISON — 6 rows, dated, sourced; "Not listed" scoped to LoadFetcher's public listing and plans that day.
+           Reference: ClickUp's "ClickUp vs. Asana compared" (H2, last-checked pill, our column tinted, CTA band under the table,
+           source line). No links to LoadFetcher pages (a link to its Web Store listing would also trip the store-click tags);
+           sources are named in plain text, and the full sourced table lives on /loadfetcher-alternative/. ── -->
+      <section class="block" aria-labelledby="cmpH">
+        <div class="cmp-head">
+          <h2 class="sec" id="cmpH">NudoIQ и LoadFetcher: сравнение</h2>
+          <span class="checked">Проверено 14 октября 2026 г.</span>
+          <p class="cmp-cap">По открытым описаниям каждого продукта в Chrome Web Store и на сайтах, проверено 14 октября 2026 г. Прочерк: этого нет в описании, тарифах или FAQ LoadFetcher. Мы не тестировали их продукт.</p><!-- 2026-10-18: contact-page link removed (exit); /loadfetcher-alternative/ keeps it. -->
+        </div>
+        <table class="cmp cmp-ic">
+          <thead><tr><th scope="col"><span class="vh">Функция</span></th><th scope="col" class="nq c">NudoIQ</th><th scope="col" class="lf c">Load­Fetcher</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">AutoBook по Min Net Profit</th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Да"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="lf c"><span class="ic ic-n" role="img" aria-label="Не указано"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+            <tr><th scope="row">Instant Book в один клик</th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Да"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="cq">Новые грузы и рост цены</span></td><td class="lf c"><span class="ic ic-n" role="img" aria-label="Не указано"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+            <tr><th scope="row">Чистая прибыль по грузу</th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Да"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="lf c"><span class="ic ic-n" role="img" aria-label="Не указано"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+            <tr><th scope="row">Письма для диспута по scorecard</th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Да"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="lf c"><span class="ic ic-n" role="img" aria-label="Не указано"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+            <tr><th scope="row">7 дней бесплатно, карта не нужна</th><td class="nq c"><span class="ic ic-y" role="img" aria-label="Да"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></td><td class="lf c"><span class="ic ic-n" role="img" aria-label="Не указано"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4.5 8h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span></td></tr>
+          </tbody>
+        </table>
+        <div class="nq-all"><h3 id="everything-in-nudoiq">Все, что есть в NudoIQ</h3><p class="all-intro">Все это входит в ту же подписку NudoIQ.</p><ul><li><span class="ic ic-y" role="img" aria-label="Да"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Автообновление load board</span></li><li><span class="ic ic-y" role="img" aria-label="Да"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Оповещения о новых грузах и росте цены</span></li><li><span class="ic ic-y" role="img" aria-label="Да"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>История ставок по направлению</span></li><li><span class="ic ic-y" role="img" aria-label="Да"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Поиск обратных грузов (backhaul)</span></li><li><span class="ic ic-y" role="img" aria-label="Да"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Post a Truck</span></li><li><span class="ic ic-y" role="img" aria-label="Да"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M3.6 8.4l2.9 2.9 5.9-6.1" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Скрытие продвигаемых грузов и всплывающих окон о размещении трака</span></li></ul></div>
+        <div class="cmp-band">
+          <p class="note">Запустите AutoBook на своем load board и проверьте его неделю, прежде чем платить.</p>
+          <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=loadfetcher" target="_blank" rel="noopener" data-cta="after-steps">Попробовать 7 дней бесплатно</a>
+        </div>
+        <p class="cmp-src">Мы проверили описание LoadFetcher в Chrome Web Store (версия 3.25.2), а также тарифы и FAQ на loadfetcher.com 14 октября 2026 г. Данные о NudoIQ взяты из нашего собственного расширения.</p><!-- 2026-10-18: 'Full comparison' exit link removed; the table above is the comparison. -->
+      </section>
+
+      <!-- ── SWITCH — the template's three numbered steps, rewritten for a LoadFetcher user (reference: ClickUp's
+           "Move Asana work" block). Facts: LOADFETCHER-ALT-PAGE-2026-10-05.json faq[6] (run one load board extension at a time). ── -->
+      <section class="block" aria-labelledby="howH">
+        <div class="facepile" aria-hidden="true">
+          <img src="/assets/people/face-a.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
+          <img src="/assets/people/face-b.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
+          <img src="/assets/people/face-c.webp" alt="" width="400" height="400" decoding="async" loading="lazy">
+        </div>
+        <h2 class="sec" id="howH">Переход занимает несколько минут</h2>
+        <ol class="steps">
+          <li><span class="n">1</span><div><b>Добавьте NudoIQ в Chrome</b>В Chrome Web Store нажмите кнопку установки (Add to Chrome), затем подтвердите установку расширения.</div></li>
+          <!-- 2026-10-18 D96 claim fix, words: research/copy/ADS-LANDING-2026-10-18.json (Martha). --><li><span class="n">2</span><div><b>Начните бесплатную неделю, карта не нужна</b>Откройте load board в Relay. Чтобы начать, NudoIQ попросит только ваш email.</div></li>
+          <li><span class="n">3</span><div><b>Отключите LoadFetcher</b>На странице расширений Chrome выключите LoadFetcher. Он останется установленным, и его можно снова включить.</div></li>
+          <li><span class="n">4</span><div><b>Нажмите START</b>Откройте load board в Relay, укажите минимум чистой прибыли (Min Net Profit), выберите AUTOBOOK и нажмите START.</div></li>
+        </ol>
+        <p class="switch-note">Вход в Relay и load board остаются прежними. Запускайте только одно расширение для load board за раз, чтобы они не конфликтовали. Если NudoIQ не подойдет под то, как вы бронируете, вернитесь к прежнему инструменту.</p>
+      </section>
+
+      <!-- ── OBJECTIONS — three cards verbatim from the live page (homepage FAQ trust1/faq3/faq10) plus
+           Martha's control line (followup_day5.features[1]). No new safety claim. ── -->
+      <section class="block" aria-labelledby="objH">
+        <h2 class="sec" id="objH">NudoIQ запрашивает мой пароль?</h2>
+        <div class="obj-grid">
+          <div class="obj-card"><b>Ваш пароль остается у вас</b><p>NudoIQ работает в вашей вкладке Relay, где вы уже вошли в аккаунт. Он никогда не просит и не хранит ваш пароль от Amazon.</p></div>
+          <div class="obj-card"><b>Все под вашим контролем</b><p>Нажмите STOP на панели NudoIQ, чтобы выключить его в любой момент.</p></div>
+          <div class="obj-card"><b>NudoIQ связан с Amazon?</b><p>Нет. NudoIQ: независимое расширение для браузера, оно не аффилировано с компанией Amazon.com, Inc. и не одобрено ею.</p></div>
+          <div class="obj-card"><b>Могут ли из-за него заблокировать мой аккаунт?</b><p>NudoIQ работает только в вашем собственном браузере, на страницах Relay, где вы вошли в аккаунт. Он не входит в аккаунт из другого места и не просит пароль. Скорость обновления задаете вы. За аккаунт Relay и соблюдение правил Relay отвечаете вы.</p></div>
+        </div>
+      </section>
+
+    <!-- 2026-10-18: Lemur/Android section removed from this desktop-only ad page (2 exits, 2 extra button texts); phones are forwarded to /m/, which keeps it. -->
+
+      <!-- ── DEMO VIDEO — bottom of the page per D39, same element and files as before. ── -->
+      <section class="block shot">
+        <video controls preload="metadata" playsinline poster="/assets/nudoiq-demo-poster.webp"
+               aria-label="NudoIQ за 66 секунд (на английском): load board, чистая прибыль, AutoBook, диспуты и оплата водителей" width="1280" height="720">
+          <source src="/assets/nudoiq-demo.mp4" type="video/mp4">
+          <img src="/assets/email/shot-hero-loadboard.jpg" alt="NudoIQ" width="1180" height="640">
+        </video>
+        <div class="proof"><span class="s">★★★★★</span>Оценка 5.0 в Chrome Web Store.</div>
+      </section>
+
+      <!-- ── FINAL CTA — same id/handler as before. ── -->
+      <section class="cta2" id="d2">
+        <a class="btn btn-go" id="cws2" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=loadfetcher" target="_blank" rel="noopener"><img src="/assets/chrome-mark.svg" alt="" width="22" height="22">Попробовать 7 дней бесплатно</a>
+        <p class="under">7 дней бесплатно. Карта для старта не нужна.</p>
+      </section>
+    </div>
+  </main>
+
+  <div class="stickybar" id="stickybar" aria-hidden="true">
+    <div class="stickyin">
+      <span class="txt"><b>Попробуйте NudoIQ 7 дней бесплатно.</b> <span>Карта не нужна.</span></span> <a class="btn btn-go js-cta" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=ru&amp;utm_campaign=loadfetcher" target="_blank" rel="noopener" data-cta="sticky" tabindex="-1">Попробовать 7 дней бесплатно</a>
+    </div>
+  </div>
+
+  <footer>NudoIQ, 2709 N Hayden Island Dr STE 436020, Portland, OR 97217-8254, US · <a href="/privacy.html">Конфиденциальность</a><br>Amazon и Amazon Relay являются товарными знаками Amazon.com, Inc. или ее аффилированных лиц. NudoIQ: независимый продукт, он не аффилирован с Amazon.com, Inc., не одобрен и не спонсируется ею.<span class="tm-lf">LoadFetcher: товарный знак своего владельца, название упоминается здесь только для сравнения. NudoIQ не аффилирован ни с LoadFetcher, ни с Amazon.</span></footer>
+
+  <script>
+  (function () {
+    // Desktop-only page: phones were forwarded to /m/ by the script in <head>.
+    function trackStoreClick() { try { fbq("trackCustom", "StoreClick", { source: "get" }); } catch (e) {} try { gtag("event", "conversion", { send_to: "AW-18464861190/qNEZCOvXy_8cEIbY3eRE" }); } catch (e) {} }
+    function cl(name) { try { if (window.clarity) clarity("event", "cta_" + name); } catch (e) {} }
+    document.getElementById("cws").addEventListener("click", function () { cl("hero"); trackStoreClick(); });
+    document.getElementById("cws2").addEventListener("click", function () { cl("bottom"); trackStoreClick(); });
+
+    // Extra CTAs: open the store, tracked like the hero button.
+    Array.prototype.forEach.call(document.querySelectorAll(".js-cta"), function (a) {
+      a.addEventListener("click", function () { cl(a.getAttribute("data-cta") || "x"); trackStoreClick(); });
+    });
+    // Sticky bar appears once the hero's own button has scrolled out of view.
+    var bar = document.getElementById("stickybar"), heroCta = document.getElementById("d");
+    if (bar && heroCta && "IntersectionObserver" in window) {
+      document.body.classList.add("has-sticky");
+      new IntersectionObserver(function (es) {
+        var show = !es[0].isIntersecting && es[0].boundingClientRect.top < 0;
+        bar.classList.toggle("on", show);
+        bar.setAttribute("aria-hidden", show ? "false" : "true");
+        bar.querySelector("a").tabIndex = show ? 0 : -1;
+      }).observe(heroCta);
+    }
+
+    // ── PRICING COUNTDOWN (daily, resets at midnight ET) ──────────────────────────────────
+    // Caleb 2026-10-04: the offer ends at end of day and resets every day. Counts down to the next midnight
+    // America/New_York, so it is the same deadline for every visitor and starts over at 00:00 ET.
+    function msToEtMidnight() {
+      var p = {}; new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", hour12: false,
+        hour: "2-digit", minute: "2-digit", second: "2-digit" }).formatToParts(new Date())
+        .forEach(function (x) { p[x.type] = +x.value; });
+      return (86400 - ((p.hour % 24) * 3600 + p.minute * 60 + p.second)) * 1000;
+    }
+    function updateCountdown() {
+      var diff = msToEtMidnight();
+      if (diff <= 0) {
+        document.getElementById("priceEyebrow").hidden = true;
+        document.getElementById("priceOld").hidden = true;
+        document.getElementById("priceNew").hidden = true;
+        document.getElementById("countdown").hidden = true;
+        document.getElementById("priceLine1").hidden = true;
+        document.getElementById("priceLine2").hidden = true;
+        document.getElementById("priceExpired").hidden = false;
+        clearInterval(cdTimer);
+        return;
+      }
+      var h = Math.floor(diff / 3600000);
+      var m = Math.floor((diff % 3600000) / 60000);
+      document.getElementById("cdHours").textContent = h;
+      document.getElementById("cdMins").textContent = m;
+    }
+    updateCountdown();
+    var cdTimer = setInterval(updateCountdown, 60000);
+  })();
+  </script>
+  <script>
+  // Lemur section: copy the store link (Clipboard API, textarea fallback). Separate from the store-button handlers.
+  (function () {
+    var b = document.getElementById("lemurCopy"); if (!b) return;
+    b.addEventListener("click", function () {
+      var url = b.getAttribute("data-link"), label = b.textContent;
+      function done() { b.textContent = b.getAttribute("data-done"); setTimeout(function () { b.textContent = label; }, 2500); }
+      function legacy() { var t = document.createElement("textarea"); t.value = url; t.setAttribute("readonly", ""); t.style.position = "fixed"; t.style.opacity = "0";
+        document.body.appendChild(t); t.select(); try { document.execCommand("copy"); } catch (e) {} document.body.removeChild(t); done(); }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, legacy); else legacy();
+    });
+  })();
+  </script>
+</body>
+</html>

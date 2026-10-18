@@ -2,6 +2,20 @@
 <html lang="en">
 <head>
   <script>window.NQ_LATER=window.NQ_LATER||function(f){if(["localhost","127.0.0.1","[::1]"].indexOf(location.hostname)>-1&&location.search.indexOf("nqtags=1")<0)return;function go(){setTimeout(f,1200)}document.readyState==='complete'?go():addEventListener('load',go)};</script>
+  <!-- 2026-10-18 checkout-cancel screen (research/ops/OPS-LEAKS-2026-10-18.md #5): Stripe's cancel_url is /?checkout=cancel.
+       That visitor gets one screen: one line, one button back to the Relay load board, where NudoIQ shows its free-week
+       button again (the site has no install id, so it cannot restart checkout itself). Homepage tags still load. -->
+  <script>if(/[?&]checkout=cancel\b/.test(location.search))document.documentElement.className+=" nq-cancel";</script>
+  <style>html.nq-cancel body>*:not(#nq-cancel){display:none!important}#nq-cancel{display:none}
+    html.nq-cancel #nq-cancel{display:block;min-height:100vh;background:#fff;font-family:"Inter Tight",Inter,-apple-system,"Segoe UI",Arial,sans-serif;color:#161616}
+    #nq-cancel .t{border-bottom:1px solid rgba(22,22,22,.08)}#nq-cancel .w{max-width:760px;margin:0 auto;padding:0 20px}
+    #nq-cancel .t .w{padding-top:16px;padding-bottom:16px;font-size:24px;font-weight:600;letter-spacing:-.03em}#nq-cancel .t b{color:#3366FF;font-weight:600}
+    #nq-cancel h1{font-size:clamp(30px,4.4vw,46px);font-weight:600;letter-spacing:-.03em;line-height:1.08;margin:72px 0 14px}
+    #nq-cancel p{font-size:18px;line-height:1.5;color:#4D4D4D;margin:0;max-width:52ch}
+    #nq-cancel a{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:16px 32px;margin-top:26px;border-radius:999px;
+      background:#3366FF;color:#fff;font-size:17px;font-weight:600;text-decoration:none}#nq-cancel a:hover{background:#2551B8}
+    #nq-cancel a:focus-visible{outline:3px solid #161616;outline-offset:3px}
+    @media (max-width:640px){#nq-cancel h1{margin-top:44px}#nq-cancel a{width:100%}}</style>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
@@ -734,6 +748,29 @@
 </script>
 </head>
 <body data-clarity-unmask="true">
+  <script>
+  (function () {
+    if (!/[?&]checkout=cancel\b/.test(location.search)) return;
+    try {
+      var D = {"en": {"title": "Your free week hasn't started | NudoIQ", "h1": "Your free week hasn't started yet.", "line": "Go back to your Relay load board and press NudoIQ's button again. No card, just your email.", "cta": "Open your load board", "cta_aria": "Open your load board (opens Amazon Relay in a new tab)"}, "es": {"title": "Tu semana gratis todavía no empieza | NudoIQ", "h1": "Tu semana gratis todavía no empieza.", "line": "Vuelve a tu tablero de Relay y presiona de nuevo el botón de NudoIQ. Sin tarjeta, solo correo.", "cta": "Abre tu tablero de cargas", "cta_aria": "Abre tu tablero de cargas (se abre Amazon Relay en una pestaña nueva)"}, "ru": {"title": "Бесплатная неделя еще не началась | NudoIQ", "h1": "Бесплатная неделя еще не началась.", "line": "Вернитесь на load board в Relay и снова нажмите кнопку NudoIQ. Карта не нужна, только ваш email.", "cta": "Открыть load board", "cta_aria": "Открыть load board (откроет Amazon Relay в новой вкладке)"}};
+      var q = new URLSearchParams(location.search).get("lang"), l0 = String((navigator.languages || [navigator.language || ""])[0] || "");
+      var k = D[q] ? q : (/^es\b/i.test(l0) ? "es" : (/^(ru|uz|kk|ky|tg)\b/i.test(l0) ? "ru" : "en")), S = D[k];
+      var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || ""), map = { "Europe/London": "co.uk", "Europe/Belfast": "co.uk", "Europe/Berlin": "de",
+        "Europe/Madrid": "es", "Europe/Paris": "fr", "Europe/Rome": "it", "Europe/Warsaw": "de", "Europe/Prague": "de", "Asia/Kolkata": "in", "Asia/Calcutta": "in", "Asia/Tokyo": "jp" };
+      var ca = /^America\/(Toronto|Vancouver|Edmonton|Winnipeg|Halifax|Regina|St_Johns|Moncton|Montreal)$/.test(tz) && /-CA$/i.test(String(navigator.language || ""));
+      var tld = ca ? "ca" : (map[tz] || "com");
+      var el = document.createElement("div"); el.id = "nq-cancel"; el.setAttribute("lang", k);
+      el.innerHTML = '<div class="t"><div class="w"><b>N</b>udoIQ</div></div><main class="w"><h1></h1><p></p><a target="_blank" rel="noopener" data-cta="checkout-cancel-relay"></a></main>';
+      el.querySelector("h1").textContent = S.h1; el.querySelector("p").textContent = S.line;
+      var a = el.querySelector("a"); a.textContent = S.cta; a.setAttribute("aria-label", S.cta_aria);
+      a.href = "https://relay.amazon." + tld + "/loadboard/search";
+      a.addEventListener("click", function () { try { window.clarity && clarity("event", "cta_checkout_cancel_relay"); } catch (e) {} });
+      document.title = S.title; document.documentElement.lang = k;
+      document.body.insertBefore(el, document.body.firstChild);
+      try { window.clarity && clarity("set", "checkout", "cancel"); } catch (e) {}
+    } catch (e) { document.documentElement.className = document.documentElement.className.replace(" nq-cancel", ""); }
+  })();
+  </script>
   <a class="skip" href="#main">Skip to content</a>
 
   <div class="promo"><span data-t="heroMicro">50% off until end of day. $49.99 a month flat.</span></div>
