@@ -34,7 +34,7 @@ const J = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'lanes.json'), 'utf8'))
 const COPY = JSON.parse(fs.readFileSync(path.join(DATA_DIR, 'copy.json'), 'utf8'));
 const P = J.params, N = J.national, LANES = J.lanes;
 const CSV_NAME = `amazon-relay-lane-rates-${P.as_of}.csv`;
-const UPDATED = P.as_of;
+const UPDATED = '2026-10-23';   // 2026-10-23: after-fuel column + 2026 titles (data window still ends P.as_of)
 
 // ── formatting ───────────────────────────────────────────────────
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -172,10 +172,17 @@ function rangeChart({ id, title, rows, note }) {
 }
 
 // Medians first, ranges after, so the key numbers are visible before a phone has to scroll the table sideways.
+// After-fuel column (2026-10-23, SEARCH-INTENT row 13): median rate per mile minus fuel at NudoIQ's default costs
+// (9 mpg, $3.65/gal: extension settings.js DEFAULTS and /tools/relay-load-calculator/). A constant shift, so the
+// median of (rate - fuel) equals median rate - fuel. Fuel only: no deadhead, driver pay or other costs.
+const FUEL_MPG = 9, FUEL_USD_GAL = 3.65, FUEL_PER_MILE = FUEL_USD_GAL / FUEL_MPG;
+const afterFuel = (rpm) => (rpm == null ? '–' : usd2(rpm - FUEL_PER_MILE));
+const NET_COL = () => words('net_col', 'short column header: median rate per mile minus fuel at $0.41/mile', []).text;
 const rateRow = (label, b) => (b && b.n >= P.min_sub && b.pay_med != null
-  ? [esc(label), int(b.n), usd0(b.pay_med), usd2(b.rpm_med), int(b.miles_med), `${usd0(b.pay_p25)}–${usd0(b.pay_p75)}`, `${usd2(b.rpm_p25)}–${usd2(b.rpm_p75)}`]
-  : [esc(label), int(b ? b.n : 0), `<span class="lr-few">Fewer than ${P.min_sub} loads</span>`, '', '', '', '']);
-const RATE_COLS = ['Trip type', 'Loads', 'Median final price', 'Median per mile', 'Median miles', 'Middle 50% price', 'Middle 50% per mile'];
+  ? [esc(label), int(b.n), usd0(b.pay_med), usd2(b.rpm_med), afterFuel(b.rpm_med), int(b.miles_med), `${usd0(b.pay_p25)}–${usd0(b.pay_p75)}`, `${usd2(b.rpm_p25)}–${usd2(b.rpm_p75)}`]
+  : [esc(label), int(b ? b.n : 0), `<span class="lr-few">Fewer than ${P.min_sub} loads</span>`, '', '', '', '', '']);
+const RATE_COLS = ['Trip type', 'Loads', 'Median final price', 'Median per mile', NET_COL(), 'Median miles', 'Middle 50% price', 'Middle 50% per mile'];
+const netNote = () => `<p class="lr-note">${show(words('net_note', '1-2 sentences explaining the after-fuel column', []))}</p>`;
 
 function dwellTable(b, scope) {
   if (b.dep_mins_med == null) return `<p class="lr-note">Not enough loads were seen leaving the board ${scope} to report a time on the board (${int(b.dep_n)} seen; ${P.min_dwell} needed).</p>`;
@@ -293,7 +300,7 @@ for (const l of LANES) {
   const url = `${SITE}${laneUrl(l)}`, a = l.all, [bk, b] = best(l);
   const slugKey = l.slug;
   const h1 = `Amazon Relay rates: ${laneName(l)} (${laneShort(l)})`;
-  const title = `Amazon Relay Rates ${laneShort(l)}: Lane Data | NudoIQ`;
+  const title = (COPY.lane_title_template || 'Amazon Relay Rates {LANE}: Lane Data | NudoIQ').replace('{LANE}', laneShort(l));
   const description = `Amazon Relay ${laneShort(l)} rates from ${int(a.n)} loads seen ${dShort(a.first_date)}–${dShort(a.last_date)}, ${a.last_date.slice(0, 4)}: ${bk === 'OW' ? 'one-way ' : ''}median ${usd0(b.pay_med)} a load and ${usd2(b.rpm_med)} a mile (median trip ${int(b.miles_med)} mi).`;
   const facts = laneFacts(l);
   const intro = words(`lanes.${slugKey}.intro`, `1-2 sentence standfirst for the ${laneShort(l)} lane page`, facts);
@@ -327,6 +334,7 @@ for (const l of LANES) {
     table({ caption: `${laneName(l)} Amazon Relay loads by trip type: ${int(a.n)} distinct loads first seen ${range(a.first_date, a.last_date)}, ${SRC_PHRASE}.`,
       cols: RATE_COLS, rows: [rateRow('One way', l.OW), rateRow('Round trip', l.RT), rateRow('All loads', a)] }),
     other ? `<p class="lr-note">${int(other)} loads with an unknown or multi-stop trip type are counted in All loads only. Round-trip miles include the drive back, so round trips show more miles and a lower rate per mile.</p>` : `<p class="lr-note">Round-trip miles include the drive back, so round trips show more miles and a lower rate per mile.</p>`,
+    netNote(),
     rangeChart({ id: `chart-${l.slug}`, title: `${laneShort(l)} rate per mile: median and middle 50% of loads`, rows: chartRows, note: `${int(a.n)} loads, ${range(a.first_date, a.last_date)}` }),
     ...(l.cities.length ? [`<h2 id="city-pairs">Busiest city pairs from ${esc(l.o_name)} to ${esc(l.d_name)}</h2>`,
       table({ caption: `City pairs with at least ${P.min_city} loads: ${int(l.cities.reduce((t, c) => t + c.n, 0))} of the ${int(a.n)} ${laneShort(l)} loads first seen ${range(a.first_date, a.last_date)}, ${SRC_PHRASE}.`,
@@ -394,7 +402,7 @@ for (const l of LANES) {
   chartRows.push({ label: `All lanes, round trip (${int(rt.n)})`, med: rt.rpm_med, p25: rt.rpm_p25, p75: rt.rpm_p75 });
 
   const lanesRows = LANES.map((l) => { const [k, b] = best(l); return [
-    `<a href="${laneUrl(l)}">${esc(laneShort(l))} rates</a>`, int(l.all.n), `${usd2(b.rpm_med)}${k === 'OW' ? '' : '*'}`, `${usd0(b.pay_med)}${k === 'OW' ? '' : '*'}`,
+    `<a href="${laneUrl(l)}">${esc(laneShort(l))} rates</a>`, int(l.all.n), `${usd2(b.rpm_med)}${k === 'OW' ? '' : '*'}`, `${afterFuel(b.rpm_med)}${k === 'OW' ? '' : '*'}`, `${usd0(b.pay_med)}${k === 'OW' ? '' : '*'}`,
     int(b.miles_med), l.RT.rpm_med != null ? usd2(l.RT.rpm_med) : '–', durShort(l.all.dep_mins_med), `${dShort(l.all.first_date)}–${dShort(l.all.last_date)}`]; });
   const snapRows = N.snapshots.map((s) => [esc(`${s.o} to ${s.d}`), int(s.n),
     s.ow && s.ow.rpm_med != null ? usd2(s.ow.rpm_med) : `<span class="lr-few" title="${int(s.ow ? s.ow.n : 0)} one-way loads">–</span>`, usd2(s.rpm_med),
@@ -412,10 +420,12 @@ for (const l of LANES) {
     `<h2 id="by-trip-type">Amazon Relay rates by trip type</h2>`,
     table({ caption: `All Amazon Relay loads in the data by trip type: ${int(a.n)} distinct loads first seen ${range(first, last)}, ${SRC_PHRASE}.`, cols: RATE_COLS, rows: tripRows }),
     `<p class="lr-note">On the same city pair, round trips were priced at a median ${ratio.median_ratio.toFixed(2)} times the one-way rate per mile (${ratio.pairs} city pairs with at least 3 loads of each type). Equipment type is not recorded in the data, so there is no box truck vs tractor split.</p>`,
+    netNote(),
+    `<p>${show(words('hub.link_why_low', 'one sentence linking to /why-are-amazon-relay-rates-so-low/', []))}</p>`,
     `<h2 id="lanes">Amazon Relay rates by lane</h2>`,
     rangeChart({ id: 'chart-lanes', title: 'One-way rate per mile by lane: median and middle 50% of loads', rows: chartRows, note: `${range(first, last)}` }),
     table({ caption: `Lanes with at least ${p.min_lane} loads seen on at least ${p.min_days} days: loads first seen ${range(first, last)}, ${SRC_PHRASE}. One-way figures unless marked *.`,
-      cols: ['Lane', 'Loads', 'Median per mile', 'Median final price', 'Median miles', 'Round trip per mile', 'Median time on board', 'Dates'], rows: lanesRows }),
+      cols: ['Lane', 'Loads', 'Median per mile', NET_COL(), 'Median final price', 'Median miles', 'Round trip per mile', 'Median time on board', 'Dates'], rows: lanesRows }),
     snapRows.length ? `<h3 id="short-window">Lanes seen in a short window (no page yet)</h3>` : '',
     snapRows.length ? table({ caption: `Lanes with at least ${p.min_lane} loads but seen on fewer than ${p.min_days} days, so they read as a snapshot, not a typical rate: ${SRC_PHRASE}.`,
       cols: ['Lane', 'Loads', 'One way per mile', 'All loads per mile', 'Dates', 'Days with data', 'Main origin'], rows: snapRows }) : '',
@@ -444,7 +454,7 @@ for (const l of LANES) {
     `<p class="dl"><a href="/${HUB}/${CSV_NAME}" download>${CSV_NAME}</a> <span>(CSV, aggregate numbers only, no load IDs)</span></p>`,
   ].filter(Boolean).join('\n');
 
-  const title = 'Amazon Relay Rates by Lane: Rate per Mile Data | NudoIQ';
+  const title = (COPY.hub && COPY.hub.title) || 'Amazon Relay Rates by Lane: Rate per Mile Data | NudoIQ';
   const description = `Amazon Relay rates from ${int(a.n)} loads seen ${dShort(first)}–${dShort(last)}, ${last.slice(0, 4)}: one-way median ${usd2(ow.rpm_med)}/mile, round trip ${usd2(rt.rpm_med)}/mile, by lane.`;
   const trail = [['Home', '/'], ['Guides', '/guides/'], ['Amazon Relay rates', `/${HUB}/`]];
   const h1 = 'Amazon Relay rates by lane';

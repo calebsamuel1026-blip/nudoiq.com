@@ -47,7 +47,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/guides/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/how-much-does-amazon-relay-pay/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/cuanto-paga-amazon-relay/"/>
@@ -101,7 +101,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-scorecard/</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-scorecard/"/>
@@ -129,7 +129,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/best-amazon-relay-extensions/</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://nudoiq.com/best-amazon-relay-extensions/"/>
@@ -196,7 +196,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-loads/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -220,49 +220,49 @@
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-dispatcher/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-rates/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-rates/tn-to-tn/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-rates/tn-to-ky/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-rates/tn-to-ga/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-rates/tn-to-va/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-rates/tn-to-al/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-rates/tn-to-nc/</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -316,7 +316,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-cancel-load/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -388,7 +388,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-payments/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-pagos/"/>
@@ -849,7 +849,7 @@
   </url>
   <url>
     <loc>https://nudoiq.com/amazon-relay-drivers/</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="es" href="https://nudoiq.com/es/amazon-relay-para-conductores/"/>
@@ -937,6 +937,42 @@
   <url>
     <loc>https://nudoiq.com/amazon-relay-workers-comp/</loc>
     <lastmod>2026-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/amazon-relay-fuel-surcharge/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/amazon-relay-tonu/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/how-to-add-a-driver-on-amazon-relay/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/how-to-get-loads-on-amazon-relay/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/why-are-amazon-relay-rates-so-low/</loc>
+    <lastmod>2026-10-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://nudoiq.com/ru/kak-polzovatsya-amazon-relay/</loc>
+    <lastmod>2026-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
