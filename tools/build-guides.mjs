@@ -30,7 +30,7 @@ const SOFTWARE = {
   operatingSystem: 'Chrome, Microsoft Edge, Brave, and other Chromium-based browsers',
   url: 'https://nudoiq.com/', downloadUrl: 'https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk',
   offers: { '@type': 'Offer', price: '49.99', priceCurrency: 'USD', availability: 'https://schema.org/InStock', url: 'https://nudoiq.com/#pricing',
-    description: '7-day free trial, no card needed to start. $49.99 per month after the trial. Cancel anytime.',
+    description: 'Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.',
     priceSpecification: { '@type': 'UnitPriceSpecification', price: '49.99', priceCurrency: 'USD', unitCode: 'MON', billingDuration: 'P1M' } },
   publisher: { '@id': 'https://nudoiq.com/#organization' },
 };
@@ -277,7 +277,7 @@ ${headStyle ? `  ${headStyle}\n` : ''}${extraLd.map((o) => `  <script type="appl
 </head>
 <body data-clarity-unmask="true">
 
-  <div class="promo">7 days free, no card needed &middot; Runs in your own Chrome &middot; English and Spanish</div>
+  <div class="promo">7 days free. No card required. Only $49.99 after.</div>
 
   <header class="top"><div class="wrap topin">
     <a class="brand" href="/" aria-label="NudoIQ home"><svg class="wordmark" viewBox="0 0 158 40" role="img" aria-label="NudoIQ"><text x="0" y="31" font-family="Inter Tight, Inter, Arial, sans-serif" font-size="32" font-weight="600" letter-spacing="-0.03em"><tspan fill="#3366FF">N</tspan><tspan fill="#161616">udoIQ</tspan></text></svg></a>
@@ -409,7 +409,7 @@ for (const p of pages) {
   const relatedCount = p.related ? related.length : 6;
   // Optional bottom-CTA words per page (Martha's strings; cta_p may carry <br>), plus a data-cta name.
   const ctaH2 = p.cta_h2 || 'Know what the next load is worth before you take it.';
-  const ctaP = p.cta_p || '7 days free, no card needed &middot; 5.0 on the Chrome Web Store';
+  const ctaP = p.cta_p || '7 days free. No card required. Only $49.99 after &middot; 5.0 on the Chrome Web Store';
   const ctaBtn = p.cta_btn || 'Start the 7-day trial';
   const ctaData = p.cta_data ? ` data-cta="${esc(p.cta_data)}"` : '';
   const byline = `<p class="byline">${isData ? 'By Caleb, NudoIQ' : 'NudoIQ'} &middot; Published <time datetime="${p.published}">${fmtDate(p.published)}</time> &middot; Last updated <time datetime="${p.updated}">${fmtDate(p.updated)}</time></p>`;

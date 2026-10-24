@@ -37,7 +37,7 @@
       desktop: "I'll open it on desktop",
       close: "Close",
       subject: "Your NudoIQ install link",
-      mailBody: "Install NudoIQ on your computer:\n\n{url}\n\nFree for 7 days, then $49.99/month. Cancel anytime.\nIndependent software. Not affiliated with Amazon.",
+      mailBody: "Install NudoIQ on your computer:\n\n{url}\n\nTry it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.\nIndependent software. Not affiliated with Amazon.",
       // Capture strings reuse the reviewed /m/ form copy (m/index.html #f and #ok). A language without them keeps the
       // mailto button. Clarity 2026-10-05: the mailto opened a blank draft and captured nothing; an iPhone prospect fell
       // back to "Copy the link" twice, 5 days apart.
@@ -58,7 +58,7 @@
       desktop: "Lo abro en desktop",
       close: "Cerrar",
       subject: "Tu enlace de instalación de NudoIQ",
-      mailBody: "Instala NudoIQ en tu computadora:\n\n{url}\n\nGratis 7 días, luego $49.99/mes. Cancela en cualquier momento.\nSoftware independiente. No afiliado con Amazon.",
+      mailBody: "Instala NudoIQ en tu computadora:\n\n{url}\n\n7 días gratis. Sin tarjeta. Solo $49.99 después. Cancela en cualquier momento.\nSoftware independiente. No afiliado con Amazon.",
       // 2026-10-14 (Martha, research/copy/LEAK-FIXES-2026-10-14.json): capture form words, so Spanish phones get the
       // email form instead of the blank mailto (FUNNEL-LEAK-AUDIT-2026-10-14 leak 7).
       placeholder: "nombre@ejemplo.com",
@@ -78,7 +78,7 @@
       desktop: "Открою на компьютере",
       close: "Закрыть",
       subject: "Ссылка для установки NudoIQ",
-      mailBody: "Установите NudoIQ на компьютер:\n\n{url}\n\n7 дней бесплатно, затем $49.99 в месяц. Отменить можно в любой момент.\nНезависимый продукт. Не аффилирован с Amazon.",
+      mailBody: "Установите NudoIQ на компьютер:\n\n{url}\n\nПопробуйте бесплатно 7 дней. Карта не нужна. Всего $49.99 после окончания пробного периода. Отменить можно в любой момент.\nНезависимый продукт. Не аффилирован с Amazon.",
       placeholder: "name@example.com",
       sentTitle: "Проверьте почту",
       sentBody: "Мы отправили ссылку для установки. Откройте ее на компьютере и нажмите «Установить» (Add to Chrome).",

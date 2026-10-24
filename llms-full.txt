@@ -1,6 +1,6 @@
 # NudoIQ
 
-> NudoIQ is a Chrome extension for carriers who haul on Amazon Relay: owner-operators, small fleets and dispatchers. It runs inside the Amazon Relay load board in the carrier's own signed-in browser tab and adds load board refreshing, rule-based alerts and booking, lane rate history, net profit per load and scorecard dispute letter drafting. It costs $49.99 a month for every feature, with a 7-day free trial and no card needed to start. NudoIQ is independent and is not affiliated with, endorsed by or approved by Amazon. It is published by Sami Enterprises LLC, Portland, Oregon.
+> NudoIQ is a Chrome extension for carriers who haul on Amazon Relay: owner-operators, small fleets and dispatchers. It runs inside the Amazon Relay load board in the carrier's own signed-in browser tab and adds load board refreshing, rule-based alerts and booking, lane rate history, net profit per load and scorecard dispute letter drafting. It costs $49.99 a month for every feature. Try it free for 7 days. No card required. Only $49.99 after the trial is over. NudoIQ is independent and is not affiliated with, endorsed by or approved by Amazon. It is published by Sami Enterprises LLC, Portland, Oregon.
 
 ## What it does
 
@@ -19,7 +19,7 @@
 ## Pricing
 
 - $49.99 per month, every feature included, the same price for one truck or twenty.
-- 7-day free trial for first-time signups, no card needed to start.
+- Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 - Cancel anytime from the Stripe customer portal. Payments are processed by Stripe.
 - Rated 5.0 on the Chrome Web Store. Used by 300+ carriers.
 
@@ -39,7 +39,7 @@
 
 - The only Amazon Relay extension that books loads to the carrier's own minimum net profit after driver pay, fuel, maintenance and deadhead (checked October 5, 2026, across 52 other Relay listings on the Chrome Web Store).
 - The only Amazon Relay extension that drafts scorecard dispute letters; the carrier submits and Amazon decides (checked October 5, 2026).
-- One flat price: $49.99 a month for every feature, the same for one truck or twenty; 7-day free trial, no card needed to start.
+- One flat price: $49.99 a month for every feature, the same for one truck or twenty. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 - Interface in English and Spanish.
 - Rated 5.0 on the Chrome Web Store and used by 300+ carriers.
 - Side-by-side with six other Relay extensions: https://nudoiq.com/why-nudoiq/
@@ -149,7 +149,7 @@ Once you're approved, log in at relay.amazon.com, sign in with your carrier cred
 
 Managing the Relay load board by hand (refreshing, reading rates, judging whether a load is worth it, and handling disputes) takes time and focus. NudoIQ automates the refresh, surfaces rate history, calculates profit, and drafts dispute letters for you.
 
-The extension runs inside the board tab in your signed-in browser and works on desktop Chrome with an English or Spanish interface. It costs $49.99 a month for every feature, with a 7-day free trial and no card needed to start. Cancel anytime from your Stripe portal.
+The extension runs inside the board tab in your signed-in browser and works on desktop Chrome with an English or Spanish interface. It costs $49.99 a month for every feature. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime from your Stripe portal.
 
 Used by 300+ carriers and rated 5.0 on the Chrome Web Store, NudoIQ is built to work the way you work. Start free for seven days, see what it does, and cancel if it's not for you.
 
@@ -262,7 +262,7 @@ Load rates on Amazon Relay vary based on multiple factors: season, time of day, 
 
 Many carriers use [Amazon Relay auto-refresh](https://nudoiq.com/amazon-relay-auto-refresh/) tools or [auto-booking extensions](https://nudoiq.com/best-amazon-relay-extensions/) to speed up their workflow. If you want to automate refreshing, understand [lane rate history](https://nudoiq.com/amazon-relay-load-board/) to judge a price, or draft dispute letters based on [scorecard violations](https://nudoiq.com/amazon-relay-scorecard/), NudoIQ adds intelligence on top of the Relay board itself. It keeps the board fresh with configurable intervals, books loads by your rules (price floor, lane preferences, max-book cap), shows you net profit per load after fuel and deadhead costs, and drafts dispute letters based on Amazon's policy.
 
-NudoIQ costs **$49.99 per month** for every feature: the same price whether you run one truck or twenty. Start with a **7-day free trial**, no card needed to start. Cancel anytime from the Stripe portal. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
+NudoIQ costs **$49.99 per month** for every feature: the same price whether you run one truck or twenty. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime from the Stripe portal. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
 
 Our [Amazon Relay Chrome extension guide](https://nudoiq.com/amazon-relay-chrome-extension/) shows what NudoIQ adds to your Relay tab and how to set it up.
 
@@ -385,7 +385,7 @@ What to check before you apply again is in [Amazon Relay application denied](htt
 
 Once your account is active, you can [browse the load board](https://nudoiq.com/amazon-relay-load-board/), post your truck for instant matching, and start accepting work. Many carriers use [auto-refresh](https://nudoiq.com/amazon-relay-auto-refresh/) tools or [auto-booking extensions](https://nudoiq.com/amazon-relay-auto-booker/) to speed up the process: NudoIQ is designed to work inside the Relay board and give you [lane rate history](https://nudoiq.com/amazon-relay-load-board/), net profit per load, and [scorecard dispute assistance](https://nudoiq.com/amazon-relay-scorecard/).
 
-NudoIQ costs **$49.99 per month** for all features. Start with a **7-day free trial**, no card needed to start, and cancel anytime. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
+NudoIQ costs **$49.99 per month** for all features. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
 
 ## Frequently asked questions
 
@@ -512,7 +512,7 @@ Insurance premiums depend on several factors:
 
 Once you're approved, keep coverage current. [Amazon says](https://relay.amazon.com/blog/intro-to-amazon-relay/understanding-amazon-relay-insurance-requirements) that if your coverage lapses, your company can't book or haul Relay loads until it's reinstated. Renew two to three weeks before your policy expires so RMIS can update your records, and add the updated details in the Insurance tab of your Relay account at least 5 days before the policy expires.
 
-Many carriers use [Amazon Relay auto-refresh](https://nudoiq.com/amazon-relay-auto-refresh/) tools and [auto-booking extensions](https://nudoiq.com/amazon-relay-auto-booker/) to streamline load booking. If you want to add lane rate history, net profit analysis and [scorecard dispute assistance](https://nudoiq.com/amazon-relay-scorecard/), NudoIQ integrates into the Relay board and costs **$49.99 per month**. Start with a **7-day free trial**, no card needed to start, and cancel anytime. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
+Many carriers use [Amazon Relay auto-refresh](https://nudoiq.com/amazon-relay-auto-refresh/) tools and [auto-booking extensions](https://nudoiq.com/amazon-relay-auto-booker/) to streamline load booking. If you want to add lane rate history, net profit analysis and [scorecard dispute assistance](https://nudoiq.com/amazon-relay-scorecard/), NudoIQ integrates into the Relay board and costs **$49.99 per month**. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
 
 ## Frequently asked questions
 
@@ -650,7 +650,7 @@ NudoIQ features that help box truck carriers:
 - **[Scorecard Dispute Letters](https://nudoiq.com/amazon-relay-scorecard/)**: If Amazon dings your score, NudoIQ reads the violation and drafts a dispute letter that cites policy.
 - **[Backhaul Finder](https://nudoiq.com/amazon-relay-load-board/)**: Search loads from where your current run ends, headed back toward home, to minimize deadhead.
 
-NudoIQ costs **$49.99 per month** for all features. Start with a **7-day free trial**, no card needed to start, and cancel anytime. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
+NudoIQ costs **$49.99 per month** for all features. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
 
 ## Frequently asked questions
 
@@ -796,7 +796,7 @@ Pay disputes and scorecard disputes are separate. A pay dispute is about money o
 
 The takeaway: Amazon Relay does not publish "typical" or "average" rates because they vary so much by lane, time, season and carrier profile. Rates on the same route can fluctuate significantly day to day. Don't chase a single good rate you saw yesterday: instead, build a system (auto-refresh, profit floor, lane history) to evaluate each load individually and decide if it's worth your costs.
 
-Many carriers use [auto-refresh](https://nudoiq.com/amazon-relay-auto-refresh/) tools or [auto-booking extensions](https://nudoiq.com/amazon-relay-auto-booker/) to remove emotion and speed from the decision. If you want [lane rate history](https://nudoiq.com/amazon-relay-load-board/), net profit calculation and [scorecard dispute assistance](https://nudoiq.com/amazon-relay-scorecard/) built into the board, NudoIQ integrates into Relay and costs **$49.99 per month** for all features. Start with a **7-day free trial**, no card needed to start, and cancel anytime. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
+Many carriers use [auto-refresh](https://nudoiq.com/amazon-relay-auto-refresh/) tools or [auto-booking extensions](https://nudoiq.com/amazon-relay-auto-booker/) to remove emotion and speed from the decision. If you want [lane rate history](https://nudoiq.com/amazon-relay-load-board/), net profit calculation and [scorecard dispute assistance](https://nudoiq.com/amazon-relay-scorecard/) built into the board, NudoIQ integrates into Relay and costs **$49.99 per month** for all features. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
 
 ## Frequently asked questions
 
@@ -942,7 +942,7 @@ If you decide Relay is worth your time, NudoIQ adds intelligence and automation:
 - **[Scorecard Dispute Assistance](https://nudoiq.com/amazon-relay-scorecard/)**: If Amazon dings you, draft a dispute letter that cites policy.
 - **[Backhaul Finder](https://nudoiq.com/amazon-relay-load-board/)**: Search return loads to minimize deadhead.
 
-NudoIQ costs **$49.99 per month** for all features. Start with a **7-day free trial**, no card needed to start, and cancel anytime. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
+NudoIQ costs **$49.99 per month** for all features. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime. **5.0 rating** on the Chrome Web Store. Used by 300+ carriers.
 
 ## Frequently asked questions
 
@@ -1080,7 +1080,7 @@ What it saves you is the writing. Instead of starting from a blank page at the e
 
 The same extension also handles the board side: [auto refresh](https://nudoiq.com/amazon-relay-auto-refresh/), booking rules with a profit floor and a cap in the [auto booker](https://nudoiq.com/amazon-relay-auto-booker/), and lane rate history.
 
-NudoIQ is $49.99 a month for every feature ([see pricing](https://nudoiq.com/#pricing)). Start with a 7-day free trial, no card needed to start, and cancel anytime. It's rated 5.0 on the Chrome Web Store.
+NudoIQ is $49.99 a month for every feature ([see pricing](https://nudoiq.com/#pricing)). Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime. It's rated 5.0 on the Chrome Web Store.
 
 ## Frequently asked questions
 
@@ -1164,7 +1164,7 @@ How NudoIQ works, as a plain fact and not a reading of Amazon's terms: it runs o
 
 ## Where does NudoIQ fit? {#nudoiq-s-refresh-approach}
 
-NudoIQ is a Chrome extension with a refresher built in. You set the speed on the NudoIQ bar, and it refreshes while the Relay tab is open. Each load card gets a net profit badge from costs you set once, and Lane Intelligence shows what that lane paid before. It's independent, not affiliated with Amazon, and it runs in English and Spanish. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+NudoIQ is a Chrome extension with a refresher built in. You set the speed on the NudoIQ bar, and it refreshes while the Relay tab is open. Each load card gets a net profit badge from costs you set once, and Lane Intelligence shows what that lane paid before. It's independent, not affiliated with Amazon, and it runs in English and Spanish. Try it free for 7 days. No card required. Only $49.99 after the trial is over. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 LoadFetcher refreshes the board too, so here's [how LoadFetcher's refresher compares](https://nudoiq.com/loadfetcher-alternative/) with NudoIQ, from its own listing and plans.
 
@@ -1448,7 +1448,7 @@ Auto booking, net profit and free trials in one table: [NudoIQ vs LoadFetcher](h
 
 ### NudoIQ
 
-NudoIQ is a browser extension that runs inside the Relay load board and includes every feature in one monthly subscription: $49.99/month after a 7-day free trial, no card needed to start.
+NudoIQ is a browser extension that runs inside the Relay load board and includes every feature in one monthly subscription. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 **Refresh Control**: Set the interval and press START or STOP on the NudoIQ bar.
 
@@ -1522,7 +1522,7 @@ A good extension for you is one that:
 
 NudoIQ does two things no other Relay extension lists: AutoBook that books only to your own minimum net profit after your own costs, and scorecard dispute letters (checked October 5, 2026, across 52 other Relay listings on the Chrome Web Store). No other listing shows net profit per load after your own driver pay, fuel, maintenance and deadhead.
 
-The extension is rated 5.0 on the Chrome Web Store and used by 300+ carriers. It costs $49.99 a month for every feature, with a 7-day free trial, no card needed to start.
+The extension is rated 5.0 on the Chrome Web Store and used by 300+ carriers. It costs $49.99 a month for every feature. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 For a side-by-side of NudoIQ and six other Relay extensions, with prices and what each one lists publicly (checked October 5, 2026), see [why carriers choose NudoIQ](https://nudoiq.com/why-nudoiq/).
 
@@ -1587,7 +1587,7 @@ Setup takes four steps. Here they are for Chrome on a computer.
 
 1. [Add NudoIQ to Chrome](https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk) from the Chrome Web Store. It takes about a minute.
 2. Open Amazon Relay in the same Chrome profile and sign in as you normally do. The NudoIQ bar shows up above Relay's search.
-3. Start your free week from the NudoIQ bar. You don't need a card to start. It's 7 days free, then $49.99/month, and you can cancel anytime.
+3. Start your free week from the NudoIQ bar. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.
 4. Pick your mode and your SPEED, then press START. Your board now refreshes on its own.
 
 Before you turn on AUTOBOOK, set your Min Net Profit and your Max books. If you'd rather watch what matches first, start in ALERT mode and switch later.
@@ -1628,7 +1628,7 @@ That's how it works, not a promise about how Amazon treats extensions. Amazon do
 
 ## What does an Amazon Relay extension cost?
 
-NudoIQ starts with your free week, which has every feature, and nothing runs until you start it. It's 7 days free with no card needed to start. After that it's $49.99/month, one price no matter how many trucks you run, and you can cancel anytime. See [pricing](https://nudoiq.com/#pricing) for the details.
+NudoIQ starts with your free week, which has every feature, and nothing runs until you start it. Try it free for 7 days. No card required. Only $49.99 after the trial is over. It's one price no matter how many trucks you run, and you can cancel anytime. See [pricing](https://nudoiq.com/#pricing) for the details.
 
 NudoIQ is rated 5.0 on the Chrome Web Store and used by 300+ carriers.
 
@@ -1650,10 +1650,10 @@ On Android, you can use it through a Chromium browser that takes extensions, lik
 Yes, you can use it in Edge, Brave and other Chromium browsers on a computer. Open Relay in the same browser where you added NudoIQ.
 
 ### How much do you pay for NudoIQ?
-You get 7 days free with no card needed to start. After that it's $49.99/month, one price no matter how many trucks you run, and you can cancel anytime.
+Try it free for 7 days. No card required. Only $49.99 after the trial is over. It's one price no matter how many trucks you run, and you can cancel anytime.
 
 ### Is there a free version you can use?
-No. NudoIQ starts with a free week: 7 days, every feature, no card. You start it on your Relay load board with just your email. After that, $49.99/month only if you add a card. Cancel anytime.
+No. NudoIQ starts with a free week: 7 days, every feature. You start it on your Relay load board with just your email. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.
 
 ### Can it get your Relay account in trouble?
 We can't promise you how Amazon treats any extension, and nobody honest can. You are responsible for your Relay account and for following Relay's terms, so read them before you run any extension. NudoIQ never asks for your Amazon password.
@@ -1668,7 +1668,7 @@ Yes, you can run NudoIQ in English or Spanish.
 URL: https://nudoiq.com/loadfetcher-alternative/
 Published: 2026-09-20. Last updated: 2026-10-14.
 
-Short answer: For loads booked for you while you drive or dispatch, NudoIQ is the Load Fetcher alternative. AutoBook books only the loads that clear your minimum net profit. Try it 7 days free, no card needed to start.
+Short answer: For loads booked for you while you drive or dispatch, NudoIQ is the Load Fetcher alternative. AutoBook books only the loads that clear your minimum net profit. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## What is a good Load Fetcher alternative?
 
@@ -1752,13 +1752,13 @@ Yes, it installs from the Chrome Web Store. NudoIQ is a separate Chrome extensio
 No. It's a Chrome extension that works on Amazon's Relay load board. NudoIQ is a separate extension for the same board.
 
 ### What is a good Load Fetcher alternative?
-NudoIQ, if you want loads booked for you. It refreshes the load board and AutoBooks only loads that clear your minimum net profit. $49.99 a month after 7 days free.
+NudoIQ, if you want loads booked for you. It refreshes the load board and AutoBooks only loads that clear your minimum net profit. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ### Is there a free Load Fetcher alternative?
-NudoIQ isn't free. You can try it 7 days free, no card needed to start. Then it's $49.99 a month, and you can cancel anytime.
+NudoIQ isn't free. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.
 
 ### Does Load Fetcher have a free trial?
-No. Its FAQ says it doesn't offer one (checked October 14, 2026). NudoIQ gives you 7 days free, no card needed to start.
+No. Its FAQ says it doesn't offer one (checked October 14, 2026). NudoIQ has one. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ### Does Load Fetcher auto book loads?
 As of October 14, 2026, automatic booking isn't on LoadFetcher's store listing or plans, though its website's title mentions auto booking. NudoIQ's AutoBook books only loads that clear your minimum.
@@ -1879,7 +1879,7 @@ NudoIQ is a Chrome extension that runs inside the Amazon Relay load board in you
 
 Lane and equipment come from your Relay search; in NudoIQ you set Min $/Mile, Min Net Profit and a max-books cap, and pick Alert, Search or Autobook. Autobook stops at the cap and the profit floor. Connect Telegram and NudoIQ messages your phone on new loads and bookings. The backhaul finder searches loads from where your current load ends, pointed back toward home.
 
-It's $49.99 a month for every feature, the same for one truck or twenty ([pricing](https://nudoiq.com/#pricing)). Start with a 7-day free trial, no card needed to start, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
+It's $49.99 a month for every feature, the same for one truck or twenty ([pricing](https://nudoiq.com/#pricing)). Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
 
 ## Frequently asked questions
 
@@ -2092,7 +2092,7 @@ Thousands of carriers haul Amazon freight, and about 530 new ones show up each m
 
 NudoIQ is a Chrome extension for the Amazon Relay load board. It refreshes the board with adjustable timing, alerts you or books when a load matches your rules, and shows each lane's rate history and the net profit on every load card. It doesn't guarantee loads or rates. For the basics of finding work, see [Amazon Relay loads](https://nudoiq.com/amazon-relay-loads/) and [how much Amazon Relay pays](https://nudoiq.com/how-much-does-amazon-relay-pay/).
 
-It's $49.99 a month ([pricing](https://nudoiq.com/#pricing)) with a 7-day free trial, no card needed to start, and you can cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
+It's $49.99 a month ([pricing](https://nudoiq.com/#pricing)). Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
 
 ## Frequently asked questions
 
@@ -2223,7 +2223,7 @@ NudoIQ is a Chrome extension that runs inside your signed-in Relay load board ta
 - **Post A Truck helper**: board price next to your minimum $/mile and payout, then post with one button.
 - **Backhaul finder**: loads from where your current load ends, pointed back toward home.
 
-It's [$49.99 a month](https://nudoiq.com/#pricing) for every feature, the same price for one truck or twenty. Start with a 7-day free trial, no card needed to start, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
+It's [$49.99 a month](https://nudoiq.com/#pricing) for every feature, the same price for one truck or twenty. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
 
 ## Frequently asked questions
 
@@ -2354,7 +2354,7 @@ NudoIQ is a Chrome extension that runs inside your signed-in Relay load board ta
 - **Lane Intelligence:** the posted price next to that lane's 90-day history. It's decision support, not a guarantee.
 - **Post A Truck helper** and a **backhaul finder** that searches from where your load ends back toward home.
 
-It's [$49.99 a month](https://nudoiq.com/#pricing) for every feature, the same price for one truck or twenty. Start with a 7-day free trial, no card needed to start, and cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
+It's [$49.99 a month](https://nudoiq.com/#pricing) for every feature, the same price for one truck or twenty. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime. NudoIQ is rated 5.0 on the Chrome Web Store.
 
 ## Frequently asked questions
 
@@ -2494,7 +2494,7 @@ What a dispatcher gets:
 - **Lane Intelligence:** what that lane paid before. It's decision support, not a promise.
 - **English and Spanish,** for dispatchers who work in either.
 
-Try it 7 days free, no card needed to start, then [$49.99 a month](https://nudoiq.com/#pricing). Cancel anytime. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+Try it free for 7 days. No card required. Only [$49.99](https://nudoiq.com/#pricing) after the trial is over. Cancel anytime. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -2722,7 +2722,7 @@ It could. Any extension that changes web pages can interfere with how the board 
 - Turn off your extensions one at a time, reloading the board after each, to see if one is the cause.
 - Try another Chromium browser, such as Microsoft Edge, or a fresh Chrome profile with no extensions.
 
-If you use NudoIQ, include it in that test. NudoIQ is a Chrome extension that runs in your own Chrome, inside your signed-in Relay tab, and never asks for your Amazon password. Its refresher reloads the board on an interval you set. Alert, Search and Autobook modes ping you on a match, highlight it, or book it by your rules. It's $49.99 a month after a 7-day free trial, no card needed to start. Compare options in our [best Amazon Relay extensions guide](https://nudoiq.com/best-amazon-relay-extensions/) and our [auto-refresh guide](https://nudoiq.com/amazon-relay-auto-refresh/).
+If you use NudoIQ, include it in that test. NudoIQ is a Chrome extension that runs in your own Chrome, inside your signed-in Relay tab, and never asks for your Amazon password. Its refresher reloads the board on an interval you set. Alert, Search and Autobook modes ping you on a match, highlight it, or book it by your rules. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Compare options in our [best Amazon Relay extensions guide](https://nudoiq.com/best-amazon-relay-extensions/) and our [auto-refresh guide](https://nudoiq.com/amazon-relay-auto-refresh/).
 
 ## When should I contact Relay support?
 
@@ -2868,7 +2868,7 @@ Our [Amazon Relay auto-booker guide](https://nudoiq.com/amazon-relay-auto-booker
 
 NudoIQ is a Chrome extension that runs inside your signed-in Relay load board tab. It's an independent tool, not made by or affiliated with Amazon. Lane and equipment come from your Relay search. Autobook books loads that clear your Min Net Profit and Min $/Mile, and stops at your max-books cap (counted per START). A backhaul finder searches from where your load ends back toward home, and every load card shows net profit after driver pay, fuel, maintenance and deadhead.
 
-It's $49.99 a month after a 7-day free trial, no card needed to start. Cancel anytime.
+Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.
 
 ## Frequently asked questions
 
@@ -3623,7 +3623,7 @@ Nothing is hidden here. These are two different counts: one from the store, one 
 
 Open the [NudoIQ listing on the Chrome Web Store](https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk). You will see the user count and the rating. NudoIQ is rated 5.0 on the Chrome Web Store.
 
-The most useful check is your own board. NudoIQ starts with a free week, every feature, no card. You start it on your Relay load board. After 7 days, $49.99/month only if you add a card. Cancel anytime. See [pricing](https://nudoiq.com/#pricing).
+The most useful check is your own board. NudoIQ starts with a free week, every feature. You start it on your Relay load board. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime. See [pricing](https://nudoiq.com/#pricing).
 
 To see how NudoIQ compares with other Relay extensions, read [why carriers choose NudoIQ](https://nudoiq.com/why-nudoiq/).
 
@@ -3659,13 +3659,13 @@ Short answer: Carriers choose NudoIQ because it's the only Amazon Relay extensio
 - NudoIQ drafts scorecard dispute letters from the violation. You review and submit the letter. Amazon decides.
 - Lane Intelligence shows 90 days of a lane's prices, a target rate, an expected range and a confidence level. It is decision support, not a promise of a rate.
 - The auto refresher runs in Alert, Search or AutoBook mode, with a profit floor and a max-books cap.
-- One flat price: $49.99 a month for every feature, the same for one truck or twenty. 7-day free trial, no card needed to start.
+- One flat price: $49.99 a month for every feature, the same for one truck or twenty. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 - The interface is in English and Spanish.
 - It runs in your own signed-in Relay tab and never asks for your Amazon password.
 
 NudoIQ also includes Instant Book, Telegram alerts, a backhaul finder and one-click Post A Truck with a recommended bid. The recommended bid improves with use, so it is not accurate right after install.
 
-Try NudoIQ 7 days free, no card needed to start. Then it's $49.99 a month. Cancel anytime.
+Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.
 
 NudoIQ is rated 5.0 on the Chrome Web Store and used by 300+ carriers.
 
@@ -3705,7 +3705,7 @@ NudoIQ is independent and not affiliated with Amazon.
 Judge it on the facts. NudoIQ is the only Amazon Relay extension that books to your own minimum net profit and drafts scorecard dispute letters, and the only one in our side-by-side that lists all six core features (checked October 5, 2026).
 
 ### Does NudoIQ have a free version?
-No free plan. NudoIQ starts with a 7-day free week with every feature, and you start it with just your email, no card. After 7 days, it's $49.99 a month only if you add a card. Cancel anytime.
+No free plan. NudoIQ starts with a 7-day free week with every feature, and you start it with just your email. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.
 
 ### How much does NudoIQ cost?
 $49.99 a month for every feature, the same for one truck or twenty. There is no annual plan, and you can cancel anytime.
@@ -3723,7 +3723,7 @@ No. NudoIQ is an independent extension and is not affiliated with or endorsed by
 URL: https://nudoiq.com/rocket-relay-alternative/
 Published: 2026-10-10. Last updated: 2026-10-14.
 
-Short answer: For loads booked only when they clear your minimum net profit after your own costs, NudoIQ is the Rocket Relay alternative. It also drafts scorecard dispute letters. Try it 7 days free, no card needed to start.
+Short answer: For loads booked only when they clear your minimum net profit after your own costs, NudoIQ is the Rocket Relay alternative. It also drafts scorecard dispute letters. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## What is a good Rocket Relay alternative?
 
@@ -3808,7 +3808,7 @@ Rocket Relay is a browser extension for Amazon Relay, published by West Wanted (
 Yes, it installs from the Chrome Web Store. NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so they don't clash.
 
 ### Does Rocket Relay have a free trial?
-Yes, a 7-day Pro trial. Its FAQ says you add a card to start (checked October 9, 2026). NudoIQ gives you 7 days free, no card needed to start.
+Yes, a 7-day Pro trial. Its FAQ says you add a card to start (checked October 9, 2026). NudoIQ's trial includes AutoBook. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ### Does Rocket Relay auto book loads?
 Yes, on its Pro plan, by your filters such as payout and price per mile (checked October 9, 2026). NudoIQ's AutoBook books only loads that clear your minimum net profit.
@@ -3843,7 +3843,7 @@ Only loads that clear your Min Net Profit and it can fully price, up to your Max
 URL: https://nudoiq.com/swiftrelay-alternative/
 Published: 2026-10-10. Last updated: 2026-10-14.
 
-Short answer: For loads booked only when they clear your minimum net profit after your own costs, NudoIQ is the SwiftRelay alternative. It also drafts scorecard dispute letters. Try it 7 days free, no card needed to start.
+Short answer: For loads booked only when they clear your minimum net profit after your own costs, NudoIQ is the SwiftRelay alternative. It also drafts scorecard dispute letters. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## What is a good Swift Relay alternative?
 
@@ -3928,7 +3928,7 @@ SwiftRelay is a Chrome extension for Amazon Relay, published by Premier IT Solut
 Yes, it installs from the Chrome Web Store. NudoIQ is a separate Chrome extension. If you try both, run one load board extension at a time so they don't clash.
 
 ### Does SwiftRelay have a free trial?
-Yes, a 7-day trial that starts on first use, with no checkout (checked October 9, 2026). NudoIQ gives you 7 days free with AutoBook, no card needed to start.
+Yes, a 7-day trial that starts on first use, with no checkout (checked October 9, 2026). NudoIQ's trial includes AutoBook. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ### Does Swift Relay auto book loads?
 Yes, on its Pro and Enterprise plans. Its FAQ says Lite does not (checked October 9, 2026). NudoIQ's AutoBook books only loads that clear your minimum net profit.
@@ -3957,7 +3957,7 @@ Only loads that clear your Min Net Profit and it can fully price, up to your Max
 URL: https://nudoiq.com/rgd-alternative/
 Published: 2026-10-10. Last updated: 2026-10-14.
 
-Short answer: For loads booked only when they clear your minimum net profit after your own costs, NudoIQ is the RGD alternative. It also drafts scorecard dispute letters. Try it 7 days free, no card needed to start.
+Short answer: For loads booked only when they clear your minimum net profit after your own costs, NudoIQ is the RGD alternative. It also drafts scorecard dispute letters. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## What is a good RGD alternative for Amazon Relay?
 
@@ -4047,7 +4047,7 @@ Yes, it installs from the Chrome Web Store. NudoIQ is a separate Chrome extensio
 Yes, on both its plans, by the filters you select (checked October 9, 2026). NudoIQ's AutoBook books only loads that clear your minimum net profit.
 
 ### Does RGD have a free trial?
-Yes, 7 days with no card required, per its store listing (checked October 9, 2026). NudoIQ gives you 7 days free with AutoBook, no card needed to start.
+Yes, 7 days with no card required, per its store listing (checked October 9, 2026). NudoIQ's trial includes AutoBook. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ### Does RGD auto book Amazon Relay contracts?
 Yes, its Business plan lists a contracts AutoBooker (checked October 9, 2026). NudoIQ refreshes short-term contract offers too, and can alert you or AutoBook the ones that meet your minimums.
@@ -4073,7 +4073,7 @@ No. NudoIQ is an independent product by Sami Enterprises LLC, not affiliated wit
 URL: https://nudoiq.com/easyrelay-alternative/
 Published: 2026-10-10. Last updated: 2026-10-14.
 
-Short answer: For loads booked for you while you drive or dispatch, NudoIQ is the EasyRelay alternative. AutoBook books only the loads that clear your minimum net profit. Try it 7 days free, no card needed to start.
+Short answer: For loads booked for you while you drive or dispatch, NudoIQ is the EasyRelay alternative. AutoBook books only the loads that clear your minimum net profit. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## What is a good Easy Relay alternative?
 
@@ -4164,7 +4164,7 @@ Both, for the same extension. Its Chrome Web Store listing says EasyRelay, and i
 Its store listing and plans don't say so (checked October 9, 2026), though its website's description mentions auto-booking. NudoIQ's AutoBook books only loads that clear your minimum net profit.
 
 ### Does Easy Relay have a free trial?
-Its home page lists a 7-day free trial (checked October 9, 2026). NudoIQ gives you 7 days free with AutoBook, no card needed to start.
+Its home page lists a 7-day free trial (checked October 9, 2026). NudoIQ's trial includes AutoBook. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ### How does NudoIQ decide which loads to book?
 Only loads that clear your Min Net Profit and it can fully price, up to your Max books. Alert mode just alerts. See [what happens if you cancel a load](https://nudoiq.com/amazon-relay-cancel-load/).
@@ -4187,7 +4187,7 @@ No. NudoIQ is an independent product by Sami Enterprises LLC, not affiliated wit
 URL: https://nudoiq.com/cardamon-alternative/
 Published: 2026-10-16. Last updated: 2026-10-16.
 
-Short answer: For loads booked only when they clear your minimum net profit after your own costs, NudoIQ is the Cardamon alternative. It also drafts scorecard dispute letters. Try it 7 days free, no card needed to start.
+Short answer: For loads booked only when they clear your minimum net profit after your own costs, NudoIQ is the Cardamon alternative. It also drafts scorecard dispute letters. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## What is a good Cardamon Relay alternative?
 
@@ -4303,7 +4303,7 @@ Yes. NudoIQ's buttons and banners on the load board work in English and Spanish.
 
 Only loads that clear your Min Net Profit and it can fully price, up to your Max books. Alert mode just alerts. See [what happens if you cancel a load](https://nudoiq.com/amazon-relay-cancel-load/).
 
-Let the board book itself, at your number. 7 days free, then $49.99 a month for every truck. Cancel anytime.
+Let the board book itself, at your number. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.
 
 
 ---
@@ -4358,7 +4358,7 @@ Nobody can promise you that. Amazon reviews every dispute and makes the call. A 
 Copy the letter, open your scorecard in Relay and start a dispute on that trip. Paste the letter in, read it once more and submit. Amazon doesn't publish a deadline for scorecard disputes, so file while your records are fresh.
 
 ### Can NudoIQ write the dispute letter for you automatically?
-You still tick what's true and submit the letter yourself. On your Relay scorecard page, NudoIQ lists the violations it finds and drafts the letter from the facts you tick. Dispute letters come with the 7-day free trial, then it's $49.99/month.
+You still tick what's true and submit the letter yourself. On your Relay scorecard page, NudoIQ lists the violations it finds and drafts the letter from the facts you tick. Dispute letters come with the free week. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ---
 
@@ -4405,7 +4405,7 @@ Use your truck's average over the last few fill-ups, loaded and empty together. 
 Nothing you type is sent anywhere. The math runs in your browser on this page.
 
 ### Does NudoIQ show this on the Relay load board?
-On your Relay board, NudoIQ shows the net and net per mile under the price on every load card. It works from costs you set once in Settings and counts deadhead to the pickup and the drive home, but not tolls. It runs in Chrome on a computer, and the net shows once you start your no-card free week. After that, $49.99/month only if you add a card.
+On your Relay board, NudoIQ shows the net and net per mile under the price on every load card. It works from costs you set once in Settings and counts deadhead to the pickup and the drive home, but not tolls. It runs in Chrome on a computer, and the net shows once you start your free week. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ### What goes in other cost per mile?
 Put in everything you pay per mile besides fuel: driver pay, maintenance, tires and insurance, each worked out per mile. If you pay something by the week, like insurance or a truck note, divide it by the miles your truck runs in a normal week.
@@ -4497,7 +4497,7 @@ If pay on a delayed or changed load looks wrong, check the breakdown, then use t
 
 ## Where does NudoIQ fit?
 
-NudoIQ is a Chrome extension for the Relay load board. It's an independent tool, not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence shows a lane's price history. So you know what a load should leave you before you book it, not when the invoice posts. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is a Chrome extension for the Relay load board. It's an independent tool, not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence shows a lane's price history. So you know what a load should leave you before you book it, not when the invoice posts. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -4590,7 +4590,7 @@ The [Conditions of Use](https://relay.amazon.com/terms) on the Relay site send "
 
 ## Where does NudoIQ fit?
 
-NudoIQ is a Chrome extension for Amazon Relay, an independent tool not affiliated with Amazon. On the Relay scorecard page, it finds the violation and drafts a dispute letter. You check it and submit it, and Amazon decides. On the load board it shows net and net per mile under the price on every load card. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is a Chrome extension for Amazon Relay, an independent tool not affiliated with Amazon. On the Relay scorecard page, it finds the violation and drafts a dispute letter. You check it and submit it, and Amazon decides. On the load board it shows net and net per mile under the price on every load card. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -4708,7 +4708,7 @@ If a site gives you a number for any of these, it didn't come from Amazon's Rela
 
 ## Where does NudoIQ fit?
 
-NudoIQ is a Chrome extension for the Relay load board, an independent tool not affiliated with Amazon, so it's not a way to reach Amazon support. On your Relay scorecard page it drafts a dispute letter from the violation, and you check it and submit it. Amazon decides. On the board it shows net and net per mile under the price on every load card, free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is a Chrome extension for the Relay load board, an independent tool not affiliated with Amazon, so it's not a way to reach Amazon support. On your Relay scorecard page it drafts a dispute letter from the violation, and you check it and submit it. Amazon decides. On the board it shows net and net per mile under the price on every load card. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -4817,7 +4817,7 @@ If someone promises a faster approval, ask where that's written on relay.amazon.
 
 ## Where does NudoIQ fit?
 
-Once you're approved, the load board is where the work starts. NudoIQ is a Chrome extension for the Relay load board, an independent tool not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence (the first button under a load) shows that lane's price history. It's free for 7 days with no card needed to start, then $49.99 a month.
+Once you're approved, the load board is where the work starts. NudoIQ is a Chrome extension for the Relay load board, an independent tool not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence (the first button under a load) shows that lane's price history. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -4943,7 +4943,7 @@ Amazon's [get started page](https://relay.amazon.com/get-started) points owners 
 
 ## Where does NudoIQ fit?
 
-NudoIQ has no part in driver checks. Those stay between your drivers and Amazon. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that shows net and net per mile under the price on every load card and drafts scorecard dispute letters you check and submit. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ has no part in driver checks. Those stay between your drivers and Amazon. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that shows net and net per mile under the price on every load card and drafts scorecard dispute letters you check and submit. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -5057,7 +5057,7 @@ For a problem on a live load, contact the ROC through the portal. And don't hand
 
 ## Where does NudoIQ fit?
 
-NudoIQ isn't a phone app and doesn't replace the Relay app your drivers use. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that runs in desktop Chrome and on Android through the Lemur browser (see our [Android setup page](https://nudoiq.com/android/)), but not on iPhone. On the board it shows net and net per mile under the price on every load card, and it can auto-refresh the board for you. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ isn't a phone app and doesn't replace the Relay app your drivers use. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that runs in desktop Chrome and on Android through the Lemur browser (see our [Android setup page](https://nudoiq.com/android/)), but not on iPhone. On the board it shows net and net per mile under the price on every load card, and it can auto-refresh the board for you. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -5185,7 +5185,7 @@ Before your first booking, check what a load would leave you after costs. Our [f
 
 ## Where does NudoIQ fit?
 
-NudoIQ is an independent Chrome extension for the Amazon Relay load board, not affiliated with Amazon. On the US board at relay.amazon.com, it shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence (the first button under a load) shows a lane's price history. It's also set up to load on relay.amazon.ca, but our guides and screenshots show only the US board, so we make no feature claims for the Canadian site. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is an independent Chrome extension for the Amazon Relay load board, not affiliated with Amazon. On the US board at relay.amazon.com, it shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence (the first button under a load) shows a lane's price history. It's also set up to load on relay.amazon.ca, but our guides and screenshots show only the US board, so we make no feature claims for the Canadian site. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -5318,7 +5318,7 @@ Amazon's five application steps are in our guide to [how to sign up for Amazon R
 
 ## Where does NudoIQ fit?
 
-Peak puts more loads on the board and leaves less time to size each one up. NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and AutoBook can book only loads that clear your own minimum net profit. It's free for 7 days with no card needed to start, then $49.99 a month.
+Peak puts more loads on the board and leaves less time to size each one up. NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and AutoBook can book only loads that clear your own minimum net profit. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -5420,7 +5420,7 @@ If the FAQ steps don't work, the Support Center is the route Amazon names, and i
 
 ## Where does NudoIQ fit?
 
-NudoIQ runs inside your own signed-in Relay tab in Chrome, and it never asks for your Amazon password. It's an independent extension, not affiliated with Amazon, that shows net and net per mile under the price on every load card, from costs you set once. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ runs inside your own signed-in Relay tab in Chrome, and it never asks for your Amazon password. It's an independent extension, not affiliated with Amazon, that shows net and net per mile under the price on every load card, from costs you set once. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -5529,7 +5529,7 @@ Hostling has its own cap. Amazon's [hostler post](https://relay.amazon.com/blog/
 
 ## Where does NudoIQ fit?
 
-NudoIQ doesn't log hours or replace an ELD. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that shows net and net per mile under the price on every load card. Its Pro View dropdown shows each leg's times and the load's driver type, Team or Solo, so you can check the fit before you book. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ doesn't log hours or replace an ELD. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that shows net and net per mile under the price on every load card. Its Pro View dropdown shows each leg's times and the load's driver type, Team or Solo, so you can check the fit before you book. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -5644,7 +5644,7 @@ Amazon's pages point two ways. The Relay Rewards post says "This program is curr
 
 ## Where does NudoIQ fit?
 
-NudoIQ isn't part of Relay Rewards and isn't affiliated with Amazon. It's a Chrome extension for the Relay load board that shows net and net per mile under the price on every load card, from costs you set once. If a fuel discount lowers your costs, update them and every card shows the new net. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ isn't part of Relay Rewards and isn't affiliated with Amazon. It's a Chrome extension for the Relay load board that shows net and net per mile under the price on every load card, from costs you set once. If a fuel discount lowers your costs, update them and every card shows the new net. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -5736,7 +5736,7 @@ If a hit lands that you think is wrong, a course won't undo it. Our [free Relay 
 
 ## Where does NudoIQ fit?
 
-NudoIQ has nothing to do with Relay's courses. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that shows net and net per mile under the price on every load card and drafts scorecard dispute letters you check and submit. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ has nothing to do with Relay's courses. It's an independent Chrome extension for the Relay load board, not affiliated with Amazon, that shows net and net per mile under the price on every load card and drafts scorecard dispute letters you check and submit. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -5828,7 +5828,7 @@ The trade-off is control. You commit a driver and a truck to a block, and Amazon
 
 ## Where does NudoIQ fit?
 
-NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence (the first button under a load) shows a lane's price history. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence (the first button under a load) shows a lane's price history. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -5920,7 +5920,7 @@ Short moves can look small on the board. Our [free Relay load calculator](https:
 
 ## Where does NudoIQ fit?
 
-NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence (the first button under a load) shows a lane's price history. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net and net per mile under the price on every load card, from costs you set once, and Lane Intelligence (the first button under a load) shows a lane's price history. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -6050,7 +6050,7 @@ SDI benefits Amazon lists:
 
 ## Where does NudoIQ fit?
 
-If you book your own loads, NudoIQ is a Chrome extension for the Relay load board. It shows net profit and lane price history on each load, from costs you set once. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. It's free for 7 days with no card needed to start, then $49.99 a month.
+If you book your own loads, NudoIQ is a Chrome extension for the Relay load board. It shows net profit and lane price history on each load, from costs you set once. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -6176,7 +6176,7 @@ Amazon doesn't name the third-party service.
 
 ## Where does NudoIQ fit?
 
-NudoIQ won't change a safety score. Safety comes from your trucks and drivers. Once you're clear to haul, NudoIQ is an independent Chrome extension for the Relay load board that shows net profit on each load, from costs you set once. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ won't change a safety score. Safety comes from your trucks and drivers. Once you're clear to haul, NudoIQ is an independent Chrome extension for the Relay load board that shows net profit on each load, from costs you set once. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -6320,7 +6320,7 @@ Amazon doesn't publish a fraud phone number. relay.amazon.com publishes no phone
 
 ## Where does NudoIQ fit?
 
-NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net profit and lane price history on each load. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. It shows net profit and lane price history on each load. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -6433,7 +6433,7 @@ For fees and testing, CARB's own page is the source to trust.
 
 ## Where does NudoIQ fit?
 
-NudoIQ is an independent Chrome extension for the Relay load board. It shows net profit and lane price history on each load, so you can weigh a California lane before you book it. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is an independent Chrome extension for the Relay load board. It shows net profit and lane price history on each load, so you can weigh a California lane before you book it. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -6549,7 +6549,7 @@ Today, Amazon doesn't describe Relay Assistant booking loads by itself.
 
 ## Where does NudoIQ fit?
 
-NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. On loads Amazon marks negotiable, it can show a negotiate icon that opens Relay's own Relay Assistant chat. It opens the general chat, not a chat about that specific load. NudoIQ also shows net profit on each load, so you can see your number before you pitch. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is an independent Chrome extension for the Relay load board, not affiliated with Amazon. On loads Amazon marks negotiable, it can show a negotiate icon that opens Relay's own Relay Assistant chat. It opens the general chat, not a chat about that specific load. NudoIQ also shows net profit on each load, so you can see your number before you pitch. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -6672,7 +6672,7 @@ We don't compare rates between the two, because neither publishes one.
 
 ## Where does NudoIQ fit?
 
-NudoIQ works only on Amazon Relay's website, not on DAT. It's an independent Chrome extension, not affiliated with Amazon, that shows net profit and lane price history on each Relay load, from costs you set once. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ works only on Amazon Relay's website, not on DAT. It's an independent Chrome extension, not affiliated with Amazon, that shows net profit and lane price history on each Relay load, from costs you set once. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -6793,7 +6793,7 @@ Amazon's [winter loads post](https://relay.amazon.com/blog/industry-trends/winte
 
 ## Where does NudoIQ fit?
 
-NudoIQ is an independent Chrome extension for the Relay load board. It shows net profit and lane price history on each load, from costs you set once, so you can check a reefer load's numbers before you book. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is an independent Chrome extension for the Relay load board. It shows net profit and lane price history on each load, from costs you set once, so you can check a reefer load's numbers before you book. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -6912,7 +6912,7 @@ Amazon's [2026 improvements post](https://relay.amazon.com/blog/intro-to-amazon-
 
 ## Where does NudoIQ fit?
 
-NudoIQ is an independent Chrome extension for the Relay load board. If you run power-only with Amazon's trailers, it shows net profit and lane price history on each load, from costs you set once. It's free for 7 days with no card needed to start, then $49.99 a month.
+NudoIQ is an independent Chrome extension for the Relay load board. If you run power-only with Amazon's trailers, it shows net profit and lane price history on each load, from costs you set once. Try it free for 7 days. No card required. Only $49.99 after the trial is over.
 
 ## Frequently asked questions
 
@@ -7006,7 +7006,7 @@ On pay, Amazon claims: "Say goodbye to 30-60 day waits for payouts from logistic
 
 ## Where does NudoIQ fit?
 
-NudoIQ is for carriers who book their own Relay loads and the dispatchers who book for them. It's a Chrome extension for the load board. It refreshes the board, sounds an alert on the page when a load clears your minimums, and shows net profit on each load. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+NudoIQ is for carriers who book their own Relay loads and the dispatchers who book for them. It's a Chrome extension for the load board. It refreshes the board, sounds an alert on the page when a load clears your minimums, and shows net profit on each load. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it free for 7 days. No card required. Only $49.99 after the trial is over. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -7099,7 +7099,7 @@ Apply as a carrier under your own DOT and MC authority. Amazon says there are no
 
 ## Where does NudoIQ fit?
 
-Whoever owns the carrier, NudoIQ works on the Relay load board. It's a Chrome extension that shows net profit and lane price history on each load, so you can judge a load before you book it. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+Whoever owns the carrier, NudoIQ works on the Relay load board. It's a Chrome extension that shows net profit and lane price history on each load, so you can judge a load before you book it. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it free for 7 days. No card required. Only $49.99 after the trial is over. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -7198,7 +7198,7 @@ What you can change is your search. Every load search starts from the origin and
 
 ## Where does NudoIQ fit?
 
-If you book round trips out of one area, NudoIQ works on the Relay search you've already set. It's a Chrome extension that refreshes the board, shows net profit on each load from your costs, and can book loads that clear your minimum net profit, up to a max-books number you set. During the trial and on the paid plan, its Pro View shows every stop's facility address and the driver type. It's independent, not affiliated with Amazon. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+If you book round trips out of one area, NudoIQ works on the Relay search you've already set. It's a Chrome extension that refreshes the board, shows net profit on each load from your costs, and can book loads that clear your minimum net profit, up to a max-books number you set. During the trial and on the paid plan, its Pro View shows every stop's facility address and the driver type. It's independent, not affiliated with Amazon. Try it free for 7 days. No card required. Only $49.99 after the trial is over. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -7313,7 +7313,7 @@ Your drivers work for you, so check what Amazon asks for in [Amazon Relay worker
 
 ## Where does NudoIQ fit?
 
-NudoIQ is for whoever books the loads: the carrier owner or the dispatcher. It's a Chrome extension for the Relay load board. It shows net profit on each load and can book loads that clear your minimum net profit, up to a max-books number you set. During the trial and on the paid plan, its Pro View shows each load's driver type (Team or Solo) and every stop's facility address. It's independent, not affiliated with Amazon. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+NudoIQ is for whoever books the loads: the carrier owner or the dispatcher. It's a Chrome extension for the Relay load board. It shows net profit on each load and can book loads that clear your minimum net profit, up to a max-books number you set. During the trial and on the paid plan, its Pro View shows each load's driver type (Team or Solo) and every stop's facility address. It's independent, not affiliated with Amazon. Try it free for 7 days. No card required. Only $49.99 after the trial is over. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -7416,7 +7416,7 @@ Whatever you decide, know each load's net before you book. Our free [Relay load 
 
 ## Where does NudoIQ fit?
 
-NudoIQ is a Chrome extension for the Relay load board. It shows net profit and $/mile on each load from costs you set once, so you see what a load leaves you before you book it. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+NudoIQ is a Chrome extension for the Relay load board. It shows net profit and $/mile on each load from costs you set once, so you see what a load leaves you before you book it. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it free for 7 days. No card required. Only $49.99 after the trial is over. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -7511,7 +7511,7 @@ Before you rent, price the work. Our free [Relay load calculator](https://nudoiq
 
 ## Where does NudoIQ fit?
 
-If you run a box truck on Relay, NudoIQ is a Chrome extension for the load board. It refreshes the board, sounds an alert on the page when a load clears your minimums (net profit, $/mile or load pay), and shows net profit on each load from your own costs. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+If you run a box truck on Relay, NudoIQ is a Chrome extension for the load board. It refreshes the board, sounds an alert on the page when a load clears your minimums (net profit, $/mile or load pay), and shows net profit on each load from your own costs. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it free for 7 days. No card required. Only $49.99 after the trial is over. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -7628,7 +7628,7 @@ Relay is the carrier side. Amazon Freight's "Join Carrier Network" link goes to 
 
 ## Where does NudoIQ fit?
 
-NudoIQ is for Relay carriers, not Flex drivers. It's a Chrome extension for the Relay load board. It refreshes the board, shows net profit and lane price history on each load, and can book loads that clear your minimum net profit. It's independent, not affiliated with Amazon. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+NudoIQ is for Relay carriers, not Flex drivers. It's a Chrome extension for the Relay load board. It refreshes the board, shows net profit and lane price history on each load, and can book loads that clear your minimum net profit. It's independent, not affiliated with Amazon. Try it free for 7 days. No card required. Only $49.99 after the trial is over. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -7741,7 +7741,7 @@ Relay is for carriers with their own equipment. For people starting from zero, A
 
 ## Where does NudoIQ fit?
 
-Once you're booking, NudoIQ is a Chrome extension for the Relay load board. It refreshes the board, sounds an alert on the page when a load clears your minimums, and shows net profit on each load from costs you set once. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+Once you're booking, NudoIQ is a Chrome extension for the Relay load board. It refreshes the board, sounds an alert on the page when a load clears your minimums, and shows net profit on each load from costs you set once. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it free for 7 days. No card required. Only $49.99 after the trial is over. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -7844,7 +7844,7 @@ Amazon's [email scams post](https://relay.amazon.com/blog/email-scams-how-to-spo
 
 ## Where does NudoIQ fit?
 
-Once you're approved, NudoIQ is a Chrome extension for the Relay load board. It refreshes the board, sounds an alert on the page when a load clears your minimums, and shows net profit on each load from costs you set once. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+Once you're approved, NudoIQ is a Chrome extension for the Relay load board. It refreshes the board, sounds an alert on the page when a load clears your minimums, and shows net profit on each load from costs you set once. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it free for 7 days. No card required. Only $49.99 after the trial is over. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -7952,7 +7952,7 @@ Turned down already? See [Amazon Relay application denied](https://nudoiq.com/am
 
 ## Where does NudoIQ fit?
 
-When your authority clears and you're booking, NudoIQ is a Chrome extension for the Relay load board. It refreshes the board, sounds an alert on the page when a load clears your minimums, and shows net profit on each load from costs you set once. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+When your authority clears and you're booking, NudoIQ is a Chrome extension for the Relay load board. It refreshes the board, sounds an alert on the page when a load clears your minimums, and shows net profit on each load from costs you set once. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it free for 7 days. No card required. Only $49.99 after the trial is over. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -8069,7 +8069,7 @@ This isn't legal or insurance advice. Confirm with Amazon, your state agency and
 
 ## Where does NudoIQ fit?
 
-Once your coverage clears and you're booking, NudoIQ is a Chrome extension for the Relay load board. It shows net profit on each load from costs you set once, driver pay included. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it 7 days free, no card needed to start, then $49.99 a month. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
+Once your coverage clears and you're booking, NudoIQ is a Chrome extension for the Relay load board. It shows net profit on each load from costs you set once, driver pay included. It's independent, not affiliated with Amazon, and it never asks for your Amazon password. Try it free for 7 days. No card required. Only $49.99 after the trial is over. [See how the NudoIQ extension works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -8152,7 +8152,7 @@ You enter your MPG, diesel price, driver pay and maintenance once in settings. T
 
 AutoBook can book loads that clear your minimum net profit, up to a Max books number you set. Only auto-book loads you can run; cancels hurt your score.
 
-Start your free week: 7 days free, no card needed to start, then $49.99 a month. Cancel anytime.
+Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.
 
 ## Frequently asked questions
 
@@ -8230,7 +8230,7 @@ NudoIQ can't make Amazon pay a TONU. It's a Chrome extension for the Relay load 
 
 What it does help with is your record. During the free week and on the paid plan, its Pro View shows every stop's facility address and times right on the load card, so the details are on screen to screenshot before pickup. Each load also shows its net profit from costs you enter once.
 
-If you use AutoBook, only auto-book loads you can run; cancels hurt your score. Start your free week: 7 days free, no card needed to start, then $49.99 a month. Cancel anytime.
+If you use AutoBook, only auto-book loads you can run; cancels hurt your score. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.
 
 ## Frequently asked questions
 
@@ -8326,7 +8326,7 @@ If you or a dispatcher watch the board for several trucks, NudoIQ works in your 
 - **Net profit** on each load, from costs you enter once
 - **AutoBook** loads that clear your minimum net profit, up to a Max books number you set. Only auto-book loads you can run; cancels hurt your score.
 
-Start your free week: 7 days free, no card needed to start, then $49.99 a month. Cancel anytime.
+Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.
 
 ## Frequently asked questions
 
@@ -8418,7 +8418,7 @@ NudoIQ is a Chrome extension that works on the Relay load board in your own sign
 - **AutoBook** loads that clear your minimum net profit, up to a Max books number you set. Only auto-book loads you can run; cancels hurt your score.
 - **Instant Book** a load in one tap, with no confirmation screen
 
-It can't show loads Amazon hasn't offered you. Start your free week: 7 days free, no card needed to start, then $49.99 a month. Cancel anytime. [See how NudoIQ works](https://nudoiq.com/amazon-relay-chrome-extension/).
+It can't show loads Amazon hasn't offered you. Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime. [See how NudoIQ works](https://nudoiq.com/amazon-relay-chrome-extension/).
 
 ## Frequently asked questions
 
@@ -8506,7 +8506,7 @@ NudoIQ can't raise a rate. It helps you judge one. It's a Chrome extension for t
 - **Net profit.** Each load shows its net from costs you enter once.
 - **AutoBook.** Books loads only at or above your minimum net profit, up to a Max books number you set. Only auto-book loads you can run; cancels hurt your score.
 
-Start your free week: 7 days free, no card needed to start, then $49.99 a month. Cancel anytime.
+Try it free for 7 days. No card required. Only $49.99 after the trial is over. Cancel anytime.
 
 ## Frequently asked questions
 
