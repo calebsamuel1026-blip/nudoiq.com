@@ -59,7 +59,7 @@ NudoIQ also publishes Amazon Relay lane rates from loads its users saw on the Am
 - Email: contact@nudoiq.com
 - Telegram support: https://t.me/nudoiqsupport
 
-Last updated: 2026-10-23.
+Last updated: 2026-10-29.
 
 ## Pages
 

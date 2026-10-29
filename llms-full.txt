@@ -1789,7 +1789,7 @@ Only loads that clear your Min Net Profit and it can fully price, up to your Max
 # Amazon Relay loads: load types, equipment and how to book them
 
 URL: https://nudoiq.com/amazon-relay-loads/
-Published: 2026-10-02. Last updated: 2026-10-23.
+Published: 2026-10-02. Last updated: 2026-10-29.
 
 Short answer: Amazon Relay loads are posted only on the Relay load board, open 24/7 and free to search and book. Carriers book spot loads (one-way or round trip), reserve blocks, take short-term contracts, bid in auctions or use Post A Truck.
 
@@ -1810,7 +1810,7 @@ Amazon breaks these down in its overview of [trucking work on Relay](https://rel
 | Load type | What it is | Equipment needed |
 |---|---|---|
 | Round trip | Begins and ends at the same domicile | Usually just a tractor (power only) |
-| One-way | A single haul; book backhauls or head hauls to cut deadhead | A box truck or your own trailer |
+| One-way | A single haul; book backhauls or head hauls to cut deadhead | Most likely a box truck or your own trailer |
 | Block | A chunk of time you reserve trucks and drivers for Relay, paid even if Amazon doesn't use the full block | Depends on the block |
 | Spot | Last-minute loads you book instantly at the listed price | Depends on the load |
 | Short-term contract | Full or partial weeks of loads, booked in advance | Depends on the contract; box truck contracts exist |
@@ -1832,7 +1832,7 @@ The details by equipment:
 
 - **Tractors.** Day cab and sleeper tractors. Power only covers most of the board.
 - **Box trucks.** 26 ft and 16 ft, dock height, with a working tuck-under liftgate. Cargo vans can't be used. Box truck contracts exist, including 8-hour and 13-hour solo contracts with round trips. See [Amazon Relay box truck loads](https://nudoiq.com/amazon-relay-box-truck-loads/).
-- **Your own trailer.** Needed for one-way loads if you don't run a box truck. 48 ft or 53 ft dry van.
+- **Your own trailer.** Most likely for one-way loads without a box truck. 48 ft or 53 ft dry van.
 - **Reefer.** 53 ft reefers must meet the FDA Sanitary Transportation Rule.
 - **Containers.** 20, 40 and 45 ft high cube, UIIA compliant.
 
@@ -2116,7 +2116,7 @@ The FMCSA Vehicle Inspection File is updated daily and covers a rolling three-ye
 # Amazon Relay box truck loads: how to find and book them
 
 URL: https://nudoiq.com/amazon-relay-box-truck-loads/
-Published: 2026-10-02. Last updated: 2026-10-16.
+Published: 2026-10-02. Last updated: 2026-10-29.
 
 Short answer: Find Amazon Relay box truck loads by filtering the load board by equipment, posting your truck with Post A Truck, or booking box truck contracts. They're for 16 ft and 26 ft dock-height box trucks with a working tuck-under liftgate.
 
@@ -2126,7 +2126,7 @@ Amazon Relay has work for 16 ft and 26 ft box trucks that are dock height and ha
 
 That's from [Amazon's truck requirements page](https://relay.amazon.com/blog/amazon-relay-truck-requirements). To check your truck, insurance and authority first, see our [box truck requirements guide](https://nudoiq.com/amazon-relay-box-truck/).
 
-- **One-way loads.** [Amazon says](https://relay.amazon.com/blog/trucking-work-amazon-relay) one-way loads will most likely need a box truck or your own trailer, an edge over a tractor with no trailer.
+- **One-way loads.** [Amazon says](https://relay.amazon.com/blog/trucking-work-amazon-relay) one-way loads will most likely need a box truck or your own trailer.
 - **Spot freight.** Last-minute loads you book right away.
 - **Contracts.** Full or partial weeks of loads booked ahead. A 13-hour solo contract is one day of loads with 11 hours of drive time.
 - **Post A Truck.** You post when and where the truck is free, and Amazon matches loads to it.
@@ -2247,7 +2247,7 @@ Amazon pays weekly on a Sunday to Saturday cycle. Loads finished before 11:59 pm
 # Amazon Relay power only: how it works and how to book it
 
 URL: https://nudoiq.com/amazon-relay-power-only/
-Published: 2026-10-02. Last updated: 2026-10-16.
+Published: 2026-10-02. Last updated: 2026-10-29.
 
 Short answer: Power only on Amazon Relay means the carrier brings the tractor and Amazon provides the trailer. Amazon says the majority of Relay loads are power only, and day cab and sleeper tractors both qualify.
 
@@ -2263,7 +2263,7 @@ What it means day to day:
 
 ## Which Amazon Relay loads are power only?
 
-[Amazon says](https://relay.amazon.com/blog/trucking-work-amazon-relay) round trips, which start and end at the same domicile, usually need only a tractor. That makes round trips the core of power only work. One-way loads are different: Amazon says they need a box truck or your own trailer, so a tractor alone won't cover them.
+[Amazon says](https://relay.amazon.com/blog/trucking-work-amazon-relay) round trips, which start and end at the same domicile, usually need only a tractor. That makes round trips the core of power only work. One-way loads are different: Amazon says they will most likely need a box truck or your own trailer.
 
 How the main work types line up for a tractor with no trailer:
 
@@ -2341,7 +2341,7 @@ Pay varies by lane, timing and equipment, and Amazon doesn't publish typical rat
 
 ## When does owning a trailer help on Amazon Relay?
 
-A trailer opens one-way loads. Amazon says one-way loads will most likely need a box truck or your own trailer, and one-ways are how you book head hauls and backhauls to cut deadhead. Without a trailer, you're working round trips, blocks and the power only loads on the board.
+Amazon says one-way loads will most likely need a box truck or your own trailer, and one-ways are how you book head hauls and backhauls to cut deadhead. Without a trailer, you're working round trips, blocks and the power only loads on the board.
 
 Relay supports 48 ft and 53 ft dry vans. A 53 ft reefer must meet the FDA Sanitary Transportation Rule, and 20, 40 or 45 ft high cube containers need UIIA. Before buying, count how many one-ways near your base you pass on today.
 
