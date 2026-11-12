@@ -7,3 +7,4 @@ exclude:
   - tools/*.mjs
   - tools/*.json
   - tools/*.bak*
+  - README.md
