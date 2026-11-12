@@ -3,3 +3,10 @@
 # pre-strip copies, so publishing them publishes the metadata we just removed.
 *.bak-meta
 with/demo-partner/
+
+# local page backups (pre-edit copies) never go to the public site
+*.bak-*
+*.html.bak*
+*.backup-*.html
+index.backup-*.html
+llms*.txt.bak*

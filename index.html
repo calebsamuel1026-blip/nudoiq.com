@@ -768,6 +768,18 @@
       document.title = S.title; document.documentElement.lang = k;
       document.body.insertBefore(el, document.body.firstChild);
       try { window.clarity && clarity("set", "checkout", "cancel"); } catch (e) {}
+      // 2026-11-02 T193: create-checkout puts &iid=<install id> on cancel_url; one checkout_cancel_page row per install (record-funnel
+      // STEPS must list it first, until then it gets a 400 and is dropped). "Pressed Back on Stripe" is now countable. No id, no row.
+      try {
+        var cid = new URLSearchParams(location.search).get("iid"), CK = "nudoiq_funnel_checkout_cancel_page";
+        if (cid && /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(cid) && localStorage.getItem(CK) !== cid) {
+          fetch("https://rxyuzshudfqgtmqenipi.supabase.co/functions/v1/record-funnel", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM", "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJ4eXV6c2h1ZGZxZ3RtcWVuaXBpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzgyNTY1MzQsImV4cCI6MjA5MzgzMjUzNH0.Gc8UJdtwNFN1n8yNUE3Brs44KWkAe6deUHq0ysKhYdM" },
+            body: JSON.stringify({ installId: cid, step: "checkout_cancel_page", metadata: { surface: "cancel_page" } })
+          }).then(function (r) { if (r.ok) localStorage.setItem(CK, cid); }).catch(function () {});
+        }
+      } catch (e) {}
     } catch (e) { document.documentElement.className = document.documentElement.className.replace(" nq-cancel", ""); }
   })();
   </script>
