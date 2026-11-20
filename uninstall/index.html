@@ -82,6 +82,17 @@
       <a class="btn btn-go" id="claim" href="mailto:contact@nudoiq.com?subject=NudoIQ%20price%20question">Email us</a>
     </div>
 
+    <!-- EXIT PANEL (T574, 2026-11-19; E5 fix #2, research/data/E5-TRIAL-TO-PAID-2026-11-19.md section 6). Shown after any reason
+         tap except price. Words: Martha, research/copy/UNINSTALL-EXIT-PANEL-2026-11-19.json (CLEARED 2026-11-19T15:09:40Z), EN
+         verbatim. Page is English only; ES/RU are self-review and not shipped (D93/R6). The not_working reply line shows only for not_working. -->
+    <div class="panel" id="panel-exit">
+      <h2>Started your free week? It's still open.</h2>
+      <p style="color:var(--text-mid)">It runs 7 days from the day you started it, even with NudoIQ removed, and nothing is charged during that week. To pick it back up, add NudoIQ again from the Chrome Web Store.</p>
+      <p style="color:var(--text-mid)">When NudoIQ opens on your load board, type the same email you started with in the "Already subscribed?" box. That box is also where your free week comes back.</p>
+      <a class="btn btn-go" id="exit-add" href="https://chromewebstore.google.com/detail/nudoiq/bjilnjgfdndecmamphkkcpplfmniocgk?utm_source=nudoiq.com&amp;utm_medium=site&amp;utm_campaign=uninstall_exit">Add NudoIQ back</a>
+      <p id="exit-nw" style="color:var(--text-mid);margin-top:20px" hidden>Sorry it wasn't working on your board. Email <a href="mailto:contact@nudoiq.com?subject=NudoIQ%20not%20working%20on%20my%20board">contact@nudoiq.com</a> and tell us what you saw. A person will look at your board.</p>
+    </div>
+
     <div class="panel" id="panel-note">
       <h2>Tell me what happened.</h2>
       <p style="color:var(--text-mid)">Optional. The person who builds NudoIQ reads every note.</p>
@@ -147,6 +158,10 @@
           record(chosen);
           ask.style.display = 'none';
           document.getElementById(chosen === 'price' ? 'panel-price' : 'panel-note').classList.add('on');
+          if (chosen !== 'price') {
+            document.getElementById('exit-nw').hidden = (chosen !== 'not_working');
+            document.getElementById('panel-exit').classList.add('on');
+          }
         });
       });
 
