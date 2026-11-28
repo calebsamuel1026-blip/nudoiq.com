@@ -146,7 +146,7 @@
       '.nq-sheet p{font-size:15px;line-height:1.45;margin:0 0 20px;color:#A8ADB5}',
       '.nq-sheet button,.nq-sheet a.nq-btn{display:block;width:100%;box-sizing:border-box;text-align:center;',
       'font:600 16px/1 Inter,system-ui,sans-serif;padding:16px;border-radius:6px;border:0;margin:0 0 10px;cursor:pointer;text-decoration:none}',
-      '.nq-primary{background:#E0A32E;color:#0B0C0E}',
+      '.nq-primary{background:#3366FF;color:#fff}',
       '.nq-secondary{background:transparent;color:#fff;border:1px solid #1E2126 !important}',
       '.nq-tertiary{background:none;color:#6B7280;font-weight:400 !important;font-size:14px !important;padding:8px !important}',
       '.nq-note{font-size:12px;color:#6B7280;text-align:center;margin:12px 0 0}',
@@ -407,6 +407,13 @@
     if (!isMobile()) { initDesktopStoreClick(); return; }
     injectStyles();
     if (BAR) injectBar();
+    // 2026-11-28 (page-designer, TURNAROUND move 6): on a phone the primary store buttons say what the tap really does,
+    // same label as /m/ (data-mlabel) and the phone bar: t.barBtn (Martha 2026-10-14, LEAK-FIXES-2026-10-14.json).
+    // Only the page's own primary CTAs (data-t below); the href stays, so the tap still opens the email sheet.
+    var PRIMARY = { tryFree: 1, install: 1, installNow: 1, startTrial: 1, mobileCta: 1 }, lt = COPY[lang()];
+    Array.prototype.forEach.call(document.querySelectorAll('a[data-t]'), function (el) {
+      if (PRIMARY[el.getAttribute('data-t')] && isStoreLink(el)) el.textContent = lt.barBtn;
+    });
     document.addEventListener('click', function (e) {
       var a = e.target.closest('a[href]');
       if (!isStoreLink(a)) return;
